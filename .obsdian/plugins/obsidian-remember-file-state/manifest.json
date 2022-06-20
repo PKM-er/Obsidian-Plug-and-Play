@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-remember-file-state",
+	"name": "Remember File State",
+	"version": "1.0.5",
+	"minAppVersion": "0.13.17",
+	"description": "Remembers cursor position, selection, scrolling, and more for each file",
+	"author": "Ludovic Chabant",
+	"authorUrl": "https://ludovic.chabant.com",
+	"isDesktopOnly": false
+}
