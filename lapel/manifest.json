@@ -1,0 +1,10 @@
+{
+  "id": "lapel",
+  "name": "Lapel",
+  "description": "Dress up your editor with decorations that mark each of your headings 🤵",
+  "version": "0.0.3",
+  "author": "Liam Cain",
+  "authorUrl": "https://github.com/liamcain/",
+  "isDesktopOnly": false,
+  "minAppVersion": "0.13.0"
+}
