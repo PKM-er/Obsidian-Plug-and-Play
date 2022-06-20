@@ -1,0 +1,302 @@
+{
+  "choices": [
+    {
+      "id": "3bfb2bcd-4e39-476f-a25a-4896dbde6264",
+      "name": "pdf-anno-yaml",
+      "type": "Macro",
+      "command": false,
+      "macroId": "b9eac39a-fbc3-40c5-85a8-bec59ecfc9f0"
+    },
+    {
+      "id": "4abd892b-43f6-4409-b003-a1d53873fb2f",
+      "name": "pdf-anno-note",
+      "type": "Macro",
+      "command": false,
+      "macroId": "b9eac39a-fbc3-40c5-85a8-bec59ecfc9f0"
+    },
+    {
+      "id": "e6132316-9496-42a8-a4e1-3e8d4f5a0af1",
+      "name": "add douban book",
+      "type": "Macro",
+      "command": true,
+      "macroId": "b08fc0e9-4abe-42d0-b282-d295c4015d7e"
+    },
+    {
+      "id": "6fea4aed-abf5-44a8-b3f7-f0605f9c4b0a",
+      "name": "add douban movie",
+      "type": "Macro",
+      "command": true,
+      "macroId": "25e06303-7bb1-415e-8ae9-3eb540140457"
+    }
+  ],
+  "macros": [
+    {
+      "name": "pdf-anno-yaml-hyliang",
+      "id": "b9eac39a-fbc3-40c5-85a8-bec59ecfc9f0",
+      "commands": [
+        {
+          "name": "复制当前文件的路径",
+          "type": "Obsidian",
+          "id": "a127652f-d40f-4017-9251-3748983f2734",
+          "commandId": "workspace:copy-path"
+        },
+        {
+          "name": "Wait",
+          "type": "Wait",
+          "id": "3534a3db-56fe-4c34-b7c5-6c93778a9798",
+          "time": 100
+        },
+        {
+          "name": "新建yaml",
+          "type": "NestedChoice",
+          "id": "4bae26a6-8291-4320-9ae3-c2bc2f3bb9a6",
+          "choice": {
+            "id": "df2ffc84-a8a1-46b8-b132-511efb7ba029",
+            "name": "新建yaml",
+            "type": "Capture",
+            "command": false,
+            "appendLink": false,
+            "captureTo": "",
+            "captureToActiveFile": true,
+            "createFileIfItDoesntExist": {
+              "enabled": false,
+              "createWithTemplate": false,
+              "template": ""
+            },
+            "format": {
+              "enabled": true,
+              "format": "<%*\n  let str_clip1 = await tp.system.clipboard();\n  const nl = String.fromCharCode(10);\n  const str_clip = str_clip1 + \"\";\n  out_str = \"---\" + nl + nl + \"annotate-target: \" + str_clip + nl\n+ \"annotate-type: pdf\" + nl + \"---\" + nl;\nconsole.log('写入文件字符为:' + out_str);\n\nconst tfile = this.app.workspace.getActiveFile();\nconst tfolder = tfile.parent;\nfile_name = str_clip.substring(str_clip.lastIndexOf(\"/\")+1).replaceAll(\".pdf\",\"\");\nawait tp.file.create_new(\n    template = out_str,\n    filename = file_name,\n    open_new = true,\n    folder = tfolder\n);\n%>"
+            },
+            "insertAfter": {
+              "enabled": false,
+              "after": "",
+              "insertAtEnd": false,
+              "createIfNotFound": false,
+              "createIfNotFoundLocation": "top"
+            },
+            "prepend": false,
+            "task": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default"
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "pdf-anno-note",
+      "id": "6e680269-6dde-4bcc-aa44-83844f6f5f8e",
+      "commands": [
+        {
+          "name": " 从剪切板提取 pdf 的 obsidian 链接以及笔记的 blockid",
+          "type": "NestedChoice",
+          "id": "fc009b34-f263-4724-9ced-200278c84588",
+          "choice": {
+            "id": "e9f0c765-2b89-4e42-b8b9-64b4b214c395",
+            "name": " 从剪切板提取 pdf 的 obsidian 链接以及笔记的 blockid",
+            "type": "Capture",
+            "command": false,
+            "appendLink": false,
+            "captureTo": "",
+            "captureToActiveFile": true,
+            "createFileIfItDoesntExist": {
+              "enabled": false,
+              "createWithTemplate": false,
+              "template": ""
+            },
+            "format": {
+              "enabled": true,
+              "format": "```js quickadd\nlet str_clip1 = await this.quickAddApi.utility.getClipboard();\n\n// 从剪切板获取pdf文件路径和注释块id\nconst regex1 = /[\\x5d][\\x28][o][b][s][i]/;\nconst regex2 = /[p][d][f][\\x26][a][n]/;\nconst a = str_clip1.search(regex1);\nconst b = str_clip1.search(regex2);\nstr_pdflink = str_clip1.substring(a+2,b-1);    // pdf文件路径\nstr_anno_id = str_clip1.substring(b+13,str_clip1.length-1);  //注册块id\n//window.alert('pdflink: ' + str_pdflink);\n//window.alert('anno_id的值为: ' + str_anno_id);\n\noutstr = str_pdflink + \"#_#\" + str_anno_id;\n//window.alert('anno_id的值为: ' + outstr );\nthis.quickAddApi.utility.setClipboard(outstr);\n```"
+            },
+            "insertAfter": {
+              "enabled": false,
+              "after": "",
+              "insertAtEnd": false,
+              "createIfNotFound": false,
+              "createIfNotFoundLocation": "top"
+            },
+            "prepend": false,
+            "task": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default"
+          }
+        },
+        {
+          "name": "Wait",
+          "type": "Wait",
+          "id": "a75b8e68-ac8d-4e18-8265-e74d4ed92a70",
+          "time": 100
+        },
+        {
+          "name": "将焦点切换到右侧面板",
+          "type": "Obsidian",
+          "id": "e661cbea-b07d-4db3-86e3-32cc72352f93",
+          "commandId": "editor:focus-right"
+        },
+        {
+          "name": "Wait",
+          "type": "Wait",
+          "id": "031dd5a6-291c-411b-8042-8cb33445b713",
+          "time": 100
+        },
+        {
+          "name": "文字处理",
+          "type": "NestedChoice",
+          "id": "af88f5fe-d726-4211-9e6b-f508878a1dc0",
+          "choice": {
+            "id": "1bf7dbba-0328-4479-820c-3072d166f28c",
+            "name": "文字处理",
+            "type": "Capture",
+            "command": false,
+            "appendLink": false,
+            "captureTo": "",
+            "captureToActiveFile": true,
+            "createFileIfItDoesntExist": {
+              "enabled": false,
+              "createWithTemplate": false,
+              "template": ""
+            },
+            "format": {
+              "enabled": true,
+              "format": "<%*\nlet str_clip1 = await tp.system.clipboard();\nconst regex1 = \"#_#\";\nconst found1 = str_clip1.search(regex1);\nstr_pdflink = str_clip1.substring(0,found1);\nstr_blockid = str_clip1.substring(found1+3,str_clip1.length);\nconsole.log('pdflink的值为:' + str_pdflink);\nconsole.log('blockid的值为:' + str_blockid);\n//\nstr_content1 = tp.file.content;\n//str2 = encodeURI(str1);\n//console.log('content的值为:' + str_content1);\n\n// 从content中提取信息\nconst str_loc1 =   \"id\\\":\\\"\" + str_blockid;\nconst str_loc2 =  str_blockid + \"[\\x7b-\\x7d]\" + \"展示\";\nconsole.log(str_loc1);\nconsole.log(str_loc2);\nconst found2 = str_content1.search(str_loc1);\nconst found3 = str_content1.search(str_loc2);\nconsole.log(found2);\nconsole.log(found3);\nstr_content_part = str_content1.substring(found2-3,found3+25);\nconsole.log('content-part的值为:' + str_content_part);\n// 我的笔记标准\nstr_loc_note_str = \"\\\"contents\";\nconst loc_note_str = str_content_part.indexOf(str_loc_note_str);\nstr_loc_note_end = \"\\\"author\";\nconst loc_note_end = str_content_part.substring(loc_note_str).indexOf(str_loc_note_end);\nstr_mynote = str_content_part.substring(loc_note_str+14,loc_note_str+loc_note_end-4);\nconsole.log(\"我的笔记标注--\" + str_mynote);\n\n// find pdfName\nstr_loc_pn_str = \"pdfName\";\nconst loc_pn_str = str_content_part.lastIndexOf(str_loc_pn_str);\nstr_loc_pn_end = \"\\\"}\";\nconst loc_pn_end = str_content_part.substring(loc_pn_str).indexOf(str_loc_pn_end);\nstr_pdfname = str_content_part.substring(loc_pn_str+10,loc_pn_str+loc_pn_end);\nconsole.log(\"我的pdfName--\" + str_pdfname);\n\n//\nstr_selectText = \"  \";\nstr_pic_str = \" \";\n\n//\nstr_find_pic = \"![[\";\nif (str_content_part.indexOf(str_find_pic) != -1 )\n{  \n  console.log(\"pic\");\n  // find pic_str\n  str_loc_ps_str = \">![[\";\n  const loc_ps_str = str_content_part.lastIndexOf(str_loc_ps_str);\n  str_loc_ps_end = \"]]\";\n  const loc_ps_end = \n  str_content_part.substring(loc_ps_str).indexOf(str_loc_ps_end);\n  str_pic_str = str_content_part.substring(loc_ps_str+1,loc_ps_str+loc_ps_end+2);\n  console.log(str_pic_str);\n}\nelse\n{ \n  console.log(\"note\");\n  // find selectText\n  str_loc_st_str = \"selectText\";\n  const loc_st_str = str_content_part.lastIndexOf(str_loc_st_str);\n  str_loc_st_end = \"pdfName\";\n  const loc_st_end = str_content_part.substring(loc_st_str).indexOf(str_loc_st_end);\n  str_selectText = str_content_part.substring(loc_st_str+16,loc_st_str+loc_st_end-3);\n  //console.log(str_selectText);\n}\n\n// 输入笔记标签\nlet str_tag = await tp.system.prompt(\"输入关于这条笔记的标签, 以空格分开\");\nstr_tags = str_tag + \" markmind-note\";\nstr_tags = str_tags.replaceAll(\" \",\", \");\nconsole.log('输入的标签值为:' + str_tags);\n\n// 整合格式\nconst nl = String.fromCharCode(10);\ntitle_name = str_pdfname.substring(str_pdfname.lastIndexOf(\"/\")+1).replaceAll(\".pdf\",\"\");\nfile_name = title_name + \"-\"+str_blockid;\nconsole.log('新建文件名字为:' + title_name);\n\nout_str = \"---\" + nl + \"pdfName: \" + str_pdfname + nl + \"tags: [\" + str_tags + \"]\" + nl + \"---\" + nl\n+ \"> \" + str_selectText + nl + nl\n+ str_pic_str + nl\n+ \"```ad-note\" + nl + \"title: 笔记标题\" + nl + str_mynote + nl + \"```\"\n+ nl + \"pdf跳转链接: [ ](\" + str_pdflink + \".pdf&annotate=\" + str_blockid + \")\";\n\n//out_str = out_str.replaceAll(\"\\\\n\",nl);\nconsole.log('写入文件字符为:' + out_str);\n\nawait tp.file.create_new(\n    template = out_str,\n    filename = title_name + \"/\" + file_name,\n    open_new = false,\n);\n%>"
+            },
+            "insertAfter": {
+              "enabled": false,
+              "after": "",
+              "insertAtEnd": false,
+              "createIfNotFound": false,
+              "createIfNotFoundLocation": "top"
+            },
+            "prepend": false,
+            "task": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default"
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "豆瓣电影",
+      "id": "25e06303-7bb1-415e-8ae9-3eb540140457",
+      "commands": [
+        {
+          "name": "moviefromdouban",
+          "type": "UserScript",
+          "id": "be95b414-ffd9-488f-9133-e8b70248d555",
+          "path": "Template/moviefromdouban.js",
+          "settings": {}
+        },
+        {
+          "name": "Wait",
+          "type": "Wait",
+          "id": "652b5f9a-26ca-4d20-a5af-6f9ec7c4abe9",
+          "time": 100
+        },
+        {
+          "name": "豆瓣电影",
+          "type": "NestedChoice",
+          "id": "e5967533-826d-4b1f-97c6-5b55c355af1b",
+          "choice": {
+            "id": "2a8b8bb4-c688-4920-83a8-b57a684f0bde",
+            "name": "豆瓣电影",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Template/tp-movie-douban.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "{{VALUE:fileName}}"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "People/Movie"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false
+            },
+            "appendLink": false,
+            "incrementFileName": false,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default"
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "豆瓣读书",
+      "id": "b08fc0e9-4abe-42d0-b282-d295c4015d7e",
+      "commands": [
+        {
+          "name": "bookfromdouban",
+          "type": "UserScript",
+          "id": "bdf3d236-bfb2-495d-9cc7-7287a30ea58e",
+          "path": "Template/bookfromdouban.js",
+          "settings": {}
+        },
+        {
+          "name": "豆瓣读书",
+          "type": "NestedChoice",
+          "id": "d601aa04-ffe5-4427-8a36-92ace2b2b612",
+          "choice": {
+            "id": "a9283e0a-1d61-41a1-a38a-e61b8eef925e",
+            "name": "豆瓣读书",
+            "type": "Template",
+            "command": false,
+            "templatePath": "Template/tp-book-callout.md",
+            "fileNameFormat": {
+              "enabled": true,
+              "format": "《{{VALUE:bookname}}》"
+            },
+            "folder": {
+              "enabled": true,
+              "folders": [
+                "People/Book"
+              ],
+              "chooseWhenCreatingNote": false,
+              "createInSameFolderAsActiveFile": false
+            },
+            "appendLink": false,
+            "incrementFileName": true,
+            "openFileInNewTab": {
+              "enabled": false,
+              "direction": "vertical",
+              "focus": true
+            },
+            "openFile": false,
+            "openFileInMode": "default"
+          }
+        }
+      ],
+      "runOnStartup": false
+    },
+    {
+      "name": "cmenu-settins",
+      "id": "3ac48208-48e9-41b8-a0f5-8b34d6109902",
+      "commands": [],
+      "runOnStartup": false
+    }
+  ],
+  "inputPrompt": "multi-line"
+}

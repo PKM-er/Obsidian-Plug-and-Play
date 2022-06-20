@@ -1,0 +1,839 @@
+{
+  "strategy": "default",
+  "matchStrategy": "prefix",
+  "maxNumberOfSuggestions": 13,
+  "maxNumberOfWordsAsPhrase": 3,
+  "minNumberOfCharactersTriggered": 1,
+  "minNumberOfWordsTriggeredPhrase": 1,
+  "complementAutomatically": true,
+  "delayMilliSeconds": 0,
+  "disableSuggestionsDuringImeOn": false,
+  "insertAfterCompletion": false,
+  "firstCharactersDisableSuggestions": ":/^",
+  "showMatchStrategy": true,
+  "showComplementAutomatically": true,
+  "showIndexingStatus": true,
+  "descriptionOnSuggestion": "Full",
+  "selectSuggestionKeys": "Tab",
+  "additionalCycleThroughSuggestionsKeys": "None",
+  "disableUpDownKeysForCycleThroughSuggestionsKeys": false,
+  "openSourceFileKey": "None",
+  "propagateEsc": false,
+  "enableCurrentFileComplement": true,
+  "currentFileMinNumberOfCharacters": 0,
+  "onlyComplementEnglishOnCurrentFileComplement": false,
+  "enableCurrentVaultComplement": false,
+  "currentVaultMinNumberOfCharacters": 0,
+  "includeCurrentVaultPathPrefixPatterns": "",
+  "excludeCurrentVaultPathPrefixPatterns": "",
+  "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
+  "enableCustomDictionaryComplement": true,
+  "customDictionaryPaths": "Knowledge\\Obisdian-learning\\var complete\\count_1w.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_animal.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_caijing.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_car.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_chengyu.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_diming.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_food.txt\nKnowledge\\Obisdian-learning\\var complete\\!dict.md\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_IT.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_law.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_lishimingren.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_medical.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_poem.txt",
+  "columnDelimiter": "Pipe",
+  "customDictionaryWordRegexPattern": "",
+  "delimiterToHideSuggestion": "+=",
+  "delimiterToDivideSuggestionsForDisplayFromInsertion": "=>",
+  "caretLocationSymbolAfterComplement": "$END$",
+  "displayedTextSuffix": "",
+  "enableInternalLinkComplement": true,
+  "suggestInternalLinkWithAlias": false,
+  "excludeInternalLinkPathPrefixPatterns": "",
+  "enableFrontMatterComplement": true,
+  "frontMatterComplementMatchStrategy": "prefix",
+  "insertCommaAfterFrontMatterCompletion": false,
+  "showLogAboutPerformanceInConsole": false,
+  "selectionHistoryTree": {
+    "co-info": {
+      "co-info": {
+        "customDictionary": {
+          "count": 4,
+          "lastUpdated": 1653580231864
+        }
+      }
+    },
+    "done": {
+      "done": {
+        "customDictionary": {
+          "count": 3,
+          "lastUpdated": 1653669491979
+        }
+      }
+    },
+    "业务线 \t 96": {
+      "业务线 \t 96": {
+        "customDictionary": {
+          "count": 2,
+          "lastUpdated": 1653271923884
+        }
+      }
+    },
+    "2、banner的宽度无法自适应页面的宽度变化": {
+      "2、banner的宽度无法自适应页面的宽度变化": {
+        "currentFile": {
+          "count": 2,
+          "lastUpdated": 1653284955745
+        }
+      }
+    },
+    "obsidianUI-mode：preview": {
+      "obsidianUI-mode：preview": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653285681948
+        }
+      }
+    },
+    "note": {
+      "note": {
+        "customDictionary": {
+          "count": 2,
+          "lastUpdated": 1653310200606
+        }
+      }
+    },
+    "###": {
+      "###": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653288815243
+        }
+      }
+    },
+    "目录排序 \t 18": {
+      "目录排序 \t 18": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653292746603
+        }
+      }
+    },
+    "-": {
+      "-": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653295862339
+        }
+      }
+    },
+    "preview": {
+      "preview": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1653299632649
+        }
+      }
+    },
+    "详细": {
+      "详细": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653309853848
+        }
+      }
+    },
+    "文件的组织和管理": {
+      "文件的组织和管理": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653310194380
+        }
+      }
+    },
+    "media": {
+      "media": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653314842544
+        }
+      }
+    },
+    "Enter": {
+      "Enter": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653314874356
+        }
+      }
+    },
+    "命令重试 \t 11": {
+      "命令重试 \t 11": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653317624231
+        }
+      }
+    },
+    "hold": {
+      "hold": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653355676228
+        }
+      }
+    },
+    "呈现的输出如下所示：": {
+      "呈现的输出如下所示：": {
+        "currentFile": {
+          "count": 3,
+          "lastUpdated": 1653355739880
+        }
+      }
+    },
+    "![[R-C.gif]]": {
+      "![[R-C.gif]]": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1653357113622
+        }
+      }
+    },
+    "时间知觉\t7": {
+      "时间知觉\t7": {
+        "customDictionary": {
+          "count": 2,
+          "lastUpdated": 1653359843176
+        }
+      }
+    },
+    "Number": {
+      "Number": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653376571629
+        }
+      }
+    },
+    "Obsidian": {
+      "Obsidian": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653376716532
+        }
+      }
+    },
+    "大纲功能的话。": {
+      "大纲功能的话。": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653377069830
+        }
+      }
+    },
+    "文件目录折叠能力": {
+      "文件目录折叠能力": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653377186370
+        }
+      }
+    },
+    "表格操作 \t 17": {
+      "表格操作 \t 17": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653377860110
+        }
+      }
+    },
+    "MetaEdit": {
+      "MetaEdit": {
+        "internalLink": {
+          "count": 2,
+          "lastUpdated": 1653377931879
+        }
+      }
+    },
+    "#1": {
+      "#1": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653405636138
+        }
+      }
+    },
+    "引用名 \t 1429": {
+      "引用名 \t 1429": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653405746322
+        }
+      }
+    },
+    "(annots)平台革命  改变世界的商业模式_14344952.pdf": {
+      "(annots)平台革命  改变世界的商业模式_14344952.pdf": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1653406265375
+        }
+      }
+    },
+    "流量表\t246": {
+      "流量表\t246": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653443360310
+        }
+      }
+    },
+    "01、基本语法": {
+      "01、基本语法": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1653447552754
+        }
+      }
+    },
+    "命令，现在你可以通过命令，快速收藏你喜欢的电影和图书从豆瓣到你的库（Vault）": {
+      "命令，现在你可以通过命令，快速收藏你喜欢的电影和图书从豆瓣到你的库（Vault）": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653473648396
+        }
+      }
+    },
+    "中文圈的大佬了）": {
+      "中文圈的大佬了）": {
+        "currentFile": {
+          "count": 2,
+          "lastUpdated": 1653493795062
+        }
+      }
+    },
+    "让文章和插入的图片具有统一的名称，便于后续挪动时候管理。【consistent-attachments-and-links】插件，它可以让你放入文档的图片，自动被命名为和你的文档名一致。": {
+      "让文章和插入的图片具有统一的名称，便于后续挪动时候管理。【consistent-attachments-and-links】插件，它可以让你放入文档的图片，自动被命名为和你的文档名一致。": {
+        "currentFile": {
+          "count": 3,
+          "lastUpdated": 1653547509714
+        }
+      }
+    },
+    "toolkit": {
+      "toolkit": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653494204624
+        }
+      }
+    },
+    "支持自然描述": {
+      "支持自然描述": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653494225902
+        }
+      }
+    },
+    "language": {
+      "language": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653494271493
+        }
+      }
+    },
+    "natural": {
+      "natural": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653494294191
+        }
+      }
+    },
+    "不梳理；": {
+      "不梳理；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653534535917
+        }
+      }
+    },
+    "快手的合作，期望是通过小程序嵌入，为经纪人提供短视频平台，以小程序做为实习方式接入": {
+      "快手的合作，期望是通过小程序嵌入，为经纪人提供短视频平台，以小程序做为实习方式接入": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653534821763
+        }
+      }
+    },
+    "58APP搜索页面": {
+      "58APP搜索页面": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653534908605
+        }
+      }
+    },
+    "推荐业务：长期入口给到了转化率好的“个人房东”。【已上线】": {
+      "推荐业务：长期入口给到了转化率好的“个人房东”。【已上线】": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653534921058
+        }
+      }
+    },
+    "热词入口暂时给到了榜单。【已上线】": {
+      "热词入口暂时给到了榜单。【已上线】": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653534941917
+        }
+      }
+    },
+    "安居客首页改版进行中。丹舟跟进，这样两个端的大类页都在丹舟这里埋点页更熟悉；【频率：半年】": {
+      "安居客首页改版进行中。丹舟跟进，这样两个端的大类页都在丹舟这里埋点页更熟悉；【频率：半年】": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653535033152
+        }
+      }
+    },
+    "开城": {
+      "开城": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653535195967
+        }
+      }
+    },
+    "包含周边数据未刷新，包含地铁线路，小区信息和用户理解不一致【Review会讨论：找不到磐石产品。目前流程：出现问题反向推动磐石优化数据】；【频率：月度】；": {
+      "包含周边数据未刷新，包含地铁线路，小区信息和用户理解不一致【Review会讨论：找不到磐石产品。目前流程：出现问题反向推动磐石优化数据】；【频率：月度】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653535660588
+        }
+      }
+    },
+    "包含周边数据未刷新，包含地铁线路，小区信息和用户理解不一致【Review会讨论：找不到磐石产品。目前流程：出现问题反向推动磐石优化数据】；【频率：月度】；锁定了小区，但是发布未禁发，导致经纪人客诉；【Review会、2019、2020未有结果】【频率：月度】；": {
+      "包含周边数据未刷新，包含地铁线路，小区信息和用户理解不一致【Review会讨论：找不到磐石产品。目前流程：出现问题反向推动磐石优化数据】；【频率：月度】；锁定了小区，但是发布未禁发，导致经纪人客诉；【Review会、2019、2020未有结果】【频率：月度】；": {
+        "currentFile": {
+          "count": 2,
+          "lastUpdated": 1653535665680
+        }
+      }
+    },
+    "屏蔽词和屏蔽小区发布依然有此问题，发布侧比展现侧制度宽，导致线上用户不理解；【频率：月度】；": {
+      "屏蔽词和屏蔽小区发布依然有此问题，发布侧比展现侧制度宽，导致线上用户不理解；【频率：月度】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653535708471
+        }
+      }
+    },
+    "列表页&搜索：ou": {
+      "列表页&搜索：ou": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653535777289
+        }
+      }
+    },
+    "欧若拉的覆盖安居客": {
+      "欧若拉的覆盖安居客": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653535802465
+        }
+      }
+    },
+    "合租": {
+      "合租": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653535924249
+        }
+      }
+    },
+    "经纪人和公寓": {
+      "经纪人和公寓": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653535941681
+        }
+      }
+    },
+    "平台一致性": {
+      "平台一致性": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536031083
+        }
+      }
+    },
+    "【重点】【亮点标签】双平台一致性统计，发布字段不一致【20年底拉动过发布、标准库、底层服务，没有达成一致】【21年再次拉动，因发布产品更换理由再次推迟】；": {
+      "【重点】【亮点标签】双平台一致性统计，发布字段不一致【20年底拉动过发布、标准库、底层服务，没有达成一致】【21年再次拉动，因发布产品更换理由再次推迟】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536043361
+        }
+      }
+    },
+    "【亮点标签】个人发布改版导致亮点标签写入逻辑丢失【已解决】【拉群全体技术加对应产品解决，另找QA反向推动】；": {
+      "【亮点标签】个人发布改版导致亮点标签写入逻辑丢失【已解决】【拉群全体技术加对应产品解决，另找QA反向推动】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536051241
+        }
+      }
+    },
+    "【安选展示】&【政府核验】&【平台核验】三者模块的整合【21年Review会结论：如果只是模块整合就不用做了，因为政府核验位置太大，也会挤占平台安选和前面展示主要信息的地方，保持拆分展示】；": {
+      "【安选展示】&【政府核验】&【平台核验】三者模块的整合【21年Review会结论：如果只是模块整合就不用做了，因为政府核验位置太大，也会挤占平台安选和前面展示主要信息的地方，保持拆分展示】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536060590
+        }
+      }
+    },
+    "G推荐处理】；": {
+      "G推荐处理】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536070010
+        }
+      }
+    },
+    "体验优化和统一": {
+      "体验优化和统一": {
+        "currentFile": {
+          "count": 3,
+          "lastUpdated": 1653536092558
+        }
+      }
+    },
+    "【详情页-图片查看器】图片查看器支持不同房间图片，C端已经支持，但是B端没有数据，所以目前以统一的室内图做了兜底兼容；": {
+      "【详情页-图片查看器】图片查看器支持不同房间图片，C端已经支持，但是B端没有数据，所以目前以统一的室内图做了兜底兼容；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536102798
+        }
+      }
+    },
+    "1，等常见尺寸进行处理【线上偶发客诉反馈自己拍的大图无法在C端完整展示，Review会结论：暂时不处理】；": {
+      "1，等常见尺寸进行处理【线上偶发客诉反馈自己拍的大图无法在C端完整展示，Review会结论：暂时不处理】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536114258
+        }
+      }
+    },
+    " 【短线：多次负责产品离职：最近给出的时间点22年1月份过滤租房数据出来】；": {
+      " 【短线：多次负责产品离职：最近给出的时间点22年1月份过滤租房数据出来】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536160205
+        }
+      }
+    },
+    "【Review会上有结论：期望同UGC做整合，迟迟没有动作】；": {
+      "【Review会上有结论：期望同UGC做整合，迟迟没有动作】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536168032
+        }
+      }
+    },
+    "经纪人页面违规房源和个人页面【近期违规房源】之前统计逻辑不一致，经纪人之前修正几版【不清楚后续解决情况】；": {
+      "经纪人页面违规房源和个人页面【近期违规房源】之前统计逻辑不一致，经纪人之前修正几版【不清楚后续解决情况】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536181045
+        }
+      }
+    },
+    "Case：遇到case，C端临时反向删帖解决】；": {
+      "Case：遇到case，C端临时反向删帖解决】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536247254
+        }
+      }
+    },
+    "Case：遇到case，C端临时反向删帖解决】；、各个页面的跟版，历史上各个团队上线的交互和底层逻辑【长线】【有交叉时候组织优化，目前是连接承接的】；": {
+      "Case：遇到case，C端临时反向删帖解决】；、各个页面的跟版，历史上各个团队上线的交互和底层逻辑【长线】【有交叉时候组织优化，目前是连接承接的】；": {
+        "currentFile": {
+          "count": 2,
+          "lastUpdated": 1653536250096
+        }
+      }
+    },
+    "Case：遇到case，C端临时反向删帖解决】；、各个页面的跟版，历史上各个团队上线的交互和底层逻辑【长线】【有交叉时候组织优化，目前是连接承接的】；各个页面的跟版，历史上各个团队上线的交互和底层逻辑【长线】【有交叉时候组织优化，目前是连接承接的】；": {
+      "Case：遇到case，C端临时反向删帖解决】；、各个页面的跟版，历史上各个团队上线的交互和底层逻辑【长线】【有交叉时候组织优化，目前是连接承接的】；各个页面的跟版，历史上各个团队上线的交互和底层逻辑【长线】【有交叉时候组织优化，目前是连接承接的】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536253153
+        }
+      }
+    },
+    "【重点】【遗留】【金牌房东】已经下线了，20年底因为流量和感知力挺，上线了金牌房东代替小程序里面个人房东入口；【找时间要下掉】；": {
+      "【重点】【遗留】【金牌房东】已经下线了，20年底因为流量和感知力挺，上线了金牌房东代替小程序里面个人房东入口；【找时间要下掉】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536300185
+        }
+      }
+    },
+    "主站的发布列表页面【周例会上问过几次，没人承接，目前都是这里承接】【频率：季度】；": {
+      "主站的发布列表页面【周例会上问过几次，没人承接，目前都是这里承接】【频率：季度】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536327741
+        }
+      }
+    },
+    "【CMCS】：会因为技术调整，或者需要新增类别然后产品协调权限和申请，并且完成过程【之前有产品，2020没有产品管了】【频率：季度】；": {
+      "【CMCS】：会因为技术调整，或者需要新增类别然后产品协调权限和申请，并且完成过程【之前有产品，2020没有产品管了】【频率：季度】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536333010
+        }
+      }
+    },
+    "【重点】【标准库】字段维护：按照谁对接功能谁来处理，这次909后算是基于新模式梳理了一圈【之前有产品，2020没有产品管了】【频率：季度】；": {
+      "【重点】【标准库】字段维护：按照谁对接功能谁来处理，这次909后算是基于新模式梳理了一圈【之前有产品，2020没有产品管了】【频率：季度】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536338999
+        }
+      }
+    },
+    "【IMC】被各个业务线调用，IMC的帖子在架状态有专门的字段（假设为字段A），但是不同业务自己做的时候不会考虑（设计的字段可能叫字段B），导致一些不改展现的帖子在外部展现；": {
+      "【IMC】被各个业务线调用，IMC的帖子在架状态有专门的字段（假设为字段A），但是不同业务自己做的时候不会考虑（设计的字段可能叫字段B），导致一些不改展现的帖子在外部展现；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536344089
+        }
+      }
+    },
+    "收归【IMC】和【HMC】的逻辑，产品明确范围哪些可被外部引用；": {
+      "收归【IMC】和【HMC】的逻辑，产品明确范围哪些可被外部引用；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536351326
+        }
+      }
+    },
+    "【重点】2021年Q4体验走查【QMD】，还没有结论等着和UE联动；": {
+      "【重点】2021年Q4体验走查【QMD】，还没有结论等着和UE联动；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536396065
+        }
+      }
+    },
+    "【优化】联系页面优化成之前涉及样子，2020年底设计，因为21年的一些事情，没有完成【非高优】【原定：等公寓鲲鹏结束统一融合一次】；": {
+      "【优化】联系页面优化成之前涉及样子，2020年底设计，因为21年的一些事情，没有完成【非高优】【原定：等公寓鲲鹏结束统一融合一次】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536519576
+        }
+      }
+    },
+    "2】】；": {
+      "2】】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536524498
+        }
+      }
+    },
+    "北京聚合逻辑【2019】": {
+      "北京聚合逻辑【2019】": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536939661
+        }
+      }
+    },
+    "2021年1月6日检查出来bug，预计本周修复；应该是之前发布自己上的逻辑，后续研发底层有改动导致的bug。协调上海和北京两地；": {
+      "2021年1月6日检查出来bug，预计本周修复；应该是之前发布自己上的逻辑，后续研发底层有改动导致的bug。协调上海和北京两地；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536942854
+        }
+      }
+    },
+    "北京住建委月度报数，21年开始新规则，要每月针对上报数字，核查资质有效才上报；对应要上报机构营业执照编码【每一家】；【频率：月度】；": {
+      "北京住建委月度报数，21年开始新规则，要每月针对上报数字，核查资质有效才上报；对应要上报机构营业执照编码【每一家】；【频率：月度】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536962534
+        }
+      }
+    },
+    "北京住建委月度报数【高杰跟进】【频率：月度】；": {
+      "北京住建委月度报数【高杰跟进】【频率：月度】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536983251
+        }
+      }
+    },
+    "对应要处理咨询的，非online工单；": {
+      "对应要处理咨询的，非online工单；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536994626
+        }
+      }
+    },
+    "对应要处理咨询的，非online工单；约定的关于北京住建委提供的违规数据，每个Q要更新；【定期处理即可，他不提我们可以不执行】；": {
+      "对应要处理咨询的，非online工单；约定的关于北京住建委提供的违规数据，每个Q要更新；【定期处理即可，他不提我们可以不执行】；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653536996555
+        }
+      }
+    },
+    "覆盖端【不是很高优】": {
+      "覆盖端【不是很高优】": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653537334180
+        }
+      }
+    },
+    "icon": {
+      "icon": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653579222398
+        }
+      }
+    },
+    "【MetaTable】为每个文档的前面": {
+      "【MetaTable】为每个文档的前面": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653579578039
+        }
+      }
+    },
+    "码字其实本身是一件体力活儿，所以如何快速输入内容，除了合适的输入法，除了我们亲手调戏过的输入法，还有一种方式就是根据文章的上下文进行推理，这里推荐【various-complements】": {
+      "码字其实本身是一件体力活儿，所以如何快速输入内容，除了合适的输入法，除了我们亲手调戏过的输入法，还有一种方式就是根据文章的上下文进行推理，这里推荐【various-complements】": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653580103419
+        }
+      }
+    },
+    "码字其实本身是一件体力活儿，所以如何快速输入内容，这里推荐【various-complements】": {
+      "码字其实本身是一件体力活儿，所以如何快速输入内容，这里推荐【various-complements】": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653580106960
+        }
+      }
+    },
+    "利用自己自定义字典，可以达到一些快速输入复杂命令的目标。": {
+      "利用自己自定义字典，可以达到一些快速输入复杂命令的目标。": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1653580211083
+        }
+      }
+    },
+    "背景合并 \t 25": {
+      "背景合并 \t 25": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653613819433
+        }
+      }
+    },
+    "co-mulit": {
+      "co-mulit": {
+        "customDictionary": {
+          "count": 5,
+          "lastUpdated": 1653622217668
+        }
+      }
+    },
+    "co-tri": {
+      "co-tri": {
+        "customDictionary": {
+          "count": 5,
+          "lastUpdated": 1653622205253
+        }
+      }
+    },
+    "Gucci": {
+      "Gucci": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653632083207
+        }
+      }
+    },
+    "meeting": {
+      "meeting": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1653991008990
+        }
+      }
+    },
+    "后续可以导出来talkid，便于在其他工具下看到会话真实装填": {
+      "后续可以导出来talkid，便于在其他工具下看到会话真实装填": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1654155653054
+        }
+      }
+    },
+    "胆汁酸\t106": {
+      "胆汁酸\t106": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1654170701320
+        }
+      }
+    },
+    "这就诞生了第二个原则“即插即用”，整个项目已经调教好了包括常用的插件设置，插件需要的素材，包括我自认为可用的模板范例和日常记录模式": {
+      "这就诞生了第二个原则“即插即用”，整个项目已经调教好了包括常用的插件设置，插件需要的素材，包括我自认为可用的模板范例和日常记录模式": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1654528541359
+        }
+      }
+    },
+    "个人房东VR": {
+      "个人房东VR": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1655122458023
+        }
+      }
+    },
+    "co-time": {
+      "co-time": {
+        "customDictionary": {
+          "count": 4,
+          "lastUpdated": 1655259996026
+        }
+      }
+    },
+    "成功": {
+      "co-success": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1655260286212
+        }
+      }
+    },
+    "1、城市包括": {
+      "1、城市包括": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1655458088066
+        }
+      }
+    },
+    "3d引擎 \t 75": {
+      "3d引擎 \t 75": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1655458316386
+        }
+      }
+    }
+  }
+}
