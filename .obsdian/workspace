@@ -1,0 +1,224 @@
+{
+  "main": {
+    "id": "60d7f85ec637728f",
+    "type": "split",
+    "children": [
+      {
+        "id": "9ee8dadf3fe9cf81",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Obsidian-example/Readme.md",
+            "mode": "source",
+            "source": false
+          }
+        },
+        "pane-relief:history-v1": {
+          "pos": 0,
+          "stack": [
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Readme.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":85,\"ch\":0},\"to\":{\"line\":85,\"ch\":0}},\"scroll\":172.32454058329265}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Readme英文版.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Readme.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"scroll\":133.04876253681797}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Example and showcase/01、基本语法.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"scroll\":0}"
+            }
+          ]
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "f49803acd6608a08",
+    "type": "split",
+    "children": [
+      {
+        "id": "64e10c94fea2703f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f70f39237c7cd7f5",
+            "type": "leaf",
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            },
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            }
+          },
+          {
+            "id": "c55efec099ef9ac1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            },
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            }
+          },
+          {
+            "id": "b0a47a1490c3954e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            },
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            }
+          },
+          {
+            "id": "9a63bc5b1fa84f6f",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            },
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 225
+  },
+  "right": {
+    "id": "0afdab19216adf86",
+    "type": "split",
+    "children": [
+      {
+        "id": "1967ac32b4461f05",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "79b83872d38fae1a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Obsidian-example/Readme.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            },
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            }
+          },
+          {
+            "id": "1816a5255b9bdd70",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "Obsidian-example/Readme.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            },
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            }
+          },
+          {
+            "id": "4bb83e5cfb104650",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            },
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            }
+          },
+          {
+            "id": "53bf8a385f3c3882",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {}
+            },
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            }
+          },
+          {
+            "id": "b6443d2a7ed3990d",
+            "type": "leaf",
+            "state": {
+              "type": "tlfItemView",
+              "state": {}
+            },
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 353.72222900390625
+  },
+  "active": "9ee8dadf3fe9cf81",
+  "lastOpenFiles": [
+    "Obsidian-example/Readme.md",
+    "Obsidian-example/Readme英文版.md",
+    "Obsidian-example/Example and showcase/01、基本语法.md",
+    "📊Every Day/📊Every Day 1.md",
+    "📊Every Day/📊Every Day.md",
+    "📊Every Day/✅每日检查To-Do.md",
+    "Knowledge/Book-Note/Book-Note.md",
+    "Obisdian-learning/StartPage/Startpage.md",
+    "Obisdian-learning/使用方法.md",
+    "Obsidian-Plug-and-Play/高级语法/Obsidian-样式.md"
+  ]
+}

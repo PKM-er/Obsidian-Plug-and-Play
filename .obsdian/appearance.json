@@ -1,0 +1,19 @@
+{
+  "baseFontSize": 20,
+  "theme": "moonstone",
+  "cssTheme": "Minimal",
+  "translucency": false,
+  "enabledCssSnippets": [
+    "B-time",
+    "bigger link popup preview",
+    "blackstatusbar",
+    "dataview-cards",
+    "MCL Multi Column",
+    "strong outline",
+    "tag-pills",
+    "tableStyles"
+  ],
+  "interfaceFontFamily": "Microsoft YaHei",
+  "textFontFamily": "Microsoft YaHei",
+  "monospaceFontFamily": "Microsoft YaHei"
+}

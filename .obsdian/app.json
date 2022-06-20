@@ -1,0 +1,23 @@
+{
+  "legacyEditor": false,
+  "livePreview": true,
+  "communityPluginSortOrder": "release",
+  "defaultViewMode": "source",
+  "spellcheckLanguages": [
+    "zh-CN",
+    "en-US"
+  ],
+  "attachmentFolderPath": "./素材库",
+  "fileSortOrder": "alphabetical",
+  "useMarkdownLinks": true,
+  "showUnsupportedFiles": true,
+  "communityThemeSortOrder": "download",
+  "newFileLocation": "current",
+  "alwaysUpdateLinks": true,
+  "pdfExportSettings": {
+    "pageSize": "Letter",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 100
+  }
+}

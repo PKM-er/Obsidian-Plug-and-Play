@@ -1,0 +1,101 @@
+.tag {
+  background-color: var(--text-accent);
+  border: none;
+  color: white;
+  font-size: 11px;
+  padding: 1px 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  margin: 0px 0px;
+  cursor: pointer;
+  border-radius: 14px;
+}
+.tag:hover {
+color: white;
+background-color: var(--text-accent-hover);
+}
+
+.tag[href^="#todo"] {
+ color:white;
+  background-color: #3e93d8
+}
+.tag[href^="#shopping"] {
+ color:white;
+  background-color: #7b6cd9
+}
+.tag[href^="#important"] {
+ color:white;
+  background-color: red;
+}
+.tag[href^="#task"] {
+ color:white;
+  background-color: orange;
+}
+.tag[href^="#meeting"] {
+ color:white;
+  background-color: #a7e2f5;
+}
+.tag[href^="#comunicate"] {
+ color:white;
+  background-color: Lime;
+}
+
+.tag[href^="#newadd"] {
+ color:white;
+  background-color: red;
+}
+
+.tag[href^="#update"] {
+ color:white;
+  background-color: LightSkyBlue;
+}
+
+.cm-s-obsidian span.cm-tag-todo,
+.tag[href^="#todo"] {
+ color:white;
+  background-color: #3e93d8
+}
+
+.cm-s-obsidian span.cm-tag-shopping,
+.tag[href^="#shopping"] {
+ color:white;
+  background-color: #7b6cd9
+}
+
+.cm-s-obsidian span.cm-tag-important,
+.tag[href^="#important"] {
+ color:white;
+  background-color: red;
+}
+
+.cm-s-obsidian span.cm-tag-task,
+.tag[href^="#task"] {
+ color:white;
+  background-color: orange;
+}
+
+.cm-s-obsidian span.cm-tag-meeting,
+.tag[href^="#meeting"] {
+ color:white;
+  background-color: #a7e2f5;
+}
+
+.cm-s-obsidian span.cm-tag-comunicate,
+.tag[href^="#comunicate"] {
+ color:white;
+  background-color: Lime;
+}
+
+.cm-s-obsidian span.cm-tag-newadd,
+.tag[href^="#newadd"] {
+ color:white;
+  background-color: red;
+}
+
+.cm-s-obsidian span.cm-tag-update,
+.tag[href^="#update"] {
+ color:white;
+  background-color: LightSkyBlue;
+}
+

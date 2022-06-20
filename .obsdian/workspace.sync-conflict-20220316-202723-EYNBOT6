@@ -1,0 +1,157 @@
+{
+  "main": {
+    "id": "60d7f85ec637728f",
+    "type": "split",
+    "children": [
+      {
+        "id": "e48dded3de8adfa8",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Works/58-房产-租房/保障性租赁住房/资料/新一轮的实物形成周期——地产论道系列之保障性租赁住房.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d98c0fd7a1693db1",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "338bd08fa2db955c",
+        "type": "leaf",
+        "state": {
+          "type": "file-explorer",
+          "state": {}
+        }
+      },
+      {
+        "id": "d21fcbc983d885a1",
+        "type": "leaf",
+        "state": {
+          "type": "search",
+          "state": {
+            "query": "",
+            "matchingCase": false,
+            "explainSearch": false,
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical"
+          }
+        }
+      },
+      {
+        "id": "8a973eba180e8aaf",
+        "type": "leaf",
+        "state": {
+          "type": "tag",
+          "state": {
+            "sortOrder": "frequency",
+            "useHierarchy": true
+          }
+        }
+      },
+      {
+        "id": "65acb2b55130c372",
+        "type": "leaf",
+        "state": {
+          "type": "starred",
+          "state": {}
+        }
+      },
+      {
+        "id": "0a8b6667d8a947df",
+        "type": "leaf",
+        "state": {
+          "type": "recent-files",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 0
+  },
+  "right": {
+    "id": "fae4e80ef2df4191",
+    "type": "mobile-drawer",
+    "children": [
+      {
+        "id": "c5d72e45b07e57b2",
+        "type": "leaf",
+        "state": {
+          "type": "backlink",
+          "state": {
+            "file": "Works/58-房产-租房/保障性租赁住房/资料/新一轮的实物形成周期——地产论道系列之保障性租赁住房.md",
+            "collapseAll": false,
+            "extraContext": false,
+            "sortOrder": "alphabetical",
+            "showSearch": false,
+            "searchQuery": "",
+            "backlinkCollapsed": false,
+            "unlinkedCollapsed": true
+          }
+        }
+      },
+      {
+        "id": "51a1b2977896ba26",
+        "type": "leaf",
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "Works/58-房产-租房/保障性租赁住房/资料/新一轮的实物形成周期——地产论道系列之保障性租赁住房.md"
+          }
+        }
+      },
+      {
+        "id": "bcf270a3b6674adf",
+        "type": "leaf",
+        "state": {
+          "type": "calendar",
+          "state": {}
+        }
+      },
+      {
+        "id": "5dba418aa518d05f",
+        "type": "leaf",
+        "state": {
+          "type": "juggl_nodes",
+          "state": {}
+        }
+      },
+      {
+        "id": "c2de7d5648057e10",
+        "type": "leaf",
+        "state": {
+          "type": "juggl_style",
+          "state": {}
+        }
+      },
+      {
+        "id": "fd5a0ee224b7e562",
+        "type": "leaf",
+        "state": {
+          "type": "FANTASY_CALENDAR",
+          "state": {}
+        }
+      }
+    ],
+    "currentTab": 5
+  },
+  "active": "e48dded3de8adfa8",
+  "lastOpenFiles": [
+    "Works/58-房产-租房/保障性租赁住房/资料/新一轮的实物形成周期——地产论道系列之保障性租赁住房.md",
+    "Works/58-房产-租房/保障性租赁住房/资料/保障性租赁住房不纳入集中度管理，房企能否受益？.md",
+    "Works/58-房产-租房/保障性租赁住房/资料/十四五大事记.md",
+    "Works/58-房产-租房/保障性租赁住房/资料/国君宏观：保障性租赁住房的建设模式与体量 - 格隆汇.md",
+    "Knowledge/Book/未打开文件.pdf",
+    "Knowledge/Book/未命名.md",
+    "Knowledge/Book/未命名思维导图 1.md",
+    "Knowledge/Book/未命名思维导图.md",
+    "Knowledge/Book/未命名思维导图 1 1.md",
+    "Knowledge/平台革命  改变世界的商业模式_14344952.pdf"
+  ]
+}

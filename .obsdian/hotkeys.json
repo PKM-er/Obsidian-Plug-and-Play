@@ -1,0 +1,28 @@
+{
+  "obsidian-card-view-switcher-plugin:card-view-switcher:open": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "Tab"
+    }
+  ],
+  "obsidian-icons-plugin:open-icons-plugin-modal": [],
+  "scambier.obsidian-omnisearch:show-modal": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "CapsLock"
+    }
+  ],
+  "image-window:open-image": [],
+  "Enhanced-editing:list-mermaid": [
+    {
+      "modifiers": [
+        "Mod"
+      ],
+      "key": "M"
+    }
+  ]
+}
