@@ -5526,7 +5526,7 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
 }
 
 .table-lines .table-view-table,.table-lines table:not(.calendar) {
-	border: 1px solid var(--background-modifier-border)
+	border: 1.5px solid var(--background-modifier-border)
 }
 
 .table-lines table:not(.calendar) .table-view-table thead>tr>th,.table-lines table:not(.calendar) .table-view-table>tbody>tr>td {
@@ -13488,4 +13488,3 @@ body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tb
   background-color: var(--table-thead-background-color);
   font-family: var(--font-family-strong);
 }
-
