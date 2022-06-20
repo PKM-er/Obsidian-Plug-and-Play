@@ -1,0 +1,11 @@
+{
+  "customFolder": "Day Planners",
+  "mode": 1,
+  "mermaid": false,
+  "notesToDates": [],
+  "completePastItems": true,
+  "circularProgress": true,
+  "nowAndNextInStatusBar": false,
+  "showTaskNotification": true,
+  "timelineZoomLevel": 4
+}

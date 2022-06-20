@@ -1,0 +1,17 @@
+{
+  "color1": "#000000",
+  "color2": "#1864ab",
+  "color3": "#d9480f",
+  "colorPicker": false,
+  "minHeight": "100",
+  "livePreview": true,
+  "selectVisable": true,
+  "rectVisable": true,
+  "diamondVisable": true,
+  "ellipseVisable": true,
+  "arrowVisable": true,
+  "lineVisable": true,
+  "penVisable": true,
+  "textVisable": true,
+  "gridModeEndabled": true
+}

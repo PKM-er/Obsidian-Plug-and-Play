@@ -1,0 +1,10 @@
+{
+  "image": "image",
+  "audio": "audio",
+  "video": "video",
+  "pdf": "pdf",
+  "exportCurrentDeletion": false,
+  "exportUnusedDeletion": false,
+  "copyPath": true,
+  "copyPathMode": "Relative"
+}

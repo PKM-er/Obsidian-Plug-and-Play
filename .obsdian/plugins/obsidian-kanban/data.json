@@ -1,0 +1,16 @@
+{
+  "show-checkboxes": true,
+  "show-relative-date": true,
+  "link-date-to-daily-note": true,
+  "date-picker-week-start": 1,
+  "hide-tags-display": true,
+  "hide-tags-in-title": true,
+  "metadata-keys": [
+    {
+      "metadataKey": "",
+      "label": "",
+      "shouldHideLabel": false,
+      "containsMarkdown": false
+    }
+  ]
+}

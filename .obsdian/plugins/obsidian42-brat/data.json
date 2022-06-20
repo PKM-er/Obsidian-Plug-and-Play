@@ -1,0 +1,16 @@
+{
+  "pluginList": [
+    "zsviczian/excalibrain",
+    "obsidian-canzi/Enhanced-editing"
+  ],
+  "pluginSubListFrozenVersion": [],
+  "themesList": [],
+  "updateAtStartup": false,
+  "updateThemesAtStartup": false,
+  "ribbonIconEnabled": true,
+  "loggingEnabled": false,
+  "loggingPath": "BRAT-log",
+  "loggingVerboseEnabled": false,
+  "debuggingMode": true,
+  "notificationsEnabled": true
+}
