@@ -1,0 +1,158 @@
+/* --- callouts for directional text and other formatting --- */
+/* @settings
+
+name: Callouts for Typesetting
+id: typeset-callouts
+settings:
+    -
+        id: vertical-callout-section
+        title: Vertical Callouts
+        type: heading
+        level: 1
+        description: Settings for the vertical callout formats, vertical-rl and vertical-lr.
+    -
+        id: vertical-callout-max-line-height
+        title: Vertical Callout Max Line Height
+        type: variable-number
+        format: px
+        description: The maximum height that a line in a vertical-mode callout should have, in pixels.
+        default: 300
+    -
+        id: vertical-callout-title-flex-gap
+        title: Flex Gap in Vertical Callout Titles
+        type: variable-number
+        format: px
+        description: The size of vertical gaps in between elements of the title in a vertical-mode callout, in pixels.
+        default: 5
+    -
+        id: vertical-callout-glyph-spacing
+        title: Vertical Callout Glyph Spacing
+        type: variable-number
+        format: em
+        description: Size of the vertical spacing between invididual glyphs in vertical-mode callouts, in em.
+        default: 0.125
+    -
+        id: vertical-callout-vertical-padding
+        Title: Vertical Callout Vertical Padding
+        type: variable-number
+        format: em
+        description: Size of the vertical padding between content and the callout edge, in em.
+        default: 1em;
+*/
+body {
+    --vertical-callout-max-line-height: 300px;
+    --vertical-callout-title-flex-gap: 5px;
+    --vertical-callout-glyph-spacing: 0.125em;
+    --vertical-callout-vertical-padding: 1em;
+}
+
+/* simple right-to-left */
+div[data-callout-metadata*="rtl"] {
+    text-align: right;
+    direction: rtl;
+}
+
+/* simple left-to-right */
+div[data-callout-metadata*="ltr"] {
+    text-align: left;
+    direction: ltr;
+}
+
+/* border correction for right-to-left */
+div[data-callout-metadata*="rtl"],
+div[data-callout-metadata*="vertical-rl"] {
+    border-right: 5px solid rgb(var(--callout-color));
+    border-left: none;
+}
+
+/* vertical writing mode, lines right-to-left */
+div[data-callout-metadata*="vertical-rl"],
+div[data-callout-metadata*="upright"] {
+    writing-mode: vertical-rl;
+    border-left: 1em solid var(--background-secondary);
+}
+
+/* vertical writing mode, lines left-to-right */
+div[data-callout-metadata*="vertical-lr"] {
+    writing-mode: vertical-lr;
+    border-right: 1em solid var(--background-secondary);
+}
+
+/* rules for both vertical modes */
+div[data-callout-metadata*="vertical-rl"],
+div[data-callout-metadata*="vertical-lr"] {
+    max-inline-size: var(--vertical-callout-max-line-height);
+    letter-spacing: var(--vertical-callout-glyph-spacing);
+    max-width: 100%;
+    overflow: auto;
+}
+div[data-callout-metadata*="vertical-rl"] > .callout-title,
+div[data-callout-metadata*="vertical-lr"] > .callout-title {
+    gap: var(--vertical-callout-title-flex-gap);
+}
+div[data-callout-metadata*="vertical-rl"] > .callout-content,
+div[data-callout-metadata*="vertical-lr"]:not([data-callout="hidden"]) > .callout-content {
+    padding-top: var(--vertical-callout-vertical-padding) !important;
+    padding-bottom: calc( var(--vertical-callout-vertical-padding) - 9px ) !important;
+    padding-block-end: 0px;
+}
+div[data-callout-metadata*="vertical-rl"] > .callout-content > p:last-child,
+div[data-callout-metadata*="vertical-lr"] > .callout-content > p:last-child {
+    margin-block-end: 0px;
+}
+
+/* keep height while collapsed */
+div[data-callout-metadata*="keep-height"] {
+    min-height: var(--vertical-callout-max-line-height);
+}
+div[data-callout-metadata*="keep-height"] > .callout-content {
+    min-height: calc(var(--vertical-callout-max-line-height) - var(--vertical-callout-vertical-padding));
+}
+
+/* hide content pseudo-padding when collapsed */
+div.is-collapsed[data-callout-metadata*="vertical-rl"],
+div.is-collapsed[data-callout-metadata*="vertical-lr"] {
+    border-block-end: none;
+}
+
+/* left-align vertical callout */
+div[data-callout-metadata*="l-align"],
+.markdown-source-view.mod-cm6 div[data-callout-metadata*="l-align"] {
+    margin-right: auto;
+}
+
+/* right-align vertical callout */
+div[data-callout-metadata*="r-align"],
+.markdown-source-view.mod-cm6 div[data-callout-metadata*="r-align"] {
+    margin-left: auto;
+}
+
+/* text orientation upright */
+div[data-callout-metadata*="upright"] {
+    text-orientation: upright;
+}
+
+/* full-width callout */
+div[data-callout-metadata*="wide"]:not(.is-collapsed) {
+    width: 100%;
+}
+
+/* rotate line */
+div[data-callout-metadata*="sideways"] {
+    text-orientation: sideways;
+}
+
+/* container-like callout, meant to have no visible styling */
+div[data-callout="hidden"] {
+    background: unset;
+    border: unset;
+    margin: unset;
+    padding: unset;
+    clear: both;
+    overflow: hidden;
+}
+/* hide title for container-like callout */
+div[data-callout-metadata*="no-title"] > .callout-title,
+div[data-callout="hidden"] > .callout-title {
+    display: none;
+}
