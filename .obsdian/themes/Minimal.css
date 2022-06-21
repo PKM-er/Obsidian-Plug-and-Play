@@ -734,49 +734,7 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 	color: var(--text-muted)
 }
 
-.markdown-source-view.mod-cm6 .edit-block-button {
-	cursor: var(--cursor);
-	color: var(--text-faint);
-	background-color: var(--background-primary);
-	top: 0;
-	right: auto;
-	left: 0;
-	opacity: 0;
-	transition: opacity .2s;
-	padding: 4px 4px 4px 9px
-}
 
-.markdown-source-view.mod-cm6 .edit-block-button svg {
-	margin: 0!important
-}
-
-.is-live-preview.is-readable-line-width .cm-embed-block>.edit-block-button {
-	width: 30px!important;
-	padding-left: 9px!important;
-	transform: none!important
-}
-
-.is-live-preview:not(.is-readable-line-width) .cm-embed-block>.edit-block-button {
-	width: 30px!important;
-	padding-left: 0!important;
-	transform: none!important;
-	left: calc(var(--folding-offset) * -2)
-}
-
-.markdown-source-view.mod-cm6 .edit-block-button:hover {
-	background-color: var(--background-primary);
-	color: var(--text-muted)
-}
-
-.markdown-source-view.mod-cm6 .edit-block-button svg {
-	opacity: 1;
-	width: var(--icon-size);
-	height: var(--icon-size)
-}
-
-.markdown-source-view.mod-cm6 .edit-block-button:hover svg {
-	opacity: 1
-}
 
 .markdown-source-view.mod-cm6 .cm-embed-block {
 	padding: 0;
@@ -6068,8 +6026,16 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
 }
 
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content>img[width] {
-	margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/ 2),calc(50% - var(--max-width)/ 2) + var(--folding-offset))!important;
+	margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/ 2),calc(50% - var(--max-width)/ 2) + var(--folding-offset))!import	ant;
 	max-width: var(--max-width)
+}
+
+/*控制每一个可编辑块的与实际的内容体之间的边距*/
+.is-live-preview.is-readable-line-width .cm-embed-block>div,.is-live-preview.is-readable-line-width .cm-embed-block>mjx-container,.is-live-preview.is-readable-line-width .mod-empty {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	width: var(--line-width-adaptive);
+	padding-left: var(--folding-offset)
 }
 
 .is-live-preview.is-readable-line-width .cm-embed-block>div,.is-live-preview.is-readable-line-width .cm-embed-block>mjx-container,.is-live-preview.is-readable-line-width .mod-empty {
@@ -12592,6 +12558,12 @@ img[alt^="bookcover"] {
 
 
 /* ===编辑代码块按钮调整============ */
+.is-live-preview.is-readable-line-width .cm-embed-block>.edit-block-button {
+	width: 60px!important;
+	padding-left: 9px!important;
+	transform: none!important
+}
+
 .markdown-source-view.mod-cm6 .cm-embed-block {
 	border: 0;
 	padding-top: 9px;
@@ -12602,19 +12574,59 @@ img[alt^="bookcover"] {
 	top: -1.5px;
 	border-radius: 20px;
 	right: 10px;
+	color:white;
+	background-color:#3ecf3e;
 }
 
 .markdown-source-view.mod-cm6 .edit-block-button::before {
-	width: 25px;
+	width: 60px;
 	font-size: 11px;
 	text-align: center;
-	content: '</>';
+	content: '</EDIT>';
+	color:white;
+	border-radius:1.5em;
+	background-color:#3ecf3e;
 }
 
 .markdown-source-view.mod-cm6 .edit-block-button>svg {
 	display: none;
 } 
 
+.markdown-source-view.mod-cm6 .edit-block-button svg {
+	opacity: 1;
+	width: var(--icon-size);
+	height: var(--icon-size);
+	margin: 0!important
+}
+
+.markdown-source-view.mod-cm6 .edit-block-button {
+	cursor: var(--cursor);
+	color: var(--text-faint);
+	background-color: var(--background-primary);
+	top: 0;
+	right: auto;
+	left: 0;
+	opacity: 0;
+	transition: opacity .2s;
+	padding: 4px 4px 4px 9px
+}
+
+.is-live-preview:not(.is-readable-line-width) .cm-embed-block>.edit-block-button {
+	width: 50px!important;
+	padding-left: 0!important;
+	transform: none!important;
+	left: calc(var(--folding-offset) * -2);
+	background-color: var(--background-primary);
+}
+
+.markdown-source-view.mod-cm6 .edit-block-button:hover {
+	background-color: var(--background-primary);
+	color: var(--text-muted)
+}
+
+.markdown-source-view.mod-cm6 .edit-block-button:hover svg {
+	opacity: 1
+}
 
  /* ===段落自动缩进============ */
   /*支持两种写法
