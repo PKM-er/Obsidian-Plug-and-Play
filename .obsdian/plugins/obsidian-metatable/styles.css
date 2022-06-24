@@ -65,6 +65,15 @@
 	border-radius:0.5em;
 } 
 
+/*修复banners 和 metatable 冲突*/
+.markdown-preview-sizer .has-banner-icon .obsidian-metatable {
+	margin-top: 25px !important;
+}
+
+.obsidian-banner-wrapper .obsidian-metatable {
+     margin-top: 300px;
+} 
+
 .obsidian-metatable details {
   background-color: var(--metatable-background);
   color: #ffffff;
