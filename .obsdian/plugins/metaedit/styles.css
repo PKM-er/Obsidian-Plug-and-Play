@@ -7,7 +7,6 @@
  * option
  */
 
-
   
 .theme-light .obsidian-metatable {
 
@@ -20,7 +19,6 @@
   --metatable-link-color: var(--text-accent, #705dcf);
   --metatable-link-color-hover: var(--text-accent-hover, #8875ff);
 }
-
 
 .theme-dark .obsidian-metatable {
 
@@ -65,7 +63,7 @@
 	border-radius:0.5em;
 } 
 
-
+/*- metatable 和 banner 插件存在冲突，同时操作文档的 yaml 区域会产生异常,导致在有无icon情况乱下的高度异常*/
 .has-banner-icon .obsidian-metatable {
 	margin-top: 50px !important;
 }
@@ -73,6 +71,7 @@
  .obsidian-metatable {
      margin-top: 300px;
 } 
+/*--修复结束--*/
 
 .obsidian-metatable details {
   background-color: var(--metatable-background);
