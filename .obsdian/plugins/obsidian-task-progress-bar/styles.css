@@ -1,0 +1,60 @@
+/* Set Default Progress Bar For Plugin */
+.cm-task-progress-bar {
+	display: inline-block;
+	position: relative;
+	margin-left: 5px;
+	margin-bottom: 1px;
+	border:1px solid;
+	border-radius:0.25em;
+}
+
+.HyperMD-header .cm-task-progress-bar {
+	display: inline-block;
+	position: relative;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
+
+.progress-bar-inline {
+	border-radius: 10px;
+
+}
+
+.progress-bar-inline-background {
+	color: #000 !important;
+	background-color: #f1f1f1 !important;
+	border-radius: 10px;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	width: 85px;
+}
+
+/* Set Default Progress Bar With Number For Plugin */
+
+.cm-task-progress-bar.with-number {
+	display: inline-flex;
+	flex-direction: row-reverse;
+	align-items: center;
+}
+
+.HyperMD-header .cm-task-progress-bar.with-number .progress-bar-inline-background, .HyperMD-header .cm-task-progress-bar.with-number .progress-status {
+	margin-bottom: 5px;
+}
+
+
+.cm-task-progress-bar.with-number .progress-bar-inline-background {
+	margin-bottom: -2px;
+	width: 42px;
+}
+
+.cm-task-progress-bar.with-number .progress-status {
+	font-size: 13px;
+	margin-left: 3px;
+}
+
+/*给任务进度条增加边框*/
+.cm-task-progress-bar {
+	border:1px solid;
+	border-radius:0.25em;
+}
