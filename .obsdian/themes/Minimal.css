@@ -1456,8 +1456,10 @@ body:not(.is-grabbing) .nav-file-title:hover,body:not(.is-grabbing) .nav-file-ti
 	padding-right: 20px
 }
 
+/*自定义代码注释：控制阅读模式下，代码*/
 .markdown-preview-view ul>li:not(.task-list-item)::marker {
-	font-size: .9em
+	font-size: .9em;
+	border-color:gray;
 }
 
 .list-collapse-indicator .collapse-indicator .collapse-icon {
@@ -1681,11 +1683,16 @@ body {
 }
 
 .markdown-rendered.show-indentation-guide li>ol::before,.markdown-rendered.show-indentation-guide li>ul::before {
-	left: var(--ig-adjust-reading)
+	left: var(--ig-adjust-reading);
+	color:black;
 }
 
+
+/*自定义代码注释：控制编辑视图下列表连接线颜色和位置*/
+/*自定义代码注释：控制编辑视图下列表前面黑点*/
 .markdown-source-view.mod-cm6 .cm-indent::before {
-	transform: translateX(var(--ig-adjust-edit))
+	transform: translateX(var(--ig-adjust-edit));
+	margin-left:-0.3em;
 }
 
 a {
@@ -1740,6 +1747,7 @@ ul>li {
 	min-height: 1.4em
 }
 
+/*控制无序列表前置原点的颜色*/
 ol>li::marker,ul>li::marker {
 	color: var(--text-faint)
 }
@@ -12290,6 +12298,13 @@ img[alt^="bookcover"] {
 	color: var(--text-normal);
 	background-color: var(--background-secondary);
 }
+
+/*调整初始状态下 Cards View 的样式*/
+.cards table.dataview tbody>tr>td button img{
+    width: calc(var(--cards-width)/8 );
+    height: calc(var(--cards-width) /8);
+    margin-left: -1px;
+} 
 
 /* ================================== */
 /* ======= Call out======= */
