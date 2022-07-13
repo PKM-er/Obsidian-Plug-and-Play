@@ -47,7 +47,8 @@
     height:var(--banner-height);
     width:100%;
     overflow:hidden;
-    user-select:none
+    user-select:none;
+	height:40%;
 }
 .obsidian-banner.gradient:not(.error){
     mask-image:linear-gradient(to bottom,black 50%,transparent);
@@ -273,11 +274,11 @@
  */
  
 .obsidian-banner-icon.cm5-banner-icon.h-left.v-center.obsidian-banner-icon .icon-box {
-	margin-top:250px;
+	margin-top:320px;
 }
 
 .has-banner.cm-active.has-banner-icon.cm-line.obsidian-banner-icon .icon-box {
-	margin-top:250px;
+	margin-top:320px;
 }
 
 .obsidian-banner-icon.cm6-banner-icon.h-left.v-center{
