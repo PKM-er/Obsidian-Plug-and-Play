@@ -981,7 +981,7 @@ var require_react_development = __commonJS({
           }
           return lazyType;
         }
-        function forwardRef2(render) {
+        function forwardRef(render) {
           {
             if (render != null && render.$$typeof === REACT_MEMO_TYPE) {
               error("forwardRef requires a render function but received a `memo` component. Instead of forwardRef(memo(...)), use memo(forwardRef(...)).");
@@ -1090,7 +1090,7 @@ var require_react_development = __commonJS({
           }
           return dispatcher.useContext(Context, unstable_observedBits);
         }
-        function useState10(initialState) {
+        function useState7(initialState) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useState(initialState);
         }
@@ -1098,11 +1098,11 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useReducer(reducer, initialArg, init);
         }
-        function useRef5(initialValue) {
+        function useRef4(initialValue) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useRef(initialValue);
         }
-        function useEffect7(create, deps) {
+        function useEffect10(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useEffect(create, deps);
         }
@@ -1110,11 +1110,11 @@ var require_react_development = __commonJS({
           var dispatcher = resolveDispatcher();
           return dispatcher.useLayoutEffect(create, deps);
         }
-        function useCallback8(callback, deps) {
+        function useCallback4(callback, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useCallback(callback, deps);
         }
-        function useMemo(create, deps) {
+        function useMemo2(create, deps) {
           var dispatcher = resolveDispatcher();
           return dispatcher.useMemo(create, deps);
         }
@@ -1665,20 +1665,20 @@ var require_react_development = __commonJS({
         exports.createElement = createElement$1;
         exports.createFactory = createFactory;
         exports.createRef = createRef;
-        exports.forwardRef = forwardRef2;
+        exports.forwardRef = forwardRef;
         exports.isValidElement = isValidElement;
         exports.lazy = lazy;
         exports.memo = memo;
-        exports.useCallback = useCallback8;
+        exports.useCallback = useCallback4;
         exports.useContext = useContext3;
         exports.useDebugValue = useDebugValue;
-        exports.useEffect = useEffect7;
+        exports.useEffect = useEffect10;
         exports.useImperativeHandle = useImperativeHandle;
         exports.useLayoutEffect = useLayoutEffect;
-        exports.useMemo = useMemo;
+        exports.useMemo = useMemo2;
         exports.useReducer = useReducer;
-        exports.useRef = useRef5;
-        exports.useState = useState10;
+        exports.useRef = useRef4;
+        exports.useState = useState7;
         exports.version = ReactVersion;
       })();
     }
@@ -2486,11 +2486,11 @@ var require_react_dom_development = __commonJS({
     if (true) {
       (function() {
         "use strict";
-        var React31 = require_react();
+        var React34 = require_react();
         var _assign = require_object_assign();
         var Scheduler = require_scheduler();
         var tracing = require_tracing();
-        var ReactSharedInternals = React31.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React34.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function warn(format) {
           {
             for (var _len = arguments.length, args = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
@@ -2522,7 +2522,7 @@ var require_react_dom_development = __commonJS({
             Function.prototype.apply.call(console[level], console, argsWithFormat);
           }
         }
-        if (!React31) {
+        if (!React34) {
           {
             throw Error("ReactDOM was loaded before React. Make sure you load the React package before loading ReactDOM.");
           }
@@ -3738,7 +3738,7 @@ var require_react_dom_development = __commonJS({
         var didWarnInvalidChild = false;
         function flattenChildren(children) {
           var content = "";
-          React31.Children.forEach(children, function(child) {
+          React34.Children.forEach(children, function(child) {
             if (child == null) {
               return;
             }
@@ -3749,7 +3749,7 @@ var require_react_dom_development = __commonJS({
         function validateProps(element, props) {
           {
             if (typeof props.children === "object" && props.children !== null) {
-              React31.Children.forEach(props.children, function(child) {
+              React34.Children.forEach(props.children, function(child) {
                 if (child == null) {
                   return;
                 }
@@ -10942,7 +10942,7 @@ var require_react_dom_development = __commonJS({
         }
         var fakeInternalInstance = {};
         var isArray = Array.isArray;
-        var emptyRefsObject = new React31.Component().refs;
+        var emptyRefsObject = new React34.Component().refs;
         var didWarnAboutStateAssignmentForComponent;
         var didWarnAboutUninitializedState;
         var didWarnAboutGetSnapshotBeforeUpdateWithoutDidUpdate;
@@ -21498,7 +21498,7 @@ var require_cjs = __commonJS({
 // node_modules/html-react-parser/lib/utilities.js
 var require_utilities2 = __commonJS({
   "node_modules/html-react-parser/lib/utilities.js"(exports, module2) {
-    var React31 = require_react();
+    var React34 = require_react();
     var styleToJS = require_cjs().default;
     function invertObject(obj, override) {
       if (!obj || typeof obj !== "object") {
@@ -21553,7 +21553,7 @@ var require_utilities2 = __commonJS({
         props.style = {};
       }
     }
-    var PRESERVE_CUSTOM_ATTRIBUTES = React31.version.split(".")[0] >= 16;
+    var PRESERVE_CUSTOM_ATTRIBUTES = React34.version.split(".")[0] >= 16;
     var elementsWithNoTextChildren = new Set([
       "tr",
       "tbody",
@@ -21639,14 +21639,14 @@ var require_attributes_to_props = __commonJS({
 // node_modules/html-react-parser/lib/dom-to-react.js
 var require_dom_to_react = __commonJS({
   "node_modules/html-react-parser/lib/dom-to-react.js"(exports, module2) {
-    var React31 = require_react();
+    var React34 = require_react();
     var attributesToProps2 = require_attributes_to_props();
     var utilities = require_utilities2();
     var setStyleProp = utilities.setStyleProp;
     var canTextBeChildOfNode = utilities.canTextBeChildOfNode;
     function domToReact2(nodes, options) {
       options = options || {};
-      var library = options.library || React31;
+      var library = options.library || React34;
       var cloneElement = library.cloneElement;
       var createElement = library.createElement;
       var isValidElement = library.isValidElement;
@@ -24866,7 +24866,7 @@ var require_isMuiElement = __commonJS({
       value: true
     });
     exports.default = isMuiElement;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -24906,7 +24906,7 @@ var require_isMuiElement = __commonJS({
       return newObj;
     }
     function isMuiElement(element, muiNames) {
-      return /* @__PURE__ */ React31.isValidElement(element) && muiNames.indexOf(element.type.muiName) !== -1;
+      return /* @__PURE__ */ React34.isValidElement(element) && muiNames.indexOf(element.type.muiName) !== -1;
     }
   }
 });
@@ -25002,7 +25002,7 @@ var require_useEnhancedEffect = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -25041,7 +25041,7 @@ var require_useEnhancedEffect = __commonJS({
       }
       return newObj;
     }
-    var useEnhancedEffect = typeof window !== "undefined" ? React31.useLayoutEffect : React31.useEffect;
+    var useEnhancedEffect = typeof window !== "undefined" ? React34.useLayoutEffect : React34.useEffect;
     var _default = useEnhancedEffect;
     exports.default = _default;
   }
@@ -25054,8 +25054,8 @@ var require_useId = __commonJS({
     Object.defineProperty(exports, "__esModule", {
       value: true
     });
-    exports.default = useId;
-    var React31 = _interopRequireWildcard(require_react());
+    exports.default = useId2;
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -25096,9 +25096,9 @@ var require_useId = __commonJS({
     }
     var globalId = 0;
     function useGlobalId(idOverride) {
-      const [defaultId, setDefaultId] = React31.useState(idOverride);
+      const [defaultId, setDefaultId] = React34.useState(idOverride);
       const id = idOverride || defaultId;
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (defaultId == null) {
           globalId += 1;
           setDefaultId(`mui-${globalId}`);
@@ -25106,8 +25106,8 @@ var require_useId = __commonJS({
       }, [defaultId]);
       return id;
     }
-    var maybeReactUseId = React31["useId"];
-    function useId(idOverride) {
+    var maybeReactUseId = React34["useId"];
+    function useId2(idOverride) {
       if (maybeReactUseId !== void 0) {
         const reactId = maybeReactUseId();
         return idOverride != null ? idOverride : reactId;
@@ -25146,7 +25146,7 @@ var require_useControlled = __commonJS({
       value: true
     });
     exports.default = useControlled;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -25193,25 +25193,25 @@ var require_useControlled = __commonJS({
     }) {
       const {
         current: isControlled
-      } = React31.useRef(controlled !== void 0);
-      const [valueState, setValue] = React31.useState(defaultProp);
+      } = React34.useRef(controlled !== void 0);
+      const [valueState, setValue] = React34.useState(defaultProp);
       const value = isControlled ? controlled : valueState;
       if (true) {
-        React31.useEffect(() => {
+        React34.useEffect(() => {
           if (isControlled !== (controlled !== void 0)) {
             console.error([`MUI: A component is changing the ${isControlled ? "" : "un"}controlled ${state} state of ${name} to be ${isControlled ? "un" : ""}controlled.`, "Elements should not switch from uncontrolled to controlled (or vice versa).", `Decide between using a controlled or uncontrolled ${name} element for the lifetime of the component.`, "The nature of the state is determined during the first render. It's considered controlled if the value is not `undefined`.", "More info: https://fb.me/react-controlled-components"].join("\n"));
           }
         }, [state, name, controlled]);
         const {
           current: defaultValue
-        } = React31.useRef(defaultProp);
-        React31.useEffect(() => {
+        } = React34.useRef(defaultProp);
+        React34.useEffect(() => {
           if (!isControlled && defaultValue !== defaultProp) {
             console.error([`MUI: A component is changing the default ${state} state of an uncontrolled ${name} after being initialized. To suppress this warning opt to use a controlled ${name}.`].join("\n"));
           }
         }, [JSON.stringify(defaultProp)]);
       }
-      const setValueIfUncontrolled = React31.useCallback((newValue) => {
+      const setValueIfUncontrolled = React34.useCallback((newValue) => {
         if (!isControlled) {
           setValue(newValue);
         }
@@ -25230,7 +25230,7 @@ var require_useEventCallback = __commonJS({
       value: true
     });
     exports.default = useEventCallback;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _useEnhancedEffect = _interopRequireDefault(require_useEnhancedEffect());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -25271,11 +25271,11 @@ var require_useEventCallback = __commonJS({
       return newObj;
     }
     function useEventCallback(fn) {
-      const ref = React31.useRef(fn);
+      const ref = React34.useRef(fn);
       (0, _useEnhancedEffect.default)(() => {
         ref.current = fn;
       });
-      return React31.useCallback((...args) => (0, ref.current)(...args), []);
+      return React34.useCallback((...args) => (0, ref.current)(...args), []);
     }
   }
 });
@@ -25289,7 +25289,7 @@ var require_useForkRef = __commonJS({
       value: true
     });
     exports.default = useForkRef;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _setRef = _interopRequireDefault(require_setRef());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -25330,7 +25330,7 @@ var require_useForkRef = __commonJS({
       return newObj;
     }
     function useForkRef(refA, refB) {
-      return React31.useMemo(() => {
+      return React34.useMemo(() => {
         if (refA == null && refB == null) {
           return null;
         }
@@ -25352,7 +25352,7 @@ var require_useIsFocusVisible = __commonJS({
     });
     exports.default = useIsFocusVisible;
     exports.teardown = teardown;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -25466,12 +25466,12 @@ var require_useIsFocusVisible = __commonJS({
       return hadKeyboardEvent || focusTriggersKeyboardModality(target);
     }
     function useIsFocusVisible() {
-      const ref = React31.useCallback((node) => {
+      const ref = React34.useCallback((node) => {
         if (node != null) {
           prepare(node.ownerDocument);
         }
       }, []);
-      const isFocusVisibleRef = React31.useRef(false);
+      const isFocusVisibleRef = React34.useRef(false);
       function handleBlurVisible() {
         if (isFocusVisibleRef.current) {
           hadFocusVisibleRecently = true;
@@ -25581,7 +25581,7 @@ var require_usePreviousProps = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -25621,8 +25621,8 @@ var require_usePreviousProps = __commonJS({
       return newObj;
     }
     var usePreviousProps = (value) => {
-      const ref = React31.useRef({});
-      React31.useEffect(() => {
+      const ref = React34.useRef({});
+      React34.useEffect(() => {
         ref.current = value;
       });
       return ref.current;
@@ -26270,7 +26270,7 @@ var require_useAutocomplete = __commonJS({
     exports.createFilterOptions = createFilterOptions;
     exports.default = useAutocomplete;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -26411,14 +26411,14 @@ var require_useAutocomplete = __commonJS({
         }
         return optionLabel;
       };
-      const ignoreFocus = React31.useRef(false);
-      const firstFocus = React31.useRef(true);
-      const inputRef = React31.useRef(null);
-      const listboxRef = React31.useRef(null);
-      const [anchorEl, setAnchorEl] = React31.useState(null);
-      const [focusedTag, setFocusedTag] = React31.useState(-1);
+      const ignoreFocus = React34.useRef(false);
+      const firstFocus = React34.useRef(true);
+      const inputRef = React34.useRef(null);
+      const listboxRef = React34.useRef(null);
+      const [anchorEl, setAnchorEl] = React34.useState(null);
+      const [focusedTag, setFocusedTag] = React34.useState(-1);
       const defaultHighlighted = autoHighlight ? 0 : -1;
-      const highlightedIndexRef = React31.useRef(defaultHighlighted);
+      const highlightedIndexRef = React34.useRef(defaultHighlighted);
       const [value, setValueState] = (0, _utils.unstable_useControlled)({
         controlled: valueProp,
         default: defaultValue,
@@ -26430,8 +26430,8 @@ var require_useAutocomplete = __commonJS({
         name: componentName,
         state: "inputValue"
       });
-      const [focused, setFocused] = React31.useState(false);
-      const resetInputValue = React31.useCallback((event, newValue) => {
+      const [focused, setFocused] = React34.useState(false);
+      const resetInputValue = React34.useCallback((event, newValue) => {
         const isOptionSelected = multiple ? value.length < newValue.length : newValue !== null;
         if (!isOptionSelected && !clearOnBlur) {
           return;
@@ -26453,8 +26453,8 @@ var require_useAutocomplete = __commonJS({
           onInputChange(event, newInputValue, "reset");
         }
       }, [getOptionLabel, inputValue, multiple, onInputChange, setInputValueState, clearOnBlur, value]);
-      const prevValue = React31.useRef();
-      React31.useEffect(() => {
+      const prevValue = React34.useRef();
+      React34.useEffect(() => {
         const valueChange = value !== prevValue.current;
         prevValue.current = value;
         if (focused && !valueChange) {
@@ -26471,7 +26471,7 @@ var require_useAutocomplete = __commonJS({
         name: componentName,
         state: "open"
       });
-      const [inputPristine, setInputPristine] = React31.useState(true);
+      const [inputPristine, setInputPristine] = React34.useState(true);
       const inputValueIsSelectedValue = !multiple && value != null && inputValue === getOptionLabel(value);
       const popupOpen = open && !readOnly;
       const filteredOptions = popupOpen ? filterOptions(options.filter((option) => {
@@ -26499,7 +26499,7 @@ var require_useAutocomplete = __commonJS({
           anchorEl.querySelector(`[data-tag-index="${tagToFocus}"]`).focus();
         }
       });
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (multiple && focusedTag > value.length - 1) {
           setFocusedTag(-1);
           focusTag(-1);
@@ -26632,7 +26632,7 @@ var require_useAutocomplete = __commonJS({
           }
         }
       });
-      const syncHighlightedIndex = React31.useCallback(() => {
+      const syncHighlightedIndex = React34.useCallback(() => {
         if (!popupOpen) {
           return;
         }
@@ -26690,7 +26690,7 @@ var require_useAutocomplete = __commonJS({
         syncHighlightedIndex();
       });
       if (true) {
-        React31.useEffect(() => {
+        React34.useEffect(() => {
           if (!inputRef.current || inputRef.current.nodeName !== "INPUT") {
             if (inputRef.current && inputRef.current.nodeName === "TEXTAREA") {
               console.warn([`A textarea element was provided to ${componentName} where input was expected.`, `This is not a supported scenario but it may work under certain conditions.`, `A textarea keyboard navigation may conflict with Autocomplete controls (e.g. enter and arrow keys).`, `Make sure to test keyboard navigation and add custom event handlers if necessary.`].join("\n"));
@@ -26700,7 +26700,7 @@ var require_useAutocomplete = __commonJS({
           }
         }, [componentName]);
       }
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         syncHighlightedIndex();
       }, [syncHighlightedIndex]);
       const handleOpen = (event) => {
@@ -26735,7 +26735,7 @@ var require_useAutocomplete = __commonJS({
         }
         setValueState(newValue);
       };
-      const isTouch = React31.useRef(false);
+      const isTouch = React34.useRef(false);
       const selectNewValue = (event, option, reasonProp = "selectOption", origin = "options") => {
         let reason = reasonProp;
         let newValue = option;
@@ -27415,7 +27415,7 @@ var require_react_jsx_runtime_development = __commonJS({
     if (true) {
       (function() {
         "use strict";
-        var React31 = require_react();
+        var React34 = require_react();
         var _assign = require_object_assign();
         var REACT_ELEMENT_TYPE = 60103;
         var REACT_PORTAL_TYPE = 60106;
@@ -27472,7 +27472,7 @@ var require_react_jsx_runtime_development = __commonJS({
           }
           return null;
         }
-        var ReactSharedInternals = React31.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+        var ReactSharedInternals = React34.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
         function error(format) {
           {
             for (var _len2 = arguments.length, args = new Array(_len2 > 1 ? _len2 - 1 : 0), _key2 = 1; _key2 < _len2; _key2++) {
@@ -28274,7 +28274,7 @@ var require_BackdropUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _composeClasses = _interopRequireDefault(require_composeClasses2());
@@ -28330,7 +28330,7 @@ var require_BackdropUnstyled = __commonJS({
       };
       return (0, _composeClasses.default)(slots, _backdropUnstyledClasses.getBackdropUtilityClass, classes);
     };
-    var BackdropUnstyled = /* @__PURE__ */ React31.forwardRef(function BackdropUnstyled2(props, ref) {
+    var BackdropUnstyled = /* @__PURE__ */ React34.forwardRef(function BackdropUnstyled2(props, ref) {
       const {
         classes: classesProp,
         className,
@@ -28531,7 +28531,7 @@ var require_BadgeUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -28592,7 +28592,7 @@ var require_BadgeUnstyled = __commonJS({
       };
       return (0, _composeClasses.default)(slots, _badgeUnstyledClasses.getBadgeUtilityClass, classes);
     };
-    var BadgeUnstyled = /* @__PURE__ */ React31.forwardRef(function BadgeUnstyled2(props, ref) {
+    var BadgeUnstyled = /* @__PURE__ */ React34.forwardRef(function BadgeUnstyled2(props, ref) {
       const {
         anchorOrigin: anchorOriginProp = {
           vertical: "top",
@@ -28779,7 +28779,7 @@ var require_useButton = __commonJS({
     });
     exports.default = useButton;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _extractEventHandlers = _interopRequireDefault(require_extractEventHandlers());
     function _getRequireWildcardCache(nodeInterop) {
@@ -28830,19 +28830,19 @@ var require_useButton = __commonJS({
         to,
         type
       } = parameters;
-      const buttonRef = React31.useRef();
-      const [active, setActive] = React31.useState(false);
+      const buttonRef = React34.useRef();
+      const [active, setActive] = React34.useState(false);
       const {
         isFocusVisibleRef,
         onFocus: handleFocusVisible,
         onBlur: handleBlurVisible,
         ref: focusVisibleRef
       } = (0, _utils.unstable_useIsFocusVisible)();
-      const [focusVisible, setFocusVisible] = React31.useState(false);
+      const [focusVisible, setFocusVisible] = React34.useState(false);
       if (disabled && focusVisible) {
         setFocusVisible(false);
       }
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         isFocusVisibleRef.current = focusVisible;
       }, [focusVisible, isFocusVisibleRef]);
       const createHandleMouseLeave = (otherHandlers) => (event) => {
@@ -28928,7 +28928,7 @@ var require_useButton = __commonJS({
       };
       const handleOwnRef = (0, _utils.unstable_useForkRef)(focusVisibleRef, buttonRef);
       const handleRef = (0, _utils.unstable_useForkRef)(ref, handleOwnRef);
-      const [hostElementName, setHostElementName] = React31.useState("");
+      const [hostElementName, setHostElementName] = React34.useState("");
       const updateRef = (instance) => {
         var _instance$tagName;
         setHostElementName((_instance$tagName = instance == null ? void 0 : instance.tagName) != null ? _instance$tagName : "");
@@ -28987,7 +28987,7 @@ var require_ButtonUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -29046,7 +29046,7 @@ var require_ButtonUnstyled = __commonJS({
       };
       return (0, _composeClasses.default)(slots, _buttonUnstyledClasses.getButtonUnstyledUtilityClass, {});
     };
-    var ButtonUnstyled = /* @__PURE__ */ React31.forwardRef(function ButtonUnstyled2(props, forwardedRef) {
+    var ButtonUnstyled = /* @__PURE__ */ React34.forwardRef(function ButtonUnstyled2(props, forwardedRef) {
       var _ref, _componentsProps$root;
       const {
         className,
@@ -29056,7 +29056,7 @@ var require_ButtonUnstyled = __commonJS({
         children,
         action
       } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded);
-      const buttonRef = React31.useRef();
+      const buttonRef = React34.useRef();
       const handleRef = (0, _utils.unstable_useForkRef)(buttonRef, forwardedRef);
       const ButtonRoot = (_ref = component != null ? component : components.Root) != null ? _ref : "button";
       const {
@@ -29068,7 +29068,7 @@ var require_ButtonUnstyled = __commonJS({
         component: ButtonRoot,
         ref: handleRef
       }));
-      React31.useImperativeHandle(action, () => ({
+      React34.useImperativeHandle(action, () => ({
         focusVisible: () => {
           setFocusVisible(true);
           buttonRef.current.focus();
@@ -29249,7 +29249,7 @@ var require_ClickAwayListener = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _jsxRuntime = require_jsx_runtime();
@@ -29305,11 +29305,11 @@ var require_ClickAwayListener = __commonJS({
         onClickAway,
         touchEvent = "onTouchEnd"
       } = props;
-      const movedRef = React31.useRef(false);
-      const nodeRef = React31.useRef(null);
-      const activatedRef = React31.useRef(false);
-      const syntheticEventRef = React31.useRef(false);
-      React31.useEffect(() => {
+      const movedRef = React34.useRef(false);
+      const nodeRef = React34.useRef(null);
+      const activatedRef = React34.useRef(false);
+      const syntheticEventRef = React34.useRef(false);
+      React34.useEffect(() => {
         setTimeout(() => {
           activatedRef.current = true;
         }, 0);
@@ -29352,7 +29352,7 @@ var require_ClickAwayListener = __commonJS({
       if (touchEvent !== false) {
         childrenProps[touchEvent] = createHandleSynthetic(touchEvent);
       }
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (touchEvent !== false) {
           const mappedTouchEvent = mapEventPropToEvent(touchEvent);
           const doc = (0, _utils.unstable_ownerDocument)(nodeRef.current);
@@ -29371,7 +29371,7 @@ var require_ClickAwayListener = __commonJS({
       if (mouseEvent !== false) {
         childrenProps[mouseEvent] = createHandleSynthetic(mouseEvent);
       }
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (mouseEvent !== false) {
           const mappedMouseEvent = mapEventPropToEvent(mouseEvent);
           const doc = (0, _utils.unstable_ownerDocument)(nodeRef.current);
@@ -29382,8 +29382,8 @@ var require_ClickAwayListener = __commonJS({
         }
         return void 0;
       }, [handleClickAway, mouseEvent]);
-      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React31.Fragment, {
-        children: /* @__PURE__ */ React31.cloneElement(children, childrenProps)
+      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React34.Fragment, {
+        children: /* @__PURE__ */ React34.cloneElement(children, childrenProps)
       });
     }
     true ? ClickAwayListener.propTypes = {
@@ -29479,7 +29479,7 @@ var require_FormControlContext = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -29518,7 +29518,7 @@ var require_FormControlContext = __commonJS({
       }
       return newObj;
     }
-    var FormControlUnstyledContext = /* @__PURE__ */ React31.createContext(void 0);
+    var FormControlUnstyledContext = /* @__PURE__ */ React34.createContext(void 0);
     if (true) {
       FormControlUnstyledContext.displayName = "FormControlUnstyledContext";
     }
@@ -29559,7 +29559,7 @@ var require_FormControlUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -29609,7 +29609,7 @@ var require_FormControlUnstyled = __commonJS({
     function hasValue(value) {
       return value != null && !(Array.isArray(value) && value.length === 0) && value !== "";
     }
-    var FormControlUnstyled = /* @__PURE__ */ React31.forwardRef(function FormControlUnstyled2(props, ref) {
+    var FormControlUnstyled = /* @__PURE__ */ React34.forwardRef(function FormControlUnstyled2(props, ref) {
       var _ref;
       const {
         defaultValue,
@@ -29632,7 +29632,7 @@ var require_FormControlUnstyled = __commonJS({
         state: "value"
       });
       const filled = hasValue(value);
-      const [focusedState, setFocused] = React31.useState(false);
+      const [focusedState, setFocused] = React34.useState(false);
       if (disabled && focusedState) {
         setFocused(false);
       }
@@ -29647,7 +29647,7 @@ var require_FormControlUnstyled = __commonJS({
       let registerEffect = () => {
       };
       if (true) {
-        const registeredInput = React31.useRef(false);
+        const registeredInput = React34.useRef(false);
         registerEffect = () => {
           if (registeredInput.current) {
             console.error(["MUI: There are multiple `Input` components inside a FormControl.", "This creates visual inconsistencies, only use one `Input`."].join("\n"));
@@ -29722,7 +29722,7 @@ var require_useFormControl = __commonJS({
       value: true
     });
     exports.default = useFormControlUnstyled;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _FormControlContext = _interopRequireDefault(require_FormControlContext());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -29763,7 +29763,7 @@ var require_useFormControl = __commonJS({
       return newObj;
     }
     function useFormControlUnstyled() {
-      return React31.useContext(_FormControlContext.default);
+      return React34.useContext(_FormControlContext.default);
     }
   }
 });
@@ -29910,7 +29910,7 @@ var require_useInput = __commonJS({
     exports.default = useInput;
     var _extends2 = _interopRequireDefault(require_extends());
     var _utils = require_utils();
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _useFormControl = _interopRequireDefault(require_useFormControl());
     var _extractEventHandlers = _interopRequireDefault(require_extractEventHandlers());
     function _getRequireWildcardCache(nodeInterop) {
@@ -29981,19 +29981,19 @@ var require_useInput = __commonJS({
       }
       const {
         current: isControlled
-      } = React31.useRef(value != null);
-      const handleInputRefWarning = React31.useCallback((instance) => {
+      } = React34.useRef(value != null);
+      const handleInputRefWarning = React34.useCallback((instance) => {
         if (true) {
           if (instance && instance.nodeName !== "INPUT" && !instance.focus) {
             console.error(["MUI: You have provided a `components.Input` to the input component", "that does not correctly handle the `ref` prop.", "Make sure the `ref` prop is called with a HTMLInputElement."].join("\n"));
           }
         }
       }, []);
-      const internalInputRef = React31.useRef(null);
+      const internalInputRef = React34.useRef(null);
       const handleIncomingRef = (0, _utils.unstable_useForkRef)(inputRef, handleInputRefWarning);
       const handleInputRef = (0, _utils.unstable_useForkRef)(internalInputRef, handleIncomingRef);
-      const [focused, setFocused] = React31.useState(false);
-      React31.useEffect(() => {
+      const [focused, setFocused] = React34.useState(false);
+      React34.useEffect(() => {
         if (!formControlContext && disabled && focused) {
           setFocused(false);
           onBlur == null ? void 0 : onBlur();
@@ -30093,7 +30093,7 @@ var require_InputUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _clsx = _interopRequireDefault(require_clsx());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _appendOwnerState = _interopRequireDefault(require_appendOwnerState());
@@ -30140,7 +30140,7 @@ var require_InputUnstyled = __commonJS({
       }
       return newObj;
     }
-    var InputUnstyled = /* @__PURE__ */ React31.forwardRef(function InputUnstyled2(props, ref) {
+    var InputUnstyled = /* @__PURE__ */ React34.forwardRef(function InputUnstyled2(props, ref) {
       var _componentsProps$inpu, _ref, _componentsProps$root, _components$Input, _componentsProps$inpu2;
       const {
         "aria-describedby": ariaDescribedby,
@@ -30643,7 +30643,7 @@ var require_useControllableReducer = __commonJS({
       value: true
     });
     exports.default = useControllableReducer;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _useListbox = require_useListbox_types();
     var _areArraysEqual = _interopRequireDefault(require_areArraysEqual());
@@ -30686,17 +30686,17 @@ var require_useControllableReducer = __commonJS({
       return newObj;
     }
     function useReducerReturnValueHandler(state, value, options, optionComparer, setValueState, onValueChange, onHighlightChange) {
-      const valueRef = React31.useRef(value);
+      const valueRef = React34.useRef(value);
       valueRef.current = value;
-      const onValueChangeRef = React31.useRef(onValueChange);
-      React31.useEffect(() => {
+      const onValueChangeRef = React34.useRef(onValueChange);
+      React34.useEffect(() => {
         onValueChangeRef.current = onValueChange;
       }, [onValueChange]);
-      const onHighlightChangeRef = React31.useRef(onHighlightChange);
-      React31.useEffect(() => {
+      const onHighlightChangeRef = React34.useRef(onHighlightChange);
+      React34.useEffect(() => {
         onHighlightChangeRef.current = onHighlightChange;
       }, [onHighlightChange]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (Array.isArray(state.selectedValue)) {
           if ((0, _areArraysEqual.default)(state.selectedValue, valueRef.current)) {
             return;
@@ -30710,7 +30710,7 @@ var require_useControllableReducer = __commonJS({
           (_onValueChangeRef$cur = onValueChangeRef.current) == null ? void 0 : _onValueChangeRef$cur.call(onValueChangeRef, state.selectedValue);
         }
       }, [state.selectedValue, setValueState, optionComparer]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         var _onHighlightChangeRef;
         (_onHighlightChangeRef = onHighlightChangeRef.current) == null ? void 0 : _onHighlightChangeRef.call(onHighlightChangeRef, state.highlightedValue);
       }, [state.highlightedValue]);
@@ -30724,21 +30724,21 @@ var require_useControllableReducer = __commonJS({
         options,
         optionComparer
       } = props;
-      const propsRef = React31.useRef(props);
+      const propsRef = React34.useRef(props);
       propsRef.current = props;
       const [value, setValueState] = (0, _utils.unstable_useControlled)({
         controlled: controlledValue,
         default: defaultValue,
         name: "useListbox"
       });
-      const previousValueRef = React31.useRef(null);
-      const [state, dispatch] = React31.useReducer(externalReducer != null ? externalReducer : internalReducer, {
+      const previousValueRef = React34.useRef(null);
+      const [state, dispatch] = React34.useReducer(externalReducer != null ? externalReducer : internalReducer, {
         highlightedValue: null,
         selectedValue: value
       });
-      const optionComparerRef = React31.useRef(optionComparer);
+      const optionComparerRef = React34.useRef(optionComparer);
       optionComparerRef.current = optionComparer;
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (controlledValue === void 0) {
           return;
         }
@@ -30770,7 +30770,7 @@ var require_useListbox = __commonJS({
     });
     exports.default = useListbox;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _useListbox = require_useListbox_types();
     var _defaultListboxReducer = _interopRequireDefault(require_defaultListboxReducer());
@@ -30843,17 +30843,17 @@ var require_useListbox = __commonJS({
         multiple,
         optionComparer
       });
-      const listboxRef = React31.useRef(null);
+      const listboxRef = React34.useRef(null);
       const handleRef = (0, _utils.unstable_useForkRef)(externalListboxRef, listboxRef);
       const [{
         highlightedValue,
         selectedValue
       }, dispatch] = (0, _useControllableReducer.default)(_defaultListboxReducer.default, externalReducer, propsWithDefaults);
-      const highlightedIndex = React31.useMemo(() => {
+      const highlightedIndex = React34.useMemo(() => {
         return highlightedValue == null ? -1 : options.findIndex((option) => optionComparer(option, highlightedValue));
       }, [highlightedValue, options, optionComparer]);
-      const previousOptions = React31.useRef([]);
-      React31.useEffect(() => {
+      const previousOptions = React34.useRef([]);
+      React34.useEffect(() => {
         if ((0, _areArraysEqual.default)(previousOptions.current, options, optionComparer)) {
           return;
         }
@@ -30865,13 +30865,13 @@ var require_useListbox = __commonJS({
         });
         previousOptions.current = options;
       }, [options, optionComparer, dispatch]);
-      const setSelectedValue = React31.useCallback((option) => {
+      const setSelectedValue = React34.useCallback((option) => {
         dispatch({
           type: _useListbox.ActionTypes.setValue,
           value: option
         });
       }, [dispatch]);
-      const setHighlightedValue = React31.useCallback((option) => {
+      const setHighlightedValue = React34.useCallback((option) => {
         dispatch({
           type: _useListbox.ActionTypes.setHighlight,
           highlight: option
@@ -30987,7 +30987,7 @@ var require_useListbox = __commonJS({
           role: "option"
         });
       };
-      React31.useDebugValue({
+      React34.useDebugValue({
         highlightedOption: options[highlightedIndex],
         selectedOption: selectedValue
       });
@@ -31056,7 +31056,7 @@ var require_MenuUnstyledContext = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -31095,7 +31095,7 @@ var require_MenuUnstyledContext = __commonJS({
       }
       return newObj;
     }
-    var MenuUnstyledContext = /* @__PURE__ */ React31.createContext(null);
+    var MenuUnstyledContext = /* @__PURE__ */ React34.createContext(null);
     MenuUnstyledContext.displayName = "MenuUnstyledContext";
     var _default = MenuUnstyledContext;
     exports.default = _default;
@@ -31133,7 +31133,7 @@ var require_useMenu = __commonJS({
     });
     exports.default = useMenu2;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _ListboxUnstyled = require_ListboxUnstyled();
     function _getRequireWildcardCache(nodeInterop) {
@@ -31193,17 +31193,17 @@ var require_useMenu = __commonJS({
         onClose,
         listboxId
       } = parameters;
-      const [menuItems, setMenuItems] = React31.useState({});
-      const listboxRef = React31.useRef(null);
+      const [menuItems, setMenuItems] = React34.useState({});
+      const listboxRef = React34.useRef(null);
       const handleRef = (0, _utils.unstable_useForkRef)(listboxRef, listboxRefProp);
-      const registerItem = React31.useCallback((id, metadata) => {
+      const registerItem = React34.useCallback((id, metadata) => {
         setMenuItems((previousState) => {
           const newState = (0, _extends2.default)({}, previousState);
           newState[id] = metadata;
           return newState;
         });
       }, []);
-      const unregisterItem = React31.useCallback((id) => {
+      const unregisterItem = React34.useCallback((id) => {
         setMenuItems((previousState) => {
           const newState = (0, _extends2.default)({}, previousState);
           delete newState[id];
@@ -31228,17 +31228,17 @@ var require_useMenu = __commonJS({
         stateReducer,
         disabledItemsFocusable: true
       });
-      const highlightFirstItem = React31.useCallback(() => {
+      const highlightFirstItem = React34.useCallback(() => {
         if (Object.keys(menuItems).length > 0) {
           setListboxHighlight(menuItems[Object.keys(menuItems)[0]].id);
         }
       }, [menuItems, setListboxHighlight]);
-      const highlightLastItem = React31.useCallback(() => {
+      const highlightLastItem = React34.useCallback(() => {
         if (Object.keys(menuItems).length > 0) {
           setListboxHighlight(menuItems[Object.keys(menuItems)[Object.keys(menuItems).length - 1]].id);
         }
       }, [menuItems, setListboxHighlight]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (!open) {
           highlightFirstItem();
         }
@@ -31260,7 +31260,7 @@ var require_useMenu = __commonJS({
           onClose == null ? void 0 : onClose();
         }
       };
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         var _listboxRef$current2;
         if ((_listboxRef$current2 = listboxRef.current) != null && _listboxRef$current2.contains(document.activeElement) && highlightedOption !== null) {
           var _menuItems$highlighte, _menuItems$highlighte2;
@@ -31283,7 +31283,7 @@ var require_useMenu = __commonJS({
           highlighted
         };
       };
-      React31.useDebugValue({
+      React34.useDebugValue({
         menuItems,
         highlightedOption
       });
@@ -32778,7 +32778,7 @@ var require_Portal = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var ReactDOM3 = _interopRequireWildcard(require_react_dom());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
@@ -32823,14 +32823,14 @@ var require_Portal = __commonJS({
     function getContainer(container) {
       return typeof container === "function" ? container() : container;
     }
-    var Portal = /* @__PURE__ */ React31.forwardRef(function Portal2(props, ref) {
+    var Portal = /* @__PURE__ */ React34.forwardRef(function Portal2(props, ref) {
       const {
         children,
         container,
         disablePortal = false
       } = props;
-      const [mountNode, setMountNode] = React31.useState(null);
-      const handleRef = (0, _utils.unstable_useForkRef)(/* @__PURE__ */ React31.isValidElement(children) ? children.ref : null, ref);
+      const [mountNode, setMountNode] = React34.useState(null);
+      const handleRef = (0, _utils.unstable_useForkRef)(/* @__PURE__ */ React34.isValidElement(children) ? children.ref : null, ref);
       (0, _utils.unstable_useEnhancedEffect)(() => {
         if (!disablePortal) {
           setMountNode(getContainer(container) || document.body);
@@ -32846,8 +32846,8 @@ var require_Portal = __commonJS({
         return void 0;
       }, [ref, mountNode, disablePortal]);
       if (disablePortal) {
-        if (/* @__PURE__ */ React31.isValidElement(children)) {
-          return /* @__PURE__ */ React31.cloneElement(children, {
+        if (/* @__PURE__ */ React34.isValidElement(children)) {
+          return /* @__PURE__ */ React34.cloneElement(children, {
             ref: handleRef
           });
         }
@@ -32900,7 +32900,7 @@ var require_PopperUnstyled = __commonJS({
     var _utils = require_utils();
     var _core = require_popper();
     var _propTypes = _interopRequireDefault(require_prop_types());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _Portal = _interopRequireDefault(require_Portal2());
     var _jsxRuntime = require_jsx_runtime();
     var _excluded = ["anchorEl", "children", "direction", "disablePortal", "modifiers", "open", "ownerState", "placement", "popperOptions", "popperRef", "TransitionProps"];
@@ -32964,7 +32964,7 @@ var require_PopperUnstyled = __commonJS({
       return typeof anchorEl === "function" ? anchorEl() : anchorEl;
     }
     var defaultPopperOptions = {};
-    var PopperTooltip = /* @__PURE__ */ React31.forwardRef(function PopperTooltip2(props, ref) {
+    var PopperTooltip = /* @__PURE__ */ React34.forwardRef(function PopperTooltip2(props, ref) {
       const {
         anchorEl,
         children,
@@ -32977,18 +32977,18 @@ var require_PopperUnstyled = __commonJS({
         popperRef: popperRefProp,
         TransitionProps
       } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded);
-      const tooltipRef = React31.useRef(null);
+      const tooltipRef = React34.useRef(null);
       const ownRef = (0, _utils.unstable_useForkRef)(tooltipRef, ref);
-      const popperRef = React31.useRef(null);
+      const popperRef = React34.useRef(null);
       const handlePopperRef = (0, _utils.unstable_useForkRef)(popperRef, popperRefProp);
-      const handlePopperRefRef = React31.useRef(handlePopperRef);
+      const handlePopperRefRef = React34.useRef(handlePopperRef);
       (0, _utils.unstable_useEnhancedEffect)(() => {
         handlePopperRefRef.current = handlePopperRef;
       }, [handlePopperRef]);
-      React31.useImperativeHandle(popperRefProp, () => popperRef.current, []);
+      React34.useImperativeHandle(popperRefProp, () => popperRef.current, []);
       const rtlPlacement = flipPlacement(initialPlacement, direction);
-      const [placement, setPlacement] = React31.useState(rtlPlacement);
-      React31.useEffect(() => {
+      const [placement, setPlacement] = React34.useState(rtlPlacement);
+      React34.useEffect(() => {
         if (popperRef.current) {
           popperRef.current.forceUpdate();
         }
@@ -33059,7 +33059,7 @@ var require_PopperUnstyled = __commonJS({
         children: typeof children === "function" ? children(childProps) : children
       }));
     });
-    var PopperUnstyled = /* @__PURE__ */ React31.forwardRef(function PopperUnstyled2(props, ref) {
+    var PopperUnstyled = /* @__PURE__ */ React34.forwardRef(function PopperUnstyled2(props, ref) {
       const {
         anchorEl,
         children,
@@ -33075,7 +33075,7 @@ var require_PopperUnstyled = __commonJS({
         style,
         transition = false
       } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded2);
-      const [exited, setExited] = React31.useState(true);
+      const [exited, setExited] = React34.useState(true);
       const handleEnter = () => {
         setExited(false);
       };
@@ -33192,7 +33192,7 @@ var require_MenuUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -33252,7 +33252,7 @@ var require_MenuUnstyled = __commonJS({
       };
       return (0, _composeClasses.default)(slots, _menuUnstyledClasses.getMenuUnstyledUtilityClass, {});
     }
-    var MenuUnstyled = /* @__PURE__ */ React31.forwardRef(function MenuUnstyled2(props, forwardedRef) {
+    var MenuUnstyled = /* @__PURE__ */ React34.forwardRef(function MenuUnstyled2(props, forwardedRef) {
       var _componentsProps$list, _componentsProps$list2, _ref, _componentsProps$root, _components$Listbox, _componentsProps$list3;
       const {
         actions,
@@ -33279,7 +33279,7 @@ var require_MenuUnstyled = __commonJS({
         listboxRef: (_componentsProps$list = componentsProps.listbox) == null ? void 0 : _componentsProps$list.ref,
         listboxId: (_componentsProps$list2 = componentsProps.listbox) == null ? void 0 : _componentsProps$list2.id
       });
-      React31.useImperativeHandle(actions, () => ({
+      React34.useImperativeHandle(actions, () => ({
         highlightFirstItem,
         highlightLastItem
       }), [highlightFirstItem, highlightLastItem]);
@@ -33530,7 +33530,7 @@ var require_useMenuItem = __commonJS({
     });
     exports.default = useMenuItem;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _MenuUnstyled = require_MenuUnstyled2();
     var _ButtonUnstyled = require_ButtonUnstyled2();
@@ -33579,8 +33579,8 @@ var require_useMenuItem = __commonJS({
         ref
       } = props;
       const id = (0, _utils.unstable_useId)();
-      const menuContext = React31.useContext(_MenuUnstyled.MenuUnstyledContext);
-      const itemRef = React31.useRef(null);
+      const menuContext = React34.useContext(_MenuUnstyled.MenuUnstyledContext);
+      const itemRef = React34.useRef(null);
       const handleRef = (0, _utils.unstable_useForkRef)(itemRef, ref);
       if (menuContext === null) {
         throw new Error("MenuItemUnstyled must be used within a MenuUnstyled");
@@ -33590,7 +33590,7 @@ var require_useMenuItem = __commonJS({
         unregisterItem,
         open
       } = menuContext;
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (id === void 0) {
           return void 0;
         }
@@ -33609,17 +33609,17 @@ var require_useMenuItem = __commonJS({
         ref: handleRef,
         disabled
       });
-      const [focusRequested, requestFocus] = React31.useState(false);
-      const focusIfRequested = React31.useCallback(() => {
+      const [focusRequested, requestFocus] = React34.useState(false);
+      const focusIfRequested = React34.useCallback(() => {
         if (focusRequested && itemRef.current != null) {
           itemRef.current.focus();
           requestFocus(false);
         }
       }, [focusRequested]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         focusIfRequested();
       });
-      React31.useDebugValue({
+      React34.useDebugValue({
         id,
         disabled
       });
@@ -33629,7 +33629,7 @@ var require_useMenuItem = __commonJS({
       } = itemState != null ? itemState : {
         highlighted: false
       };
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         requestFocus(highlighted && open);
       }, [highlighted, open]);
       if (id === void 0) {
@@ -33668,7 +33668,7 @@ var require_MenuItemUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils2();
@@ -33725,7 +33725,7 @@ var require_MenuItemUnstyled = __commonJS({
       };
       return (0, _composeClasses.default)(slots, _menuItemUnstyledClasses.getMenuItemUnstyledUtilityClass, {});
     }
-    var MenuItemUnstyled = /* @__PURE__ */ React31.forwardRef(function MenuItemUnstyled2(props, ref) {
+    var MenuItemUnstyled = /* @__PURE__ */ React34.forwardRef(function MenuItemUnstyled2(props, ref) {
       var _ref, _componentsProps$root;
       const {
         children,
@@ -34107,7 +34107,7 @@ var require_Unstable_TrapFocus = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _jsxRuntime = require_jsx_runtime();
@@ -34213,22 +34213,22 @@ var require_Unstable_TrapFocus = __commonJS({
         isEnabled = defaultIsEnabled,
         open
       } = props;
-      const ignoreNextEnforceFocus = React31.useRef();
-      const sentinelStart = React31.useRef(null);
-      const sentinelEnd = React31.useRef(null);
-      const nodeToRestore = React31.useRef(null);
-      const reactFocusEventTarget = React31.useRef(null);
-      const activated = React31.useRef(false);
-      const rootRef = React31.useRef(null);
+      const ignoreNextEnforceFocus = React34.useRef();
+      const sentinelStart = React34.useRef(null);
+      const sentinelEnd = React34.useRef(null);
+      const nodeToRestore = React34.useRef(null);
+      const reactFocusEventTarget = React34.useRef(null);
+      const activated = React34.useRef(false);
+      const rootRef = React34.useRef(null);
       const handleRef = (0, _utils.unstable_useForkRef)(children.ref, rootRef);
-      const lastKeydown = React31.useRef(null);
-      React31.useEffect(() => {
+      const lastKeydown = React34.useRef(null);
+      React34.useEffect(() => {
         if (!open || !rootRef.current) {
           return;
         }
         activated.current = !disableAutoFocus;
       }, [disableAutoFocus, open]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (!open || !rootRef.current) {
           return;
         }
@@ -34254,7 +34254,7 @@ var require_Unstable_TrapFocus = __commonJS({
           }
         };
       }, [open]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (!open || !rootRef.current) {
           return;
         }
@@ -34338,13 +34338,13 @@ var require_Unstable_TrapFocus = __commonJS({
         }
         activated.current = true;
       };
-      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React31.Fragment, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React34.Fragment, {
         children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)("div", {
           tabIndex: 0,
           onFocus: handleFocusSentinel,
           ref: sentinelStart,
           "data-test": "sentinelStart"
-        }), /* @__PURE__ */ React31.cloneElement(children, {
+        }), /* @__PURE__ */ React34.cloneElement(children, {
           ref: handleRef,
           onFocus
         }), /* @__PURE__ */ (0, _jsxRuntime.jsx)("div", {
@@ -34422,7 +34422,7 @@ var require_ModalUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -34490,7 +34490,7 @@ var require_ModalUnstyled = __commonJS({
       return props.children ? props.children.props.hasOwnProperty("in") : false;
     }
     var defaultManager = new _ModalManager.default();
-    var ModalUnstyled = /* @__PURE__ */ React31.forwardRef(function ModalUnstyled2(props, ref) {
+    var ModalUnstyled = /* @__PURE__ */ React34.forwardRef(function ModalUnstyled2(props, ref) {
       const {
         BackdropComponent,
         BackdropProps,
@@ -34519,10 +34519,10 @@ var require_ModalUnstyled = __commonJS({
         onTransitionEnter,
         onTransitionExited
       } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded);
-      const [exited, setExited] = React31.useState(true);
-      const modal = React31.useRef({});
-      const mountNodeRef = React31.useRef(null);
-      const modalRef = React31.useRef(null);
+      const [exited, setExited] = React34.useState(true);
+      const modal = React34.useRef({});
+      const mountNodeRef = React34.useRef(null);
+      const modalRef = React34.useRef(null);
       const handleRef = (0, _utils.unstable_useForkRef)(modalRef, ref);
       const hasTransition = getHasTransition(props);
       const getDoc = () => (0, _utils.unstable_ownerDocument)(mountNodeRef.current);
@@ -34544,7 +34544,7 @@ var require_ModalUnstyled = __commonJS({
           handleMounted();
         }
       });
-      const isTopModal = React31.useCallback(() => manager.isTopModal(getModal()), [manager]);
+      const isTopModal = React34.useCallback(() => manager.isTopModal(getModal()), [manager]);
       const handlePortalRef = (0, _utils.unstable_useEventCallback)((node) => {
         mountNodeRef.current = node;
         if (!node) {
@@ -34556,15 +34556,15 @@ var require_ModalUnstyled = __commonJS({
           (0, _ModalManager.ariaHidden)(modalRef.current, true);
         }
       });
-      const handleClose = React31.useCallback(() => {
+      const handleClose = React34.useCallback(() => {
         manager.remove(getModal());
       }, [manager]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         return () => {
           handleClose();
         };
       }, [handleClose]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (open) {
           handleOpen();
         } else if (!hasTransition || !closeAfterTransition) {
@@ -34661,7 +34661,7 @@ var require_ModalUnstyled = __commonJS({
             disableRestoreFocus,
             isEnabled: isTopModal,
             open,
-            children: /* @__PURE__ */ React31.cloneElement(children, childProps)
+            children: /* @__PURE__ */ React34.cloneElement(children, childProps)
           })]
         }))
       });
@@ -34863,7 +34863,7 @@ var require_useSelect = __commonJS({
     });
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _ButtonUnstyled = require_ButtonUnstyled2();
     var _ListboxUnstyled = require_ListboxUnstyled();
@@ -34920,9 +34920,9 @@ var require_useSelect = __commonJS({
         options,
         value: valueProp
       } = props;
-      const buttonRef = React31.useRef(null);
+      const buttonRef = React34.useRef(null);
       const handleButtonRef = (0, _utils.unstable_useForkRef)(buttonRefProp, buttonRef);
-      const listboxRef = React31.useRef(null);
+      const listboxRef = React34.useRef(null);
       const intermediaryListboxRef = (0, _utils.unstable_useForkRef)(listboxRefProp, listboxRef);
       const [value, setValue] = (0, _utils.unstable_useControlled)({
         controlled: valueProp,
@@ -34930,10 +34930,10 @@ var require_useSelect = __commonJS({
         name: "SelectUnstyled",
         state: "value"
       });
-      const ignoreEnterKeyUp = React31.useRef(false);
-      const ignoreClick = React31.useRef(false);
-      const [listboxFocusRequested, requestListboxFocus] = React31.useState(false);
-      const focusListboxIfRequested = React31.useCallback(() => {
+      const ignoreEnterKeyUp = React34.useRef(false);
+      const ignoreClick = React34.useRef(false);
+      const [listboxFocusRequested, requestListboxFocus] = React34.useState(false);
+      const focusListboxIfRequested = React34.useCallback(() => {
         if (listboxFocusRequested && listboxRef.current != null) {
           listboxRef.current.focus();
           requestListboxFocus(false);
@@ -34944,10 +34944,10 @@ var require_useSelect = __commonJS({
         focusListboxIfRequested();
       };
       const handleListboxRef = (0, _utils.unstable_useForkRef)(intermediaryListboxRef, updateListboxRef);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         focusListboxIfRequested();
       }, [focusListboxIfRequested]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         requestListboxFocus(open);
       }, [open]);
       const createHandleMouseDown = (otherHandlers) => (event) => {
@@ -35032,7 +35032,7 @@ var require_useSelect = __commonJS({
         disabled,
         ref: handleButtonRef
       });
-      const selectedOption = React31.useMemo(() => {
+      const selectedOption = React34.useMemo(() => {
         var _props$options$find;
         return props.multiple ? props.options.filter((o) => value.includes(o.value)) : (_props$options$find = props.options.find((o) => o.value === value)) != null ? _props$options$find : null;
       }, [props.multiple, props.options, value]);
@@ -35100,7 +35100,7 @@ var require_useSelect = __commonJS({
           onClick: createHandleListboxItemClick(otherHandlers)
         }));
       };
-      React31.useDebugValue({
+      React34.useDebugValue({
         selectedOption: listboxSelectedOption,
         open,
         highlightedOption
@@ -35130,7 +35130,7 @@ var require_SelectUnstyledContext = __commonJS({
       value: true
     });
     exports.SelectUnstyledContext = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -35169,7 +35169,7 @@ var require_SelectUnstyledContext = __commonJS({
       }
       return newObj;
     }
-    var SelectUnstyledContext = /* @__PURE__ */ React31.createContext(void 0);
+    var SelectUnstyledContext = /* @__PURE__ */ React34.createContext(void 0);
     exports.SelectUnstyledContext = SelectUnstyledContext;
   }
 });
@@ -35206,7 +35206,7 @@ var require_MultiSelectUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -35258,7 +35258,7 @@ var require_MultiSelectUnstyled = __commonJS({
       return newObj;
     }
     function defaultRenderMultipleValues(selectedOptions) {
-      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React31.Fragment, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React34.Fragment, {
         children: selectedOptions.map((o) => o.label).join(", ")
       });
     }
@@ -35276,7 +35276,7 @@ var require_MultiSelectUnstyled = __commonJS({
       };
       return (0, _composeClasses.default)(slots, _selectUnstyledClasses.getSelectUnstyledUtilityClass, {});
     }
-    var MultiSelectUnstyled = /* @__PURE__ */ React31.forwardRef(function MultiSelectUnstyled2(props, ref) {
+    var MultiSelectUnstyled = /* @__PURE__ */ React34.forwardRef(function MultiSelectUnstyled2(props, ref) {
       var _props$renderValue, _ref, _components$Listbox, _components$Popper, _componentsProps$list, _componentsProps$list2, _componentsProps$root, _componentsProps$list3, _componentsProps$popp;
       const {
         autoFocus,
@@ -35294,20 +35294,20 @@ var require_MultiSelectUnstyled = __commonJS({
         value: valueProp
       } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded);
       const renderValue = (_props$renderValue = props.renderValue) != null ? _props$renderValue : defaultRenderMultipleValues;
-      const [groupedOptions, setGroupedOptions] = React31.useState([]);
-      const options = React31.useMemo(() => (0, _utils2.flattenOptionGroups)(groupedOptions), [groupedOptions]);
+      const [groupedOptions, setGroupedOptions] = React34.useState([]);
+      const options = React34.useMemo(() => (0, _utils2.flattenOptionGroups)(groupedOptions), [groupedOptions]);
       const [listboxOpen, setListboxOpen] = (0, _utils.unstable_useControlled)({
         controlled: listboxOpenProp,
         default: defaultListboxOpen,
         name: "MultiSelectUnstyled",
         state: "listboxOpen"
       });
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         setGroupedOptions((0, _utils2.getOptionsFromChildren)(children));
       }, [children]);
-      const [buttonDefined, setButtonDefined] = React31.useState(false);
-      const buttonRef = React31.useRef(null);
-      const listboxRef = React31.useRef(null);
+      const [buttonDefined, setButtonDefined] = React34.useState(false);
+      const buttonRef = React34.useRef(null);
+      const listboxRef = React34.useRef(null);
       const Button2 = (_ref = component != null ? component : components.Root) != null ? _ref : "button";
       const ListboxRoot = (_components$Listbox = components.Listbox) != null ? _components$Listbox : "ul";
       const Popper = (_components$Popper = components.Popper) != null ? _components$Popper : _PopperUnstyled.default;
@@ -35319,7 +35319,7 @@ var require_MultiSelectUnstyled = __commonJS({
       };
       const handleButtonRef = (0, _utils.unstable_useForkRef)(ref, handleButtonRefChange);
       const handleListboxRef = (0, _utils.unstable_useForkRef)(listboxRef, (_componentsProps$list = componentsProps.listbox) == null ? void 0 : _componentsProps$list.ref);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (autoFocus) {
           buttonRef.current.focus();
         }
@@ -35361,7 +35361,7 @@ var require_MultiSelectUnstyled = __commonJS({
         value
       });
       const classes = useUtilityClasses(ownerState);
-      const selectedOptions = React31.useMemo(() => {
+      const selectedOptions = React34.useMemo(() => {
         if (value == null) {
           return [];
         }
@@ -35387,7 +35387,7 @@ var require_MultiSelectUnstyled = __commonJS({
         getOptionState,
         listboxRef
       };
-      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React31.Fragment, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React34.Fragment, {
         children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)(Button2, (0, _extends2.default)({}, buttonProps, {
           children: renderValue(selectedOptions)
         })), buttonDefined && /* @__PURE__ */ (0, _jsxRuntime.jsx)(Popper, (0, _extends2.default)({}, popperProps, {
@@ -35482,7 +35482,7 @@ var require_NoSsr = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _jsxRuntime = require_jsx_runtime();
@@ -35530,18 +35530,18 @@ var require_NoSsr = __commonJS({
         defer = false,
         fallback = null
       } = props;
-      const [mountedState, setMountedState] = React31.useState(false);
+      const [mountedState, setMountedState] = React34.useState(false);
       (0, _utils.unstable_useEnhancedEffect)(() => {
         if (!defer) {
           setMountedState(true);
         }
       }, [defer]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (defer) {
           setMountedState(true);
         }
       }, [defer]);
-      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React31.Fragment, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React34.Fragment, {
         children: mountedState ? children : fallback
       });
     }
@@ -36013,7 +36013,7 @@ var require_SelectUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -36082,7 +36082,7 @@ var require_SelectUnstyled = __commonJS({
       };
       return (0, _composeClasses.default)(slots, _selectUnstyledClasses.getSelectUnstyledUtilityClass, {});
     }
-    var SelectUnstyled = /* @__PURE__ */ React31.forwardRef(function SelectUnstyled2(props, ref) {
+    var SelectUnstyled = /* @__PURE__ */ React34.forwardRef(function SelectUnstyled2(props, ref) {
       var _ref, _components$Listbox, _components$Popper, _componentsProps$list, _componentsProps$list2, _componentsProps$root, _componentsProps$list3, _componentsProps$popp;
       const {
         autoFocus,
@@ -36101,20 +36101,20 @@ var require_SelectUnstyled = __commonJS({
         value: valueProp
       } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded);
       const renderValue = renderValueProp != null ? renderValueProp : defaultRenderSingleValue;
-      const [groupedOptions, setGroupedOptions] = React31.useState([]);
-      const options = React31.useMemo(() => (0, _utils2.flattenOptionGroups)(groupedOptions), [groupedOptions]);
+      const [groupedOptions, setGroupedOptions] = React34.useState([]);
+      const options = React34.useMemo(() => (0, _utils2.flattenOptionGroups)(groupedOptions), [groupedOptions]);
       const [listboxOpen, setListboxOpen] = (0, _utils.unstable_useControlled)({
         controlled: listboxOpenProp,
         default: defaultListboxOpen,
         name: "SelectUnstyled",
         state: "listboxOpen"
       });
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         setGroupedOptions((0, _utils2.getOptionsFromChildren)(children));
       }, [children]);
-      const [buttonDefined, setButtonDefined] = React31.useState(false);
-      const buttonRef = React31.useRef(null);
-      const listboxRef = React31.useRef(null);
+      const [buttonDefined, setButtonDefined] = React34.useState(false);
+      const buttonRef = React34.useRef(null);
+      const listboxRef = React34.useRef(null);
       const Button2 = (_ref = component != null ? component : components.Root) != null ? _ref : "button";
       const ListboxRoot = (_components$Listbox = components.Listbox) != null ? _components$Listbox : "ul";
       const Popper = (_components$Popper = components.Popper) != null ? _components$Popper : _PopperUnstyled.default;
@@ -36126,7 +36126,7 @@ var require_SelectUnstyled = __commonJS({
       };
       const handleButtonRef = (0, _utils.unstable_useForkRef)(ref, handleButtonRefChange);
       const handleListboxRef = (0, _utils.unstable_useForkRef)(listboxRef, (_componentsProps$list = componentsProps.listbox) == null ? void 0 : _componentsProps$list.ref);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (autoFocus) {
           buttonRef.current.focus();
         }
@@ -36168,7 +36168,7 @@ var require_SelectUnstyled = __commonJS({
         value
       });
       const classes = useUtilityClasses(ownerState);
-      const selectedOptions = React31.useMemo(() => {
+      const selectedOptions = React34.useMemo(() => {
         return options.find((o) => value === o.value);
       }, [options, value]);
       const buttonProps = (0, _utils3.appendOwnerState)(Button2, (0, _extends2.default)({}, getButtonProps(), other, componentsProps.root, {
@@ -36191,7 +36191,7 @@ var require_SelectUnstyled = __commonJS({
         getOptionState,
         listboxRef
       };
-      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React31.Fragment, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React34.Fragment, {
         children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)(Button2, (0, _extends2.default)({}, buttonProps, {
           children: renderValue(selectedOptions)
         })), buttonDefined && /* @__PURE__ */ (0, _jsxRuntime.jsx)(Popper, (0, _extends2.default)({}, popperProps, {
@@ -36406,7 +36406,7 @@ var require_SliderValueLabelUnstyled = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _sliderUnstyledClasses = _interopRequireDefault(require_sliderUnstyledClasses());
@@ -36468,9 +36468,9 @@ var require_SliderValueLabelUnstyled = __commonJS({
         theme
       } = props;
       const classes = useValueLabelClasses(props);
-      return /* @__PURE__ */ React31.cloneElement(children, {
+      return /* @__PURE__ */ React34.cloneElement(children, {
         className: (0, _clsx.default)(children.props.className)
-      }, /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React31.Fragment, {
+      }, /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React34.Fragment, {
         children: [children.props.children, /* @__PURE__ */ (0, _jsxRuntime.jsx)("span", {
           className: (0, _clsx.default)(classes.offset, className),
           theme,
@@ -36508,7 +36508,7 @@ var require_useSlider = __commonJS({
     exports.default = useSlider;
     exports.valueToPercent = valueToPercent;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -36695,11 +36695,11 @@ var require_useSlider = __commonJS({
         value: valueProp,
         isRtl = false
       } = props;
-      const touchId = React31.useRef();
-      const [active, setActive] = React31.useState(-1);
-      const [open, setOpen] = React31.useState(-1);
-      const [dragging, setDragging] = React31.useState(false);
-      const moveCount = React31.useRef(0);
+      const touchId = React34.useRef();
+      const [active, setActive] = React34.useState(-1);
+      const [open, setOpen] = React34.useState(-1);
+      const [dragging, setDragging] = React34.useState(false);
+      const moveCount = React34.useRef(0);
       const [valueDerived, setValueState] = (0, _utils.unstable_useControlled)({
         controlled: valueProp,
         default: defaultValue != null ? defaultValue : min,
@@ -36730,8 +36730,8 @@ var require_useSlider = __commonJS({
         onFocus: handleFocusVisible,
         ref: focusVisibleRef
       } = (0, _utils.unstable_useIsFocusVisible)();
-      const [focusVisible, setFocusVisible] = React31.useState(-1);
-      const sliderRef = React31.useRef();
+      const [focusVisible, setFocusVisible] = React34.useState(-1);
+      const sliderRef = React34.useRef();
       const handleFocusRef = (0, _utils.unstable_useForkRef)(focusVisibleRef, sliderRef);
       const handleRef = (0, _utils.unstable_useForkRef)(ref, handleFocusRef);
       const createHandleHiddenInputFocus = (otherHandlers) => (event) => {
@@ -36808,7 +36808,7 @@ var require_useSlider = __commonJS({
           onChangeCommitted(event, newValue);
         }
       };
-      const previousIndex = React31.useRef();
+      const previousIndex = React34.useRef();
       let axis = orientation;
       if (isRtl && orientation === "horizontal") {
         axis += "-reverse";
@@ -36956,14 +36956,14 @@ var require_useSlider = __commonJS({
         doc.addEventListener("touchmove", handleTouchMove);
         doc.addEventListener("touchend", handleTouchEnd);
       });
-      const stopListening = React31.useCallback(() => {
+      const stopListening = React34.useCallback(() => {
         const doc = (0, _utils.unstable_ownerDocument)(sliderRef.current);
         doc.removeEventListener("mousemove", handleTouchMove);
         doc.removeEventListener("mouseup", handleTouchEnd);
         doc.removeEventListener("touchmove", handleTouchMove);
         doc.removeEventListener("touchend", handleTouchEnd);
       }, [handleTouchEnd, handleTouchMove]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         const {
           current: slider
         } = sliderRef;
@@ -36977,7 +36977,7 @@ var require_useSlider = __commonJS({
           stopListening();
         };
       }, [stopListening, handleTouchStart]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (disabled) {
           stopListening();
         }
@@ -37104,7 +37104,7 @@ var require_SliderUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -37183,7 +37183,7 @@ var require_SliderUnstyled = __commonJS({
     var Forward = ({
       children
     }) => children;
-    var SliderUnstyled = /* @__PURE__ */ React31.forwardRef(function SliderUnstyled2(props, ref) {
+    var SliderUnstyled = /* @__PURE__ */ React34.forwardRef(function SliderUnstyled2(props, ref) {
       var _ref, _components$Rail, _components$Track, _components$Thumb, _components$ValueLabe, _components$Mark, _components$MarkLabel;
       const {
         "aria-label": ariaLabel,
@@ -37280,7 +37280,7 @@ var require_SliderUnstyled = __commonJS({
           } else {
             markActive = track === "normal" && (range ? mark.value >= values[0] && mark.value <= values[values.length - 1] : mark.value <= values[0]) || track === "inverted" && (range ? mark.value <= values[0] || mark.value >= values[values.length - 1] : mark.value >= values[0]);
           }
-          return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React31.Fragment, {
+          return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React34.Fragment, {
             children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)(Mark, (0, _extends2.default)({
               "data-index": index
             }, markProps, !(0, _isHostComponent.default)(Mark) && {
@@ -37303,7 +37303,7 @@ var require_SliderUnstyled = __commonJS({
           const percent = (0, _useSlider.valueToPercent)(value, min, max);
           const style = axisProps[axis].offset(percent);
           const ValueLabelComponent = valueLabelDisplay === "off" ? Forward : ValueLabel;
-          return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React31.Fragment, {
+          return /* @__PURE__ */ (0, _jsxRuntime.jsx)(React34.Fragment, {
             children: /* @__PURE__ */ (0, _jsxRuntime.jsx)(ValueLabelComponent, (0, _extends2.default)({}, !(0, _isHostComponent.default)(ValueLabelComponent) && {
               valueLabelFormat,
               valueLabelDisplay,
@@ -37524,7 +37524,7 @@ var require_useSwitch = __commonJS({
     });
     exports.default = useSwitch;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -37596,14 +37596,14 @@ var require_useSwitch = __commonJS({
         onFocus: handleFocusVisible,
         ref: focusVisibleRef
       } = (0, _utils.unstable_useIsFocusVisible)();
-      const [focusVisible, setFocusVisible] = React31.useState(false);
+      const [focusVisible, setFocusVisible] = React34.useState(false);
       if (disabled && focusVisible) {
         setFocusVisible(false);
       }
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         isFocusVisibleRef.current = focusVisible;
       }, [focusVisible, isFocusVisibleRef]);
-      const inputRef = React31.useRef(null);
+      const inputRef = React34.useRef(null);
       const handleFocus = (event, otherHandler) => {
         if (!inputRef.current) {
           inputRef.current = event.currentTarget;
@@ -37681,7 +37681,7 @@ var require_SwitchUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _useSwitch = _interopRequireDefault(require_useSwitch());
@@ -37727,7 +37727,7 @@ var require_SwitchUnstyled = __commonJS({
       }
       return newObj;
     }
-    var SwitchUnstyled = /* @__PURE__ */ React31.forwardRef(function SwitchUnstyled2(props, ref) {
+    var SwitchUnstyled = /* @__PURE__ */ React34.forwardRef(function SwitchUnstyled2(props, ref) {
       var _ref, _components$Thumb, _componentsProps$thum, _components$Input, _componentsProps$inpu, _components$Track, _componentsProps$trac;
       const {
         checked: checkedProp,
@@ -37983,7 +37983,7 @@ var require_useTabs = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -38039,7 +38039,7 @@ var require_useTabs = __commonJS({
         state: "value"
       });
       const idPrefix = (0, _utils.unstable_useId)();
-      const onSelected = React31.useCallback((e, newValue) => {
+      const onSelected = React34.useCallback((e, newValue) => {
         setValue(newValue);
         if (onChange) {
           onChange(e, newValue);
@@ -38048,7 +38048,7 @@ var require_useTabs = __commonJS({
       const getRootProps = () => {
         return {};
       };
-      const tabsContextValue = React31.useMemo(() => {
+      const tabsContextValue = React34.useMemo(() => {
         return {
           idPrefix,
           value,
@@ -38079,7 +38079,7 @@ var require_TabsContext = __commonJS({
     exports.getPanelId = getPanelId;
     exports.getTabId = getTabId;
     exports.useTabContext = useTabContext;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -38118,12 +38118,12 @@ var require_TabsContext = __commonJS({
       }
       return newObj;
     }
-    var Context = /* @__PURE__ */ React31.createContext(null);
+    var Context = /* @__PURE__ */ React34.createContext(null);
     if (true) {
       Context.displayName = "TabsContext";
     }
     function useTabContext() {
-      return React31.useContext(Context);
+      return React34.useContext(Context);
     }
     function getPanelId(context, value) {
       const {
@@ -38159,7 +38159,7 @@ var require_TabsUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils2();
@@ -38216,7 +38216,7 @@ var require_TabsUnstyled = __commonJS({
       };
       return (0, _composeClasses.default)(slots, _tabsUnstyledClasses.getTabsUnstyledUtilityClass, {});
     };
-    var TabsUnstyled = /* @__PURE__ */ React31.forwardRef((props, ref) => {
+    var TabsUnstyled = /* @__PURE__ */ React34.forwardRef((props, ref) => {
       var _ref, _componentsProps$root;
       const {
         children,
@@ -38441,7 +38441,7 @@ var require_TabPanelUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils2();
@@ -38497,7 +38497,7 @@ var require_TabPanelUnstyled = __commonJS({
       };
       return (0, _composeClasses.default)(slots, _tabPanelUnstyledClasses.getTabPanelUnstyledUtilityClass, {});
     };
-    var TabPanelUnstyled = /* @__PURE__ */ React31.forwardRef(function TabPanelUnstyled2(props, ref) {
+    var TabPanelUnstyled = /* @__PURE__ */ React34.forwardRef(function TabPanelUnstyled2(props, ref) {
       var _ref, _componentsProps$root;
       const {
         children,
@@ -38674,7 +38674,7 @@ var require_useTabsList = __commonJS({
     });
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _utils = require_utils();
     var _reactIs = require_react_is2();
     var _TabsUnstyled = require_TabsUnstyled2();
@@ -38767,7 +38767,7 @@ var require_useTabsList = __commonJS({
         children,
         ref
       } = props;
-      const tabsListRef = /* @__PURE__ */ React31.createRef();
+      const tabsListRef = /* @__PURE__ */ React34.createRef();
       const handleRef = (0, _utils.unstable_useForkRef)(tabsListRef, ref);
       const context = (0, _TabsUnstyled.useTabContext)();
       if (context === null) {
@@ -38833,11 +38833,11 @@ var require_useTabsList = __commonJS({
           ref: handleRef
         }, mergedEventHandlers);
       };
-      const processChildren = React31.useCallback(() => {
+      const processChildren = React34.useCallback(() => {
         const valueToIndex = new Map();
         let childIndex = 0;
-        const processedChildren = React31.Children.map(children, (child) => {
-          if (!/* @__PURE__ */ React31.isValidElement(child)) {
+        const processedChildren = React34.Children.map(children, (child) => {
+          if (!/* @__PURE__ */ React34.isValidElement(child)) {
             return null;
           }
           if (true) {
@@ -38848,7 +38848,7 @@ var require_useTabsList = __commonJS({
           const childValue = child.props.value === void 0 ? childIndex : child.props.value;
           valueToIndex.set(childValue, childIndex);
           childIndex += 1;
-          return /* @__PURE__ */ React31.cloneElement(child, (0, _extends2.default)({
+          return /* @__PURE__ */ React34.cloneElement(child, (0, _extends2.default)({
             value: childValue
           }, childIndex === 1 && value === false && !child.props.tabIndex || value === childValue ? {
             tabIndex: 0
@@ -38882,7 +38882,7 @@ var require_TabsListUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _composeClasses = _interopRequireDefault(require_composeClasses2());
@@ -38938,7 +38938,7 @@ var require_TabsListUnstyled = __commonJS({
       };
       return (0, _composeClasses.default)(slots, _tabsListUnstyledClasses.getTabsListUnstyledUtilityClass, {});
     };
-    var TabsListUnstyled = /* @__PURE__ */ React31.forwardRef((props, ref) => {
+    var TabsListUnstyled = /* @__PURE__ */ React34.forwardRef((props, ref) => {
       var _ref, _componentsProps$root;
       const {
         className,
@@ -39195,7 +39195,7 @@ var require_TabUnstyled = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _utils = require_utils();
@@ -39253,7 +39253,7 @@ var require_TabUnstyled = __commonJS({
       };
       return (0, _composeClasses.default)(slots, _tabUnstyledClasses.getTabUnstyledUtilityClass, {});
     };
-    var TabUnstyled = /* @__PURE__ */ React31.forwardRef(function TabUnstyled2(props, ref) {
+    var TabUnstyled = /* @__PURE__ */ React34.forwardRef(function TabUnstyled2(props, ref) {
       var _ref, _componentsProps$root;
       const {
         action,
@@ -39264,7 +39264,7 @@ var require_TabUnstyled = __commonJS({
         components = {},
         componentsProps = {}
       } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded);
-      const tabRef = React31.useRef();
+      const tabRef = React34.useRef();
       const handleRef = (0, _utils.unstable_useForkRef)(tabRef, ref);
       const {
         active,
@@ -39275,7 +39275,7 @@ var require_TabUnstyled = __commonJS({
       } = (0, _useTab.default)((0, _extends2.default)({}, props, {
         ref: handleRef
       }));
-      React31.useImperativeHandle(action, () => ({
+      React34.useImperativeHandle(action, () => ({
         focusVisible: () => {
           setFocusVisible(true);
           tabRef.current.focus();
@@ -39435,7 +39435,7 @@ var require_TextareaAutosize = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _jsxRuntime = require_jsx_runtime();
@@ -39492,7 +39492,7 @@ var require_TextareaAutosize = __commonJS({
         transform: "translateZ(0)"
       }
     };
-    var TextareaAutosize = /* @__PURE__ */ React31.forwardRef(function TextareaAutosize2(props, ref) {
+    var TextareaAutosize = /* @__PURE__ */ React34.forwardRef(function TextareaAutosize2(props, ref) {
       const {
         onChange,
         maxRows,
@@ -39502,13 +39502,13 @@ var require_TextareaAutosize = __commonJS({
       } = props, other = (0, _objectWithoutPropertiesLoose2.default)(props, _excluded);
       const {
         current: isControlled
-      } = React31.useRef(value != null);
-      const inputRef = React31.useRef(null);
+      } = React34.useRef(value != null);
+      const inputRef = React34.useRef(null);
       const handleRef = (0, _utils.unstable_useForkRef)(ref, inputRef);
-      const shadowRef = React31.useRef(null);
-      const renders = React31.useRef(0);
-      const [state, setState] = React31.useState({});
-      const syncHeight = React31.useCallback(() => {
+      const shadowRef = React34.useRef(null);
+      const renders = React34.useRef(0);
+      const [state, setState] = React34.useState({});
+      const syncHeight = React34.useCallback(() => {
         const input = inputRef.current;
         const containerWindow = (0, _utils.unstable_ownerWindow)(input);
         const computedStyle = containerWindow.getComputedStyle(input);
@@ -39553,7 +39553,7 @@ var require_TextareaAutosize = __commonJS({
           return prevState;
         });
       }, [maxRows, minRows, props.placeholder]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         const handleResize = (0, _utils.unstable_debounce)(() => {
           renders.current = 0;
           syncHeight();
@@ -39576,7 +39576,7 @@ var require_TextareaAutosize = __commonJS({
       (0, _utils.unstable_useEnhancedEffect)(() => {
         syncHeight();
       });
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         renders.current = 0;
       }, [value]);
       const handleChange = (event) => {
@@ -39588,7 +39588,7 @@ var require_TextareaAutosize = __commonJS({
           onChange(event);
         }
       };
-      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React31.Fragment, {
+      return /* @__PURE__ */ (0, _jsxRuntime.jsxs)(React34.Fragment, {
         children: [/* @__PURE__ */ (0, _jsxRuntime.jsx)("textarea", (0, _extends2.default)({
           value,
           onChange: handleChange,
@@ -41896,7 +41896,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
 var require_emotion_element_35a1554b_browser_cjs = __commonJS({
   "node_modules/@emotion/react/dist/emotion-element-35a1554b.browser.cjs.js"(exports) {
     "use strict";
-    var React31 = require_react();
+    var React34 = require_react();
     var createCache = require_emotion_cache_browser_cjs();
     var _extends = require_extends();
     var weakMemoize = require_weak_memoize_browser_cjs();
@@ -41926,12 +41926,12 @@ var require_emotion_element_35a1554b_browser_cjs = __commonJS({
       n["default"] = e;
       return Object.freeze(n);
     }
-    var React__namespace = /* @__PURE__ */ _interopNamespace(React31);
+    var React__namespace = /* @__PURE__ */ _interopNamespace(React34);
     var createCache__default = /* @__PURE__ */ _interopDefault(createCache);
     var _extends__default = /* @__PURE__ */ _interopDefault(_extends);
     var weakMemoize__default = /* @__PURE__ */ _interopDefault(weakMemoize);
     var hasOwnProperty = {}.hasOwnProperty;
-    var EmotionCacheContext = /* @__PURE__ */ React31.createContext(typeof HTMLElement !== "undefined" ? /* @__PURE__ */ createCache__default["default"]({
+    var EmotionCacheContext = /* @__PURE__ */ React34.createContext(typeof HTMLElement !== "undefined" ? /* @__PURE__ */ createCache__default["default"]({
       key: "css"
     }) : null);
     if (true) {
@@ -41939,20 +41939,20 @@ var require_emotion_element_35a1554b_browser_cjs = __commonJS({
     }
     var CacheProvider = EmotionCacheContext.Provider;
     var __unsafe_useEmotionCache = function useEmotionCache() {
-      return React31.useContext(EmotionCacheContext);
+      return React34.useContext(EmotionCacheContext);
     };
     var withEmotionCache = function withEmotionCache2(func) {
-      return /* @__PURE__ */ React31.forwardRef(function(props, ref) {
-        var cache = React31.useContext(EmotionCacheContext);
+      return /* @__PURE__ */ React34.forwardRef(function(props, ref) {
+        var cache = React34.useContext(EmotionCacheContext);
         return func(props, cache, ref);
       });
     };
-    var ThemeContext = /* @__PURE__ */ React31.createContext({});
+    var ThemeContext = /* @__PURE__ */ React34.createContext({});
     if (true) {
       ThemeContext.displayName = "EmotionThemeContext";
     }
     var useTheme = function useTheme2() {
-      return React31.useContext(ThemeContext);
+      return React34.useContext(ThemeContext);
     };
     var getTheme = function getTheme2(outerTheme, theme) {
       if (typeof theme === "function") {
@@ -41973,24 +41973,24 @@ var require_emotion_element_35a1554b_browser_cjs = __commonJS({
       });
     });
     var ThemeProvider = function ThemeProvider2(props) {
-      var theme = React31.useContext(ThemeContext);
+      var theme = React34.useContext(ThemeContext);
       if (props.theme !== theme) {
         theme = createCacheWithTheme(theme)(props.theme);
       }
-      return /* @__PURE__ */ React31.createElement(ThemeContext.Provider, {
+      return /* @__PURE__ */ React34.createElement(ThemeContext.Provider, {
         value: theme
       }, props.children);
     };
     function withTheme(Component) {
       var componentName = Component.displayName || Component.name || "Component";
       var render = function render2(props, ref) {
-        var theme = React31.useContext(ThemeContext);
-        return /* @__PURE__ */ React31.createElement(Component, _extends__default["default"]({
+        var theme = React34.useContext(ThemeContext);
+        return /* @__PURE__ */ React34.createElement(Component, _extends__default["default"]({
           theme,
           ref
         }, props));
       };
-      var WithTheme = /* @__PURE__ */ React31.forwardRef(render);
+      var WithTheme = /* @__PURE__ */ React34.forwardRef(render);
       WithTheme.displayName = "WithTheme(" + componentName + ")";
       return _isolatedHnrs_dist_emotionReact_isolatedHnrs["default"](WithTheme, Component);
     }
@@ -42073,7 +42073,7 @@ var require_emotion_element_35a1554b_browser_cjs = __commonJS({
       } else if (props.className != null) {
         className = props.className + " ";
       }
-      var serialized = serialize.serializeStyles(registeredStyles, void 0, React31.useContext(ThemeContext));
+      var serialized = serialize.serializeStyles(registeredStyles, void 0, React34.useContext(ThemeContext));
       if (serialized.name.indexOf("-") === -1) {
         var labelFromStack = props[labelPropName];
         if (labelFromStack) {
@@ -42089,11 +42089,11 @@ var require_emotion_element_35a1554b_browser_cjs = __commonJS({
       }
       newProps.ref = ref;
       newProps.className = className;
-      return /* @__PURE__ */ React31.createElement(React31.Fragment, null, /* @__PURE__ */ React31.createElement(Insertion, {
+      return /* @__PURE__ */ React34.createElement(React34.Fragment, null, /* @__PURE__ */ React34.createElement(Insertion, {
         cache,
         serialized,
         isStringTag: typeof WrappedComponent === "string"
-      }), /* @__PURE__ */ React31.createElement(WrappedComponent, newProps));
+      }), /* @__PURE__ */ React34.createElement(WrappedComponent, newProps));
     });
     if (true) {
       Emotion.displayName = "EmotionCssPropInternal";
@@ -42117,7 +42117,7 @@ var require_emotion_react_browser_cjs = __commonJS({
   "node_modules/@emotion/react/dist/emotion-react.browser.cjs.js"(exports) {
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
-    var React31 = require_react();
+    var React34 = require_react();
     require_emotion_cache_browser_cjs();
     var emotionElement = require_emotion_element_35a1554b_browser_cjs();
     require_extends();
@@ -42146,7 +42146,7 @@ var require_emotion_react_browser_cjs = __commonJS({
       n["default"] = e;
       return Object.freeze(n);
     }
-    var React__namespace = /* @__PURE__ */ _interopNamespace(React31);
+    var React__namespace = /* @__PURE__ */ _interopNamespace(React34);
     var pkg = {
       name: "@emotion/react",
       version: "11.9.0",
@@ -42226,7 +42226,7 @@ var require_emotion_react_browser_cjs = __commonJS({
     var jsx = function jsx2(type, props) {
       var args = arguments;
       if (props == null || !emotionElement.hasOwnProperty.call(props, "css")) {
-        return React31.createElement.apply(void 0, args);
+        return React34.createElement.apply(void 0, args);
       }
       var argsLength = args.length;
       var createElementArgArray = new Array(argsLength);
@@ -42235,9 +42235,9 @@ var require_emotion_react_browser_cjs = __commonJS({
       for (var i = 2; i < argsLength; i++) {
         createElementArgArray[i] = args[i];
       }
-      return React31.createElement.apply(null, createElementArgArray);
+      return React34.createElement.apply(null, createElementArgArray);
     };
-    var useInsertionEffect = React__namespace["useInsertionEffect"] ? React__namespace["useInsertionEffect"] : React31.useLayoutEffect;
+    var useInsertionEffect = React__namespace["useInsertionEffect"] ? React__namespace["useInsertionEffect"] : React34.useLayoutEffect;
     var warnedAboutCssPropForGlobal = false;
     var Global = /* @__PURE__ */ emotionElement.withEmotionCache(function(props, cache) {
       if (!warnedAboutCssPropForGlobal && (props.className || props.css)) {
@@ -42245,8 +42245,8 @@ var require_emotion_react_browser_cjs = __commonJS({
         warnedAboutCssPropForGlobal = true;
       }
       var styles = props.styles;
-      var serialized = serialize.serializeStyles([styles], void 0, React31.useContext(emotionElement.ThemeContext));
-      var sheetRef = React31.useRef();
+      var serialized = serialize.serializeStyles([styles], void 0, React34.useContext(emotionElement.ThemeContext));
+      var sheetRef = React34.useRef();
       useInsertionEffect(function() {
         var key = cache.key + "-global";
         var sheet = new cache.sheet.constructor({
@@ -42394,11 +42394,11 @@ var require_emotion_react_browser_cjs = __commonJS({
       var content = {
         css: css2,
         cx,
-        theme: React31.useContext(emotionElement.ThemeContext)
+        theme: React34.useContext(emotionElement.ThemeContext)
       };
       var ele = props.children(content);
       hasRendered = true;
-      return /* @__PURE__ */ React31.createElement(React31.Fragment, null, /* @__PURE__ */ React31.createElement(Insertion, {
+      return /* @__PURE__ */ React34.createElement(React34.Fragment, null, /* @__PURE__ */ React34.createElement(Insertion, {
         cache,
         serializedArr
       }), ele);
@@ -42444,7 +42444,7 @@ var require_emotion_styled_base_browser_cjs = __commonJS({
     "use strict";
     Object.defineProperty(exports, "__esModule", { value: true });
     var _extends = require_extends();
-    var React31 = require_react();
+    var React34 = require_react();
     var isPropValid = require_emotion_is_prop_valid_browser_cjs();
     var react = require_emotion_react_browser_cjs();
     var utils = require_emotion_utils_browser_cjs();
@@ -42473,7 +42473,7 @@ var require_emotion_styled_base_browser_cjs = __commonJS({
       return Object.freeze(n);
     }
     var _extends__default = /* @__PURE__ */ _interopDefault(_extends);
-    var React__namespace = /* @__PURE__ */ _interopNamespace(React31);
+    var React__namespace = /* @__PURE__ */ _interopNamespace(React34);
     var isPropValid__default = /* @__PURE__ */ _interopDefault(isPropValid);
     var testOmitPropsOnStringTag = isPropValid__default["default"];
     var testOmitPropsOnComponent = function testOmitPropsOnComponent2(key) {
@@ -42562,7 +42562,7 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
             for (var key in props) {
               mergedProps[key] = props[key];
             }
-            mergedProps.theme = React31.useContext(react.ThemeContext);
+            mergedProps.theme = React34.useContext(react.ThemeContext);
           }
           if (typeof props.className === "string") {
             className = utils.getRegisteredStyles(cache.registered, classInterpolations, props.className);
@@ -42585,11 +42585,11 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Template_liter
           }
           newProps.className = className;
           newProps.ref = ref;
-          return /* @__PURE__ */ React31.createElement(React31.Fragment, null, /* @__PURE__ */ React31.createElement(Insertion, {
+          return /* @__PURE__ */ React34.createElement(React34.Fragment, null, /* @__PURE__ */ React34.createElement(Insertion, {
             cache,
             serialized,
             isStringTag: typeof FinalTag === "string"
-          }), /* @__PURE__ */ React31.createElement(FinalTag, newProps));
+          }), /* @__PURE__ */ React34.createElement(FinalTag, newProps));
         });
         Styled.displayName = identifierName !== void 0 ? identifierName : "Styled(" + (typeof baseTag === "string" ? baseTag : baseTag.displayName || baseTag.name || "Component") + ")";
         Styled.defaultProps = tag.defaultProps;
@@ -42782,7 +42782,7 @@ var require_StyledEngineProvider = __commonJS({
       value: true
     });
     exports.default = StyledEngineProvider;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _react2 = require_emotion_react_browser_cjs();
     var _cache = _interopRequireDefault(require_emotion_cache_browser_cjs());
@@ -42873,7 +42873,7 @@ var require_GlobalStyles = __commonJS({
       value: true
     });
     exports.default = GlobalStyles;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _react2 = require_emotion_react_browser_cjs();
     var _jsxRuntime = require_jsx_runtime();
@@ -44564,7 +44564,7 @@ var require_ThemeContext = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
         return null;
@@ -44603,7 +44603,7 @@ var require_ThemeContext = __commonJS({
       }
       return newObj;
     }
-    var ThemeContext = /* @__PURE__ */ React31.createContext(null);
+    var ThemeContext = /* @__PURE__ */ React34.createContext(null);
     if (true) {
       ThemeContext.displayName = "ThemeContext";
     }
@@ -44621,7 +44621,7 @@ var require_useTheme = __commonJS({
       value: true
     });
     exports.default = useTheme;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _ThemeContext = _interopRequireDefault(require_ThemeContext());
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -44662,9 +44662,9 @@ var require_useTheme = __commonJS({
       return newObj;
     }
     function useTheme() {
-      const theme = React31.useContext(_ThemeContext.default);
+      const theme = React34.useContext(_ThemeContext.default);
       if (true) {
-        React31.useDebugValue(theme);
+        React34.useDebugValue(theme);
       }
       return theme;
     }
@@ -44713,7 +44713,7 @@ var require_ThemeProvider = __commonJS({
     });
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _utils = require_utils();
     var _ThemeContext = _interopRequireDefault(require_ThemeContext());
@@ -44781,7 +44781,7 @@ var require_ThemeProvider = __commonJS({
           console.error(["MUI: You are providing a theme function prop to the ThemeProvider component:", "<ThemeProvider theme={outerTheme => outerTheme} />", "", "However, no outer theme is present.", "Make sure a theme is already injected higher in the React tree or provide a theme object."].join("\n"));
         }
       }
-      const theme = React31.useMemo(() => {
+      const theme = React34.useMemo(() => {
         const output = outerTheme === null ? localTheme : mergeOuterLocalTheme(outerTheme, localTheme);
         if (output != null) {
           output[_nested.default] = outerTheme !== null;
@@ -44964,7 +44964,7 @@ var require_createBox = __commonJS({
     exports.default = createBox;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _styledEngine = _interopRequireDefault(require_node3());
@@ -45018,7 +45018,7 @@ var require_createBox = __commonJS({
         styleFunctionSx = _styleFunctionSx.default
       } = options;
       const BoxRoot = (0, _styledEngine.default)("div")(styleFunctionSx);
-      const Box = /* @__PURE__ */ React31.forwardRef(function Box2(inProps, ref) {
+      const Box = /* @__PURE__ */ React34.forwardRef(function Box2(inProps, ref) {
         const theme = (0, _useTheme.default)(defaultTheme);
         const _extendSxProp = (0, _styleFunctionSx.extendSxProp)(inProps), {
           className,
@@ -45580,7 +45580,7 @@ var require_ThemeProvider3 = __commonJS({
       value: true
     });
     exports.default = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _privateTheming = require_node4();
     var _utils = require_utils();
@@ -45775,7 +45775,7 @@ var require_getInitColorSchemeScript = __commonJS({
     });
     exports.DEFAULT_MODE_STORAGE_KEY = exports.DEFAULT_COLOR_SCHEME_STORAGE_KEY = exports.DEFAULT_ATTRIBUTE = void 0;
     exports.default = getInitColorSchemeScript;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _jsxRuntime = require_jsx_runtime();
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -45872,7 +45872,7 @@ var require_useCurrentColorScheme = __commonJS({
     exports.getColorScheme = getColorScheme;
     exports.getSystemMode = getSystemMode;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _getInitColorSchemeScript = require_getInitColorSchemeScript();
     function _getRequireWildcardCache(nodeInterop) {
       if (typeof WeakMap !== "function")
@@ -45963,7 +45963,7 @@ var require_useCurrentColorScheme = __commonJS({
         colorSchemeStorageKey = _getInitColorSchemeScript.DEFAULT_COLOR_SCHEME_STORAGE_KEY
       } = options;
       const joinedColorSchemes = supportedColorSchemes.join(",");
-      const [state, setState] = React31.useState(() => {
+      const [state, setState] = React34.useState(() => {
         const initialMode = resolveValue(modeStorageKey, defaultMode);
         return {
           mode: initialMode,
@@ -45973,7 +45973,7 @@ var require_useCurrentColorScheme = __commonJS({
         };
       });
       const colorScheme = getColorScheme(state);
-      const setMode = React31.useCallback((mode) => {
+      const setMode = React34.useCallback((mode) => {
         setState((currentState) => {
           const newMode = !mode ? defaultMode : mode;
           if (typeof localStorage !== "undefined") {
@@ -45985,7 +45985,7 @@ var require_useCurrentColorScheme = __commonJS({
           });
         });
       }, [modeStorageKey, defaultMode]);
-      const setColorScheme = React31.useCallback((value) => {
+      const setColorScheme = React34.useCallback((value) => {
         if (!value || typeof value === "string") {
           if (value && !supportedColorSchemes.includes(value)) {
             console.error(`\`${value}\` does not exist in \`theme.colorSchemes\`.`);
@@ -46030,23 +46030,23 @@ var require_useCurrentColorScheme = __commonJS({
           }
         }
       }, [colorSchemeStorageKey, supportedColorSchemes, defaultLightColorScheme, defaultDarkColorScheme]);
-      const handleMediaQuery = React31.useCallback((e) => {
+      const handleMediaQuery = React34.useCallback((e) => {
         if (state.mode === "system") {
           setState((currentState) => (0, _extends2.default)({}, currentState, {
             systemMode: e.matches ? "dark" : "light"
           }));
         }
       }, [state.mode]);
-      const mediaListener = React31.useRef(handleMediaQuery);
+      const mediaListener = React34.useRef(handleMediaQuery);
       mediaListener.current = handleMediaQuery;
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         const handler = (...args) => mediaListener.current(...args);
         const media = window.matchMedia("(prefers-color-scheme: dark)");
         media.addListener(handler);
         handler(media);
         return () => media.removeListener(handler);
       }, []);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         if (state.mode) {
           localStorage.setItem(modeStorageKey, state.mode);
         }
@@ -46059,7 +46059,7 @@ var require_useCurrentColorScheme = __commonJS({
           }
         });
       }, [state, colorSchemeStorageKey, modeStorageKey]);
-      React31.useEffect(() => {
+      React34.useEffect(() => {
         const handleStorage = (event) => {
           const value = event.newValue;
           if (typeof event.key === "string" && event.key.startsWith(colorSchemeStorageKey) && (!value || joinedColorSchemes.match(value))) {
@@ -46130,7 +46130,7 @@ var require_createCssVarsProvider = __commonJS({
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
     var _utils = require_utils();
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _styledEngine = require_node3();
     var _createSpacing = _interopRequireDefault(require_createSpacing());
@@ -46201,9 +46201,9 @@ var require_createCssVarsProvider = __commonJS({
       if (!baseTheme.colorSchemes || typeof designSystemColorScheme === "string" && !baseTheme.colorSchemes[designSystemColorScheme] || typeof designSystemColorScheme === "object" && !baseTheme.colorSchemes[designSystemColorScheme == null ? void 0 : designSystemColorScheme.light] || typeof designSystemColorScheme === "object" && !baseTheme.colorSchemes[designSystemColorScheme == null ? void 0 : designSystemColorScheme.dark]) {
         console.error(`MUI: \`${designSystemColorScheme}\` does not exist in \`theme.colorSchemes\`.`);
       }
-      const ColorSchemeContext = /* @__PURE__ */ React31.createContext(void 0);
+      const ColorSchemeContext = /* @__PURE__ */ React34.createContext(void 0);
       const useColorScheme = () => {
-        const value = React31.useContext(ColorSchemeContext);
+        const value = React34.useContext(ColorSchemeContext);
         if (!value) {
           throw new Error(true ? `MUI: \`useColorScheme\` must be called under <CssVarsProvider />` : (0, _utils.formatMuiErrorMessage)(19));
         }
@@ -46226,7 +46226,7 @@ var require_createCssVarsProvider = __commonJS({
         const {
           colorSchemes: colorSchemesProp = {}
         } = themeProp, restThemeProp = (0, _objectWithoutPropertiesLoose2.default)(themeProp, _excluded2);
-        const hasMounted = React31.useRef(false);
+        const hasMounted = React34.useRef(false);
         let _deepmerge = (0, _utils.deepmerge)(restBaseTheme, restThemeProp), {
           components = {}
         } = _deepmerge, mergedTheme = (0, _objectWithoutPropertiesLoose2.default)(_deepmerge, _excluded3);
@@ -46306,7 +46306,7 @@ var require_createCssVarsProvider = __commonJS({
             styleSheet[`[${attribute}="${key}"]`] = css;
           }
         });
-        React31.useEffect(() => {
+        React34.useEffect(() => {
           if (colorScheme) {
             document.documentElement.setAttribute(attribute, colorScheme);
           }
@@ -46325,7 +46325,7 @@ var require_createCssVarsProvider = __commonJS({
             document.documentElement.style.setProperty("color-scheme", priorColorScheme);
           };
         }, [mode, systemMode, enableColorScheme]);
-        React31.useEffect(() => {
+        React34.useEffect(() => {
           let timer;
           if (disableTransitionOnChange && hasMounted.current) {
             const css = document.createElement("style");
@@ -46340,7 +46340,7 @@ var require_createCssVarsProvider = __commonJS({
             clearTimeout(timer);
           };
         }, [colorScheme, disableTransitionOnChange]);
-        React31.useEffect(() => {
+        React34.useEffect(() => {
           hasMounted.current = true;
           return () => {
             hasMounted.current = false;
@@ -47810,7 +47810,7 @@ var require_SvgIcon = __commonJS({
     exports.default = void 0;
     var _extends2 = _interopRequireDefault(require_extends());
     var _objectWithoutPropertiesLoose2 = _interopRequireDefault(require_objectWithoutPropertiesLoose());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _propTypes = _interopRequireDefault(require_prop_types());
     var _clsx = _interopRequireDefault(require_clsx());
     var _base = require_node2();
@@ -47906,7 +47906,7 @@ var require_SvgIcon = __commonJS({
         }[ownerState.color]
       };
     });
-    var SvgIcon = /* @__PURE__ */ React31.forwardRef(function SvgIcon2(inProps, ref) {
+    var SvgIcon = /* @__PURE__ */ React34.forwardRef(function SvgIcon2(inProps, ref) {
       const props = (0, _useThemeProps.default)({
         props: inProps,
         name: "MuiSvgIcon"
@@ -48060,7 +48060,7 @@ var require_createSvgIcon = __commonJS({
     });
     exports.default = createSvgIcon2;
     var _extends2 = _interopRequireDefault(require_extends());
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _SvgIcon = _interopRequireDefault(require_SvgIcon2());
     var _jsxRuntime = require_jsx_runtime();
     function _getRequireWildcardCache(nodeInterop) {
@@ -48112,7 +48112,7 @@ var require_createSvgIcon = __commonJS({
         Component.displayName = `${displayName}Icon`;
       }
       Component.muiName = _SvgIcon.default.muiName;
-      return /* @__PURE__ */ React31.memo(/* @__PURE__ */ React31.forwardRef(Component));
+      return /* @__PURE__ */ React34.memo(/* @__PURE__ */ React34.forwardRef(Component));
     }
   }
 });
@@ -48780,6 +48780,110 @@ var require_Edit = __commonJS({
       d: "M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34a.9959.9959 0 0 0-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z"
     }), "Edit");
     exports.default = _default;
+  }
+});
+
+// node_modules/crc-32/crc32.js
+var require_crc32 = __commonJS({
+  "node_modules/crc-32/crc32.js"(exports) {
+    var CRC322;
+    (function(factory) {
+      if (typeof DO_NOT_EXPORT_CRC === "undefined") {
+        if (typeof exports === "object") {
+          factory(exports);
+        } else if (typeof define === "function" && define.amd) {
+          define(function() {
+            var module3 = {};
+            factory(module3);
+            return module3;
+          });
+        } else {
+          factory(CRC322 = {});
+        }
+      } else {
+        factory(CRC322 = {});
+      }
+    })(function(CRC323) {
+      CRC323.version = "1.2.2";
+      function signed_crc_table() {
+        var c = 0, table = new Array(256);
+        for (var n = 0; n != 256; ++n) {
+          c = n;
+          c = c & 1 ? -306674912 ^ c >>> 1 : c >>> 1;
+          c = c & 1 ? -306674912 ^ c >>> 1 : c >>> 1;
+          c = c & 1 ? -306674912 ^ c >>> 1 : c >>> 1;
+          c = c & 1 ? -306674912 ^ c >>> 1 : c >>> 1;
+          c = c & 1 ? -306674912 ^ c >>> 1 : c >>> 1;
+          c = c & 1 ? -306674912 ^ c >>> 1 : c >>> 1;
+          c = c & 1 ? -306674912 ^ c >>> 1 : c >>> 1;
+          c = c & 1 ? -306674912 ^ c >>> 1 : c >>> 1;
+          table[n] = c;
+        }
+        return typeof Int32Array !== "undefined" ? new Int32Array(table) : table;
+      }
+      var T0 = signed_crc_table();
+      function slice_by_16_tables(T) {
+        var c = 0, v = 0, n = 0, table = typeof Int32Array !== "undefined" ? new Int32Array(4096) : new Array(4096);
+        for (n = 0; n != 256; ++n)
+          table[n] = T[n];
+        for (n = 0; n != 256; ++n) {
+          v = T[n];
+          for (c = 256 + n; c < 4096; c += 256)
+            v = table[c] = v >>> 8 ^ T[v & 255];
+        }
+        var out = [];
+        for (n = 1; n != 16; ++n)
+          out[n - 1] = typeof Int32Array !== "undefined" ? table.subarray(n * 256, n * 256 + 256) : table.slice(n * 256, n * 256 + 256);
+        return out;
+      }
+      var TT = slice_by_16_tables(T0);
+      var T1 = TT[0], T2 = TT[1], T3 = TT[2], T4 = TT[3], T5 = TT[4];
+      var T6 = TT[5], T7 = TT[6], T8 = TT[7], T9 = TT[8], Ta = TT[9];
+      var Tb = TT[10], Tc = TT[11], Td = TT[12], Te = TT[13], Tf = TT[14];
+      function crc32_bstr(bstr, seed) {
+        var C = seed ^ -1;
+        for (var i = 0, L = bstr.length; i < L; )
+          C = C >>> 8 ^ T0[(C ^ bstr.charCodeAt(i++)) & 255];
+        return ~C;
+      }
+      function crc32_buf(B, seed) {
+        var C = seed ^ -1, L = B.length - 15, i = 0;
+        for (; i < L; )
+          C = Tf[B[i++] ^ C & 255] ^ Te[B[i++] ^ C >> 8 & 255] ^ Td[B[i++] ^ C >> 16 & 255] ^ Tc[B[i++] ^ C >>> 24] ^ Tb[B[i++]] ^ Ta[B[i++]] ^ T9[B[i++]] ^ T8[B[i++]] ^ T7[B[i++]] ^ T6[B[i++]] ^ T5[B[i++]] ^ T4[B[i++]] ^ T3[B[i++]] ^ T2[B[i++]] ^ T1[B[i++]] ^ T0[B[i++]];
+        L += 15;
+        while (i < L)
+          C = C >>> 8 ^ T0[(C ^ B[i++]) & 255];
+        return ~C;
+      }
+      function crc32_str(str, seed) {
+        var C = seed ^ -1;
+        for (var i = 0, L = str.length, c = 0, d = 0; i < L; ) {
+          c = str.charCodeAt(i++);
+          if (c < 128) {
+            C = C >>> 8 ^ T0[(C ^ c) & 255];
+          } else if (c < 2048) {
+            C = C >>> 8 ^ T0[(C ^ (192 | c >> 6 & 31)) & 255];
+            C = C >>> 8 ^ T0[(C ^ (128 | c & 63)) & 255];
+          } else if (c >= 55296 && c < 57344) {
+            c = (c & 1023) + 64;
+            d = str.charCodeAt(i++) & 1023;
+            C = C >>> 8 ^ T0[(C ^ (240 | c >> 8 & 7)) & 255];
+            C = C >>> 8 ^ T0[(C ^ (128 | c >> 2 & 63)) & 255];
+            C = C >>> 8 ^ T0[(C ^ (128 | d >> 6 & 15 | (c & 3) << 4)) & 255];
+            C = C >>> 8 ^ T0[(C ^ (128 | d & 63)) & 255];
+          } else {
+            C = C >>> 8 ^ T0[(C ^ (224 | c >> 12 & 15)) & 255];
+            C = C >>> 8 ^ T0[(C ^ (128 | c >> 6 & 63)) & 255];
+            C = C >>> 8 ^ T0[(C ^ (128 | c & 63)) & 255];
+          }
+        }
+        return ~C;
+      }
+      CRC323.table = T0;
+      CRC323.bstr = crc32_bstr;
+      CRC323.buf = crc32_buf;
+      CRC323.str = crc32_str;
+    });
   }
 });
 
@@ -54285,7 +54389,7 @@ var require_Manager = __commonJS({
     });
     exports.Manager = Manager;
     exports.ManagerReferenceNodeSetterContext = exports.ManagerReferenceNodeContext = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache() {
       if (typeof WeakMap !== "function")
         return null;
@@ -54324,27 +54428,27 @@ var require_Manager = __commonJS({
       }
       return newObj;
     }
-    var ManagerReferenceNodeContext = React31.createContext();
+    var ManagerReferenceNodeContext = React34.createContext();
     exports.ManagerReferenceNodeContext = ManagerReferenceNodeContext;
-    var ManagerReferenceNodeSetterContext = React31.createContext();
+    var ManagerReferenceNodeSetterContext = React34.createContext();
     exports.ManagerReferenceNodeSetterContext = ManagerReferenceNodeSetterContext;
     function Manager(_ref) {
       var children = _ref.children;
-      var _React$useState = React31.useState(null), referenceNode = _React$useState[0], setReferenceNode = _React$useState[1];
-      var hasUnmounted = React31.useRef(false);
-      React31.useEffect(function() {
+      var _React$useState = React34.useState(null), referenceNode = _React$useState[0], setReferenceNode = _React$useState[1];
+      var hasUnmounted = React34.useRef(false);
+      React34.useEffect(function() {
         return function() {
           hasUnmounted.current = true;
         };
       }, []);
-      var handleSetReferenceNode = React31.useCallback(function(node) {
+      var handleSetReferenceNode = React34.useCallback(function(node) {
         if (!hasUnmounted.current) {
           setReferenceNode(node);
         }
       }, []);
-      return /* @__PURE__ */ React31.createElement(ManagerReferenceNodeContext.Provider, {
+      return /* @__PURE__ */ React34.createElement(ManagerReferenceNodeContext.Provider, {
         value: referenceNode
-      }, /* @__PURE__ */ React31.createElement(ManagerReferenceNodeSetterContext.Provider, {
+      }, /* @__PURE__ */ React34.createElement(ManagerReferenceNodeSetterContext.Provider, {
         value: handleSetReferenceNode
       }, children));
     }
@@ -54359,7 +54463,7 @@ var require_utils5 = __commonJS({
       value: true
     });
     exports.useIsomorphicLayoutEffect = exports.fromEntries = exports.setRef = exports.safeInvoke = exports.unwrapArray = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     function _getRequireWildcardCache() {
       if (typeof WeakMap !== "function")
         return null;
@@ -54427,7 +54531,7 @@ var require_utils5 = __commonJS({
       }, {});
     };
     exports.fromEntries = fromEntries;
-    var useIsomorphicLayoutEffect = typeof window !== "undefined" && window.document && window.document.createElement ? React31.useLayoutEffect : React31.useEffect;
+    var useIsomorphicLayoutEffect = typeof window !== "undefined" && window.document && window.document.createElement ? React34.useLayoutEffect : React34.useEffect;
     exports.useIsomorphicLayoutEffect = useIsomorphicLayoutEffect;
   }
 });
@@ -54535,7 +54639,7 @@ var require_usePopper = __commonJS({
       value: true
     });
     exports.usePopper = void 0;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var ReactDOM3 = _interopRequireWildcard(require_react_dom());
     var _core = require_popper();
     var _reactFastCompare = _interopRequireDefault(require_react_fast_compare());
@@ -54586,14 +54690,14 @@ var require_usePopper = __commonJS({
       if (options === void 0) {
         options = {};
       }
-      var prevOptions = React31.useRef(null);
+      var prevOptions = React34.useRef(null);
       var optionsWithDefaults = {
         onFirstUpdate: options.onFirstUpdate,
         placement: options.placement || "bottom",
         strategy: options.strategy || "absolute",
         modifiers: options.modifiers || EMPTY_MODIFIERS
       };
-      var _React$useState = React31.useState({
+      var _React$useState = React34.useState({
         styles: {
           popper: {
             position: optionsWithDefaults.strategy,
@@ -54606,7 +54710,7 @@ var require_usePopper = __commonJS({
         },
         attributes: {}
       }), state = _React$useState[0], setState = _React$useState[1];
-      var updateStateModifier = React31.useMemo(function() {
+      var updateStateModifier = React34.useMemo(function() {
         return {
           name: "updateState",
           enabled: true,
@@ -54628,7 +54732,7 @@ var require_usePopper = __commonJS({
           requires: ["computeStyles"]
         };
       }, []);
-      var popperOptions = React31.useMemo(function() {
+      var popperOptions = React34.useMemo(function() {
         var newOptions = {
           onFirstUpdate: optionsWithDefaults.onFirstUpdate,
           placement: optionsWithDefaults.placement,
@@ -54645,7 +54749,7 @@ var require_usePopper = __commonJS({
           return newOptions;
         }
       }, [optionsWithDefaults.onFirstUpdate, optionsWithDefaults.placement, optionsWithDefaults.strategy, optionsWithDefaults.modifiers, updateStateModifier]);
-      var popperInstanceRef = React31.useRef();
+      var popperInstanceRef = React34.useRef();
       (0, _utils.useIsomorphicLayoutEffect)(function() {
         if (popperInstanceRef.current) {
           popperInstanceRef.current.setOptions(popperOptions);
@@ -54683,7 +54787,7 @@ var require_Popper = __commonJS({
       value: true
     });
     exports.Popper = Popper;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _Manager = require_Manager();
     var _utils = require_utils5();
     var _usePopper2 = require_usePopper();
@@ -54734,13 +54838,13 @@ var require_Popper = __commonJS({
     var EMPTY_MODIFIERS = [];
     function Popper(_ref) {
       var _ref$placement = _ref.placement, placement = _ref$placement === void 0 ? "bottom" : _ref$placement, _ref$strategy = _ref.strategy, strategy = _ref$strategy === void 0 ? "absolute" : _ref$strategy, _ref$modifiers = _ref.modifiers, modifiers = _ref$modifiers === void 0 ? EMPTY_MODIFIERS : _ref$modifiers, referenceElement = _ref.referenceElement, onFirstUpdate = _ref.onFirstUpdate, innerRef = _ref.innerRef, children = _ref.children;
-      var referenceNode = React31.useContext(_Manager.ManagerReferenceNodeContext);
-      var _React$useState = React31.useState(null), popperElement = _React$useState[0], setPopperElement = _React$useState[1];
-      var _React$useState2 = React31.useState(null), arrowElement = _React$useState2[0], setArrowElement = _React$useState2[1];
-      React31.useEffect(function() {
+      var referenceNode = React34.useContext(_Manager.ManagerReferenceNodeContext);
+      var _React$useState = React34.useState(null), popperElement = _React$useState[0], setPopperElement = _React$useState[1];
+      var _React$useState2 = React34.useState(null), arrowElement = _React$useState2[0], setArrowElement = _React$useState2[1];
+      React34.useEffect(function() {
         (0, _utils.setRef)(innerRef, popperElement);
       }, [innerRef, popperElement]);
-      var options = React31.useMemo(function() {
+      var options = React34.useMemo(function() {
         return {
           placement,
           strategy,
@@ -54755,7 +54859,7 @@ var require_Popper = __commonJS({
         };
       }, [placement, strategy, onFirstUpdate, modifiers, arrowElement]);
       var _usePopper = (0, _usePopper2.usePopper)(referenceElement || referenceNode, popperElement, options), state = _usePopper.state, styles = _usePopper.styles, forceUpdate = _usePopper.forceUpdate, update = _usePopper.update;
-      var childrenProps = React31.useMemo(function() {
+      var childrenProps = React34.useMemo(function() {
         return {
           ref: setPopperElement,
           style: styles.popper,
@@ -54828,7 +54932,7 @@ var require_Reference = __commonJS({
       value: true
     });
     exports.Reference = Reference;
-    var React31 = _interopRequireWildcard(require_react());
+    var React34 = _interopRequireWildcard(require_react());
     var _warning = _interopRequireDefault(require_warning());
     var _Manager = require_Manager();
     var _utils = require_utils5();
@@ -54875,17 +54979,17 @@ var require_Reference = __commonJS({
     }
     function Reference(_ref) {
       var children = _ref.children, innerRef = _ref.innerRef;
-      var setReferenceNode = React31.useContext(_Manager.ManagerReferenceNodeSetterContext);
-      var refHandler = React31.useCallback(function(node) {
+      var setReferenceNode = React34.useContext(_Manager.ManagerReferenceNodeSetterContext);
+      var refHandler = React34.useCallback(function(node) {
         (0, _utils.setRef)(innerRef, node);
         (0, _utils.safeInvoke)(setReferenceNode, node);
       }, [innerRef, setReferenceNode]);
-      React31.useEffect(function() {
+      React34.useEffect(function() {
         return function() {
           return (0, _utils.setRef)(innerRef, null);
         };
       }, []);
-      React31.useEffect(function() {
+      React34.useEffect(function() {
         (0, _warning["default"])(Boolean(setReferenceNode), "`Reference` should not be used outside of a `Manager` component.");
       }, [setReferenceNode]);
       return (0, _utils.unwrapArray)(children)({
@@ -56506,18 +56610,18 @@ var require_react_datepicker_min = __commonJS({
 __export(exports, {
   default: () => NltPlugin
 });
-var import_obsidian3 = __toModule(require("obsidian"));
+var import_obsidian4 = __toModule(require("obsidian"));
 
 // src/NLTTable.tsx
 var import_obsidian2 = __toModule(require("obsidian"));
-var import_react31 = __toModule(require_react());
+var import_react34 = __toModule(require_react());
 var import_react_dom2 = __toModule(require_react_dom());
 
 // src/app/App.tsx
-var import_react30 = __toModule(require_react());
+var import_react33 = __toModule(require_react());
 
 // src/app/components/EditableTd/index.tsx
-var import_react22 = __toModule(require_react());
+var import_react23 = __toModule(require_react());
 var import_obsidian = __toModule(require("obsidian"));
 
 // src/app/components/TextCell/index.tsx
@@ -56538,11 +56642,11 @@ var toExternalLink = (url) => {
 var toFileLink = (fileName) => {
   return `<a tabIndex={-1} data-href="${fileName}" href="${fileName}" class="internal-link" target="_blank" rel="noopener">${fileName}</a>`;
 };
-var toTagLink = (tagName) => {
-  return `<a tabIndex={-1} href="${tagName}" class="tag" target="_blank" rel="noopener">${tagName}</a>`;
-};
 
 // src/app/services/string/strippers/index.ts
+var stripPound = (tag) => {
+  return tag.replace("#", "");
+};
 var stripLink = (input) => {
   const replaceWithSquareBrackets = (input.match(/class="internal-link"/) || []).length !== 0;
   return input.replace(/&lt;a.*?&gt;/, replaceWithSquareBrackets ? "[[" : "").replace(/&lt;\/a&gt;/, replaceWithSquareBrackets ? "]]" : "");
@@ -56568,7 +56672,7 @@ var sanitizeHTML = (innerHTML) => {
 // src/app/services/string/regex/index.ts
 var MARKDOWN_CELLS_REGEX = new RegExp(/[ \t]{0,}[^|\r\n]+[ \t]{0,}\|/g);
 var MARKDOWN_ROWS_REGEX = new RegExp(/(\|[ ]{0,}.*[ ]{0,}\|){1,}/g);
-var TAG_REGEX = new RegExp(/^[#]{0,1}[^\s]+$/);
+var TAG_REGEX = new RegExp(/^[#][^\s]+$/);
 var MARKDOWN_HYPHEN_CELL_REGEX = new RegExp(/[ \t]{0,}[-]{3,}[ \t]{0,}\|/);
 var NUMBER_REGEX = new RegExp(/^\d+$/);
 var EXTERNAL_LINK_REGEX = new RegExp(/https{0,1}:\/\/[^\s]*/g);
@@ -56577,6 +56681,7 @@ var FILE_LINK_REGEX = new RegExp(/\[\[[^\n\r\]]+]]/g);
 var TABLE_ID_REGEX = new RegExp(/^table-id-[a-zA-Z0-9-]{1,}$/);
 var ROW_ID_REGEX = new RegExp(/^row-id-[a-zA-Z0-9-]{1,}$/);
 var COLUMN_ID_REGEX = new RegExp(/^column-id-[a-zA-Z0-9-]{1,}$/);
+var CSS_MEASUREMENT_PIXEL_REGEX = new RegExp(/^([1-9])([0-9]*)px$/);
 var LINE_BREAK_CHARACTER_REGEX = (flags) => new RegExp(/&lt;br&gt;/, flags);
 var AMPERSAND_CHARACTER_REGEX = (flags) => new RegExp(/&amp;amp;/, flags);
 var BOLD_CHARACTER_STRONG_REGEX = (flags) => new RegExp(/&lt;strong&gt;.{1,}?;\/strong&gt;/, flags);
@@ -56601,6 +56706,20 @@ var DATE_REGEX = new RegExp(/^\d{4}\/\d{2}\/\d{2}$/);
 var CHECKBOX_REGEX = new RegExp(/^\[[x ]{0,1}\]$/);
 var CHECKBOX_CHECKED_REGEX = new RegExp(/^\[[x]\]$/);
 
+// src/app/services/string/validators/index.ts
+var isNumber = (input) => {
+  return (input.match(NUMBER_REGEX) || []).length !== 0;
+};
+var isDate = (input) => {
+  return (input.match(DATE_REGEX) || []).length !== 0;
+};
+var isCheckBox = (input) => {
+  return (input.match(CHECKBOX_REGEX) || []).length !== 0;
+};
+var isCheckBoxChecked = (input) => {
+  return (input.match(CHECKBOX_CHECKED_REGEX) || []).length !== 0;
+};
+
 // src/app/constants.ts
 var DEBUG = {
   LOAD_APP_DATA: {
@@ -56610,24 +56729,11 @@ var DEBUG = {
     TYPES: false,
     MARKDOWN: false
   },
-  APP: {
-    HANDLER: false
-  },
-  SAVE_APP_DATA: {
-    APP_DATA: false
-  },
-  EDITABLE_TD: {
-    HANDLER: false,
-    USE_EFFECT: false
-  },
-  FOCUS_PROVIDER: {
-    HANDLER: true,
-    USE_EFFECT: true
-  },
-  MENU_PROVIDER: {
-    HANDLER: true,
-    USE_EFFECT: true
-  }
+  APP: false,
+  SAVE_APP_DATA: false,
+  EDITABLE_TD: false,
+  FOCUS_PROVIDER: false,
+  MENU_PROVIDER: false
 };
 var TABBABLE_ELEMENT_TYPE = {
   UNFOCUSED: "unfocused",
@@ -56635,14 +56741,13 @@ var TABBABLE_ELEMENT_TYPE = {
   HEADER: "header",
   CELL: "cell"
 };
-var CELL_TYPE = {
+var CONTENT_TYPE = {
   TEXT: "text",
   NUMBER: "number",
   TAG: "tag",
   DATE: "date",
   CHECKBOX: "checkbox",
-  MULTI_TAG: "multi-tag",
-  ERROR: "error"
+  MULTI_TAG: "multi-tag"
 };
 var COLOR = {
   LIGHT_GRAY: "light gray",
@@ -56693,82 +56798,8 @@ var BOLD_TAG_START = "<b>";
 var BOLD_TAG_CLOSE = "</b>";
 var HIGHLIGHT_TAG_START = "<mark>";
 var HIGHLIGHT_TAG_CLOSE = "</mark>";
-
-// src/app/services/string/validators/index.ts
-var isNumber = (input) => {
-  return (input.match(NUMBER_REGEX) || []).length !== 0;
-};
-var isDate = (input) => {
-  return (input.match(DATE_REGEX) || []).length !== 0;
-};
-var isCheckBox = (input) => {
-  return (input.match(CHECKBOX_REGEX) || []).length !== 0;
-};
-var isTag = (input) => {
-  return (input.match(TAG_REGEX) || []).length !== 0;
-};
-var isCheckBoxChecked = (input) => {
-  return (input.match(CHECKBOX_CHECKED_REGEX) || []).length !== 0;
-};
-var hasValidHeaderRow = (parsedTable) => {
-  const row = parsedTable[0];
-  if (row) {
-    if (row[row.length - 1] === "")
-      return true;
-  }
-  return false;
-};
-var hasValidTypeDefinitionRow = (parsedTable) => {
-  const row = parsedTable[1];
-  if (row) {
-    for (let i = 0; i < row.length; i++) {
-      const cell = row[i];
-      if (i === row.length - 1) {
-        if (cell !== "")
-          return false;
-      } else {
-        if (!Object.values(CELL_TYPE).includes(cell))
-          return false;
-      }
-    }
-    return true;
-  }
-  return false;
-};
-var hasValidColumnIds = (parsedTable) => {
-  const ids = [];
-  const row = parsedTable[2];
-  if (row) {
-    for (let i = 0; i < row.length - 1; i++) {
-      const cell = row[i];
-      if (!cell.match(COLUMN_ID_REGEX))
-        return false;
-      const id = cell.split("column-id-")[1];
-      if (ids.includes(id))
-        return false;
-      ids.push(id);
-    }
-    return true;
-  } else {
-    return false;
-  }
-};
-var hasValidRowIds = (parsedTable) => {
-  const ids = [];
-  if (parsedTable.length < 3)
-    return false;
-  for (let i = 3; i < parsedTable.length; i++) {
-    const row = parsedTable[i];
-    const cell = row[row.length - 1];
-    if (!cell.match(ROW_ID_REGEX))
-      return false;
-    const id = cell.split("row-id-")[1];
-    if (ids.includes(id))
-      return false;
-    ids.push(id);
-  }
-  return true;
-};
+var MIN_COLUMN_WIDTH_PX = 50;
+var CURRENT_TABLE_CACHE_VERSION = 410;
 
 // src/app/services/string/matchers/index.ts
 var matchBoldMarkdown = (input) => {
@@ -56831,25 +56862,20 @@ var matchURLs = (input) => {
 var matchFileLinks = (input) => {
   return input.match(FILE_LINK_REGEX) || [];
 };
-var findCellType = (textContent, expectedType) => {
-  if (textContent === "")
-    return expectedType;
-  if (expectedType === CELL_TYPE.TEXT) {
-    return CELL_TYPE.TEXT;
-  } else if (expectedType === CELL_TYPE.NUMBER) {
-    if (isNumber(textContent))
-      return CELL_TYPE.NUMBER;
-  } else if (expectedType === CELL_TYPE.TAG) {
-    if (isTag(textContent))
-      return CELL_TYPE.TAG;
-  } else if (expectedType === CELL_TYPE.DATE) {
-    if (isDate(textContent))
-      return CELL_TYPE.DATE;
-  } else if (expectedType === CELL_TYPE.CHECKBOX) {
-    if (isCheckBox(textContent))
-      return CELL_TYPE.CHECKBOX;
-  }
-  return CELL_TYPE.ERROR;
+var findContentType = (content, columnContentType) => {
+  if (content === "")
+    return columnContentType;
+  if (columnContentType === CONTENT_TYPE.TEXT)
+    return CONTENT_TYPE.TEXT;
+  if (columnContentType === CONTENT_TYPE.TAG)
+    return CONTENT_TYPE.TAG;
+  if (isNumber(content))
+    return CONTENT_TYPE.NUMBER;
+  if (isDate(content))
+    return CONTENT_TYPE.DATE;
+  if (isCheckBox(content))
+    return CONTENT_TYPE.CHECKBOX;
+  return CONTENT_TYPE.TEXT;
 };
 
 // src/app/services/string/parsers/index.ts
@@ -56978,26 +57004,49 @@ var parseUnderlineTags = (input) => {
   });
   return input;
 };
-var parseDateForInput = (date) => {
+var dateToString = (date) => {
   const year = date.getFullYear();
   const month = ("0" + (date.getMonth() + 1)).slice(-2);
   const day = ("0" + date.getDate()).slice(-2);
   return `${year}/${month}/${day}`;
 };
+var pxToNum = (pixels) => {
+  return parseFloat(pixels.split("px")[0]);
+};
+var numToPx = (num) => {
+  return `${num}px`;
+};
 
 // src/app/components/TextCell/index.tsx
-function TextCell({ text }) {
+function TextCell({
+  text,
+  shouldWrapOverflow,
+  useAutoWidth
+}) {
   text = parseURLs(text);
   text = parseFileLinks(text);
   text = parseBoldMarkdown(text);
   text = parseItalicMarkdown(text);
   text = parseHighlightMarkdown(text);
+  let className = "NLT__text-cell";
+  if (useAutoWidth) {
+    className += " NLT__auto-width";
+  } else {
+    if (shouldWrapOverflow) {
+      className += " NLT__wrap-overflow";
+    } else {
+      className += " NLT__hide-overflow";
+    }
+  }
   return /* @__PURE__ */ import_react.default.createElement("div", {
-    className: "NLT__text-cell"
+    className
   }, html_react_parser_default(text));
 }
 
 // src/app/components/TagCell/index.tsx
+var import_react3 = __toModule(require_react());
+
+// src/app/components/Tag/index.tsx
 var import_react2 = __toModule(require_react());
 var import_Close = __toModule(require_Close());
 
@@ -57029,34 +57078,20 @@ var findColorClass = (color) => {
   }
 };
 
-// src/app/components/TagCell/index.tsx
-function TagCell({
-  cellId,
+// src/app/components/Tag/index.tsx
+function Tag({
   id,
-  content,
   color,
+  content,
   showRemove,
-  selectable,
-  style,
-  isCreate,
-  showLink = false,
   onRemoveClick
 }) {
   let tagClass = "NLT__tag";
   tagClass += " " + findColorClass(color);
-  let cellClass = "NLT__tag-cell";
-  if (selectable)
-    cellClass += " NLT__selectable";
   if (content === "")
     return /* @__PURE__ */ import_react2.default.createElement(import_react2.default.Fragment, null);
-  if (showLink) {
-    if (content.startsWith("#"))
-      content = toTagLink(content);
-  }
+  content = stripPound(content);
   return /* @__PURE__ */ import_react2.default.createElement("div", {
-    className: cellClass,
-    style
-  }, isCreate && /* @__PURE__ */ import_react2.default.createElement("div", null, "Create\xA0"), /* @__PURE__ */ import_react2.default.createElement("div", {
     className: tagClass
   }, /* @__PURE__ */ import_react2.default.createElement("div", {
     className: "NLT__tag-content"
@@ -57064,77 +57099,91 @@ function TagCell({
     className: "NLT__icon--md NLT__margin-left NLT__icon--selectable",
     onClick: (e) => {
       e.stopPropagation();
-      onRemoveClick(cellId, id);
+      onRemoveClick(id);
     }
-  })));
+  }));
+}
+
+// src/app/components/TagCell/index.tsx
+function TagCell({ content, color }) {
+  return /* @__PURE__ */ import_react3.default.createElement("div", {
+    className: "NLT__tag-cell"
+  }, /* @__PURE__ */ import_react3.default.createElement(Tag, {
+    content,
+    color
+  }));
 }
 
 // src/app/components/ErrorCell/index.tsx
-var import_react3 = __toModule(require_react());
-function ErrorCell({ type }) {
-  return /* @__PURE__ */ import_react3.default.createElement("div", {
+var import_react4 = __toModule(require_react());
+function ErrorCell({ expectedType, type }) {
+  return /* @__PURE__ */ import_react4.default.createElement("div", {
     className: "NLT__error"
-  }, "Invalid data. Expected type: ", type);
+  }, "Invalid data. Type: ", type, " Expected type: ", expectedType);
 }
 
 // src/app/components/CheckboxCell/index.tsx
-var import_react4 = __toModule(require_react());
+var import_react5 = __toModule(require_react());
 function CheckboxCell({ isChecked, onCheckboxChange }) {
-  return /* @__PURE__ */ import_react4.default.createElement("div", {
-    className: "NLT__checkbox-cell",
-    onClick: () => onCheckboxChange(!isChecked)
-  }, /* @__PURE__ */ import_react4.default.createElement("input", {
+  return /* @__PURE__ */ import_react5.default.createElement("div", {
+    className: "NLT__checkbox-cell"
+  }, /* @__PURE__ */ import_react5.default.createElement("input", {
     className: "task-list-item-checkbox",
     type: "checkbox",
     checked: isChecked,
-    onChange: () => onCheckboxChange(!isChecked)
+    onChange: () => {
+    },
+    onClick: (e) => {
+      e.stopPropagation();
+      onCheckboxChange(!isChecked);
+    }
   }));
 }
 
 // src/app/components/DateCell/index.tsx
-var import_react5 = __toModule(require_react());
+var import_react6 = __toModule(require_react());
 function DateCell({ text }) {
-  return /* @__PURE__ */ import_react5.default.createElement("div", {
+  return /* @__PURE__ */ import_react6.default.createElement("div", {
     className: "NLT__date-cell"
   }, text);
 }
 
 // src/app/components/NumberCell/index.tsx
-var import_react6 = __toModule(require_react());
-function NumberCell({ number }) {
-  return /* @__PURE__ */ import_react6.default.createElement("div", {
-    className: "NLT__number-cell"
+var import_react7 = __toModule(require_react());
+function NumberCell({
+  number,
+  shouldWrapOverflow,
+  useAutoWidth
+}) {
+  let className = "NLT__number-cell";
+  if (useAutoWidth) {
+    className += " NLT__auto-width";
+  } else {
+    if (shouldWrapOverflow) {
+      className += " NLT__wrap-overflow";
+    } else {
+      className += " NLT__hide-overflow";
+    }
+  }
+  return /* @__PURE__ */ import_react7.default.createElement("div", {
+    className
   }, number);
 }
 
 // src/app/components/NumberCellEdit/index.tsx
-var import_react8 = __toModule(require_react());
+var import_react9 = __toModule(require_react());
 
 // src/app/components/Menu/index.tsx
-var import_react7 = __toModule(require_react());
+var import_react8 = __toModule(require_react());
 var import_react_dom = __toModule(require_react_dom());
-function Menu({
-  id,
-  isOpen,
-  top,
-  left,
-  children,
-  width,
-  height
-}) {
-  return /* @__PURE__ */ import_react7.default.createElement(import_react7.default.Fragment, null, isOpen && import_react_dom.default.createPortal(/* @__PURE__ */ import_react7.default.createElement("div", {
+function Menu({ id, isOpen, style, children }) {
+  return /* @__PURE__ */ import_react8.default.createElement(import_react8.default.Fragment, null, isOpen && import_react_dom.default.createPortal(/* @__PURE__ */ import_react8.default.createElement("div", {
     className: "NLT__menu",
     id,
-    onClick: (e) => e.stopPropagation(),
     onMouseDown: (e) => e.preventDefault()
-  }, /* @__PURE__ */ import_react7.default.createElement("div", {
+  }, /* @__PURE__ */ import_react8.default.createElement("div", {
     className: "NLT__menu-container",
-    style: {
-      top: `${top}px`,
-      left: `${left}px`,
-      width: width ? `${width}px` : "fit-content",
-      height: height ? `${height}px` : "fit-content"
-    }
+    style
   }, children)), document.body));
 }
 
@@ -57142,473 +57191,42 @@ function Menu({
 function NumberCellEdit({
   menuId,
   isOpen,
-  top,
-  left,
-  width,
-  inputText,
+  style,
+  value,
   onInputChange
 }) {
-  const inputRef = (0, import_react8.useCallback)((node) => {
+  const inputRef = (0, import_react9.useCallback)((node) => {
     if (node) {
-      if (isOpen) {
+      if (node instanceof HTMLElement) {
         setTimeout(() => {
           node.focus();
         }, 1);
       }
     }
-  }, [isOpen]);
-  return /* @__PURE__ */ import_react8.default.createElement(Menu, {
+  }, []);
+  function handleInputChange(value2) {
+    value2 = value2.replace("\n", "");
+    return onInputChange(value2);
+  }
+  return /* @__PURE__ */ import_react9.default.createElement(Menu, {
     id: menuId,
     isOpen,
-    top,
-    left,
-    width
-  }, /* @__PURE__ */ import_react8.default.createElement("input", {
-    ref: inputRef,
-    className: "NLT__input NLT__input--number NLT__input--no-border",
+    style
+  }, /* @__PURE__ */ import_react9.default.createElement("input", {
+    className: "NLT__number-cell-edit",
     type: "number",
+    ref: inputRef,
     autoFocus: true,
-    value: inputText,
-    onChange: (e) => onInputChange(e.target.value)
+    value,
+    onChange: (e) => handleInputChange(e.target.value)
   }));
 }
 
 // src/app/components/TextCellEdit/index.tsx
-var import_react9 = __toModule(require_react());
-function TextCellEdit({
-  menuId,
-  isOpen,
-  top,
-  left,
-  width,
-  inputText,
-  onInputChange
-}) {
-  const [height, setHeight] = (0, import_react9.useState)(0);
-  const textAreaRef = (0, import_react9.useCallback)((node) => {
-    if (node) {
-      if (isOpen) {
-        node.selectionStart = inputText.length;
-        node.selectionEnd = inputText.length;
-        if (node instanceof HTMLElement) {
-          setTimeout(() => {
-            node.focus();
-          }, 1);
-        }
-        if (node instanceof HTMLElement) {
-          node.style.height = "auto";
-          node.style.height = `${node.scrollHeight}px`;
-          setHeight(node.scrollHeight);
-        }
-      }
-    }
-  }, [isOpen, inputText.length]);
-  return /* @__PURE__ */ import_react9.default.createElement(Menu, {
-    id: menuId,
-    isOpen,
-    top,
-    left,
-    width,
-    height
-  }, /* @__PURE__ */ import_react9.default.createElement("textarea", {
-    className: "NLT__textarea",
-    ref: textAreaRef,
-    autoFocus: true,
-    value: inputText,
-    onChange: (e) => onInputChange(e.target.value.replace("\n", ""))
-  }));
-}
-
-// src/app/components/TagCellEdit/index.tsx
-var import_react20 = __toModule(require_react());
-
-// src/app/components/TagCellEdit/component/SelectableTag/index.tsx
-var import_react18 = __toModule(require_react());
-
-// src/app/components/IconButton/index.tsx
-var import_react12 = __toModule(require_react());
-
-// src/app/services/icon/index.tsx
-var import_react10 = __toModule(require_react());
-var import_MoreVert = __toModule(require_MoreVert());
-var import_Delete = __toModule(require_Delete());
-var import_Sort = __toModule(require_Sort());
-var import_KeyboardArrowDown = __toModule(require_KeyboardArrowDown());
-var import_KeyboardArrowUp = __toModule(require_KeyboardArrowUp());
-var import_KeyboardDoubleArrowUp = __toModule(require_KeyboardDoubleArrowUp());
-var import_KeyboardDoubleArrowDown = __toModule(require_KeyboardDoubleArrowDown());
-var import_KeyboardArrowLeft = __toModule(require_KeyboardArrowLeft());
-var import_KeyboardArrowRight = __toModule(require_KeyboardArrowRight());
-var import_KeyboardDoubleArrowLeft = __toModule(require_KeyboardDoubleArrowLeft());
-var import_KeyboardDoubleArrowRight = __toModule(require_KeyboardDoubleArrowRight());
-var import_KeyboardBackspace = __toModule(require_KeyboardBackspace());
-var import_MoveUp = __toModule(require_MoveUp());
-var import_MoveDown = __toModule(require_MoveDown());
-var import_TextSnippet = __toModule(require_TextSnippet());
-var import_Edit = __toModule(require_Edit());
-
-// node_modules/@mui/icons-material/esm/utils/createSvgIcon.js
-var import_utils = __toModule(require_utils4());
-
-// node_modules/@mui/icons-material/esm/MoreHoriz.js
-var import_jsx_runtime = __toModule(require_jsx_runtime());
-var MoreHoriz_default = (0, import_utils.createSvgIcon)(/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
-  d: "M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
-}), "MoreHoriz");
-
-// src/app/services/icon/index.tsx
-var findIcon = (icon, className) => {
-  switch (icon) {
-    case ICON.KEYBOARD_ARROW_UP:
-      return /* @__PURE__ */ import_react10.default.createElement(import_KeyboardArrowUp.default, {
-        className
-      });
-    case ICON.KEYBOARD_ARROW_DOWN:
-      return /* @__PURE__ */ import_react10.default.createElement(import_KeyboardArrowDown.default, {
-        className
-      });
-    case ICON.KEYBOARD_DOUBLE_ARROW_UP:
-      return /* @__PURE__ */ import_react10.default.createElement(import_KeyboardDoubleArrowUp.default, {
-        className
-      });
-    case ICON.KEYBOARD_DOUBLE_ARROW_DOWN:
-      return /* @__PURE__ */ import_react10.default.createElement(import_KeyboardDoubleArrowDown.default, {
-        className
-      });
-    case ICON.KEYBOARD_ARROW_LEFT:
-      return /* @__PURE__ */ import_react10.default.createElement(import_KeyboardArrowLeft.default, {
-        className
-      });
-    case ICON.KEYBOARD_ARROW_RIGHT:
-      return /* @__PURE__ */ import_react10.default.createElement(import_KeyboardArrowRight.default, {
-        className
-      });
-    case ICON.KEYBOARD_DOUBLE_ARROW_LEFT:
-      return /* @__PURE__ */ import_react10.default.createElement(import_KeyboardDoubleArrowLeft.default, {
-        className
-      });
-    case ICON.KEYBOARD_DOUBLE_ARROW_RIGHT:
-      return /* @__PURE__ */ import_react10.default.createElement(import_KeyboardDoubleArrowRight.default, {
-        className
-      });
-    case ICON.DELETE:
-      return /* @__PURE__ */ import_react10.default.createElement(import_Delete.default, {
-        className
-      });
-    case ICON.MORE_VERT:
-      return /* @__PURE__ */ import_react10.default.createElement(import_MoreVert.default, {
-        className
-      });
-    case ICON.SORT:
-      return /* @__PURE__ */ import_react10.default.createElement(import_Sort.default, {
-        className
-      });
-    case ICON.KEYBOARD_BACKSPACE:
-      return /* @__PURE__ */ import_react10.default.createElement(import_KeyboardBackspace.default, {
-        className
-      });
-    case ICON.MOVE_UP:
-      return /* @__PURE__ */ import_react10.default.createElement(import_MoveUp.default, {
-        className
-      });
-    case ICON.MOVE_DOWN:
-      return /* @__PURE__ */ import_react10.default.createElement(import_MoveDown.default, {
-        className
-      });
-    case ICON.TEXT_SNIPPET:
-      return /* @__PURE__ */ import_react10.default.createElement(import_TextSnippet.default, {
-        className
-      });
-    case ICON.EDIT:
-      return /* @__PURE__ */ import_react10.default.createElement(import_Edit.default, {
-        className
-      });
-    case ICON.MORE_HORIZ:
-      return /* @__PURE__ */ import_react10.default.createElement(MoreHoriz_default, {
-        className
-      });
-    default:
-      return "";
-  }
-};
-
-// src/app/components/Button/index.tsx
 var import_react11 = __toModule(require_react());
-function Button({
-  id,
-  style,
-  children,
-  hasIcon,
-  onClick
-}) {
-  let className = "NLT__button";
-  if (hasIcon)
-    className += " NLT__button--icon";
-  const buttonId = id !== "" ? id : "";
-  return /* @__PURE__ */ import_react11.default.createElement("button", {
-    id: buttonId,
-    style,
-    className,
-    tabIndex: -1,
-    "aria-hidden": "true",
-    onClick: (e) => onClick(e)
-  }, children);
-}
-
-// src/app/components/IconButton/index.tsx
-function IconButton({ id, icon, onClick }) {
-  return /* @__PURE__ */ import_react12.default.createElement(Button, {
-    id,
-    hasIcon: true,
-    onClick
-  }, findIcon(icon, "NLT__icon--md"));
-}
-
-// src/app/components/TagColorMenu/index.tsx
-var import_react14 = __toModule(require_react());
-
-// src/app/components/TagColorMenu/components/ColorItem/index.tsx
-var import_react13 = __toModule(require_react());
-
-// src/app/services/string/adders/index.ts
-var uppercaseFirst = (input) => {
-  return input.charAt(0).toUpperCase() + input.slice(1);
-};
-
-// src/app/components/TagColorMenu/components/ColorItem/index.tsx
-function ColorItem({ color, isSelected, onColorClick }) {
-  let containerClass = "NLT__color-item NLT__selectable";
-  if (isSelected)
-    containerClass += " NLT__selected";
-  const colorClass = findColorClass(color);
-  let squareClass = "NLT__color-item-square";
-  squareClass += " " + colorClass;
-  return /* @__PURE__ */ import_react13.default.createElement("div", {
-    className: containerClass,
-    onClick: (e) => {
-      e.stopPropagation();
-      onColorClick(color);
-    }
-  }, /* @__PURE__ */ import_react13.default.createElement("div", {
-    className: squareClass
-  }), /* @__PURE__ */ import_react13.default.createElement("div", null, uppercaseFirst(color)));
-}
-
-// src/app/components/TagColorMenu/index.tsx
-function TagColorMenu({
-  menuId,
-  isOpen,
-  top,
-  left,
-  selectedColor,
-  onColorClick
-}) {
-  return /* @__PURE__ */ import_react14.default.createElement(Menu, {
-    id: menuId,
-    isOpen,
-    top,
-    left
-  }, /* @__PURE__ */ import_react14.default.createElement("div", {
-    className: "NLT__tag-color-menu"
-  }, /* @__PURE__ */ import_react14.default.createElement("div", {
-    className: "NLT__tag-color-menu-title"
-  }, "Colors"), /* @__PURE__ */ import_react14.default.createElement("div", {
-    className: "NLT__tag-color-container"
-  }, Object.values(COLOR).map((color) => /* @__PURE__ */ import_react14.default.createElement(ColorItem, {
-    key: color,
-    color,
-    onColorClick,
-    isSelected: selectedColor === color
-  })))));
-}
 
 // src/app/services/hooks/index.ts
-var import_react17 = __toModule(require_react());
-
-// src/app/components/MenuProvider/index.tsx
-var import_react16 = __toModule(require_react());
-
-// src/app/components/FocusProvider/index.tsx
-var import_react15 = __toModule(require_react());
-
-// src/app/services/appData/external/loadUtils.ts
-var parseTableFromEl = (el) => {
-  const table = [];
-  const tr = el.getElementsByTagName("tr");
-  const th = tr[0].getElementsByTagName("th");
-  let row = [];
-  for (let i = 0; i < th.length; i++)
-    row.push(th[i].textContent);
-  table.push(row);
-  for (let i = 1; i < tr.length; i++) {
-    const td = tr[i].getElementsByTagName("td");
-    row = [];
-    for (let j = 0; j < td.length; j++) {
-      let sanitized = sanitizeHTML(td[j].innerHTML);
-      sanitized = stripLinks(sanitized);
-      row.push(sanitized);
-    }
-    table.push(row);
-  }
-  return table;
-};
-var findCurrentViewType = (el) => {
-  let currentViewType = "reading";
-  if (el.className.includes("markdown-rendered"))
-    currentViewType = "live-preview";
-  return currentViewType;
-};
-
-// src/app/components/FocusProvider/index.tsx
-var FocusContext = import_react15.default.createContext(false);
-var useTableFocus = () => {
-  return (0, import_react15.useContext)(FocusContext);
-};
-function FocusProvider({
-  children,
-  plugin,
-  tableId,
-  sourcePath,
-  el
-}) {
-  const [isFocused, setFocus] = (0, import_react15.useState)(false);
-  function handleFocus() {
-    if (DEBUG.FOCUS_PROVIDER.HANDLER) {
-      console.log("[FocusProvider]: handleFocus()");
-    }
-    setFocus(true);
-    plugin.focusTable(tableId, sourcePath, findCurrentViewType(el));
-  }
-  function handleBlur() {
-    if (DEBUG.FOCUS_PROVIDER.HANDLER) {
-      console.log("[FocusProvider]: handleBlur()");
-    }
-    setFocus(false);
-    plugin.blurTable();
-  }
-  const divRef = (0, import_react15.useCallback)((node) => {
-    if (node) {
-      if (plugin.focused) {
-        if (plugin.focused.sourcePath === sourcePath && plugin.focused.tableId === tableId) {
-          setTimeout(() => {
-            handleFocus();
-          }, 1);
-        }
-      }
-    }
-  }, []);
-  return /* @__PURE__ */ import_react15.default.createElement("div", {
-    ref: divRef,
-    onFocus: () => handleFocus(),
-    onBlur: () => handleBlur(),
-    onClick: (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-    }
-  }, /* @__PURE__ */ import_react15.default.createElement(FocusContext.Provider, {
-    value: isFocused
-  }, children));
-}
-
-// src/app/components/MenuProvider/index.tsx
-var MenuContext = import_react16.default.createContext(null);
-var useMenu = (id, level) => {
-  const { openMenu, closeMenu, isMenuOpen } = (0, import_react16.useContext)(MenuContext);
-  return {
-    isMenuOpen: isMenuOpen(id),
-    openMenu: () => openMenu(id, level),
-    closeMenu: () => closeMenu(id)
-  };
-};
-function MenuProvider({ children }) {
-  const [openMenus, setOpenMenus] = (0, import_react16.useState)([]);
-  const isFocused = useTableFocus();
-  function canOpenMenu(level) {
-    if (openMenus.length === 0)
-      return true;
-    if (openMenus.every((menu) => menu.level < level))
-      return true;
-    return false;
-  }
-  function openMenu(id, level) {
-    if (canOpenMenu(level)) {
-      const menu = { id, level };
-      if (DEBUG.MENU_PROVIDER.HANDLER) {
-        console.log(`[MenuProvider]: openMenu("${id}", ${level})`);
-      }
-      setOpenMenus((prevState) => [...prevState, menu]);
-    }
-  }
-  function isMenuOpen(id) {
-    if (openMenus.find((menu) => menu.id === id))
-      return true;
-    return false;
-  }
-  function closeAllMenus() {
-    if (DEBUG.MENU_PROVIDER.HANDLER) {
-      console.log("[MenuProvider]: closeAllMenus()");
-    }
-    setOpenMenus([]);
-  }
-  const closeMenu = (id) => {
-    if (isMenuOpen(id)) {
-      if (DEBUG.MENU_PROVIDER.HANDLER) {
-        console.log(`[MenuProvider]: closeMenu(${id})`);
-      }
-      setOpenMenus((prevState) => prevState.filter((menu) => menu.id !== id));
-    }
-  };
-  function handleClick(e) {
-    if (DEBUG.MENU_PROVIDER.HANDLER) {
-      console.log(`[MenuProvider]: handleClick`);
-    }
-    setTimeout(() => {
-      if (isFocused && openMenus.length !== 0) {
-        if (e.target instanceof HTMLElement) {
-          let el = e.target;
-          while (el.id === "" && el.className !== "NLT__app") {
-            el = el.parentElement;
-          }
-          const topMenu = findTopMenu();
-          if (el.id !== topMenu.id) {
-            closeMenu(topMenu.id);
-          }
-        }
-      }
-    }, 1);
-  }
-  function handleKeyUp(e) {
-    if (isFocused && openMenus.length !== 0) {
-      if (e.key === "Enter") {
-        const topMenu = findTopMenu();
-        closeMenu(topMenu.id);
-      }
-    }
-  }
-  function findTopMenu() {
-    let topMenu = openMenus[0];
-    openMenus.forEach((menu) => {
-      if (menu.level > topMenu.level)
-        topMenu = menu;
-    });
-    return topMenu;
-  }
-  (0, import_react16.useEffect)(() => {
-    if (!isFocused)
-      closeAllMenus();
-  }, [isFocused]);
-  return /* @__PURE__ */ import_react16.default.createElement("div", {
-    onMouseDown: (e) => e.preventDefault(),
-    onClick: handleClick,
-    onKeyUp: handleKeyUp
-  }, /* @__PURE__ */ import_react16.default.createElement(MenuContext.Provider, {
-    value: {
-      isMenuOpen,
-      openMenu,
-      closeMenu
-    }
-  }, children));
-}
+var import_react10 = __toModule(require_react());
 
 // node_modules/uuid/dist/esm-browser/rng.js
 var getRandomValues;
@@ -57666,43 +57284,90 @@ function v4(options, buf, offset) {
 var v4_default = v4;
 
 // src/app/services/hooks/index.ts
+var useId = () => {
+  const [id] = (0, import_react10.useState)(v4_default());
+  return id;
+};
 var useMenuId = () => {
-  const [menuId] = (0, import_react17.useState)(v4_default());
+  const [menuId] = (0, import_react10.useState)(v4_default());
   return menuId;
 };
-var useMenuRef = (menuId, menuLevel) => {
-  const [menuPosition, setMenuPosition] = (0, import_react17.useState)({
-    top: 0,
-    left: 0,
-    width: 0,
-    height: 0,
-    time: 0
+var useCompare = (value) => {
+  const prevValue = usePrevious(value);
+  return prevValue !== value;
+};
+var usePrevious = (value) => {
+  const ref = (0, import_react10.useRef)();
+  (0, import_react10.useEffect)(() => {
+    ref.current = value;
   });
-  const [shouldOpenMenu, setOpenMenu] = (0, import_react17.useState)(false);
-  const resizeTime = useResizeTime();
-  const { isMenuOpen, openMenu, closeMenu } = useMenu(menuId, menuLevel);
-  (0, import_react17.useEffect)(() => {
-    if (menuPosition.time !== 0 && shouldOpenMenu) {
-      openMenu();
-      setOpenMenu(false);
+  return ref.current;
+};
+var useTextareaRef = (isOpen, value) => {
+  const lengthHasChanged = useCompare(value.length);
+  return (0, import_react10.useCallback)((node) => {
+    if (node) {
+      if (isOpen && !lengthHasChanged) {
+        node.selectionStart = value.length;
+        node.selectionEnd = value.length;
+        if (node instanceof HTMLElement) {
+          setTimeout(() => {
+            node.focus();
+          }, 1);
+        }
+      }
     }
-  }, [menuPosition.time, shouldOpenMenu]);
-  const menuRef = (0, import_react17.useCallback)((node) => {
+  }, [isOpen, value.length]);
+};
+var useDidMountEffect = (func, deps) => {
+  const didMount = (0, import_react10.useRef)(false);
+  (0, import_react10.useEffect)(() => {
+    if (didMount.current)
+      func();
+    else
+      didMount.current = true;
+  }, deps);
+};
+var useContentResizeTime = () => {
+  const [resizeTime, setResizeTime] = (0, import_react10.useState)(0);
+  (0, import_react10.useEffect)(() => {
+    function handleResize() {
+      setResizeTime(Date.now());
+    }
+    setTimeout(() => {
+      const el = document.getElementsByClassName("view-content")[0];
+      if (el) {
+        new ResizeObserver(handleResize).observe(el);
+        handleResize();
+      }
+    }, 1);
+  }, []);
+  return resizeTime;
+};
+var usePositionRef = (deps = []) => {
+  const [position, setPosition] = (0, import_react10.useState)({
+    top: "0px",
+    left: "0px",
+    width: "0px",
+    height: "0px"
+  });
+  const resizeTime = useContentResizeTime();
+  const positionRef = (0, import_react10.useCallback)((node) => {
     if (node instanceof HTMLElement) {
-      const { top, left, width, height } = node.getBoundingClientRect();
-      setMenuPosition({ top, left, width, height, time: Date.now() });
+      const { top, left } = node.getBoundingClientRect();
+      const { offsetWidth, offsetHeight } = node;
+      setPosition({
+        top: numToPx(top),
+        left: numToPx(left),
+        width: numToPx(offsetWidth),
+        height: numToPx(offsetHeight)
+      });
     }
-  }, [resizeTime, shouldOpenMenu]);
-  return {
-    menuPosition,
-    openMenu: () => setOpenMenu(true),
-    closeMenu,
-    isMenuOpen,
-    menuRef
-  };
+  }, [resizeTime, ...deps]);
+  return { positionRef, position };
 };
 var useDisableScroll = (isOpen) => {
-  const scroll = (0, import_react17.useRef)({
+  const scroll = (0, import_react10.useRef)({
     top: 0,
     left: 0
   });
@@ -57713,7 +57378,7 @@ var useDisableScroll = (isOpen) => {
       el.scrollTo(left, top);
     }
   }
-  (0, import_react17.useEffect)(() => {
+  (0, import_react10.useEffect)(() => {
     if (el instanceof HTMLElement) {
       if (isOpen) {
         scroll.current = {
@@ -57732,75 +57397,994 @@ var useDisableScroll = (isOpen) => {
     };
   }, [isOpen]);
 };
-var useResizeTime = () => {
-  const [resizeTime, setResizeTime] = (0, import_react17.useState)(0);
-  (0, import_react17.useEffect)(() => {
-    function handleResize() {
-      setResizeTime(Date.now());
+var useDebounceInterval = (lastEventTime, waitTime) => {
+  const [finished, setFinished] = (0, import_react10.useState)(false);
+  (0, import_react10.useEffect)(() => {
+    let intervalId = null;
+    function startTimer() {
+      intervalId = setInterval(() => {
+        if (Date.now() - lastEventTime < waitTime)
+          return;
+        clearInterval(intervalId);
+        setFinished(true);
+      }, 50);
     }
-    setTimeout(() => {
-      const el = document.getElementsByClassName("view-content")[0];
-      if (el) {
-        new ResizeObserver(handleResize).observe(el);
-        handleResize();
-      }
-    }, 1);
-  }, []);
-  return resizeTime;
+    if (lastEventTime !== 0) {
+      setFinished(false);
+      startTimer();
+    }
+    return () => clearInterval(intervalId);
+  }, [lastEventTime]);
+  return finished;
 };
+var useScrollUpdate = (waitTime) => {
+  const [eventTime, setEventTime] = (0, import_react10.useState)(0);
+  const [scrollTime, setScrollTime] = (0, import_react10.useState)(0);
+  const finished = useDebounceInterval(eventTime, waitTime);
+  (0, import_react10.useEffect)(() => {
+    if (finished)
+      setScrollTime(Date.now());
+  }, [finished]);
+  function handleScroll() {
+    setEventTime(Date.now());
+  }
+  return {
+    handleScroll,
+    scrollTime
+  };
+};
+
+// src/app/components/TextCellEdit/index.tsx
+function TextCellEdit({
+  menuId,
+  isOpen,
+  style,
+  useAutoWidth,
+  shouldWrapOverflow,
+  value,
+  onInputChange
+}) {
+  const inputRef = useTextareaRef(isOpen, value);
+  function handleTextareaChange(value2) {
+    value2 = value2.replace("\n", "");
+    onInputChange(value2);
+  }
+  return /* @__PURE__ */ import_react11.default.createElement(Menu, {
+    id: menuId,
+    isOpen,
+    style
+  }, /* @__PURE__ */ import_react11.default.createElement("textarea", {
+    className: "NLT__textarea",
+    ref: inputRef,
+    autoFocus: true,
+    value,
+    onChange: (e) => handleTextareaChange(e.target.value)
+  }));
+}
+
+// src/app/components/TagCellEdit/index.tsx
+var import_react21 = __toModule(require_react());
+
+// src/app/components/TagCellEdit/component/SelectableTag/index.tsx
+var import_react19 = __toModule(require_react());
+
+// src/app/components/IconButton/index.tsx
+var import_react14 = __toModule(require_react());
+
+// src/app/services/icon/index.tsx
+var import_react12 = __toModule(require_react());
+var import_MoreVert = __toModule(require_MoreVert());
+var import_Delete = __toModule(require_Delete());
+var import_Sort = __toModule(require_Sort());
+var import_KeyboardArrowDown = __toModule(require_KeyboardArrowDown());
+var import_KeyboardArrowUp = __toModule(require_KeyboardArrowUp());
+var import_KeyboardDoubleArrowUp = __toModule(require_KeyboardDoubleArrowUp());
+var import_KeyboardDoubleArrowDown = __toModule(require_KeyboardDoubleArrowDown());
+var import_KeyboardArrowLeft = __toModule(require_KeyboardArrowLeft());
+var import_KeyboardArrowRight = __toModule(require_KeyboardArrowRight());
+var import_KeyboardDoubleArrowLeft = __toModule(require_KeyboardDoubleArrowLeft());
+var import_KeyboardDoubleArrowRight = __toModule(require_KeyboardDoubleArrowRight());
+var import_KeyboardBackspace = __toModule(require_KeyboardBackspace());
+var import_MoveUp = __toModule(require_MoveUp());
+var import_MoveDown = __toModule(require_MoveDown());
+var import_TextSnippet = __toModule(require_TextSnippet());
+var import_Edit = __toModule(require_Edit());
+
+// node_modules/@mui/icons-material/esm/utils/createSvgIcon.js
+var import_utils = __toModule(require_utils4());
+
+// node_modules/@mui/icons-material/esm/MoreHoriz.js
+var import_jsx_runtime = __toModule(require_jsx_runtime());
+var MoreHoriz_default = (0, import_utils.createSvgIcon)(/* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", {
+  d: "M6 10c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm12 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2zm-6 0c-1.1 0-2 .9-2 2s.9 2 2 2 2-.9 2-2-.9-2-2-2z"
+}), "MoreHoriz");
+
+// src/app/services/icon/index.tsx
+var findIcon = (icon, className) => {
+  switch (icon) {
+    case ICON.KEYBOARD_ARROW_UP:
+      return /* @__PURE__ */ import_react12.default.createElement(import_KeyboardArrowUp.default, {
+        className
+      });
+    case ICON.KEYBOARD_ARROW_DOWN:
+      return /* @__PURE__ */ import_react12.default.createElement(import_KeyboardArrowDown.default, {
+        className
+      });
+    case ICON.KEYBOARD_DOUBLE_ARROW_UP:
+      return /* @__PURE__ */ import_react12.default.createElement(import_KeyboardDoubleArrowUp.default, {
+        className
+      });
+    case ICON.KEYBOARD_DOUBLE_ARROW_DOWN:
+      return /* @__PURE__ */ import_react12.default.createElement(import_KeyboardDoubleArrowDown.default, {
+        className
+      });
+    case ICON.KEYBOARD_ARROW_LEFT:
+      return /* @__PURE__ */ import_react12.default.createElement(import_KeyboardArrowLeft.default, {
+        className
+      });
+    case ICON.KEYBOARD_ARROW_RIGHT:
+      return /* @__PURE__ */ import_react12.default.createElement(import_KeyboardArrowRight.default, {
+        className
+      });
+    case ICON.KEYBOARD_DOUBLE_ARROW_LEFT:
+      return /* @__PURE__ */ import_react12.default.createElement(import_KeyboardDoubleArrowLeft.default, {
+        className
+      });
+    case ICON.KEYBOARD_DOUBLE_ARROW_RIGHT:
+      return /* @__PURE__ */ import_react12.default.createElement(import_KeyboardDoubleArrowRight.default, {
+        className
+      });
+    case ICON.DELETE:
+      return /* @__PURE__ */ import_react12.default.createElement(import_Delete.default, {
+        className
+      });
+    case ICON.MORE_VERT:
+      return /* @__PURE__ */ import_react12.default.createElement(import_MoreVert.default, {
+        className
+      });
+    case ICON.SORT:
+      return /* @__PURE__ */ import_react12.default.createElement(import_Sort.default, {
+        className
+      });
+    case ICON.KEYBOARD_BACKSPACE:
+      return /* @__PURE__ */ import_react12.default.createElement(import_KeyboardBackspace.default, {
+        className
+      });
+    case ICON.MOVE_UP:
+      return /* @__PURE__ */ import_react12.default.createElement(import_MoveUp.default, {
+        className
+      });
+    case ICON.MOVE_DOWN:
+      return /* @__PURE__ */ import_react12.default.createElement(import_MoveDown.default, {
+        className
+      });
+    case ICON.TEXT_SNIPPET:
+      return /* @__PURE__ */ import_react12.default.createElement(import_TextSnippet.default, {
+        className
+      });
+    case ICON.EDIT:
+      return /* @__PURE__ */ import_react12.default.createElement(import_Edit.default, {
+        className
+      });
+    case ICON.MORE_HORIZ:
+      return /* @__PURE__ */ import_react12.default.createElement(MoreHoriz_default, {
+        className
+      });
+    default:
+      return "";
+  }
+};
+
+// src/app/components/Button/index.tsx
+var import_react13 = __toModule(require_react());
+function Button({ style, children, hasIcon, onClick }) {
+  let className = "NLT__button";
+  if (hasIcon)
+    className += " NLT__button--icon";
+  return /* @__PURE__ */ import_react13.default.createElement("button", {
+    style,
+    className,
+    tabIndex: -1,
+    "aria-hidden": "true",
+    onClick: (e) => onClick(e)
+  }, children);
+}
+
+// src/app/components/IconButton/index.tsx
+function IconButton({ id, icon, onClick }) {
+  return /* @__PURE__ */ import_react14.default.createElement(Button, {
+    hasIcon: true,
+    onClick
+  }, findIcon(icon, "NLT__icon--md"));
+}
+
+// src/app/components/TagColorMenu/index.tsx
+var import_react16 = __toModule(require_react());
+
+// src/app/components/TagColorMenu/components/ColorItem/index.tsx
+var import_react15 = __toModule(require_react());
+
+// src/app/services/string/adders/index.ts
+var uppercaseFirst = (input) => {
+  return input.charAt(0).toUpperCase() + input.slice(1);
+};
+
+// src/app/components/TagColorMenu/components/ColorItem/index.tsx
+function ColorItem({ color, isSelected, onColorClick }) {
+  let containerClass = "NLT__color-item NLT__selectable";
+  if (isSelected)
+    containerClass += " NLT__selected";
+  const colorClass = findColorClass(color);
+  let squareClass = "NLT__color-item-square";
+  squareClass += " " + colorClass;
+  return /* @__PURE__ */ import_react15.default.createElement("div", {
+    className: containerClass,
+    onClick: (e) => {
+      e.stopPropagation();
+      onColorClick(color);
+    }
+  }, /* @__PURE__ */ import_react15.default.createElement("div", {
+    className: squareClass
+  }), /* @__PURE__ */ import_react15.default.createElement("div", null, uppercaseFirst(color)));
+}
+
+// src/app/components/TagColorMenu/index.tsx
+function TagColorMenu({
+  menuId,
+  isOpen,
+  style,
+  selectedColor,
+  onColorClick
+}) {
+  return /* @__PURE__ */ import_react16.default.createElement(Menu, {
+    id: menuId,
+    isOpen,
+    style
+  }, /* @__PURE__ */ import_react16.default.createElement("div", {
+    className: "NLT__tag-color-menu"
+  }, /* @__PURE__ */ import_react16.default.createElement("div", {
+    className: "NLT__tag-color-menu-title"
+  }, "Colors"), /* @__PURE__ */ import_react16.default.createElement("div", {
+    className: "NLT__tag-color-container"
+  }, Object.values(COLOR).map((color) => /* @__PURE__ */ import_react16.default.createElement(ColorItem, {
+    key: color,
+    color,
+    onColorClick,
+    isSelected: selectedColor === color
+  })))));
+}
+
+// src/app/components/MenuProvider/index.tsx
+var import_react18 = __toModule(require_react());
+
+// src/app/services/appData/state/cell.ts
+var Cell = class {
+  constructor(id, rowId, headerId, type) {
+    this.id = id;
+    this.rowId = rowId;
+    this.headerId = headerId;
+    this.type = type;
+  }
+  toString() {
+    return "";
+  }
+  length() {
+    return 0;
+  }
+};
+var TextCell2 = class extends Cell {
+  constructor(id, rowId, headerId, text = "") {
+    super(id, rowId, headerId, CONTENT_TYPE.TEXT);
+    this.text = text;
+  }
+  length() {
+    return this.text.length;
+  }
+  toString() {
+    return this.text;
+  }
+};
+var NumberCell2 = class extends Cell {
+  constructor(id, rowId, headerId, number) {
+    super(id, rowId, headerId, CONTENT_TYPE.NUMBER);
+    this.number = number;
+  }
+  length() {
+    return this.number.length;
+  }
+  toString() {
+    return this.number;
+  }
+};
+var TagCell2 = class extends Cell {
+  constructor(id, rowId, headerId) {
+    super(id, rowId, headerId, CONTENT_TYPE.TAG);
+  }
+};
+var CheckBoxCell = class extends Cell {
+  constructor(id, rowId, headerId, isChecked = false) {
+    super(id, rowId, headerId, CONTENT_TYPE.CHECKBOX);
+    this.isChecked = isChecked;
+  }
+  length() {
+    if (this.isChecked) {
+      return "[x]".length;
+    } else {
+      return "[ ]".length;
+    }
+  }
+  toString() {
+    if (this.isChecked) {
+      return "[x]";
+    } else {
+      return "[ ]";
+    }
+  }
+};
+var DateCell2 = class extends Cell {
+  constructor(id, rowId, headerId, date) {
+    super(id, rowId, headerId, CONTENT_TYPE.DATE);
+    this.date = date;
+  }
+  length() {
+    if (this.date !== null) {
+      return "YYYY/MM/DD".length;
+    } else {
+      return 0;
+    }
+  }
+  toString() {
+    if (this.date !== null) {
+      const day = ("0" + this.date.getDate()).slice(-2);
+      const month = ("0" + (this.date.getMonth() + 1)).slice(-2);
+      const year = this.date.getFullYear();
+      return `${year}/${month}/${day}`;
+    } else {
+      return "";
+    }
+  }
+};
+
+// src/app/services/appData/external/saveUtils.ts
+var sortAppDataForSave = (data) => {
+  const obj = __spreadValues({}, data);
+  obj.rows.sort((a, b) => a.initialIndex - b.initialIndex);
+  return obj;
+};
+var appDataToMarkdown = (data) => {
+  const columnCharLengths = calcColumnCharLengths(data);
+  const buffer = new AppDataStringBuffer();
+  buffer.createRow();
+  data.headers.forEach((header, i) => {
+    buffer.writeColumn(header.content, columnCharLengths[i]);
+  });
+  buffer.createRow();
+  for (let i = 0; i < data.headers.length; i++) {
+    const content = Array(columnCharLengths[i]).fill("-").join("");
+    buffer.writeColumn(content, columnCharLengths[i]);
+  }
+  data.rows.forEach((row) => {
+    buffer.createRow();
+    for (let i = 0; i < data.headers.length; i++) {
+      const cell = data.cells.find((cell2) => cell2.rowId === row.id && cell2.headerId === data.headers[i].id);
+      if (cell.type === CONTENT_TYPE.TAG) {
+        const tags = data.tags.filter((tag) => tag.selected.includes(cell.id));
+        let content = "";
+        tags.forEach((tag, j) => {
+          if (tag.content === "")
+            return;
+          if (j === 0)
+            content += tag.content;
+          else
+            content += " " + tag.content;
+        });
+        buffer.writeColumn(content, columnCharLengths[i]);
+      } else {
+        buffer.writeColumn(cell.toString(), columnCharLengths[i]);
+      }
+    }
+  });
+  return buffer.toString();
+};
+var findTableRegex = (headers, rows) => {
+  const regex = [];
+  regex[0] = findHeaderRow(headers);
+  regex[1] = findHyphenRow(headers.length);
+  for (let i = 0; i < rows.length; i++) {
+    regex[i + 2] = findRow(headers.length);
+  }
+  const expression = new RegExp(regex.join("\n"));
+  return expression;
+};
+var findHeaderRow = (headers) => {
+  let regex = "\\|";
+  headers.forEach((header) => {
+    regex += `[ \\t]{0,}${header.content}[ \\t]{0,}\\|`;
+  });
+  return regex;
+};
+var findHyphenRow = (numColumns) => {
+  let regex = "\\|";
+  for (let i = 0; i < numColumns; i++)
+    regex += "[ \\t]{0,}[-]{3,}[ \\t]{0,}\\|";
+  return regex;
+};
+var findRow = (numColumns) => {
+  let regex = "\\|";
+  for (let i = 0; i < numColumns; i++)
+    regex += ".*\\|";
+  return regex;
+};
+var AppDataStringBuffer = class {
+  constructor() {
+    this.string = "";
+  }
+  createRow() {
+    if (this.string !== "")
+      this.string += "\n";
+    this.string += "|";
+  }
+  writeColumn(content, columnCharLength) {
+    this.string += " ";
+    this.string += content;
+    const numWhiteSpace = columnCharLength - content.length;
+    for (let i = 0; i < numWhiteSpace; i++)
+      this.string += " ";
+    this.string += " ";
+    this.string += "|";
+  }
+  toString() {
+    return this.string;
+  }
+};
+var calcColumnCharLengths = (data) => {
+  const columnCharLengths = [];
+  data.headers.forEach((header, i) => {
+    columnCharLengths[i] = header.content.length;
+  });
+  data.cells.forEach((cell) => {
+    if (cell instanceof Cell) {
+      const index = data.headers.findIndex((header) => header.id === cell.headerId);
+      if (cell.type === CONTENT_TYPE.TAG) {
+        const arr = data.tags.filter((tag) => tag.selected.includes(cell.id));
+        let content = "";
+        arr.forEach((tag, i) => {
+          if (tag.content !== "") {
+            if (i === 0)
+              content += tag.content;
+            else
+              content += " " + tag.content;
+          }
+        });
+        if (columnCharLengths[index] < content.length)
+          columnCharLengths[index] = content.length;
+      } else {
+        if (columnCharLengths[index] < cell.length())
+          columnCharLengths[index] = cell.length();
+      }
+    }
+  });
+  return columnCharLengths;
+};
+
+// src/app/services/appData/debug/index.ts
+var logFunc = (componentName, functionName, args = {}) => {
+  console.log(`[${componentName}]: ${functionName}(${Object.keys(args).join(", ")})`);
+  if (Object.keys(args).length !== 0)
+    console.log(args);
+};
+var appDataIdsToMarkdown = (data) => {
+  const columnCharLengths = calcColumnCharLengths(data);
+  const buffer = new AppDataStringBuffer();
+  buffer.createRow();
+  data.headers.forEach((header, i) => {
+    buffer.writeColumn(header.content, columnCharLengths[i]);
+  });
+  buffer.createRow();
+  for (let i = 0; i < data.headers.length + 1; i++) {
+    const content = Array(columnCharLengths[i]).fill("-").join("");
+    buffer.writeColumn(content, columnCharLengths[i]);
+  }
+  data.rows.forEach((row) => {
+    buffer.createRow();
+    for (let i = 0; i < data.headers.length; i++) {
+      const cell = data.cells.find((cell2) => cell2.rowId === row.id && cell2.headerId === data.headers[i].id);
+      if (cell.type === CONTENT_TYPE.TAG) {
+        const tagIds = data.tags.filter((tag) => tag.selected.includes(cell.id)).map((tag) => tag.id);
+        buffer.writeColumn(tagIds.join(", "), columnCharLengths[i]);
+      } else {
+        buffer.writeColumn(cell.id, columnCharLengths[i]);
+      }
+    }
+  });
+  return buffer.toString();
+};
+var appDataTypesToMarkdown = (data) => {
+  const columnCharLengths = calcColumnCharLengths(data);
+  const buffer = new AppDataStringBuffer();
+  buffer.createRow();
+  data.headers.forEach((header, i) => {
+    buffer.writeColumn(header.content, columnCharLengths[i]);
+  });
+  buffer.createRow();
+  for (let i = 0; i < data.headers.length; i++) {
+    const content = Array(columnCharLengths[i]).fill("-").join("");
+    buffer.writeColumn(content, columnCharLengths[i]);
+  }
+  data.rows.forEach((row) => {
+    buffer.createRow();
+    for (let i = 0; i < data.headers.length; i++) {
+      const cell = data.cells.find((cell2) => cell2.rowId === row.id && cell2.headerId === data.headers[i].id);
+      buffer.writeColumn(cell.type, columnCharLengths[i]);
+    }
+  });
+  return buffer.toString();
+};
+
+// src/app/components/FocusProvider/index.tsx
+var import_react17 = __toModule(require_react());
+
+// src/app/services/appData/external/loadUtils.ts
+var import_crc_32 = __toModule(require_crc32());
+
+// src/app/components/HeaderMenu/constants.ts
+var SUBMENU = {
+  EDIT: {
+    name: "edit",
+    content: "Edit",
+    icon: ICON.EDIT
+  },
+  SORT: {
+    name: "sort",
+    content: "Sort",
+    icon: ICON.SORT
+  },
+  MOVE: {
+    name: "move",
+    content: "Move",
+    icon: ICON.MOVE_UP
+  },
+  INSERT: {
+    name: "insert",
+    content: "Insert",
+    icon: ICON.KEYBOARD_DOUBLE_ARROW_RIGHT
+  },
+  TYPE: {
+    name: "type",
+    content: "Type",
+    icon: ICON.TEXT_SNIPPET
+  }
+};
+var TYPE_ITEMS = [
+  { name: "text", content: "Text", type: CONTENT_TYPE.TEXT },
+  { name: "number", content: "Number", type: CONTENT_TYPE.NUMBER },
+  { name: "tag", content: "Tag", type: CONTENT_TYPE.TAG },
+  { name: "date", content: "Date", type: CONTENT_TYPE.DATE },
+  { name: "checkbox", content: "Checkbox", type: CONTENT_TYPE.CHECKBOX }
+];
+var SORT = {
+  DEFAULT: {
+    name: "default",
+    content: "Default",
+    icon: ICON.SORT
+  },
+  ASC: {
+    name: "asc",
+    content: "Ascending",
+    icon: ICON.KEYBOARD_ARROW_UP
+  },
+  DESC: {
+    name: "desc",
+    content: "Descending",
+    icon: ICON.KEYBOARD_ARROW_DOWN
+  }
+};
+
+// src/app/services/appData/state/header.ts
+var initialHeader = (id, initialIndex, content) => {
+  return {
+    id,
+    initialIndex,
+    content,
+    sortName: SORT.DEFAULT.name,
+    width: "100px",
+    shouldWrapOverflow: true,
+    useAutoWidth: false,
+    type: CONTENT_TYPE.TEXT
+  };
+};
+
+// src/app/services/appData/state/row.ts
+var initialRow = (id, initialIndex, creationTime) => {
+  return {
+    id,
+    initialIndex,
+    creationTime
+  };
+};
+
+// src/app/services/random/index.ts
+var randomColor = () => {
+  const index = Math.floor(Math.random() * Object.keys(COLOR).length);
+  return Object.values(COLOR)[index];
+};
+var getCurrentTimeWithOffset = () => {
+  return Math.round(Date.now() - Math.random() * 1e3);
+};
+
+// src/app/services/appData/external/loadUtils.ts
+var parseTableFromEl = (el) => {
+  const table = [];
+  const tr = el.getElementsByTagName("tr");
+  const th = tr[0].getElementsByTagName("th");
+  let row = [];
+  for (let i = 0; i < th.length; i++)
+    row.push(th[i].textContent);
+  table.push(row);
+  for (let i = 1; i < tr.length; i++) {
+    const td = tr[i].getElementsByTagName("td");
+    row = [];
+    for (let j = 0; j < td.length; j++) {
+      let sanitized = sanitizeHTML(td[j].innerHTML);
+      sanitized = stripLinks(sanitized);
+      row.push(sanitized);
+    }
+    table.push(row);
+  }
+  return table;
+};
+var findCurrentViewType = (el) => {
+  let currentViewType = "reading";
+  if (el.className.includes("markdown-rendered"))
+    currentViewType = "live-preview";
+  return currentViewType;
+};
+var findTableIndex = (headers) => {
+  return "0";
+};
+var findAppData = (parsedTable) => {
+  const headers = [];
+  const rows = [];
+  const cells = [];
+  const tags = [];
+  parsedTable.forEach((parsedRow, i) => {
+    if (i === 0) {
+      parsedRow.forEach((th, j) => {
+        headers.push(initialHeader(v4_default(), j, th));
+      });
+    } else {
+      const row = initialRow(v4_default(), i - 1, getCurrentTimeWithOffset());
+      parsedRow.forEach((td, j) => {
+        const cell = findTextCell(v4_default(), row.id, headers[j].id, td);
+        cells.push(cell);
+      });
+      rows.push(row);
+    }
+  });
+  return {
+    headers,
+    rows,
+    cells,
+    tags
+  };
+};
+var findTextCell = (cellId, rowId, headerId, content) => {
+  content = content.replace(LINE_BREAK_CHARACTER_REGEX("g"), BREAK_LINE_TAG);
+  content = content.replace(AMPERSAND_CHARACTER_REGEX("g"), AMPERSAND);
+  content = parseBoldTags(content);
+  content = parseItalicTags(content);
+  content = parseHighlightTags(content);
+  content = parseUnderlineTags(content);
+  return new TextCell2(cellId, rowId, headerId, content);
+};
+var findNumberCell = (cellId, rowId, headerId, content) => {
+  return new NumberCell2(cellId, rowId, headerId, content);
+};
+var findTagCell = (cellId, rowId, headerId) => {
+  return new TagCell2(cellId, rowId, headerId);
+};
+var findCheckboxCell = (cellId, rowId, headerId, content) => {
+  const isChecked = isCheckBoxChecked(content);
+  return new CheckBoxCell(cellId, rowId, headerId, isChecked);
+};
+var findDateCell = (cellId, rowId, headerId, content) => {
+  const date = content === "" ? null : new Date(content);
+  return new DateCell2(cellId, rowId, headerId, date);
+};
+var findNewCell = (cellId, rowId, headerId, headerType, content = "") => {
+  const cellType = findContentType(content, headerType);
+  switch (cellType) {
+    case CONTENT_TYPE.TEXT:
+      return findTextCell(cellId, rowId, headerId, content);
+    case CONTENT_TYPE.NUMBER:
+      return findNumberCell(cellId, rowId, headerId, content);
+    case CONTENT_TYPE.TAG:
+      return findTagCell(cellId, rowId, headerId);
+    case CONTENT_TYPE.DATE:
+      return findDateCell(cellId, rowId, headerId, content);
+    case CONTENT_TYPE.CHECKBOX:
+      return findCheckboxCell(cellId, rowId, headerId, content);
+    default:
+      return new Cell(cellId, rowId, headerId);
+  }
+};
+
+// src/app/components/FocusProvider/index.tsx
+var FocusContext = import_react17.default.createContext(false);
+var useTableFocus = () => {
+  return (0, import_react17.useContext)(FocusContext);
+};
+var COMPONENT_NAME = "FocusProvider";
+function FocusProvider({
+  children,
+  plugin,
+  tableIndex,
+  sourcePath,
+  el
+}) {
+  const [isFocused, setFocus] = (0, import_react17.useState)(false);
+  function handleFocus() {
+    if (DEBUG.FOCUS_PROVIDER)
+      logFunc(COMPONENT_NAME, "handleFocus");
+    setFocus(true);
+    plugin.focusTable(tableIndex, sourcePath, findCurrentViewType(el));
+  }
+  function handleBlur() {
+    if (DEBUG.FOCUS_PROVIDER)
+      logFunc(COMPONENT_NAME, "handleBlur");
+    setFocus(false);
+    plugin.blurTable();
+  }
+  const divRef = (0, import_react17.useCallback)((node) => {
+    if (node) {
+      if (plugin.focused) {
+        if (plugin.focused.sourcePath === sourcePath && plugin.focused.tableIndex === tableIndex) {
+          setTimeout(() => {
+            handleFocus();
+          }, 1);
+        }
+      }
+    }
+  }, []);
+  (0, import_react17.useEffect)(() => {
+    function handleMouseUp(e) {
+      if (e.target instanceof Element) {
+        let el2 = e.target;
+        let isFocused2 = false;
+        while (el2) {
+          if (el2.className === "view-content")
+            break;
+          if (typeof el2.className === "string") {
+            if (el2.className.includes("NLT")) {
+              isFocused2 = true;
+              break;
+            }
+          }
+          el2 = el2.parentElement;
+        }
+        if (isFocused2) {
+          handleFocus();
+        } else {
+          handleBlur();
+        }
+      }
+    }
+    window.addEventListener("mouseup", handleMouseUp);
+    return () => window.removeEventListener("mouseup", handleMouseUp);
+  }, []);
+  return /* @__PURE__ */ import_react17.default.createElement("div", {
+    ref: divRef,
+    onClick: (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  }, /* @__PURE__ */ import_react17.default.createElement(FocusContext.Provider, {
+    value: isFocused
+  }, children));
+}
+
+// src/app/components/MenuProvider/index.tsx
+var MenuContext = import_react18.default.createContext(null);
+var COMPONENT_NAME2 = "MenuProvider";
+var useMenu = (id, level = MENU_LEVEL.ONE) => {
+  const { openMenu, closeMenu, isMenuOpen, isMenuRequestingClose } = (0, import_react18.useContext)(MenuContext);
+  return {
+    isMenuOpen: isMenuOpen(id),
+    isMenuRequestingClose: isMenuRequestingClose(id),
+    openMenu: () => openMenu(id, level),
+    closeMenu: () => closeMenu(id)
+  };
+};
+function MenuProvider({ children }) {
+  const [openMenus, setOpenMenus] = (0, import_react18.useState)([]);
+  const isFocused = useTableFocus();
+  function canOpenMenu(level) {
+    if (openMenus.length === 0)
+      return true;
+    if (openMenus.every((menu) => menu.level < level))
+      return true;
+    return false;
+  }
+  function openMenu(id, level) {
+    if (DEBUG.MENU_PROVIDER)
+      logFunc(COMPONENT_NAME2, "openMenu", { id, level });
+    if (canOpenMenu(level)) {
+      setOpenMenus((prevState) => [
+        ...prevState,
+        { id, level, isRequestingClose: false }
+      ]);
+    }
+  }
+  function isMenuRequestingClose(id) {
+    const menu = openMenus.find((menu2) => menu2.id === id);
+    if (menu) {
+      if (menu.isRequestingClose) {
+        return true;
+      }
+    }
+    return false;
+  }
+  function isMenuOpen(id) {
+    if (openMenus.find((menu) => menu.id === id))
+      return true;
+    return false;
+  }
+  function closeAllMenus() {
+    return __async(this, null, function* () {
+      if (DEBUG.MENU_PROVIDER)
+        logFunc(COMPONENT_NAME2, "closeAllMenus");
+      for (let i = 0; i < openMenus.length; i++) {
+        const menu = openMenus[i];
+        requestMenuClose(menu.id);
+      }
+    });
+  }
+  function requestMenuClose(id) {
+    if (DEBUG.MENU_PROVIDER)
+      logFunc(COMPONENT_NAME2, "requestMenuClose", { id });
+    setOpenMenus((prevState) => {
+      return prevState.map((menu) => {
+        if (menu.id === id) {
+          return __spreadProps(__spreadValues({}, menu), {
+            isRequestingClose: true
+          });
+        }
+        return menu;
+      });
+    });
+  }
+  function closeMenu(id) {
+    return __async(this, null, function* () {
+      if (DEBUG.MENU_PROVIDER)
+        logFunc(COMPONENT_NAME2, "closeMenu", { id });
+      if (isMenuOpen(id)) {
+        setOpenMenus((prevState) => prevState.filter((menu) => menu.id !== id));
+      }
+    });
+  }
+  function handleClick(e) {
+    return __async(this, null, function* () {
+      if (isFocused && openMenus.length !== 0) {
+        if (e.target instanceof HTMLElement) {
+          let el = e.target;
+          while (el.id === "" && el.className !== "NLT__app") {
+            el = el.parentElement;
+          }
+          const menu = findTopMenu();
+          if (el.id !== menu.id) {
+            yield requestMenuClose(menu.id);
+          }
+        }
+      }
+    });
+  }
+  function handleKeyUp(e) {
+    return __async(this, null, function* () {
+      if (isFocused && openMenus.length !== 0) {
+        if (e.key === "Enter") {
+          const menu = findTopMenu();
+          yield requestMenuClose(menu.id);
+        }
+      }
+    });
+  }
+  function findTopMenu() {
+    let topMenu = openMenus[0];
+    openMenus.forEach((menu) => {
+      if (menu.level > topMenu.level)
+        topMenu = menu;
+    });
+    return topMenu;
+  }
+  (0, import_react18.useEffect)(() => {
+    if (DEBUG.MENU_PROVIDER)
+      logFunc(COMPONENT_NAME2, "useEffect", { isFocused });
+    function handleBlur() {
+      return __async(this, null, function* () {
+        yield closeAllMenus();
+      });
+    }
+    if (!isFocused)
+      handleBlur();
+  }, [isFocused]);
+  return /* @__PURE__ */ import_react18.default.createElement("div", {
+    onMouseDown: (e) => e.preventDefault(),
+    onClick: handleClick,
+    onKeyUp: handleKeyUp
+  }, /* @__PURE__ */ import_react18.default.createElement(MenuContext.Provider, {
+    value: {
+      isMenuOpen,
+      openMenu,
+      isMenuRequestingClose,
+      closeMenu
+    }
+  }, children));
+}
 
 // src/app/components/TagCellEdit/component/SelectableTag/index.tsx
 function SelectableTag({
   id,
   content,
   color,
+  headerWidthUpdateTime,
+  tableScrollUpdateTime,
   onClick,
   onColorChange
 }) {
   const menuId = useMenuId();
-  const { menuPosition, menuRef, isMenuOpen, openMenu, closeMenu } = useMenuRef(menuId, MENU_LEVEL.TWO);
+  const { isMenuOpen, openMenu, closeMenu, isMenuRequestingClose } = useMenu(menuId, MENU_LEVEL.TWO);
+  const { positionRef, position } = usePositionRef([
+    headerWidthUpdateTime,
+    tableScrollUpdateTime
+  ]);
+  (0, import_react19.useEffect)(() => {
+    if (isMenuRequestingClose) {
+      closeMenu();
+    }
+  }, [isMenuRequestingClose]);
   function handleColorChange(color2) {
     onColorChange(id, color2);
     closeMenu();
   }
   let tagClass = "NLT__tag";
   tagClass += " " + findColorClass(color);
-  return /* @__PURE__ */ import_react18.default.createElement("div", {
-    ref: menuRef,
+  return /* @__PURE__ */ import_react19.default.createElement("div", {
+    ref: positionRef,
     className: "NLT__selectable-tag NLT__selectable",
     onClick: () => onClick(id)
-  }, /* @__PURE__ */ import_react18.default.createElement("div", {
+  }, /* @__PURE__ */ import_react19.default.createElement("div", {
     className: tagClass
-  }, /* @__PURE__ */ import_react18.default.createElement("div", {
+  }, /* @__PURE__ */ import_react19.default.createElement("div", {
     className: "NLT__tag-content"
-  }, html_react_parser_default(content))), /* @__PURE__ */ import_react18.default.createElement(IconButton, {
+  }, html_react_parser_default(content))), /* @__PURE__ */ import_react19.default.createElement(IconButton, {
     icon: ICON.MORE_HORIZ,
     onClick: (e) => {
       e.stopPropagation();
       openMenu();
     }
-  }), /* @__PURE__ */ import_react18.default.createElement(TagColorMenu, {
+  }), /* @__PURE__ */ import_react19.default.createElement(TagColorMenu, {
     menuId,
     isOpen: isMenuOpen,
     selectedColor: color,
-    top: menuPosition.top - 77,
-    left: menuPosition.left + 110,
+    style: {
+      top: numToPx(pxToNum(position.top) - 77),
+      left: numToPx(pxToNum(position.left) + 110)
+    },
     onColorClick: (color2) => handleColorChange(color2)
   }));
 }
 
 // src/app/components/TagCellEdit/component/CreateTag/index.tsx
-var import_react19 = __toModule(require_react());
+var import_react20 = __toModule(require_react());
 function CreateTag({ content, color, onAddTag }) {
-  return /* @__PURE__ */ import_react19.default.createElement("div", {
+  return /* @__PURE__ */ import_react20.default.createElement("div", {
     className: "NLT__create-tag NLT__selectable",
     onClick: () => {
       onAddTag(content);
     }
-  }, /* @__PURE__ */ import_react19.default.createElement("div", null, "Create\xA0"), /* @__PURE__ */ import_react19.default.createElement(TagCell, {
+  }, /* @__PURE__ */ import_react20.default.createElement("div", null, "Create\xA0"), /* @__PURE__ */ import_react20.default.createElement(Tag, {
     content,
-    color,
-    hideLink: true
+    color
   }));
 }
 
@@ -57808,12 +58392,13 @@ function CreateTag({ content, color, onAddTag }) {
 function TagCellEdit({
   menuId,
   isOpen,
-  top,
-  left,
-  color,
   inputText,
+  style,
+  color,
   cellId,
   tags,
+  headerWidthUpdateTime,
+  tableScrollUpdateTime,
   onInputChange,
   onTagClick,
   onAddTag,
@@ -57828,74 +58413,67 @@ function TagCellEdit({
   function renderSelectableTags() {
     const filteredTags = tags.filter((tag) => tag.content.includes(inputText));
     const found = tags.find((tag) => tag.content === inputText);
-    return /* @__PURE__ */ import_react20.default.createElement(import_react20.default.Fragment, null, !found && inputText !== "" && /* @__PURE__ */ import_react20.default.createElement(CreateTag, {
+    return /* @__PURE__ */ import_react21.default.createElement(import_react21.default.Fragment, null, !found && inputText !== "" && /* @__PURE__ */ import_react21.default.createElement(CreateTag, {
       key: "create-tag",
       content: inputText,
       color,
       onAddTag
-    }), filteredTags.map((tag) => /* @__PURE__ */ import_react20.default.createElement(SelectableTag, {
+    }), filteredTags.filter((tag) => tag.content !== "").map((tag) => /* @__PURE__ */ import_react21.default.createElement(SelectableTag, {
       key: tag.id,
       id: tag.id,
       color: tag.color,
       content: tag.content,
+      headerWidthUpdateTime,
+      tableScrollUpdateTime,
       onColorChange,
       onClick: onTagClick
     })));
   }
-  return /* @__PURE__ */ import_react20.default.createElement(Menu, {
+  return /* @__PURE__ */ import_react21.default.createElement(Menu, {
     id: menuId,
     isOpen,
-    top,
-    left
-  }, /* @__PURE__ */ import_react20.default.createElement("div", {
+    style
+  }, /* @__PURE__ */ import_react21.default.createElement("div", {
     className: "NLT__tag-menu"
-  }, /* @__PURE__ */ import_react20.default.createElement("div", {
+  }, /* @__PURE__ */ import_react21.default.createElement("div", {
     className: "NLT__tag-menu-container"
-  }, /* @__PURE__ */ import_react20.default.createElement("div", {
+  }, /* @__PURE__ */ import_react21.default.createElement("div", {
     className: "NLT__tag-menu-top"
-  }, tags.filter((tag) => tag.selected.includes(cellId) === true).map((tag) => /* @__PURE__ */ import_react20.default.createElement(TagCell, {
+  }, tags.filter((tag) => tag.selected.includes(cellId) === true).map((tag) => /* @__PURE__ */ import_react21.default.createElement(Tag, {
     key: tag.id,
-    cellId,
     id: tag.id,
-    hideLink: true,
     color: tag.color,
     content: tag.content,
     showRemove: true,
-    onRemoveClick: onRemoveTagClick
-  })), /* @__PURE__ */ import_react20.default.createElement("input", {
+    onRemoveClick: (tagId) => onRemoveTagClick(cellId, tagId)
+  })), /* @__PURE__ */ import_react21.default.createElement("input", {
     className: "NLT__tag-input",
     autoFocus: true,
     type: "text",
     value: inputText,
     onChange: handleTextChange
-  })), /* @__PURE__ */ import_react20.default.createElement("div", {
+  })), /* @__PURE__ */ import_react21.default.createElement("div", {
     className: "NLT__tag-menu-bottom"
-  }, /* @__PURE__ */ import_react20.default.createElement("p", {
+  }, /* @__PURE__ */ import_react21.default.createElement("p", {
     className: "NLT__tag-menu-text"
-  }, "Select an option or create one"), /* @__PURE__ */ import_react20.default.createElement("div", null, renderSelectableTags())))));
+  }, "Select an option or create one"), /* @__PURE__ */ import_react21.default.createElement("div", null, renderSelectableTags())))));
 }
 
 // src/app/components/DateCellEdit/index.tsx
-var import_react21 = __toModule(require_react());
+var import_react22 = __toModule(require_react());
 var import_react_datepicker = __toModule(require_react_datepicker_min());
 function DateCellEdit({
   menuId,
   isOpen,
-  top,
-  left,
-  width,
-  height,
+  style,
   selectedDate,
   onDateChange
 }) {
-  return /* @__PURE__ */ import_react21.default.createElement(Menu, {
+  return /* @__PURE__ */ import_react22.default.createElement(Menu, {
     id: menuId,
     isOpen,
-    top,
-    left,
-    width,
-    height
-  }, /* @__PURE__ */ import_react21.default.createElement(import_react_datepicker.default, {
+    style
+  }, /* @__PURE__ */ import_react22.default.createElement(import_react_datepicker.default, {
     className: "NLT__date-input",
     autoFocus: true,
     selected: selectedDate,
@@ -57908,74 +58486,80 @@ function DateCellEdit({
   }));
 }
 
-// src/app/services/random/index.ts
-var randomColor = () => {
-  const index = Math.floor(Math.random() * Object.keys(COLOR).length);
-  return Object.values(COLOR)[index];
-};
-var getCurrentTimeWithOffset = () => {
-  return Math.round(Date.now() - Math.random() * 1e3);
-};
-var randomId = () => {
-  return Math.random().toString(36).replace("0.", "").substring(0, 6);
-};
-var randomTableId = () => {
-  return `table-id-${randomId()}`;
-};
-var randomCellId = () => {
-  return `cell-id-${randomId()}`;
-};
-var randomRowId = () => {
-  return `row-id-${randomId()}`;
-};
-var randomColumnId = () => {
-  return `column-id-${randomId()}`;
-};
-var randomTagId = () => {
-  return `tag-id-${randomId()}`;
-};
-
 // src/app/components/EditableTd/index.tsx
+var COMPONENT_NAME3 = "EditableTd";
 function EditableTd({
+  headerType,
   cell,
   width,
+  height,
+  headerWidthUpdateTime,
+  tableScrollUpdateTime,
+  shouldWrapOverflow,
+  useAutoWidth,
   tags,
+  tagUpdate,
   onRemoveTagClick,
   onColorChange,
   onTagClick,
   onContentChange,
+  onSaveContent,
   onAddTag
 }) {
-  const [inputText, setInputText] = (0, import_react22.useState)("");
-  const didMount = (0, import_react22.useRef)(false);
-  const [tagColor] = (0, import_react22.useState)(randomColor());
+  const [tagInputText, setTagInputText] = (0, import_react23.useState)("");
+  const [tagColor] = (0, import_react23.useState)(randomColor());
   const menuId = useMenuId();
-  const { menuPosition, menuRef, isMenuOpen, openMenu, closeMenu } = useMenuRef(menuId, MENU_LEVEL.ONE);
-  useDisableScroll(isMenuOpen);
-  const { id, headerId, type, expectedType } = cell;
   const content = cell.toString();
-  (0, import_react22.useEffect)(() => {
-    if (!didMount.current) {
-      didMount.current = true;
-    } else {
-      if (!isMenuOpen) {
-        if (DEBUG.EDITABLE_TD.USE_EFFECT)
-          console.log(`[EditableTd] useEffect(updateContent("${inputText}"))`);
-        updateContent(inputText);
+  const { isMenuOpen, openMenu, closeMenu, isMenuRequestingClose } = useMenu(menuId);
+  const { positionRef, position } = usePositionRef([
+    content.length,
+    headerWidthUpdateTime,
+    tableScrollUpdateTime
+  ]);
+  const { id, headerId, type } = cell;
+  useDisableScroll(isMenuOpen);
+  const [wasContentUpdated, setContentUpdate] = (0, import_react23.useState)(false);
+  const isInvalidContent = type !== headerType;
+  useDidMountEffect(() => {
+    if (DEBUG.EDITABLE_TD)
+      logFunc(COMPONENT_NAME3, "useDidMountEffect", {
+        tagUpdate
+      });
+    if (tagUpdate.cellId === id) {
+      closeMenu();
+      onSaveContent();
+    }
+  }, [tagUpdate.cellId, tagUpdate.time]);
+  (0, import_react23.useEffect)(() => {
+    if (DEBUG.EDITABLE_TD)
+      logFunc(COMPONENT_NAME3, "useEffect", {
+        isMenuRequestingClose
+      });
+    if (isMenuRequestingClose) {
+      if (headerType === CONTENT_TYPE.TAG) {
+        if (tagInputText !== "") {
+          const tag = tags.find((tag2) => tag2.content === tagInputText);
+          if (tag) {
+            onTagClick(id, tag.id);
+          } else {
+            onAddTag(id, headerId, tagInputText, tagColor);
+          }
+          setTagInputText("");
+        } else {
+          closeMenu();
+        }
+      } else {
+        closeMenu();
+        if (wasContentUpdated) {
+          onSaveContent();
+          setContentUpdate(false);
+        }
       }
     }
-  }, [didMount.current, isMenuOpen]);
-  (0, import_react22.useEffect)(() => {
-    if (DEBUG.EDITABLE_TD.USE_EFFECT)
-      console.log(`[EditableTd] useEffect(setInputText("${content}"))`);
-    setInputText(content);
-  }, []);
-  (0, import_react22.useEffect)(() => {
-    didMount.current = true;
-  }, []);
-  function handleCellContextClick(e) {
+  }, [isMenuRequestingClose]);
+  function handleCellContextClick() {
     return __async(this, null, function* () {
-      if (DEBUG.EDITABLE_TD.HANDLER)
+      if (DEBUG.EDITABLE_TD)
         console.log("[EditableTd] handleCellContextClick()");
       try {
         yield navigator.clipboard.writeText(content);
@@ -57986,231 +58570,272 @@ function EditableTd({
     });
   }
   function handleCellClick(e) {
-    if (DEBUG.EDITABLE_TD.HANDLER)
+    if (DEBUG.EDITABLE_TD)
       console.log("[EditableTd] handleCellClick()");
     const el = e.target;
     if (el.nodeName === "A")
       return;
-    if (type === CELL_TYPE.ERROR)
-      return;
     openMenu();
   }
-  function handleAddTag(text) {
-    return __async(this, null, function* () {
-      if (DEBUG.EDITABLE_TD.HANDLER)
-        console.log(`[EditableTd] handleAddTag("${text}")`);
-      closeMenu();
-      onAddTag(id, headerId, text, tagColor);
-    });
+  function handleAddTag(value) {
+    onAddTag(id, headerId, value, tagColor);
   }
   function handleTagClick(tagId) {
-    return __async(this, null, function* () {
-      if (DEBUG.EDITABLE_TD.HANDLER)
-        console.log(`[EditableTd] handleTagClick("${tagId}")`);
-      closeMenu();
-      onTagClick(id, tagId);
-    });
+    onTagClick(id, tagId);
   }
-  function updateContent(updated) {
-    if (content !== updated) {
-      switch (type) {
-        case CELL_TYPE.TEXT:
-          onContentChange(id, inputText);
-          break;
-        case CELL_TYPE.NUMBER:
-          onContentChange(id, parseInt(inputText));
-          break;
-        case CELL_TYPE.TAG: {
-          const tag = tags.find((tag2) => tag2.content === inputText);
-          if (tag) {
-            onTagClick(id, tag.id);
-          } else {
-            onAddTag(id, headerId, inputText, tagColor);
-          }
-          setInputText("");
-          break;
-        }
-        case CELL_TYPE.DATE:
-          onContentChange(id, inputText !== "" ? new Date(inputText) : null);
-          break;
-        default:
-          break;
-      }
-    }
+  function handleTextInputChange(value) {
+    onContentChange(id, headerType, value);
+    setContentUpdate(true);
+  }
+  function handleNumberInputChange(value) {
+    onContentChange(id, headerType, value);
+    setContentUpdate(true);
+  }
+  function handleDateChange(date) {
+    const content2 = dateToString(date);
+    onContentChange(id, headerType, content2);
+    setContentUpdate(true);
   }
   function handleCheckboxChange(isChecked) {
-    if (DEBUG.EDITABLE_TD.HANDLER)
-      console.log(`[EditableTd] handleCheckboxChange("${isChecked}")`);
-    onContentChange(id, isChecked);
+    let content2 = isChecked ? "[x]" : "[ ]";
+    onContentChange(id, headerType, content2);
+    setContentUpdate(true);
   }
   function renderCell() {
+    if (isInvalidContent) {
+      return /* @__PURE__ */ import_react23.default.createElement(ErrorCell, {
+        expectedType: headerType,
+        type
+      });
+    }
     switch (type) {
-      case CELL_TYPE.TEXT:
-        return /* @__PURE__ */ import_react22.default.createElement(TextCell, {
-          text: content
+      case CONTENT_TYPE.TEXT:
+        return /* @__PURE__ */ import_react23.default.createElement(TextCell, {
+          text: content,
+          shouldWrapOverflow,
+          useAutoWidth
         });
-      case CELL_TYPE.NUMBER:
-        return /* @__PURE__ */ import_react22.default.createElement(NumberCell, {
-          number: content
+      case CONTENT_TYPE.NUMBER:
+        return /* @__PURE__ */ import_react23.default.createElement(NumberCell, {
+          number: content,
+          shouldWrapOverflow,
+          useAutoWidth
         });
-      case CELL_TYPE.TAG: {
+      case CONTENT_TYPE.TAG: {
         const tag = tags.find((tag2) => tag2.selected.includes(id));
         if (tag)
-          return /* @__PURE__ */ import_react22.default.createElement(TagCell, {
-            style: { overflow: "hidden" },
+          return /* @__PURE__ */ import_react23.default.createElement(TagCell, {
             content: tag.content,
-            color: tag.color,
-            showLink: true
+            color: tag.color
           });
-        return /* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null);
+        return /* @__PURE__ */ import_react23.default.createElement(import_react23.default.Fragment, null);
       }
-      case CELL_TYPE.DATE:
-        return /* @__PURE__ */ import_react22.default.createElement(DateCell, {
+      case CONTENT_TYPE.DATE:
+        return /* @__PURE__ */ import_react23.default.createElement(DateCell, {
           text: content
         });
-      case CELL_TYPE.CHECKBOX:
-        return /* @__PURE__ */ import_react22.default.createElement(CheckboxCell, {
+      case CONTENT_TYPE.CHECKBOX:
+        return /* @__PURE__ */ import_react23.default.createElement(CheckboxCell, {
           isChecked: content.includes("x"),
           onCheckboxChange: handleCheckboxChange
         });
-      case CELL_TYPE.ERROR:
-        return /* @__PURE__ */ import_react22.default.createElement(ErrorCell, {
-          type: expectedType
-        });
       default:
-        return /* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null);
-    }
-  }
-  function handleInputChange(value) {
-    if (DEBUG.EDITABLE_TD.HANDLER)
-      console.log(`[EditableTd] handleInputChange("${value}")`);
-    setInputText(value);
-  }
-  function handleDateChange(date) {
-    if (DEBUG.EDITABLE_TD.HANDLER) {
-      console.log(`[EditableTd] handledDateChange`);
-    }
-    if (date) {
-      setInputText(parseDateForInput(date));
-    } else {
-      setInputText("");
+        return /* @__PURE__ */ import_react23.default.createElement(import_react23.default.Fragment, null);
     }
   }
   function renderCellMenu() {
-    switch (type) {
-      case CELL_TYPE.TEXT:
-        return /* @__PURE__ */ import_react22.default.createElement(TextCellEdit, {
+    switch (headerType) {
+      case CONTENT_TYPE.TEXT:
+        return /* @__PURE__ */ import_react23.default.createElement(TextCellEdit, {
           menuId,
           isOpen: isMenuOpen,
-          top: menuPosition.top,
-          left: menuPosition.left,
-          width: menuPosition.width,
-          inputText,
-          onInputChange: handleInputChange
+          style: __spreadProps(__spreadValues(__spreadValues({}, position), (useAutoWidth || !shouldWrapOverflow) && {
+            maxWidth: "300px"
+          }), {
+            minWidth: "125px",
+            minHeight: "75px"
+          }),
+          useAutoWidth,
+          shouldWrapOverflow,
+          value: content,
+          onInputChange: handleTextInputChange
         });
-      case CELL_TYPE.NUMBER:
-        return /* @__PURE__ */ import_react22.default.createElement(NumberCellEdit, {
+      case CONTENT_TYPE.NUMBER:
+        return /* @__PURE__ */ import_react23.default.createElement(NumberCellEdit, {
           menuId,
           isOpen: isMenuOpen,
-          top: menuPosition.top,
-          left: menuPosition.left,
-          width: menuPosition.width,
-          inputText,
-          onInputChange: handleInputChange
+          style: __spreadProps(__spreadValues(__spreadValues({}, position), (useAutoWidth || !shouldWrapOverflow) && {
+            maxWidth: "300px"
+          }), {
+            minWidth: "125px"
+          }),
+          value: content,
+          onInputChange: handleNumberInputChange
         });
-      case CELL_TYPE.TAG:
-        return /* @__PURE__ */ import_react22.default.createElement(TagCellEdit, {
+      case CONTENT_TYPE.TAG:
+        return /* @__PURE__ */ import_react23.default.createElement(TagCellEdit, {
           cellId: id,
+          inputText: tagInputText,
+          headerWidthUpdateTime,
+          tableScrollUpdateTime,
           tags,
           menuId,
           isOpen: isMenuOpen,
-          top: menuPosition.top,
-          left: menuPosition.left,
-          inputText,
+          style: {
+            top: position.top,
+            left: position.left
+          },
           color: tagColor,
-          onInputChange: handleInputChange,
+          onInputChange: setTagInputText,
           onColorChange,
           onAddTag: handleAddTag,
           onRemoveTagClick,
           onTagClick: handleTagClick
         });
-      case CELL_TYPE.DATE:
-        return /* @__PURE__ */ import_react22.default.createElement(DateCellEdit, {
+      case CONTENT_TYPE.DATE:
+        return /* @__PURE__ */ import_react23.default.createElement(DateCellEdit, {
           menuId,
           isOpen: isMenuOpen,
-          top: menuPosition.top,
-          left: menuPosition.left,
-          width: menuPosition.width,
-          height: menuPosition.height,
-          selectedDate: inputText !== "" ? new Date(inputText) : new Date(),
+          style: position,
+          selectedDate: isDate(content) ? new Date(content) : new Date(),
           onDateChange: handleDateChange
         });
       default:
-        return /* @__PURE__ */ import_react22.default.createElement(import_react22.default.Fragment, null);
+        return /* @__PURE__ */ import_react23.default.createElement(import_react23.default.Fragment, null);
     }
   }
-  return /* @__PURE__ */ import_react22.default.createElement("td", {
+  return /* @__PURE__ */ import_react23.default.createElement(import_react23.default.Fragment, null, /* @__PURE__ */ import_react23.default.createElement("td", {
     className: "NLT__td",
-    ref: menuRef,
+    style: {
+      width,
+      height
+    },
+    ref: positionRef,
     onClick: handleCellClick,
     onContextMenu: handleCellContextClick
-  }, renderCellMenu(), /* @__PURE__ */ import_react22.default.createElement("div", {
-    className: "NLT__td-container",
-    style: { width }
-  }, renderCell()));
+  }, /* @__PURE__ */ import_react23.default.createElement("div", {
+    className: "NLT__td-container"
+  }, renderCell())), renderCellMenu());
 }
 
 // src/app/components/Table/index.tsx
-var import_react23 = __toModule(require_react());
-var Table = (0, import_react23.forwardRef)(({ headers, rows, onAddColumn, onAddRow }, ref) => {
-  return /* @__PURE__ */ import_react23.default.createElement("table", {
-    className: "NLT__table"
-  }, /* @__PURE__ */ import_react23.default.createElement("thead", {
-    className: "NLT__thead"
-  }, /* @__PURE__ */ import_react23.default.createElement("tr", null, headers.map((header) => /* @__PURE__ */ import_react23.default.createElement(import_react23.default.Fragment, {
-    key: header.id
-  }, header.component)), /* @__PURE__ */ import_react23.default.createElement("th", {
-    className: "NLT__th"
-  }, /* @__PURE__ */ import_react23.default.createElement(Button, {
-    onClick: () => onAddColumn()
-  }, "New")))), /* @__PURE__ */ import_react23.default.createElement("tbody", {
-    className: "NLT__tbody"
-  }, rows.map((row) => /* @__PURE__ */ import_react23.default.createElement("tr", {
-    key: row.id
-  }, row.component))), /* @__PURE__ */ import_react23.default.createElement("tfoot", {
-    className: "NLT__tfoot"
-  }, /* @__PURE__ */ import_react23.default.createElement("tr", null, /* @__PURE__ */ import_react23.default.createElement("td", {
-    className: "NLT__td"
-  }, /* @__PURE__ */ import_react23.default.createElement(Button, {
-    style: { marginTop: "5px" },
-    onClick: () => onAddRow()
-  }, "New")), headers.map((header) => /* @__PURE__ */ import_react23.default.createElement("td", {
-    key: header.id,
-    className: "NLT__td"
-  })))));
-});
-var Table_default = Table;
-
-// src/app/components/RowMenu/index.tsx
-var import_react26 = __toModule(require_react());
-
-// src/app/components/RowMenu/components/RowMenuItem/index.tsx
 var import_react25 = __toModule(require_react());
 
-// src/app/components/IconText/index.tsx
+// src/app/components/Table/components/index.tsx
 var import_react24 = __toModule(require_react());
+function TableBase({ headers, rows, footers }) {
+  return /* @__PURE__ */ import_react24.default.createElement("table", {
+    className: "NLT__table"
+  }, /* @__PURE__ */ import_react24.default.createElement("thead", {
+    className: "NLT__thead"
+  }, /* @__PURE__ */ import_react24.default.createElement("tr", {
+    className: "NLT__tr"
+  }, headers.map((header) => /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, {
+    key: header.id
+  }, header.component)))), /* @__PURE__ */ import_react24.default.createElement("tbody", {
+    className: "NLT__tbody"
+  }, rows.map((row) => /* @__PURE__ */ import_react24.default.createElement("tr", {
+    key: row.id,
+    className: "NLT__tr"
+  }, row.component))), /* @__PURE__ */ import_react24.default.createElement("tfoot", {
+    className: "NLT__tfoot"
+  }, /* @__PURE__ */ import_react24.default.createElement("tr", {
+    className: "NLT__tr"
+  }, footers.map((footer) => /* @__PURE__ */ import_react24.default.createElement(import_react24.default.Fragment, {
+    key: footer.id
+  }, footer.component)))));
+}
+
+// src/app/components/Table/index.tsx
+var NewColumnButton = ({ onAddNew }) => {
+  return /* @__PURE__ */ import_react25.default.createElement("th", {
+    className: "NLT__th",
+    style: { height: "1.8rem" }
+  }, /* @__PURE__ */ import_react25.default.createElement("div", {
+    className: "NLT__th-container",
+    style: { paddingLeft: "10px" }
+  }, /* @__PURE__ */ import_react25.default.createElement(Button, {
+    onClick: () => onAddNew()
+  }, "New")));
+};
+var NewRowButton = ({ onAddNew }) => {
+  return /* @__PURE__ */ import_react25.default.createElement("td", {
+    className: "NLT__td"
+  }, /* @__PURE__ */ import_react25.default.createElement("div", {
+    className: "NLT__td-container"
+  }, /* @__PURE__ */ import_react25.default.createElement(Button, {
+    onClick: () => onAddNew()
+  }, "New")));
+};
+var EmptyCell = () => {
+  return /* @__PURE__ */ import_react25.default.createElement("td", {
+    className: "NLT__td"
+  });
+};
+function Table({
+  headers,
+  rows,
+  footers = [],
+  onAddColumn,
+  onAddRow
+}) {
+  const columnButtonId = useId();
+  const rowButtonId = useId();
+  function renderNewColumnButton(onAddColumn2) {
+    return {
+      id: columnButtonId,
+      component: /* @__PURE__ */ import_react25.default.createElement(NewColumnButton, {
+        onAddNew: onAddColumn2
+      })
+    };
+  }
+  function renderNewRowButton(onAddRow2) {
+    return {
+      id: rowButtonId,
+      component: /* @__PURE__ */ import_react25.default.createElement(NewRowButton, {
+        onAddNew: onAddRow2
+      })
+    };
+  }
+  function renderEmptyCells(headers2) {
+    return headers2.map((header) => {
+      return {
+        id: header.id,
+        component: /* @__PURE__ */ import_react25.default.createElement(EmptyCell, null)
+      };
+    });
+  }
+  return /* @__PURE__ */ import_react25.default.createElement(TableBase, {
+    headers: [...headers, renderNewColumnButton(onAddColumn)],
+    rows,
+    footers: [
+      ...footers,
+      renderNewRowButton(onAddRow),
+      ...renderEmptyCells(headers)
+    ]
+  });
+}
+
+// src/app/components/RowMenu/index.tsx
+var import_react28 = __toModule(require_react());
+
+// src/app/components/RowMenu/components/RowMenuItem/index.tsx
+var import_react27 = __toModule(require_react());
+
+// src/app/components/IconText/index.tsx
+var import_react26 = __toModule(require_react());
 function IconText({ iconText, icon }) {
-  return /* @__PURE__ */ import_react24.default.createElement("div", {
+  return /* @__PURE__ */ import_react26.default.createElement("div", {
     className: "NLT__icon-text NLT__selectable"
-  }, icon !== "" && findIcon(icon, "NLT__icon--md NLT__margin-right"), /* @__PURE__ */ import_react24.default.createElement("p", null, iconText));
+  }, icon !== "" && findIcon(icon, "NLT__icon--md NLT__margin-right"), /* @__PURE__ */ import_react26.default.createElement("p", null, iconText));
 }
 
 // src/app/components/RowMenu/components/RowMenuItem/index.tsx
 function RowMenuItem({ icon, iconText, onClick }) {
-  return /* @__PURE__ */ import_react25.default.createElement("div", {
+  return /* @__PURE__ */ import_react27.default.createElement("div", {
     onClick: () => onClick(),
     className: "NLT__drag-menu-item"
-  }, /* @__PURE__ */ import_react25.default.createElement(IconText, {
+  }, /* @__PURE__ */ import_react27.default.createElement(IconText, {
     icon,
     iconText
   }));
@@ -58252,13 +58877,23 @@ function RowMenu({
   rowId,
   isFirstRow,
   isLastRow,
+  headerWidthUpdateTime,
+  tableScrollUpdateTime,
   onMoveRowClick,
   onDeleteClick,
   onInsertRowClick
 }) {
-  const [buttonId] = (0, import_react26.useState)(v4_default());
   const menuId = useMenuId();
-  const { menuPosition, menuRef, isMenuOpen, openMenu, closeMenu } = useMenuRef(menuId, MENU_LEVEL.ONE);
+  const { isMenuOpen, openMenu, closeMenu, isMenuRequestingClose } = useMenu(menuId);
+  const { positionRef, position } = usePositionRef([
+    headerWidthUpdateTime,
+    tableScrollUpdateTime
+  ]);
+  (0, import_react28.useEffect)(() => {
+    if (isMenuRequestingClose) {
+      closeMenu();
+    }
+  }, [isMenuRequestingClose]);
   useDisableScroll(isMenuOpen);
   function handleButtonClick(e) {
     openMenu();
@@ -58275,18 +58910,19 @@ function RowMenu({
     onMoveRowClick(id, moveBelow);
     closeMenu();
   }
-  return /* @__PURE__ */ import_react26.default.createElement("div", {
-    ref: menuRef
-  }, /* @__PURE__ */ import_react26.default.createElement(IconButton, {
-    id: buttonId,
+  return /* @__PURE__ */ import_react28.default.createElement("div", {
+    ref: positionRef
+  }, /* @__PURE__ */ import_react28.default.createElement(IconButton, {
     icon: ICON.MORE_VERT,
     onClick: handleButtonClick
-  }), /* @__PURE__ */ import_react26.default.createElement(Menu, {
+  }), /* @__PURE__ */ import_react28.default.createElement(Menu, {
     id: menuId,
     isOpen: isMenuOpen,
-    top: menuPosition.top + menuPosition.height,
-    left: menuPosition.left - menuPosition.width - 65
-  }, /* @__PURE__ */ import_react26.default.createElement("div", {
+    style: {
+      top: numToPx(pxToNum(position.top) + pxToNum(position.height)),
+      left: numToPx(pxToNum(position.left) - pxToNum(position.width) - 65)
+    }
+  }, /* @__PURE__ */ import_react28.default.createElement("div", {
     className: "NLT__drag-menu"
   }, Object.values(DRAG_MENU_ITEM).map((item) => {
     if (item.name === DRAG_MENU_ITEM.MOVE_UP.name) {
@@ -58297,7 +58933,7 @@ function RowMenu({
       if (isLastRow)
         return;
     }
-    return /* @__PURE__ */ import_react26.default.createElement(RowMenuItem, {
+    return /* @__PURE__ */ import_react28.default.createElement(RowMenuItem, {
       key: item.name,
       icon: item.icon,
       iconText: item.content,
@@ -58325,66 +58961,13 @@ function RowMenu({
 }
 
 // src/app/components/EditableTh/index.tsx
-var import_react29 = __toModule(require_react());
+var import_react32 = __toModule(require_react());
 
 // src/app/components/HeaderMenu/index.tsx
-var import_react28 = __toModule(require_react());
-
-// src/app/components/HeaderMenu/constants.ts
-var SUBMENU = {
-  EDIT: {
-    name: "edit",
-    content: "Edit",
-    icon: ICON.EDIT
-  },
-  SORT: {
-    name: "sort",
-    content: "Sort",
-    icon: ICON.SORT
-  },
-  MOVE: {
-    name: "move",
-    content: "Move",
-    icon: ICON.MOVE_UP
-  },
-  INSERT: {
-    name: "insert",
-    content: "Insert",
-    icon: ICON.KEYBOARD_DOUBLE_ARROW_RIGHT
-  },
-  TYPE: {
-    name: "type",
-    content: "Type",
-    icon: ICON.TEXT_SNIPPET
-  }
-};
-var TYPE_ITEMS = [
-  { name: "text", content: "Text", type: CELL_TYPE.TEXT },
-  { name: "number", content: "Number", type: CELL_TYPE.NUMBER },
-  { name: "tag", content: "Tag", type: CELL_TYPE.TAG },
-  { name: "date", content: "Date", type: CELL_TYPE.DATE },
-  { name: "checkbox", content: "Checkbox", type: CELL_TYPE.CHECKBOX }
-];
-var SORT = {
-  DEFAULT: {
-    name: "default",
-    content: "Default",
-    icon: ICON.SORT
-  },
-  ASC: {
-    name: "asc",
-    content: "Ascending",
-    icon: ICON.KEYBOARD_ARROW_UP
-  },
-  DESC: {
-    name: "desc",
-    content: "Descending",
-    icon: ICON.KEYBOARD_ARROW_DOWN
-  }
-};
+var import_react31 = __toModule(require_react());
 
 // src/app/components/HeaderMenu/components/HeaderMenuItem/index.tsx
-var import_react27 = __toModule(require_react());
+var import_react29 = __toModule(require_react());
 function HeaderMenuItem({
   icon = "",
   iconText,
@@ -58394,41 +58977,78 @@ function HeaderMenuItem({
   let className = "NLT__header-menu-item NLT__selectable";
   if (selected)
     className += " NLT__selected";
-  return /* @__PURE__ */ import_react27.default.createElement("li", {
+  return /* @__PURE__ */ import_react29.default.createElement("li", {
     className,
     onClick: () => onClick()
-  }, /* @__PURE__ */ import_react27.default.createElement(IconText, {
+  }, /* @__PURE__ */ import_react29.default.createElement(IconText, {
     iconText,
     icon
+  }));
+}
+
+// src/app/components/Switch/index.tsx
+var import_react30 = __toModule(require_react());
+function Switch({ isChecked, onToggle }) {
+  return /* @__PURE__ */ import_react30.default.createElement("label", {
+    className: "NLT__switch",
+    onClick: () => onToggle(!isChecked)
+  }, /* @__PURE__ */ import_react30.default.createElement("input", {
+    type: "checkbox",
+    checked: isChecked,
+    onChange: () => {
+    },
+    onClick: (e) => {
+      e.stopPropagation();
+      onToggle(!isChecked);
+    }
+  }), /* @__PURE__ */ import_react30.default.createElement("span", {
+    className: "NLT__slider"
   }));
 }
 
 // src/app/components/HeaderMenu/index.tsx
 function HeaderMenu({
   isOpen,
-  top,
-  left,
   id,
   menuId,
   content,
+  style,
   type,
   sortName,
-  inFirstHeader,
-  inLastHeader,
+  useAutoWidth,
+  shouldWrapOverflow,
+  isFirstChild,
+  isLastChild,
   onTypeSelect,
   onSortSelect,
   onDeleteClick,
   onOutsideClick,
   onInsertColumnClick,
   onMoveColumnClick,
-  onClose
+  onClose,
+  onWrapOverflowToggle,
+  onAutoWidthToggle
 }) {
-  const [inputText, setInputText] = (0, import_react28.useState)("");
-  const [submenu, setSubmenu] = (0, import_react28.useState)(null);
-  const lastLength = (0, import_react28.useRef)(0);
+  const [inputText, setInputText] = (0, import_react31.useState)("");
+  const [submenu, setSubmenu] = (0, import_react31.useState)(null);
+  const lastLength = (0, import_react31.useRef)(0);
+  (0, import_react31.useEffect)(() => {
+    if (!isOpen) {
+      if (inputText.length !== lastLength.current) {
+        lastLength.current = inputText.length;
+        if (inputText !== content) {
+          onOutsideClick(id, inputText);
+        }
+      }
+      setSubmenu(null);
+    }
+  }, [isOpen, inputText.length, lastLength.current]);
+  (0, import_react31.useEffect)(() => {
+    setInputText(content);
+  }, [content]);
   function renderTypeItems() {
     return TYPE_ITEMS.map((item) => {
-      return /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
+      return /* @__PURE__ */ import_react31.default.createElement(HeaderMenuItem, {
         key: item.name,
         icon: "",
         iconText: item.content,
@@ -58438,9 +59058,9 @@ function HeaderMenu({
     });
   }
   function renderSortItems() {
-    return /* @__PURE__ */ import_react28.default.createElement("ul", {
+    return /* @__PURE__ */ import_react31.default.createElement("ul", {
       className: "NLT__header-menu-ul"
-    }, Object.values(SORT).map((item) => /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
+    }, Object.values(SORT).map((item) => /* @__PURE__ */ import_react31.default.createElement(HeaderMenuItem, {
       key: item.name,
       icon: item.icon,
       iconText: `Sort ${item.content}`,
@@ -58449,41 +59069,54 @@ function HeaderMenu({
     })));
   }
   function renderInsertItems() {
-    return /* @__PURE__ */ import_react28.default.createElement("ul", {
+    return /* @__PURE__ */ import_react31.default.createElement("ul", {
       className: "NLT__header-menu-ul"
-    }, /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
+    }, /* @__PURE__ */ import_react31.default.createElement(HeaderMenuItem, {
       icon: ICON.KEYBOARD_DOUBLE_ARROW_LEFT,
       iconText: "Insert Left",
       onClick: () => handleInsertColumnClick(id, false)
-    }), /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
+    }), /* @__PURE__ */ import_react31.default.createElement(HeaderMenuItem, {
       icon: ICON.KEYBOARD_DOUBLE_ARROW_RIGHT,
       iconText: "Insert Right",
       onClick: () => handleInsertColumnClick(id, true)
     }));
   }
   function renderMoveItems() {
-    return /* @__PURE__ */ import_react28.default.createElement("ul", {
+    return /* @__PURE__ */ import_react31.default.createElement("ul", {
       className: "NLT__header-menu-ul"
-    }, !inFirstHeader && /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
+    }, !isFirstChild && /* @__PURE__ */ import_react31.default.createElement(HeaderMenuItem, {
       icon: ICON.KEYBOARD_DOUBLE_ARROW_LEFT,
       iconText: "Move Left",
       onClick: () => handleMoveColumnClick(id, false)
-    }), !inLastHeader && /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
+    }), !isLastChild && /* @__PURE__ */ import_react31.default.createElement(HeaderMenuItem, {
       icon: ICON.KEYBOARD_DOUBLE_ARROW_RIGHT,
       iconText: "Move Right",
       onClick: () => handleMoveColumnClick(id, true)
     }));
   }
   function renderEditItems() {
-    return /* @__PURE__ */ import_react28.default.createElement(import_react28.default.Fragment, null, /* @__PURE__ */ import_react28.default.createElement("div", {
+    return /* @__PURE__ */ import_react31.default.createElement(import_react31.default.Fragment, null, /* @__PURE__ */ import_react31.default.createElement("div", {
       style: { marginBottom: "10px" }
-    }, /* @__PURE__ */ import_react28.default.createElement("input", {
+    }, /* @__PURE__ */ import_react31.default.createElement("p", {
+      className: "NLT__label"
+    }, "Header Name"), /* @__PURE__ */ import_react31.default.createElement("input", {
       className: "NLT__input NLT__header-menu-input",
       autoFocus: true,
       type: "text",
       value: inputText,
       onChange: (e) => setInputText(e.target.value)
-    })), /* @__PURE__ */ import_react28.default.createElement(Button, {
+    })), (type === CONTENT_TYPE.TEXT || type === CONTENT_TYPE.NUMBER) && /* @__PURE__ */ import_react31.default.createElement("div", null, /* @__PURE__ */ import_react31.default.createElement("p", {
+      className: "NLT__label"
+    }, "Auto Width"), /* @__PURE__ */ import_react31.default.createElement(Switch, {
+      isChecked: useAutoWidth,
+      onToggle: (value) => onAutoWidthToggle(id, value)
+    }), !useAutoWidth && /* @__PURE__ */ import_react31.default.createElement(import_react31.default.Fragment, null, /* @__PURE__ */ import_react31.default.createElement("p", {
+      className: "NLT__label"
+    }, "Wrap Overflow"), /* @__PURE__ */ import_react31.default.createElement(Switch, {
+      isChecked: shouldWrapOverflow,
+      onToggle: (value) => onWrapOverflowToggle(id, value)
+    }))), /* @__PURE__ */ import_react31.default.createElement(Button, {
+      style: { marginTop: "5px" },
       onClick: () => handleDeleteClick(id)
     }, "Delete"));
   }
@@ -58504,11 +59137,13 @@ function HeaderMenu({
     onClose();
   }
   function handleDeleteClick(id2) {
-    onDeleteClick(id2);
-    onClose();
+    if (window.confirm("Are you sure you want to delete this column?")) {
+      onDeleteClick(id2);
+      onClose();
+    }
   }
   function renderMenu() {
-    return Object.values(SUBMENU).map((item) => /* @__PURE__ */ import_react28.default.createElement(HeaderMenuItem, {
+    return Object.values(SUBMENU).map((item) => /* @__PURE__ */ import_react31.default.createElement(HeaderMenuItem, {
       key: item.name,
       iconText: item.content,
       icon: item.icon,
@@ -58529,40 +59164,25 @@ function HeaderMenu({
         case SUBMENU.TYPE.name:
           return renderTypeItems();
         default:
-          return /* @__PURE__ */ import_react28.default.createElement(import_react28.default.Fragment, null);
+          return /* @__PURE__ */ import_react31.default.createElement(import_react31.default.Fragment, null);
       }
     }
-    return /* @__PURE__ */ import_react28.default.createElement("div", null, /* @__PURE__ */ import_react28.default.createElement("div", {
+    return /* @__PURE__ */ import_react31.default.createElement("div", null, /* @__PURE__ */ import_react31.default.createElement("div", {
       className: "NLT__header-menu-header-container"
-    }, /* @__PURE__ */ import_react28.default.createElement(IconButton, {
+    }, /* @__PURE__ */ import_react31.default.createElement(IconButton, {
       icon: ICON.KEYBOARD_BACKSPACE,
       onClick: () => setSubmenu(null)
-    }), /* @__PURE__ */ import_react28.default.createElement("div", {
+    }), /* @__PURE__ */ import_react31.default.createElement("div", {
       className: "NLT__header-menu-header"
     }, submenu.content)), renderSubmenuItems());
   }
-  (0, import_react28.useEffect)(() => {
-    if (!isOpen) {
-      if (inputText.length !== lastLength.current) {
-        lastLength.current = inputText.length;
-        if (inputText !== content) {
-          onOutsideClick(id, inputText);
-        }
-      }
-      setSubmenu(null);
-    }
-  }, [isOpen, inputText.length, lastLength.current]);
-  (0, import_react28.useEffect)(() => {
-    setInputText(content);
-  }, [content]);
-  return /* @__PURE__ */ import_react28.default.createElement(Menu, {
+  return /* @__PURE__ */ import_react31.default.createElement(Menu, {
     isOpen,
     id: menuId,
-    top,
-    left
-  }, /* @__PURE__ */ import_react28.default.createElement("div", {
+    style
+  }, /* @__PURE__ */ import_react31.default.createElement("div", {
     className: "NLT__header-menu"
-  }, submenu !== null ? /* @__PURE__ */ import_react28.default.createElement(Submenu, null) : renderMenu()));
+  }, submenu !== null ? /* @__PURE__ */ import_react31.default.createElement(Submenu, null) : renderMenu()));
 }
 
 // src/app/components/EditableTh/index.tsx
@@ -58570,114 +59190,124 @@ function EditableTh({
   id,
   index,
   width,
+  headerWidthUpdateTime,
   content,
+  useAutoWidth,
+  shouldWrapOverflow,
   type,
+  tableScrollUpdateTime,
   sortName,
-  inFirstHeader,
-  inLastHeader,
+  isFirstChild,
+  isLastChild,
   onWidthChange,
   onInsertColumnClick,
   onMoveColumnClick,
   onSortSelect,
   onTypeSelect,
   onDeleteClick,
-  onSaveClick
+  onSaveClick,
+  onWrapOverflowToggle,
+  onAutoWidthToggle
 }) {
-  const dragRef = (0, import_react29.useRef)(false);
   const menuId = useMenuId();
-  const { menuPosition, menuRef, isMenuOpen, openMenu, closeMenu } = useMenuRef(menuId, MENU_LEVEL.ONE);
+  const { isMenuOpen, openMenu, closeMenu, isMenuRequestingClose } = useMenu(menuId);
+  const { positionRef, position } = usePositionRef([
+    headerWidthUpdateTime,
+    tableScrollUpdateTime
+  ]);
+  const mouseDownX = (0, import_react32.useRef)(0);
+  const isResizing = (0, import_react32.useRef)(false);
   useDisableScroll(isMenuOpen);
+  (0, import_react32.useEffect)(() => {
+    if (isMenuRequestingClose) {
+      closeMenu();
+    }
+  }, [isMenuRequestingClose]);
   function handleHeaderClick(e) {
-    if (dragRef.current)
+    if (isResizing.current)
       return;
     openMenu();
-  }
-  function handleMouseMove(e) {
-    const target = e.target;
-    if (target instanceof HTMLElement) {
-      let width2 = e.pageX - menuPosition.left - 17;
-      width2 = parseInt(width2.toString());
-      if (width2 < 30)
-        return;
-      dragRef.current = true;
-      onWidthChange(id, width2);
-    }
   }
   function handleClose() {
     closeMenu();
   }
-  function handleDrag(e) {
-    removeEventListeners();
+  function handleMouseDown(e) {
+    mouseDownX.current = e.pageX;
+    isResizing.current = true;
   }
-  function handleMouseUp(e) {
-    removeEventListeners();
+  function handleMouseMove(e) {
+    if (width.match(CSS_MEASUREMENT_PIXEL_REGEX)) {
+      const oldWidth = pxToNum(width);
+      const dist = e.pageX - mouseDownX.current;
+      const newWidth = oldWidth + dist;
+      if (newWidth < MIN_COLUMN_WIDTH_PX)
+        return;
+      onWidthChange(id, numToPx(newWidth));
+    }
   }
-  function removeEventListeners() {
+  function handleMouseUp() {
     window.removeEventListener("mousemove", handleMouseMove);
-    window.removeEventListener("drag", removeEventListeners);
-    window.removeEventListener("mouseup", removeEventListeners);
+    window.removeEventListener("mouseup", handleMouseUp);
     setTimeout(() => {
-      dragRef.current = false;
-    }, 50);
+      isResizing.current = false;
+    }, 100);
   }
-  return /* @__PURE__ */ import_react29.default.createElement("th", {
+  return /* @__PURE__ */ import_react32.default.createElement(import_react32.default.Fragment, null, /* @__PURE__ */ import_react32.default.createElement("th", {
     className: "NLT__th NLT__selectable",
-    ref: menuRef,
+    ref: positionRef,
+    style: {
+      width
+    },
     onClick: handleHeaderClick
-  }, /* @__PURE__ */ import_react29.default.createElement(HeaderMenu, {
+  }, /* @__PURE__ */ import_react32.default.createElement("div", {
+    className: "NLT__th-container"
+  }, /* @__PURE__ */ import_react32.default.createElement("div", {
+    className: "NLT__th-content"
+  }, content), /* @__PURE__ */ import_react32.default.createElement("div", {
+    className: "NLT__th-resize-container"
+  }, !useAutoWidth && /* @__PURE__ */ import_react32.default.createElement("div", {
+    className: "NLT__th-resize",
+    onMouseDown: (e) => {
+      e.preventDefault();
+      handleMouseDown(e);
+      window.addEventListener("mousemove", handleMouseMove);
+      window.addEventListener("mouseup", handleMouseUp);
+    },
+    onClick: (e) => {
+      e.stopPropagation();
+    }
+  })))), /* @__PURE__ */ import_react32.default.createElement(HeaderMenu, {
     isOpen: isMenuOpen,
-    top: menuPosition.top,
-    left: menuPosition.left,
+    style: {
+      top: numToPx(pxToNum(position.top) + pxToNum(position.height)),
+      left: position.left
+    },
     id,
+    shouldWrapOverflow,
+    useAutoWidth,
     menuId,
     content,
     index,
     sortName,
     type,
-    inFirstHeader,
-    inLastHeader,
+    isFirstChild,
+    isLastChild,
     onOutsideClick: onSaveClick,
     onSortSelect,
     onMoveColumnClick,
     onInsertColumnClick,
     onTypeSelect,
     onDeleteClick,
-    onClose: handleClose
-  }), /* @__PURE__ */ import_react29.default.createElement("div", {
-    className: "NLT__header-content-container"
-  }, /* @__PURE__ */ import_react29.default.createElement("div", {
-    className: "NLT__header-content",
-    style: { width }
-  }, content), /* @__PURE__ */ import_react29.default.createElement("div", {
-    className: "NLT__header-resize-container"
-  }, /* @__PURE__ */ import_react29.default.createElement("div", {
-    className: "NLT__header-resize",
-    onMouseDown: () => {
-      window.addEventListener("mousemove", handleMouseMove);
-      window.addEventListener("mouseup", handleMouseUp);
-      window.addEventListener("drag", handleDrag);
-    },
-    onClick: (e) => {
-      e.stopPropagation();
-    }
-  }))));
+    onClose: handleClose,
+    onAutoWidthToggle,
+    onWrapOverflowToggle
+  }));
 }
 
-// src/app/services/appData/state/header.ts
-var initialHeader = (id, content) => {
+// src/app/services/appData/state/tag.ts
+var initialTag = (id, headerId, cellId, content, color) => {
   return {
     id,
-    content,
-    sortName: SORT.DEFAULT.name,
-    width: "100px",
-    type: CELL_TYPE.TEXT
-  };
-};
-
-// src/app/services/appData/state/tag.ts
-var initialTag = (headerId, cellId, content, color) => {
-  return {
-    id: randomTagId(),
     headerId,
     content,
     color,
@@ -58685,399 +59315,32 @@ var initialTag = (headerId, cellId, content, color) => {
   };
 };
 
-// src/app/services/appData/state/row.ts
-var initialRow = (id, creationTime) => {
-  return {
-    id,
-    creationTime
-  };
-};
-
-// src/app/services/appData/state/cell.ts
-var Cell = class {
-  constructor(id, rowId, headerId, type, expectedType) {
-    this.id = id;
-    this.rowId = rowId;
-    this.headerId = headerId;
-    this.type = type;
-    this.expectedType = expectedType;
-  }
-  toString() {
-    return "";
-  }
-  length() {
-    return 0;
-  }
-};
-var ErrorCell2 = class extends Cell {
-  constructor(id, rowId, headerId, expectedType, content) {
-    super(id, rowId, headerId, CELL_TYPE.ERROR, expectedType);
-    this.content = content;
-  }
-  toString() {
-    return this.content;
-  }
-};
-var TextCell2 = class extends Cell {
-  constructor(id, rowId, headerId, text = "") {
-    super(id, rowId, headerId, CELL_TYPE.TEXT, null);
-    this.text = text;
-  }
-  length() {
-    return this.text.length;
-  }
-  toString() {
-    return this.text;
-  }
-};
-var NumberCell2 = class extends Cell {
-  constructor(id, rowId, headerId, number = -1) {
-    super(id, rowId, headerId, CELL_TYPE.NUMBER, null);
-    this.number = number;
-  }
-  length() {
-    if (this.number === -1)
-      return 0;
-    return this.number.toString().length;
-  }
-  toString() {
-    if (this.number === -1)
-      return "";
-    return this.number.toString();
-  }
-};
-var TagCell2 = class extends Cell {
-  constructor(id, rowId, headerId) {
-    super(id, rowId, headerId, CELL_TYPE.TAG, null);
-  }
-};
-var CheckBoxCell = class extends Cell {
-  constructor(id, rowId, headerId, isChecked = false) {
-    super(id, rowId, headerId, CELL_TYPE.CHECKBOX, null);
-    this.isChecked = isChecked;
-  }
-  length() {
-    if (this.isChecked) {
-      return "[x]".length;
-    } else {
-      return "[ ]".length;
-    }
-  }
-  toString() {
-    if (this.isChecked) {
-      return "[x]";
-    } else {
-      return "[ ]";
-    }
-  }
-};
-var DateCell2 = class extends Cell {
-  constructor(id, rowId, headerId, date) {
-    super(id, rowId, headerId, CELL_TYPE.DATE, null);
-    this.date = date;
-  }
-  length() {
-    if (this.date instanceof Date) {
-      return "YYYY/MM/DD".length;
-    } else {
-      return 0;
-    }
-  }
-  toString() {
-    if (this.date instanceof Date) {
-      const day = ("0" + this.date.getDate()).slice(-2);
-      const month = ("0" + (this.date.getMonth() + 1)).slice(-2);
-      const year = this.date.getFullYear();
-      return `${year}/${month}/${day}`;
-    } else {
-      return "";
-    }
-  }
-};
-var initialCell = (id, rowId, headerId, type, content = void 0) => {
-  switch (type) {
-    case CELL_TYPE.TEXT:
-      return new TextCell2(id, rowId, headerId, content);
-    case CELL_TYPE.NUMBER:
-      return new NumberCell2(id, rowId, headerId, content);
-    case CELL_TYPE.TAG:
-      return new TagCell2(id, rowId, headerId);
-    case CELL_TYPE.CHECKBOX:
-      return new CheckBoxCell(id, rowId, headerId, content);
-    case CELL_TYPE.DATE:
-      return new DateCell2(id, rowId, headerId, content);
-  }
-};
-
-// src/app/services/appData/external/saveUtils.ts
-var findAppData = (parsedTable) => {
-  const HEADER_ROW = 0;
-  const TYPE_DEFINITION_ROW = 1;
-  const COLUMN_ID_ROW = 2;
-  const headers = [];
-  const rows = [];
-  const cells = [];
-  const tags = [];
-  parsedTable.forEach((parsedRow, i) => {
-    if (i === HEADER_ROW) {
-      parsedRow.forEach((th, j) => {
-        if (j !== parsedRow.length - 1)
-          headers.push(initialHeader("", th));
-      });
-    } else if (i === TYPE_DEFINITION_ROW) {
-      parsedRow.forEach((td, j) => {
-        if (j !== parsedRow.length - 1)
-          headers[j].type = td;
-      });
-    } else if (i === COLUMN_ID_ROW) {
-      parsedRow.forEach((td, j) => {
-        if (j !== parsedRow.length - 1)
-          headers[j].id = td;
-      });
-    } else {
-      const row = initialRow(parsedRow[parsedRow.length - 1], getCurrentTimeWithOffset());
-      parsedRow.forEach((td, j) => {
-        if (j !== parsedRow.length - 1) {
-          const cellId = randomCellId();
-          const cellType = findCellType(td, headers[j].type);
-          if (cellType !== headers[j].type) {
-            cells.push(new ErrorCell2(cellId, row.id, headers[j].id, headers[j].type, td));
-            return;
-          }
-          if (cellType === CELL_TYPE.TEXT) {
-            let content = td;
-            content = content.replace(LINE_BREAK_CHARACTER_REGEX("g"), BREAK_LINE_TAG);
-            content = content.replace(AMPERSAND_CHARACTER_REGEX("g"), AMPERSAND);
-            content = parseBoldTags(content);
-            content = parseItalicTags(content);
-            content = parseHighlightTags(content);
-            content = parseUnderlineTags(content);
-            cells.push(new TextCell2(cellId, row.id, headers[j].id, content));
-          } else if (cellType === CELL_TYPE.NUMBER) {
-            const number = td === "" ? -1 : parseInt(td);
-            cells.push(new NumberCell2(cellId, row.id, headers[j].id, number));
-          } else if (cellType === CELL_TYPE.DATE) {
-            const date = td === "" ? null : new Date(td);
-            cells.push(new DateCell2(cellId, row.id, headers[j].id, date));
-          } else if (cellType === CELL_TYPE.CHECKBOX) {
-            const isChecked = isCheckBoxChecked(td);
-            cells.push(new CheckBoxCell(cellId, row.id, headers[j].id, isChecked));
-          } else if (cellType === CELL_TYPE.TAG) {
-            cells.push(new TagCell2(cellId, row.id, headers[j].id));
-            if (td !== "") {
-              const content = td;
-              const index = tags.findIndex((tag) => tag.content === content);
-              if (index !== -1) {
-                tags[index].selected.push(cellId);
-              } else {
-                tags.push(initialTag(headers[j].id, cellId, content, randomColor()));
-              }
-            }
-          }
-        }
-      });
-      rows.push(row);
-    }
-  });
-  return {
-    headers,
-    rows,
-    cells,
-    tags
-  };
-};
-var appDataToMarkdown = (tableId, data) => {
-  const columnCharLengths = calcColumnCharLengths(tableId, data);
-  const buffer = new AppDataStringBuffer();
-  buffer.createRow();
-  data.headers.forEach((header, i) => {
-    buffer.writeColumn(header.content, columnCharLengths[i]);
-  });
-  buffer.writeColumn("", columnCharLengths[data.headers.length]);
-  buffer.createRow();
-  for (let i = 0; i < data.headers.length + 1; i++) {
-    const content = Array(columnCharLengths[i]).fill("-").join("");
-    buffer.writeColumn(content, columnCharLengths[i]);
-  }
-  buffer.createRow();
-  data.headers.forEach((header, i) => {
-    buffer.writeColumn(header.type, columnCharLengths[i]);
-  });
-  buffer.writeColumn("", columnCharLengths[data.headers.length]);
-  buffer.createRow();
-  data.headers.forEach((header, i) => {
-    buffer.writeColumn(header.id, columnCharLengths[i]);
-  });
-  buffer.writeColumn(tableId, columnCharLengths[data.headers.length]);
-  data.rows.forEach((row) => {
-    buffer.createRow();
-    for (let i = 0; i < data.headers.length; i++) {
-      const cell = data.cells.find((cell2) => cell2.rowId === row.id && cell2.headerId === data.headers[i].id);
-      if (cell.type === CELL_TYPE.TAG) {
-        const tags = data.tags.filter((tag) => tag.selected.includes(cell.id));
-        let content = "";
-        tags.forEach((tag, j) => {
-          if (tag.content === "")
-            return;
-          if (j === 0)
-            content += tag.content;
-          else
-            content += " " + tag.content;
-        });
-        buffer.writeColumn(content, columnCharLengths[i]);
-      } else {
-        buffer.writeColumn(cell.toString(), columnCharLengths[i]);
-      }
-    }
-    buffer.writeColumn(row.id, columnCharLengths[data.headers.length]);
-  });
-  return buffer.toString();
-};
-var findTableRegex = (tableId, headers, rows) => {
-  const regex = [];
-  regex[0] = findHeaderRow(headers);
-  regex[1] = findHyphenRow(headers.length);
-  regex[2] = findTypeDefinitionRow(headers);
-  regex[3] = findColumnRow(tableId, headers);
-  for (let i = 0; i < rows.length; i++) {
-    regex[i + 4] = findRegexRow(headers.length);
-  }
-  const expression = new RegExp(regex.join("\n"));
-  return expression;
-};
-var findHeaderRow = (headers) => {
-  let regex = "\\|";
-  headers.forEach((header) => {
-    regex += `[ \\t]{0,}${header.content}[ \\t]{0,}\\|`;
-  });
-  regex += ".*\\|[ ]*";
-  return regex;
-};
-var findHyphenRow = (numColumns) => {
-  let regex = "\\|";
-  for (let i = 0; i < numColumns + 1; i++)
-    regex += "[ \\t]{0,}[-]{3,}[ \\t]{0,}\\|";
-  regex += "[ ]*";
-  return regex;
-};
-var findTypeDefinitionRow = (headers) => {
-  let regex = "\\|";
-  for (let i = 0; i < headers.length; i++)
-    regex += `[ \\t]{0,}${headers[i].type}[ \\t]{0,}\\|`;
-  regex += ".*\\|[ ]*";
-  return regex;
-};
-var findColumnRow = (tableId, headers) => {
-  let regex = "\\|";
-  for (let i = 0; i < headers.length; i++)
-    regex += `[ \\t]{0,}${headers[i].id}[ \\t]{0,}\\|`;
-  regex += `[ \\t]{0,}${tableId}[ \\t]{0,}\\|[ ]*`;
-  return regex;
-};
-var findRegexRow = (numColumns) => {
-  let regex = "\\|.*\\|";
-  for (let i = 0; i < numColumns; i++)
-    regex += ".*\\|";
-  regex += "[ ]*";
-  return regex;
-};
-var AppDataStringBuffer = class {
-  constructor() {
-    this.string = "";
-  }
-  createRow() {
-    if (this.string !== "")
-      this.string += "\n";
-    this.string += "|";
-  }
-  writeColumn(content, columnCharLength) {
-    this.string += " ";
-    this.string += content;
-    const numWhiteSpace = columnCharLength - content.length;
-    for (let i = 0; i < numWhiteSpace; i++)
-      this.string += " ";
-    this.string += " ";
-    this.string += "|";
-  }
-  toString() {
-    return this.string;
-  }
-};
-var calcColumnCharLengths = (tableId, data) => {
-  const columnCharLengths = [];
-  data.rows.forEach((row) => {
-    if (columnCharLengths[0] < row.id.length)
-      columnCharLengths[0] = row.id.length;
-  });
-  data.headers.forEach((header, i) => {
-    columnCharLengths[i] = header.content.length;
-    if (columnCharLengths[i] < header.type.length)
-      columnCharLengths[i] = header.type.length;
-    if (columnCharLengths[i] < header.id.length)
-      columnCharLengths[i] = header.id.length;
-  });
-  columnCharLengths[data.headers.length] = tableId.length;
-  data.cells.forEach((cell) => {
-    if (cell instanceof Cell) {
-      const index = data.headers.findIndex((header) => header.id === cell.headerId);
-      if (cell.type === CELL_TYPE.TAG) {
-        const arr = data.tags.filter((tag) => tag.selected.includes(cell.id));
-        let content = "";
-        arr.forEach((tag, i) => {
-          if (tag.content !== "") {
-            if (i === 0)
-              content += tag.content;
-            else
-              content += " " + tag.content;
-          }
-        });
-        if (columnCharLengths[index] < content.length)
-          columnCharLengths[index] = content.length;
-      } else {
-        if (columnCharLengths[index] < cell.length())
-          columnCharLengths[index] = cell.length();
-      }
-    }
-  });
-  return columnCharLengths;
-};
-var findTableId = (parsedTable) => {
-  const row = parsedTable[2];
-  if (row) {
-    const cell = row[row.length - 1];
-    if (!cell.match(TABLE_ID_REGEX))
-      return null;
-    return cell;
-  } else {
-    return null;
-  }
-};
-
 // src/app/services/appData/external/persist.ts
-var persistAppData = (plugin, settings, appData, sourcePath, tableId, viewType) => __async(void 0, null, function* () {
+var persistAppData = (plugin, settings, appData, sourcePath, tableIndex, viewType) => __async(void 0, null, function* () {
   if (!settings.state[sourcePath])
     settings.state[sourcePath] = {};
-  settings.state[sourcePath][tableId] = {
+  settings.state[sourcePath][tableIndex] = {
     data: appData,
     viewType,
-    shouldUpdate: true
+    shouldUpdate: true,
+    tableCacheVersion: CURRENT_TABLE_CACHE_VERSION
   };
   yield plugin.saveData(settings);
 });
 
 // src/app/services/appData/external/save.ts
-var saveAppData = (plugin, settings, app2, oldAppData, newAppData, sourcePath, tableId, viewType) => __async(void 0, null, function* () {
-  const markdown = appDataToMarkdown(tableId, newAppData);
+var saveAppData = (plugin, settings, app2, oldAppData, newAppData, sourcePath, tableIndex, viewType) => __async(void 0, null, function* () {
+  const markdown = appDataToMarkdown(newAppData);
   try {
     const file = app2.workspace.getActiveFile();
-    let content = yield app2.vault.cachedRead(file);
-    content = content.replace(findTableRegex(tableId, oldAppData.headers, oldAppData.rows), markdown);
-    if (DEBUG.SAVE_APP_DATA.APP_DATA) {
+    const fileContent = yield app2.vault.cachedRead(file);
+    let newContent = fileContent.replace(findTableRegex(oldAppData.headers, oldAppData.rows), markdown);
+    if (DEBUG.SAVE_APP_DATA) {
       console.log("saveAppData - New app data:");
       console.log(markdown);
     }
-    yield persistAppData(plugin, settings, newAppData, sourcePath, tableId, viewType);
-    yield app2.vault.modify(file, content);
+    yield persistAppData(plugin, settings, newAppData, sourcePath, tableIndex, viewType);
+    yield app2.vault.modify(file, newContent);
   } catch (err) {
     console.log(err);
   }
@@ -59085,23 +59348,22 @@ var saveAppData = (plugin, settings, app2, oldAppData, newAppData, sourcePath, t
 
 // src/app/services/appData/internal/add.ts
 var addRow = (data) => {
-  const rowId = randomRowId();
+  const rowId = v4_default();
   const tags = [];
   const cells = data.headers.map((header, i) => {
-    const cellId = randomCellId();
-    return initialCell(cellId, rowId, header.id, header.type);
+    return findNewCell(v4_default(), rowId, header.id, header.type);
   });
   return __spreadProps(__spreadValues({}, data), {
-    rows: [...data.rows, initialRow(rowId, Date.now())],
+    rows: [...data.rows, initialRow(rowId, data.rows.length, Date.now())],
     cells: [...data.cells, ...cells],
     tags: [...data.tags, ...tags]
   });
 };
 var addColumn = (data) => {
-  const header = initialHeader(randomColumnId(), "New Column");
+  const header = initialHeader(v4_default(), data.headers.length, "New Column");
   const cells = [...data.cells];
   data.rows.forEach((row) => {
-    cells.push(initialCell(randomCellId(), row.id, header.id, CELL_TYPE.TEXT));
+    cells.push(findNewCell(v4_default(), row.id, header.id, CONTENT_TYPE.TEXT));
   });
   return __spreadProps(__spreadValues({}, data), {
     headers: [...data.headers, header],
@@ -59110,32 +59372,70 @@ var addColumn = (data) => {
 };
 
 // src/app/App.tsx
+var COMPONENT_NAME4 = "App";
 function App({
   plugin,
   settings,
   data,
   sourcePath,
-  tableId,
+  tableIndex,
   el
 }) {
-  const [oldAppData, setOldAppData] = (0, import_react30.useState)(data);
-  const [appData, setAppData] = (0, import_react30.useState)(data);
-  const [debounceUpdate, setDebounceUpdate] = (0, import_react30.useState)(0);
-  const [updateTime, setUpdateTime] = (0, import_react30.useState)(0);
+  const [oldAppData, setOldAppData] = (0, import_react33.useState)(data);
+  const [appData, setAppData] = (0, import_react33.useState)(data);
+  const [tableId] = (0, import_react33.useState)(v4_default());
+  const [debounceUpdate, setDebounceUpdate] = (0, import_react33.useState)(0);
+  const [tagUpdate, setTagUpdate] = (0, import_react33.useState)({
+    time: 0,
+    cellId: ""
+  });
+  const [saveTime, setSaveTime] = (0, import_react33.useState)(0);
+  const [headerWidthUpdateTime, setHeaderWidthUpdateTime] = (0, import_react33.useState)(0);
+  (0, import_react33.useEffect)(() => {
+    function handleUpdate() {
+      return __async(this, null, function* () {
+        if (saveTime === 0)
+          return;
+        try {
+          const oldData = sortAppDataForSave(oldAppData);
+          const saveData = sortAppDataForSave(appData);
+          yield saveAppData(plugin, settings, app, oldData, saveData, sourcePath, tableIndex, findCurrentViewType(el));
+        } catch (err) {
+          console.log(err);
+        }
+      });
+    }
+    handleUpdate();
+  }, [saveTime]);
+  (0, import_react33.useEffect)(() => {
+    let intervalId = null;
+    function startTimer() {
+      intervalId = setInterval(() => {
+        if (Date.now() - debounceUpdate < 250)
+          return;
+        clearInterval(intervalId);
+        setDebounceUpdate(0);
+        setSaveTime(Date.now());
+      }, 100);
+    }
+    if (debounceUpdate !== 0)
+      startTimer();
+    return () => clearInterval(intervalId);
+  }, [debounceUpdate]);
   function handleAddColumn() {
-    if (DEBUG.APP.HANDLER)
+    if (DEBUG.APP)
       console.log("[App]: handleAddColumn called.");
     setAppData((prevState) => addColumn(prevState));
-    setUpdateTime(Date.now());
+    setSaveTime(Date.now());
   }
   function handleAddRow() {
-    if (DEBUG.APP.HANDLER)
+    if (DEBUG.APP)
       console.log("[App]: handleAddRow called.");
     setAppData((prevState) => addRow(prevState));
-    setUpdateTime(Date.now());
+    setSaveTime(Date.now());
   }
   function handleHeaderSave(id, updatedContent) {
-    if (DEBUG.APP.HANDLER)
+    if (DEBUG.APP)
       console.log("[App]: handleHeaderSave called.");
     setAppData((prevState) => {
       return __spreadProps(__spreadValues({}, prevState), {
@@ -59148,10 +59448,36 @@ function App({
         })
       });
     });
-    setUpdateTime(Date.now());
+    setSaveTime(Date.now());
+  }
+  function handleHeaderTypeSelect(id, cellType) {
+    if (DEBUG.APP)
+      console.log("[App]: handleHeaderTypeSelect called.");
+    const header = appData.headers.find((header2) => header2.id === id);
+    if (header.type === cellType)
+      return;
+    setAppData((prevState) => {
+      return __spreadProps(__spreadValues({}, prevState), {
+        headers: prevState.headers.map((header2) => {
+          if (id === header2.id)
+            return __spreadProps(__spreadValues({}, header2), { type: cellType });
+          return header2;
+        }),
+        cells: prevState.cells.map((cell) => {
+          if (cell.headerId === id) {
+            let content = cell.toString();
+            if (cellType === CONTENT_TYPE.CHECKBOX)
+              content = "[ ]";
+            return findNewCell(cell.id, cell.rowId, cell.headerId, cellType, content);
+          }
+          return cell;
+        })
+      });
+    });
+    setSaveTime(Date.now());
   }
   function handleHeaderSortSelect(id, type, sortName) {
-    if (DEBUG.APP.HANDLER)
+    if (DEBUG.APP)
       console.log("[App]: handleHeaderSort called.");
     setAppData((prevState) => {
       return __spreadProps(__spreadValues({}, prevState), {
@@ -59164,35 +59490,46 @@ function App({
     });
     sortRows(id, type, sortName);
   }
-  function handleCellContentChange(id, content) {
-    if (DEBUG.APP.HANDLER) {
-      console.log(`[App]: handleCellContentChange`);
-      console.log({ id, content });
+  function handleCellContentSave() {
+    setSaveTime(Date.now());
+  }
+  function handleCellContentChange(id, headerType, content) {
+    if (DEBUG.APP) {
+      logFunc(COMPONENT_NAME4, "handleCellContentChange", {
+        id,
+        headerType,
+        content
+      });
     }
     setAppData((prevState) => {
       return __spreadProps(__spreadValues({}, prevState), {
         cells: prevState.cells.map((cell) => {
           if (cell.id === id) {
-            return initialCell(cell.id, cell.rowId, cell.headerId, cell.type, content);
+            return findNewCell(cell.id, cell.rowId, cell.headerId, headerType, content);
           }
           return cell;
         })
       });
     });
-    setUpdateTime(Date.now());
   }
   function handleAddTag(cellId, headerId, content, color) {
-    if (DEBUG.APP.HANDLER)
-      console.log("[App]: handleAddTag called.");
+    if (DEBUG.APP) {
+      logFunc(COMPONENT_NAME4, "handleAddTag", {
+        cellId,
+        headerId,
+        content,
+        color
+      });
+    }
     setAppData((prevState) => {
       return __spreadProps(__spreadValues({}, prevState), {
         tags: [
           ...removeTagReferences(prevState.tags, cellId),
-          initialTag(headerId, cellId, content, color)
+          initialTag(v4_default(), headerId, cellId, content, color)
         ]
       });
     });
-    setUpdateTime(Date.now());
+    setTagUpdate({ cellId, time: Date.now() });
   }
   function removeTagReferences(tags, cellId) {
     return tags.map((tag) => {
@@ -59202,45 +59539,48 @@ function App({
     }).filter((tag) => tag.selected.length !== 0);
   }
   function handleTagClick(cellId, tagId) {
-    if (DEBUG.APP.HANDLER)
-      console.log("[App]: handleTagClick called.");
-    const found = appData.tags.find((tag) => tag.id === tagId);
-    if (found.selected.includes(cellId))
-      return;
-    let arr = removeTagReferences(appData.tags, cellId);
-    arr = arr.map((tag) => {
-      if (tag.id === tagId) {
-        return __spreadProps(__spreadValues({}, tag), {
-          selected: [...tag.selected, cellId]
-        });
-      }
-      return tag;
-    });
-    setAppData((prevState) => {
-      return __spreadProps(__spreadValues({}, prevState), {
-        tags: arr
+    if (DEBUG.APP) {
+      logFunc(COMPONENT_NAME4, "handleTagClick", {
+        cellId,
+        tagId
       });
-    });
-    setUpdateTime(Date.now());
+    }
+    const found = appData.tags.find((tag) => tag.id === tagId);
+    if (!found.selected.includes(cellId)) {
+      let arr = removeTagReferences(appData.tags, cellId);
+      arr = arr.map((tag) => {
+        if (tag.id === tagId) {
+          return __spreadProps(__spreadValues({}, tag), {
+            selected: [...tag.selected, cellId]
+          });
+        }
+        return tag;
+      });
+      setAppData((prevState) => {
+        return __spreadProps(__spreadValues({}, prevState), {
+          tags: arr
+        });
+      });
+    }
+    setTagUpdate({ cellId, time: Date.now() });
   }
-  function handleRemoveTagClick(cellId, tagId) {
-    if (DEBUG.APP.HANDLER)
+  function handleRemoveTagClick(cellId) {
+    if (DEBUG.APP)
       console.log("[App]: handleRemoveTagClick called.");
     setAppData((prevState) => {
       return __spreadProps(__spreadValues({}, prevState), {
         tags: removeTagReferences(prevState.tags, cellId)
       });
     });
-    setUpdateTime(Date.now());
   }
-  function sortRows(headerId, headerType, sortName, shouldUpdate = true) {
+  function sortRows(headerId, headerType, sortName) {
     setAppData((prevState) => {
       const arr = [...prevState.rows];
       arr.sort((a, b) => {
         const cellA = appData.cells.find((cell) => cell.headerId === headerId && cell.rowId === a.id);
         const cellB = appData.cells.find((cell) => cell.headerId === headerId && cell.rowId === b.id);
         if (sortName === SORT.ASC.name) {
-          if (headerType === CELL_TYPE.TAG) {
+          if (headerType === CONTENT_TYPE.TAG) {
             const tagA = appData.tags.find((tag) => tag.selected.includes(cellA.id));
             const tagB = appData.tags.find((tag) => tag.selected.includes(cellB.id));
             return tagA.content.localeCompare(tagB.content);
@@ -59248,7 +59588,7 @@ function App({
             return cellA.toString().localeCompare(cellB.toString());
           }
         } else if (sortName === SORT.DESC.name) {
-          if (headerType === CELL_TYPE.TAG) {
+          if (headerType === CONTENT_TYPE.TAG) {
             const tagA = appData.tags.find((tag) => tag.selected.includes(cellA.id));
             const tagB = appData.tags.find((tag) => tag.selected.includes(cellB.id));
             return tagB.content.localeCompare(tagA.content);
@@ -59263,11 +59603,9 @@ function App({
         rows: arr
       });
     });
-    if (shouldUpdate)
-      setUpdateTime(Date.now());
   }
   function handleDeleteHeaderClick(id) {
-    if (DEBUG.APP.HANDLER)
+    if (DEBUG.APP)
       console.log("[App]: handleDeleteHeaderClick called.");
     setAppData((prevState) => {
       return __spreadProps(__spreadValues({}, prevState), {
@@ -59275,10 +59613,10 @@ function App({
         cells: prevState.cells.filter((cell) => cell.headerId !== id)
       });
     });
-    setUpdateTime(Date.now());
+    setSaveTime(Date.now());
   }
   function handleDeleteRowClick(rowId) {
-    if (DEBUG.APP.HANDLER)
+    if (DEBUG.APP)
       console.log("[App]: handleDeleteRowClick called.");
     setAppData((prevState) => {
       return __spreadProps(__spreadValues({}, prevState), {
@@ -59286,10 +59624,10 @@ function App({
         cells: prevState.cells.filter((cell) => cell.rowId !== rowId)
       });
     });
-    setUpdateTime(Date.now());
+    setSaveTime(Date.now());
   }
   function handleMoveRowClick(id, moveBelow) {
-    if (DEBUG.APP.HANDLER)
+    if (DEBUG.APP)
       console.log("[App]: handleMoveRowClick called.");
     setAppData((prevState) => {
       const index = prevState.rows.findIndex((row) => row.id === id);
@@ -59306,27 +59644,32 @@ function App({
         rows
       });
     });
-    setUpdateTime(Date.now());
+    setSaveTime(Date.now());
   }
-  function handleWidthChange(id, newWidth) {
-    if (DEBUG.APP.HANDLER)
-      console.log("[App]: handleWidthChange called.");
+  function handleHeaderWidthChange(id, width) {
+    if (DEBUG.APP) {
+      logFunc(COMPONENT_NAME4, "handleHeaderWidthChange", {
+        id,
+        width
+      });
+    }
     setAppData((prevState) => {
       return __spreadProps(__spreadValues({}, prevState), {
         headers: prevState.headers.map((header) => {
           if (header.id === id) {
             return __spreadProps(__spreadValues({}, header), {
-              width: `${newWidth}px`
+              width
             });
           }
           return header;
         })
       });
     });
+    setHeaderWidthUpdateTime(Date.now());
     setDebounceUpdate(Date.now());
   }
   function handleMoveColumnClick(id, moveRight) {
-    if (DEBUG.APP.HANDLER)
+    if (DEBUG.APP)
       console.log("[App]: handleMoveColumnClick called.");
     setAppData((prevState) => {
       const index = prevState.headers.findIndex((header) => header.id === id);
@@ -59339,17 +59682,17 @@ function App({
         headers
       });
     });
-    setUpdateTime(Date.now());
+    setSaveTime(Date.now());
   }
   function handleInsertColumnClick(id, insertRight) {
-    if (DEBUG.APP.HANDLER)
+    if (DEBUG.APP)
       console.log("[App]: handleInsertColumnClick called.");
     setAppData((prevState) => {
       const header = prevState.headers.find((header2) => header2.id === id);
       const index = prevState.headers.indexOf(header);
       const insertIndex = insertRight ? index + 1 : index;
-      const headerToInsert = initialHeader(randomColumnId(), "New Column");
-      const cells = prevState.rows.map((row) => initialCell(randomCellId(), row.id, headerToInsert.id, headerToInsert.type));
+      const headerToInsert = initialHeader(v4_default(), prevState.headers.length, "New Column");
+      const cells = prevState.rows.map((row) => findNewCell(v4_default(), row.id, headerToInsert.id, headerToInsert.type));
       const headers = [...prevState.headers];
       headers.splice(insertIndex, 0, headerToInsert);
       return __spreadProps(__spreadValues({}, prevState), {
@@ -59357,49 +59700,26 @@ function App({
         cells: [...prevState.cells, ...cells]
       });
     });
-    setUpdateTime(Date.now());
+    setSaveTime(Date.now());
   }
   function handleInsertRowClick(id, insertBelow = false) {
-    if (DEBUG.APP.HANDLER)
+    if (DEBUG.APP)
       console.log("[App]: handleHeaderInsertRowClick called.");
-    const rowId = randomRowId();
+    const rowId = v4_default();
     setAppData((prevState) => {
       const tags = [];
-      const cells = prevState.headers.map((header) => initialCell(randomCellId(), rowId, header.id, header.type));
+      const cells = prevState.headers.map((header) => findNewCell(v4_default(), rowId, header.id, header.type));
       const rows = [...prevState.rows];
       const index = prevState.rows.findIndex((row) => row.id === id);
       const insertIndex = insertBelow ? index + 1 : index;
-      rows.splice(insertIndex, 0, initialRow(rowId, Date.now()));
+      rows.splice(insertIndex, 0, initialRow(rowId, prevState.rows.length, Date.now()));
       return __spreadProps(__spreadValues({}, prevState), {
         rows,
         cells: [...prevState.cells, ...cells],
         tags: [...prevState.tags, ...tags]
       });
     });
-    setUpdateTime(Date.now());
-  }
-  function handleHeaderTypeSelect(id, cellType) {
-    if (DEBUG.APP.HANDLER)
-      console.log("[App]: handleHeaderTypeSelect called.");
-    const header = appData.headers.find((header2) => header2.id === id);
-    if (header.type === cellType)
-      return;
-    setAppData((prevState) => {
-      return __spreadProps(__spreadValues({}, prevState), {
-        headers: prevState.headers.map((header2) => {
-          if (id === header2.id)
-            return __spreadProps(__spreadValues({}, header2), { type: cellType });
-          return header2;
-        }),
-        cells: prevState.cells.map((cell) => {
-          if (cell.headerId === id) {
-            return initialCell(cell.id, cell.rowId, cell.headerId, cellType);
-          }
-          return cell;
-        })
-      });
-    });
-    setUpdateTime(Date.now());
+    setSaveTime(Date.now());
   }
   function handleChangeColor(tagId, color) {
     setAppData((prevState) => {
@@ -59414,121 +59734,205 @@ function App({
         })
       });
     });
-    setUpdateTime(Date.now());
+    setSaveTime(Date.now());
   }
-  (0, import_react30.useEffect)(() => {
-    for (let i = 0; i < appData.headers.length; i++) {
-      const header = appData.headers[i];
-      if (header.sortName !== SORT.DEFAULT.name)
-        sortRows(header.id, header.type, header.sortName, false);
-    }
-  }, []);
-  (0, import_react30.useEffect)(() => {
-    function handleUpdate() {
-      return __async(this, null, function* () {
-        if (updateTime === 0)
-          return;
-        try {
-          yield saveAppData(plugin, settings, app, oldAppData, appData, sourcePath, tableId, findCurrentViewType(el));
-        } catch (err) {
-          console.log(err);
-        }
-      });
-    }
-    handleUpdate();
-  }, [updateTime]);
-  (0, import_react30.useEffect)(() => {
-    let intervalId = null;
-    function startTimer() {
-      intervalId = setInterval(() => {
-        if (Date.now() - debounceUpdate < 250)
-          return;
-        clearInterval(intervalId);
-        setDebounceUpdate(0);
-        setUpdateTime(Date.now());
-      }, 100);
-    }
-    if (debounceUpdate !== 0)
-      startTimer();
-    return () => clearInterval(intervalId);
-  }, [debounceUpdate]);
-  (0, import_react30.useEffect)(() => {
-    let intervalId = null;
-    function startTimer() {
-      intervalId = setInterval(() => __async(this, null, function* () {
-        if (settings.state[sourcePath]) {
-          if (settings.state[sourcePath][tableId]) {
-            const { shouldUpdate, viewType } = settings.state[sourcePath][tableId];
-            const currentViewType = findCurrentViewType(el);
-            if (shouldUpdate && viewType !== currentViewType) {
-              clearInterval(intervalId);
-              settings.state[sourcePath][tableId].shouldUpdate = false;
-              yield plugin.saveSettings();
-              const savedData = settings.state[sourcePath][tableId].data;
-              setOldAppData(savedData);
-              setAppData(savedData);
-              startTimer();
-            }
+  function handleAutoWidthToggle(headerId, value) {
+    setAppData((prevState) => {
+      return __spreadProps(__spreadValues({}, prevState), {
+        headers: prevState.headers.map((header) => {
+          if (header.id === headerId) {
+            return __spreadProps(__spreadValues({}, header), {
+              useAutoWidth: value
+            });
           }
-        }
-      }), 500);
+          return header;
+        })
+      });
+    });
+  }
+  function handleWrapContentToggle(headerId, value) {
+    setAppData((prevState) => {
+      return __spreadProps(__spreadValues({}, prevState), {
+        headers: prevState.headers.map((header) => {
+          if (header.id === headerId) {
+            return __spreadProps(__spreadValues({}, header), {
+              shouldWrapOverflow: value
+            });
+          }
+          return header;
+        })
+      });
+    });
+  }
+  function measureElement(textContent, useAutoWidth, columnWidth, shouldWrapOverflow) {
+    const ruler = document.createElement("div");
+    if (useAutoWidth) {
+      ruler.style.width = "max-content";
+      ruler.style.height = "auto";
+      ruler.style.overflowWrap = "normal";
+    } else {
+      ruler.style.width = columnWidth;
+      ruler.style.height = "max-content";
+      if (shouldWrapOverflow) {
+        ruler.style.overflowWrap = "break-word";
+      } else {
+        ruler.style.overflowWrap = "normal";
+        ruler.style.whiteSpace = "nowrap";
+        ruler.style.overflow = "hidden";
+        ruler.style.textOverflow = "ellipsis";
+      }
     }
-    startTimer();
-    return () => clearInterval(intervalId);
-  }, []);
-  return /* @__PURE__ */ import_react30.default.createElement("div", {
+    ruler.style.paddingTop = "4px";
+    ruler.style.paddingBottom = "4px";
+    ruler.style.paddingLeft = "10px";
+    ruler.style.paddingRight = "10px";
+    ruler.textContent = textContent;
+    document.body.appendChild(ruler);
+    const width = window.getComputedStyle(ruler).getPropertyValue("width");
+    const height = window.getComputedStyle(ruler).getPropertyValue("height");
+    document.body.removeChild(ruler);
+    return { width: pxToNum(width), height: pxToNum(height) };
+  }
+  function findCellWidth(cellType, useAutoWidth, calculatedWidth, headerWidth) {
+    if (cellType !== CONTENT_TYPE.TEXT && cellType !== CONTENT_TYPE.NUMBER)
+      return headerWidth;
+    if (useAutoWidth)
+      return calculatedWidth;
+    return headerWidth;
+  }
+  const cellSizes = (0, import_react33.useMemo)(() => {
+    return appData.cells.map((cell) => {
+      const header = appData.headers.find((header2) => header2.id === cell.headerId);
+      const { width, height } = measureElement(cell.toString(), header.useAutoWidth, header.width, header.shouldWrapOverflow);
+      return {
+        rowId: cell.rowId,
+        headerId: header.id,
+        width,
+        height
+      };
+    });
+  }, [appData.cells, appData.headers]);
+  const rowHeights = (0, import_react33.useMemo)(() => {
+    const heights = {};
+    cellSizes.forEach((size) => {
+      const { rowId, height } = size;
+      if (!heights[rowId] || heights[rowId] < height)
+        heights[rowId] = height;
+    });
+    return Object.fromEntries(Object.entries(heights).map((entry) => {
+      const [key, value] = entry;
+      return [key, numToPx(value)];
+    }));
+  }, [cellSizes]);
+  const columnWidths = (0, import_react33.useMemo)(() => {
+    const widths = {};
+    cellSizes.forEach((size) => {
+      const { headerId, width: cellWidth } = size;
+      let width = cellWidth;
+      if (width < MIN_COLUMN_WIDTH_PX)
+        width = MIN_COLUMN_WIDTH_PX;
+      if (!widths[headerId] || widths[headerId] < width)
+        widths[headerId] = width;
+    });
+    return Object.fromEntries(Object.entries(widths).map((entry) => {
+      const [key, value] = entry;
+      return [key, numToPx(value)];
+    }));
+  }, [cellSizes]);
+  const {
+    scrollTime: tableScrollUpdateTime,
+    handleScroll: handleTableScroll
+  } = useScrollUpdate(150);
+  return /* @__PURE__ */ import_react33.default.createElement("div", {
+    id: tableId,
     className: "NLT__app",
-    tabIndex: 0
-  }, /* @__PURE__ */ import_react30.default.createElement(Table_default, {
-    headers: appData.headers.map((header, j) => {
-      const { id, content, width, type, sortName } = header;
-      return __spreadProps(__spreadValues({}, header), {
-        component: /* @__PURE__ */ import_react30.default.createElement(EditableTh, {
+    tabIndex: 0,
+    onScroll: handleTableScroll
+  }, /* @__PURE__ */ import_react33.default.createElement(Table, {
+    headers: appData.headers.map((header, columnIndex) => {
+      const {
+        id,
+        content,
+        width,
+        type,
+        sortName,
+        shouldWrapOverflow,
+        useAutoWidth
+      } = header;
+      return {
+        id,
+        component: /* @__PURE__ */ import_react33.default.createElement(EditableTh, {
           key: id,
           id,
-          width,
-          index: j,
+          width: findCellWidth(type, useAutoWidth, columnWidths[id], width),
+          shouldWrapOverflow,
+          useAutoWidth,
+          headerWidthUpdateTime,
+          tableScrollUpdateTime,
+          index: columnIndex,
           content,
           type,
           sortName,
-          inFirstHeader: j === 0,
-          inLastHeader: j === appData.headers.length - 1,
+          isFirstChild: columnIndex === 0,
+          isLastChild: columnIndex === appData.headers.length - 1,
           onSortSelect: handleHeaderSortSelect,
           onInsertColumnClick: handleInsertColumnClick,
           onMoveColumnClick: handleMoveColumnClick,
-          onWidthChange: handleWidthChange,
+          onWidthChange: handleHeaderWidthChange,
           onDeleteClick: handleDeleteHeaderClick,
           onSaveClick: handleHeaderSave,
-          onTypeSelect: handleHeaderTypeSelect
+          onTypeSelect: handleHeaderTypeSelect,
+          onAutoWidthToggle: handleAutoWidthToggle,
+          onWrapOverflowToggle: handleWrapContentToggle
         })
-      });
+      };
     }),
-    rows: appData.rows.map((row, i) => {
-      return __spreadProps(__spreadValues({}, row), {
-        component: /* @__PURE__ */ import_react30.default.createElement(import_react30.default.Fragment, null, appData.headers.map((header, j) => {
+    rows: appData.rows.map((row, rowIndex) => {
+      return {
+        id: row.id,
+        component: /* @__PURE__ */ import_react33.default.createElement(import_react33.default.Fragment, null, appData.headers.map((header) => {
           const cell = appData.cells.find((cell2) => cell2.rowId === row.id && cell2.headerId === header.id);
-          return /* @__PURE__ */ import_react30.default.createElement(EditableTd, {
+          const {
+            id: headerId,
+            type,
+            useAutoWidth,
+            width
+          } = header;
+          return /* @__PURE__ */ import_react33.default.createElement(EditableTd, {
             key: cell.id,
             cell,
-            width: header.width,
+            headerType: header.type,
+            tableScrollUpdateTime,
+            headerWidthUpdateTime,
+            shouldWrapOverflow: header.shouldWrapOverflow,
+            useAutoWidth,
+            width: findCellWidth(type, useAutoWidth, columnWidths[headerId], width),
+            height: rowHeights[row.id],
+            tagUpdate,
             tags: appData.tags.filter((tag) => tag.headerId === header.id),
             onTagClick: handleTagClick,
             onRemoveTagClick: handleRemoveTagClick,
             onContentChange: handleCellContentChange,
+            onSaveContent: handleCellContentSave,
             onColorChange: handleChangeColor,
             onAddTag: handleAddTag
           });
-        }), /* @__PURE__ */ import_react30.default.createElement("td", {
-          className: "NLT__td"
-        }, /* @__PURE__ */ import_react30.default.createElement(RowMenu, {
+        }), /* @__PURE__ */ import_react33.default.createElement("td", {
+          className: "NLT__td",
+          style: { height: rowHeights[row.id] }
+        }, /* @__PURE__ */ import_react33.default.createElement("div", {
+          className: "NLT__td-container"
+        }, /* @__PURE__ */ import_react33.default.createElement(RowMenu, {
+          tableScrollUpdateTime,
+          headerWidthUpdateTime,
           rowId: row.id,
-          isFirstRow: i === 0,
-          isLastRow: i === appData.rows.length - 1,
+          isFirstRow: rowIndex === 0,
+          isLastRow: rowIndex === appData.rows.length - 1,
           onMoveRowClick: handleMoveRowClick,
           onDeleteClick: handleDeleteRowClick,
           onInsertRowClick: handleInsertRowClick
-        })))
-      });
+        }))))
+      };
     }),
     onAddColumn: handleAddColumn,
     onAddRow: handleAddRow
@@ -59538,102 +59942,52 @@ function App({
 // src/app/services/appData/external/merge.ts
 var updateAppDataFromSavedState = (oldData, newData) => {
   const updated = __spreadValues({}, newData);
-  newData.headers.forEach((header, i) => {
-    const oldHeader = oldData.headers.find((h) => h.id === header.id);
-    if (oldHeader) {
-      const { sortName, width } = oldHeader;
+  newData.headers.forEach((_header, i) => {
+    if (i < oldData.headers.length) {
+      const { sortName, width, type, shouldWrapOverflow, useAutoWidth } = oldData.headers[i];
       updated.headers[i].sortName = sortName;
       updated.headers[i].width = width;
+      updated.headers[i].type = type;
+      updated.headers[i].shouldWrapOverflow = shouldWrapOverflow;
+      updated.headers[i].useAutoWidth = useAutoWidth;
     }
   });
-  newData.rows.forEach((row, i) => {
-    const oldRow = oldData.rows.find((row2) => row2.id === row2.id);
-    if (oldRow) {
-      const { creationTime } = oldRow;
+  newData.cells.forEach((c, i) => {
+    const content = c.toString();
+    const { id, rowId, headerId } = c;
+    const header = newData.headers.find((header2) => header2.id === headerId);
+    const cell = findNewCell(id, rowId, headerId, header.type, content);
+    updated.cells[i] = cell;
+    if (cell.type === CONTENT_TYPE.TAG) {
+      const index = updated.tags.findIndex((tag) => tag.content === content);
+      if (index !== -1) {
+        updated.tags[index].selected.push(id);
+      } else {
+        updated.tags.push(initialTag(v4_default(), headerId, id, content, randomColor()));
+      }
+    }
+  });
+  newData.rows.forEach((_row, i) => {
+    if (i < oldData.headers.length) {
+      const { creationTime } = oldData.rows[i];
+      updated.rows[i].creationTime = creationTime;
+    }
+  });
+  newData.rows.forEach((_row, i) => {
+    if (i < oldData.headers.length) {
+      const { creationTime } = oldData.rows[i];
       updated.rows[i].creationTime = creationTime;
     }
   });
   newData.tags.forEach((tag, i) => {
-    const oldTag = oldData.tags.find((t) => t.headerId === tag.headerId && t.content === tag.content);
-    if (oldTag) {
-      const { color } = oldTag;
-      updated.tags[i].color = color;
+    if (i < oldData.tags.length) {
+      if (oldData.tags[i].content === tag.content) {
+        const { color } = oldData.tags[i];
+        updated.tags[i].color = color;
+      }
     }
   });
   return updated;
-};
-
-// src/app/services/appData/debug/index.ts
-var appDataIdsToMarkdown = (tableId, data) => {
-  const columnCharLengths = calcColumnCharLengths(tableId, data);
-  const buffer = new AppDataStringBuffer();
-  buffer.createRow();
-  data.headers.forEach((header, i) => {
-    buffer.writeColumn(header.content, columnCharLengths[i]);
-  });
-  buffer.writeColumn("", columnCharLengths[data.headers.length]);
-  buffer.createRow();
-  for (let i = 0; i < data.headers.length + 1; i++) {
-    const content = Array(columnCharLengths[i]).fill("-").join("");
-    buffer.writeColumn(content, columnCharLengths[i]);
-  }
-  buffer.createRow();
-  data.headers.forEach((header, i) => {
-    buffer.writeColumn(header.type, columnCharLengths[i]);
-  });
-  buffer.writeColumn("", columnCharLengths[data.headers.length]);
-  buffer.createRow();
-  data.headers.forEach((header, i) => {
-    buffer.writeColumn(header.id, columnCharLengths[i]);
-  });
-  buffer.writeColumn(tableId, columnCharLengths[data.headers.length]);
-  data.rows.forEach((row) => {
-    buffer.createRow();
-    for (let i = 0; i < data.headers.length; i++) {
-      const cell = data.cells.find((cell2) => cell2.rowId === row.id && cell2.headerId === data.headers[i].id);
-      if (cell.type === CELL_TYPE.TAG) {
-        const tagIds = data.tags.filter((tag) => tag.selected.includes(cell.id)).map((tag) => tag.id);
-        buffer.writeColumn(tagIds.join(", "), columnCharLengths[i]);
-      } else {
-        buffer.writeColumn(cell.id, columnCharLengths[i]);
-      }
-    }
-    buffer.writeColumn(row.id, columnCharLengths[data.headers.length]);
-  });
-  return buffer.toString();
-};
-var appDataTypesToMarkdown = (tableId, data) => {
-  const columnCharLengths = calcColumnCharLengths(tableId, data);
-  const buffer = new AppDataStringBuffer();
-  buffer.createRow();
-  data.headers.forEach((header, i) => {
-    buffer.writeColumn(header.content, columnCharLengths[i]);
-  });
-  buffer.writeColumn("", columnCharLengths[data.headers.length]);
-  buffer.createRow();
-  for (let i = 0; i < data.headers.length + 1; i++) {
-    const content = Array(columnCharLengths[i]).fill("-").join("");
-    buffer.writeColumn(content, columnCharLengths[i]);
-  }
-  buffer.createRow();
-  data.headers.forEach((header, i) => {
-    buffer.writeColumn(header.type, columnCharLengths[i]);
-  });
-  buffer.writeColumn("", columnCharLengths[data.headers.length]);
-  buffer.createRow();
-  data.headers.forEach((header, i) => {
-    buffer.writeColumn(header.id, columnCharLengths[i]);
-  });
-  buffer.writeColumn(tableId, columnCharLengths[data.headers.length]);
-  data.rows.forEach((row) => {
-    buffer.createRow();
-    for (let i = 0; i < data.headers.length; i++) {
-      const cell = data.cells.find((cell2) => cell2.rowId === row.id && cell2.headerId === data.headers[i].id);
-      buffer.writeColumn(cell.type, columnCharLengths[i]);
-    }
-    buffer.writeColumn(row.id, columnCharLengths[data.headers.length]);
-  });
-  return buffer.toString();
 };
 
 // src/app/services/appData/external/load.ts
@@ -59643,60 +59997,73 @@ var loadAppData = (plugin, settings, el, sourcePath) => __async(void 0, null, fu
     console.log("[load][loadAppData]: parsedTableFromEl");
     console.log(parsedTable);
   }
-  const tableId = findTableId(parsedTable);
-  let isValidTable = true;
-  if (!tableId) {
-    console.log("NLT: Invalid table id");
-    isValidTable = false;
-  } else if (!hasValidHeaderRow(parsedTable)) {
-    console.log(`NLT: Invalid header row in ${tableId}`);
-    isValidTable = false;
-  } else if (!hasValidTypeDefinitionRow(parsedTable)) {
-    console.log(`NLT: Invalid type definition row in ${tableId}`);
-    isValidTable = false;
-  } else if (!hasValidColumnIds(parsedTable)) {
-    console.log(`NLT: Invalid column ids in ${tableId}`);
-    isValidTable = false;
-  } else if (!hasValidRowIds(parsedTable)) {
-    console.log(`NLT: Invalid row ids in ${tableId}`);
-    isValidTable = false;
-  }
-  if (!isValidTable) {
-    return { tableId: null, data: null };
+  const tableIndex = findTableIndex(parsedTable[0]);
+  if (settings.excludedFiles.includes(sourcePath)) {
+    console.log(`Excluding file path: ${sourcePath}`);
+    return { tableIndex, data: null };
   }
   if (settings.appData[sourcePath]) {
-    if (settings.appData[sourcePath][tableId]) {
-      const data2 = settings.appData[sourcePath][tableId];
+    if (settings.appData[sourcePath][tableIndex]) {
+      console.log("Migrating from before 3.4.0");
+      const appData = settings.appData[sourcePath][tableIndex];
       settings.state[sourcePath] = {};
-      settings.state[sourcePath][tableId] = {
-        data: data2,
+      settings.state[sourcePath][tableIndex] = {
+        data: appData,
         viewType: "live-preview",
-        shouldUpdate: false
+        shouldUpdate: false,
+        tableCacheVersion: 340
       };
-      delete settings.appData[sourcePath][tableId];
+      delete settings.appData[sourcePath][tableIndex];
       yield plugin.saveSettings();
+    }
+  }
+  if (settings.state[sourcePath]) {
+    if (settings.state[sourcePath][tableIndex]) {
+      const data2 = settings.state[sourcePath][tableIndex];
+      let tableCacheVersion = data2.tableCacheVersion;
+      if (!tableCacheVersion) {
+        console.log("Migrating from before 4.1.0");
+        tableCacheVersion = 400;
+      }
+      if (tableCacheVersion < CURRENT_TABLE_CACHE_VERSION) {
+        let obj = __spreadValues({}, settings.state[sourcePath][tableIndex]);
+        if (tableCacheVersion < 410) {
+          obj = __spreadProps(__spreadValues({}, obj), {
+            data: __spreadProps(__spreadValues({}, obj.data), {
+              headers: obj.data.headers.map((header) => {
+                return __spreadProps(__spreadValues({}, header), {
+                  useAutoWidth: false,
+                  shouldWrapOverflow: true
+                });
+              })
+            })
+          });
+        }
+        settings.state[sourcePath][tableIndex] = obj;
+        yield plugin.saveSettings();
+      }
     }
   }
   const viewType = findCurrentViewType(el);
   if (settings.state[sourcePath]) {
-    if (settings.state[sourcePath][tableId]) {
-      if (settings.state[sourcePath][tableId].data) {
-        const oldData = settings.state[sourcePath][tableId].data;
+    if (settings.state[sourcePath][tableIndex]) {
+      if (settings.state[sourcePath][tableIndex].data) {
+        const oldData = settings.state[sourcePath][tableIndex].data;
         if (DEBUG.LOAD_APP_DATA.DATA) {
           console.log("[load]: loadAppData");
           console.log("Loading from cache.");
-          console.log(`Table: ${tableId}, View: ${viewType}`);
+          console.log(`Table: ${tableIndex}, View: ${viewType}`);
           console.log(oldData);
         }
         const data2 = findAppData(parsedTable);
         const updated = updateAppDataFromSavedState(oldData, data2);
         if (DEBUG.LOAD_APP_DATA.IDS)
-          console.log(appDataIdsToMarkdown(tableId, data2));
+          console.log(appDataIdsToMarkdown(data2));
         if (DEBUG.LOAD_APP_DATA.TYPES)
-          console.log(appDataTypesToMarkdown(tableId, data2));
+          console.log(appDataTypesToMarkdown(data2));
         if (DEBUG.LOAD_APP_DATA.MARKDOWN)
-          console.log(appDataToMarkdown(tableId, data2));
-        return { tableId, data: updated };
+          console.log(appDataToMarkdown(data2));
+        return { tableIndex, data: updated };
       }
     }
   }
@@ -59704,23 +60071,24 @@ var loadAppData = (plugin, settings, el, sourcePath) => __async(void 0, null, fu
   if (DEBUG.LOAD_APP_DATA.DATA) {
     console.log("[load]: loadAppData");
     console.log("Loading new.");
-    console.log(`Table: ${tableId}, View: ${viewType}`);
+    console.log(`Table: ${tableIndex}, View: ${viewType}`);
     console.log(data);
   }
   if (DEBUG.LOAD_APP_DATA.IDS)
-    console.log(appDataIdsToMarkdown(tableId, data));
+    console.log(appDataIdsToMarkdown(data));
   if (DEBUG.LOAD_APP_DATA.TYPES)
-    console.log(appDataTypesToMarkdown(tableId, data));
+    console.log(appDataTypesToMarkdown(data));
   if (DEBUG.LOAD_APP_DATA.MARKDOWN)
-    console.log(appDataToMarkdown(tableId, data));
+    console.log(appDataToMarkdown(data));
   settings.state[sourcePath] = {};
-  settings.state[sourcePath][tableId] = {
+  settings.state[sourcePath][tableIndex] = {
     data,
     shouldUpdate: false,
-    viewType: findCurrentViewType(el)
+    viewType: findCurrentViewType(el),
+    tableCacheVersion: CURRENT_TABLE_CACHE_VERSION
   };
   yield plugin.saveSettings();
-  return { tableId, data };
+  return { tableIndex, data };
 });
 
 // src/NLTTable.tsx
@@ -59734,20 +60102,20 @@ var NLTTable = class extends import_obsidian2.MarkdownRenderChild {
   }
   onload() {
     return __async(this, null, function* () {
-      const { tableId, data } = yield loadAppData(this.plugin, this.settings, this.containerEl, this.sourcePath);
+      const { tableIndex, data } = yield loadAppData(this.plugin, this.settings, this.containerEl, this.sourcePath);
       if (data) {
         this.el = this.containerEl.createEl("div");
-        import_react_dom2.default.render(/* @__PURE__ */ import_react31.default.createElement(FocusProvider, {
+        import_react_dom2.default.render(/* @__PURE__ */ import_react34.default.createElement(FocusProvider, {
           plugin: this.plugin,
           sourcePath: this.sourcePath,
-          tableId,
+          tableIndex,
           el: this.el
-        }, /* @__PURE__ */ import_react31.default.createElement(MenuProvider, null, /* @__PURE__ */ import_react31.default.createElement(App, {
+        }, /* @__PURE__ */ import_react34.default.createElement(MenuProvider, null, /* @__PURE__ */ import_react34.default.createElement(App, {
           plugin: this.plugin,
           settings: this.settings,
           data,
           sourcePath: this.sourcePath,
-          tableId,
+          tableIndex,
           el: this.containerEl
         }))), this.el);
         this.containerEl.children[0].replaceWith(this.el);
@@ -59760,27 +60128,44 @@ var NLTTable = class extends import_obsidian2.MarkdownRenderChild {
 var DEFAULT_SETTINGS = {
   appData: {},
   state: {},
-  focusedElement: { id: "-1", type: TABBABLE_ELEMENT_TYPE.UNFOCUSED }
+  focusedElement: { id: "-1", type: TABBABLE_ELEMENT_TYPE.UNFOCUSED },
+  excludedFiles: []
 };
 
 // src/app/services/appData/mock/index.ts
-var createEmptyMarkdownTable = (tableId, columnId) => {
+var createEmptyMarkdownTable = () => {
   const rows = [];
-  rows[0] = "| New Column       |                  |";
-  rows[1] = "| ---------------- | ---------------- |";
-  rows[2] = "| text             |                  |";
-  rows[3] = `| ${columnId} | ${tableId}  |`;
+  rows[0] = "| New Column |";
+  rows[1] = "| ---------- |";
   return rows.join("\n");
 };
 
+// NltSettingsTab.ts
+var import_obsidian3 = __toModule(require("obsidian"));
+var NltSettingsTab = class extends import_obsidian3.PluginSettingTab {
+  constructor(app2, plugin) {
+    super(app2, plugin);
+    this.plugin = plugin;
+  }
+  display() {
+    let { containerEl } = this;
+    containerEl.empty();
+    new import_obsidian3.Setting(containerEl).setName("Excluded tables").setDesc("File paths whose tables will not be rendered as a Notion-Like table. Please separate different paths by commas e.g. folder/note1.md, folder/note2.md, note3.md").addText((text) => text.setValue(this.plugin.settings.excludedFiles.join(",")).onChange((value) => __async(this, null, function* () {
+      const paths = value.split(",");
+      this.plugin.settings.excludedFiles = paths;
+      yield this.plugin.saveSettings();
+    })));
+  }
+};
+
 // main.ts
-var NltPlugin = class extends import_obsidian3.Plugin {
+var NltPlugin = class extends import_obsidian4.Plugin {
   constructor() {
     super(...arguments);
     this.focused = null;
-    this.focusTable = (tableId, sourcePath, viewType) => {
+    this.focusTable = (tableIndex, sourcePath, viewType) => {
       this.focused = {
-        tableId,
+        tableIndex,
         sourcePath,
         viewType
       };
@@ -59799,6 +60184,7 @@ var NltPlugin = class extends import_obsidian3.Plugin {
           context.addChild(new NLTTable(element, this.app, this, this.settings, context.sourcePath));
         }
       });
+      this.addSettingTab(new NltSettingsTab(this.app, this));
       this.registerCommands();
       this.registerEvents();
     });
@@ -59820,7 +60206,7 @@ var NltPlugin = class extends import_obsidian3.Plugin {
       name: "Add table",
       hotkeys: [{ modifiers: ["Mod", "Shift"], key: "=" }],
       editorCallback: (editor) => {
-        editor.replaceSelection(createEmptyMarkdownTable(randomTableId(), randomColumnId()));
+        editor.replaceSelection(createEmptyMarkdownTable());
       }
     });
     this.addCommand({
@@ -59829,12 +60215,12 @@ var NltPlugin = class extends import_obsidian3.Plugin {
       hotkeys: [{ modifiers: ["Mod", "Shift"], key: "\\" }],
       callback: () => __async(this, null, function* () {
         if (this.focused) {
-          const { tableId, sourcePath, viewType } = this.focused;
-          const oldData = this.settings.state[sourcePath][tableId].data;
+          const { tableIndex, sourcePath, viewType } = this.focused;
+          const oldData = this.settings.state[sourcePath][tableIndex].data;
           const newData = addColumn(oldData);
-          yield saveAppData(this, this.settings, app, oldData, newData, sourcePath, tableId, viewType);
+          yield saveAppData(this, this.settings, app, oldData, newData, sourcePath, tableIndex, viewType);
         } else {
-          new import_obsidian3.Notice("No table focused. Please click a table to preform this operation.");
+          new import_obsidian4.Notice("No table focused. Please click a table to preform this operation.");
         }
       })
     });
@@ -59844,12 +60230,12 @@ var NltPlugin = class extends import_obsidian3.Plugin {
       hotkeys: [{ modifiers: ["Mod", "Shift"], key: "Enter" }],
       callback: () => __async(this, null, function* () {
         if (this.focused) {
-          const { tableId, sourcePath, viewType } = this.focused;
-          const oldData = this.settings.state[sourcePath][tableId].data;
+          const { tableIndex, sourcePath, viewType } = this.focused;
+          const oldData = this.settings.state[sourcePath][tableIndex].data;
           const newData = addRow(oldData);
-          yield saveAppData(this, this.settings, app, oldData, newData, sourcePath, tableId, viewType);
+          yield saveAppData(this, this.settings, app, oldData, newData, sourcePath, tableIndex, viewType);
         } else {
-          new import_obsidian3.Notice("No table focused. Please click a table to preform this operation.");
+          new import_obsidian4.Notice("No table focused. Please click a table to preform this operation.");
         }
       })
     });
@@ -59874,7 +60260,7 @@ var NltPlugin = class extends import_obsidian3.Plugin {
       this.app.workspace.iterateAllLeaves((leaf) => {
         const view = leaf.view;
         if (view.getViewType() === "markdown") {
-          if (view instanceof import_obsidian3.MarkdownView)
+          if (view instanceof import_obsidian4.MarkdownView)
             view.previewMode.rerender(true);
         }
       });
@@ -59891,6 +60277,7 @@ object-assign
   Licensed under the MIT License (MIT), see
   http://jedwatson.github.io/classnames
 */
+/*! crc32.js (C) 2014-present SheetJS -- http://sheetjs.com */
 /**
  * Checks if an event is supported in the current execution environment.
  *
