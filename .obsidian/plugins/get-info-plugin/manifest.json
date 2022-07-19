@@ -1,0 +1,10 @@
+{
+	"id": "get-info-plugin",
+	"name": "Get Info",
+	"version": "1.1.0",
+	"minAppVersion": "0.12.0",
+	"description": "A small menu that is tucked inside your status bar and shows helpful information for your chosen file 📄.",
+	"author": "chetachi",
+  	"authorUrl": "https://github.com/chetachiezikeuzor",
+	"isDesktopOnly": true
+}

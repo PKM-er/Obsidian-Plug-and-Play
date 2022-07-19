@@ -1,0 +1,10 @@
+{
+	"id": "obsidian-math-plus",
+	"name": "Obsidian Math+",
+	"version": "0.3.0",
+	"minAppVersion": "0.12.0",
+	"description": "This is an Obsidian plugin for taking math notes using Excalidraw.",
+	"author": "Oscar Capraro",
+	"authorUrl": "https://github.com/ocapraro",
+	"isDesktopOnly": true
+}
