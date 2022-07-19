@@ -1,4 +1,6 @@
 {
   "addTaskProgressBarToHeading": true,
-  "addNumberToProgressBar": true
+  "addNumberToProgressBar": true,
+  "allowAlternateTaskStatus": true,
+  "alternativeMarks": "(x|X|-)"
 }

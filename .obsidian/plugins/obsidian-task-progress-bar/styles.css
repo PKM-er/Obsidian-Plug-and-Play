@@ -4,8 +4,6 @@
 	position: relative;
 	margin-left: 5px;
 	margin-bottom: 1px;
-	border:1px solid;
-	border-radius:0.25em;
 }
 
 .HyperMD-header .cm-task-progress-bar {
@@ -51,10 +49,4 @@
 .cm-task-progress-bar.with-number .progress-status {
 	font-size: 13px;
 	margin-left: 3px;
-}
-
-/*给任务进度条增加边框*/
-.cm-task-progress-bar {
-	border:1px solid;
-	border-radius:0.25em;
 }
