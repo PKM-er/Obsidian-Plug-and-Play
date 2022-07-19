@@ -1,6 +1,18 @@
 {
   "recentFiles": [
     {
+      "basename": "FastStart-Plugins-ShortDelay",
+      "path": "Template/startup/FastStart-Plugins-ShortDelay.md"
+    },
+    {
+      "basename": "FastStart-Plugins-LongLongDelay",
+      "path": "Template/startup/FastStart-Plugins-LongLongDelay.md"
+    },
+    {
+      "basename": "FastStart-Plugins-LongDelay",
+      "path": "Template/startup/FastStart-Plugins-LongDelay.md"
+    },
+    {
       "basename": "Readme",
       "path": "Obsidian-example/Readme.md"
     },
@@ -187,18 +199,6 @@
     {
       "basename": "✅每日检查To-Do image 5",
       "path": "📊Every Day/素材库/✅每日检查To-Do image 5.png"
-    },
-    {
-      "basename": "✅每日检查To-Do image 10",
-      "path": "📊Every Day/素材库/✅每日检查To-Do image 10.png"
-    },
-    {
-      "basename": "✅每日检查To-Do image 11",
-      "path": "📊Every Day/素材库/✅每日检查To-Do image 11.png"
-    },
-    {
-      "basename": "tmp1655263358643_✅每日检查To-Do image 1",
-      "path": "📊Every Day/素材库/tmp1655263358643_✅每日检查To-Do image 1.png"
     }
   ],
   "omittedPaths": [
