@@ -118,18 +118,31 @@ var RememberFileStatePluginSettingTab = class extends import_obsidian.PluginSett
 var DEFAULT_DATA = {
   rememberedFiles: {}
 };
+var WarningModal = class extends import_obsidian2.Modal {
+  constructor(app2, title, message) {
+    super(app2);
+    this.title = "";
+    this.message = "";
+    this.title = title;
+    this.message = message;
+  }
+  onOpen() {
+    this.contentEl.createEl("h2", { text: this.title });
+    this.contentEl.createEl("p", { text: this.message });
+  }
+};
 var RememberFileStatePlugin = class extends import_obsidian2.Plugin {
   constructor() {
     super(...arguments);
     this._suppressNextFileOpen = false;
     this._nextUniqueViewId = 0;
+    this._lastOpenFiles = {};
     this._viewUninstallers = {};
     this._globalUninstallers = [];
     this.registerOnUnloadFile = function(view) {
       var filePath = view.file.path;
       var viewId = this.getUniqueViewId(view, true);
       if (viewId in this._viewUninstallers) {
-        console.debug(`View ${viewId} is already registered`, filePath);
         return;
       }
       console.debug(`Registering callback on view ${viewId}`, filePath);
@@ -150,6 +163,7 @@ var RememberFileStatePlugin = class extends import_obsidian2.Plugin {
         if (plugin) {
           console.debug(`Unregistering view ${viewId} callback`, filePath);
           delete plugin._viewUninstallers[viewId];
+          delete plugin._lastOpenFiles[viewId];
           uninstall();
         } else {
           console.debug("Plugin obsidian-remember-file-state has been unloaded, ignoring unregister");
@@ -161,7 +175,14 @@ var RememberFileStatePlugin = class extends import_obsidian2.Plugin {
         var activeView = this.app.workspace.getActiveViewOfType(import_obsidian2.MarkdownView);
         if (activeView) {
           this.registerOnUnloadFile(activeView);
-          if (!this._suppressNextFileOpen && !this.isFileMultiplyOpen(openedFile)) {
+          var isRealFileOpen = true;
+          const viewId = this.getUniqueViewId(activeView);
+          if (viewId != void 0) {
+            const lastOpenFileInView = this._lastOpenFiles[viewId];
+            isRealFileOpen = lastOpenFileInView != openedFile.path;
+            this._lastOpenFiles[viewId] = openedFile.path;
+          }
+          if (!this._suppressNextFileOpen && !this.isFileMultiplyOpen(openedFile) && isRealFileOpen) {
             try {
               this.restoreFileState(openedFile, activeView);
             } catch (err) {
@@ -286,6 +307,9 @@ var RememberFileStatePlugin = class extends import_obsidian2.Plugin {
       });
       this._globalUninstallers.push(uninstall);
       this.addSettingTab(new RememberFileStatePluginSettingTab(this.app, this));
+      if (this.app.vault.getConfig("legacyEditor") !== false) {
+        new WarningModal(this.app, "Legacy Editor Not Supported", "The 'Remember File State' plugin works only with the new editor. Please turn off 'Legacy Editor' in the options.").open();
+      }
     });
   }
   onunload() {
@@ -309,6 +333,7 @@ var RememberFileStatePlugin = class extends import_obsidian2.Plugin {
     });
     console.debug(`Unregistered ${numViews} view callbacks`);
     this._viewUninstallers = {};
+    this._lastOpenFiles = {};
     this._globalUninstallers.forEach((cb) => cb());
   }
   loadSettings() {
