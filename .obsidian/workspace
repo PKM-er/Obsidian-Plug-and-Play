@@ -6,14 +6,6 @@
       {
         "id": "9ee8dadf3fe9cf81",
         "type": "leaf",
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Obsidian-example/Readme.md",
-            "mode": "source",
-            "source": false
-          }
-        },
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
@@ -21,27 +13,17 @@
               "leaf": "9ee8dadf3fe9cf81",
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Readme.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":85,\"ch\":0},\"to\":{\"line\":85,\"ch\":0}},\"scroll\":172.32454058329265}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Readme英文版.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"scroll\":0}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Readme.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"scroll\":133.04876253681797}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Example and showcase/01、基本语法.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"scroll\":0}"
+              "eState": "{\"scroll\":26.297348484848484}"
             }
           ]
+        },
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Obsidian-example/Readme.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -58,30 +40,34 @@
           {
             "id": "f70f39237c7cd7f5",
             "type": "leaf",
-            "state": {
-              "type": "recent-files",
-              "state": {}
-            },
             "pane-relief:history-v1": {
               "pos": 0,
               "stack": []
+            },
+            "state": {
+              "type": "recent-files",
+              "state": {}
             }
           },
           {
             "id": "c55efec099ef9ac1",
             "type": "leaf",
-            "state": {
-              "type": "file-explorer",
-              "state": {}
-            },
             "pane-relief:history-v1": {
               "pos": 0,
               "stack": []
+            },
+            "state": {
+              "type": "file-explorer",
+              "state": {}
             }
           },
           {
             "id": "b0a47a1490c3954e",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            },
             "state": {
               "type": "search",
               "state": {
@@ -92,22 +78,18 @@
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
             }
           },
           {
             "id": "9a63bc5b1fa84f6f",
             "type": "leaf",
-            "state": {
-              "type": "starred",
-              "state": {}
-            },
             "pane-relief:history-v1": {
               "pos": 0,
               "stack": []
+            },
+            "state": {
+              "type": "starred",
+              "state": {}
             }
           }
         ],
@@ -128,6 +110,10 @@
           {
             "id": "79b83872d38fae1a",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            },
             "state": {
               "type": "backlink",
               "state": {
@@ -140,15 +126,15 @@
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
             }
           },
           {
             "id": "1816a5255b9bdd70",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            },
             "state": {
               "type": "outgoing-link",
               "state": {
@@ -156,49 +142,33 @@
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
             }
           },
           {
             "id": "4bb83e5cfb104650",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            },
             "state": {
               "type": "tag",
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
               }
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
-            }
-          },
-          {
-            "id": "53bf8a385f3c3882",
-            "type": "leaf",
-            "state": {
-              "type": "quiet-outline",
-              "state": {}
-            },
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
             }
           },
           {
             "id": "b6443d2a7ed3990d",
             "type": "leaf",
-            "state": {
-              "type": "tlfItemView",
-              "state": {}
-            },
             "pane-relief:history-v1": {
               "pos": 0,
               "stack": []
+            },
+            "state": {
+              "type": "tlfItemView",
+              "state": {}
             }
           }
         ],
@@ -208,7 +178,7 @@
     "direction": "horizontal",
     "width": 353.72222900390625
   },
-  "active": "9ee8dadf3fe9cf81",
+  "active": "f70f39237c7cd7f5",
   "lastOpenFiles": [
     "Obsidian-example/Readme.md",
     "Obsidian-example/Readme英文版.md",
