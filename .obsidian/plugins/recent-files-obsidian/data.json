@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Readme",
+      "path": "Obsidian-example/Readme.md"
+    },
+    {
       "basename": "必看的影片",
       "path": "3-Family/👶儿童教育/🎓Education/多媒体教育/必看的影片.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "tmp1655263358643_✅每日检查To-Do image 1",
       "path": "📊Every Day/素材库/tmp1655263358643_✅每日检查To-Do image 1.png"
-    },
-    {
-      "basename": "tmp1655261051072_✅每日检查To-Do image 1",
-      "path": "📊Every Day/素材库/tmp1655261051072_✅每日检查To-Do image 1.png"
     }
   ],
   "omittedPaths": [
