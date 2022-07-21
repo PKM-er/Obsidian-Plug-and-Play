@@ -3,12 +3,12 @@ markdown-table-editor
 quickadd
 table-extended
 obsidian-advanced-uri
-obsidian-indentation-guides
 obsidian-kanban
 recent-files-obsidian
 obsidian-quiet-outline
 obsidian-image-toolkit
 lapel
 obsidian-remember-file-state
-notion-like-tables
 obsidian-rich-links
+obsidian-booknote-plugin
+cmenu-plugin
