@@ -11,10 +11,11 @@ banner: {{VALUE:cover}}
 banner_icon: 📖
 publish: {{VALUE:publish}}
 publishyear: {{VALUE:publishyear}}
-progress:
-status: 
-pagecount: {{VALUE:pagecount}}
-pageprogress: 
+grade:  
+status:  
+readtime:  
+pagecount: {{VALUE:pagecount}}  
+pageprogress:
 ---
 
 > [!bookinfo]+ **《{{VALUE:bookname}}》**
@@ -39,7 +40,7 @@ pageprogress:
 {{VALUE:authorintro}}
 
 {{VALUE:quote1}}
- {{VALUE:quote2}}
+{{VALUE:quote2}}
 
 ## 1. 心得体会
 

@@ -5,13 +5,20 @@ cover: {{VALUE:Poster}}
 tags: Movie
 douban_url: {{VALUE:douban_url}}
 director: {{VALUE:director}}
+alias: {{VALUE:alias}}
 rating: {{VALUE:rating}}
 year: {{VALUE:year}}
 genre: {{VALUE:genre}}
-banner_icon: 🎞 
+banner_icon: 🎞
 banner: {{VALUE:banner}}
+IMDb:  {{VALUE:IMDb}}
+lead: {{VALUE:lead}} 
+language: {{VALUE:language}} 
+country: {{VALUE:country}} 
+viewtime:
+updated: 
 status: 
-progress: 
+progress:
 ---
 
 ## 1. 内容简介
