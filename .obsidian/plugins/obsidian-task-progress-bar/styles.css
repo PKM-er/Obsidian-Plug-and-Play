@@ -15,8 +15,13 @@
 
 .progress-bar-inline {
 	border-radius: 10px;
-
 }
+
+/*为task progrss bar 添加边框，优化完全没有完成的任务，进度显示不够明显*/
+.cm-task-progress-bar .progress-bar-inline-background { 
+	border:1px solid;
+}
+/*———END———*/
 
 .progress-bar-inline-background {
 	color: #000 !important;
