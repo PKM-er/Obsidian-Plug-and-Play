@@ -1,6 +1,10 @@
 {
   "recentFiles": [
     {
+      "basename": "Readme",
+      "path": "Readme.md"
+    },
+    {
       "basename": "FastStart-Plugins-ShortDelay",
       "path": "Template/startup/FastStart-Plugins-ShortDelay.md"
     },
@@ -195,10 +199,6 @@
     {
       "basename": "✅每日检查To-Do image 2",
       "path": "📊Every Day/素材库/✅每日检查To-Do image 2.png"
-    },
-    {
-      "basename": "✅每日检查To-Do image 5",
-      "path": "📊Every Day/素材库/✅每日检查To-Do image 5.png"
     }
   ],
   "omittedPaths": [

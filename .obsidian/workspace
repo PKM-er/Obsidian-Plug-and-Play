@@ -6,14 +6,10 @@
       {
         "id": "9ee8dadf3fe9cf81",
         "type": "leaf",
-        "pane-relief:history-v1": {
-          "pos": 0,
-          "stack": []
-        },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Template/startup/FastStart-Plugins-ShortDelay.md",
+            "file": "Readme.md",
             "mode": "source",
             "source": false
           }
@@ -41,10 +37,6 @@
           {
             "id": "c55efec099ef9ac1",
             "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
-            },
             "state": {
               "type": "file-explorer",
               "state": {}
@@ -94,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Template/startup/FastStart-Plugins-ShortDelay.md",
+                "file": "Readme.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -111,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Template/startup/FastStart-Plugins-ShortDelay.md",
+                "file": "Readme.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -151,8 +143,9 @@
     "direction": "horizontal",
     "width": 353.72222900390625
   },
-  "active": "c55efec099ef9ac1",
+  "active": "9ee8dadf3fe9cf81",
   "lastOpenFiles": [
+    "Template/startup/FastStart-Plugins-ShortDelay.md",
     "Template/startup/FastStart-Plugins-LongLongDelay.md",
     "Template/startup/FastStart-Plugins-LongDelay.md",
     "Obsidian-example/Readme.md",
@@ -161,7 +154,6 @@
     "📊Every Day/📊Every Day 1.md",
     "📊Every Day/📊Every Day.md",
     "📊Every Day/✅每日检查To-Do.md",
-    "Knowledge/Book-Note/Book-Note.md",
-    "Obisdian-learning/StartPage/Startpage.md"
+    "Knowledge/Book-Note/Book-Note.md"
   ]
 }

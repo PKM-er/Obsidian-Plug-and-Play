@@ -56799,7 +56799,7 @@ var BOLD_TAG_CLOSE = "</b>";
 var HIGHLIGHT_TAG_START = "<mark>";
 var HIGHLIGHT_TAG_CLOSE = "</mark>";
 var MIN_COLUMN_WIDTH_PX = 50;
-var CURRENT_TABLE_CACHE_VERSION = 410;
+var CURRENT_TABLE_CACHE_VERSION = 411;
 
 // src/app/services/string/matchers/index.ts
 var matchBoldMarkdown = (input) => {
@@ -59968,13 +59968,7 @@ var updateAppDataFromSavedState = (oldData, newData) => {
     }
   });
   newData.rows.forEach((_row, i) => {
-    if (i < oldData.headers.length) {
-      const { creationTime } = oldData.rows[i];
-      updated.rows[i].creationTime = creationTime;
-    }
-  });
-  newData.rows.forEach((_row, i) => {
-    if (i < oldData.headers.length) {
+    if (i < oldData.rows.length) {
       const { creationTime } = oldData.rows[i];
       updated.rows[i].creationTime = creationTime;
     }
