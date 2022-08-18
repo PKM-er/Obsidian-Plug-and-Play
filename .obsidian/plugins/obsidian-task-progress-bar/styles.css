@@ -45,10 +45,9 @@
 	margin-bottom: 5px;
 }
 
-
 .cm-task-progress-bar.with-number .progress-bar-inline-background {
 	margin-bottom: -2px;
-	width: 42px;
+	width:80px;
 }
 
 .cm-task-progress-bar.with-number .progress-status {
