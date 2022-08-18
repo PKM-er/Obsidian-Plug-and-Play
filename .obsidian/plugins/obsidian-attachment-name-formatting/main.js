@@ -6884,6 +6884,7 @@ var DEFAULT_SETTINGS = {
   audio: "audio",
   video: "video",
   pdf: "pdf",
+  connector: "_",
   exportCurrentDeletion: false,
   exportUnusedDeletion: false,
   copyPath: false,
@@ -6892,7 +6893,7 @@ var DEFAULT_SETTINGS = {
 var extensions = {
   image: ["png", "jpg", "jpeg", "gif", "bmp", "svg"],
   audio: ["mp3", "wav", "m4a", "ogg", "3gp", "flac"],
-  video: ["map", "ogv"],
+  video: ["mp4", "ogv", "mov", "mkv"],
   pdf: ["pdf"]
 };
 var ribbons = {
@@ -6976,7 +6977,7 @@ var AttachmentNameFormatting = class extends import_obsidian.Plugin {
           for (let attachmentFile of attachmentFiles) {
             if (attachmentFile instanceof import_obsidian.TFile) {
               let parent_path = attachmentFile.path.substring(0, attachmentFile.path.length - attachmentFile.name.length);
-              let newName = [file.basename, this.settings[fileType], num].join(" ") + "." + attachmentFile.extension;
+              let newName = [file.basename, this.settings[fileType], num].join(this.settings.connector) + "." + attachmentFile.extension;
               let fullName = parent_path + newName;
               let destinationFile = this.app.vault.getAbstractFileByPath(fullName);
               if (destinationFile && destinationFile !== attachmentFile) {
@@ -7164,8 +7165,22 @@ var AttachmentNameFormattingSettingTab = class extends import_obsidian.PluginSet
     containerEl.createEl("p", { text: 'This plugin will format all attachments in the format: "filename attachmentType indexNumber.xxx".' });
     containerEl.createEl("p", { text: "Each type of attachment will have individual index." });
     containerEl.createEl("p", { text: "Only recognize the file type that can be recognized by Obsidian." });
-    containerEl.createEl("p", { text: '(Do not have "webm" extension in audio and video right now)' });
+    containerEl.createEl("h3", { text: "Supported file formats" });
+    containerEl.createEl("p", { text: "Image files: png, jpg, jpeg, gif, bmp, svg" });
+    containerEl.createEl("p", { text: "Audio files: mp3, wav, m4a, ogg, 3gp, flac" });
+    containerEl.createEl("p", { text: "Video files: mp4, ogv, mov, mkv" });
+    containerEl.createEl("p", { text: "PDF files: pdf" });
+    containerEl.createEl("p", { text: 'Do not have "webm" extension in audio and video right now' });
     containerEl.createEl("h2", { text: "Attachments Format Setting" });
+    new import_obsidian.Setting(containerEl).setName("Format for connector").setDesc("Set the format for connector between file name and attachment name.").addText((text) => text.setPlaceholder("_").setValue(this.plugin.settings.connector === "_" ? "" : this.plugin.settings.connector).onChange((value) => __async(this, null, function* () {
+      let fileNamepatn = /\||<|>|\?|\*|:|\/|\\|"/;
+      if (fileNamepatn.test(value) || value === "") {
+        new FilenameWarningModal(this.app).open();
+        value = "_";
+      }
+      this.plugin.settings.connector = value;
+      yield this.plugin.saveSettings();
+    })));
     new import_obsidian.Setting(containerEl).setName("Format for image").setDesc("Set the format for image attachment.").addText((text) => text.setPlaceholder("image").setValue(this.plugin.settings.image === "image" ? "" : this.plugin.settings.image).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.image = value;
       yield this.plugin.saveSettings();
@@ -7189,7 +7204,7 @@ var AttachmentNameFormattingSettingTab = class extends import_obsidian.PluginSet
     new import_obsidian.Setting(containerEl).setName("Deletion After Exporting Attachments in Current File").setDesc("Autodeletion after exporting attachments in current file.").addToggle((toggle) => toggle.setValue(this.plugin.settings.exportCurrentDeletion).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.exportCurrentDeletion = value;
       if (value) {
-        new WarningModal(this.app).open();
+        new DeletionWarningModal(this.app).open();
       }
       yield this.plugin.saveSettings();
     })));
@@ -7199,7 +7214,7 @@ var AttachmentNameFormattingSettingTab = class extends import_obsidian.PluginSet
     new import_obsidian.Setting(containerEl).setName("Deletion After Exporting Unused Attachments in Vault").setDesc("Autodeletion after exporting unused attachments in vault.").addToggle((toggle) => toggle.setValue(this.plugin.settings.exportUnusedDeletion).onChange((value) => __async(this, null, function* () {
       this.plugin.settings.exportUnusedDeletion = value;
       if (value) {
-        new WarningModal(this.app).open();
+        new DeletionWarningModal(this.app).open();
       }
       yield this.plugin.saveSettings();
     })));
@@ -7218,13 +7233,26 @@ var AttachmentNameFormattingSettingTab = class extends import_obsidian.PluginSet
     });
   }
 };
-var WarningModal = class extends import_obsidian.Modal {
+var DeletionWarningModal = class extends import_obsidian.Modal {
   constructor(app) {
     super(app);
   }
   onOpen() {
     const { contentEl } = this;
     contentEl.setText("Will delete the attachments and content after export!");
+  }
+  onClose() {
+    const { contentEl } = this;
+    contentEl.empty();
+  }
+};
+var FilenameWarningModal = class extends import_obsidian.Modal {
+  constructor(app) {
+    super(app);
+  }
+  onOpen() {
+    const { contentEl } = this;
+    contentEl.setText('Invalid/No connector for filename, will use "_" as connector!');
   }
   onClose() {
     const { contentEl } = this;
