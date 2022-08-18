@@ -1,6 +1,8 @@
 {
   "isTab": false,
-  "version": "0.5.2",
+  "isShowNum": false,
+  "maxScroll": 50,
+  "version": "0.5.4",
   "hColor": "#2485E3",
   "bColor": "#FFB78B",
   "hColor1": "#ff0000",
