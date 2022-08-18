@@ -2,34 +2,30 @@
 
 /* Styles are wrapped inside a shadow DOM. If you want to see them go to https://github.com/arnau/obsidian-metatable/blob/main/src/metatable.css */
 
-
 /* The styles below are an example that can get you started with the Naked
  * option
  */
 
+/*
 
-  
 .theme-light .obsidian-metatable {
-
+  --metatable-foreground: var(--text-muted, darkslategrey);
   --metatable-key-background: var(--background-primary-alt, #f3f3f3);
   --metatable-key-border-color: var(--background-modifier-border, lightgrey);
   --metatable-key-border-color-focus: orange;
   --metatable-key-focus: var(--background-match-highlight, lightyellow);
-  --metatable-tag-color:#ffffff;
-  --metatable-tag-background-color: #158dadad;
+  --metatable-tag-background: var(--background-primary-alt, #f3f3f3);
   --metatable-link-color: var(--text-accent, #705dcf);
   --metatable-link-color-hover: var(--text-accent-hover, #8875ff);
 }
 
-
 .theme-dark .obsidian-metatable {
-
+  --metatable-foreground: var(--text-muted, #999);
   --metatable-key-background: var(--background-primary-alt, #111);
   --metatable-key-border-color: var(--background-modifier-border, #333);
   --metatable-key-border-color-focus: orange;
   --metatable-key-focus: black;
-  --metatable-tag-color:#000000;
-  --metatable-tag-background-color: var(--background-primary-alt, #111);
+  --metatable-tag-background: var(--background-primary-alt, #111);
   --metatable-link-color: var(--text-accent, #705dcf);
   --metatable-link-color-hover: var(--text-accent-hover, #8875ff);
 }
@@ -39,7 +35,7 @@
   --metatable-expanded-symbol: "▼";
   --metatable-font-family: var(--text, sans-serif);
   --metatable-font-size: var(--font-small, 13px);
-  --metatable-key-border-width: 1px;
+  --metatable-key-border-width: 2px;
   --metatable-mark-symbol: "…";
   --metatable-value-background: transparent;
   --metatable-background: transparent;
@@ -51,40 +47,20 @@
   --metatable-internal-link-color: var(--metatable-link-color);
   --metatable-internal-link-color-hover: var(--metatable-link-color-hover);
 }
- 
- .obsidian-metatable * {
+
+.obsidian-metatable * {
   box-sizing: border-box;
-} 
-
-
-/* 增加页面 metatabel 的圆角矩形边框 */
-.obsidian-metatable {
-    border: 1px solid;
-	border-color:#bfbfbf;
-	padding: 6px 14px;
-	border-radius:0.5em;
-} 
-
-/*修复banners 和 metatable 冲突*/
-.markdown-preview-sizer .has-banner-icon .obsidian-metatable {
-	margin-top: 25px !important;
 }
-
-.obsidian-banner-wrapper .obsidian-metatable {
-     margin-top: 300px;
-} 
 
 .obsidian-metatable details {
   background-color: var(--metatable-background);
-  color: #ffffff;
+  color: var(--metatable-foreground);
   font-family: var(--metatable-font-family);
   font-size: var(--metatable-font-size);
 }
 
-.obsidian-metatable .metatable summary *{
-  border-bottom:1px solid;
-  border-bottom-color:#bfbfbf;
-  margin-bottom:2px;
+.obsidian-metatable summary {
+  cursor: pointer;
 }
 
 .obsidian-metatable summary:focus {
@@ -93,7 +69,7 @@
 
 .obsidian-metatable summary:focus-visible {
   outline: none;
-  /* background-color: var(--metatable-key-focus) */
+  background-color: var(--metatable-key-focus)
 }
 
 .obsidian-metatable .set {
@@ -137,13 +113,6 @@
   margin: 0;
   overflow: auto;
   padding: 0.4rem;
-}
-
-/*tag 颜色控制*/
-.obsidian-metatable .member .value .tag-list .tag {
-  border: none;
-  background-color: var(--metatable-tag-background-color);
-  color:var(--metatable-tag-color);
 }
 
 .obsidian-metatable .member .key:focus {
@@ -218,10 +187,10 @@
   margin: 0 0.4rem 0 2px;
 }
 
-.obsidian-metatable .tag-list {
-  color: var(--metatable-tag-color);
-  background-color: var(--metatable-tag-background-color);
+.obsidian-metatable .tag {
+  background-color: var(--metatable-tag-background);
   border-radius: 1rem;
+  color: var(--metatable-foreground);
   display: inline-block;
   padding: 0.1rem 0.6rem;
   text-decoration: none;
@@ -284,3 +253,5 @@
 .obsidian-metatable .internal-link:hover {
   color: var(--metatable-internal-link-color-hover);
 }
+
+*/
