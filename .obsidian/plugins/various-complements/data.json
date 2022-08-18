@@ -42,5 +42,38 @@
   "frontMatterComplementMatchStrategy": "prefix",
   "insertCommaAfterFrontMatterCompletion": false,
   "showLogAboutPerformanceInConsole": false,
-  "selectionHistoryTree": {}
+  "selectionHistoryTree": {
+    "1": {
+      "1": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1658841265442
+        }
+      }
+    },
+    "这个之前读取的是信息治理和信安的相关治理消息，不知道这个逻辑是否已经没有了？": {
+      "这个之前读取的是信息治理和信安的相关治理消息，不知道这个逻辑是否已经没有了？": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1659002451051
+        }
+      }
+    },
+    "preview": {
+      "preview": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1660701466046
+        }
+      }
+    },
+    "co-warning": {
+      "co-warning": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1660703002138
+        }
+      }
+    }
+  }
 }
