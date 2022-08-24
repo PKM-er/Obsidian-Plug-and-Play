@@ -6,17 +6,6 @@
       {
         "id": "9ee8dadf3fe9cf81",
         "type": "leaf",
-        "pane-relief:history-v1": {
-          "pos": 0,
-          "stack": [
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Readme.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{}"
-            }
-          ]
-        },
         "state": {
           "type": "markdown",
           "state": {
@@ -152,7 +141,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.72222900390625
+    "width": 353.72222900390625,
+    "collapsed": true
   },
   "active": "9ee8dadf3fe9cf81",
   "lastOpenFiles": [

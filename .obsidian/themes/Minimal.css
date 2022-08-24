@@ -13553,6 +13553,11 @@ body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tb
 	list-style-type: square;
 }
 
+/*修复dataviewjs 在gallery视图下的和banners高度冲突*/
+.markdown-reading-view .block-language-dataviewjs{
+	margin-top:var(--banner-height);
+}
+
 /** 超长的标题会在鼠标hover 时候自动滚动**/
 /** file name**/
 /* .nav-folder-children .nav-file-title {
