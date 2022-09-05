@@ -1,6 +1,3 @@
-/*----------------------------------------------------------------
-CMENU TOOLBAR
-----------------------------------------------------------------*/
 
 
 #cMenuModalBar {
@@ -38,10 +35,10 @@ CMENU TOOLBAR
   background-color: var(--background-secondary);
 }
 
-#cMenuModalBar button.cMenuCommandItem svg {
+/* #cMenuModalBar button.cMenuCommandItem svg {
   width: 1.3em;
   height: 1.3em;
-}
+} */
 
 /*----------------------------------------------------------------
 CMENU SETTINGS BUTTONS
@@ -70,11 +67,7 @@ button.cMenuSettingsButton {
   border-radius: 6px;
 }
 
-.cMenuSettingsButton svg {
-  width: 1.3em;
-  height: 1.3em;
-  display: flex;
-}
+
 
 /*----------------------------------------------------------------
 CMENU SETTING ITEMS
@@ -122,14 +115,50 @@ CMENU SETTING ITEMS
 CMENU CLASS CHANGES
 ----------------------------------------------------------------*/
 
-.cMenuGlassAesthetic {
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+#cMenuModalBar.cMenuDefaultAesthetic
+{
+border: 1px solid var(--background-modifier-border);
 }
 
-.cMenuDefaultAesthetic {
-  background-color: var(--background-primary);
+#cMenuModalBar.cMenuDefaultAesthetic:not(.top) button[class^=cMenuCommandsubItem]  {
+  margin: auto;
+
+  max-width: 32px;
+
+  background-color: transparent;
+  font-family: remixicon;
+  place-items: center;
+
 }
+.cMenuDefaultAesthetic {
+background-color: var(--background-primary);
+}
+
+
+#cMenuModalBar.cMenuGlassAesthetic ,#cMenuModalBar.cMenuGlassAesthetic ~#cMenuPopoverBar {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  box-shadow:none;
+  background-color: transparent;
+}
+
+  #cMenuModalBar.cMenuGlassAesthetic:not(.top) button[class^=cMenuCommandsubItem]  {
+    margin: auto;
+    padding: 0px;
+    box-shadow: none;
+    border: none;
+    display: flex;
+    border-radius: 3px;
+  font-size: 10px;
+    margin-right: 0px;
+    position: relative;
+    background-color: transparent;
+    font-family: remixicon;
+    place-items: center;
+    clear: both;
+    max-width: 28px;
+    max-height: 23px;
+  }
 
 /*----------------------------------------------------------------
 CMENU ICONS
@@ -154,14 +183,10 @@ CMENU STATUS BAR MENU
   width: 200px;
 }
 
-.cMenu-statusbar-menu .menu-item-icon {
-  display: none;
-}
 
 .cMenu-statusbar-menu .menu-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   flex-direction: row;
 }
 
@@ -205,6 +230,20 @@ CMENU STATUS BAR MENU
   margin: 0;
 }
 
+.cMenu-statusbar-menu  .menu-item-icon svg  path   {
+    fill: var(--text-muted);
+}
+
+.cMenu-statusbar-menu  > .menu-item:is([data-section="ButtonAdd"]) {
+    display: inline-flex;
+    padding: 0px 0px 5px 5px;
+    align-items: center;
+}
+.cMenu-statusbar-menu  > .menu-item:is([data-section="ButtonAdd"]) .menu-item-icon{
+  text-align: center;
+}
+ 
+
 /*----------------------------------------------------------------
 CMENU STATUS BAR BUTTONS
 ----------------------------------------------------------------*/
@@ -224,7 +263,7 @@ CMENU STATUS BAR BUTTONS
 
 /*----------------------------------------------------------------
 CMENU SUPPORT
-----------------------------------------------------------------*/
+---------------------------------------------`-------------------*/
 
 .cDonationSection {
   width: 60%;
@@ -235,13 +274,15 @@ CMENU SUPPORT
 }
 /*
 cmenu样式修改 by  cuman  2021-12-31
-cmenu 插件建议使用自动光标跟随版。插件在Blue topaz examples 库中已内置。
-需要配合蚕子大神的zh增强编辑插件 https://kknwfe6755.feishu.cn/docs/doccnQpRTqGYqMT3GAKka5IRnMf#
+cmenu 插件建议使用自动光标跟随版。插件在Blue topaz examples[https://github.com/cumany/Blue-topaz-examples] 库中已内置。
+需要配合蚕子大神的zh增强编辑插件https://github.com/obsidian-canzi/Enhanced-editing/
 **/
 
 #cMenuModalBar{
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  align-items: center;
+  justify-items: center;  
+  border: none;
+  backdrop-filter: none;
 }
 
 #cMenuModalBar.cMenuGlassAesthetic .cMenuCommandItem{
@@ -249,6 +290,10 @@ cmenu 插件建议使用自动光标跟随版。插件在Blue topaz examples 库
 background-color:#ffffff00;
 }	
 
+#cMenuModalBar.cMenuGlassAesthetic [class^=cMenuCommandsubItem]{
+	
+  background-color:#ffffff00;
+  }	
 #cMenuModalBar .cMenuCommandItem{
   justify-content: center;
   align-content: center;
@@ -257,146 +302,56 @@ background-color:#ffffff00;
   }	
   
 
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: H1标题']::before {
-	content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='icon' viewBox='0 0 24 24' width="24" height="24"%3E%3Cpath fill="none" d="M0 0H24V24H0z"/%3E%3Cpath d="M13 20h-2v-7H4v7H2V4h2v7h7V4h2v16zm8-12v12h-2v-9.796l-2 .536V8.67L19.5 8H21z"/%3E%3C/svg%3E")；
-	background-color:#00ff00; 
-}
-
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: H1标题'] svg{
-display:none; 
-}
-
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: H2标题']::before {
-	 content: "\EDE7";
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: H2标题'] svg{
-display:none; 
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: H3标题']::before {
-	 content: "\EDE8";
-	 
-	
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: H3标题'] svg{
-display:none; 
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: H4标题']::before {
-	 content: "\EDE9";
-	 
-	
-	
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: H4标题'] svg{
-display:none; 
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 转换红色文字']::before {
-	 content: "\ED8B";
-	 color:#ff0000;
-	 
-	 
-	
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 转换红色文字'] svg{
-display:none; 
-}
-
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 转换橙色文字']::before {
-	 content: "\ED8B";
-	 color:#ff9900;
-	 
-	 
-	
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 转换橙色文字'] svg{
-display:none; 
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 转换黄色文字']::before {
-	 content: "\ED8B";
-	 color:#e0e016;
-	 
-	 
-	
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 转换黄色文字'] svg{
-display:none; 
-}		
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 转换绿色背景']::before {
-	 content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' t='1640930663209' class='icon' viewBox='0 0 1024 1024' version='1.1' p-id='4751' width='20' height='16'%3E%3Cpath d='M0 192h1024v640H0z' fill='none' p-id='4752'/%3E%3Cpath d='M154.432 721.984c39.168 0 74.88-20.16 104.832-45.504h1.728l4.032 38.016h38.592V521.536c0-74.88-29.952-126.144-105.408-126.144-50.112 0-93.888 23.04-120.96 40.896l19.008 32.832c23.616-16.704 57.024-34.56 94.464-34.56 53.568 0 66.816 41.472 66.24 83.52C123.328 533.056 64 566.464 64 634.432c0 56.448 39.168 87.552 90.432 87.552z m12.672-38.016c-31.68 0-57.6-14.976-57.6-52.416 0-42.624 37.44-69.12 147.456-81.792v91.008c-31.68 28.224-58.176 43.2-89.856 43.2zM530.304 721.984c72 0 135.936-61.632 135.936-168.192 0-95.616-43.2-158.4-124.416-158.4-35.712 0-70.848 20.16-100.224 44.928l2.304-57.024V256h-46.656v458.496h36.864l5.184-32.256h1.152c27.648 24.768 61.056 39.744 89.856 39.744z m-6.912-39.744c-21.312 0-50.688-8.64-79.488-33.984V480.064c31.104-29.376 59.904-44.928 87.04-44.928 62.144 0 86.4 48.96 86.4 119.232 0 78.912-39.808 127.872-93.952 127.872zM862.848 721.984c38.016 0 72.576-14.976 100.224-39.744l-20.736-31.104c-19.584 17.28-46.08 31.68-75.52 31.68-59.84 0-100.16-49.536-100.16-123.84 0-73.728 43.2-123.84 101.376-123.84 25.92 0 46.08 11.52 64.512 28.224l24.768-30.528c-21.888-20.16-50.112-37.44-91.008-37.44-78.912 0-148.032 59.904-148.032 163.584 0 103.104 62.72 163.008 144.576 163.008z' fill='%23000000' p-id='4753'/%3E%3C/svg%3E");
-	 background-color:#00ff00; 
-
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 转换绿色背景'] svg{
-display:none; 
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 转换黄色背景']::before {
-	 content: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' t='1640930663209' class='icon' viewBox='0 0 1024 1024' version='1.1' p-id='4751' width='20' height='16'%3E%3Cpath d='M0 192h1024v640H0z' fill='none' p-id='4752'/%3E%3Cpath d='M154.432 721.984c39.168 0 74.88-20.16 104.832-45.504h1.728l4.032 38.016h38.592V521.536c0-74.88-29.952-126.144-105.408-126.144-50.112 0-93.888 23.04-120.96 40.896l19.008 32.832c23.616-16.704 57.024-34.56 94.464-34.56 53.568 0 66.816 41.472 66.24 83.52C123.328 533.056 64 566.464 64 634.432c0 56.448 39.168 87.552 90.432 87.552z m12.672-38.016c-31.68 0-57.6-14.976-57.6-52.416 0-42.624 37.44-69.12 147.456-81.792v91.008c-31.68 28.224-58.176 43.2-89.856 43.2zM530.304 721.984c72 0 135.936-61.632 135.936-168.192 0-95.616-43.2-158.4-124.416-158.4-35.712 0-70.848 20.16-100.224 44.928l2.304-57.024V256h-46.656v458.496h36.864l5.184-32.256h1.152c27.648 24.768 61.056 39.744 89.856 39.744z m-6.912-39.744c-21.312 0-50.688-8.64-79.488-33.984V480.064c31.104-29.376 59.904-44.928 87.04-44.928 62.144 0 86.4 48.96 86.4 119.232 0 78.912-39.808 127.872-93.952 127.872zM862.848 721.984c38.016 0 72.576-14.976 100.224-39.744l-20.736-31.104c-19.584 17.28-46.08 31.68-75.52 31.68-59.84 0-100.16-49.536-100.16-123.84 0-73.728 43.2-123.84 101.376-123.84 25.92 0 46.08 11.52 64.512 28.224l24.768-30.528c-21.888-20.16-50.112-37.44-91.008-37.44-78.912 0-148.032 59.904-148.032 163.584 0 103.104 62.72 163.008 144.576 163.008z' fill='%23000000' p-id='4753'/%3E%3C/svg%3E");
-	 background-color:rgb(224, 224, 22);
-	 
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 转换黄色背景'] svg{
-display:none; 
-}
-
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: [[链接]]语法']::before {
-  content: "[[ ]]";
-  font-size:small;
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: [[链接]]语法'] svg{
-display:none; 
-}
-
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 搜索当前文本']::before {
-	 content: "\F0D1";
-	
-	 
-	 
-	
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 搜索当前文本'] svg{
-display:none; 
-}
-
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 取消标题']::before {
-	 content: "\ED96";
-	 
-	
-	
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 取消标题'] svg{
-display:none; 
-}
-	
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 粘贴表格']::before {
-	 content: "\F1DA";
-	 
-
-	
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: 粘贴表格'] svg{
-display:none; 
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: ==高亮==']::before {
-	 content: "==";
-  font-size:small;
-
-	
-}
-#cMenuModalBar .cMenuCommandItem[aria-label^='ZH增强编辑: ==高亮=='] svg{
-display:none; 
-}	
+/*  #cMenuModalBar.cMenuTinyAesthetic .cMenuCommandItem svg{
+     width: 1em;
+     height: 1em;
+ } */
 
 
+ 
+div.modal-container.cMenu-Modal:not(.changename)  .modal-bg
+{
+  background-color:transparent!important;
+  backdrop-filter: none!important;
+position: relative;
+}
+.modal-container.cMenu-Modal:not(.changename)  .modal {
+  padding: 10px 30px;
+  min-width: 130px;
+  position: absolute;
+  bottom: 2em;
+  right: 0.5em;
+  background-color: var(--bg-color-settings-3);
+  backdrop-filter: blur(2px);
+}
+.modal-container.cMenu-Modal  .modal-title
+{
+  display: none;
+}
+
+.modal-container.cMenu-Modal  .modal  input[type='range'] {
+  width: 100%;
+ 
+}
+body.theme-dark .modal-container.cMenu-Modal  .modal  input[type='range'] {
+ background-color: var(--background-secondary);
+}
 /*tiny 样式*/
 #cMenuModalBar.cMenuTinyAesthetic {
   align-items: center;
   justify-items: center;  
- 
+  border: none;
+  backdrop-filter: none;
+  background-color: var(--background-secondary);
+  box-shadow: 0 3px 6px -4px rgb(0 0 0 / 12%), 0 6px 16px 0 rgb(0 0 0 / 8%), 0 9px 28px 8px rgb(0 0 0 / 5%);
  }
- #cMenuModalBar.cMenuTinyAesthetic .cMenuCommandItem {
+ #cMenuModalBar .cMenuCommandItem {
    margin: auto;
+
    padding: 0px;
    box-shadow: none;
-   margin-left: 0px;
+
+   margin-left: 4px;
    margin-right: 0px;
    position: relative; 
    background-color:transparent;
@@ -404,7 +359,433 @@ display:none;
    -webkit-backdrop-filter: blur(8px);
  
  }
- #cMenuModalBar.cMenuTinyAesthetic .cMenuCommandItem svg{
-     width: 1em;
-     height: 1em;
+
+
+:is(#cMenuModalBar).cMenuTinyAesthetic:not(.top) button[class^=cMenuCommandsubItem]  {
+  margin: auto;
+  padding: 0px;
+  box-shadow: none;
+  border: none;
+  display: flex;
+  border-radius: 3px;
+font-size: 10px;
+  margin-right: 0px;
+  position: relative;
+  background-color: transparent;
+  font-family: remixicon;
+  place-items: center;
+  clear: both;
+  max-width: 28px;
+  max-height: 23px;
+   
+}
+ button[class^=cMenuCommandsubItem]::after {
+
+  content:  url("data:image/svg+xml,%3Csvg width='4' height='4' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'%3E%3Cpath fill='%23666' d='M13.24 80.11 l461.75 560.8 q14.56 16.02 36.41 16.02 q21.85 0 36.42 -16.02 l463.2 -560.8 q10.2 -10.19 12.38 -24.75 q2.18 -14.57 -3.64 -27.68 q-5.82 -13.11 -18.21 -20.39 q-12.39 -7.29 -26.95 -7.29 l-924.95 0 q-20.4 0 -34.23 13.11 q-13.84 13.11 -15.29 32.77 q-1.46 19.66 13.11 34.23 Z'/%3E%3C/svg%3E");
+  
+ margin-left: 1px;
+ margin-top:6px;
+
+}
+
+:is(#cMenuModalBar,#cMenuPopoverBar)  button[class^=cMenuCommandsubItem]  >.subitem
+{
+    background-color: var(--background-primary);
+    border-radius: 4px;
+    border: 1px solid var(--background-modifier-border);
+    box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
+    position: absolute;
+    z-index: var(--layer-menu);
+    user-select: none;
+    transform: translateY(90%) translateX(-40%);
+ 
+    
+}
+:is(#cMenuModalBar,#cMenuPopoverBar) button[class^=cMenuCommandsubItem]  >.subitem svg
+{
+  max-width: 1.3em;
+  max-height: 1.3em;
+}
+
+:is(#cMenuModalBar,#cMenuPopoverBar) button[class^=cMenuCommandsubItem]  >.subitem button.menu-item
+{
+    background-color: var(--background-primary);
+    line-height:2em;
+}
+
+:is(#cMenuModalBar,#cMenuPopoverBar) button[class^=cMenuCommandsubItem]  >.subitem button:hover
+{
+    background-color: var(--button-hover);
+}
+
+
+:is(#cMenuModalBar,#cMenuPopoverBar) button[class^=cMenuCommandsubItem]  >.subitem .menu-item {
+ 
+  margin-right: 4px;
+  padding: 0px 4px 0px 4px;
+}
+:is(#cMenuModalBar,#cMenuPopoverBar) button[class^=cMenuCommandsubItem] >.subitem  {
+ 
+ visibility:hidden;
+ transition: all 0.3s linear;
+}
+
+
+
+:is(#cMenuModalBar,#cMenuPopoverBar) button.cMenuCommandsubItem-font-color::after
+{
+  content: none;
+}
+
+:is(#cMenuModalBar,#cMenuPopoverBar)  button.cMenuCommandsubItem-font-color .triangle-icon
+{
+  position: absolute;
+  margin-left: 22px;
+  margin-top: 7px;
+background-size: 4px 4px;
+background-image: url("data:image/svg+xml,%3Csvg width='4' height='4' version='1.1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1024 1024' enable-background='new 0 0 1024 1024' xml:space='preserve'%3E%3Cpath fill='%23666' d='M13.24 80.11 l461.75 560.8 q14.56 16.02 36.41 16.02 q21.85 0 36.42 -16.02 l463.2 -560.8 q10.2 -10.19 12.38 -24.75 q2.18 -14.57 -3.64 -27.68 q-5.82 -13.11 -18.21 -20.39 q-12.39 -7.29 -26.95 -7.29 l-924.95 0 q-20.4 0 -34.23 13.11 q-13.84 13.11 -15.29 32.77 q-1.46 19.66 13.11 34.23 Z'/%3E%3C/svg%3E");
+
+    width: 16px;
+    height: 25px;
+    background-position: center;
+ 
+    background-repeat: no-repeat;
+    min-width: unset;
+    border-left: 2px solid  transparent;
  }
+
+ :is(#cMenuModalBar,#cMenuPopoverBar):not(.top) button.cMenuCommandsubItem-font-color .triangle-icon .x-color-picker-wrapper
+{
+  top:auto;
+bottom:calc(100% + 1em);
+}
+
+ :is(#cMenuModalBar,#cMenuPopoverBar) button.cMenuCommandsubItem-font-color .triangle-icon:hover
+{
+    background-color: var(--button-hover);
+}
+
+:is(#cMenuModalBar,#cMenuPopoverBar) button.cMenuCommandsubItem-font-color .triangle-icon>.subitem
+{
+  visibility:hidden;
+  transition: all 0.3s linear;
+ }
+ :is(#cMenuModalBar,#cMenuPopoverBar) button.cMenuCommandsubItem-font-color .triangle-icon:hover >.subitem  {
+ 
+  visibility:visible;
+ transition: all 0.3s linear;
+}
+:is(#cMenuModalBar,#cMenuPopoverBar) button.cMenuCommandsubItem-font-color .triangle-icon>.subitem:hover  {
+  visibility:visible;
+  transition: all 0.3s linear;
+ }
+
+
+:is(#cMenuModalBar,#cMenuPopoverBar) button[class^=cMenuCommandsubItem]:hover >.subitem  {
+ 
+  visibility:visible;
+ transition: all 0.3s linear;
+}
+:is(#cMenuModalBar,#cMenuPopoverBar) button[class^=cMenuCommandsubItem] >.subitem:hover  {
+  visibility:visible;
+  transition: all 0.3s linear;
+ }
+
+ 
+
+ .cMenuSettingsTabsContainer .cMenuCommandItem .setting-item-info {
+  
+  flex:30%;
+margin: 0;
+}
+ .cMenuSettingsTabsContainer .cMenuSettingsTabsContainer_sub
+ {
+  border-left: 1px solid var(--background-modifier-border);
+  flex-flow: column;
+  min-height: 45px;
+  display: flex;
+  padding: 0;
+ margin-left: 10px;
+  flex: 70%;
+ }
+ .cMenuSettingsTabsContainer .cMenuSettingsTabsContainer_sub:empty
+ {
+ border: 2px dashed rgba(var(--interactive-accent-rgb),0.5);
+ }
+ .cMenuSettingsTabsContainer .cMenuSettingsTabsContainer_sub:empty::before {
+  content: "✖️拖入子项目";
+  margin: auto;
+  font-size: 12px;
+}
+ .cMenuSettingsTabsContainer .cMenuSettingsTabsContainer_sub .cMenuCommandItem
+ {
+  flex: auto;
+  margin-left: 2em;;
+ }
+ .cMenuSettingsTabsContainer .cMenuSettingsTabsContainer_sub .setting-item-control
+ {
+flex: 0;
+ }
+
+ .cMenuSettingsTabsContainer .cMenuCommandSubItem>.setting-item-info
+ {
+ flex: 70px;
+ }
+ .cMenuCommandSubItem>.setting-item-control
+{
+
+  justify-content: flex-start;
+}
+ .modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuSettingsButton.cMenuSettingsButtonaddsub {
+   background-color: var(--background-secondary-alt);
+}
+
+
+.setting-item button.cMenuSettingsIcon{
+  display: block;
+  transform: translateX(-30%); 
+}
+.setting-item button.cMenuSettingsIcon:empty::before{
+ content: "❗";
+}
+.setting-item button.cMenuSettingsIcon svg{
+  max-width: 1.5em;
+  max-height: 1.5em;
+}
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuSettingsIcon:hover{
+  background-color: var(--interactive-accent-hover);
+}
+.modal.mod-settings button:not(.mod-cta):not(.mod-warning).cMenuSettingsIcon
+{
+  background-color: transparent;
+  box-shadow: 0 1px 1px 0px var(--background-modifier-border);
+}
+
+
+.cMenucustomIcon svg {
+  max-width: 1.3em;
+  max-height: 1.3em;
+  display: flex;
+}
+
+
+.cMenuSettingsButton  svg {
+  max-width: 1.3em;
+  max-height: 1.3em;
+  display: flex;
+}
+
+.cmdr-page-header
+{
+  min-width: 1em;;
+}
+
+
+.x-color-picker-wrapper {
+  right: 0px;
+  top:3.5em;
+  min-width: 1px;
+  padding: 10px;
+  box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14);
+  position: absolute;
+  width: fit-content;
+  font-weight: 400;
+  font-family: Source Sans Pro,sans-serif;
+  border-radius: 4px;
+  background-color: var(--background-primary);
+}
+.x-color-picker-wrapper .x-color-picker-table {
+  border-collapse: separate;
+  border-spacing: 6px;
+}
+.x-color-picker-wrapper .x-color-picker-table th {
+  border: 0;
+  text-align: left;
+  font-weight: normal;
+  background: transparent !important;
+  color: #718096;
+}
+.x-color-picker-wrapper #x-color-picker-table td {
+  font-size: 1px;
+  padding: 9px;
+  cursor: pointer;
+  border: solid 1px var(--background-modifier-border);
+}
+.x-color-picker-wrapper #x-backgroundcolor-picker-table td {
+  font-size: 1px;
+  border-radius: 50%;
+  padding: 9px;
+  cursor: pointer;
+  border: solid 1px var(--background-modifier-border);
+}
+.x-color-picker-wrapper .x-color-picker-table tr td:hover {
+  box-shadow: 0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);
+}
+.x-color-picker-wrapper tbody>tr:hover
+{
+background-color:transparent !important;
+}
+/**top**/
+#cMenuModalBar.top {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    height: 38px;
+    align-items: center;
+    border:none;
+  
+    transition: all 0.2s linear;
+    
+}
+
+#cMenuModalBar.top :is(.cMenuCommandItem,button[class^=cMenuCommandsubItem]):not(.Cmenu-Divider-Line)
+{
+font-size: 10px;
+  margin-right: 0px;
+  clear: both;  
+  opacity: 1;
+  flex-shrink:0;
+    height: 26px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    font-family: remixicon;
+ 
+
+    
+}
+#cMenuModalBar.top button.cMenuCommandItem:hover {
+  background-color: var(--button-hover);
+}
+
+ 
+
+#cMenuPopoverBar{
+  
+    padding: 0 10px;
+    display: inline-flex;
+    align-items: center;
+    width: fit-content;
+    z-index: var(--layer-status-bar); 
+    background-color: var(--background-secondary);
+      background-clip: padding-box;
+      border-radius: 6px;
+      box-shadow: 0 3px 6px -4px rgba(0,0,0,.12),0 6px 16px 0 rgba(0,0,0,.08),0 9px 28px 8px rgba(0,0,0,.05);
+      box-shadow: 0 0 8px rgba(0,0,0,.15)\9;
+      margin-left: auto;
+      margin-right: 25px;
+      transition: all 0.1s linear;
+      margin-top: 32px;
+    position: absolute;
+    right: 0;
+}
+
+#cMenuPopoverBar :is(.cMenuCommandItem,button[class^=cMenuCommandsubItem]){
+
+    height: 26px;
+margin-left: 4px;
+    font-size: 10px;
+  margin-right: 4px;
+  clear: both;  
+  opacity: 1;
+  flex-shrink:0;
+    height: 26px;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    outline: none;
+    box-shadow: none;
+    border-radius: 2px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s linear;
+    font-family: remixicon;
+}
+#cMenuPopoverBar :is(.cMenuCommandItem,button[class^=cMenuCommandsubItem]):hover{
+  background-color: var(--button-hover);
+}
+
+#cMenuModalBar .more-menu {
+  display: flex;
+  align-items: center;
+  box-shadow:none;
+  margin-left: 4px;
+  border-left: 1px inset var( --background-modifier-form-field);
+  height: 24px;
+  opacity: 0.8;
+}
+ /*Divider-Line**/
+
+ .cMenuSettingsTabsContainer .Cmenu-Divider-Line
+ {
+  padding: 0;
+   
+  line-height: 0px;
+  border-left: 200px solid rgba(var(--interactive-accent-rgb),0.05);
+  border-right: 200px solid rgba(var(--interactive-accent-rgb),0.05);
+  text-align: center;
+  background: rgba(var(--interactive-accent-rgb),0.2);
+ }
+ .cMenuSettingsTabsContainer .Cmenu-Divider-Line .setting-item-control button:not(:last-child)
+ {
+   display: none;
+ }
+
+ .cMenuSettingsTabsContainer .Cmenu-Divider-Line .setting-item-info 
+ {
+  flex: 1 1 auto;
+ }
+ .cMenuSettingsTabsContainer .Cmenu-Divider-Line .setting-item-control 
+ {
+  justify-content: flex-start;
+ }
+ .cMenuSettingsTabsContainer .Cmenu-Divider-Line .setting-item-info .setting-item-name
+ {
+  font-size: 12px;
+ text-align: right;
+
+ }
+ .cMenuSettingsTabsContainer .Cmenu-Divider-Line .setting-item-control button:last-child
+ {
+  padding: 0;
+   background-color: transparent!important;
+ }
+ .cMenuSettingsTabsContainer .Cmenu-Divider-Line .setting-item-control button:last-child svg
+ {
+   display: none;
+ }
+ .cMenuSettingsTabsContainer .Cmenu-Divider-Line .setting-item-control button:last-child::before
+ {
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 1024 1024' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M511.674077 66.707284c-246.52265 0-446.347744 199.835328-446.347744 446.347744s199.825095 446.356954 446.347744 446.356954c246.50423 0 446.348768-199.844537 446.348768-446.356954S758.177284 66.707284 511.674077 66.707284zM744.967424 667.159826c21.8701 21.8701 21.8701 57.310264 0 79.199807-21.8701 21.851681-57.30924 21.851681-79.198783-0.019443L511.674077 592.264045 357.56007 746.359632c-21.8701 21.8701-57.30924 21.851681-79.17934-0.019443s-21.8701-57.290821 0-79.160921L432.493713 513.065262 278.379707 358.950232c-21.8701-21.86089-21.8701-57.328683 0-79.18855 21.8701-21.87931 57.30924-21.87931 79.17934 0l154.114007 154.104797 154.095587-154.104797c21.889543-21.87931 57.32766-21.87931 79.198783-0.010233 21.8701 21.8701 21.8701 57.348126 0 79.207993L590.89128 513.065262 744.967424 667.159826z' fill='%23666666'/%3E%3C/svg%3E");
+ }
+:is(#cMenuModalBar,#cMenuPopoverBar) button.cMenuCommandItem.Cmenu-Divider-Line
+{
+  min-width:unset;
+    flex-shrink: 0;
+    display: inline-flex;
+    width: 0.6px;
+    background-color: var(--background-modifier-border);
+    height: 22px;
+    opacity: 0.8;
+    margin: 0;
+}
+.theme-dark :is(#cMenuModalBar,#cMenuPopoverBar)  button.cMenuCommandItem.Cmenu-Divider-Line
+{
+
+    background-color: #4f4f5188;
+ 
+}
+:is(#cMenuModalBar,#cMenuPopoverBar)  button.cMenuCommandItem.Cmenu-Divider-Line svg
+{
+ display: none;
+}

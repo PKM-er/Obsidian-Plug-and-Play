@@ -1,6 +1,6 @@
 {
-  "aestheticStyle": "default",
-  "positionStyle": "following",
+  "aestheticStyle": "tiny",
+  "positionStyle": "top",
   "menuCommands": [
     {
       "id": "cmenu-plugin:editor:toggle-bold",
@@ -69,7 +69,7 @@
     },
     {
       "id": "obsidian-version-history-diff:open-recovery-diff-view",
-      "name": "Version history diff: Show File Recovery diff view for active file",
+      "name": "Version history diff",
       "icon": "file-explorer-glyph"
     },
     {
@@ -88,7 +88,7 @@
           "key": "1"
         }
       ],
-      "icon": "heading-one-glyph"
+      "icon": "feather-heading-one-glyph"
     },
     {
       "id": "Enhanced-editing:biaoti2-text",
@@ -101,7 +101,7 @@
           "key": "2"
         }
       ],
-      "icon": "heading-two-glyph"
+      "icon": "feather-heading-two-glyph"
     },
     {
       "id": "Enhanced-editing:biaoti3-text",
@@ -114,7 +114,7 @@
           "key": "3"
         }
       ],
-      "icon": "heading-tri-glyph"
+      "icon": "feather-heading-tri-glyph"
     },
     {
       "id": "Enhanced-editing:biaoti4-text",
@@ -127,7 +127,7 @@
           "key": "4"
         }
       ],
-      "icon": "heading-for-glyph"
+      "icon": "feather-heading-for-glyph"
     },
     {
       "id": "Enhanced-editing:biaoti5-text",
@@ -140,7 +140,7 @@
           "key": "5"
         }
       ],
-      "icon": "heading-five-glyph"
+      "icon": "feather-heading-five-glyph"
     },
     {
       "id": "Enhanced-editing:biaoti6-text",
@@ -153,7 +153,7 @@
           "key": "6"
         }
       ],
-      "icon": "heading-six-glyph"
+      "icon": "feather-heading-five-glyph"
     },
     {
       "id": "Enhanced-editing:text-Color1",
@@ -213,7 +213,7 @@
     },
     {
       "id": "Enhanced-editing:text-background4",
-      "name": "增强编辑: 黄色马克笔",
+      "name": "黄色马克笔",
       "hotkeys": [
         {
           "modifiers": [

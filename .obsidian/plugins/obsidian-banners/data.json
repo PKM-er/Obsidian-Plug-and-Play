@@ -15,5 +15,5 @@
   "showPreviewInLocalModal": true,
   "localSuggestionsLimit": null,
   "bannersFolder": null,
-  "allowMobileDrag": false
+  "allowMobileDrag": true
 }

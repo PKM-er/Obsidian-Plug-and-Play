@@ -6,10 +6,21 @@
       {
         "id": "9ee8dadf3fe9cf81",
         "type": "leaf",
+        "pane-relief:history-v1": {
+          "pos": 0,
+          "stack": [
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Knowledge/Book-Note/读书笔记-OKR使用手册.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{}"
+            }
+          ]
+        },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Obsidian-example/Readme.md",
+            "file": "Knowledge/Book-Note/读书笔记-OKR使用手册.md",
             "mode": "source",
             "source": false
           }
@@ -86,7 +97,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian-example/Readme.md",
+                "file": "Knowledge/Book-Note/读书笔记-OKR使用手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +114,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian-example/Readme.md",
+                "file": "Knowledge/Book-Note/读书笔记-OKR使用手册.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -146,15 +157,15 @@
   },
   "active": "9ee8dadf3fe9cf81",
   "lastOpenFiles": [
+    "Obsidian-example/Readme.md",
+    "Knowledge/Book-Note/读书笔记-麦肯锡.md",
     "Obsidian-example/Example and showcase/01、基本语法.md",
     "Obsidian-example/Example and showcase/02、笔记多栏样式.md",
     "Readme.md",
     "Template/startup/FastStart-Plugins-ShortDelay.md",
     "Template/startup/FastStart-Plugins-LongLongDelay.md",
     "Template/startup/FastStart-Plugins-LongDelay.md",
-    "Obsidian-example/Readme.md",
     "Obsidian-example/Readme英文版.md",
-    "📊Every Day/📊Every Day 1.md",
-    "📊Every Day/📊Every Day.md"
+    "📊Every Day/📊Every Day 1.md"
   ]
 }

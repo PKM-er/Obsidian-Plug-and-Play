@@ -1,7 +1,6 @@
 {
   "pluginList": [
-    "zsviczian/excalibrain",
-    "obsidian-canzi/Enhanced-editing"
+    "chthollyphile/obsidian-3d-graph-view-plugin"
   ],
   "pluginSubListFrozenVersion": [],
   "themesList": [],
