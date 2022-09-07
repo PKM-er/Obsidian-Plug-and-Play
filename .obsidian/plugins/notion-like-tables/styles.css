@@ -1,6 +1,6 @@
 @charset "UTF-8";
 
-/* src/app/components/Tag/styles.css */
+/* src/components/Tag/styles.css */
 .NLT__tag-content {
   width: 100%;
 }
@@ -13,17 +13,17 @@
   color: var(--text-normal);
 }
 
-/* src/app/components/TagCell/styles.css */
+/* src/components/TagCell/styles.css */
 .NLT__tag-cell {
   width: 100%;
 }
 
-/* src/app/components/CheckboxCell/styles.css */
+/* src/components/CheckboxCell/styles.css */
 .NLT__checkbox-cell {
   width: 100%;
 }
 
-/* src/app/components/DateCell/styles.css */
+/* src/components/DateCell/styles.css */
 .NLT__date-cell {
   width: 100%;
   overflow: hidden;
@@ -31,13 +31,13 @@
   text-overflow: ellipsis;
 }
 
-/* src/app/components/NumberCell/styles.css */
+/* src/components/NumberCell/styles.css */
 .NLT__number-cell {
   width: 100%;
   text-align: right;
 }
 
-/* src/app/components/Menu/styles.css */
+/* src/components/Menu/styles.css */
 .NLT__menu-container {
   position: absolute;
   border-radius: 4px;
@@ -48,7 +48,7 @@
   z-index: var(--layer-menu);
 }
 
-/* src/app/components/NumberCellEdit/styles.css */
+/* src/components/NumberCellEdit/styles.css */
 .NLT__number-cell-edit {
   width: 100%;
   height: 100%;
@@ -59,7 +59,7 @@
   font-size: 1rem;
 }
 
-/* src/app/components/TextCellEdit/styles.css */
+/* src/components/TextCellEdit/styles.css */
 .NLT__textarea {
   width: 100%;
   height: 100%;
@@ -68,7 +68,7 @@
   overflow: hidden;
 }
 
-/* src/app/components/Button/styles.css */
+/* src/components/Button/styles.css */
 .NLT__button {
   display: flex;
   align-items: center;
@@ -81,7 +81,7 @@
   padding: 1px 3px;
 }
 
-/* src/app/components/TagColorMenu/components/ColorItem/styles.css */
+/* src/components/TagColorMenu/components/ColorItem/styles.css */
 .NLT__color-item {
   display: flex;
   align-items: center;
@@ -94,7 +94,7 @@
   margin: 0 10px 0 0;
 }
 
-/* src/app/components/TagColorMenu/styles.css */
+/* src/components/TagColorMenu/styles.css */
 .NLT__tag-color-menu {
   padding: 4px 10px;
 }
@@ -106,21 +106,21 @@
   grid-template-columns: 100px 100px;
 }
 
-/* src/app/components/TagCellEdit/component/SelectableTag/styles.css */
+/* src/components/TagCellEdit/component/SelectableTag/styles.css */
 .NLT__selectable-tag {
   display: flex;
   justify-content: space-between;
   padding: 4px 6px;
 }
 
-/* src/app/components/TagCellEdit/component/CreateTag/styles.css */
+/* src/components/TagCellEdit/component/CreateTag/styles.css */
 .NLT__create-tag {
   display: flex;
   align-items: center;
   padding: 4px 6px;
 }
 
-/* src/app/components/TagCellEdit/styles.css */
+/* src/components/TagCellEdit/styles.css */
 .NLT__tag-menu {
   width: 15rem;
 }
@@ -861,14 +861,14 @@
   font-size: 1.44rem;
 }
 
-/* src/app/components/DateCellEdit/styles.css */
+/* src/components/DateCellEdit/styles.css */
 .NLT__date-input {
   width: 100%;
   padding: 0px 10px !important;
   border: 0 !important;
 }
 
-/* src/app/components/EditableTd/styles.css */
+/* src/components/EditableTd/styles.css */
 .NLT__td {
   display: inline-block;
   border-top: 0 !important;
@@ -895,7 +895,7 @@
   padding: 4px 10px;
 }
 
-/* src/app/components/Table/components/styles.css */
+/* src/components/Table/components/styles.css */
 .NLT__table {
   width: max-content;
 }
@@ -914,24 +914,24 @@
   height: 10px;
 }
 
-/* src/app/components/IconText/styles.css */
+/* src/components/IconText/styles.css */
 .NLT__icon-text {
   display: flex;
   align-items: center;
 }
 
-/* src/app/components/RowMenu/components/RowMenuItem/styles.css */
+/* src/components/RowMenu/components/RowMenuItem/styles.css */
 .NLT__drag-menu-item:focus-visible {
   outline: 1px solid blue;
 }
 
-/* src/app/components/RowMenu/styles.css */
+/* src/components/RowMenu/styles.css */
 .NLT__drag-menu {
   font-size: 0.9rem;
   padding: 4px 10px;
 }
 
-/* src/app/components/Switch/styles.css */
+/* src/components/Switch/styles.css */
 .NLT__switch {
   position: relative;
   display: inline-block;
@@ -979,7 +979,7 @@ input:checked + .NLT__slider:before {
   transform: translateX(14px);
 }
 
-/* src/app/components/HeaderMenu/styles.css */
+/* src/components/HeaderMenu/styles.css */
 .NLT__header-menu {
   padding: 4px 10px;
   cursor: default;
@@ -1010,7 +1010,7 @@ input:checked + .NLT__slider:before {
   font-size: 0.95rem;
 }
 
-/* src/app/components/EditableTh/styles.css */
+/* src/components/EditableTh/styles.css */
 .NLT__th {
   display: inline-block;
   text-align: left;
@@ -1050,7 +1050,7 @@ input:checked + .NLT__slider:before {
   height: 100%;
 }
 
-/* src/app/components/OptionBar/styles.css */
+/* src/components/OptionBar/styles.css */
 .NLT__option-bar {
   display: flex;
   margin-bottom: 10px;
@@ -1066,7 +1066,7 @@ input:checked + .NLT__slider:before {
   user-select: none;
 }
 
-/* src/app/app.css */
+/* src/app.css */
 .NLT__color--light-gray {
   background-color: hsl(0, 3%, 94%);
 }

@@ -1,7 +1,7 @@
 {
 	"id": "obsidian-metatable",
 	"name": "Metatable",
-	"version": "0.13.0",
+	"version": "0.13.1",
 	"minAppVersion": "0.15.9",
 	"description": "Displays the full frontmatter as a table.",
 	"author": "Arnau Siches",

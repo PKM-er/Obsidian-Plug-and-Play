@@ -1,12 +1,24 @@
 {
   "recentFiles": [
     {
-      "basename": "MovieList",
-      "path": "People/Movie/MovieList.md"
-    },
-    {
       "basename": "BookList",
       "path": "People/Book/BookList.md"
+    },
+    {
+      "basename": "Book",
+      "path": "People/Book/Book.md"
+    },
+    {
+      "basename": "《枪炮、病菌与钢铁》",
+      "path": "People/Book/《枪炮、病菌与钢铁》.md"
+    },
+    {
+      "basename": "Movie",
+      "path": "People/Movie/Movie.md"
+    },
+    {
+      "basename": "MovieList",
+      "path": "People/Movie/MovieList.md"
     },
     {
       "basename": "《DK万物透视图解百科》",
@@ -187,18 +199,6 @@
     {
       "basename": "长期成本曲线",
       "path": "Knowledge/经济学/成本论/长期成本曲线.md"
-    },
-    {
-      "basename": "短期成本曲线——短期总产量和短期总成本",
-      "path": "Knowledge/经济学/成本论/短期成本曲线——短期总产量和短期总成本.md"
-    },
-    {
-      "basename": "成本最小化",
-      "path": "Knowledge/经济学/成本论/成本最小化.md"
-    },
-    {
-      "basename": "成本的概念",
-      "path": "Knowledge/经济学/成本论/成本的概念.md"
     }
   ],
   "omittedPaths": [

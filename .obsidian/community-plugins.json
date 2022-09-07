@@ -2,7 +2,6 @@
   "obsidian-admonition",
   "tag-wrangler",
   "slated-obsidian",
-  "table-extended",
   "obsidian-kanban",
   "obsidian-banners",
   "dataview",
@@ -25,7 +24,6 @@
   "obsidian-habit-tracker",
   "file-explorer-note-count",
   "obsidian-rich-links",
-  "obsidian-day-planner",
   "recent-files-obsidian",
   "fantasy-calendar",
   "obsidian-cursor-location-plugin",
@@ -52,5 +50,10 @@
   "cm-chs-patch",
   "get-info-plugin",
   "obsidian-code-block-enhancer",
-  "cmenu-plugin"
+  "cmenu-plugin",
+  "dbfolder",
+  "obsidian-dynamic-highlights",
+  "obsidian-task-progress-bar",
+  "obsidian-table-generator",
+  "ob-table-enhancer"
 ]

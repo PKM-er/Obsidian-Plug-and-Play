@@ -20,6 +20,8 @@
   min-height: 0;
 } */
 
+/* Math Block Webkit Resizer */
+
 .cm-preview-code-block:hover .block-language-math::after {
   opacity: 1;
 }
@@ -46,7 +48,11 @@
 }
 
 .block-language-math::-webkit-resizer {
-  display: none;
+  display: none !important;
+}
+
+.block-language-math::-webkit-scrollbar-corner {
+  background: rgba(0,0,0,0);
 }
 
 /* .block-language-math:not(:hover)::-webkit-resizer {
@@ -93,6 +99,23 @@
 }
 
 /* ----------------------------------------- */
+
+.big-text-area {
+  align-items: flex-start;
+}
+
+.big-text-area textarea {
+  overflow-wrap: normal;
+  height: 300px;
+  width: 500px;
+  white-space: pre;
+}
+
+.big-text-area .setting-item-control {
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+}
 
 .math-pill {
   height: 3.5px;
