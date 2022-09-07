@@ -1,10 +1,7 @@
 ---
-banner: "![[R-C.gif]]"
----
----
+banner: "![[BookList_image_1.gif]]"
 cssclass: cards
 usage: 对dataview表格渲染成卡片视图
-banner: "![[BookList_image_1.gif]]"
 obsidianUIMode: preview
 banner_x: 0.5
 banner_y: 0.5
