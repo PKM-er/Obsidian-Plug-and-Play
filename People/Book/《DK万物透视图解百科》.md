@@ -1,4 +1,7 @@
 ---
+banner: "https://img1.doubanio.com/view/subject/l/public/s29131057.jpg"
+---
+---
 obsidianUIMode: preview
 name: DK万物透视图解百科
 cover: https://img1.doubanio.com/view/subject/l/public/s29131057.jpg

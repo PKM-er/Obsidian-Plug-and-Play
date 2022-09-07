@@ -38,23 +38,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 */
-/* @settings
-name: Blue Topaz Theme
-id: blue-topaz-theme
-settings:
-  - 
-    id: file-name-style-option
-    title: File Name Style
-    title.zh: 文件名样式
-    type: class-select
-    allowEmpty: false
-    default: file-name-wrapped
-    options:
-      - 
-        label: File Name Scrolling When Hovering
-        value: file-name-animation
-*/
-
 body {
 	--font-text-override: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
 	--font-monospace-override: Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
@@ -511,9 +494,8 @@ body {
 	--checkbox-margin: 0px 5px 0px -1.35em
 }
 
-/*增加 checkbox 的复选框尺寸，减少和折叠块之间的误触*/
 .checkbox-square {
-	--checkbox-size: 18px;
+	--checkbox-size: 15px;
 	--checkbox-icon: 17px;
 	--checkbox-radius: 4px;
 	--checkbox-top: 1px;
@@ -1705,20 +1687,13 @@ body {
 	color:black;
 }
 
+
 /*自定义代码注释：控制编辑视图下列表连接线颜色和位置*/
 /*自定义代码注释：控制编辑视图下列表前面黑点*/
 .markdown-source-view.mod-cm6 .cm-indent::before {
 	transform: translateX(var(--ig-adjust-edit));
-	margin-left:-0.35em;
-	border-right: 1px solid #d1cbcb;
+	margin-left:-0.3em;
 }
-
-/* .markdown-source-view.mod-cm6 .cm-indent .cm-active-indent::before{
-	transform: translateX(var(--ig-adjust-edit));
-	margin-left:-0.35em;
-	border-right: 1px solid;
-	border-color: black !important;
-} */
 
 a {
 	color: var(--text-accent);
@@ -1772,7 +1747,7 @@ ul>li {
 	min-height: 1.4em
 }
 
-/*控制无序列表前置圆点的颜色*/
+/*控制无序列表前置原点的颜色*/
 ol>li::marker,ul>li::marker {
 	color: var(--text-faint)
 }
@@ -12179,10 +12154,15 @@ img[alt^="bookcover"] {
 	}
 }
 
+/*修复dataviewjs 在gallery视图下的和banners高度冲突*/
+.markdown-reading-view .block-language-dataviewjs{
+	margin-top:var(--banner-height);
+}
+
 .cards table.dataview tbody>tr>td:first-child, 
 .markdown-source-view.mod-cm6.cards .dataview.table-view-table>tbody>tr>td:first-child {
 	width: 100%;
-	display: block;
+	display: inline-table !important;
 	box-shadow: 0 2px 16px rgba(0, 0, 0, .2);
 	position: relative;
 	padding: 0;
@@ -12324,7 +12304,7 @@ img[alt^="bookcover"] {
 	background-color: var(--background-secondary);
 }
 
-/*自定义样式：调整初始状态下 Cards View 的样式*/
+/*调整初始状态下 Cards View 的样式*/
 .cards table.dataview tbody>tr>td button img{
     width: calc(var(--cards-width)/8 );
     height: calc(var(--cards-width) /8);
@@ -13540,49 +13520,3 @@ body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tb
   background-color: var(--table-thead-background-color);
   font-family: var(--font-family-strong);
 }
-
-.HyperMD-list-line-1 {
-	list-style-type: disc;
-}
-
-.HyperMD-list-line-2 {
-	list-style-type: circle;
-}
-
-.HyperMD-list-line-3 {
-	list-style-type: square;
-}
-
-/*修复dataviewjs 在gallery视图下的和banners高度冲突*/
-.markdown-reading-view .block-language-dataviewjs{
-	margin-top:var(--banner-height);
-}
-
-/** 超长的标题会在鼠标hover 时候自动滚动**/
-/** file name**/
-/* .nav-folder-children .nav-file-title {
-  text-overflow: string !important;
-}
-
-.nav-file-title-content {
-  min-width: 200px;
-  white-space: nowrap;
-}
-
-.nav-folder-children .nav-file-title:hover  {
-  animation: filemove 1.5s 1 normal linear;
-}
-
-/** file folder name**/
-/* .nav-folder .nav-folder-tilte .nav-folder-title-content {
-  text-overflow: string !important;
-}
-
-.nav-folder .nav-folder-tilte .nav-folder-title-content:hover {
-  animation: filemove 1.5s 1 normal linear;
-}
-
-@keyframes filemove {
-  0% {transform: translate(0, 0);}
-  100% {transform: translate(calc(-100% + 200px), 0);}
-} */ */

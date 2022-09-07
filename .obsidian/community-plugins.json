@@ -37,7 +37,6 @@
   "obsidian-advanced-uri",
   "obsidian-attachment-name-formatting",
   "obsidian-booknote-plugin",
-  "cmenu-plugin",
   "consistent-attachments-and-links",
   "obsidian-view-mode-by-frontmatter",
   "obsidian-local-images",
@@ -52,5 +51,6 @@
   "obsidian-quiet-outline",
   "cm-chs-patch",
   "get-info-plugin",
-  "obsidian-code-block-enhancer"
+  "obsidian-code-block-enhancer",
+  "cmenu-plugin"
 ]

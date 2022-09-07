@@ -1,6 +1,26 @@
 {
   "recentFiles": [
     {
+      "basename": "MovieList",
+      "path": "People/Movie/MovieList.md"
+    },
+    {
+      "basename": "BookList",
+      "path": "People/Book/BookList.md"
+    },
+    {
+      "basename": "《DK万物透视图解百科》",
+      "path": "People/Book/《DK万物透视图解百科》.md"
+    },
+    {
+      "basename": "《棉花帝国》",
+      "path": "People/Book/《棉花帝国》.md"
+    },
+    {
+      "basename": "读书笔记-平台革命 改变世界的商业模式",
+      "path": "Knowledge/Book-Note/读书笔记-平台革命 改变世界的商业模式.md"
+    },
+    {
       "basename": "读书笔记-OKR使用手册",
       "path": "Knowledge/Book-Note/读书笔记-OKR使用手册.md"
     },
@@ -179,26 +199,6 @@
     {
       "basename": "成本的概念",
       "path": "Knowledge/经济学/成本论/成本的概念.md"
-    },
-    {
-      "basename": "AQMD6010BLS",
-      "path": "People/My-Vault-LittleD3092-master/電控/arduino/AQMD6010BLS.md"
-    },
-    {
-      "basename": "AQMD6010BLS image 1",
-      "path": "People/My-Vault-LittleD3092-master/附件/AQMD6010BLS image 1.png"
-    },
-    {
-      "basename": "類比搖桿模組",
-      "path": "People/My-Vault-LittleD3092-master/電控/arduino/類比搖桿模組.md"
-    },
-    {
-      "basename": "脈衝訊號寬度",
-      "path": "People/My-Vault-LittleD3092-master/電控/電路/脈衝訊號寬度.md"
-    },
-    {
-      "basename": "关注和数据画像赋能给省心租",
-      "path": "Works/58-房产-租房/04、数据中台、标签体系/关注和数据画像赋能给省心租.md"
     }
   ],
   "omittedPaths": [

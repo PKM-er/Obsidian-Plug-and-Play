@@ -1,7 +1,6 @@
 
 
 #cMenuModalBar {
-  width: auto;
   height: auto;
   padding: 3px;
   display: grid;
@@ -118,6 +117,13 @@ CMENU CLASS CHANGES
 #cMenuModalBar.cMenuDefaultAesthetic
 {
 border: 1px solid var(--background-modifier-border);
+width:400px !important;
+}
+
+#cMenuModalBar.top
+{
+  border: 1px solid var(--background-modifier-border);
+  width:auto !important;
 }
 
 #cMenuModalBar.cMenuDefaultAesthetic:not(.top) button[class^=cMenuCommandsubItem]  {
