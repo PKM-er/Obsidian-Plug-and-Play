@@ -1,8 +1,32 @@
 {
   "recentFiles": [
     {
+      "basename": "MovieList",
+      "path": "People/Movie/MovieList.md"
+    },
+    {
       "basename": "BookList",
       "path": "People/Book/BookList.md"
+    },
+    {
+      "basename": "BookList_image_1",
+      "path": "People/Book/素材库/BookList_image_1.gif"
+    },
+    {
+      "basename": "07、脑图和流程图（Mermaid）",
+      "path": "Obsidian-example/Example and showcase/07、脑图和流程图（Mermaid）.md"
+    },
+    {
+      "basename": "01、基本语法",
+      "path": "Obsidian-example/Example and showcase/01、基本语法.md"
+    },
+    {
+      "basename": "Readme",
+      "path": "Obsidian-example/Readme.md"
+    },
+    {
+      "basename": "Readme",
+      "path": "Readme.md"
     },
     {
       "basename": "Book",
@@ -15,10 +39,6 @@
     {
       "basename": "Movie",
       "path": "People/Movie/Movie.md"
-    },
-    {
-      "basename": "MovieList",
-      "path": "People/Movie/MovieList.md"
     },
     {
       "basename": "《DK万物透视图解百科》",
@@ -37,16 +57,8 @@
       "path": "Knowledge/Book-Note/读书笔记-OKR使用手册.md"
     },
     {
-      "basename": "Readme",
-      "path": "Obsidian-example/Readme.md"
-    },
-    {
       "basename": "读书笔记-麦肯锡",
       "path": "Knowledge/Book-Note/读书笔记-麦肯锡.md"
-    },
-    {
-      "basename": "01、基本语法",
-      "path": "Obsidian-example/Example and showcase/01、基本语法.md"
     },
     {
       "basename": "Releases 修改日志",
@@ -187,18 +199,6 @@
     {
       "basename": "经济模型、静态、比较静态和动态分析",
       "path": "Knowledge/经济学/需求、供给、均衡价格/经济模型、静态、比较静态和动态分析.md"
-    },
-    {
-      "basename": "供给",
-      "path": "Knowledge/经济学/需求、供给、均衡价格/供给.md"
-    },
-    {
-      "basename": "弹性",
-      "path": "Knowledge/经济学/需求、供给、均衡价格/弹性.md"
-    },
-    {
-      "basename": "长期成本曲线",
-      "path": "Knowledge/经济学/成本论/长期成本曲线.md"
     }
   ],
   "omittedPaths": [
