@@ -12155,9 +12155,9 @@ img[alt^="bookcover"] {
 }
 
 /*修复dataviewjs 在gallery视图下的和banners高度冲突*/
-.markdown-reading-view .block-language-dataviewjs{
+/.markdown-reading-view .block-language-dataviewjs{
 	margin-top:var(--banner-height);
-}
+} 
 
 .cards table.dataview tbody>tr>td:first-child, 
 .markdown-source-view.mod-cm6.cards .dataview.table-view-table>tbody>tr>td:first-child {
@@ -13520,3 +13520,16 @@ body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tb
   background-color: var(--table-thead-background-color);
   font-family: var(--font-family-strong);
 }
+
+/*修复banner 和 metatable 在没有banner icon下的高度问题*/
+.obsidian-banner-wrapper .obsidian-metatable{
+ margin-top:calc(var(--banner-height) + 50px);
+}
+
+.has-banner-icon.obsidian-banner-wrapper .obsidian-metatable{
+ margin-top:0px;
+}
+
+
+
+
