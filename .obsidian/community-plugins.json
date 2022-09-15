@@ -51,9 +51,11 @@
   "get-info-plugin",
   "obsidian-code-block-enhancer",
   "cmenu-plugin",
-  "dbfolder",
   "obsidian-dynamic-highlights",
   "obsidian-task-progress-bar",
   "obsidian-table-generator",
-  "ob-table-enhancer"
+  "ob-table-enhancer",
+  "better-fn",
+  "obsidian-diagrams-net",
+  "obsidian-minimal-settings"
 ]

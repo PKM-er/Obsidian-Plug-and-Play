@@ -14,6 +14,18 @@
               "group": null,
               "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/BookList.md\",\"mode\":\"preview\",\"source\":false}}",
               "eState": "{}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Movie/Movie.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/Book.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{}"
             }
           ]
         },
@@ -48,6 +60,10 @@
           {
             "id": "c55efec099ef9ac1",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": []
+            },
             "state": {
               "type": "file-explorer",
               "state": {}
@@ -81,7 +97,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 225
+    "width": 376
   },
   "right": {
     "id": "0afdab19216adf86",
@@ -157,15 +173,15 @@
   },
   "active": "9ee8dadf3fe9cf81",
   "lastOpenFiles": [
-    "People/Book/Book.md",
-    "People/Book/《枪炮、病菌与钢铁》.md",
-    "People/Book/BookList.md",
     "People/Movie/Movie.md",
+    "People/Book/Book.md",
     "People/Movie/MovieList.md",
-    "People/Book/《DK万物透视图解百科》.md",
-    "People/Book/《棉花帝国》.md",
-    "Knowledge/Book-Note/读书笔记-平台革命 改变世界的商业模式.md",
-    "Knowledge/Book-Note/读书笔记-OKR使用手册.md",
-    "Obsidian-example/Readme.md"
+    "People/Book/BookList.md",
+    "People/Book/素材库/BookList_image_1.gif",
+    "Obsidian-example/Example and showcase/07、脑图和流程图（Mermaid）.md",
+    "Obsidian-example/Example and showcase/01、基本语法.md",
+    "Obsidian-example/Readme.md",
+    "Readme.md",
+    "People/Book/《枪炮、病菌与钢铁》.md"
   ]
 }
