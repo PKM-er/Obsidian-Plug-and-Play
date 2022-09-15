@@ -12,19 +12,121 @@
             {
               "leaf": "9ee8dadf3fe9cf81",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/BookList.md\",\"mode\":\"preview\",\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Movie/太空部队 第二季 Space Force Season 2.md\",\"mode\":\"preview\",\"source\":false}}",
               "eState": "{}"
             },
             {
               "leaf": "9ee8dadf3fe9cf81",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Movie/Movie.md\",\"mode\":\"source\",\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Movie/上载新生 第二季 Upload Season 2.md\",\"mode\":\"source\",\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
               "leaf": "9ee8dadf3fe9cf81",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/Book.md\",\"mode\":\"source\",\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Movie/人生切割术 第一季 Severance Season 1.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":71},\"to\":{\"line\":1,\"ch\":71}}}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Movie/洛基 第一季 Loki Season 1.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":71},\"to\":{\"line\":1,\"ch\":71}}}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Movie/太空部队 第二季 Space Force Season 2.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":71},\"to\":{\"line\":1,\"ch\":71}}}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《最简单的图形与最复杂的信息》.md\",\"mode\":\"preview\",\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《DK博物大百科》.md\",\"mode\":\"preview\",\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《DK儿童图解百科全书·化学元素》.md\",\"mode\":\"preview\",\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《DK万物透视图解百科》.md\",\"mode\":\"preview\",\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《跟动物交换身体》.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":15,\"ch\":12},\"to\":{\"line\":15,\"ch\":12}}}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《孤独与陪伴》.md\",\"mode\":\"preview\",\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《棉花帝国》.md\",\"mode\":\"preview\",\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《枪炮、病菌与钢铁》.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":0},\"to\":{\"line\":2,\"ch\":0}}}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《网络是怎样连接的》.md\",\"mode\":\"preview\",\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《写给全人类的数学魔法书》.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":71},\"to\":{\"line\":1,\"ch\":71}}}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《最简单的图形与最复杂的信息》.md\",\"mode\":\"preview\",\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《DK博物大百科》.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":0},\"to\":{\"line\":2,\"ch\":0}}}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《DK儿童图解百科全书·化学元素》.md\",\"mode\":\"preview\",\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《DK万物透视图解百科》.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":12,\"ch\":16},\"to\":{\"line\":12,\"ch\":16}}}"
+            },
+            {
+              "leaf": "9ee8dadf3fe9cf81",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/BookList.md\",\"mode\":\"preview\",\"source\":false}}",
               "eState": "{}"
             }
           ]
@@ -32,7 +134,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "People/Book/BookList.md",
+            "file": "People/Movie/太空部队 第二季 Space Force Season 2.md",
             "mode": "preview",
             "source": false
           }
@@ -113,7 +215,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "People/Book/BookList.md",
+                "file": "People/Movie/太空部队 第二季 Space Force Season 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -130,7 +232,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "People/Book/BookList.md",
+                "file": "People/Movie/太空部队 第二季 Space Force Season 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -173,15 +275,15 @@
   },
   "active": "9ee8dadf3fe9cf81",
   "lastOpenFiles": [
-    "People/Movie/Movie.md",
-    "People/Book/Book.md",
-    "People/Movie/MovieList.md",
-    "People/Book/BookList.md",
-    "People/Book/素材库/BookList_image_1.gif",
-    "Obsidian-example/Example and showcase/07、脑图和流程图（Mermaid）.md",
-    "Obsidian-example/Example and showcase/01、基本语法.md",
-    "Obsidian-example/Readme.md",
-    "Readme.md",
-    "People/Book/《枪炮、病菌与钢铁》.md"
+    "People/Movie/上载新生 第二季 Upload Season 2.md",
+    "People/Movie/人生切割术 第一季 Severance Season 1.md",
+    "People/Movie/洛基 第一季 Loki Season 1.md",
+    "People/Movie/太空部队 第二季 Space Force Season 2.md",
+    "People/Book/《最简单的图形与最复杂的信息》.md",
+    "People/Book/《DK博物大百科》.md",
+    "People/Book/《DK儿童图解百科全书·化学元素》.md",
+    "People/Book/《DK万物透视图解百科》.md",
+    "People/Book/《跟动物交换身体》.md",
+    "People/Book/《孤独与陪伴》.md"
   ]
 }

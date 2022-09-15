@@ -1,4 +1,5 @@
 ---
+banner: "https://img3.doubanio.com/view/subject/l/public/s29928580.jpg"
 obsidianUIMode: preview
 name: DK博物大百科
 cover: https://img3.doubanio.com/view/subject/l/public/s29928580.jpg

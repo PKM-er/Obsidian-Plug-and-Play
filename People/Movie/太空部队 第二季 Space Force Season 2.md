@@ -1,4 +1,5 @@
 ---
+banner: "https://img1.doubanio.com/view/photo/1/public/p2867194839.jpg"
 name: 太空部队 第二季 Space Force Season 2
 cover: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2867194839.jpg
 tags: Movie

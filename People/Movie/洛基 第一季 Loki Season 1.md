@@ -1,4 +1,5 @@
 ---
+banner: "https://img1.doubanio.com/view/photo/1/public/p2646859929.jpg"
 name: 洛基 第一季 Loki Season 1
 cover: https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2646859929.jpg
 tags: Movie
