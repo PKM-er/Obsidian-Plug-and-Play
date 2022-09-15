@@ -267,25 +267,3 @@
         position:initial
     }
 }
-
-/* .obsidian-banner-icon .icon-box {
-	margin-top:250px;
-}  
- */
- 
-.obsidian-banner-icon.cm5-banner-icon.h-left.v-center.obsidian-banner-icon .icon-box {
-	margin-top:350px;
-}
-
-.has-banner.cm-active.has-banner-icon.cm-line.obsidian-banner-icon .icon-box {
-	margin-top:350px;
-}
-
-.obsidian-banner-icon.cm6-banner-icon.h-left.v-center{
-	margin-top:10px;
-}
-
-/* .has-banner.cm-active.has-banner-icon.cm-line .obsidian-banner-icon .icon-box {
-	margin-top:50px;
-}  */
-

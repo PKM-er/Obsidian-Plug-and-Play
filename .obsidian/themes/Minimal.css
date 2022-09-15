@@ -13531,5 +13531,15 @@ body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tb
 }
 
 
+.obsidian-banner-icon.cm5-banner-icon.h-left.v-center.obsidian-banner-icon .icon-box {
+	margin-top:calc(var(--banner-height) + 50px);
+}
 
+.has-banner.cm-active.has-banner-icon.cm-line.obsidian-banner-icon .icon-box {
+	margin-top:calc(var(--banner-height) + 50px);
+}
+
+.obsidian-banner-icon.cm6-banner-icon.h-left.v-center{
+	margin-top:10px;
+}
 
