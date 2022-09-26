@@ -93,7 +93,7 @@ body {
 	--max-width: 88%;
 	--max-col-width: 18em;
 	--icon-muted: 0.5;
-	--icon-size: 18px;
+	--icon-size: 22px;
 	--border-width: 1px;
 	--border-width-alt: 1px;
 	--nested-padding: 1.1em;
@@ -1641,14 +1641,6 @@ body .view-action svg.cross path {
 .side-dock-ribbon-action {
 	border-left: 0;
 	margin: 0 6px 6px
-}
-
-.nav-action-button,.workspace-leaf-content[data-type=backlink] .nav-action-button,.workspace-leaf-content[data-type=search] .nav-action-button {
-	padding: 3px 5px 3px;
-	margin: 0 0 7px 0;
-	height: 26px;
-	text-align: center;
-	border-radius: var(--radius-m)
 }
 
 .nav-action-button.is-active,.workspace-leaf-content[data-type=backlink] .nav-action-button.is-active,.workspace-leaf-content[data-type=dictionary-view] .nav-action-button.is-active,.workspace-leaf-content[data-type=search] .nav-action-button.is-active,.workspace-leaf-content[data-type=tag] .nav-action-button.is-active,.workspace-tab-header.is-active {
@@ -4620,10 +4612,7 @@ input[data-task="b"]:checked,li[data-task="b"]>input:checked,li[data-task="b"]>p
 	--sp1: var(--bg1)
 }
 
-.colorful-active #calendar-container .active,.colorful-active #calendar-container .active.today,.colorful-active #calendar-container .active:hover,.colorful-active #calendar-container .day:active,.colorful-active .menu-item.selected:not(.is-disabled):not(.is-label),.colorful-active .menu-item:hover,.colorful-active .menu-item:hover:not(.is-disabled):not(.is-label),.colorful-active .nav-file-title.is-active,.colorful-active .nav-file-title.is-being-dragged,.colorful-active .nav-folder-title.is-being-dragged,.colorful-active .vertical-tab-nav-item.is-active,body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover,body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover {
-	background-color: var(--ax3);
-	color: var(--sp1)
-}
+
 
 .colorful-active #calendar-container .active .dot,.colorful-active #calendar-container .day:active .dot,.colorful-active #calendar-container .today.active .dot {
 	fill: var(--sp1)
@@ -4654,6 +4643,7 @@ body.colorful-headings {
 	width: 20px
 }
 
+/*控制icon大小*/
 body:not(.minimal-icons-off) .graph-controls-button svg,body:not(.minimal-icons-off) .nav-action-button svg,body:not(.minimal-icons-off) .view-action svg,body:not(.minimal-icons-off) .workspace-tab-header-inner-icon svg {
 	width: var(--icon-size);
 	height: var(--icon-size)
@@ -13571,6 +13561,7 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
 	/*padding-left: 10px;*/
 	background: var(--background-table-rows)
 }
+/*End*/
 
 /* 优化tooltip的样式 */
 .tooltip, 
@@ -13588,3 +13579,163 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
 .tooltip.mod-left .tooltip-arrow {
   border-left: 5px solid var(--interactive-accent);
 }
+/*End*/
+
+/*优化目录树的文件夹样式*/
+.nav-folder-children .nav-folder-title-content::before {
+    content: '';
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAhklEQVRIie2PwQ2DMAxFvzMHXYhBskKSE+WWjMAkHajMkc8pVSoBUkQQF7+TLdv/yYDyNFKKEMKYc14ADLuLInOM8d0qMKU4CwcAkpP3vlnw+8A5x9bjA1YANqX0AaoPOjKQXEpzhwAi8rpVUKMCFajgX7D2CiX53RPYenAl3Bhjr+Yo/dgAr4QoWjEjKLYAAAAASUVORK5CYII=);
+    background-size: 16px 16px;
+    transform: translate(0, 2px);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-right: 4px;
+	margin-top:-2px;
+}
+/*End*/
+
+/*优化目录树的展开收起箭头*/
+.nav-folder.is-collapsed .nav-folder-title::before {
+    transform: translateX(4px) translateY(2px) rotate(0deg);
+}
+
+.nav-folder .nav-folder-title::before {
+    content: "";
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZklEQVRIie3NMRKAMAhE0eChMWXSOVzYEhv7sMvgWGRr+K+1vd9PVa/M/7E6EJEzgyyBLBICMkgYYBEIYBAYQBEKQBAaeHeXAe4+zGyWANE4BSBxGEDjEMDEwwAbD633PkrCe5/tAV92N0rtyZlOAAAAAElFTkSuQmCC);
+    background-size: 13px 13px;
+    background-position: center;
+    transform: translate(0, 2px);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    transform: translateX(2px) translateY(1px) rotate(90deg);
+}
+/*End*/
+
+/*---- nav arrows adjust location ----*/
+.nav-folder-collapse-indicator {
+	position: absolute;
+	left: 21px;
+	top: 3px;
+	transition: transform 20ms linear 0s;
+  }
+  
+  .nav-folder-collapse-indicator svg {
+	display: none;
+	color: var(--accent-strong);
+	height: 7px;
+	width: 7px;
+  }
+  
+  /*原始代码*/
+  /*
+  .nav-folder.is-collapsed .nav-folder-collapse-indicator {
+	transform: translateX(-11px) translateY(6px) rotate(-90deg);
+	opacity: 0.4;
+  }
+  */
+  
+  /*search icon 1*/
+  .backlink-pane .search-result-container .collapse-icon {
+	left: 0px;
+	top: 7px;
+	margin-top: 0px;
+	transition: transform 20ms linear 0s;
+  }
+  
+  .backlink-pane .search-result-container .collapse-icon::before {
+	content : "↓";
+	font-size: 14px;
+	font-family: 'Inter';
+	font-weight: bold;
+	color: var(--text-accent);
+	transition: transform 10ms linear 0s;
+  }
+  
+  .backlink-pane .search-result-container .collapse-icon svg {
+	display: none;
+	color:var(--accent-strong);
+	height:7px;
+	width:7px;
+  }
+  
+  .backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon {
+	transform: translateX(1px) translateY(1px) rotate(-90deg);
+	opacity: 0.5;
+  }
+  
+  /* search panel icons */
+  .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon {
+	left: 0px;
+	top: 7px;
+	margin-top: 0px;
+	transition: transform 20ms linear 0s;
+  }
+  
+  .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon::before {
+	content : "↓";
+	font-size: 14px;
+	margin-left: 0px;
+	font-weight: bold;
+	font-family: 'Inter';
+	color: var(--text-accent);
+	transition: transform 10ms linear 0s;
+  }
+  
+  .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon svg {
+	display: none;
+	color:var(--accent-strong);
+	height:7px;
+	width:7px;
+  }
+  
+  .workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon {
+	transform: translateX(1px) translateY(1px) rotate(-90deg);
+	opacity: 0.5;
+  }
+
+/*左侧导航栏，顶部导行样式调整*/
+.workspace-tab-header-inner {
+    padding: 3px 12px;
+    height: 100%;
+    display: flex;
+	justify-content: flex-start;
+}
+
+.workspace-tab-header:hover {
+    color: var(--theme-color);
+    text-align: center;
+    stroke-width: 2px;
+    cursor: pointer;
+}
+.workspace-tab-header:hover {
+    color: var(--text-muted);
+}
+
+.nav-action-button,.workspace-leaf-content[data-type=backlink] .nav-action-button,.workspace-leaf-content[data-type=search] .nav-action-button {
+	/*调整导航栏宽度*/
+	/*
+	padding: 3px 5px 3px;
+	margin: 0 0 7px 0;
+	*/
+	height: 26px;
+	text-align: center;
+	border-radius: var(--radius-m)
+}
+
+/*为目录树添加点击文件后条目颜色后缀，和控制点击后的颜色*/
+.nav-file-title.is-being-dragged, .nav-file-title.is-active, body:not(.is-grabbing) .nav-file-title.is-active:hover, .nav-folder-title.is-being-dragged {
+    border-right: 3px solid #2917d1;
+    background-color: rgba(241, 243, 245, 0.92);
+    color: #858585;
+    font-weight: 600;
+}
+
+.colorful-active #calendar-container .active,.colorful-active #calendar-container .active.today,.colorful-active #calendar-container .active:hover,.colorful-active #calendar-container .day:active,.colorful-active .menu-item.selected:not(.is-disabled):not(.is-label),.colorful-active .menu-item:hover,.colorful-active .menu-item:hover:not(.is-disabled):not(.is-label),.colorful-active .nav-file-title.is-active,.colorful-active .nav-file-title.is-being-dragged,.colorful-active .nav-folder-title.is-being-dragged,.colorful-active .vertical-tab-nav-item.is-active,body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover,body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover {
+	background-color: var(--ax2);
+	color: var(--sp1)
+}
+/*END*/
