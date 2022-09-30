@@ -1,4 +1,7 @@
 ---
+banner: "https://tse1-mm.cn.bing.net/th/id/R-C.fa7eae112074f1a685b3c0820c8940d7?rik=5znVCzTbqoDyQw&riu=http%3a%2f%2fwww.aaronhowdle.com%2fwp-content%2fuploads%2f2018%2f02%2fbook-page-turning-animation.gif&ehk=%2bL3Fo5MSSS%2bPkDeTmMDFdWOgtuTh8omW%2bwYsO4SX%2bNM%3d&risl=&pid=ImgRaw&r=0"
+---
+---
 usage: 对dataview表格渲染成卡片视图
 banner: "https://tse1-mm.cn.bing.net/th/id/R-C.fa7eae112074f1a685b3c0820c8940d7?rik=5znVCzTbqoDyQw&riu=http%3a%2f%2fwww.aaronhowdle.com%2fwp-content%2fuploads%2f2018%2f02%2fbook-page-turning-animation.gif&ehk=%2bL3Fo5MSSS%2bPkDeTmMDFdWOgtuTh8omW%2bwYsO4SX%2bNM%3d&risl=&pid=ImgRaw&r=0"
 obsidianUIMode: preview
