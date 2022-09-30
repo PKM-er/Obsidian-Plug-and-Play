@@ -78,9 +78,9 @@ body {
 	--h1-variant: normal;
 	--h2-variant: normal;
 	--h3-variant: normal;
-	--h4-variant: small-caps;
-	--h5-variant: small-caps;
-	--h6-variant: small-caps;
+	--h4-variant: normal;
+	--h5-variant: normal;
+	--h6-variant: normal;
 	--h1-style: normal;
 	--h2-style: normal;
 	--h3-style: normal;
@@ -127,13 +127,14 @@ body {
 	--cyan: #73bbb2;
 	--blue: #6c99bb;
 	--purple: #9e86c8;
-	--pink: #b05279
+	--pink: #b05279;
+	--item-side:#007aff
 }
 
 .theme-light,.theme-light.minimal-default-light,body .excalidraw {
 	--accent-l: 50%;
 	--base-l: 96%;
-	--bg1: white;
+	--bg1: hsl( var(--base-h), var(--base-s), var(--base-l) );
 	--bg2: hsl( var(--base-h), var(--base-s), var(--base-l) );
 	--bg3: hsla( var(--base-h), var(--base-s), calc(var(--base-l) - 50%), 0.12 );
 	--ui1: hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 6%) );
@@ -148,6 +149,7 @@ body {
 	--ax3: hsl( var(--accent-h), var(--accent-s), calc(var(--accent-l) + 10%) );
 	--hl1: hsla( var(--accent-h), 50%, calc(var(--base-l) - 20%), 30% );
 	--hl2: rgba(255, 225, 0, 0.5)
+	--d rgba(12, 11, 11, 0.19);
 }
 
 .excalidraw.theme--dark,.theme-dark,.theme-dark.minimal-default-dark,.theme-light.minimal-light-contrast .mod-left-split,.theme-light.minimal-light-contrast .titlebar,.theme-light.minimal-light-contrast .workspace-fake-target-overlay.is-in-sidebar,.theme-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),.theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,.theme-light.minimal-light-contrast.minimal-status-off .status-bar {
@@ -238,7 +240,8 @@ body {
 	--interactive-accent: var(--ax3);
 	--interactive-accent-hover: var(--ax3);
 	--background-modifier-accent: var(--ax3);
-	--background-modifier-border: var(--ui1);
+	--background-modifier-border: black;
+	--background-modifier-border2: rgba(12, 11, 11, 0.19);
 	--background-modifier-border-hover: var(--ui2);
 	--background-modifier-border-focus: var(--ui3);
 	--background-modifier-success: var(--green);
@@ -731,10 +734,12 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters {
 }
 
 .cm-editor .cm-gutterElement.cm-active .cm-heading-marker,.cm-editor .cm-lineNumbers .cm-gutterElement.cm-active {
-	color: var(--text-muted)
+	color: black;
 }
 
-
+.cm-heading-marker:hover {
+	font-weight: bolder;
+}
 
 .markdown-source-view.mod-cm6 .cm-embed-block {
 	padding: 0;
@@ -1233,9 +1238,11 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
 	margin: 0 0 0 8px;
 	min-width: auto;
 	width: calc(100% - 16px);
+	overflow: hidden;
+    text-overflow: ellipsis;
 	padding: 0 10px 0 16px;
 	line-height: 1.5;
-	cursor: var(--cursor)
+	cursor: var(--cursor);
 }
 
 .nav-folder.mod-root>.nav-folder-title.is-being-dragged-over {
@@ -1261,7 +1268,7 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
 .nav-file-title.is-being-dragged,.nav-folder-title.is-being-dragged,body:not(.is-grabbing) .nav-file-title.is-being-dragged:hover,body:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover {
 	background-color: var(--background-tertiary);
 	color: var(--text-normal);
-	box-shadow: 0 0 0 2px var(--background-modifier-border-focus);
+	box-shadow: 0 0 0 px var(--background-modifier-border-focus);
 	z-index: 1
 }
 
@@ -1277,7 +1284,7 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
 	border-width: 0;
 	line-height: 1.6;
 	border-color: var(--background-secondary);
-	border-radius: var(--radius-m);
+	border-radius: var(--radius-s);
 	cursor: var(--cursor)
 }
 
@@ -1454,12 +1461,6 @@ body:not(.is-grabbing) .nav-file-title:hover,body:not(.is-grabbing) .nav-file-ti
 
 .markdown-preview-view ul>li:not(.task-list-item) .collapse-indicator {
 	padding-right: 20px
-}
-
-/*自定义代码注释：控制阅读模式下，代码*/
-.markdown-preview-view ul>li:not(.task-list-item)::marker {
-	font-size: .9em;
-	border-color:gray;
 }
 
 .list-collapse-indicator .collapse-indicator .collapse-icon {
@@ -1658,17 +1659,6 @@ body .view-action svg.cross path {
 	background: 0 0
 }
 
-.graph-controls-button:hover,.nav-action-button.is-active:hover,.nav-action-button:hover,.side-dock-ribbon-action:hover,.side-dock-ribbon-tab:hover,.view-action.is-active:hover,.view-action:hover,.view-header-icon:hover,.workspace-tab-header:hover {
-	color: var(--icon-color-hover);
-	opacity: 1;
-	transition: opacity .1s ease-in-out
-}
-
-.graph-controls-button:hover,.nav-action-button:hover,.side-dock-ribbon-action:hover,.view-action:hover,.workspace-drawer-header-icon:hover,.workspace-drawer-tab-option-item:hover,.workspace-leaf-content[data-type=backlink] .nav-action-button.is-active:hover,.workspace-leaf-content[data-type=search] .nav-action-button.is-active:hover,.workspace-tab-header-inner-icon:hover {
-	background-color: var(--background-tertiary);
-	border-radius: var(--radius-m)
-}
-
 body {
 	--ig-adjust-reading: -0.7em;
 	--ig-adjust-edit: -1px
@@ -1677,14 +1667,6 @@ body {
 .markdown-rendered.show-indentation-guide li>ol::before,.markdown-rendered.show-indentation-guide li>ul::before {
 	left: var(--ig-adjust-reading);
 	color:black;
-}
-
-
-/*自定义代码注释：控制编辑视图下列表连接线颜色和位置*/
-/*自定义代码注释：控制编辑视图下列表前面黑点*/
-.markdown-source-view.mod-cm6 .cm-indent::before {
-	transform: translateX(var(--ig-adjust-edit));
-	margin-left:-0.3em;
 }
 
 a {
@@ -1737,11 +1719,6 @@ ol {
 
 ul>li {
 	min-height: 1.4em
-}
-
-/*控制无序列表前置原点的颜色*/
-ol>li::marker,ul>li::marker {
-	color: var(--text-faint)
 }
 
 .mod-cm6 .HyperMD-list-line .list-bullet::after,.mod-cm6 span.list-bullet::after,ul>li::marker {
@@ -1969,12 +1946,6 @@ body:not(.is-mobile) .modal {
 	top: 0;
 	right: 0;
 	z-index: 1
-}
-
-.is-mobile .modal .vertical-tab-header-group-title {
-	padding: 15px 20px 10px 20px;
-	text-transform: uppercase;
-	letter-spacing: .05em
 }
 
 .is-mobile .modal .vertical-tab-nav-item {
@@ -3051,25 +3022,6 @@ body:not(.is-mobile) .theme-list .community-theme.is-selected .community-theme-i
 	padding-bottom: 100px
 }
 
-.vertical-tab-header-group-title {
-	color: var(--text-faint);
-	text-transform: none;
-	font-size: 12px;
-	letter-spacing: 0;
-	font-weight: 500
-}
-
-.vertical-tab-nav-item {
-	padding: 5px 8px;
-	margin: 0 8px 0;
-	color: var(--text-muted);
-	font-weight: 400;
-	border: none;
-	background: var(--background-secondary);
-	cursor: var(--cursor);
-	border-radius: var(--radius-m)
-}
-
 .vertical-tab-nav-item:hover {
 	color: var(--text-normal)
 }
@@ -3598,7 +3550,6 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) {
 
 body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 	background: var(--background-secondary);
-	border-bottom: var(--border-width) solid var(--background-divider);
 	height: var(--titlebar-height)!important;
 	top: 0!important;
 	padding-top: 0!important
@@ -3606,73 +3557,6 @@ body:not(.hider-frameless):not(.is-fullscreen):not(.is-mobile) .titlebar {
 
 body.hider-frameless .titlebar {
 	border-bottom: none
-}
-
-.mod-windows .titlebar-button:hover {
-	background-color: var(--background-primary-alt)
-}
-
-.mod-windows .titlebar-button.mod-close:hover {
-	background-color: var(--background-modifier-error)
-}
-
-.mod-windows .mod-close:hover svg {
-	fill: white!important;
-	stroke: white!important
-}
-
-
-.titlebar-text {
-	font-weight: 600;
-	padding-top: 6px;
-	color: var(--text-normal);
-	letter-spacing: inherit
-}
-
-body:not(.window-title-on) .titlebar-text {
-	display: none
-}
-
-.titlebar-button:hover {
-	opacity: 1;
-	transition: opacity .1s ease-out
-}
-
-.titlebar-button {
-	opacity: .5;
-	cursor: var(--cursor);
-	color: var(--text-muted);
-	padding: 2px 4px;
-	border-radius: 3px;
-	line-height: 1;
-	display: flex;
-}
-
-.titlebar-button:hover {
-	background-color: var(--background-tertiary)
-}
-
-.titlebar-button-container {
-	height: var(--titlebar-height);
-	top: 0;
-	display: flex;
-	align-items: center
-}
-
-.titlebar:hover .titlebar-button-container.mod-left {
-	opacity: 1.24;
-}
-
-.titlebar-button-container.mod-left .titlebar-button {
-	margin-right: 5px;
-}
-
-.titlebar-button-container.mod-right .titlebar-button {
-	margin-left: 0;
-	border-radius: 0;
-	height: 100%;
-	align-items: center;
-	padding: 2px 15px
 }
 
 .empty-state {
@@ -3776,14 +3660,6 @@ body:not(.window-title-on) .titlebar-text {
 	padding-left: 5px
 }
 
-.workspace-tabs .workspace-tab-header-container {
-	border: none
-}
-
-.workspace-sidedock-empty-state+.workspace-tabs .workspace-tab-header-container {
-	border-bottom: var(--border-width) solid var(--background-divider)
-}
-
 .mod-right-split .workspace-tabs .nav-buttons-container {
 	z-index: 1
 }
@@ -3811,10 +3687,6 @@ body:not(.window-title-on) .titlebar-text {
 	padding: 0;
 	align-items: center;
 	background-color: transparent
-}
-
-.workspace-tab-header-container {
-	border-bottom: var(--border-width) solid var(--background-divider)
 }
 
 .theme-dark audio {
@@ -3881,10 +3753,14 @@ body:not(.is-mobile) button:active,body:not(.is-mobile) button:focus {
 	box-shadow: 0 0 0 2px var(--background-modifier-border-hover)
 }
 
+.set-metatableroot .value {
+	border:1px solid black;
+}
+
 .modal button:not(.mod-warning),.modal.mod-settings button:not(.mod-cta):not(.mod-warning),.modal.mod-settings button:not(.mod-warning) {
 	background-color: var(--interactive-normal);
 	color: var(--text-normal);
-	border: 1px solid var(--background-modifier-border);
+	border: 1px solid var(--text-faint);
 	box-shadow: 0 1px 1px 0 var(--btn-shadow-color);
 	cursor: var(--cursor);
 	height: var(--input-height);
@@ -4142,10 +4018,6 @@ body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
 
 body.borders-title .workspace-leaf .workspace-leaf-content:not([data-type=empty]):not([data-type=map]):not([data-type=graph]):not([data-type=localgraph]) .view-header,body.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type=map]):not([data-type=graph]):not([data-type=empty]):not([data-type=localgraph]) .view-header {
 	border-bottom: var(--border-width) solid var(--background-divider)
-}
-
-body.borders-title .workspace-ribbon.mod-left.is-collapsed {
-	border-right: var(--border-width) solid var(--background-divider)
 }
 
 body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split>.workspace-tabs:nth-child(3) .workspace-tab-header-container {
@@ -4612,8 +4484,6 @@ input[data-task="b"]:checked,li[data-task="b"]>input:checked,li[data-task="b"]>p
 	--sp1: var(--bg1)
 }
 
-
-
 .colorful-active #calendar-container .active .dot,.colorful-active #calendar-container .day:active .dot,.colorful-active #calendar-container .today.active .dot {
 	fill: var(--sp1)
 }
@@ -4643,11 +4513,6 @@ body.colorful-headings {
 	width: 20px
 }
 
-/*控制icon大小*/
-body:not(.minimal-icons-off) .graph-controls-button svg,body:not(.minimal-icons-off) .nav-action-button svg,body:not(.minimal-icons-off) .view-action svg,body:not(.minimal-icons-off) .workspace-tab-header-inner-icon svg {
-	width: var(--icon-size);
-	height: var(--icon-size)
-}
 
 body:not(.minimal-icons-off) .menu-item-icon svg {
 	width: 16px;
@@ -4659,11 +4524,11 @@ body:not(.minimal-icons-off) .workspace-ribbon-collapse-btn svg {
 	height: var(--icon-size)
 }
 
-body:not(.minimal-icons-off) svg.ScriptEngine,body:not(.minimal-icons-off) svg.add-note-glyph,body:not(.minimal-icons-off) svg.any-key,body:not(.minimal-icons-off) svg.audio-file,body:not(.minimal-icons-off) svg.bar-graph,body:not(.minimal-icons-off) svg.blocks,body:not(.minimal-icons-off) svg.bold-glyph,body:not(.minimal-icons-off) svg.box-glyph,body:not(.minimal-icons-off) svg.bracket-glyph,body:not(.minimal-icons-off) svg.breadcrumbs-trail-icon,body:not(.minimal-icons-off) svg.broken-link,body:not(.minimal-icons-off) svg.bullet-list,body:not(.minimal-icons-off) svg.bullet-list-glyph,body:not(.minimal-icons-off) svg.calendar-day,body:not(.minimal-icons-off) svg.calendar-glyph,body:not(.minimal-icons-off) svg.calendar-with-checkmark,body:not(.minimal-icons-off) svg.changelog,body:not(.minimal-icons-off) svg.check-in-circle,body:not(.minimal-icons-off) svg.check-small,body:not(.minimal-icons-off) svg.checkbox-glyph,body:not(.minimal-icons-off) svg.checkmark,body:not(.minimal-icons-off) svg.clock,body:not(.minimal-icons-off) svg.clock-glyph,body:not(.minimal-icons-off) svg.cloud,body:not(.minimal-icons-off) svg.code-glyph,body:not(.minimal-icons-off) svg.command-glyph,body:not(.minimal-icons-off) svg.create-new,body:not(.minimal-icons-off) svg.cross,body:not(.minimal-icons-off) svg.cross-in-box,body:not(.minimal-icons-off) svg.crossed-star,body:not(.minimal-icons-off) svg.dice,body:not(.minimal-icons-off) svg.disk,body:not(.minimal-icons-off) svg.document,body:not(.minimal-icons-off) svg.documents,body:not(.minimal-icons-off) svg.dot-network,body:not(.minimal-icons-off) svg.double-down-arrow-glyph,body:not(.minimal-icons-off) svg.double-up-arrow-glyph,body:not(.minimal-icons-off) svg.down-arrow-with-tail,body:not(.minimal-icons-off) svg.down-chevron-glyph,body:not(.minimal-icons-off) svg.duplicate-glyph,body:not(.minimal-icons-off) svg.enter,body:not(.minimal-icons-off) svg.excalidraw-icon,body:not(.minimal-icons-off) svg.exit-fullscreen,body:not(.minimal-icons-off) svg.expand-vertically,body:not(.minimal-icons-off) svg.file-explorer-glyph,body:not(.minimal-icons-off) svg.filled-pin,body:not(.minimal-icons-off) svg.folder,body:not(.minimal-icons-off) svg.fullscreen,body:not(.minimal-icons-off) svg.gear,body:not(.minimal-icons-off) svg.globe,body:not(.minimal-icons-off) svg.go-to-file,body:not(.minimal-icons-off) svg.graph-glyph,body:not(.minimal-icons-off) svg.hashtag,body:not(.minimal-icons-off) svg.heading-glyph,body:not(.minimal-icons-off) svg.help,body:not(.minimal-icons-off) svg.help .widget-icon,body:not(.minimal-icons-off) svg.highlight-glyph,body:not(.minimal-icons-off) svg.horizontal-split,body:not(.minimal-icons-off) svg.image-file,body:not(.minimal-icons-off) svg.image-glyph,body:not(.minimal-icons-off) svg.import-glyph,body:not(.minimal-icons-off) svg.indent-glyph,body:not(.minimal-icons-off) svg.info,body:not(.minimal-icons-off) svg.install,body:not(.minimal-icons-off) svg.italic-glyph,body:not(.minimal-icons-off) svg.keyboard-glyph,body:not(.minimal-icons-off) svg.languages,body:not(.minimal-icons-off) svg.ledger,body:not(.minimal-icons-off) svg.left-arrow,body:not(.minimal-icons-off) svg.left-arrow-with-tail,body:not(.minimal-icons-off) svg.left-chevron-glyph,body:not(.minimal-icons-off) svg.lines-of-text,body:not(.minimal-icons-off) svg.link,body:not(.minimal-icons-off) svg.link-glyph,body:not(.minimal-icons-off) svg.links-coming-in,body:not(.minimal-icons-off) svg.links-going-out,body:not(.minimal-icons-off) svg.longform,body:not(.minimal-icons-off) svg.magnifying-glass,body:not(.minimal-icons-off) svg.merge-files,body:not(.minimal-icons-off) svg.merge-files-glyph,body:not(.minimal-icons-off) svg.microphone,body:not(.minimal-icons-off) svg.microphone-filled,body:not(.minimal-icons-off) svg.minus-with-circle,body:not(.minimal-icons-off) svg.note-glyph,body:not(.minimal-icons-off) svg.number-list-glyph,body:not(.minimal-icons-off) svg.obsidian-leaflet-plugin-icon-map,body:not(.minimal-icons-off) svg.open-elsewhere-glyph,body:not(.minimal-icons-off) svg.open-vault,body:not(.minimal-icons-off) svg.pane-layout,body:not(.minimal-icons-off) svg.paper-plane,body:not(.minimal-icons-off) svg.paper-plane-glyph,body:not(.minimal-icons-off) svg.paste,body:not(.minimal-icons-off) svg.paste-text,body:not(.minimal-icons-off) svg.paused,body:not(.minimal-icons-off) svg.pencil,body:not(.minimal-icons-off) svg.pencil_icon,body:not(.minimal-icons-off) svg.percent-sign-glyph,body:not(.minimal-icons-off) svg.pin,body:not(.minimal-icons-off) svg.play-audio-glyph,body:not(.minimal-icons-off) svg.plus-minus-glyph,body:not(.minimal-icons-off) svg.plus-with-circle,body:not(.minimal-icons-off) svg.popup-open,body:not(.minimal-icons-off) svg.presentation,body:not(.minimal-icons-off) svg.presentation-glyph,body:not(.minimal-icons-off) svg.price-tag-glyph,body:not(.minimal-icons-off) svg.question-mark-glyph,body:not(.minimal-icons-off) svg.quote-glyph,body:not(.minimal-icons-off) svg.reading-glasses,body:not(.minimal-icons-off) svg.redo-glyph,body:not(.minimal-icons-off) svg.reset,body:not(.minimal-icons-off) svg.restore-file-glyph,body:not(.minimal-icons-off) svg.right-arrow,body:not(.minimal-icons-off) svg.right-arrow-with-tail,body:not(.minimal-icons-off) svg.right-chevron-glyph,body:not(.minimal-icons-off) svg.right-triangle,body:not(.minimal-icons-off) svg.run-command,body:not(.minimal-icons-off) svg.scissors,body:not(.minimal-icons-off) svg.scissors-glyph,body:not(.minimal-icons-off) svg.search,body:not(.minimal-icons-off) svg.search-glyph,body:not(.minimal-icons-off) svg.select-all-text,body:not(.minimal-icons-off) svg.sheets-in-box,body:not(.minimal-icons-off) svg.split,body:not(.minimal-icons-off) svg.spreadsheet,body:not(.minimal-icons-off) svg.stacked-levels,body:not(.minimal-icons-off) svg.star,body:not(.minimal-icons-off) svg.star-glyph,body:not(.minimal-icons-off) svg.star-list,body:not(.minimal-icons-off) svg.stop-audio-glyph,body:not(.minimal-icons-off) svg.strikethrough-glyph,body:not(.minimal-icons-off) svg.sweep,body:not(.minimal-icons-off) svg.switch,body:not(.minimal-icons-off) svg.sync,body:not(.minimal-icons-off) svg.sync-small,body:not(.minimal-icons-off) svg.tag-glyph,body:not(.minimal-icons-off) svg.three-horizontal-bars,body:not(.minimal-icons-off) svg.tomorrow-glyph,body:not(.minimal-icons-off) svg.trash,body:not(.minimal-icons-off) svg.two-blank-pages,body:not(.minimal-icons-off) svg.undo-glyph,body:not(.minimal-icons-off) svg.unindent-glyph,body:not(.minimal-icons-off) svg.up-and-down-arrows,body:not(.minimal-icons-off) svg.up-arrow-with-tail,body:not(.minimal-icons-off) svg.up-chevron-glyph,body:not(.minimal-icons-off) svg.vault,body:not(.minimal-icons-off) svg.vertical-split,body:not(.minimal-icons-off) svg.vertical-three-dots,body:not(.minimal-icons-off) svg.wand,body:not(.minimal-icons-off) svg.workspace-glyph,body:not(.minimal-icons-off) svg.wrench-screwdriver-glyph,body:not(.minimal-icons-off) svg.yesterday-glyph {
+body:not(.minimal-icons-off) svg.ScriptEngine,body:not(.minimal-icons-off) svg.add-note-glyph,body:not(.minimal-icons-off) svg.any-key,body:not(.minimal-icons-off) svg.audio-file,body:not(.minimal-icons-off) svg.bar-graph,body:not(.minimal-icons-off) svg.blocks,body:not(.minimal-icons-off) svg.bold-glyph,body:not(.minimal-icons-off) svg.box-glyph,body:not(.minimal-icons-off) svg.bracket-glyph,body:not(.minimal-icons-off) svg.breadcrumbs-trail-icon,body:not(.minimal-icons-off) svg.broken-link,body:not(.minimal-icons-off) svg.bullet-list,body:not(.minimal-icons-off) svg.bullet-list-glyph,body:not(.minimal-icons-off) svg.calendar-day,body:not(.minimal-icons-off) svg.calendar-glyph,body:not(.minimal-icons-off) svg.calendar-with-checkmark,body:not(.minimal-icons-off) svg.changelog,body:not(.minimal-icons-off) svg.check-in-circle,body:not(.minimal-icons-off) svg.check-small,body:not(.minimal-icons-off) svg.checkbox-glyph,body:not(.minimal-icons-off) svg.checkmark,body:not(.minimal-icons-off) svg.clock,body:not(.minimal-icons-off) svg.clock-glyph,body:not(.minimal-icons-off) svg.cloud,body:not(.minimal-icons-off) svg.code-glyph,body:not(.minimal-icons-off) svg.command-glyph,body:not(.minimal-icons-off) svg.create-new,body:not(.minimal-icons-off) svg.cross,body:not(.minimal-icons-off) svg.cross-in-box,body:not(.minimal-icons-off) svg.crossed-star,body:not(.minimal-icons-off) svg.dice,body:not(.minimal-icons-off) svg.disk,body:not(.minimal-icons-off) svg.document,body:not(.minimal-icons-off) svg.documents,body:not(.minimal-icons-off) svg.dot-network,body:not(.minimal-icons-off) svg.double-down-arrow-glyph,body:not(.minimal-icons-off) svg.double-up-arrow-glyph,body:not(.minimal-icons-off) svg.down-arrow-with-tail,body:not(.minimal-icons-off) svg.down-chevron-glyph,body:not(.minimal-icons-off) svg.duplicate-glyph,body:not(.minimal-icons-off) svg.enter,body:not(.minimal-icons-off) svg.excalidraw-icon,body:not(.minimal-icons-off) svg.exit-fullscreen,body:not(.minimal-icons-off) svg.expand-vertically,body:not(.minimal-icons-off) svg.file-explorer-glyph,body:not(.minimal-icons-off) svg.filled-pin,body:not(.minimal-icons-off) svg.fullscreen,body:not(.minimal-icons-off) svg.gear,body:not(.minimal-icons-off) svg.globe,body:not(.minimal-icons-off) svg.go-to-file,body:not(.minimal-icons-off) svg.graph-glyph,body:not(.minimal-icons-off) svg.hashtag,body:not(.minimal-icons-off) svg.heading-glyph,body:not(.minimal-icons-off) svg.help,body:not(.minimal-icons-off) svg.help .widget-icon,body:not(.minimal-icons-off) svg.highlight-glyph,body:not(.minimal-icons-off) svg.horizontal-split,body:not(.minimal-icons-off) svg.image-file,body:not(.minimal-icons-off) svg.image-glyph,body:not(.minimal-icons-off) svg.import-glyph,body:not(.minimal-icons-off) svg.indent-glyph,body:not(.minimal-icons-off) svg.info,body:not(.minimal-icons-off) svg.install,body:not(.minimal-icons-off) svg.italic-glyph,body:not(.minimal-icons-off) svg.keyboard-glyph,body:not(.minimal-icons-off) svg.languages,body:not(.minimal-icons-off) svg.ledger,body:not(.minimal-icons-off) svg.left-arrow,body:not(.minimal-icons-off) svg.left-arrow-with-tail,body:not(.minimal-icons-off) svg.left-chevron-glyph,body:not(.minimal-icons-off) svg.lines-of-text,body:not(.minimal-icons-off) svg.link,body:not(.minimal-icons-off) svg.link-glyph,body:not(.minimal-icons-off) svg.links-coming-in,body:not(.minimal-icons-off) svg.links-going-out,body:not(.minimal-icons-off) svg.longform,body:not(.minimal-icons-off) svg.magnifying-glass,body:not(.minimal-icons-off) svg.merge-files,body:not(.minimal-icons-off) svg.merge-files-glyph,body:not(.minimal-icons-off) svg.microphone,body:not(.minimal-icons-off) svg.microphone-filled,body:not(.minimal-icons-off) svg.minus-with-circle,body:not(.minimal-icons-off) svg.note-glyph,body:not(.minimal-icons-off) svg.number-list-glyph,body:not(.minimal-icons-off) svg.obsidian-leaflet-plugin-icon-map,body:not(.minimal-icons-off) svg.open-elsewhere-glyph,body:not(.minimal-icons-off) svg.open-vault,body:not(.minimal-icons-off) svg.pane-layout,body:not(.minimal-icons-off) svg.paper-plane,body:not(.minimal-icons-off) svg.paper-plane-glyph,body:not(.minimal-icons-off) svg.paste,body:not(.minimal-icons-off) svg.paste-text,body:not(.minimal-icons-off) svg.paused,body:not(.minimal-icons-off) svg.pencil,body:not(.minimal-icons-off) svg.pencil_icon,body:not(.minimal-icons-off) svg.percent-sign-glyph,body:not(.minimal-icons-off) svg.pin,body:not(.minimal-icons-off) svg.play-audio-glyph,body:not(.minimal-icons-off) svg.plus-minus-glyph,body:not(.minimal-icons-off) svg.plus-with-circle,body:not(.minimal-icons-off) svg.popup-open,body:not(.minimal-icons-off) svg.presentation,body:not(.minimal-icons-off) svg.presentation-glyph,body:not(.minimal-icons-off) svg.price-tag-glyph,body:not(.minimal-icons-off) svg.question-mark-glyph,body:not(.minimal-icons-off) svg.quote-glyph,body:not(.minimal-icons-off) svg.reading-glasses,body:not(.minimal-icons-off) svg.redo-glyph,body:not(.minimal-icons-off) svg.reset,body:not(.minimal-icons-off) svg.restore-file-glyph,body:not(.minimal-icons-off) svg.right-arrow,body:not(.minimal-icons-off) svg.right-arrow-with-tail,body:not(.minimal-icons-off) svg.right-chevron-glyph,body:not(.minimal-icons-off) svg.right-triangle,body:not(.minimal-icons-off) svg.run-command,body:not(.minimal-icons-off) svg.scissors,body:not(.minimal-icons-off) svg.scissors-glyph,body:not(.minimal-icons-off) svg.search,body:not(.minimal-icons-off) svg.search-glyph,body:not(.minimal-icons-off) svg.select-all-text,body:not(.minimal-icons-off) svg.sheets-in-box,body:not(.minimal-icons-off) svg.split,body:not(.minimal-icons-off) svg.spreadsheet,body:not(.minimal-icons-off) svg.stacked-levels,body:not(.minimal-icons-off) svg.star,body:not(.minimal-icons-off) svg.star-glyph,body:not(.minimal-icons-off) svg.star-list,body:not(.minimal-icons-off) svg.stop-audio-glyph,body:not(.minimal-icons-off) svg.strikethrough-glyph,body:not(.minimal-icons-off) svg.sweep,body:not(.minimal-icons-off) svg.switch,body:not(.minimal-icons-off) svg.sync,body:not(.minimal-icons-off) svg.sync-small,body:not(.minimal-icons-off) svg.tag-glyph,body:not(.minimal-icons-off) svg.three-horizontal-bars,body:not(.minimal-icons-off) svg.tomorrow-glyph,body:not(.minimal-icons-off) svg.trash,body:not(.minimal-icons-off) svg.two-blank-pages,body:not(.minimal-icons-off) svg.undo-glyph,body:not(.minimal-icons-off) svg.unindent-glyph,body:not(.minimal-icons-off) svg.up-and-down-arrows,body:not(.minimal-icons-off) svg.up-arrow-with-tail,body:not(.minimal-icons-off) svg.up-chevron-glyph,body:not(.minimal-icons-off) svg.vault,body:not(.minimal-icons-off) svg.vertical-split,body:not(.minimal-icons-off) svg.vertical-three-dots,body:not(.minimal-icons-off) svg.wand,body:not(.minimal-icons-off) svg.workspace-glyph,body:not(.minimal-icons-off) svg.wrench-screwdriver-glyph,body:not(.minimal-icons-off) svg.yesterday-glyph {
 	background-color: currentColor
 }
 
-body:not(.minimal-icons-off) svg.ScriptEngine>path,body:not(.minimal-icons-off) svg.add-note-glyph>path,body:not(.minimal-icons-off) svg.any-key>path,body:not(.minimal-icons-off) svg.audio-file>path,body:not(.minimal-icons-off) svg.bar-graph>path,body:not(.minimal-icons-off) svg.blocks>path,body:not(.minimal-icons-off) svg.bold-glyph>path,body:not(.minimal-icons-off) svg.box-glyph>path,body:not(.minimal-icons-off) svg.bracket-glyph>path,body:not(.minimal-icons-off) svg.breadcrumbs-trail-icon>path,body:not(.minimal-icons-off) svg.broken-link>path,body:not(.minimal-icons-off) svg.bullet-list-glyph>path,body:not(.minimal-icons-off) svg.bullet-list>path,body:not(.minimal-icons-off) svg.calendar-day>path,body:not(.minimal-icons-off) svg.calendar-glyph>path,body:not(.minimal-icons-off) svg.calendar-with-checkmark>path,body:not(.minimal-icons-off) svg.changelog>path,body:not(.minimal-icons-off) svg.check-in-circle>path,body:not(.minimal-icons-off) svg.check-small>path,body:not(.minimal-icons-off) svg.checkbox-glyph>path,body:not(.minimal-icons-off) svg.checkmark>path,body:not(.minimal-icons-off) svg.clock-glyph>path,body:not(.minimal-icons-off) svg.clock>path,body:not(.minimal-icons-off) svg.cloud>path,body:not(.minimal-icons-off) svg.code-glyph>path,body:not(.minimal-icons-off) svg.command-glyph>path,body:not(.minimal-icons-off) svg.create-new>path,body:not(.minimal-icons-off) svg.cross-in-box>path,body:not(.minimal-icons-off) svg.cross>path,body:not(.minimal-icons-off) svg.crossed-star>path,body:not(.minimal-icons-off) svg.dice>path,body:not(.minimal-icons-off) svg.disk>path,body:not(.minimal-icons-off) svg.document>path,body:not(.minimal-icons-off) svg.documents>path,body:not(.minimal-icons-off) svg.dot-network>path,body:not(.minimal-icons-off) svg.double-down-arrow-glyph>path,body:not(.minimal-icons-off) svg.double-up-arrow-glyph>path,body:not(.minimal-icons-off) svg.down-arrow-with-tail>path,body:not(.minimal-icons-off) svg.down-chevron-glyph>path,body:not(.minimal-icons-off) svg.duplicate-glyph>path,body:not(.minimal-icons-off) svg.enter>path,body:not(.minimal-icons-off) svg.excalidraw-icon path,body:not(.minimal-icons-off) svg.exit-fullscreen>path,body:not(.minimal-icons-off) svg.expand-vertically>path,body:not(.minimal-icons-off) svg.file-explorer-glyph>path,body:not(.minimal-icons-off) svg.filled-pin>path,body:not(.minimal-icons-off) svg.folder>path,body:not(.minimal-icons-off) svg.fullscreen>path,body:not(.minimal-icons-off) svg.gear>path,body:not(.minimal-icons-off) svg.globe>path,body:not(.minimal-icons-off) svg.go-to-file>path,body:not(.minimal-icons-off) svg.graph-glyph>path,body:not(.minimal-icons-off) svg.hashtag>path,body:not(.minimal-icons-off) svg.heading-glyph>path,body:not(.minimal-icons-off) svg.help .widget-icon>path,body:not(.minimal-icons-off) svg.help>path,body:not(.minimal-icons-off) svg.highlight-glyph>path,body:not(.minimal-icons-off) svg.horizontal-split>path,body:not(.minimal-icons-off) svg.image-file>path,body:not(.minimal-icons-off) svg.image-glyph>path,body:not(.minimal-icons-off) svg.import-glyph>path,body:not(.minimal-icons-off) svg.indent-glyph>path,body:not(.minimal-icons-off) svg.info>path,body:not(.minimal-icons-off) svg.install>path,body:not(.minimal-icons-off) svg.italic-glyph>path,body:not(.minimal-icons-off) svg.keyboard-glyph>path,body:not(.minimal-icons-off) svg.languages>path,body:not(.minimal-icons-off) svg.left-arrow-with-tail>path,body:not(.minimal-icons-off) svg.left-arrow>path,body:not(.minimal-icons-off) svg.left-chevron-glyph>path,body:not(.minimal-icons-off) svg.lines-of-text>path,body:not(.minimal-icons-off) svg.link-glyph>path,body:not(.minimal-icons-off) svg.link>path,body:not(.minimal-icons-off) svg.links-coming-in>path,body:not(.minimal-icons-off) svg.links-going-out>path,body:not(.minimal-icons-off) svg.longform>path,body:not(.minimal-icons-off) svg.magnifying-glass>path,body:not(.minimal-icons-off) svg.merge-files>path,body:not(.minimal-icons-off) svg.microphone-filled>path,body:not(.minimal-icons-off) svg.microphone>path,body:not(.minimal-icons-off) svg.minus-with-circle>path,body:not(.minimal-icons-off) svg.note-glyph>path,body:not(.minimal-icons-off) svg.number-list-glyph>path,body:not(.minimal-icons-off) svg.obsidian-leaflet-plugin-icon-map>path,body:not(.minimal-icons-off) svg.open-elsewhere-glyph>path,body:not(.minimal-icons-off) svg.open-vault>path,body:not(.minimal-icons-off) svg.pane-layout>path,body:not(.minimal-icons-off) svg.paper-plane-glyph>path,body:not(.minimal-icons-off) svg.paper-plane>path,body:not(.minimal-icons-off) svg.paste-text>path,body:not(.minimal-icons-off) svg.paste>path,body:not(.minimal-icons-off) svg.paused>path,body:not(.minimal-icons-off) svg.pencil>path,body:not(.minimal-icons-off) svg.pencil_icon>path,body:not(.minimal-icons-off) svg.percent-sign-glyph>path,body:not(.minimal-icons-off) svg.pin>path,body:not(.minimal-icons-off) svg.play-audio-glyph>path,body:not(.minimal-icons-off) svg.plus-minus-glyph>path,body:not(.minimal-icons-off) svg.plus-with-circle>path,body:not(.minimal-icons-off) svg.popup-open>path,body:not(.minimal-icons-off) svg.presentation-glyph>path,body:not(.minimal-icons-off) svg.presentation>path,body:not(.minimal-icons-off) svg.price-tag-glyph>path,body:not(.minimal-icons-off) svg.question-mark-glyph>path,body:not(.minimal-icons-off) svg.quote-glyph>path,body:not(.minimal-icons-off) svg.reading-glasses>path,body:not(.minimal-icons-off) svg.redo-glyph>path,body:not(.minimal-icons-off) svg.reset>path,body:not(.minimal-icons-off) svg.restore-file-glyph>path,body:not(.minimal-icons-off) svg.right-arrow-with-tail>path,body:not(.minimal-icons-off) svg.right-arrow>path,body:not(.minimal-icons-off) svg.right-chevron-glyph>path,body:not(.minimal-icons-off) svg.right-triangle>path,body:not(.minimal-icons-off) svg.run-command>path,body:not(.minimal-icons-off) svg.scissors-glyph>path,body:not(.minimal-icons-off) svg.scissors>path,body:not(.minimal-icons-off) svg.search-glyph>path,body:not(.minimal-icons-off) svg.search>path,body:not(.minimal-icons-off) svg.select-all-text>path,body:not(.minimal-icons-off) svg.sheets-in-box>path,body:not(.minimal-icons-off) svg.split>path,body:not(.minimal-icons-off) svg.spreadsheet>path,body:not(.minimal-icons-off) svg.stacked-levels>path,body:not(.minimal-icons-off) svg.star-glyph>path,body:not(.minimal-icons-off) svg.star-list>path,body:not(.minimal-icons-off) svg.star>path,body:not(.minimal-icons-off) svg.stop-audio-glyph>path,body:not(.minimal-icons-off) svg.strikethrough-glyph>path,body:not(.minimal-icons-off) svg.sweep>path,body:not(.minimal-icons-off) svg.switch>path,body:not(.minimal-icons-off) svg.sync-small>path,body:not(.minimal-icons-off) svg.sync>path,body:not(.minimal-icons-off) svg.tag-glyph>path,body:not(.minimal-icons-off) svg.three-horizontal-bars>path,body:not(.minimal-icons-off) svg.tomorrow-glyph>path,body:not(.minimal-icons-off) svg.trash>path,body:not(.minimal-icons-off) svg.two-blank-pages>path,body:not(.minimal-icons-off) svg.undo-glyph>path,body:not(.minimal-icons-off) svg.unindent-glyph>path,body:not(.minimal-icons-off) svg.up-and-down-arrows>path,body:not(.minimal-icons-off) svg.up-arrow-with-tail>path,body:not(.minimal-icons-off) svg.up-chevron-glyph>path,body:not(.minimal-icons-off) svg.vault>path,body:not(.minimal-icons-off) svg.vertical-split>path,body:not(.minimal-icons-off) svg.vertical-three-dots>path,body:not(.minimal-icons-off) svg.wand>path,body:not(.minimal-icons-off) svg.workspace-glyph>path,body:not(.minimal-icons-off) svg.wrench-screwdriver-glyph>path,body:not(.minimal-icons-off) svg.yesterday-glyph>path {
+body:not(.minimal-icons-off) svg.ScriptEngine>path,body:not(.minimal-icons-off) svg.add-note-glyph>path,body:not(.minimal-icons-off) svg.any-key>path,body:not(.minimal-icons-off) svg.audio-file>path,body:not(.minimal-icons-off) svg.bar-graph>path,body:not(.minimal-icons-off) svg.blocks>path,body:not(.minimal-icons-off) svg.bold-glyph>path,body:not(.minimal-icons-off) svg.box-glyph>path,body:not(.minimal-icons-off) svg.bracket-glyph>path,body:not(.minimal-icons-off) svg.breadcrumbs-trail-icon>path,body:not(.minimal-icons-off) svg.broken-link>path,body:not(.minimal-icons-off) svg.bullet-list-glyph>path,body:not(.minimal-icons-off) svg.bullet-list>path,body:not(.minimal-icons-off) svg.calendar-day>path,body:not(.minimal-icons-off) svg.calendar-glyph>path,body:not(.minimal-icons-off) svg.calendar-with-checkmark>path,body:not(.minimal-icons-off) svg.changelog>path,body:not(.minimal-icons-off) svg.check-in-circle>path,body:not(.minimal-icons-off) svg.check-small>path,body:not(.minimal-icons-off) svg.checkbox-glyph>path,body:not(.minimal-icons-off) svg.checkmark>path,body:not(.minimal-icons-off) svg.clock-glyph>path,body:not(.minimal-icons-off) svg.clock>path,body:not(.minimal-icons-off) svg.cloud>path,body:not(.minimal-icons-off) svg.code-glyph>path,body:not(.minimal-icons-off) svg.command-glyph>path,body:not(.minimal-icons-off) svg.create-new>path,body:not(.minimal-icons-off) svg.cross-in-box>path,body:not(.minimal-icons-off) svg.cross>path,body:not(.minimal-icons-off) svg.crossed-star>path,body:not(.minimal-icons-off) svg.dice>path,body:not(.minimal-icons-off) svg.disk>path,body:not(.minimal-icons-off) svg.document>path,body:not(.minimal-icons-off) svg.documents>path,body:not(.minimal-icons-off) svg.dot-network>path,body:not(.minimal-icons-off) svg.double-down-arrow-glyph>path,body:not(.minimal-icons-off) svg.double-up-arrow-glyph>path,body:not(.minimal-icons-off) svg.down-arrow-with-tail>path,body:not(.minimal-icons-off) svg.down-chevron-glyph>path,body:not(.minimal-icons-off) svg.duplicate-glyph>path,body:not(.minimal-icons-off) svg.enter>path,body:not(.minimal-icons-off) svg.excalidraw-icon path,body:not(.minimal-icons-off) svg.exit-fullscreen>path,body:not(.minimal-icons-off) svg.expand-vertically>path,body:not(.minimal-icons-off) svg.file-explorer-glyph>path,body:not(.minimal-icons-off) svg.filled-pin>path,body:not(.minimal-icons-off) svg.fullscreen>path,body:not(.minimal-icons-off) svg.gear>path,body:not(.minimal-icons-off) svg.globe>path,body:not(.minimal-icons-off) svg.go-to-file>path,body:not(.minimal-icons-off) svg.graph-glyph>path,body:not(.minimal-icons-off) svg.hashtag>path,body:not(.minimal-icons-off) svg.heading-glyph>path,body:not(.minimal-icons-off) svg.help .widget-icon>path,body:not(.minimal-icons-off) svg.help>path,body:not(.minimal-icons-off) svg.highlight-glyph>path,body:not(.minimal-icons-off) svg.horizontal-split>path,body:not(.minimal-icons-off) svg.image-file>path,body:not(.minimal-icons-off) svg.image-glyph>path,body:not(.minimal-icons-off) svg.import-glyph>path,body:not(.minimal-icons-off) svg.indent-glyph>path,body:not(.minimal-icons-off) svg.info>path,body:not(.minimal-icons-off) svg.install>path,body:not(.minimal-icons-off) svg.italic-glyph>path,body:not(.minimal-icons-off) svg.keyboard-glyph>path,body:not(.minimal-icons-off) svg.languages>path,body:not(.minimal-icons-off) svg.left-arrow-with-tail>path,body:not(.minimal-icons-off) svg.left-arrow>path,body:not(.minimal-icons-off) svg.left-chevron-glyph>path,body:not(.minimal-icons-off) svg.lines-of-text>path,body:not(.minimal-icons-off) svg.link-glyph>path,body:not(.minimal-icons-off) svg.link>path,body:not(.minimal-icons-off) svg.links-coming-in>path,body:not(.minimal-icons-off) svg.links-going-out>path,body:not(.minimal-icons-off) svg.longform>path,body:not(.minimal-icons-off) svg.magnifying-glass>path,body:not(.minimal-icons-off) svg.merge-files>path,body:not(.minimal-icons-off) svg.microphone-filled>path,body:not(.minimal-icons-off) svg.microphone>path,body:not(.minimal-icons-off) svg.minus-with-circle>path,body:not(.minimal-icons-off) svg.note-glyph>path,body:not(.minimal-icons-off) svg.number-list-glyph>path,body:not(.minimal-icons-off) svg.obsidian-leaflet-plugin-icon-map>path,body:not(.minimal-icons-off) svg.open-elsewhere-glyph>path,body:not(.minimal-icons-off) svg.open-vault>path,body:not(.minimal-icons-off) svg.pane-layout>path,body:not(.minimal-icons-off) svg.paper-plane-glyph>path,body:not(.minimal-icons-off) svg.paper-plane>path,body:not(.minimal-icons-off) svg.paste-text>path,body:not(.minimal-icons-off) svg.paste>path,body:not(.minimal-icons-off) svg.paused>path,body:not(.minimal-icons-off) svg.pencil>path,body:not(.minimal-icons-off) svg.pencil_icon>path,body:not(.minimal-icons-off) svg.percent-sign-glyph>path,body:not(.minimal-icons-off) svg.pin>path,body:not(.minimal-icons-off) svg.play-audio-glyph>path,body:not(.minimal-icons-off) svg.plus-minus-glyph>path,body:not(.minimal-icons-off) svg.plus-with-circle>path,body:not(.minimal-icons-off) svg.popup-open>path,body:not(.minimal-icons-off) svg.presentation-glyph>path,body:not(.minimal-icons-off) svg.presentation>path,body:not(.minimal-icons-off) svg.price-tag-glyph>path,body:not(.minimal-icons-off) svg.question-mark-glyph>path,body:not(.minimal-icons-off) svg.quote-glyph>path,body:not(.minimal-icons-off) svg.reading-glasses>path,body:not(.minimal-icons-off) svg.redo-glyph>path,body:not(.minimal-icons-off) svg.reset>path,body:not(.minimal-icons-off) svg.restore-file-glyph>path,body:not(.minimal-icons-off) svg.right-arrow-with-tail>path,body:not(.minimal-icons-off) svg.right-arrow>path,body:not(.minimal-icons-off) svg.right-chevron-glyph>path,body:not(.minimal-icons-off) svg.right-triangle>path,body:not(.minimal-icons-off) svg.run-command>path,body:not(.minimal-icons-off) svg.scissors-glyph>path,body:not(.minimal-icons-off) svg.scissors>path,body:not(.minimal-icons-off) svg.search-glyph>path,body:not(.minimal-icons-off) svg.search>path,body:not(.minimal-icons-off) svg.select-all-text>path,body:not(.minimal-icons-off) svg.sheets-in-box>path,body:not(.minimal-icons-off) svg.split>path,body:not(.minimal-icons-off) svg.spreadsheet>path,body:not(.minimal-icons-off) svg.stacked-levels>path,body:not(.minimal-icons-off) svg.star-glyph>path,body:not(.minimal-icons-off) svg.star-list>path,body:not(.minimal-icons-off) svg.star>path,body:not(.minimal-icons-off) svg.stop-audio-glyph>path,body:not(.minimal-icons-off) svg.strikethrough-glyph>path,body:not(.minimal-icons-off) svg.sweep>path,body:not(.minimal-icons-off) svg.switch>path,body:not(.minimal-icons-off) svg.sync-small>path,body:not(.minimal-icons-off) svg.sync>path,body:not(.minimal-icons-off) svg.tag-glyph>path,body:not(.minimal-icons-off) svg.three-horizontal-bars>path,body:not(.minimal-icons-off) svg.tomorrow-glyph>path,body:not(.minimal-icons-off) svg.trash>path,body:not(.minimal-icons-off) svg.two-blank-pages>path,body:not(.minimal-icons-off) svg.undo-glyph>path,body:not(.minimal-icons-off) svg.unindent-glyph>path,body:not(.minimal-icons-off) svg.up-and-down-arrows>path,body:not(.minimal-icons-off) svg.up-arrow-with-tail>path,body:not(.minimal-icons-off) svg.up-chevron-glyph>path,body:not(.minimal-icons-off) svg.vault>path,body:not(.minimal-icons-off) svg.vertical-split>path,body:not(.minimal-icons-off) svg.vertical-three-dots>path,body:not(.minimal-icons-off) svg.wand>path,body:not(.minimal-icons-off) svg.workspace-glyph>path,body:not(.minimal-icons-off) svg.wrench-screwdriver-glyph>path,body:not(.minimal-icons-off) svg.yesterday-glyph>path {
 	display: none
 }
 
@@ -4824,6 +4689,7 @@ body:not(.minimal-icons-off) svg.filled-pin {
 	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="black" d="M12 22l1-2v-3h5a1 1 0 0 0 1-1v-1.586c0-.526-.214-1.042-.586-1.414L17 11.586V8a1 1 0 0 0 1-1V4c0-1.103-.897-2-2-2H8c-1.103 0-2 .897-2 2v3a1 1 0 0 0 1 1v3.586L5.586 13A2.01 2.01 0 0 0 5 14.414V16a1 1 0 0 0 1 1h5v3l1 2zM8 4h8v2H8V4zM7 14.414l1.707-1.707A.996.996 0 0 0 9 12V8h6v4c0 .266.105.52.293.707L17 14.414V15H7v-.586z"></path></svg>')
 }
 
+/*
 body:not(.minimal-icons-off) svg.folder {
 	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M83.333 75H16.667V33.333h66.667m0 -8.333h-33.333l-8.333 -8.333H16.667c-4.625 0 -8.333 3.708 -8.333 8.333v50a8.333 8.333 0 0 0 8.333 8.333h66.667a8.333 8.333 0 0 0 8.333 -8.333V33.333a8.333 8.333 0 0 0 -8.333 -8.333z"></path></svg>')
 }
@@ -4835,6 +4701,7 @@ body:not(.minimal-icons-off) .workspace-tab-header[aria-label="File explorer"] s
 body:not(.minimal-icons-off) .nav-action-button[aria-label="New folder"] svg.folder,body:not(.minimal-icons-off) .workspace-leaf-content[data-type=file-explorer] .nav-action-button:nth-child(2) svg.folder {
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z' /%3E%3C/svg%3E")
 }
+*/
 
 body:not(.minimal-icons-off) svg.fullscreen {
 	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M20.833 20.833h20.833V12.5H12.5v29.167h8.333zm20.833 58.333H20.833v-20.833H12.5v29.167h29.167zm45.833 -20.833h-8.333v20.833h-20.833v8.333h29.167zm-8.333 -16.667h8.333V12.5h-29.167v8.333h20.833z"></path></svg>')
@@ -5476,9 +5343,23 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
 	font-variant-numeric: tabular-nums
 }
 
+/*table title 边框*/
 .table-lines .table-view-table,.table-lines table:not(.calendar) {
-	border: 1.5px solid var(--background-modifier-border)
+	border: 1px solid var(--bg3)
 }
+
+/*table 内容右侧边框*/
+/*
+.col-lines .table-view-table thead>tr>th:not(:last-child),.col-lines .table-view-table>tbody>tr>td:not(:last-child),.col-lines table:not(.calendar) tbody>tr>td:not(:last-child) {
+	border-right: 1px solid var(--background-modifier-border)
+}
+*/
+/*table 内容边框*/
+/*
+.row-lines .table-view-table>tbody>tr>td,.row-lines table:not(.calendar) tbody>tr>td {
+	border: 1px solid var(--bg3)
+}
+*/
 
 .table-lines table:not(.calendar) .table-view-table thead>tr>th,.table-lines table:not(.calendar) .table-view-table>tbody>tr>td {
 	border-right: 1px solid var(--background-modifier-border);
@@ -5523,16 +5404,8 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
 	background-color: var(--background-table-rows)
 }
 
-.row-lines .table-view-table>tbody>tr>td,.row-lines table:not(.calendar) tbody>tr>td {
-	border-bottom: 1px solid var(--background-modifier-border)
-}
-
 .row-lines table:not(.calendar) tbody>tr:last-child>td {
 	border-bottom: none
-}
-
-.col-lines .table-view-table thead>tr>th:not(:last-child),.col-lines .table-view-table>tbody>tr>td:not(:last-child),.col-lines table:not(.calendar) tbody>tr>td:not(:last-child) {
-	border-right: 1px solid var(--background-modifier-border)
 }
 
 .theme-dark .markdown-preview-view img,.theme-dark .markdown-source-view img {
@@ -6009,7 +5882,7 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content>.image-embed,.markdown-source-view.mod-cm6.is-readable-line-width .cm-content>img:not([width]),.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout .callout,.markdown-source-view.mod-cm6.is-readable-line-width .cm-html-embed,.markdown-source-view.mod-cm6.is-readable-line-width .cm-line,.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-codeblock,.markdown-source-view.mod-cm6.is-readable-line-width .cm-line.HyperMD-quote,.markdown-source-view.mod-cm6.is-readable-line-width .embedded-backlinks,.markdown-source-view.mod-cm6.is-readable-line-width .internal-embed,.markdown-source-view.mod-cm6.is-readable-line-width table {
 	width: calc(var(--line-width-adaptive) - var(--folding-offset));
 	max-width: var(--max-width);
-	margin: 0 auto!important;
+	margin: 0 auto auto auto !important;
 	transform: translateX(calc(var(--folding-offset)/2));
 	padding-left: 0
 }
@@ -6019,16 +5892,8 @@ body:not(.is-mobile):not(.zoom-off) .view-content .image-embed:active img {
 }
 
 .markdown-source-view.mod-cm6.is-readable-line-width .cm-content>img[width] {
-	margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/ 2),calc(50% - var(--max-width)/ 2) + var(--folding-offset))!import	ant;
+	margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/ 2),calc(50% - var(--max-width)/ 2) + var(--folding-offset))!important;
 	max-width: var(--max-width)
-}
-
-/*控制每一个可编辑块的与实际的内容体之间的边距*/
-.is-live-preview.is-readable-line-width .cm-embed-block>div,.is-live-preview.is-readable-line-width .cm-embed-block>mjx-container,.is-live-preview.is-readable-line-width .mod-empty {
-	max-width: var(--max-width);
-	margin: 0 auto;
-	width: var(--line-width-adaptive);
-	padding-left: var(--folding-offset)
 }
 
 .is-live-preview.is-readable-line-width .cm-embed-block>div,.is-live-preview.is-readable-line-width .cm-embed-block>mjx-container,.is-live-preview.is-readable-line-width .mod-empty {
@@ -6372,36 +6237,6 @@ body:not(.is-mobile) .mod-right-split .backlink-pane,body:not(.is-mobile) .mod-r
 	--h4l: var(--ui1);
 	--h5l: var(--ui1);
 	--h6l: var(--ui1)
-}
-
-.h1-l .markdown-reading-view h1:not(.embedded-note-title),.h1-l .mod-cm6 .cm-editor .HyperMD-header-1 {
-	border-bottom: 1px solid var(--h1l);
-	padding-bottom: .4em
-}
-
-.h2-l .markdown-reading-view h2,.h2-l .mod-cm6 .cm-editor .HyperMD-header-2 {
-	border-bottom: 1px solid var(--h2l);
-	padding-bottom: .4em
-}
-
-.h3-l .markdown-reading-view h3,.h3-l .mod-cm6 .cm-editor .HyperMD-header-3 {
-	border-bottom: 1px solid var(--h3l);
-	padding-bottom: .4em
-}
-
-.h4-l .markdown-reading-view h4,.h4-l .mod-cm6 .cm-editor .HyperMD-header-4 {
-	border-bottom: 1px solid var(--h4l);
-	padding-bottom: .4em
-}
-
-.h5-l .markdown-reading-view h5,.h5-l .mod-cm6 .cm-editor .HyperMD-header-5 {
-	border-bottom: 1px solid var(--h5l);
-	padding-bottom: .4em
-}
-
-.h6-l .markdown-reading-view h6,.h6-l .mod-cm6 .cm-editor .HyperMD-header-6 {
-	border-bottom: 1px solid var(--h6l);
-	padding-bottom: .4em
 }
 
 .is-mobile {
@@ -8061,7 +7896,7 @@ input.search-input:focus {
 	font-size: var(--font-adaptive-small);
 	padding: 7px 10px;
 	height: 28px;
-	border-radius: var(--radius-m);
+	border-radius: var(--radius-s);
 	background: var(--background-primary);
 	border: 1px solid var(--background-modifier-border);
 	transition: border-color .1s ease-in-out
@@ -9326,7 +9161,7 @@ body .kanban-plugin__item-input-wrapper .kanban-plugin__grow-wrap>textarea {
 body .kanban-plugin__item-form .kanban-plugin__grow-wrap {
 	padding: 6px 8px;
 	border-radius: 6px;
-	border: 1px solid var(--background-modifier-border);
+	border: 1px solid rgba(128, 128, 128, 0.396);
 	background-color: var(--background-primary)
 }
 
@@ -9421,7 +9256,7 @@ body .kanban-plugin__lane.is-dragging {
 body .kanban-plugin__lane {
 	background: 0 0;
 	padding: 0;
-	border: var(--border-width) solid transparent
+	border: 1px solid rgba(128, 128, 128, 0.396);
 }
 
 body {
@@ -9476,8 +9311,8 @@ body .kanban-plugin__item-form {
 }
 
 body .cm-heading-marker {
-	cursor: var(--cursor);
-	padding-left: 10px
+	cursor: var(--bg2);
+	padding-left: 10px;
 }
 
 .theme-light {
@@ -9658,37 +9493,6 @@ body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-co
 body:not(.is-mobile):not(.plugin-sliding-panes-rotate-header) .workspace-leaf-content[data-type=map] .leaflet-top.leaflet-right {
 	top: var(--header-height)
 }
-
-/* .obsidian-metatable {
-	--metatable-font-size: calc(var(--font-adaptive-normal) - 2px);
-	--metatable-font-family: var(--font-ui);
-	--metatable-background: transparent;
- 	--metatable-foreground: var(--text-faint); 
-	--metatable-key-background: transparent;
-	--metatable-key-border-width: 0;
-	--metatable-key-border-color: transparent;
-	--metatable-value-background: transparent;
-	padding-bottom: .5rem
-}
-
-.obsidian-metatable::part(key),.obsidian-metatable::part(value) {
-	border-bottom: 0 solid var(--background-modifier-border);
-	padding: .1rem 0;
-	text-overflow: ellipsis;
-	overflow: hidden
-}
-
-.obsidian-metatable::part(key) {
-	font-weight: 400;
-	color: var(--tx3);
-	font-size: calc(var(--font-adaptive-normal) - 2px)
-}
-
-.obsidian-metatable::part(value) {
-	font-size: calc(var(--font-adaptive-normal) - 2px);
-	color: var(--tx1)
-} 
-*/
 
 body.outliner-plugin-bls .CodeMirror-line .cm-hmd-list-indent::before {
 	background-image: linear-gradient(to right,var(--background-modifier-border) 1px,transparent 1px);
@@ -10683,7 +10487,10 @@ body.theme-light {
 	--bg3: #24262a;
 	--background-divider: #24262a
 }
-/* Plugin compatibility */
+
+/* ================================== */
+/* == Plugin compatibility 插件适配、== */
+/* ================================== */
 
 /* @plugins
 core:
@@ -11971,48 +11778,6 @@ settings:
 */
 
 
-/* the gif animation was created by @Jake Fleming https://dribbble.com/shots/9948351-kitty-wiggle */
-body.loading-animation .progress-bar-message::before {
-	content: "";
-	display: block;
-	background: no-repeat center/cover  url("http://searchengineland.com/wp-content/seloads/2016/02/Google-leap-doodle-sketch.gif");
-	width: 660px;
-	height: 252px;
-	margin-top: -100px;
-	font-size: initial;
-	color: var(--text-muted);
-  /*filter: hue-rotate(-55deg) saturate(120%);*/
-}
-
-body.loading-animation.theme-dark .progress-bar-message::before {
-	filter: invert(100%) hue-rotate(153deg) saturate(250%);
-}
-
-body.loading-animation.theme-light .progress-bar {
-	background-color: white;
-}
-
-body.loading-animation.theme-dark .progress-bar {
-	background-color: black;
-}
-
-body.loading-animation .progress-bar-message {
-	color: var(--text-normal);
-	font-size: 25px;
-}
-
-
-/*加载画面的进度条框*/
-body:not(.default-loading-page) .progress-bar-line {
-	display: none;
-}
-
-/*加载画面的进度条*/
-body:not(.default-loading-page) .progress-bar-subline {
-	display: none;
-}
-
-
 /* ================================== */
 /* ============ Dataview Cards ============ */
 /* ================================== */
@@ -12138,11 +11903,6 @@ img[alt^="bookcover"] {
 		margin-bottom: 20px
 	}
 }
-
-/*修复dataviewjs 在gallery视图下的和banners高度冲突*/
-/.markdown-reading-view .block-language-dataviewjs{
-	margin-top:var(--banner-height);
-} 
 
 .cards table.dataview tbody>tr>td:first-child, 
 .markdown-source-view.mod-cm6.cards .dataview.table-view-table>tbody>tr>td:first-child {
@@ -12297,7 +12057,7 @@ img[alt^="bookcover"] {
 } 
 
 /* ================================== */
-/* ======= Call out======= */
+/* ============ Call out ============ */
 /* ================================== */
 
 .callout {
@@ -12702,7 +12462,6 @@ img[alt^="bookcover"] {
 	float: unset  !important;
 }
 
-
 /* ===块内元素不换行============ */
 .callout.callout:is([data-callout-metadata*='nowrap'],
 [data-callout*='nowrap']) {
@@ -12750,7 +12509,7 @@ img[alt^="bookcover"] {
 [data-callout*='grid']) .callout-content p {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(0, auto));
-	grid-gap: 2px;
+	grid-gap: 0px;/*控制callouts下表格中单元格的间距*/
 	margin: 0;
 	margin-top: 5px;
 }
@@ -12909,9 +12668,6 @@ img[alt^="bookcover"] {
 }
 
 /******callout timeline*****/
-.callout.callout[data-callout="timeline"] .callout-title {
-}
-
 .callout.callout[data-callout="timeline"] {
 	--callout-color: 31, 172, 139;
 	--callout-icon: '<svg t="1649346326592" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2210"><path d="M384 170.666667m42.666667 0l512 0q42.666667 0 42.666666 42.666666l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666666Z" p-id="2211"></path><path d="M384 469.333333m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666667Z" p-id="2212"></path><path d="M384 768m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666666l-512 0q-42.666667 0-42.666667-42.666666l0 0q0-42.666667 42.666667-42.666667Z" p-id="2213"></path><path d="M239.835143 127.973411m15.084945 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2214"></path><path d="M239.831988 426.647696m15.084944 15.084945l60.339779 60.339778q15.084945 15.084945 0 30.16989l-60.339779 60.339778q-15.084945 15.084945-30.169889 0l-60.339779-60.339778q-15.084945-15.084945 0-30.16989l60.339779-60.339778q15.084945-15.084945 30.169889 0Z" p-id="2215"></path><path d="M239.828832 725.321982m15.084944 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2216"></path><path d="M213.333333 853.333333H85.333333a42.666667 42.666667 0 0 1-42.666666-42.666666V213.333333a42.666667 42.666667 0 0 1 42.666666-42.666666h128v85.333333H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666667v192a10.709333 10.709333 0 0 0 10.666667 10.666666H213.333333v85.333334H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666666v192a10.709333 10.709333 0 0 0 10.666667 10.666667H213.333333v85.333333z" p-id="2217"></path></svg>';
@@ -13256,8 +13012,6 @@ body:not(.font-family-change-to-default) .markdown-source-view {
 	font-family: var(--font-text);
 }
 
-
-
 /*Quote (> lorem ipsum ...) in edit mode with left border rendered instead of >*/
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
 	color: transparent !important;
@@ -13378,7 +13132,6 @@ img[alt$="inlR"] {
 	padding: 0 0 0.05em 0.05em !important;
 }
 
-
 /*=====================================*/
 /*frontmatter 边框格式*/
 /*=====================================*/
@@ -13423,8 +13176,8 @@ body.no-wrapped-dvtable-cell .dataview.table-view-table :is(th,td):hover {
   text-overflow: clip;
 }
 
-
-/*modified from https://forum.obsidian.md/t/custom-css-for-tables-5-new-styles-ready-to-use-in-your-notes/17084 */
+/*modified
+from https://forum.obsidian.md/t/custom-css-for-tables-5-new-styles-ready-to-use-in-your-notes/17084 */
 
 /****dataview table***/
 table.table-view-table > thead > tr > th {
@@ -13506,80 +13259,141 @@ body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tb
   font-family: var(--font-family-strong);
 }
 
-/*修复banner 和 metatable 在没有banner icon下的高度问题*/
-.obsidian-banner-wrapper .obsidian-metatable{
- margin-top:calc(var(--banner-height) + 50px);
+/* ================================== */
+/* ========= 启动动画和loading ======= */
+/* ================================== */
+
+/* the gif animation was created by @Jake Fleming https://dribbble.com/shots/9948351-kitty-wiggle */
+body.loading-animation .progress-bar-message::before {
+	content: "";
+	display: block;
+	background: no-repeat center/cover  url("http://searchengineland.com/wp-content/seloads/2016/02/Google-leap-doodle-sketch.gif");
+	width: 660px;
+	height: 252px;
+	margin-top: -100px;
+	font-size: initial;
+	color: var(--text-muted);
+  /*filter: hue-rotate(-55deg) saturate(120%);*/
 }
 
-.has-banner-icon.obsidian-banner-wrapper .obsidian-metatable{
- margin-top:0px;
+body.loading-animation.theme-dark .progress-bar-message::before {
+	filter: invert(100%) hue-rotate(153deg) saturate(250%);
+}
+
+body.loading-animation.theme-light .progress-bar {
+	background-color: white;
+}
+
+body.loading-animation.theme-dark .progress-bar {
+	background-color: black;
+}
+
+body.loading-animation .progress-bar-message {
+	color: var(--text-normal);
+	font-size: 25px;
+}
+
+/*加载画面的进度条框*/
+body:not(.default-loading-page) .progress-bar-line {
+	display: none;
+}
+
+/*加载画面的进度条*/
+body:not(.default-loading-page) .progress-bar-subline {
+	display: none;
+}
+
+/* ================================== */
+/* =========== 顶部 titlebar ======== */
+/* ================================== */
+.titlebar {
+	border-bottom:1px solid var(--background-modifier-border2);
+}
+
+.mod-windows .titlebar-button:hover {
+	background-color: var(--background-primary-alt)
+}
+
+.mod-windows .titlebar-button.mod-close:hover {
+	background-color: var(--background-modifier-error)
+}
+
+.mod-windows .mod-close:hover svg {
+	fill: white!important;
+	stroke: white!important
+}
+
+.titlebar-text {
+	font-weight: 600;
+	padding-top: 6px;
+	color: var(--text-normal);
+	letter-spacing: inherit
+}
+
+body:not(.window-title-on) .titlebar-text {
+	display: none
+}
+
+.titlebar-button:hover {
+	opacity: 1;
+	transition: opacity .1s ease-out
+}
+
+.titlebar-button {
+	opacity: .5;
+	cursor: var(--cursor);
+	color: var(--tx1);
+	padding: 2px 4px;
+	border-radius: 3px;
+	line-height: 1;
+	display: flex;
+}
+
+.titlebar-button:hover {
+	background-color: var(--background-tertiary)
+}
+
+.titlebar-button-container {
+	height: var(--titlebar-height);
+	top: 0;
+	display: flex;
+	align-items: center
+}
+
+.titlebar:hover .titlebar-button-container.mod-left {
+	opacity: 1.24;
+}
+
+.titlebar-button-container.mod-left .titlebar-button {
+	margin-right: 5px;
+}
+
+.titlebar-button-container.mod-right .titlebar-button {
+	border-radius: 0;
+	height: 100%;
+	align-items: center;
+	color: var(--mono100);
+	padding: 2px 15px;
 }
 
 
-.obsidian-banner-icon.cm5-banner-icon.h-left.v-center.obsidian-banner-icon .icon-box {
-	margin-top:calc(var(--banner-height) + 50px);
+/* ================================== */
+/* ============ 左侧导行栏Ribbon =========== */
+/* ================================== */
+/*左侧Ribbon区域的右边界线*/
+.workspace-ribbon {
+	border-right:1px solid var(--background-modifier-border2);
+}
+/*左侧Ribbon区域的右边界线，在左侧区收起后的样式*/
+.workspace-ribbon.mod-left.is-collapsed {
+    border-right:1px solid var(--background-modifier-border2);
 }
 
-.has-banner.cm-active.has-banner-icon.cm-line.obsidian-banner-icon .icon-box {
-	margin-top:calc(var(--banner-height) + 50px);
+/*中间编辑区两侧的边界线*/
+.workspace-leaf {
+	border-right:1px solid rgba(12, 11, 11, 0.19);
+	border-left:1px solid rgba(12, 11, 11, 0.19);
 }
-
-.obsidian-banner-icon.cm6-banner-icon.h-left.v-center{
-	margin-top:10px;
-}
-
-/*给bookinfo 模式的表格增加指向（hover）的动画*/
-body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
-    background: var(--table-hover-raw-color);
-    transform: scale(1.02);
-    transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
-}
-/*End*/
-
-/*dataview Cards 视图下，增加指向（hover）的动画*/
-body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
-    background: var(--table-hover-raw-color);
-    transform: scale(1.02);
-    transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
-}
-
-:is(.markdown-preview-view,.markdown-rendered) table tbody>tr:hover, .markdown-source-view table tbody>tr:hover {
-    background-color: var(--table-hover-raw-color);
-}
-
-:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) table tbody>tr:hover {
-    background-color: var(--table-hover-raw-color);
-}
-
-.table-view-table > tbody > tr:hover {
-    background-color: var(--text-selection);
-}
-/*End*/
-
-/*修复dataview Cards 视图下，图片和grid 错位问题*/
-.col-alt table:not(.calendar) tr>td:nth-child(2n+2),.col-alt table:not(.calendar) tr>th:nth-child(2n+2),.row-alt table:not(.calendar) tbody>tr:nth-child(odd) {
-	/*padding-left: 10px;*/
-	background: var(--background-table-rows)
-}
-/*End*/
-
-/* 优化tooltip的样式 */
-.tooltip, 
-.tooltip.mod-right {
-  color: black;
-  background-color: white;
-  font-size:16px;
-}
-.tooltip .tooltip-arrow {
-  border-bottom: 5px solid var(--interactive-accent);
-}
-.tooltip.mod-right .tooltip-arrow {
-  border-right: 5px solid var(--interactive-accent);
-}
-.tooltip.mod-left .tooltip-arrow {
-  border-left: 5px solid var(--interactive-accent);
-}
-/*End*/
 
 /*优化目录树的文件夹样式*/
 .nav-folder-children .nav-folder-title-content::before {
@@ -13591,16 +13405,21 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
     display: inline-block;
     height: 20px;
     width: 20px;
-    margin-right: 4px;
-	margin-top:-2px;
+	margin-bottom: -2px;
 }
 /*End*/
 
-/*优化目录树的展开收起箭头*/
-.nav-folder.is-collapsed .nav-folder-title::before {
-    transform: translateX(4px) translateY(2px) rotate(0deg);
+
+.nav-folder-title {
+	line-height:1.8;
 }
 
+/*优化目录树的展开收起箭头*/
+/*收起箭头*/
+.nav-folder.is-collapsed .nav-folder-title::before {
+    transform: translateX(1px) translateY(3px) rotate(0deg);
+}
+/*展开箭头*/
 .nav-folder .nav-folder-title::before {
     content: "";
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZklEQVRIie3NMRKAMAhE0eChMWXSOVzYEhv7sMvgWGRr+K+1vd9PVa/M/7E6EJEzgyyBLBICMkgYYBEIYBAYQBEKQBAaeHeXAe4+zGyWANE4BSBxGEDjEMDEwwAbD633PkrCe5/tAV92N0rtyZlOAAAAAElFTkSuQmCC);
@@ -13611,7 +13430,26 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
     display: inline-block;
     height: 15px;
     width: 15px;
-    transform: translateX(2px) translateY(1px) rotate(90deg);
+	margin-top:1.5px;
+    transform: translateX(-1px) translateY(0px) rotate(90deg);
+}
+/*End*/
+
+/*优化目录名自适应文本截断*/
+.nav-folder .nav-folder-title-content::before{
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+/*优化目录名计数器位置*/
+.nav-folder-title::after {
+	text-align: right;
+}
+
+/*导航目录鼠标hover事件的样式*/
+.nav-file-title.is-active, .nav-folder-title.is-active, body:not(.is-grabbing) .nav-file-title:hover, body:not(.is-grabbing) .nav-folder-title:hover {
+    background-color: var(--background-secondary-alt);
+    color: var(--text-normal);
 }
 /*End*/
 
@@ -13699,10 +13537,22 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
 
 /*左侧导航栏，顶部导行样式调整*/
 .workspace-tab-header-inner {
-    padding: 3px 12px;
-    height: 100%;
+    padding: 3px 5px;
+}
+/*顶部导航栏的自适应布局*/
+.workspace-tabs .workspace-tab-header-container .workspace-tab-container-inner {
     display: flex;
+    flex-wrap: wrap;
 	justify-content: flex-start;
+}
+
+/*顶部导行栏下边界线*/
+.workspace-sidedock-empty-state .workspace-tabs .workspace-tab-header-container {
+	border-bottom:1px solid rgba(35, 33, 33, 0.19);
+}
+
+.workspace-tab-header-container {
+	border-bottom:1px solid rgba(35, 33, 33, 0.19);
 }
 
 .workspace-tab-header:hover {
@@ -13711,8 +13561,14 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
     stroke-width: 2px;
     cursor: pointer;
 }
+
 .workspace-tab-header:hover {
     color: var(--text-muted);
+}
+
+/*顶部导行按钮栏下边界线*/
+.nav-buttons-container {
+	border-bottom:1px solid rgba(35, 33, 33, 0.19);
 }
 
 .nav-action-button,.workspace-leaf-content[data-type=backlink] .nav-action-button,.workspace-leaf-content[data-type=search] .nav-action-button {
@@ -13723,12 +13579,13 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
 	*/
 	height: 26px;
 	text-align: center;
-	border-radius: var(--radius-m)
+	border-radius: var(--radius-s)
 }
 
 /*为目录树添加点击文件后条目颜色后缀，和控制点击后的颜色*/
 .nav-file-title.is-being-dragged, .nav-file-title.is-active, body:not(.is-grabbing) .nav-file-title.is-active:hover, .nav-folder-title.is-being-dragged {
-    border-right: 3px solid #2917d1;
+    border-right: 3px solid;
+	border-right-color: var(--item-side);
     background-color: rgba(241, 243, 245, 0.92);
     color: #858585;
     font-weight: 600;
@@ -13736,6 +13593,238 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
 
 .colorful-active #calendar-container .active,.colorful-active #calendar-container .active.today,.colorful-active #calendar-container .active:hover,.colorful-active #calendar-container .day:active,.colorful-active .menu-item.selected:not(.is-disabled):not(.is-label),.colorful-active .menu-item:hover,.colorful-active .menu-item:hover:not(.is-disabled):not(.is-label),.colorful-active .nav-file-title.is-active,.colorful-active .nav-file-title.is-being-dragged,.colorful-active .nav-folder-title.is-being-dragged,.colorful-active .vertical-tab-nav-item.is-active,body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover,body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover {
 	background-color: var(--ax2);
-	color: var(--sp1)
+	color: var(--sp1);
 }
 /*END*/
+
+/*工具图标的hover样式*/
+.graph-controls-button:hover,.nav-action-button.is-active:hover,.nav-action-button:hover,.side-dock-ribbon-action:hover,.side-dock-ribbon-tab:hover,.view-action.is-active:hover,.view-action:hover,.view-header-icon:hover,.workspace-tab-header:hover {
+	color: var(--icon-color-hover);
+	opacity: 1;
+	transition: opacity .1s ease-in-out
+}
+
+.graph-controls-button:hover,.nav-action-button:hover,.side-dock-ribbon-action:hover,.view-action:hover,.workspace-drawer-header-icon:hover,.workspace-drawer-tab-option-item:hover,.workspace-leaf-content[data-type=backlink] .nav-action-button.is-active:hover,.workspace-leaf-content[data-type=search] .nav-action-button.is-active:hover,.workspace-tab-header-inner-icon:hover {
+	background-color: var(--background-tertiary);
+	border-radius: var(--radius-s);
+	color:var(--interactive-accent);
+}
+/*END*/
+
+/*目录中文件和文件夹的不同缩进样式*/
+.nav-file-tag+ .nav-file-title-content {
+	margin-left: 0.1rem !important;
+}
+
+.nav-file .nav-file-title .nav-file-title-content {
+	margin-left: 1.5rem;
+}
+/*END*/
+
+/* ================================== */
+/* ============ 设置（settings）菜单 ============ */
+/* ================================== */
+
+/*设置界面导行栏的样式优化*/
+.colorful-active #calendar-container .active, .colorful-active #calendar-container .active.today, .colorful-active #calendar-container .active:hover, .colorful-active #calendar-container .day:active, .colorful-active .menu-item.selected:not(.is-disabled):not(.is-label), .colorful-active .menu-item:hover, .colorful-active .menu-item:hover:not(.is-disabled):not(.is-label), .colorful-active .nav-file-title.is-active, .colorful-active .nav-file-title.is-being-dragged, .colorful-active .nav-folder-title.is-being-dragged, .colorful-active .vertical-tab-nav-item.is-active, body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover, body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover, body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-draggedd {
+    color:#000;
+	background-color: #f0f0f0;
+}
+
+/*优化设置菜单，左侧导航栏样式*/
+.vertical-tab-nav-item .is-active{
+	/*调整设置页面导行菜单间距
+	padding: 5px 8px;
+	*/
+	margin: 0 8px 0;
+	color: var(--text-muted);
+	font-weight: 400;
+	border: none;
+	background: var(--background-secondary);
+	cursor: var(--cursor);
+	border-radius: var(--radius-s);
+	border-left-color: var(--item-side);
+}
+/*END*/
+
+/*设置菜单中菜单分组的设置*/
+.is-mobile .modal .vertical-tab-header-group-title {
+	padding: 15px 20px 10px 20px;
+	letter-spacing: .05em;
+}
+
+.vertical-tab-header-group-title {
+	color: var(--tx1);
+	font-size: 16px;
+	letter-spacing: 0;
+	font-weight: 300;
+}
+
+/*设置菜单中内容设置项的分割线*/
+.setting-item {
+    border-top: 0.5px solid var(--bg3);
+}
+
+/*设置菜单中内容设置按钮*/
+.setting-item-control button {
+
+}
+
+/* ================================== */
+/* ======== 编辑视图和正文控制 ======== */
+/* ================================== */
+
+/*自定义代码注释：控制阅读模式下，代码*/
+.markdown-preview-view ul>li:not(.task-list-item)::marker {
+	font-size: .9em;
+	border-color:gray;
+}
+
+/*自定义代码注释：控制编辑视图下列表连接线颜色和位置*/
+/*自定义代码注释：控制编辑视图下列表前面黑点*/
+.markdown-source-view.mod-cm6 .cm-indent::before {
+	transform: translateX(var(--ig-adjust-edit));
+	margin-left:-0.3em;
+}
+
+/*控制无序列表前置原点的颜色*/
+ol>li::marker,ul>li::marker {
+	color: var(--text-faint)
+}
+
+/*控制icon大小*/
+body:not(.minimal-icons-off) .graph-controls-button svg,body:not(.minimal-icons-off) .nav-action-button svg,body:not(.minimal-icons-off) .view-action svg,body:not(.minimal-icons-off) .workspace-tab-header-inner-icon svg {
+	width: var(--icon-size);
+	height: var(--icon-size)
+}
+
+/*控制每一个可编辑块的与实际的内容体之间的边距*/
+.is-live-preview.is-readable-line-width .cm-embed-block>div,.is-live-preview.is-readable-line-width .cm-embed-block>mjx-container,.is-live-preview.is-readable-line-width .mod-empty {
+	max-width: var(--max-width);
+	margin: 0 auto;
+	width: var(--line-width-adaptive);
+	padding-left: var(--folding-offset)
+}
+
+/* 优化tooltip的样式 */
+.tooltip, 
+.tooltip.mod-right {
+	color: black;
+	background-color: white;
+	font-size:16px;
+   }
+   .tooltip .tooltip-arrow {
+	border-bottom: 5px solid var(--interactive-accent);
+   }
+   .tooltip.mod-right .tooltip-arrow {
+	border-right: 5px solid var(--interactive-accent);
+   }
+   .tooltip.mod-left .tooltip-arrow {
+	border-left: 5px solid var(--interactive-accent);
+   }
+/*End*/
+
+/* ================================== */
+/* =========== 插件间兼容性 ========== */
+/* ================================== */
+
+/*修复banner 和 metatable 在没有banner icon下的高度问题*/
+.obsidian-banner-wrapper .obsidian-metatable{
+	margin-top:calc(var(--banner-height) + 50px);
+}
+   
+.has-banner-icon.obsidian-banner-wrapper .obsidian-metatable{
+	margin-top:0px;
+}
+
+.obsidian-banner-icon.cm5-banner-icon.h-left.v-center.obsidian-banner-icon .icon-box {
+	margin-top:calc(var(--banner-height) + 50px);
+}
+   
+.has-banner.cm-active.has-banner-icon.cm-line.obsidian-banner-icon .icon-box {
+	margin-top:calc(var(--banner-height) + 50px);
+}
+   
+.obsidian-banner-icon.cm6-banner-icon.h-left.v-center{
+	margin-top:10px;
+}
+   
+/*给bookinfo 模式的表格增加指向（hover）的动画*/
+body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
+	background: var(--table-hover-raw-color);
+	transform: scale(1.02);	   transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
+}
+/*End*/
+  
+/*dataview Cards 视图下，增加指向（hover）的动画*/
+body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {	   background: var(--table-hover-raw-color);	   transform: scale(1.02);	   transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
+}
+  
+:is(.markdown-preview-view,.markdown-rendered) table tbody>tr:hover, .markdown-source-view table tbody>tr:hover {
+  background-color: var(--table-hover-raw-color);
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) table tbody>tr:hover {
+  background-color: var(--table-hover-raw-color);
+}
+
+.table-view-table > tbody > tr:hover {
+	background-color: var(--text-selection);
+}
+/*End*/
+   
+/*修复dataview Cards 视图下，图片和grid 错位问题*/
+.col-alt table:not(.calendar) tr>td:nth-child(2n+2),.col-alt table:not(.calendar) tr>th:nth-child(2n+2),.row-alt table:not(.calendar) tbody>tr:nth-child(odd) {
+	/*padding-left: 10px;*/
+	background: var(--background-table-rows);
+}
+ /*End*/
+
+/*修复dataviewjs 在gallery视图下的和banners高度冲突
+.markdown-reading-view .block-language-dataviewjs {
+	margin-top:var(--banner-height);
+}
+/*End*/
+
+/* =========== 正文:标题 ========= */
+/* === 标题下面分割线的样式控制 === */
+/*控制线的粗细和颜色样式，分割线距离标题和紧跟标题的内容块的距离*/
+.h1-l .markdown-reading-view h1:not(.embedded-note-title),.h1-l .mod-cm6 .cm-editor .HyperMD-header-1 {
+	border-bottom: 1.5px solid var(--ui2);
+	padding-bottom: 0.3em;
+	margin-bottom: 0.4em !important;
+}
+
+.h2-l .markdown-reading-view h2,.h2-l .mod-cm6 .cm-editor .HyperMD-header-2 {
+	border-bottom: 1.5px solid var(--ui2);
+	padding-bottom: 0.3em;
+	margin-bottom: 0.4em !important;
+}
+
+.h3-l .markdown-reading-view h3,.h3-l .mod-cm6 .cm-editor .HyperMD-header-3 {
+	border-bottom: 1.5px solid var(--ui2);
+	padding-bottom: 0.3em;
+	margin-bottom: 0.4em !important;
+}
+
+.h4-l .markdown-reading-view h4,.h4-l .mod-cm6 .cm-editor .HyperMD-header-4 {
+	border-bottom: 1.5px solid var(--ui2);
+	padding-bottom: 0.3em;
+	margin-bottom: 0.3em !important;
+}
+
+.h5-l .markdown-reading-view h5,.h5-l .mod-cm6 .cm-editor .HyperMD-header-5 {
+	border-bottom: 1.5px solid var(--ui2);
+	padding-bottom: 0.3em;
+	margin-bottom: 0.3em !important;
+}
+
+.h6-l .markdown-reading-view h6,.h6-l .mod-cm6 .cm-editor .HyperMD-header-6 {
+	border-bottom: 1.5px solid var(--ui2);
+	padding-bottom: 0.3em;
+	margin-bottom: 0.4em !important;
+}
+
+/* ================================== */
+/* ============ 陈旧代码 ============ */
+/* ================================== */
