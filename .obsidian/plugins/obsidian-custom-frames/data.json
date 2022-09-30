@@ -1,0 +1,16 @@
+{
+  "frames": [
+    {
+      "url": "https://tableconvert.com/zh-CN/markdown-to-excel",
+      "displayName": "markdown-to-excel",
+      "icon": "sheet",
+      "hideOnMobile": true,
+      "addRibbonIcon": true,
+      "openInCenter": true,
+      "zoomLevel": 1,
+      "forceIframe": true,
+      "customCss": ""
+    }
+  ],
+  "padding": 5
+}
