@@ -44,12 +44,18 @@
   "minimal-style@@col-lines": true,
   "minimal-style@@table-lines": true,
   "minimal-style@@row-alt": true,
-  "minimal-style@@col-alt": true,
+  "minimal-style@@col-alt": false,
   "minimal-style@@table-tabular": true,
   "minimal-style@@table-numbers": false,
   "minimal-style@@table-nowrap": false,
   "minimal-style@@h6": "1.1em",
   "minimal-style@@h6-weight": 600,
   "minimal-style@@h5-weight": 600,
-  "minimal-style@@title-weight": 600
+  "minimal-style@@title-weight": 600,
+  "minimal-style@@h6-color@@light": "#0026F4",
+  "minimal-style@@h6-color@@dark": "#0026F4",
+  "minimal-style@@h6-l": true,
+  "minimal-style@@h4-variant": "normal",
+  "minimal-style@@h5-variant": "normal",
+  "minimal-style@@h6-variant": "normal"
 }

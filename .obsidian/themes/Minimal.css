@@ -239,6 +239,7 @@ body {
 	--interactive-hover: var(--ui1);
 	--interactive-accent: var(--ax3);
 	--interactive-accent-hover: var(--ax3);
+	--interactive-accent-hover2:#4ba8ff;
 	--background-modifier-accent: var(--ax3);
 	--background-modifier-border: black;
 	--background-modifier-border2: rgba(12, 11, 11, 0.19);
@@ -1240,7 +1241,7 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
 	width: calc(100% - 16px);
 	overflow: hidden;
     text-overflow: ellipsis;
-	padding: 0 10px 0 16px;
+	padding: 0 10px 0 11px;
 	line-height: 1.5;
 	cursor: var(--cursor);
 }
@@ -4763,10 +4764,6 @@ body:not(.minimal-icons-off) svg.keyboard-glyph {
 	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="black" d="M4 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4m0 2h16v10H4V7m1 1v2h2V8H5m3 0v2h2V8H8m3 0v2h2V8h-2m3 0v2h2V8h-2m3 0v2h2V8h-2M5 11v2h2v-2H5m3 0v2h2v-2H8m3 0v2h2v-2h-2m3 0v2h2v-2h-2m3 0v2h2v-2h-2m-9 3v2h8v-2H8z"></path></svg>')
 }
 
-body:not(.minimal-icons-off) svg.left-arrow-with-tail {
-	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" width="20px" height="20px"><path fill="black" d="M52.946 72.054L35.058 54.167H75v-8.333H35.058l17.888 -17.888l-5.892 -5.892L19.108 50l27.946 27.946z"></path></svg>')
-}
-
 body:not(.minimal-icons-off) svg.left-arrow {
 	-webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 19l-7-7 7-7' /></svg>")
 }
@@ -4880,10 +4877,6 @@ body:not(.minimal-icons-off) svg.redo-glyph {
 
 body:not(.minimal-icons-off) svg.reset {
 	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M50 66.667c6.963 0 12.5 -5.546 12.5 -12.5s-5.538 -12.5 -12.5 -12.5s-12.5 5.546 -12.5 12.5S43.038 66.667 50 66.667z M86.738 46.608c-0.5 -2.429 -1.238 -4.796 -2.188 -7.033c-0.938 -2.217 -2.1 -4.358 -3.458 -6.379c-1.35 -1.996 -2.888 -3.858 -4.575 -5.538c-1.683 -1.692 -3.554 -3.233 -5.55 -4.588c-2.013 -1.358 -4.158 -2.517 -6.367 -3.454c-2.242 -0.954 -4.608 -1.688 -7.046 -2.192c-2.5 -0.513 -5.079 -0.758 -7.658 -0.75V8.333L33.333 20.833l16.563 12.5V25.008C51.913 25 53.929 25.192 55.875 25.592c1.892 0.392 3.733 0.963 5.475 1.704c1.721 0.725 3.388 1.633 4.95 2.683c1.554 1.05 3.008 2.25 4.325 3.571c1.313 1.308 2.517 2.763 3.558 4.313c1.058 1.567 1.963 3.233 2.692 4.963c0.742 1.738 1.308 3.579 1.7 5.463C78.967 50.2 79.167 52.179 79.167 54.167s-0.2 3.967 -0.592 5.875c-0.392 1.892 -0.958 3.733 -1.7 5.479c-0.729 1.721 -1.633 3.388 -2.683 4.95c-1.054 1.554 -2.258 3.008 -3.575 4.329c-1.313 1.317 -2.763 2.513 -4.317 3.558c-1.55 1.046 -3.213 1.95 -4.954 2.688c-1.738 0.738 -3.575 1.308 -5.463 1.7c-3.833 0.783 -7.942 0.783 -11.758 0c-1.892 -0.392 -3.733 -0.963 -5.475 -1.704c-1.733 -0.733 -3.396 -1.638 -4.954 -2.688c-1.546 -1.042 -2.996 -2.242 -4.313 -3.558c-1.313 -1.317 -2.517 -2.771 -3.563 -4.317c-1.058 -1.567 -1.963 -3.233 -2.692 -4.958c-0.742 -1.742 -1.308 -3.583 -1.7 -5.467C21.033 58.133 20.833 56.154 20.833 54.167H12.5c0 2.546 0.258 5.088 0.763 7.558c0.5 2.425 1.238 4.792 2.188 7.038c0.938 2.217 2.1 4.358 3.462 6.379c1.346 1.988 2.883 3.85 4.571 5.538c1.692 1.696 3.558 3.238 5.546 4.579c1.996 1.354 4.142 2.517 6.371 3.458c2.242 0.954 4.608 1.688 7.046 2.192C44.913 91.408 47.454 91.667 50 91.667s5.088 -0.258 7.558 -0.763c2.429 -0.504 4.796 -1.238 7.033 -2.188c2.238 -0.946 4.383 -2.108 6.375 -3.458c1.992 -1.342 3.858 -2.883 5.546 -4.579c1.688 -1.688 3.225 -3.554 4.583 -5.55c1.354 -2.013 2.517 -4.158 3.454 -6.367c0.954 -2.25 1.688 -4.617 2.188 -7.05C87.242 59.254 87.5 56.713 87.5 54.167S87.242 49.079 86.738 46.608z"></path></svg>')
-}
-
-body:not(.minimal-icons-off) svg.right-arrow-with-tail {
-	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" width="20px" height="20px"><path fill="black" d="M47.054 72.054l5.892 5.892L80.892 50l-27.946 -27.946l-5.892 5.892L64.942 45.833H25v8.333h39.942z"></path></svg>')
 }
 
 body:not(.minimal-icons-off) svg.right-arrow {
@@ -5188,10 +5181,6 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
 .nav-folder-children .nav-folder-children {
 	margin-left: 18px;
 	padding-left: 0
-}
-
-body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
-	border-left: 1px solid var(--background-modifier-border)
 }
 
 .nav-folder-title {
@@ -9581,12 +9570,6 @@ div#quick-explorer span.explorable.selected .explorable-separator,div#quick-expl
 	color: blue;
 }
 
-div#quick-explorer .explorable-name {
-	padding: 0 4px;
-	border-radius: 4px;
-	font-size:18px;
-}
-
 div#quick-explorer .explorable-separator::before {
 	content: "\00a0›"!important;
 	font-size: 1.3em;
@@ -13306,6 +13289,7 @@ body:not(.default-loading-page) .progress-bar-subline {
 /* ================================== */
 /* =========== 顶部 titlebar ======== */
 /* ================================== */
+/*顶部 titlebar 下边框*/
 .titlebar {
 	border-bottom:1px solid var(--background-modifier-border2);
 }
@@ -13375,7 +13359,27 @@ body:not(.window-title-on) .titlebar-text {
 	color: var(--mono100);
 	padding: 2px 15px;
 }
-
+/*历史，前进按钮位置样式*/
+body:not(.minimal-icons-off) svg.right-arrow-with-tail {
+	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" width="20px" height="20px"><path fill="black" d="M47.054 72.054l5.892 5.892L80.892 50l-27.946 -27.946l-5.892 5.892L64.942 45.833H25v8.333h39.942z"></path></svg>');
+	margin-top: -1px;
+}
+/*历史，后退按钮的位置样式*/
+body:not(.minimal-icons-off) svg.left-arrow-with-tail {
+	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" width="20px" height="20px"><path fill="black" d="M52.946 72.054L35.058 54.167H75v-8.333H35.058l17.888 -17.888l-5.892 -5.892L19.108 50l27.946 27.946z"></path></svg>');
+	margin-top: -1px;
+}
+/*历史,前进后退按钮计数器的位置样式*/
+.titlebar .history-counter {
+	margin-top: 0.1em !important;
+	font-size:1.0em !important;
+}
+/*titlebar上目录和文件名样式尺寸*/
+div#quick-explorer .explorable-name {
+	padding: 0 4px;
+	border-radius: 4px;
+	font-size:1.4em;
+}
 
 /* ================================== */
 /* ============ 左侧导行栏Ribbon =========== */
@@ -13394,6 +13398,23 @@ body:not(.window-title-on) .titlebar-text {
 	border-right:1px solid rgba(12, 11, 11, 0.19);
 	border-left:1px solid rgba(12, 11, 11, 0.19);
 }
+/**/
+
+/* ================================== */
+/* ======== 导航栏文件目录区域 ======= */
+/* ================================== */
+
+.nav-header {
+	height: 39px !important;
+}
+
+.nav-action-button {
+	margin-top:-0.4em;
+}
+
+.nav-files-container {
+	margin-top:0.2em;
+}
 
 /*优化目录树的文件夹样式*/
 .nav-folder-children .nav-folder-title-content::before {
@@ -13408,7 +13429,6 @@ body:not(.window-title-on) .titlebar-text {
 	margin-bottom: -2px;
 }
 /*End*/
-
 
 .nav-folder-title {
 	line-height:1.8;
@@ -13541,18 +13561,19 @@ body:not(.window-title-on) .titlebar-text {
 }
 /*顶部导航栏的自适应布局*/
 .workspace-tabs .workspace-tab-header-container .workspace-tab-container-inner {
-    display: flex;
-    flex-wrap: wrap;
-	justify-content: flex-start;
+    flex-wrap:wrap;
+	justify-content:flex-start;
+	display: flex;
 }
 
+
 /*顶部导行栏下边界线*/
-.workspace-sidedock-empty-state .workspace-tabs .workspace-tab-header-container {
-	border-bottom:1px solid rgba(35, 33, 33, 0.19);
+.workspace-sidedock-empty-state .workspace-tabs {
+	border-bottom:1px solid var(--background-modifier-border2);
 }
 
 .workspace-tab-header-container {
-	border-bottom:1px solid rgba(35, 33, 33, 0.19);
+	border-bottom:1px solid var(--background-modifier-border2);
 }
 
 .workspace-tab-header:hover {
@@ -13568,7 +13589,7 @@ body:not(.window-title-on) .titlebar-text {
 
 /*顶部导行按钮栏下边界线*/
 .nav-buttons-container {
-	border-bottom:1px solid rgba(35, 33, 33, 0.19);
+	border-bottom:1px solid var(--background-modifier-border2);
 }
 
 .nav-action-button,.workspace-leaf-content[data-type=backlink] .nav-action-button,.workspace-leaf-content[data-type=search] .nav-action-button {
@@ -13582,7 +13603,13 @@ body:not(.window-title-on) .titlebar-text {
 	border-radius: var(--radius-s)
 }
 
-/*为目录树添加点击文件后条目颜色后缀，和控制点击后的颜色*/
+/*文件导航栏目录树缩进线样式*/
+body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
+	border-left: 1px solid var(--background-modifier-border2);
+	margin-left:1.6em;
+}
+
+/*为文件导航栏目录树添加点击文件后条目颜色后缀，和控制点击后的颜色*/
 .nav-file-title.is-being-dragged, .nav-file-title.is-active, body:not(.is-grabbing) .nav-file-title.is-active:hover, .nav-folder-title.is-being-dragged {
     border-right: 3px solid;
 	border-right-color: var(--item-side);
@@ -13620,9 +13647,17 @@ body:not(.window-title-on) .titlebar-text {
 	margin-left: 1.5rem;
 }
 /*END*/
+/*文件目录导航中文件夹支持导行超出后截断显示*/
+.nav-folder-title-content {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	vertical-align: middle;
+	cursor: var(--cursor)
+}
 
 /* ================================== */
-/* ============ 设置（settings）菜单 ============ */
+/* ======= 设置（settings）菜单 ======= */
 /* ================================== */
 
 /*设置界面导行栏的样式优化*/
@@ -13665,9 +13700,10 @@ body:not(.window-title-on) .titlebar-text {
     border-top: 0.5px solid var(--bg3);
 }
 
-/*设置菜单中内容设置按钮*/
-.setting-item-control button {
-
+/*设置菜单中按钮指向后的颜色*/
+.modal button:not(.mod-warning):hover, .modal.mod-settings button:not(.mod-warning):hover, button:hover {
+	background-color: var(--interactive-accent-hover2);
+    color: white;
 }
 
 /* ================================== */
@@ -13727,6 +13763,10 @@ body:not(.minimal-icons-off) .graph-controls-button svg,body:not(.minimal-icons-
 /* ================================== */
 /* =========== 插件间兼容性 ========== */
 /* ================================== */
+/*修复导行栏按钮的高度和文件标题栏高度，因为 theme settings 等插件的异常*/
+body.css-settings-manager {
+	--header-height: 40px !important;
+}
 
 /*修复banner 和 metatable 在没有banner icon下的高度问题*/
 .obsidian-banner-wrapper .obsidian-metatable{
@@ -13787,7 +13827,11 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
 /*End*/
 
 /* =========== 正文:标题 ========= */
-/* === 标题下面分割线的样式控制 === */
+/*文件名下方的边框线*/
+.view-header {
+	border-bottom: 1.5px solid var(--ui2) !important;
+}
+/* === 正文标题（headings）标题下面分割线的样式控制 === */
 /*控制线的粗细和颜色样式，分割线距离标题和紧跟标题的内容块的距离*/
 .h1-l .markdown-reading-view h1:not(.embedded-note-title),.h1-l .mod-cm6 .cm-editor .HyperMD-header-1 {
 	border-bottom: 1.5px solid var(--ui2);
@@ -13823,6 +13867,27 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
 	border-bottom: 1.5px solid var(--ui2);
 	padding-bottom: 0.3em;
 	margin-bottom: 0.4em !important;
+}
+/*无序列表各个层级的前缀标识*/
+/*1级实心原点*/
+.markdown-source-view .HyperMD-list-line-1 .list-bullet:after{
+	content: '\2022' !important;
+}
+/*2级空心圆*/
+.markdown-source-view .HyperMD-list-line-2 .list-bullet:after{
+	content: '\2218' !important;
+}
+/*3级实心方块*/
+.markdown-source-view .HyperMD-list-line-3 .list-bullet:after{
+	content: '\25AA' !important;
+}
+/*4级空心方块*/
+.markdown-source-view .HyperMD-list-line-4 .list-bullet:after{
+	content: '\25AB' !important;
+}
+/*5级箭头*/
+.markdown-source-view .HyperMD-list-line-5 .list-bullet:after{
+	content: '\2023' !important;
 }
 
 /* ================================== */
