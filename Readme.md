@@ -2,7 +2,6 @@
 v0.2.1
 计划把所有插件的CSS样式改造，都挪动到主题文件中，这样插件的更新和主题文件进一步降低耦合，最理想状态是插件更新不需要改动主题样式。
 
-
 ## 2. 概述
 一个好的笔记软件，或者说一个好的软件。应该考虑其自身的易用性。诚然 Obsidian 是一款伟大的软件（I'm lovin it），但它还很年轻（显然现在的市场占有率16%，不是它的终点），目前可以说是一个“成以社区，败也社区”的阶段。
 
@@ -52,7 +51,7 @@ v0.2.1
 #### 4.1.2. 样式
 ### 4.2. 正文书写体验
 
-#### 4.2.1. 文字样式
+#### 4.2.1. 正文文字样式
 - 增强文本编辑时的体验
 	- 通过【cmenu】增加了文本编辑菜单的跟随模式，这个模式近似拟可以获得Notion，Word那样的跟随鼠标浮动菜单的体验。（@cumany 对这个插件的改版，另外推荐@ cumany的 [Blue-topaz-examples (github.com)](https://github.com/cumany/Blue-topaz-examples/tree/main/.obsidian) 也是一个非常不错的 Obsidian 即插即用库。）
 		- 在 cumany 的基础上，增加文字颜色 以及 马克笔效果 的icon和配置（默认配置了红蓝两色，额外支持橙色、黄色、绿色）；
@@ -86,7 +85,7 @@ v0.2.1
 1、动态目录
 这里使用了【Number Headlings】 代替 更多人推荐的  【Dynamic Table of Contents】。
 - 为什么要兼容文档内的目录，而不是使用 Obsidian 的大纲侧边栏？主要是为了照顾小尺寸屏幕下，宝贵的屏幕宽度。
-- 【Dynamic Table of Contents】无法在实时预览模式下进行渲染，而【Number Headlings】可以。如果你习惯侧面栏的 大纲功能的话，大可不必关心此点。
+- 【Dynamic Table of Contents】无法在实时预览模式下进行渲染，而【Number Headlings】可以。如果你习惯侧面栏的大纲功能的话，大可不必关心此点。
 - 优势：通过【Number Headlings】可以自动为你的标题进行编号
 - 缺点：因为利用【Number Headlings】实现了动态目录功能，所以会减少一层目录的使用，即你只能使用【H2】-【H6】
 
@@ -148,7 +147,6 @@ v0.2.1
 #### 4.2.11. 更多特殊语法的支持
 
 - 数学公式：如果你有相关论文或者工作的需求，可以打开【 Math plus 】
-
 - 乐谱：如果你有相关论文或者工作的需求，可以打开【 music code blocks】
 
 #### 4.2.12. 标签（tags）
@@ -169,16 +167,12 @@ v0.2.1
 #### 4.3.2. 文件数量管理
 
 - 【File explorer note count】管理文件夹和文件对应的文件数量
-- 【Folder Note】为每一个文件夹添加一个markdown文件，该文件默认用卡片视图，来展示该文件夹下所有的笔记；
-- 【补充图例】
 #### 4.3.3. 目录的快捷管理
 
 - 文档路径显示和快速目录层级切换，通过【quick-explorer】实现，可以类似 windows 的 localbars 进行快速定位和切换目录层级，从而达到切换文档的目的。
-- 文件目录折叠 针对左侧的目录树进行快速的折叠。如果不需要 “Obsidian -> 第三方插件 ” 中找到 【collapse all】 进行关闭
 
 #### 4.3.4. 文件历史版本管理
 - 支持管理文档的不同版本历史，甚至比对当前版本和之前版本的差异点【obsidian-version-history-diff】
-【补充图片】
 ### 4.4. All in One
 
 #### 4.4.1. 读书笔记沉淀
@@ -199,19 +193,13 @@ v0.2.1
 
 
 
-
-
 Active note to window title：在状态栏显示标题
-
 
 Remember cursor position：记住鼠标位置（长文浏览优化）
 
 Kanban：看板功能 [[看板插件（Kanba插件介绍）by 软通达]]
 
 Style Settings：主题修改 [[简易自定义OB主题（Style settings插件介绍） by 软通达]]
-
-
-
 
 excalidraw：无限画布功能 [[Obsidian 插件之 Excalidraw by Bon]]
 
@@ -223,18 +211,11 @@ Auto pair chinese symbol：中文符号自动成对
 
 Advanced tables和Table extended：表格增强
 
-
-
 Get info：提供简单的卡片信息
-
 
 其他人有提议但没加入：
 
-show whitespace：显示空格
-
 local images：批量下载全库或本页面的网络图片至attachment
-
-
 
 
 
@@ -254,7 +235,6 @@ local images：批量下载全库或本页面的网络图片至attachment
 4、feature：增加callouts语法，段落自动缩进写法。以下表达都是可以的
     > [!note|indent]
     > [!note indent]
-
 5、feature：增加callouts语法，支持三种对齐方式。语法如下：
     > [!note|left] 、> [!note|center] 、> [!note|right]
 	语法格式如下，以下两种方式均可：

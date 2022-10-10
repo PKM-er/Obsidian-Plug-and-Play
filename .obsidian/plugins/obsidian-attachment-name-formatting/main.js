@@ -6959,11 +6959,14 @@ var AttachmentNameFormatting = class extends import_obsidian.Plugin {
               if (!attachmentList.hasOwnProperty(fileType)) {
                 attachmentList[fileType] = [];
               }
-              let file_path = (0, import_obsidian.parseLinktext)(item.link).path;
+              console.log(item.link);
+              let file_path = (0, import_obsidian.parseLinktext)(item.link.replace(/(\.\/)|(\.\.\/)+/g, "")).path;
+              console.log(file_path);
               let attachmentFile = this.app.vault.getAbstractFileByPath(file_path);
               if (!attachmentFile) {
                 attachmentFile = this.app.metadataCache.getFirstLinkpathDest(file_path, file_path);
               }
+              console.log(attachmentFile);
               if (!attachmentList[fileType].contains(attachmentFile)) {
                 attachmentList[fileType].push(attachmentFile);
               }
@@ -7162,15 +7165,27 @@ var AttachmentNameFormattingSettingTab = class extends import_obsidian.PluginSet
     const { containerEl } = this;
     containerEl.empty();
     containerEl.createEl("h1", { text: "Attachment Name Formatting" });
-    containerEl.createEl("p", { text: 'This plugin will format all attachments in the format: "filename attachmentType indexNumber.xxx".' });
-    containerEl.createEl("p", { text: "Each type of attachment will have individual index." });
-    containerEl.createEl("p", { text: "Only recognize the file type that can be recognized by Obsidian." });
+    containerEl.createEl("p", {
+      text: 'This plugin will format all attachments in the format: "filename attachmentType indexNumber.xxx".'
+    });
+    containerEl.createEl("p", {
+      text: "Each type of attachment will have individual index."
+    });
+    containerEl.createEl("p", {
+      text: "Only recognize the file type that can be recognized by Obsidian."
+    });
     containerEl.createEl("h3", { text: "Supported file formats" });
-    containerEl.createEl("p", { text: "Image files: png, jpg, jpeg, gif, bmp, svg" });
-    containerEl.createEl("p", { text: "Audio files: mp3, wav, m4a, ogg, 3gp, flac" });
+    containerEl.createEl("p", {
+      text: "Image files: png, jpg, jpeg, gif, bmp, svg"
+    });
+    containerEl.createEl("p", {
+      text: "Audio files: mp3, wav, m4a, ogg, 3gp, flac"
+    });
     containerEl.createEl("p", { text: "Video files: mp4, ogv, mov, mkv" });
     containerEl.createEl("p", { text: "PDF files: pdf" });
-    containerEl.createEl("p", { text: 'Do not have "webm" extension in audio and video right now' });
+    containerEl.createEl("p", {
+      text: 'Do not have "webm" extension in audio and video right now'
+    });
     containerEl.createEl("h2", { text: "Attachments Format Setting" });
     new import_obsidian.Setting(containerEl).setName("Format for connector").setDesc("Set the format for connector between file name and attachment name.").addText((text) => text.setPlaceholder("_").setValue(this.plugin.settings.connector === "_" ? "" : this.plugin.settings.connector).onChange((value) => __async(this, null, function* () {
       let fileNamepatn = /\||<|>|\?|\*|:|\/|\\|"/;
