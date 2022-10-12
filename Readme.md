@@ -242,5 +242,5 @@ local images：批量下载全库或本页面的网络图片至attachment
 8、feature：增加图片的位置属性，支持自定义图片的对齐方式。包含对齐，方式和环绕效果
 
 
-![0f0df58f05e8652883b96e1c275044b|350](https://user-images.githubusercontent.com/241007/195344028-42dfe6f5-35eb-4eec-9046-735cdbb76f19.jpg)
+![0f0df58f05e8652883b96e1c275044b|150](https://user-images.githubusercontent.com/241007/195344028-42dfe6f5-35eb-4eec-9046-735cdbb76f19.jpg)
 
