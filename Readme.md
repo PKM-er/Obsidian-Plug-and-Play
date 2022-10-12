@@ -222,7 +222,7 @@ v0.2.1
 
 8、feature：增加图片的位置属性，支持自定义图片的对齐方式。包含对齐，方式和环绕效果
 
-![image](https://user-images.githubusercontent.com/241007/195344509-de2df934-be6a-48f8-8ab1-a719c4983611.png)
+![image](https://user-images.githubusercontent.com/241007/195344661-06526475-b6ae-4831-814e-1959ba27ddaa.png)
 
 
 
