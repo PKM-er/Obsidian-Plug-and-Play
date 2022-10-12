@@ -217,21 +217,16 @@ Get info：提供简单的卡片信息
 
 local images：批量下载全库或本页面的网络图片至attachment
 
-
-
 ### 4.5. 样式：
 #### 4.5.1. 主题
 整体基于Minimal 主题为原型；
 原因：这个主题支持较为全面，且样式更简约，符合整个"保持纯粹的"的理念
 
 #### 4.5.2. 闪亮的新东西
-集成了蓝色托帕石，一些比较不错的设计适合Obsidian v0.14.12
+集成了蓝色托帕石，一些比较不错的设计
 1、feature：启动动画功能，现在你可以选择任意的图片，或者动图来个性化启动了。
-
 2、feature：Dataview Cards，主要用于生成基于dataview查询的图片墙样式，你可以将你的书籍、电影都放到这里面，而且不需要单独的维护他。
-
 3、feature：编辑代码块按钮调整，原版不是很好点击，所以修改了一个样式版本
-
 4、feature：增加callouts语法，段落自动缩进写法。以下表达都是可以的
     > [!note|indent]
     > [!note indent]
@@ -240,25 +235,12 @@ local images：批量下载全库或本页面的网络图片至attachment
 	语法格式如下，以下两种方式均可：
 	> [!note|right]
        > [!note right]
-
 6、feature：增加callouts语法，支持自定义百分比宽度，每5%一个区间。以下表达都是可以的
 	> [!note|30%]
 	> [!note 30%]
-
 7、feature：增加callouts语法，新类型[bookinfo]，用于生成豆瓣读书信息的页面，当然也可以用在别的地方
-
 8、feature：增加图片的位置属性，支持自定义图片的对齐方式。包含对齐，方式和环绕效果
 
 
+![0f0df58f05e8652883b96e1c275044b|350](https://user-images.githubusercontent.com/241007/195344028-42dfe6f5-35eb-4eec-9046-735cdbb76f19.jpg)
 
-致谢 Credits：
-@蚕子
-@Cuman
-@LillianWho
-@成雙酱
-@嘴上云
-@Klaas
-@Thinkbond
-@Rainbell129(AKA Lavi)
-@awyugan
-@GeoffreyOuO (WooYoo）
