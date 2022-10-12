@@ -1,4 +1,3 @@
-better-fn
 obsidian-file-info-plugin
 tag-word-cloud
 obsidian-emoji-toolbar
@@ -11,8 +10,12 @@ quick-explorer
 obsidian-excalidraw-plugin
 obsidian-emoji-toolbar
 url-into-selection
-pane-relief
 obsidian-pandoc
 obsidian-collapse-all-plugin
 obsidian-math-plus
 music-code-blocks
+lapel
+obsidian-enhancing-mindmap
+obsidian-view-mode-by-frontmatter
+obsidian-file-info-plugin
+search-on-internet

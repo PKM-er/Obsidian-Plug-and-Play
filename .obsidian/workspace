@@ -4,138 +4,93 @@
     "type": "split",
     "children": [
       {
-        "id": "9ee8dadf3fe9cf81",
+        "id": "8812fa651d875f94",
         "type": "leaf",
+        "dimension": 26.4669163545568,
         "pane-relief:history-v1": {
           "pos": 0,
           "stack": [
             {
-              "leaf": "9ee8dadf3fe9cf81",
+              "leaf": "8812fa651d875f94",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Movie/太空部队 第二季 Space Force Season 2.md\",\"mode\":\"preview\",\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-StartupScript 1 1.md\",\"mode\":\"source\",\"source\":false}}",
               "eState": "{}"
             },
             {
-              "leaf": "9ee8dadf3fe9cf81",
+              "leaf": "8812fa651d875f94",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Movie/上载新生 第二季 Upload Season 2.md\",\"mode\":\"source\",\"source\":false}}",
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-StartupScript 1.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{}"
+            },
+            {
+              "leaf": "8812fa651d875f94",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-GenerateListOfInstalledPlugins.md\",\"mode\":\"source\",\"source\":false}}",
               "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "9ee8dadf3fe9cf81",
+              "leaf": "8812fa651d875f94",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Movie/人生切割术 第一季 Severance Season 1.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":71},\"to\":{\"line\":1,\"ch\":71}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-ShortDelay.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "9ee8dadf3fe9cf81",
+              "leaf": "8812fa651d875f94",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Movie/洛基 第一季 Loki Season 1.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":71},\"to\":{\"line\":1,\"ch\":71}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-StartupScript.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "9ee8dadf3fe9cf81",
+              "leaf": "8812fa651d875f94",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Movie/太空部队 第二季 Space Force Season 2.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":71},\"to\":{\"line\":1,\"ch\":71}}}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongLongDelay.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "9ee8dadf3fe9cf81",
+              "leaf": "8812fa651d875f94",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《最简单的图形与最复杂的信息》.md\",\"mode\":\"preview\",\"source\":false}}",
-              "eState": "{}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongDelay.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "9ee8dadf3fe9cf81",
+              "leaf": "8812fa651d875f94",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《DK博物大百科》.md\",\"mode\":\"preview\",\"source\":false}}",
-              "eState": "{}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-GenerateListOfInstalledPlugins.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+            }
+          ]
+        },
+        "state": {
+          "type": "empty",
+          "state": {}
+        }
+      },
+      {
+        "id": "40971ffcd9b4c688",
+        "type": "leaf",
+        "dimension": 73.5330836454432,
+        "pane-relief:history-v1": {
+          "pos": 0,
+          "stack": [
+            {
+              "leaf": "40971ffcd9b4c688",
+              "group": null,
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-StartupScript.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             },
             {
-              "leaf": "9ee8dadf3fe9cf81",
+              "leaf": "40971ffcd9b4c688",
               "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《DK儿童图解百科全书·化学元素》.md\",\"mode\":\"preview\",\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《DK万物透视图解百科》.md\",\"mode\":\"preview\",\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《跟动物交换身体》.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":15,\"ch\":12},\"to\":{\"line\":15,\"ch\":12}}}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《孤独与陪伴》.md\",\"mode\":\"preview\",\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《棉花帝国》.md\",\"mode\":\"preview\",\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《枪炮、病菌与钢铁》.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":0},\"to\":{\"line\":2,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《网络是怎样连接的》.md\",\"mode\":\"preview\",\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《写给全人类的数学魔法书》.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":71},\"to\":{\"line\":1,\"ch\":71}}}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《最简单的图形与最复杂的信息》.md\",\"mode\":\"preview\",\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《DK博物大百科》.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":0},\"to\":{\"line\":2,\"ch\":0}}}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《DK儿童图解百科全书·化学元素》.md\",\"mode\":\"preview\",\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《DK万物透视图解百科》.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":12,\"ch\":16},\"to\":{\"line\":12,\"ch\":16}}}"
-            },
-            {
-              "leaf": "9ee8dadf3fe9cf81",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/BookList.md\",\"mode\":\"preview\",\"source\":false}}",
-              "eState": "{}"
+              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-StartupScript 1.md\",\"mode\":\"source\",\"source\":false}}",
+              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
             }
           ]
         },
         "state": {
           "type": "markdown",
           "state": {
-            "file": "People/Movie/太空部队 第二季 Space Force Season 2.md",
-            "mode": "preview",
+            "file": "Template/startup/FastStart-StartupScript.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -199,7 +154,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 376
+    "width": 492
   },
   "right": {
     "id": "0afdab19216adf86",
@@ -215,7 +170,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "People/Movie/太空部队 第二季 Space Force Season 2.md",
+                "file": "Template/startup/FastStart-StartupScript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -232,7 +187,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "People/Movie/太空部队 第二季 Space Force Season 2.md",
+                "file": "Template/startup/FastStart-StartupScript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -273,17 +228,17 @@
     "width": 353.72222900390625,
     "collapsed": true
   },
-  "active": "9ee8dadf3fe9cf81",
+  "active": "8812fa651d875f94",
   "lastOpenFiles": [
-    "People/Movie/上载新生 第二季 Upload Season 2.md",
-    "People/Movie/人生切割术 第一季 Severance Season 1.md",
-    "People/Movie/洛基 第一季 Loki Season 1.md",
-    "People/Movie/太空部队 第二季 Space Force Season 2.md",
-    "People/Book/《最简单的图形与最复杂的信息》.md",
-    "People/Book/《DK博物大百科》.md",
-    "People/Book/《DK儿童图解百科全书·化学元素》.md",
-    "People/Book/《DK万物透视图解百科》.md",
-    "People/Book/《跟动物交换身体》.md",
-    "People/Book/《孤独与陪伴》.md"
+    "Template/startup/FastStart-StartupScript 1.md",
+    "Template/startup/FastStart-StartupScript 1 1.md",
+    "Template/startup/FastStart-GenerateListOfInstalledPlugins.md",
+    "Template/startup/FastStart-Plugins-ShortDelay.md",
+    "Template/startup/FastStart-StartupScript.md",
+    "Template/startup/FastStart-Plugins-LongLongDelay.md",
+    "Template/startup/FastStart-Plugins-LongDelay.md",
+    "Readme.md",
+    "Obsidian-example/Readme.md",
+    "Obsidian-example/Readme英文版.md"
   ]
 }

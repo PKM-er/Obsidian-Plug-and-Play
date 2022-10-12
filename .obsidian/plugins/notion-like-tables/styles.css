@@ -1,71 +1,39 @@
 @charset "UTF-8";
 
+/* src/components/TextCell/styles.css */
+.NLT__text-cell {
+  width: 100%;
+}
+
 /* src/components/Tag/styles.css */
 .NLT__tag-content {
-  width: 100%;
+  width: max-content;
+  user-select: none;
 }
 .NLT__tag {
   display: flex;
   align-items: center;
   border-radius: 8px;
-  padding: 1px 8px;
-  width: fit-content;
+  padding: var(--nlt-spacing--xs) var(--nlt-spacing--md);
+  width: max-content;
   color: var(--text-normal);
 }
 
-/* src/components/TagCell/styles.css */
-.NLT__tag-cell {
-  width: 100%;
+/* src/components/Icon/styles.css */
+.NLT__icon {
+  display: flex;
 }
-
-/* src/components/CheckboxCell/styles.css */
-.NLT__checkbox-cell {
-  width: 100%;
+.NLT__icon--sm {
+  width: 0.9rem !important;
+  height: 0.9rem !important;
 }
-
-/* src/components/DateCell/styles.css */
-.NLT__date-cell {
-  width: 100%;
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+.NLT__icon--md {
+  width: 1rem !important;
+  height: 1rem !important;
 }
-
-/* src/components/NumberCell/styles.css */
-.NLT__number-cell {
-  width: 100%;
-  text-align: right;
-}
-
-/* src/components/Menu/styles.css */
-.NLT__menu-container {
-  position: absolute;
-  border-radius: 4px;
-  font-weight: 400;
-  background-color: var(--background-primary);
-  border: 1px solid var(--background-modifier-border);
-  box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
-  z-index: var(--layer-menu);
-}
-
-/* src/components/NumberCellEdit/styles.css */
-.NLT__number-cell-edit {
-  width: 100%;
-  height: 100%;
-  padding: 4px 10px !important;
-  text-align: right;
-  border: 0 !important;
-  font-family: var(--font-text);
-  font-size: 1rem;
-}
-
-/* src/components/TextCellEdit/styles.css */
-.NLT__textarea {
-  width: 100%;
-  height: 100%;
-  padding: 4px 10px;
-  border: 0;
-  overflow: hidden;
+.NLT__icon--lg {
+  width: 1.1rem !important;
+  height: 1.1rem !important;
 }
 
 /* src/components/Button/styles.css */
@@ -78,7 +46,71 @@
   margin-right: 0;
 }
 .NLT__button--icon {
+  background-color: transparent;
   padding: 1px 3px;
+}
+.NLT__button--icon-darker:hover {
+  filter: brightness(95%);
+}
+
+/* src/components/TagCell/styles.css */
+.NLT__tag-cell {
+  width: 100%;
+}
+
+/* src/components/CheckboxCell/styles.css */
+.NLT__checkbox-cell {
+  width: 100%;
+  padding: var(--nlt-cell-spacing);
+}
+
+/* src/components/DateCell/styles.css */
+.NLT__date-cell {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  padding: var(--nlt-cell-spacing);
+}
+
+/* src/components/NumberCell/styles.css */
+.NLT__number-cell {
+  width: 100%;
+  text-align: right;
+}
+
+/* src/components/NumberCellEdit/styles.css */
+.NLT__number-cell-edit {
+  width: 100%;
+  height: 100%;
+  text-align: right;
+  border: 0 !important;
+  font-family: var(--font-text);
+  font-size: 1rem;
+}
+
+/* src/components/TextCellEdit/styles.css */
+.NLT__textarea {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  overflow: hidden;
+  padding: var(--nlt-cell-spacing-x) var(--nlt-cell-spacing-y);
+}
+
+/* src/components/Menu/styles.css */
+.NLT__menu {
+  width: 0;
+  height: 0;
+}
+.NLT__menu-container {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
+  z-index: var(--layer-menu);
+  position: absolute;
+  border-radius: 4px;
+  font-weight: 400;
 }
 
 /* src/components/TagColorMenu/components/ColorItem/styles.css */
@@ -86,6 +118,7 @@
   display: flex;
   align-items: center;
   font-size: 0.8rem;
+  padding: 0px 5px;
 }
 .NLT__color-item-square {
   width: 10px;
@@ -98,19 +131,20 @@
 .NLT__tag-color-menu {
   padding: 4px 10px;
 }
+.NLT__tag-color-menu-header {
+  display: flex;
+  justify-content: space-between;
+}
 .NLT__tag-color-menu-title {
   font-size: 0.85rem;
-}
-.NLT__tag-color-container {
-  display: grid;
-  grid-template-columns: 100px 100px;
 }
 
 /* src/components/TagCellEdit/component/SelectableTag/styles.css */
 .NLT__selectable-tag {
   display: flex;
   justify-content: space-between;
-  padding: 4px 6px;
+  padding: var(--nlt-spacing--sm) var(--nlt-spacing--md);
+  overflow: hidden;
 }
 
 /* src/components/TagCellEdit/component/CreateTag/styles.css */
@@ -118,19 +152,19 @@
   display: flex;
   align-items: center;
   padding: 4px 6px;
+  width: 100%;
+  overflow: hidden;
 }
 
 /* src/components/TagCellEdit/styles.css */
 .NLT__tag-menu {
-  width: 15rem;
+  background-color: var(--background-primary);
 }
-.NLT__tag-menu-top {
-  display: flex;
-  align-items: center;
+.NLT__tag-menu-header {
   background-color: rgba(0, 0, 0, 0.25);
   padding: 4px 10px;
 }
-.NLT__tag-menu-bottom {
+.NLT__tag-menu-body {
   min-height: 100px;
   padding: 4px 10px;
 }
@@ -143,8 +177,8 @@
   background-color: transparent !important;
   border: 0 !important;
   width: 100%;
-  min-width: 100px;
-  margin-left: 5px;
+  padding-left: 5px !important;
+  padding-right: 5px !important;
 }
 
 /* node_modules/react-datepicker/dist/react-datepicker.css */
@@ -868,18 +902,21 @@
   border: 0 !important;
 }
 
+/* src/components/MultiTagCell/styles.css */
+.NLT__multi-tag-cell {
+  display: flex;
+  flex-direction: column;
+}
+
 /* src/components/EditableTd/styles.css */
 .NLT__td {
-  display: inline-block;
   border-top: 0 !important;
   border-bottom: 1px solid var(--background-modifier-border) !important;
   border-left: 1px solid var(--background-modifier-border) !important;
   border-right: 0 !important;
-  box-sizing: border-box !important;
   vertical-align: top;
-  min-height: 2rem;
   padding: 0 !important;
-  overflow: hidden;
+  overflow: visible;
 }
 .NLT__tbody > .NLT__tr > .NLT__td:last-child {
   border-top: 0 !important;
@@ -892,32 +929,28 @@
   border: 0 !important;
 }
 .NLT__td-container {
-  padding: 4px 10px;
+  display: flex;
+  min-height: 1.9rem;
+}
+.NLT__td-cell-container {
+  overflow: hidden;
+  user-select: none;
+  width: 100%;
+}
+.NLT__td-cell-padding {
+  padding: var(--nlt-cell-spacing-x) var(--nlt-cell-spacing-y);
 }
 
-/* src/components/Table/components/styles.css */
+/* src/components/Table/styles.css */
 .NLT__table {
-  width: max-content;
+  table-layout: fixed;
 }
 .NLT__table,
 .NLT__thead,
 .NLT__tbody,
 .NLT__tfoot,
 .NLT__tr {
-  display: block;
-  box-sizing: border-box;
   border: 0 !important;
-}
-.NLT__tfoot::after {
-  content: " ";
-  display: block;
-  height: 10px;
-}
-
-/* src/components/IconText/styles.css */
-.NLT__icon-text {
-  display: flex;
-  align-items: center;
 }
 
 /* src/components/RowMenu/components/RowMenuItem/styles.css */
@@ -1007,20 +1040,23 @@ input:checked + .NLT__slider:before {
   margin: 0;
 }
 .NLT__header-menu-input {
+  background-color: var(--background-primary);
+  border: 1px solid var(--background-modifier-border);
+  padding: 4px 10px;
   font-size: 0.95rem;
+  width: 100%;
 }
 
 /* src/components/EditableTh/styles.css */
 .NLT__th {
-  display: inline-block;
   text-align: left;
   border-top: 1px solid var(--background-modifier-border) !important;
   border-bottom: 1px solid var(--background-modifier-border) !important;
   border-left: 1px solid var(--background-modifier-border) !important;
   border-right: 0 !important;
-  box-sizing: border-box !important;
   padding: 0 !important;
-  height: 1.8rem;
+  font-weight: 400 !important;
+  overflow: visible;
 }
 .NLT__th:last-child {
   border-top: 0 !important;
@@ -1037,15 +1073,15 @@ input:checked + .NLT__slider:before {
   white-space: nowrap;
   text-overflow: ellipsis;
   user-select: none;
-  padding: 4px 10px;
+  padding: var(--nlt-cell-spacing-x) var(--nlt-cell-spacing-y);
 }
 .NLT__th-resize-container {
   position: relative;
 }
 .NLT__th-resize {
   position: absolute;
+  left: -10px;
   cursor: col-resize;
-  left: -3px;
   width: 10px;
   height: 100%;
 }
@@ -1067,53 +1103,78 @@ input:checked + .NLT__slider:before {
 }
 
 /* src/app.css */
-.NLT__color--light-gray {
+:root {
+  --nlt-spacing--xs: 2px;
+  --nlt-spacing--sm: 4px;
+  --nlt-spacing--md: 8px;
+  --nlt-spacing--lg: 12px;
+  --nlt-spacing--xl: 16px;
+  --nlt-spacing--2xl: 24px;
+  --nlt-cell-spacing-x: var(--nlt-spacing--sm);
+  --nlt-cell-spacing-y: var(--nlt-spacing--lg);
+}
+.NLT__light-gray--light {
   background-color: hsl(0, 3%, 94%);
 }
-.NLT__color--gray {
+.NLT__light-gray--dark {
+  background-color: hsl(0, 0%, 22%);
+}
+.NLT__gray--light {
   background-color: hsl(40, 5%, 88%);
 }
-.NLT__color--brown {
+.NLT__gray--dark {
+  background-color: hsl(0, 0%, 35%);
+}
+.NLT__brown--light {
   background-color: hsl(18, 31%, 89%);
 }
-.NLT__color--orange {
+.NLT__brown--dark {
+  background-color: hsl(19, 32%, 27%);
+}
+.NLT__orange--light {
   background-color: hsl(28, 67%, 88%);
 }
-.NLT__color--yellow {
+.NLT__orange--dark {
+  background-color: hsl(28, 52%, 32%);
+}
+.NLT__yellow--light {
   background-color: hsl(43, 82%, 89%);
 }
-.NLT__color--green {
+.NLT__yellow--dark {
+  background-color: hsl(37, 43%, 36%);
+}
+.NLT__green--light {
   background-color: hsl(113, 30%, 89%);
 }
-.NLT__color--blue {
+.NLT__green--dark {
+  background-color: hsl(138, 23%, 28%);
+}
+.NLT__blue--light {
   background-color: hsl(205, 41%, 89%);
 }
-.NLT__color--purple {
+.NLT__blue--dark {
+  background-color: hsl(218, 38%, 30%);
+}
+.NLT__purple--light {
   background-color: hsl(272, 29%, 90%);
 }
-.NLT__color--pink {
+.NLT__purple--dark {
+  background-color: hsl(266, 34%, 28%);
+}
+.NLT__pink--light {
   background-color: hsl(330, 36%, 91%);
 }
-.NLT__color--red {
+.NLT__pink--dark {
+  background-color: hsl(330, 31%, 30%);
+}
+.NLT__red--light {
   background-color: hsl(11, 64%, 91%);
 }
-.NLT__error {
-  color: red;
+.NLT__red--dark {
+  background-color: hsl(8, 35%, 30%);
 }
 .NLT__table-wrapper {
-  overflow: auto;
-}
-.NLT__icon--selectable:hover {
-  border-radius: 4px;
-  box-shadow: 0px 0px 0px 2px rgba(0, 0, 0, 0.2);
-}
-.NLT__icon--sm {
-  width: 0.9rem !important;
-  height: 0.9rem !important;
-}
-.NLT__icon--md {
-  width: 1rem !important;
-  height: 1rem !important;
+  overflow-x: auto;
 }
 .NLT__selectable {
   cursor: pointer;
@@ -1123,12 +1184,6 @@ input:checked + .NLT__slider:before {
 }
 .NLT__selected {
   background-color: var(--interactive-normal);
-}
-.NLT__margin-right {
-  margin-right: 4px;
-}
-.NLT__margin-left {
-  margin-left: 4px;
 }
 .NLT__auto-width {
   overflow-wrap: normal;

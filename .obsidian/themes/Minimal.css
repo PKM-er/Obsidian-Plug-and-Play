@@ -129,6 +129,7 @@ body {
 	--purple: #9e86c8;
 	--pink: #b05279;
 	--item-side:#007aff;
+	--table-hover-raw-color:#007aff;
 }
 
 .theme-light,.theme-light.minimal-default-light,body .excalidraw {
@@ -1242,7 +1243,7 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
 }
 
 .nav-folder-title-content {
-	padding: 0 4px 1px 0
+	padding: 0 4px 1px 4
 }
 
 .nav-folder-collapse-indicator {
@@ -1653,14 +1654,6 @@ body {
 	color:black;
 }
 
-
-													 
-																   
-												  
-																				 
-					
- 
-
 a {
 	color: var(--text-accent);
 	font-weight: var(--link-weight)
@@ -1712,11 +1705,6 @@ ol {
 ul>li {
 	min-height: 1.4em
 }
-
-					  
-							 
-						 
- 
 
 .mod-cm6 .HyperMD-list-line .list-bullet::after,.mod-cm6 span.list-bullet::after,ul>li::marker {
 	font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif
@@ -1944,12 +1932,6 @@ body:not(.is-mobile) .modal {
 	right: 0;
 	z-index: 1
 }
-
-													
-							  
-						   
-					  
- 
 
 .is-mobile .modal .vertical-tab-nav-item {
 	padding: 12px 0;
@@ -2369,18 +2351,6 @@ iframe {
 	border-bottom: 1px solid var(--ui1)
 }
 
-																													  
-			
-				 
-			 
-			   
-					 
-		   
-					
-			  
-		   
- 
-
 .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
 	left: 8px
 }
@@ -2418,10 +2388,6 @@ iframe {
 .mod-right:not(.is-collapsed)~.workspace-split.mod-right-split {
 	margin-right: 0
 }
-
-					 
-					 
- 
 
 body.hider-frameless:not(.hider-ribbon):not(.is-fullscreen) .side-dock-actions {
 	padding-top: 24px
@@ -3405,23 +3371,6 @@ body:not(.minimal-unstyled-tags) span.cm-hashtag.cm-hashtag-end {
 	background: var(--background-tertiary)
 }
 
-		  
-										 
-				  
-				  
-				  
-					
-				  
-				  
-				 
-			
- 
-
-									  
-				 
-				
- 
-
 .title-align-left:not(.plugin-sliding-panes-rotate-header) .view-header-title-container {
 	margin-left: 5px
 }
@@ -3562,73 +3511,6 @@ body.hider-frameless .titlebar {
 	border-bottom: none
 }
 
-									 
-												
- 
-
-											   
-																	
- 
-
-								   
-					   
-						
- 
-
-
-				
-				  
-				  
-						   
-						
- 
-
-										   
-			  
- 
-
-						
-			
-												 
- 
-
-				  
-			 
-					   
-						  
-				  
-					
-				
-			   
- 
-
-						
-											 
- 
-
-							
-								
-		
-			   
-					
- 
-
-																	  
-			   
- 
-
-													  
-				   
- 
-
-													   
-				
-				  
-			  
-					 
-				  
- 
-
 .empty-state {
 	background-color: var(--background-primary);
 	text-align: center
@@ -3730,14 +3612,6 @@ body.hider-frameless .titlebar {
 	padding-left: 5px
 }
 
-												 
-			 
- 
-
-																				 
-																						 
- 
-
 .mod-right-split .workspace-tabs .nav-buttons-container {
 	z-index: 1
 }
@@ -3766,10 +3640,6 @@ body.hider-frameless .titlebar {
 	align-items: center;
 	background-color: transparent
 }
-
-								 
-																						 
- 
 
 .theme-dark audio {
 	filter: none
@@ -4079,10 +3949,6 @@ body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
 	transition: all .1s linear
 }
 
-								
-										
- 
-
 .active-line-on .cm-line.cm-active,.active-line-on .markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote.cm-active {
 	background-color: var(--active-line-bg);
 	box-shadow: -25vw 0 var(--active-line-bg),25vw 0 var(--active-line-bg)
@@ -4101,10 +3967,6 @@ body:not(.is-mobile) input[type=range]:focus::-webkit-slider-thumb {
 body.borders-title .workspace-leaf .workspace-leaf-content:not([data-type=empty]):not([data-type=map]):not([data-type=graph]):not([data-type=localgraph]) .view-header,body.borders-title .workspace-split.mod-root .workspace-leaf:first-of-type:last-of-type .workspace-leaf-content:not([data-type=map]):not([data-type=graph]):not([data-type=empty]):not([data-type=localgraph]) .view-header {
 	border-bottom: var(--border-width) solid var(--background-divider)
 }
-
-																				
-																						
- 
 
 body:not(.is-fullscreen).mod-macos.hider-frameless.borders-title .mod-left-split>.workspace-tabs:nth-child(3) .workspace-tab-header-container {
 	border: none
@@ -4570,8 +4432,6 @@ input[data-task="b"]:checked,li[data-task="b"]>input:checked,li[data-task="b"]>p
 	--sp1: var(--bg1)
 }
 
-
-
 .colorful-active #calendar-container .active .dot,.colorful-active #calendar-container .day:active .dot,.colorful-active #calendar-container .today.active .dot {
 	fill: var(--sp1)
 }
@@ -4600,12 +4460,6 @@ body.colorful-headings {
 .is-mobile .tree-item-self .collapse-icon {
 	width: 20px
 }
-
-					
-																																																														
-						 
-						 
- 
 
 body:not(.minimal-icons-off) .menu-item-icon svg {
 	width: 16px;
@@ -4782,18 +4636,6 @@ body:not(.minimal-icons-off) svg.filled-pin {
 	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="black" d="M12 22l1-2v-3h5a1 1 0 0 0 1-1v-1.586c0-.526-.214-1.042-.586-1.414L17 11.586V8a1 1 0 0 0 1-1V4c0-1.103-.897-2-2-2H8c-1.103 0-2 .897-2 2v3a1 1 0 0 0 1 1v3.586L5.586 13A2.01 2.01 0 0 0 5 14.414V16a1 1 0 0 0 1 1h5v3l1 2zM8 4h8v2H8V4zM7 14.414l1.707-1.707A.996.996 0 0 0 9 12V8h6v4c0 .266.105.52.293.707L17 14.414V15H7v-.586z"></path></svg>')
 }
 
-										 
-																																																																																																																	 
- 
-
-																																																		   
-																																																																																																																												 
- 
-
-																																																									   
-																																																																																																													 
- 
-
 body:not(.minimal-icons-off) svg.fullscreen {
 	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M20.833 20.833h20.833V12.5H12.5v29.167h8.333zm20.833 58.333H20.833v-20.833H12.5v29.167h29.167zm45.833 -20.833h-8.333v20.833h-20.833v8.333h29.167zm-8.333 -16.667h8.333V12.5h-29.167v8.333h20.833z"></path></svg>')
 }
@@ -4853,10 +4695,6 @@ body:not(.minimal-icons-off) svg.install {
 body:not(.minimal-icons-off) svg.keyboard-glyph {
 	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><path fill="black" d="M4 5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2H4m0 2h16v10H4V7m1 1v2h2V8H5m3 0v2h2V8H8m3 0v2h2V8h-2m3 0v2h2V8h-2m3 0v2h2V8h-2M5 11v2h2v-2H5m3 0v2h2v-2H8m3 0v2h2v-2h-2m3 0v2h2v-2h-2m3 0v2h2v-2h-2m-9 3v2h8v-2H8z"></path></svg>')
 }
-
-													   
-																																																																																										 
- 
 
 body:not(.minimal-icons-off) svg.left-arrow {
 	-webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M15 19l-7-7 7-7' /></svg>")
@@ -4972,10 +4810,6 @@ body:not(.minimal-icons-off) svg.redo-glyph {
 body:not(.minimal-icons-off) svg.reset {
 	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M50 66.667c6.963 0 12.5 -5.546 12.5 -12.5s-5.538 -12.5 -12.5 -12.5s-12.5 5.546 -12.5 12.5S43.038 66.667 50 66.667z M86.738 46.608c-0.5 -2.429 -1.238 -4.796 -2.188 -7.033c-0.938 -2.217 -2.1 -4.358 -3.458 -6.379c-1.35 -1.996 -2.888 -3.858 -4.575 -5.538c-1.683 -1.692 -3.554 -3.233 -5.55 -4.588c-2.013 -1.358 -4.158 -2.517 -6.367 -3.454c-2.242 -0.954 -4.608 -1.688 -7.046 -2.192c-2.5 -0.513 -5.079 -0.758 -7.658 -0.75V8.333L33.333 20.833l16.563 12.5V25.008C51.913 25 53.929 25.192 55.875 25.592c1.892 0.392 3.733 0.963 5.475 1.704c1.721 0.725 3.388 1.633 4.95 2.683c1.554 1.05 3.008 2.25 4.325 3.571c1.313 1.308 2.517 2.763 3.558 4.313c1.058 1.567 1.963 3.233 2.692 4.963c0.742 1.738 1.308 3.579 1.7 5.463C78.967 50.2 79.167 52.179 79.167 54.167s-0.2 3.967 -0.592 5.875c-0.392 1.892 -0.958 3.733 -1.7 5.479c-0.729 1.721 -1.633 3.388 -2.683 4.95c-1.054 1.554 -2.258 3.008 -3.575 4.329c-1.313 1.317 -2.763 2.513 -4.317 3.558c-1.55 1.046 -3.213 1.95 -4.954 2.688c-1.738 0.738 -3.575 1.308 -5.463 1.7c-3.833 0.783 -7.942 0.783 -11.758 0c-1.892 -0.392 -3.733 -0.963 -5.475 -1.704c-1.733 -0.733 -3.396 -1.638 -4.954 -2.688c-1.546 -1.042 -2.996 -2.242 -4.313 -3.558c-1.313 -1.317 -2.517 -2.771 -3.563 -4.317c-1.058 -1.567 -1.963 -3.233 -2.692 -4.958c-0.742 -1.742 -1.308 -3.583 -1.7 -5.467C21.033 58.133 20.833 56.154 20.833 54.167H12.5c0 2.546 0.258 5.088 0.763 7.558c0.5 2.425 1.238 4.792 2.188 7.038c0.938 2.217 2.1 4.358 3.462 6.379c1.346 1.988 2.883 3.85 4.571 5.538c1.692 1.696 3.558 3.238 5.546 4.579c1.996 1.354 4.142 2.517 6.371 3.458c2.242 0.954 4.608 1.688 7.046 2.192C44.913 91.408 47.454 91.667 50 91.667s5.088 -0.258 7.558 -0.763c2.429 -0.504 4.796 -1.238 7.033 -2.188c2.238 -0.946 4.383 -2.108 6.375 -3.458c1.992 -1.342 3.858 -2.883 5.546 -4.579c1.688 -1.688 3.225 -3.554 4.583 -5.55c1.354 -2.013 2.517 -4.158 3.454 -6.367c0.954 -2.25 1.688 -4.617 2.188 -7.05C87.242 59.254 87.5 56.713 87.5 54.167S87.242 49.079 86.738 46.608z"></path></svg>')
 }
-
-														
-																																																																																																
- 
 
 body:not(.minimal-icons-off) svg.right-arrow {
 	-webkit-mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 5l7 7-7 7' /></svg>")
@@ -5281,21 +5115,9 @@ body.is-mobile.fancy-cursor .mod-cm6 .cm-cursor {
 	padding-left: 0
 }
 
-																		
-																			
- 
-
 .nav-folder-title {
 	margin-left: 6px
 }
-
-.nav-folder-title-content {
-	padding-left: 4px
-}
-
-		   
-				  
- 
 
 .mod-root>.nav-folder-children>.nav-file {
 	margin-left: 12px
@@ -5482,17 +5304,9 @@ body:not(.title-align-center):not(.title-align-left):not(.plugin-sliding-panes-r
 	background-color: var(--background-table-rows)
 }
 
-																					  
-																			  
- 
-
 .row-lines table:not(.calendar) tbody>tr:last-child>td {
 	border-bottom: none
 }
-
-																																												  
-																			 
- 
 
 .theme-dark .markdown-preview-view img,.theme-dark .markdown-source-view img {
 	opacity: .75;
@@ -9668,58 +9482,6 @@ body.outliner-plugin-bls .cm-s-obsidian.is-live-preview .list-bullet:before,body
 	padding: 20px 2px 5px
 }
 
-					
-			  
- 
-
-									
-					 
-						  
-			   
-																	
-				   
-			 
- 
-
-												 
-																	
- 
-
-																					  
-												   
- 
-
-																														
-			 
-				
- 
-
-																																  
-			 
- 
-
-									 
-				
-					
-				
- 
-
-												  
-							   
-				  
-				  
-		  
- 
-
-																																															
-											  
-						  
- 
-
-																																																							
-						  
- 
-
 .workspace-leaf-content[data-type=recent-files] .view-content {
 	padding-top: 10px
 }
@@ -11895,53 +11657,9 @@ settings:
 
 */
 
-
-																									
-													  
-			 
-				
-																																						  
-			  
-			   
-					
-					
-						  
-												
- 
-
-																 
-																		  
- 
-
-												  
-						 
- 
-
-												 
-						 
- 
-
-											  
-						   
-				 
- 
-
-
-							   
-													
-			   
- 
-
-							
-													   
-			   
- 
-
-
-/* ================================== */
+/* ======================================== */
 /* ============ Dataview Cards ============ */
-/* ================================== */
-
+/* ======================================== */
 /*********covercards***********/
 :root {
 	--cards-width: 138px;
@@ -12061,12 +11779,7 @@ img[alt^="bookcover"] {
 	.cards table.dataview>tbody>tr {
 		margin-left: 20px;
 		margin-bottom: 20px
-	}
- 
-
-																					  
-												   
-												 
+	}										 
 }
 
 .cards table.dataview tbody>tr>td:first-child, 
@@ -12213,13 +11926,7 @@ img[alt^="bookcover"] {
 	color: var(--text-normal);
 	background-color: var(--background-secondary);
 }
-
-/*调整初始状态下 Cards View 的样式*/
-.cards table.dataview tbody>tr>td button img{
-    width: calc(var(--cards-width)/8 );
-    height: calc(var(--cards-width) /8);
-    margin-left: -1px;
-} 
+/* ======= Dataview Cards End ======= */
 
 /* ================================== */
 /* ============ Call out ============ */
@@ -12486,8 +12193,7 @@ img[alt^="bookcover"] {
 	background-color: var(--background-secondary);
 }
 
-
-/* ===编辑代码块按钮调整============ */
+/*============ 编辑代码块按钮调整 ============*/
 .is-live-preview.is-readable-line-width .cm-embed-block>.edit-block-button {
 	width: 60px!important;
 	padding-left: 9px!important;
@@ -12557,13 +12263,12 @@ img[alt^="bookcover"] {
 .markdown-source-view.mod-cm6 .edit-block-button:hover svg {
 	opacity: 1
 }
-
- /* ===段落自动缩进============ */
-  /*支持两种写法
+/*End*/
+/*============ 段落自动缩进 ============*/
+/*支持两种写法
     > [!note|indent]
     > [!note indent]
-   */
-
+*/
 .callout.callout:is([data-callout-metadata*="indent"], [data-callout*=indent]) .callout-content p br {
 	content: '';
 	white-space: pre;
@@ -12580,7 +12285,6 @@ img[alt^="bookcover"] {
 .callout.callout:is([data-callout-metadata*="indent"], [data-callout*=indent]) .callout-content p br::after {
 	content: '\A         ';
 }
-
 
 /* nested callout note for culumns | image used as tittle + centered */
 .callout.callout[data-callout-metadata*="banner"] .callout-title img {
@@ -12605,12 +12309,12 @@ img[alt^="bookcover"] {
 .callout.callout[data-callout-metadata*="banner"] .callout-title h3::before {
 	display: none;
 }
- 
- /* ===支持 right left  center 语法============ */
-     /*支持两种写法
+/*End*/
+/*============ 支持 right left  center 语法 ============*/
+/*支持两种写法
     > [!note|right]
     > [!note right]
-   */
+*/
 .callout.callout:is([data-callout-metadata*="left"], [data-callout*=left]) {
 	float: left !important;
 	margin: unset;
@@ -12627,8 +12331,7 @@ img[alt^="bookcover"] {
 	float: unset  !important;
 }
 
-
-/* ===块内元素不换行============ */
+/*============ 块内元素不换行 ============*/
 .callout.callout:is([data-callout-metadata*='nowrap'],
 [data-callout*='nowrap']) {
 	max-width: unset !important;
@@ -12658,7 +12361,7 @@ img[alt^="bookcover"] {
 	max-height: 30vh;
 }
 
-/* ===块内元素网格布局============ */
+/*=============== 块内元素网格布局 ===============*/
 .callout.callout:is([data-callout-metadata*='grid'],
 [data-callout*='grid']) {
 	max-width: unset !important;
@@ -12688,8 +12391,8 @@ img[alt^="bookcover"] {
 	object-fit: cover;
 	margin: unset !important;
 }
-
-/* ===百分比宽度============ */
+/*End*/
+/*=============== 百分比宽度 ===============*/
 /*支持两种写法
 > [!note|30%]
  > [!note 30%]
@@ -12788,11 +12491,8 @@ img[alt^="bookcover"] {
 [data-callout*='10%']) {
 	width: 10%;
 }
-
-
-
-
-/******callout bookinfo*****/
+/*End*/
+/*=========== callout bookinfo ==========*/
 .callout.callout[data-callout*="bookinfo"] {
 	--callout-color: 64, 201, 75;
 	--callout-icon: '<svg t="1648743111717" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2202" ><path d="M559.936 144.064l0 745.344 42.112-51.84c6.4-7.872 18.112-9.216 26.176-3.008 1.152 0.896 2.112 1.856 3.008 3.008l0.064-0.128 38.016 46.656L669.312 115.392 559.936 144.064 559.936 144.064zM160.512 558.976C153.536 561.664 145.664 558.208 142.976 551.232 140.288 544.256 143.68 536.384 150.72 533.632c42.496-16.832 88.384-24.768 135.168-24.768 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 557.696 431.104 561.6 424 559.168 378.368 544.128 331.52 536.064 285.888 536.064 242.24 536.064 199.872 543.424 160.512 558.976L160.512 558.976zM160.512 472.064C153.536 474.752 145.664 471.36 142.976 464.32 140.288 457.344 143.68 449.408 150.72 446.72c42.496-16.896 88.384-24.832 135.168-24.832 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 470.784 431.104 474.688 424 472.32 378.368 457.216 331.52 449.152 285.888 449.152 242.24 449.152 199.872 456.448 160.512 472.064L160.512 472.064zM160.512 393.152C153.536 395.904 145.664 392.384 142.976 385.408 140.288 378.432 143.68 370.56 150.72 367.808c42.496-16.896 88.384-24.832 135.168-24.832 48.512 0 98.24 8.576 146.624 24.576 7.104 2.304 11.008 10.048 8.64 17.216C438.784 391.872 431.104 395.776 424 393.344 378.368 378.304 331.52 370.176 285.888 370.176 242.24 370.176 199.872 377.536 160.512 393.152L160.512 393.152zM160.512 310.08c-6.976 2.752-14.848-0.704-17.536-7.68C140.288 295.36 143.68 287.488 150.72 284.736c42.496-16.832 88.384-24.768 135.168-24.768 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 308.864 431.104 312.704 424 310.336 378.368 295.296 331.52 287.232 285.888 287.232 242.24 287.232 199.872 294.528 160.512 310.08L160.512 310.08zM160.512 234.816c-6.976 2.688-14.848-0.704-17.536-7.68C140.288 220.16 143.68 212.224 150.72 209.472 193.216 192.64 239.104 184.704 285.888 184.704c48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 233.536 431.104 237.44 424 235.072 378.368 220.032 331.52 211.968 285.888 211.968 242.24 211.968 199.872 219.328 160.512 234.816L160.512 234.816zM983.36 202.56C1005.888 203.776 1024 222.08 1024 244.288l0 570.048c0 22.976-19.392 41.792-43.008 41.792l-274.24 0 0 80.128-0.064 0c0 5.248-2.432 10.624-7.04 14.144-8.128 6.336-19.84 4.992-26.24-2.88l-56.768-69.376-59.776 73.472C553.536 956.608 547.712 960 541.248 960c-10.368 0-18.752-8.256-18.752-18.24l0-85.632L43.008 856.128C19.392 856.128 0 837.312 0 814.336L0 244.288C0 223.36 16.064 205.824 36.8 202.944L36.8 147.008c0-11.904 7.232-22.208 17.728-26.752C135.552 80.448 214.976 62.848 293.12 64c73.984 1.152 146.112 19.072 216.704 50.88C586.944 78.848 662.656 62.912 737.28 64c78.336 1.216 154.624 21.248 229.12 56.64 10.752 5.12 17.024 15.552 17.024 26.368l0 0L983.424 202.56 983.36 202.56zM706.752 676.288c10.112-0.512 20.352-0.704 30.528-0.576 63.232 1.088 125.12 15.36 185.792 40.96l0-551.04c-61.504-27.008-123.776-42.176-186.816-43.2-9.792-0.128-19.648 0.064-29.504 0.64L706.752 676.288 706.752 676.288zM292.16 122.496C228.736 121.536 163.776 134.976 97.088 165.312l0 550.656c66.304-28.544 131.584-41.344 196.032-40.256 63.296 1.088 125.248 15.36 185.92 40.96l0-551.04C417.408 138.624 355.2 123.456 292.16 122.496z" p-id="2203" ></path></svg>';
@@ -12832,11 +12532,8 @@ img[alt^="bookcover"] {
 	-webkit-line-clamp: 2;
 	overflow: hidden;
 }
-
-/******callout timeline*****/
-														  
- 
-
+/*End*/
+/*================== callout timeline （时间线）==================*/
 .callout.callout[data-callout="timeline"] {
 	--callout-color: 31, 172, 139;
 	--callout-icon: '<svg t="1649346326592" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2210"><path d="M384 170.666667m42.666667 0l512 0q42.666667 0 42.666666 42.666666l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666666Z" p-id="2211"></path><path d="M384 469.333333m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666667Z" p-id="2212"></path><path d="M384 768m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666666l-512 0q-42.666667 0-42.666667-42.666666l0 0q0-42.666667 42.666667-42.666667Z" p-id="2213"></path><path d="M239.835143 127.973411m15.084945 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2214"></path><path d="M239.831988 426.647696m15.084944 15.084945l60.339779 60.339778q15.084945 15.084945 0 30.16989l-60.339779 60.339778q-15.084945 15.084945-30.169889 0l-60.339779-60.339778q-15.084945-15.084945 0-30.16989l60.339779-60.339778q15.084945-15.084945 30.169889 0Z" p-id="2215"></path><path d="M239.828832 725.321982m15.084944 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2216"></path><path d="M213.333333 853.333333H85.333333a42.666667 42.666667 0 0 1-42.666666-42.666666V213.333333a42.666667 42.666667 0 0 1 42.666666-42.666666h128v85.333333H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666667v192a10.709333 10.709333 0 0 0 10.666667 10.666666H213.333333v85.333334H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666666v192a10.709333 10.709333 0 0 0 10.666667 10.666667H213.333333v85.333333z" p-id="2217"></path></svg>';
@@ -12921,9 +12618,8 @@ img[alt^="bookcover"] {
 .callout.callout[data-callout="timeline"] table {
 	font-size: 13px;
 }
-
+/*End*/
 /* callout伪看板效果*/
-
 .callout.callout[data-callout*="kanban"] {
 	--callout-color: var(--text-normal);
 	--callout-icon: layout-dashboard;
@@ -13110,8 +12806,7 @@ img[alt^="bookcover"] {
 	background-color: var(--p-kanban-card-color-1) !important;
 }
 
-
-/******callout icon*****/
+/*================== callout icon ==================*/
 .callout.callout:is([data-callout-metadata^='icon'],
 [data-callout='icon']) {
 	flex: none !important;
@@ -13153,8 +12848,8 @@ img[alt^="bookcover"] {
 	transition: ease .2s background;
 	font-size: 4em;
 }
-
-/* blockquote */
+/*End*/
+/*================== blockquote ==================*/
 :is(.markdown-preview-view,.markdown-rendered) blockquote {
 	padding: 0.5em 0.5em 0.5em 0.6em;
 	border-right-width: 0;
@@ -13181,8 +12876,6 @@ body:not(.font-family-change-to-default) .markdown-source-view {
 	font-family: var(--font-text);
 }
 
-
-
 /*Quote (> lorem ipsum ...) in edit mode with left border rendered instead of >*/
 div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
 	color: transparent !important;
@@ -13203,7 +12896,7 @@ div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
 
 
 /* ================================== */
-/* ======= Hover editor======= */
+/* =========== Hover editor=========== */
 /* ================================== */
 body.theme-light .popover.hover-popover:not(.is-loaded) {
 	box-shadow: 0px 2.7px 3.1px rgba(0, 0, 0, 0.032),
@@ -13235,10 +12928,9 @@ body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown
 	font-size: 0.95em;
 }
 
-
-/* ============ */
-/*image position*/
-/* ============ */
+/*============================================*/
+/* ============ image position ============*/
+/*==========================================*/
 img[alt$="left"],
 img[alt$="Left"],
 img[alt$="LEFT"],
@@ -13303,9 +12995,8 @@ img[alt$="inlR"] {
 	padding: 0 0 0.05em 0.05em !important;
 }
 
-
 /*=====================================*/
-/*frontmatter 边框格式*/
+/*======== frontmatter 边框格式 ========*/
 /*=====================================*/
 .frontmatter-container .frontmatter-container-header {
 	user-select: none;
@@ -13472,11 +13163,8 @@ body:not(.default-loading-page) .progress-bar-line {
 
 /*加载画面的进度条*/
 body:not(.default-loading-page) .progress-bar-subline {
-	display: none;
-						   
-																	
-}
-	   
+	display: none;														
+}   
 
 /* ================================== */
 /* =========== 顶部 titlebar ======== */
@@ -13485,7 +13173,7 @@ body:not(.default-loading-page) .progress-bar-subline {
 .titlebar {
 	border-bottom:1px solid var(--background-modifier-border2);
 }
-/*END*/
+/*End*/
 /*顶部 titlebar 按钮的样式优化*/
 .mod-windows .titlebar-button:hover {
 	background-color: var(--background-primary-alt)
@@ -13499,7 +13187,7 @@ body:not(.default-loading-page) .progress-bar-subline {
 	fill: white!important;
 	stroke: white!important
 }
-/*END*/
+/*End*/
 /*顶部 titlebar 按钮的样式优化*/
 .titlebar-text {
 	font-weight: 600;
@@ -13511,14 +13199,12 @@ body:not(.default-loading-page) .progress-bar-subline {
 body:not(.window-title-on) .titlebar-text {
 	display: none
 }
-	   
 
 .titlebar-button:hover {
 	opacity: 1;
 	transition: opacity .1s ease-out
 										 
-}
-	   
+}	   
 
 .titlebar-button {
 	opacity: .5;
@@ -13540,7 +13226,7 @@ body:not(.window-title-on) .titlebar-text {
 	display: flex;
 	align-items: center
 }
-/*END*/
+/*End*/
 
 /*历史，前进后退按钮位置样式*/
 .titlebar:hover .titlebar-button-container.mod-left {
@@ -13624,9 +13310,9 @@ div#quick-explorer .explorable-separator::before {
 	color:white !important;
 }
 
-/* ================================== */
+/* ======================================== */
 /* ============ 左侧导行栏Ribbon =========== */
-/* ================================== */
+/* ======================================== */
 /*左侧Ribbon区域的右边界线*/
 .workspace-ribbon {
 	border-right:1px solid var(--background-modifier-border2);
@@ -13641,12 +13327,12 @@ div#quick-explorer .explorable-separator::before {
 	border-right:1px solid rgba(12, 11, 11, 0.19);
 	border-left:1px solid rgba(12, 11, 11, 0.19);
 }
-/*END*/
+/*End*/
 /*左侧ribbon 区，设置工具按钮的位置*/
 .side-dock-settings {
 	padding-bottom: 0.5em
 }
-/*END*/
+/*End*/
 /*左侧ribbon 区，收起按钮位置*/
 .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn,.workspace-ribbon.mod-right .workspace-ribbon-collapse-btn {
 	opacity: 1;
@@ -13659,11 +13345,11 @@ div#quick-explorer .explorable-separator::before {
 	bottom: 1.5em !important;/*调整左侧ribbon 区域的收起按钮位置*/
 	z-index: 9
 }
-/*END*/
-/* ================================== */
-/* ======== 导航栏文件目录区域 ======= */
-/* ================================== */
-
+/*End*/
+/* ======================================== */
+/* =========== 导航栏文件目录区域 ========== */
+/* ======================================== */
+/*导航栏的高度优化*/
 .nav-header {
 	height: 39px !important;
 }
@@ -13675,7 +13361,7 @@ div#quick-explorer .explorable-separator::before {
 .nav-files-container {
 	margin-top:0.2em;
 }
-
+/*End*/
 /*优化目录树的文件夹样式*/
 .nav-folder-children .nav-folder-title-content::before {
     content: '';
@@ -13689,18 +13375,16 @@ div#quick-explorer .explorable-separator::before {
 	margin-bottom: -0.3em;
 				 
 }
-/*End*/
-
 .nav-folder-title {
 	line-height:1.8;
 }
-
+/*End*/
 /*优化目录树的展开收起箭头*/
-/*收起箭头*/
+/*文件目录树，文件夹的未展开（收起）箭头*/
 .nav-folder.is-collapsed .nav-folder-title::before {
     transform: translateX(1px) translateY(0.4em) rotate(0deg);
 }
-/*展开箭头*/
+/*文件目录树，文件夹的展开箭头*/
 .nav-folder .nav-folder-title::before {
     content: "";
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZklEQVRIie3NMRKAMAhE0eChMWXSOVzYEhv7sMvgWGRr+K+1vd9PVa/M/7E6EJEzgyyBLBICMkgYYBEIYBAYQBEKQBAaeHeXAe4+zGyWANE4BSBxGEDjEMDEwwAbD633PkrCe5/tAV92N0rtyZlOAAAAAElFTkSuQmCC);
@@ -13730,24 +13414,24 @@ body:not(.is-grabbing) .nav-folder-title:hover+,.nav-folder-children .nav-folder
     transform: translateX(-1px) translateY(0.35em) rotate(90deg);
 }
 
-/*文件目录被选中后的焦点样式*/
+/*文件目录树，文件夹被选中后的焦点样式*/
 .nav-folder .nav-folder-children .nav-file.has-focus .nav-file-title.is-active {
 	background-color: var(--icon-color-hover2) !important;
 	color:white;
 }
 /*End*
-/*优化目录名自适应文本截断*/
+/*文件目录树，优化文件夹名自适应文本截断*/
 .nav-folder .nav-folder-title-content::before{
 	white-space: nowrap;
 	text-overflow: ellipsis;
 }
 /*End*
-/*优化目录名计数器位置*/
+/*文件目录树，优化文件目录名计数器位置*/
 .nav-folder-title::after {
 	text-align: right;
 }
 /*End*
-/*导航目录鼠标hover事件的样式*/
+/*文件目录树，鼠标hover事件的样式*/
 .nav-file-title.is-active, .nav-folder-title.is-active, body:not(.is-grabbing) .nav-file-title:hover, body:not(.is-grabbing) .nav-folder-title:hover {
     background-color: var(--item-side);
     color: white;
@@ -13768,14 +13452,6 @@ body:not(.is-grabbing) .nav-folder-title:hover+,.nav-folder-children .nav-folder
 	width: 7px;
 }
 
-				  
-	
-														   
-															 
-			  
-   
-	
-  
 /*search icon 1*/
 .backlink-pane .search-result-container .collapse-icon {
 	left: 0px;
@@ -13801,26 +13477,25 @@ body:not(.is-grabbing) .nav-folder-title:hover+,.nav-folder-children .nav-folder
 }
 
 .backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon {	
-	transform: translateX(1px) translateY(1px) rotate(-90deg);	opacity: 0.5;
-			  
+	transform: translateX(1px) translateY(1px) rotate(-90deg);
+	opacity: 0.5;			  
 }
 
 /* search panel icons */
 .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon {	
-	left: 0px;	top: 7px;	margin-top: 0px;	transition: transform 20ms linear 0s;
-		  
-				 
-									  
+	left: 0px;	top: 7px;
+	margin-top: 0px;
+	transition: transform 20ms linear 0s;
 }
 
 .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon::before {
-	content : "↓";	font-size: 14px;	margin-left: 0px;	font-weight: bold;	font-family: 'Inter';	color: var(--text-accent);	transition: transform 10ms linear 0s;
-				 
-				  
-				   
-					  
-						   
-									  
+	content : "↓";
+	font-size: 14px;
+	margin-left: 0px;
+	font-weight: bold;
+	font-family: 'Inter';
+	color: var(--text-accent);	
+	transition: transform 10ms linear 0s;				  
 }
   
 .workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon svg {
@@ -13839,14 +13514,14 @@ body:not(.is-grabbing) .nav-folder-title:hover+,.nav-folder-children .nav-folder
 .workspace-tab-header-inner {
     padding: 3px 5px;
 }
-/*END*/
+/*End*/
 /*顶部导航栏的自适应布局*/
 .workspace-tabs .workspace-tab-header-container .workspace-tab-container-inner {
     flex-wrap:wrap;
 	justify-content:flex-start;
 	display: flex;
 }
-/*END*/
+/*End*/
 /*顶部导行栏下边界线*/
 .workspace-sidedock-empty-state .workspace-tabs {
 	border-bottom:1px solid var(--background-modifier-border2);
@@ -13857,21 +13532,16 @@ body:not(.is-grabbing) .nav-folder-title:hover+,.nav-folder-children .nav-folder
 }
 
 .workspace-tab-header:hover {
-    color: var(--theme-color);
+    color: var(--text-muted);
     text-align: center;
     stroke-width: 2px;
     cursor: pointer;
 }
-/*END*/
-.workspace-tab-header:hover {
-    color: var(--text-muted);
-}
-
+/*End*/
 /*顶部导行按钮栏下边界线*/
 .nav-buttons-container {
 	border-bottom:1px solid var(--background-modifier-border2);
 }
-
 .nav-action-button,.workspace-leaf-content[data-type=backlink] .nav-action-button,.workspace-leaf-content[data-type=search] .nav-action-button {
 	/*调整导航栏宽度*/
 	/*
@@ -13882,13 +13552,13 @@ body:not(.is-grabbing) .nav-folder-title:hover+,.nav-folder-children .nav-folder
 	text-align: center;
 	border-radius: var(--radius-m)
 }
-/*END*/
+/*End*/
 /*文件导航栏目录树缩进线样式*/
 body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 	border-left: 1px solid var(--background-modifier-border2);
 	margin-left:1.6em;
 }
-/*END*/
+/*End*/
 /*为文件导航栏目录树添加点击文件后条目颜色后缀，和控制点击后的颜色*/
 .nav-file-title.is-being-dragged, .nav-file-title.is-active, body:not(.is-grabbing) .nav-file-title.is-active:hover, .nav-folder-title.is-being-dragged {
     border-right: 3px solid;
@@ -13902,29 +13572,28 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 	background-color: var(--ax2);
 	color: var(--sp1);
 }
-/*END*/
+/*End*/
 /*工具图标的hover样式*/
 .graph-controls-button:hover,.nav-action-button.is-active:hover,.nav-action-button:hover,.side-dock-ribbon-action:hover,.side-dock-ribbon-tab:hover,.view-action.is-active:hover,.view-action:hover,.view-header-icon:hover,.workspace-tab-header:hover {
 	color: var(--icon-color-hover2);
 	opacity: 1;
 	transition: opacity .1s ease-in-out
 }
-
 .graph-controls-button:hover,.nav-action-button:hover,.side-dock-ribbon-action:hover,.view-action:hover,.workspace-drawer-header-icon:hover,.workspace-drawer-tab-option-item:hover,.workspace-leaf-content[data-type=backlink] .nav-action-button.is-active:hover,.workspace-leaf-content[data-type=search] .nav-action-button.is-active:hover,.workspace-tab-header-inner-icon:hover {
 	background-color: var(--background-tertiary);
 	border-radius: var(--radius-m);
 	color:var(--icon-color-hover2);
 }
-/*END*/
+/*End*/
 /*目录中文件和文件夹的不同缩进样式*/
 .nav-file-tag+ .nav-file-title-content {
-	margin-left: 0.1rem !important;
+	margin-left: -0.2rem !important;
 }
 
 .nav-file .nav-file-title .nav-file-title-content {
 	margin-left: 1.5rem;
 }
-/*END*/
+/*End*/
 /*文件目录导航中文件夹支持导行超出后截断显示*/
 .nav-folder-title-content {
 	white-space: nowrap;
@@ -13939,11 +13608,15 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 	background-color: var(--item-side);
 	font-weight: 400
 }
-/*END*/
-/* ================================== */
-/* ======= 设置（settings）菜单 ======= */
-/* ================================== */
-
+/*指向时文件类型反转颜色*//*点击激活时文件类型反转颜色*/
+.nav-file-title:hover .nav-file-tag, .nav-file-title.is-active .nav-file-tag {
+	color:var(--item-side);
+	background-color: white;
+}
+/*End*/
+/* ===================================== */
+/* ======= 设置（settings）菜单 ========== */
+/* ===================================== */
 /*设置界面导行栏的样式优化*/
 .colorful-active #calendar-container .active, .colorful-active #calendar-container .active.today, .colorful-active #calendar-container .active:hover, .colorful-active #calendar-container .day:active, .colorful-active .menu-item.selected:not(.is-disabled):not(.is-label), .colorful-active .menu-item:hover, .colorful-active .menu-item:hover:not(.is-disabled):not(.is-label), .colorful-active .nav-file-title.is-active, .colorful-active .nav-file-title.is-being-dragged, .colorful-active .nav-folder-title.is-being-dragged, .colorful-active .vertical-tab-nav-item.is-active, body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover, body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover, body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-draggedd {
     color:#000;
@@ -13966,20 +13639,20 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 .vertical-tab-nav-item.is-active{
 	border-left-color: var(--item-side) !important;
 }
-/*END*/
+/*End*/
 /*设置菜单中菜单分组的设置*/
 .is-mobile .modal .vertical-tab-header-group-title {
 	padding: 15px 20px 10px 20px;
 	letter-spacing: .05em;
 }
-/*END*/
+/*End*/
 .vertical-tab-header-group-title {
 	color: var(--tx1);
 	font-size: 16px;
 	letter-spacing: 0;
 	font-weight: 300;
 }
-/*END*/
+/*End*/
 /*设置菜单中内容设置项的分割线*/
 .setting-item {
     border-top: 0.5px solid var(--bg3);
@@ -13989,12 +13662,12 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 	background-color: var(--interactive-accent-hover2);
     color: white;
 }
-/*END*/
+/*End*/
 /*设置菜单中单选按钮背景色*/
 .checkbox-container.is-enabled {
 	background-color: var(--item-side)
 }
-/*END*/
+/*End*/
 /* ================================== */
 /* ======== 编辑视图和正文控制 ======== */
 /* ================================== */
@@ -14003,20 +13676,15 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 	font-size: .9em;
 	border-color:gray;
 }
-/*END*/
+/*End*/
 /*正文段落前面的段前距离*/
-.cm-active.cm-line {
-	padding-top: 0.4em !important;
-}
-
 .mod-cm6 .cm-editor .cm-line {
 	padding: 0
 }
-
 .cm-editor .cm-content {
 	padding-top: .5em
 }
-/*END*/
+/*End*/
 /*自定义代码注释：控制编辑视图下列表连接线颜色和位置*/
 /*自定义代码注释：控制编辑视图下列表前面黑点*/
 .markdown-source-view.mod-cm6 .cm-indent::before {
@@ -14024,18 +13692,18 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 	margin-left:-0.3em;
 	border-right: 1px solid var(--tx3);
 }
-/*END*/
+/*End*/
 /*控制无序列表前置原点的颜色*/
 ol>li::marker,ul>li::marker {
 	color: var(--text-faint)
 }
-/*END*/
+/*End*/
 /*控制icon大小*/
 body:not(.minimal-icons-off) .graph-controls-button svg,body:not(.minimal-icons-off) .nav-action-button svg,body:not(.minimal-icons-off) .view-action svg,body:not(.minimal-icons-off) .workspace-tab-header-inner-icon svg {
 	width: var(--icon-size);
 	height: var(--icon-size)
 }
-/*END*/
+/*End*/
 /*控制每一个可编辑块的与实际的内容体之间的边距*/
 .is-live-preview.is-readable-line-width .cm-embed-block>div,.is-live-preview.is-readable-line-width .cm-embed-block>mjx-container,.is-live-preview.is-readable-line-width .mod-empty {
 	max-width: var(--max-width);
@@ -14043,7 +13711,7 @@ body:not(.minimal-icons-off) .graph-controls-button svg,body:not(.minimal-icons-
 	width: var(--line-width-adaptive);
 	padding-left: var(--folding-offset)
 }
-/*END*/
+/*End*/
 /* 优化tooltip的样式 */
 .tooltip {
 	font-size: var(--font-adaptive-smaller);
@@ -14056,7 +13724,6 @@ body:not(.minimal-icons-off) .graph-controls-button svg,body:not(.minimal-icons-
 	animation: none;
 	opacity: .8
 }
-
 .tooltip.mod-left,.tooltip.mod-right {
 	transform: none;
 }
@@ -14075,8 +13742,7 @@ body:not(.minimal-icons-off) .graph-controls-button svg,body:not(.minimal-icons-
 	border-left: 5px solid gray;
 }
 /*End*/
-
-/* =========== 正文:标题 ========= */
+/* ================= 正文:标题 =============== */
 /*文件名下方的边框线*/
 .view-header {
 	border-bottom: 1.5px solid var(--ui2) !important;
@@ -14090,41 +13756,34 @@ body:not(.minimal-icons-off) .graph-controls-button svg,body:not(.minimal-icons-
 	text-decoration-color: var(--h2-color);
 }
 /*End*/
-/* === 正文标题（headings）标题下面分割线的样式控制 === */
+/*======= 正文标题（headings）标题下面分割线的样式控制 =======*/
 /*控制线的粗细和颜色样式，分割线距离标题和紧跟标题的内容块的距离*/
-
 .h1-l .markdown-reading-view h1:not(.embedded-note-title),.h1-l .mod-cm6 .cm-editor .HyperMD-header-1 {
 	border-bottom: 1.5px solid var(--ui2);
-	padding-bottom: 0.3em;
+	padding-bottom: 0.2em;
 }
-
 .h2-l .markdown-reading-view h2,.h2-l .mod-cm6 .cm-editor .HyperMD-header-2 {
 	border-bottom: 1.5px solid var(--ui2);
-	padding-bottom: 0.3em;
+	padding-bottom: 0.2em;
 }
-
 .h3-l .markdown-reading-view h3,.h3-l .mod-cm6 .cm-editor .HyperMD-header-3 {
 	border-bottom: 1.5px solid var(--ui2);
-	padding-bottom: 0.3em;
+	padding-bottom: 0.2em;
 }
-
 .h4-l .markdown-reading-view h4,.h4-l .mod-cm6 .cm-editor .HyperMD-header-4 {
 	border-bottom: 1.5px solid var(--ui2);
-	padding-bottom: 0.3em;
+	padding-bottom: 0.2em;
 }
-
 .h5-l .markdown-reading-view h5,.h5-l .mod-cm6 .cm-editor .HyperMD-header-5 {
 	border-bottom: 1.5px solid var(--ui2);
-	padding-bottom: 0.3em;
+	padding-bottom: 0.2em;
 }
-
 .h6-l .markdown-reading-view h6,.h6-l .mod-cm6 .cm-editor .HyperMD-header-6 {
 	border-bottom: 1.5px solid var(--ui2);
-	padding-bottom: 0.3em;
+	padding-bottom: 0.2em;
 }
-
 /*End*/
-/*无序列表各个层级的前缀标识*/
+/*无序列表各个层级的前缀标识 */
 /*1级实心原点*/
 .markdown-source-view .HyperMD-list-line-1 .list-bullet:after{
 	content: '\2022' !important;
@@ -14146,11 +13805,10 @@ body:not(.minimal-icons-off) .graph-controls-button svg,body:not(.minimal-icons-
 	content: '\2023' !important;
 }
 /*End*/
-
-/* ================================== */
-/* =============== 插件 ============= */
-/* ================================== */
-/*为task progress bar 添加边框，优化完全没有完成的任务，进度显示不够明显*/
+/* ======================================= */
+/* =============== 插件 ================== */
+/* ======================================= */
+/*为【task progress bar】插件的任务进度条添加边框，优化完全没有完成的任务，进度显示不够明显*/
 .cm-gutterElement .cm-heading-marker {
 	font-size:small;
 }
@@ -14158,23 +13816,99 @@ body:not(.minimal-icons-off) .graph-controls-button svg,body:not(.minimal-icons-
 	font-weight: bolder !important;
 	font-size: larger !important;
 }
-/*END*/
-/*为task progress bar 添加边框，优化完全没有完成的任务，进度显示不够明显*/
+/*End*/
+/*为【task progress bar】插件，优化颜色效果*/
 .cm-task-progress-bar .progress-bar-inline-background { 
 	border:1px solid var(--tx3);
 }
-/*END*/
-/*为task progress bar 进度条长度优化*/
+/*End*/
+/*为【task progress bar】插件，进度条长度优化*/
 .cm-task-progress-bar.with-number .progress-bar-inline-background {
-	width: 3.5rem !important;
+	width: 4.1rem !important;
 }
-/*END*/
-/*为cMenu 优化符合主题的颜色指向hover样式*/
-#cMenuModalBar.top button.cMenuCommandItem:hover {
+/*End*/
+/*End*/
+/*=================== 表格类优化 ====================*/
+/*给bookinfo 模式的表格增加指向（hover）的动画*/
+body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
+	background: var(--table-hover-raw-color);
+	color:white;
+	transform: scale(1.02);
+	transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
+}
+/*End*/
+/*=================== dataview Cards  ====================*/
+/*dataview Cards 视图下，增加指向（hover）的动画*/
+body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {	   
+	background: var(--table-hover-raw-color);
+	color:white;
+	transform: scale(1.02);
+	transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
+}
+  
+:is(.markdown-preview-view,.markdown-rendered) table tbody>tr:hover, .markdown-source-view table tbody>tr:hover {
+  background-color: var(--table-hover-raw-color);
+  color:white;
+}
+
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) table tbody>tr:hover {
+  background-color: var(--table-hover-raw-color);
+  color:white;
+}
+
+.table-view-table > tbody > tr:hover {
+	background-color: var(--text-selection);
+}
+/*End*/
+/*调整初始状态下 Cards View 的样式*/
+.cards table.dataview tbody>tr>td button img{
+    width: calc(var(--cards-width)/8 );
+    height: calc(var(--cards-width) /8);
+    margin-left: -1px;
+}
+/*End*/
+/*=================== tabel generator ====================*/
+/*tabel generator 的表头样式*/
+.cm-table-widget .ob-table-enhancer thead tr {
+	border-bottom: 1px solid black;
+}
+/*End*/
+/*=================== edit toolbar 插件 ====================*/
+/*edit toolbar 在置顶模式下边框样式*/
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic {
+	border:1px solid var(--background-modifier-border2) !important;
+	border-top: 1px solid var(--background-modifier-border2) !important;
+	border-bottom: 1px solid var(--background-modifier-border2) !important;
+	border-radius: 0 !important;
+}
+/*End*/
+/*为【edit toolbar】插件，优化工具icon指向（hover）的样式*/
+/*一级菜单*/
+.cMenuToolbarCommandItem:hover {
 	color: white !important;
 	background-color: var(--item-side) !important;
 }
-/*END*/
+/*多级菜单*/
+[class^="cMenuToolbarCommandsubItem"]:hover {
+	color: white !important;
+	background-color: var(--item-side) !important;
+	height:22px;
+	width:22px;
+}
+/*插件设置菜单的指向样式*/
+.setting-item.cMenuToolbarCommandItem:hover,.setting-item.cMenuToolbarCommandItem.cMenuToolbarCommandsubItem:hover {
+	color:white !important;
+    background-color: var(--item-side) !important;
+}
+.setting-item.cMenuToolbarCommandItem:hover .setting-item-name {
+	color:white !important;
+}
+/*End*/
+/*插件在独立窗口模式下的子菜单高度问题*/
+button[class^=cMenuToolbarCommandsubItem] >.subitem {
+	height:32px !important;
+}
+/*End*/
 /* ================================== */
 /* =========== 插件间兼容性 ========== */
 /* ================================== */
@@ -14182,69 +13916,48 @@ body:not(.minimal-icons-off) .graph-controls-button svg,body:not(.minimal-icons-
 body.css-settings-manager {
 	--header-height: 44px !important;
 }
-/*END*/
+/*End*/
 /*修复banner 和 metatable 在没有banner icon下的高度问题*/
-.obsidian-banner-wrapper .obsidian-metatable{
-	margin-top:calc(var(--banner-height) + 50px);
+/*主窗口下，有banner icon的情景下*/
+.obsidian-banner-wrapper.has-banner-icon {
+	margin-top:var(--banner-height);
 }
-   
-.has-banner-icon.obsidian-banner-wrapper .obsidian-metatable{
-	margin-top:0px;
+.has-banner-icon.obsidian-banner-wrapper .obsidian-metatable {
+	margin-top:30px;
 }
-
-.obsidian-banner-icon.cm5-banner-icon.h-left.v-center.obsidian-banner-icon .icon-box {
-	margin-top:calc(var(--banner-height) + 50px);
-}
-   
 .has-banner.cm-active.has-banner-icon.cm-line.obsidian-banner-icon .icon-box {
-	margin-top:calc(var(--banner-height) + 50px);
+	margin-top:var(--banner-height);
 }
-   
-.obsidian-banner-icon.cm6-banner-icon.h-left.v-center{
-	margin-top:10px;
+/*主窗口下，没有banner icon的情景下*/
+.obsidian-banner-wrapper .obsidian-metatable {
+	margin-top:var(--banner-height);
 }
-/*END*/
-/*给bookinfo 模式的表格增加指向（hover）的动画*/
-body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
-	background: var(--table-hover-raw-color);
-	transform: scale(1.02);	   transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
+/*弹出窗口，没有banner icon的情景下*/
+.is-popout-window .obsidian-banner-wrapper .obsidian-metatable {
+	margin-top:calc(var(--banner-height)+330px);
 }
-/*End*/
-  
-/*dataview Cards 视图下，增加指向（hover）的动画*/
-body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {	   background: var(--table-hover-raw-color);	   transform: scale(1.02);	   transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
+/*弹出窗口，有banner icon的情景下*/
+.is-popout-window .obsidian-banner-wrapper.has-banner-icon .obsidian-banner-icon.cm5-banner-icon .icon-box {
+	margin-top:calc(var(--banner-height)+300px);
 }
-  
-:is(.markdown-preview-view,.markdown-rendered) table tbody>tr:hover, .markdown-source-view table tbody>tr:hover {
-  background-color: var(--table-hover-raw-color);
-}
-
-:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) table tbody>tr:hover {
-  background-color: var(--table-hover-raw-color);
-}
-
-.table-view-table > tbody > tr:hover {
-	background-color: var(--text-selection);
+.is-popout-window .has-banner-icon.obsidian-banner-wrapper .obsidian-metatable {
+	margin-top:var(--banner-height)+30px;
 }
 /*End*/
-   
-/*修复dataview Cards 视图下，图片和grid 错位问题*/
+/*修复dataview Cards 视图下，图片和 grid 错位问题*/
 .col-alt table:not(.calendar) tr>td:nth-child(2n+2),.col-alt table:not(.calendar) tr>th:nth-child(2n+2),.row-alt table:not(.calendar) tbody>tr:nth-child(odd) {
 	/*padding-left: 10px;*/
 	background: var(--background-table-rows);
 }
  /*End*/
-
 /* ================================== */
 /* ============ 陈旧代码 ============ */
 /* ================================== */
-
 /*修复dataviewjs 在gallery视图下的和banners高度冲突
 .markdown-reading-view .block-language-dataviewjs {
 	margin-top:var(--banner-height);
 }
 /*End*/
-
 /*
 body:not(.minimal-icons-off) svg.folder {
 	-webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M83.333 75H16.667V33.333h66.667m0 -8.333h-33.333l-8.333 -8.333H16.667c-4.625 0 -8.333 3.708 -8.333 8.333v50a8.333 8.333 0 0 0 8.333 8.333h66.667a8.333 8.333 0 0 0 8.333 -8.333V33.333a8.333 8.333 0 0 0 -8.333 -8.333z"></path></svg>')
@@ -14258,7 +13971,6 @@ body:not(.minimal-icons-off) .nav-action-button[aria-label="New folder"] svg.fol
 	-webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z' /%3E%3C/svg%3E")
 }
 */
-
 /*table 内容右侧边框*/
 /*
 .col-lines .table-view-table thead>tr>th:not(:last-child),.col-lines .table-view-table>tbody>tr>td:not(:last-child),.col-lines table:not(.calendar) tbody>tr>td:not(:last-child) {
@@ -14271,7 +13983,6 @@ body:not(.minimal-icons-off) .nav-action-button[aria-label="New folder"] svg.fol
 	border: 1px solid var(--bg3)
 }
 */
-
 /*
 body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected,body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover {
 	background-color: var(--background-tertiary);
@@ -14282,7 +13993,6 @@ body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-l
 	color: var(--text-normal)
 }
 */
-
 /*
 div#quick-explorer span.explorable.selected .explorable-separator,div#quick-explorer span.explorable:hover .explorable-separator {
 	color: blue;

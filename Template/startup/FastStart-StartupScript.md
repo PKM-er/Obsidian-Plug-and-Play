@@ -10,5 +10,5 @@ fastStart = async (filename, delayInSecond) => {
 }
 await fastStart("FastStart-Plugins-ShortDelay", 4)
 await fastStart("FastStart-Plugins-LongDelay", 12)
-await fastStart("FastStart-Plugins-LongLongDelay", 60)
+await fastStart("FastStart-Plugins-LongLongDelay", 40)
 %>

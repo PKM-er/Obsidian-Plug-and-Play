@@ -1,4 +1,5 @@
 {
+  "search_support": true,
   "level_switch": true,
   "markdown": true,
   "expand_level": "5",

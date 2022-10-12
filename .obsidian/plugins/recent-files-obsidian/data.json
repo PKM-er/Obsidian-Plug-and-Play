@@ -1,208 +1,50 @@
 {
   "recentFiles": [
     {
-      "basename": "MovieList",
-      "path": "People/Movie/MovieList.md"
-    },
-    {
-      "basename": "BookList",
-      "path": "People/Book/BookList.md"
-    },
-    {
-      "basename": "BookList_image_1",
-      "path": "People/Book/素材库/BookList_image_1.gif"
-    },
-    {
-      "basename": "07、脑图和流程图（Mermaid）",
-      "path": "Obsidian-example/Example and showcase/07、脑图和流程图（Mermaid）.md"
-    },
-    {
-      "basename": "01、基本语法",
-      "path": "Obsidian-example/Example and showcase/01、基本语法.md"
-    },
-    {
-      "basename": "Readme",
-      "path": "Obsidian-example/Readme.md"
-    },
-    {
-      "basename": "Readme",
-      "path": "Readme.md"
-    },
-    {
-      "basename": "Book",
-      "path": "People/Book/Book.md"
-    },
-    {
-      "basename": "《枪炮、病菌与钢铁》",
-      "path": "People/Book/《枪炮、病菌与钢铁》.md"
-    },
-    {
-      "basename": "Movie",
-      "path": "People/Movie/Movie.md"
-    },
-    {
-      "basename": "《DK万物透视图解百科》",
-      "path": "People/Book/《DK万物透视图解百科》.md"
-    },
-    {
-      "basename": "《棉花帝国》",
-      "path": "People/Book/《棉花帝国》.md"
-    },
-    {
-      "basename": "读书笔记-平台革命 改变世界的商业模式",
-      "path": "Knowledge/Book-Note/读书笔记-平台革命 改变世界的商业模式.md"
-    },
-    {
-      "basename": "读书笔记-OKR使用手册",
-      "path": "Knowledge/Book-Note/读书笔记-OKR使用手册.md"
-    },
-    {
-      "basename": "读书笔记-麦肯锡",
-      "path": "Knowledge/Book-Note/读书笔记-麦肯锡.md"
-    },
-    {
-      "basename": "Releases 修改日志",
-      "path": "People/Obsidian-plug-and-play/Releases 修改日志.md"
-    },
-    {
-      "basename": "外卖行业研究",
-      "path": "Knowledge/产品/餐饮、预制菜、外卖/外卖行业研究.md"
-    },
-    {
-      "basename": "中食",
-      "path": "Knowledge/产品/餐饮、预制菜、外卖/中食.md"
-    },
-    {
-      "basename": "社零",
-      "path": "Knowledge/产品/餐饮、预制菜、外卖/社零.md"
+      "basename": "保障房 To-Do",
+      "path": "Works/58-房产-租房/01、保障性租赁住房/保障房 To-Do.md"
     },
     {
       "basename": "《跟动物交换身体》",
       "path": "People/Book/《跟动物交换身体》.md"
     },
     {
-      "basename": "技能和学习",
-      "path": "Knowledge/产品/技能和学习.md"
+      "basename": "人生切割术 第一季 Severance Season 1",
+      "path": "People/Movie/人生切割术 第一季 Severance Season 1.md"
     },
     {
-      "basename": "⏰DashBoard",
-      "path": "📆EveryDay/⏰DashBoard.md"
+      "basename": "《孤独与陪伴》",
+      "path": "People/Book/《孤独与陪伴》.md"
     },
     {
       "basename": "❓语法帮助",
       "path": "📆EveryDay/❓语法帮助.md"
     },
     {
-      "basename": "2022.8 问题编号：4559172",
-      "path": "Works/58-房产-租房/02、58-房产-杂务/公共事务/线上问题/2022.8 问题编号：4559172.md"
+      "basename": "FastStart-StartupScript",
+      "path": "Template/startup/FastStart-StartupScript.md"
     },
     {
-      "basename": "2022.6 租金估价点击跳转异常",
-      "path": "Works/58-房产-租房/02、58-房产-杂务/公共事务/线上问题/2022.6 租金估价点击跳转异常.md"
+      "basename": "FastStart-GenerateListOfInstalledPlugins",
+      "path": "Template/startup/FastStart-GenerateListOfInstalledPlugins.md"
     },
     {
-      "basename": "2022.7 问题编号：4432699",
-      "path": "Works/58-房产-租房/02、58-房产-杂务/公共事务/线上问题/2022.7 问题编号：4432699.md"
+      "basename": "FastStart-Plugins-LongLongDelay",
+      "path": "Template/startup/FastStart-Plugins-LongLongDelay.md"
     },
     {
-      "basename": "2022.7 问题编号：4276139",
-      "path": "Works/58-房产-租房/02、58-房产-杂务/公共事务/线上问题/2022.7 问题编号：4276139.md"
+      "basename": "FastStart-Plugins-ShortDelay",
+      "path": "Template/startup/FastStart-Plugins-ShortDelay.md"
     },
     {
-      "basename": "深化服务",
-      "path": "Works/58-房产-租房/跨团队协作/深化服务.md"
+      "basename": "FastStart-Plugins-LongDelay",
+      "path": "Template/startup/FastStart-Plugins-LongDelay.md"
     },
     {
-      "basename": "成都【城市+产品】协同 To-Do",
-      "path": "Works/58-房产-租房/跨团队协作/成都【城市+产品】协同 To-Do.md"
-    },
-    {
-      "basename": "成都【城市+产品】协同 To-Do_image_3",
-      "path": "Works/58-房产-租房/跨团队协作/素材库/成都【城市+产品】协同 To-Do_image_3.png"
-    },
-    {
-      "basename": "成都【城市+产品】协同 To-Do_image_2",
-      "path": "Works/58-房产-租房/跨团队协作/素材库/成都【城市+产品】协同 To-Do_image_2.png"
-    },
-    {
-      "basename": "成都【城市+产品】协同 To-Do_image_1",
-      "path": "Works/58-房产-租房/跨团队协作/素材库/成都【城市+产品】协同 To-Do_image_1.png"
-    },
-    {
-      "basename": "Obsidian 分享",
-      "path": "Works/58-房产-租房/租房分享/Obsidian 分享.md"
-    },
-    {
-      "basename": "租房历史（技术视角 从2019年起）",
-      "path": "Works/58-房产-租房/02、58-房产-杂务/租房历史（技术视角 从2019年起）.md"
-    },
-    {
-      "basename": "第三次生日会",
-      "path": "Works/58-房产-租房/租房分享/第三次生日会.md"
-    },
-    {
-      "basename": "冷餐预定",
-      "path": "Works/58-房产-租房/租房分享/冷餐预定.md"
-    },
-    {
-      "basename": "画像应用与关注",
-      "path": "Works/58-房产-租房/04、数据中台、标签体系/画像应用与关注.md"
-    },
-    {
-      "basename": "落地计划",
-      "path": "Works/58-房产-租房/04、数据中台、标签体系/落地计划.md"
-    },
-    {
-      "basename": "画像应用实例",
-      "path": "Works/58-房产-租房/04、数据中台、标签体系/画像应用实例.md"
-    },
-    {
-      "basename": "画像每周 To-Do",
-      "path": "Works/58-房产-租房/04、数据中台、标签体系/画像每周 To-Do.md"
-    },
-    {
-      "basename": "业务学习",
-      "path": "Works/58-房产-租房/跨团队协作/业务学习.md"
-    },
-    {
-      "basename": "短期生产函数",
-      "path": "Knowledge/经济学/生产论/短期生产函数.md"
-    },
-    {
-      "basename": "厂商",
-      "path": "Knowledge/经济学/生产论/厂商.md"
-    },
-    {
-      "basename": "2022.08.01 北京恢复投诉和管控电话",
-      "path": "Works/58-房产-租房/02、58-房产-杂务/公共事务/2022.08.01 北京恢复投诉和管控电话.md"
-    },
-    {
-      "basename": "2022.07 北京重复房源治理（政府反馈）",
-      "path": "Works/58-房产-租房/02、58-房产-杂务/公共事务/2022.07 北京重复房源治理（政府反馈）.md"
-    },
-    {
-      "basename": "难点",
-      "path": "Works/58-房产-租房/04、数据中台、标签体系/难点.md"
-    },
-    {
-      "basename": "需求",
-      "path": "Knowledge/经济学/需求、供给、均衡价格/需求.md"
-    },
-    {
-      "basename": "微观经济学的特点",
-      "path": "Knowledge/经济学/需求、供给、均衡价格/微观经济学的特点.md"
-    },
-    {
-      "basename": "均衡价格——供求曲线的共同作用",
-      "path": "Knowledge/经济学/需求、供给、均衡价格/均衡价格——供求曲线的共同作用.md"
-    },
-    {
-      "basename": "经济模型、静态、比较静态和动态分析",
-      "path": "Knowledge/经济学/需求、供给、均衡价格/经济模型、静态、比较静态和动态分析.md"
+      "basename": "洛基 第一季 Loki Season 1",
+      "path": "People/Movie/洛基 第一季 Loki Season 1.md"
     }
   ],
-  "omittedPaths": [
-    ""
-  ],
+  "omittedPaths": [],
   "maxLength": null
 }

@@ -3,7 +3,7 @@
   "realTimeUpdateInterval": 1000,
   "realTimeAttemptsToProcess": 3,
   "cleanContent": true,
-  "showNotifications": false,
+  "showNotifications": true,
   "include": ".*\\.md",
   "mediaRootDirectory": "media"
 }

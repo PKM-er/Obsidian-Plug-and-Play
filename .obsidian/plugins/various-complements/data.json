@@ -28,7 +28,7 @@
   "excludeCurrentVaultPathPrefixPatterns": "",
   "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
   "enableCustomDictionaryComplement": true,
-  "customDictionaryPaths": "Obisdian-learning\\var complete\\count_1w.txt\nObisdian-learning\\var complete\\THUOCL_animal.txt\nObisdian-learning\\var complete\\THUOCL_caijing.txt\nObisdian-learning\\var complete\\THUOCL_car.txt\nObisdian-learning\\var complete\\THUOCL_chengyu.txt\nObisdian-learning\\var complete\\THUOCL_diming.txt\nObisdian-learning\\var complete\\THUOCL_food.txt\nObisdian-learning\\var complete\\!dict.md\nObisdian-learning\\var complete\\THUOCL_IT.txt\nObisdian-learning\\var complete\\THUOCL_law.txt\nObisdian-learning\\var complete\\THUOCL_lishimingren.txt\nObisdian-learning\\var complete\\THUOCL_medical.txt\nObisdian-learning\\var complete\\THUOCL_poem.txt",
+  "customDictionaryPaths": "Knowledge\\Obisdian-learning\\var complete\\count_1w.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_animal.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_caijing.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_car.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_chengyu.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_diming.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_food.txt\nKnowledge\\Obisdian-learning\\var complete\\!dict.md\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_IT.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_law.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_lishimingren.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_medical.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_poem.txt",
   "columnDelimiter": "Pipe",
   "customDictionaryWordRegexPattern": "",
   "delimiterToHideSuggestion": "+=",
@@ -43,35 +43,59 @@
   "insertCommaAfterFrontMatterCompletion": false,
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
-    "1": {
-      "1": {
-        "internalLink": {
-          "count": 1,
-          "lastUpdated": 1658841265442
-        }
-      }
-    },
-    "这个之前读取的是信息治理和信安的相关治理消息，不知道这个逻辑是否已经没有了？": {
-      "这个之前读取的是信息治理和信安的相关治理消息，不知道这个逻辑是否已经没有了？": {
+    "保障性租赁住房的定义保租房和公租房等区别": {
+      "保障性租赁住房的定义保租房和公租房等区别": {
         "currentFile": {
           "count": 1,
-          "lastUpdated": 1659002451051
+          "lastUpdated": 1663309107146
         }
       }
     },
-    "preview": {
-      "preview": {
-        "frontMatter": {
+    "3、数量：本质上对数量没有要求，越多越好，但是如果用户对加投有顾虑，建议保底100（用户代理运营": {
+      "3、数量：本质上对数量没有要求，越多越好，但是如果用户对加投有顾虑，建议保底100（用户代理运营": {
+        "currentFile": {
           "count": 1,
-          "lastUpdated": 1660701466046
+          "lastUpdated": 1663642270991
         }
       }
     },
-    "co-warning": {
-      "co-warning": {
+    "notification": {
+      "notification": {
         "customDictionary": {
           "count": 1,
-          "lastUpdated": 1660703002138
+          "lastUpdated": 1664519422720
+        }
+      }
+    },
+    "的样式控制": {
+      "的样式控制": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1664519922444
+        }
+      }
+    },
+    "fsdfsdfsdf": {
+      "fsdfsdfsdf": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1664534840595
+        }
+      }
+    },
+    "Sp": {
+      "Sp": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1665017242692
+        }
+      }
+    },
+    "📚": {
+      "📚": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1665547570924
         }
       }
     }

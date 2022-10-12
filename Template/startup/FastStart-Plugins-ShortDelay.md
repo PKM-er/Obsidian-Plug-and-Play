@@ -1,14 +1,6 @@
-table-editor-obsidian
-markdown-table-editor
 quickadd
-table-extended
 obsidian-advanced-uri
 obsidian-kanban
-recent-files-obsidian
 obsidian-quiet-outline
 obsidian-image-toolkit
-lapel
 obsidian-remember-file-state
-obsidian-rich-links
-obsidian-booknote-plugin
-cmenu-plugin
