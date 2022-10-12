@@ -190,57 +190,39 @@ v0.2.1
 #### 4.4.3. 直接进行搜索
 直接在 Obsidian 内完成对某个关键词的搜索，【search-on-internet】
 
-
-
-
-Active note to window title：在状态栏显示标题
-
-Remember cursor position：记住鼠标位置（长文浏览优化）
-
-Kanban：看板功能 [[看板插件（Kanba插件介绍）by 软通达]]
-
-Style Settings：主题修改 [[简易自定义OB主题（Style settings插件介绍） by 软通达]]
-
-excalidraw：无限画布功能 [[Obsidian 插件之 Excalidraw by Bon]]
-
-better footnote： 悬浮显示脚注
-
-footnote： 迅速插入脚注
-
-Auto pair chinese symbol：中文符号自动成对
-
-Advanced tables和Table extended：表格增强
-
-Get info：提供简单的卡片信息
-
-其他人有提议但没加入：
-
-local images：批量下载全库或本页面的网络图片至attachment
-
 ### 4.5. 样式：
 #### 4.5.1. 主题
 整体基于Minimal 主题为原型；
 原因：这个主题支持较为全面，且样式更简约，符合整个"保持纯粹的"的理念
 
 #### 4.5.2. 闪亮的新东西
+
 集成了蓝色托帕石，一些比较不错的设计
+
 1、feature：启动动画功能，现在你可以选择任意的图片，或者动图来个性化启动了。
+
 2、feature：Dataview Cards，主要用于生成基于dataview查询的图片墙样式，你可以将你的书籍、电影都放到这里面，而且不需要单独的维护他。
+
 3、feature：编辑代码块按钮调整，原版不是很好点击，所以修改了一个样式版本
+
 4、feature：增加callouts语法，段落自动缩进写法。以下表达都是可以的
     > [!note|indent]
     > [!note indent]
+    
 5、feature：增加callouts语法，支持三种对齐方式。语法如下：
     > [!note|left] 、> [!note|center] 、> [!note|right]
 	语法格式如下，以下两种方式均可：
 	> [!note|right]
        > [!note right]
+       
 6、feature：增加callouts语法，支持自定义百分比宽度，每5%一个区间。以下表达都是可以的
 	> [!note|30%]
 	> [!note 30%]
 7、feature：增加callouts语法，新类型[bookinfo]，用于生成豆瓣读书信息的页面，当然也可以用在别的地方
+
 8、feature：增加图片的位置属性，支持自定义图片的对齐方式。包含对齐，方式和环绕效果
 
+![image](https://user-images.githubusercontent.com/241007/195344509-de2df934-be6a-48f8-8ab1-a719c4983611.png)
 
-![0f0df58f05e8652883b96e1c275044b|150](https://user-images.githubusercontent.com/241007/195344028-42dfe6f5-35eb-4eec-9046-735cdbb76f19.jpg)
+
 
