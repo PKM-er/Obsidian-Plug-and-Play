@@ -21,22 +21,22 @@ body{
     --blockquote-border-thickness:1px;
     --blockquote-border-color:var(--quote-opening-modifier);
     --embed-block-shadow-hover:none;
-    --font-ui-smaller:12px;
+    --font-ui-smaller:14px;
     --normal-weight:400;
     --bold-weight:600;
     --link-weight:inherit;
-    --h1-size:1.125em;
-    --h2-size:1.05em;
-    --h3-size:1em;
-    --h4-size:0.90em;
-    --h5-size:0.85em;
-    --h6-size:0.85em;
+    --h1-size:1.4em;
+    --h2-size:1.3em;
+    --h3-size:1.3em;
+    --h4-size:1.2em;
+    --h5-size:1.1em;
+    --h6-size:1.1em;
     --h1-weight:600;
     --h2-weight:600;
-    --h3-weight:500;
-    --h4-weight:500;
-    --h5-weight:500;
-    --h6-weight:400;
+    --h3-weight:600;
+    --h4-weight:600;
+    --h5-weight:600;
+    --h6-weight:600;
     --h1-variant:normal;
     --h2-variant:normal;
     --h3-variant:normal;
@@ -51,7 +51,7 @@ body{
     --h6-style:normal;
     --line-width:40rem;
     --line-height:1.5;
-    --max-width:88%;
+    --max-width:85%;
     --max-col-width:18em;
     --icon-muted:0.5;
     --border-width:1px;
@@ -68,7 +68,16 @@ body{
     --tag-border-width:1px;
     --top-left-padding-y:0px;
     --image-muted:0.7;
-    --spacing-p:0.75em
+    --spacing-p:0.75em;
+    --text-headings:#0e29f1;
+    --h1-color:var(--text-headings);
+    --h2-color:var(--text-headings);
+    --h3-color:var(--text-headings);
+    --h4-color:var(--text-headings);
+    --h5-color:var(--text-headings);
+    --h6-color:var(--text-headings);
+    --item-side:#007aff;
+	--table-hover-raw-color:#007aff;
 }
 .mod-macos{
     --top-left-padding-y:24px
@@ -88,9 +97,6 @@ body{
     --blue:#6c99bb;
     --purple:#9e86c8;
     --pink:#b05279;
-	--item-side:#007aff;
-	--table-hover-raw-color:#007aff;
-    --text-headings:#0e29f1;
 }
 .theme-light,.theme-light.minimal-default-light,body .excalidraw{
     --bg1:white;
@@ -100,6 +106,7 @@ body{
     --ui2:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 12%) );
     --ui3:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 15%) );
 	--ui4:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 20%) );
+    --ui5:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 30%) );
     --tx1:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 90%) );
     --tx2:hsl( var(--base-h), calc(var(--base-s) - 20%), calc(var(--base-l) - 45%) );
     --tx3:hsl( var(--base-h), calc(var(--base-s) - 10%), calc(var(--base-l) - 25%) );
@@ -174,7 +181,7 @@ body{
     --background-primary-alt:var(--bg2);
     --background-secondary:var(--bg2);
     --background-secondary-alt:var(--bg1);
-    --background-table-rows:var(--bg2);
+    --background-table-rows:var(--white);
     --code-normal:var(--tx1);
     --divider-color:var(--ui1);
     --frame-divider-color:var(--ui1);
@@ -205,7 +212,7 @@ body{
     --scrollbar-bg:transparent;
     --scrollbar-thumb-bg:var(--ui);
     --tab-text-color-focused-active:var(--tx1);
-    --tab-outline-color:var(--ui1);
+    --tab-outline-color:var(--ui5);
     --text-accent-hover:var(--ax2);
     --text-accent:var(--ax1);
     --text-blockquote:var(--tx2);
@@ -884,8 +891,7 @@ body:not(.hider-scrollbars).styled-scrollbars .mod-left-split .workspace-tabs ::
     color:var(--text-faint)
 }
 .is-live-preview.is-readable-line-width>.cm-callout .callout{
-   
-max-width:var(--max-width);
+    max-width:var(--max-width);
     margin:0 auto
 }
 body{
@@ -6876,18 +6882,16 @@ opacity: 1;
      height: var(--icon-size);
      margin: 0!important 
 }
- .markdown-source-view.mod-cm6 .edit-block-button {
-     cursor: var(--cursor);
-     color: var(--text-faint);
-     background-color: var(--background-primary);
-     top: 0;
-     right: auto;
-     left: 0;
-    
-opacity: 0;
-     transition:
-opacity .2s;
-     padding: 4px 4px 4px 9px 
+.markdown-source-view.mod-cm6 .edit-block-button {
+    cursor: var(--cursor);
+    color: var(--text-faint);
+    background-color: var(--background-primary);
+    top: 0;
+    right: auto;
+    left: 0;
+    opacity: 0;
+    transition:opacity .2s;
+    padding: 4px 4px 4px 9px 
 }
  .is-live-preview:not(.is-readable-line-width) .cm-embed-block>.edit-block-button {
      width: 50px!important;
@@ -6900,9 +6904,8 @@ opacity .2s;
      background-color: var(--background-primary);
      color: var(--text-muted) 
 }
- .markdown-source-view.mod-cm6 .edit-block-button:hover svg {
-    
-opacity: 1 
+.markdown-source-view.mod-cm6 .edit-block-button:hover svg {
+    opacity: 1 
 }
 /*End*/
 /*============ 段落自动缩进 ============*/
@@ -6921,90 +6924,85 @@ opacity: 1
      content: '\A ';
 }
 /* nested callout note for culumns | image used as tittle + centered */
- .callout.callout[data-callout-metadata*="banner"] .callout-title img {
-     border-radius: 1em;
-     margin: auto;
-     display: block;
+.callout.callout[data-callout-metadata*="banner"] .callout-title img {
+    border-radius: 1em;
+    margin: auto;
+    display: block;
 }
- .callout.callout[data-callout-metadata*="banner"] .callout-fold {
-     display: none;
+.callout.callout[data-callout-metadata*="banner"] .callout-fold {
+    display: none;
 }
- .callout.callout[data-callout-metadata*="banner"] .callout-icon {
-     display: none;
+.callout.callout[data-callout-metadata*="banner"] .callout-icon {
+    display: none;
 }
- .callout.callout[data-callout-metadata*="banner"] .callout-title h3 {
-     text-align: center;
-     line-height: 2;
+.callout.callout[data-callout-metadata*="banner"] .callout-title h3 {
+    text-align: center;
+    line-height: 2;
 }
- .callout.callout[data-callout-metadata*="banner"] .callout-title h3::before {
-     display: none;
+.callout.callout[data-callout-metadata*="banner"] .callout-title h3::before {
+    display: none;
 }
 /*End*/
 /*============ 支持 right left center 语法 ============*/
 /*支持两种写法 > [!note|right] > [!note right] */
- .callout.callout:is([data-callout-metadata*="left"], [data-callout*=left]) {
-     float: left !important;
-     margin: unset;
+.callout.callout:is([data-callout-metadata*="left"], [data-callout*=left]) {
+    float: left !important;
+    margin: unset;
 }
- .callout.callout:is([data-callout-metadata*="right"], [data-callout*=right]) {
-     float: right !important;
-     margin: unset;
+.callout.callout:is([data-callout-metadata*="right"], [data-callout*=right]) {
+    float: right !important;
+    margin: unset;
 }
- .callout.callout:is([data-callout-metadata*="center"], [data-callout*=center]) {
-     display: block;
-     margin: auto;
-     float: unset !important;
+.callout.callout:is([data-callout-metadata*="center"], [data-callout*=center]) {
+    display: block;
+    margin: auto;
+    float: unset !important;
 }
 /*============ 块内元素不换行 ============*/
- .callout.callout:is([data-callout-metadata*='nowrap'], [data-callout*='nowrap']) {
-    
-max-width: unset !important;
-     white-space: nowrap;
-     overflow: hidden;
+.callout.callout:is([data-callout-metadata*='nowrap'], [data-callout*='nowrap']) {
+    max-width: unset !important;
+    white-space: nowrap;
+    overflow: hidden;
 }
- .callout.callout:is([data-callout-metadata*='nowrap'], [data-callout*='nowrap']) .callout-content {
-     overflow-x: auto!important;
+.callout.callout:is([data-callout-metadata*='nowrap'], [data-callout*='nowrap']) .callout-content {
+    overflow-x: auto!important;
 }
- .callout.callout:is([data-callout-metadata*='nowrap'], [data-callout*='nowrap']) .callout-content p {
-     display: flex;
-     align-items: center;
-     margin-block-start: 0;
-     margin-block-end: 0;
+.callout.callout:is([data-callout-metadata*='nowrap'], [data-callout*='nowrap']) .callout-content p {
+    display: flex;
+    align-items: center;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
- .callout.callout:is([data-callout-metadata*='nowrap'], [data-callout*='nowrap']) .callout-content img {
-    
-max-width: unset !important;
-     display: table-cell;
-     vertical-align: middle;
-     padding: 1px;
-    
-max-height: 30vh;
+.callout.callout:is([data-callout-metadata*='nowrap'], [data-callout*='nowrap']) .callout-content img {
+    max-width: unset !important;
+    display: table-cell;
+    vertical-align: middle;
+    padding: 1px;
+    max-height: 30vh;
 }
 /*=============== 块内元素网格布局 ===============*/
- .callout.callout:is([data-callout-metadata*='grid'], [data-callout*='grid']) {
-    
-max-width: unset !important;
-     white-space: nowrap;
-     overflow: hidden;
+.callout.callout:is([data-callout-metadata*='grid'], [data-callout*='grid']) {
+    max-width: unset !important;
+    white-space: nowrap;
+    overflow: hidden;
 }
- .callout.callout:is([data-callout-metadata*='grid'], [data-callout*='grid']) .callout-content {
-     overflow-x: auto!important;
+.callout.callout:is([data-callout-metadata*='grid'], [data-callout*='grid']) .callout-content {
+    overflow-x: auto!important;
 }
- .callout.callout:is([data-callout-metadata*='grid'], [data-callout*='grid']) .callout-content p {
-     display: grid;
-     grid-template-columns: repeat(auto-fit,
-minmax(0, auto));
-     grid-gap: 0px;
+.callout.callout:is([data-callout-metadata*='grid'], [data-callout*='grid']) .callout-content p {
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(0, auto));
+    grid-gap: 0px;
     /*控制callouts下表格中单元格的间距*/
-     margin: 0;
-     margin-top: 5px;
+    margin: 0;
+    margin-top: 5px;
 }
- .callout.callout:is([data-callout-metadata*='grid'], [data-callout*='grid']) .callout-content img {
-     display: flex;
-     flex: 1;
-     align-self: stretch;
-     object-fit: cover;
-     margin: unset !important;
+.callout.callout:is([data-callout-metadata*='grid'], [data-callout*='grid']) .callout-content img {
+    display: flex;
+    flex: 1;
+    align-self: stretch;
+    object-fit: cover;
+    margin: unset !important;
 }
 /*End*/
 /*=============== 百分比宽度 ===============*/
@@ -7068,25 +7066,24 @@ minmax(0, auto));
 }
 /*End*/
 /*=========== callout bookinfo ==========*/
- .callout.callout[data-callout*="bookinfo"] {
-     --callout-color: 64, 201, 75;
-     --callout-icon: '<svg t="1648743111717" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2202" ><path d="M559.936 144.064l0 745.344 42.112-51.84c6.4-7.872 18.112-9.216 26.176-3.008 1.152 0.896 2.112 1.856 3.008 3.008l0.064-0.128 38.016 46.656L669.312 115.392 559.936 144.064 559.936 144.064zM160.512 558.976C153.536 561.664 145.664 558.208 142.976 551.232 140.288 544.256 143.68 536.384 150.72 533.632c42.496-16.832 88.384-24.768 135.168-24.768 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 557.696 431.104 561.6 424 559.168 378.368 544.128 331.52 536.064 285.888 536.064 242.24 536.064 199.872 543.424 160.512 558.976L160.512 558.976zM160.512 472.064C153.536 474.752 145.664 471.36 142.976 464.32 140.288 457.344 143.68 449.408 150.72 446.72c42.496-16.896 88.384-24.832 135.168-24.832 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 470.784 431.104 474.688 424 472.32 378.368 457.216 331.52 449.152 285.888 449.152 242.24 449.152 199.872 456.448 160.512 472.064L160.512 472.064zM160.512 393.152C153.536 395.904 145.664 392.384 142.976 385.408 140.288 378.432 143.68 370.56 150.72 367.808c42.496-16.896 88.384-24.832 135.168-24.832 48.512 0 98.24 8.576 146.624 24.576 7.104 2.304 11.008 10.048 8.64 17.216C438.784 391.872 431.104 395.776 424 393.344 378.368 378.304 331.52 370.176 285.888 370.176 242.24 370.176 199.872 377.536 160.512 393.152L160.512 393.152zM160.512 310.08c-6.976 2.752-14.848-0.704-17.536-7.68C140.288 295.36 143.68 287.488 150.72 284.736c42.496-16.832 88.384-24.768 135.168-24.768 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 308.864 431.104 312.704 424 310.336 378.368 295.296 331.52 287.232 285.888 287.232 242.24 287.232 199.872 294.528 160.512 310.08L160.512 310.08zM160.512 234.816c-6.976 2.688-14.848-0.704-17.536-7.68C140.288 220.16 143.68 212.224 150.72 209.472 193.216 192.64 239.104 184.704 285.888 184.704c48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 233.536 431.104 237.44 424 235.072 378.368 220.032 331.52 211.968 285.888 211.968 242.24 211.968 199.872 219.328 160.512 234.816L160.512 234.816zM983.36 202.56C1005.888 203.776 1024 222.08 1024 244.288l0 570.048c0 22.976-19.392 41.792-43.008 41.792l-274.24 0 0 80.128-0.064 0c0 5.248-2.432 10.624-7.04 14.144-8.128 6.336-19.84 4.992-26.24-2.88l-56.768-69.376-59.776 73.472C553.536 956.608 547.712 960 541.248 960c-10.368 0-18.752-8.256-18.752-18.24l0-85.632L43.008 856.128C19.392 856.128 0 837.312 0 814.336L0 244.288C0 223.36 16.064 205.824 36.8 202.944L36.8 147.008c0-11.904 7.232-22.208 17.728-26.752C135.552 80.448 214.976 62.848 293.12 64c73.984 1.152 146.112 19.072 216.704 50.88C586.944 78.848 662.656 62.912 737.28 64c78.336 1.216 154.624 21.248 229.12 56.64 10.752 5.12 17.024 15.552 17.024 26.368l0 0L983.424 202.56 983.36 202.56zM706.752 676.288c10.112-0.512 20.352-0.704 30.528-0.576 63.232 1.088 125.12 15.36 185.792 40.96l0-551.04c-61.504-27.008-123.776-42.176-186.816-43.2-9.792-0.128-19.648 0.064-29.504 0.64L706.752 676.288 706.752 676.288zM292.16 122.496C228.736 121.536 163.776 134.976 97.088 165.312l0 550.656c66.304-28.544 131.584-41.344 196.032-40.256 63.296 1.088 125.248 15.36 185.92 40.96l0-551.04C417.408 138.624 355.2 123.456 292.16 122.496z" p-id="2203" ></path></svg>';
-     background: transparent;
-     border: 0;
-     width: auto;
-     padding: 0;
+.callout.callout[data-callout*="bookinfo"] {
+    --callout-color: 64, 201, 75;
+    --callout-icon: '<svg t="1648743111717" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2202" ><path d="M559.936 144.064l0 745.344 42.112-51.84c6.4-7.872 18.112-9.216 26.176-3.008 1.152 0.896 2.112 1.856 3.008 3.008l0.064-0.128 38.016 46.656L669.312 115.392 559.936 144.064 559.936 144.064zM160.512 558.976C153.536 561.664 145.664 558.208 142.976 551.232 140.288 544.256 143.68 536.384 150.72 533.632c42.496-16.832 88.384-24.768 135.168-24.768 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 557.696 431.104 561.6 424 559.168 378.368 544.128 331.52 536.064 285.888 536.064 242.24 536.064 199.872 543.424 160.512 558.976L160.512 558.976zM160.512 472.064C153.536 474.752 145.664 471.36 142.976 464.32 140.288 457.344 143.68 449.408 150.72 446.72c42.496-16.896 88.384-24.832 135.168-24.832 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 470.784 431.104 474.688 424 472.32 378.368 457.216 331.52 449.152 285.888 449.152 242.24 449.152 199.872 456.448 160.512 472.064L160.512 472.064zM160.512 393.152C153.536 395.904 145.664 392.384 142.976 385.408 140.288 378.432 143.68 370.56 150.72 367.808c42.496-16.896 88.384-24.832 135.168-24.832 48.512 0 98.24 8.576 146.624 24.576 7.104 2.304 11.008 10.048 8.64 17.216C438.784 391.872 431.104 395.776 424 393.344 378.368 378.304 331.52 370.176 285.888 370.176 242.24 370.176 199.872 377.536 160.512 393.152L160.512 393.152zM160.512 310.08c-6.976 2.752-14.848-0.704-17.536-7.68C140.288 295.36 143.68 287.488 150.72 284.736c42.496-16.832 88.384-24.768 135.168-24.768 48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 308.864 431.104 312.704 424 310.336 378.368 295.296 331.52 287.232 285.888 287.232 242.24 287.232 199.872 294.528 160.512 310.08L160.512 310.08zM160.512 234.816c-6.976 2.688-14.848-0.704-17.536-7.68C140.288 220.16 143.68 212.224 150.72 209.472 193.216 192.64 239.104 184.704 285.888 184.704c48.512 0 98.24 8.512 146.624 24.512 7.104 2.368 11.008 10.048 8.64 17.216C438.784 233.536 431.104 237.44 424 235.072 378.368 220.032 331.52 211.968 285.888 211.968 242.24 211.968 199.872 219.328 160.512 234.816L160.512 234.816zM983.36 202.56C1005.888 203.776 1024 222.08 1024 244.288l0 570.048c0 22.976-19.392 41.792-43.008 41.792l-274.24 0 0 80.128-0.064 0c0 5.248-2.432 10.624-7.04 14.144-8.128 6.336-19.84 4.992-26.24-2.88l-56.768-69.376-59.776 73.472C553.536 956.608 547.712 960 541.248 960c-10.368 0-18.752-8.256-18.752-18.24l0-85.632L43.008 856.128C19.392 856.128 0 837.312 0 814.336L0 244.288C0 223.36 16.064 205.824 36.8 202.944L36.8 147.008c0-11.904 7.232-22.208 17.728-26.752C135.552 80.448 214.976 62.848 293.12 64c73.984 1.152 146.112 19.072 216.704 50.88C586.944 78.848 662.656 62.912 737.28 64c78.336 1.216 154.624 21.248 229.12 56.64 10.752 5.12 17.024 15.552 17.024 26.368l0 0L983.424 202.56 983.36 202.56zM706.752 676.288c10.112-0.512 20.352-0.704 30.528-0.576 63.232 1.088 125.12 15.36 185.792 40.96l0-551.04c-61.504-27.008-123.776-42.176-186.816-43.2-9.792-0.128-19.648 0.064-29.504 0.64L706.752 676.288 706.752 676.288zM292.16 122.496C228.736 121.536 163.776 134.976 97.088 165.312l0 550.656c66.304-28.544 131.584-41.344 196.032-40.256 63.296 1.088 125.248 15.36 185.92 40.96l0-551.04C417.408 138.624 355.2 123.456 292.16 122.496z" p-id="2203" ></path></svg>';
+    background: transparent;
+    border: 0;
+    width: auto;
+    padding: 0;
 }
- .callout.callout[data-callout*=bookinfo] .callout-title {
-     text-align: center;
-     margin-top: 5 px;
-     display: flex;
-     justify-content: space-between;
+.callout.callout[data-callout*=bookinfo] .callout-title {
+    text-align: center;
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
 }
 /*修复 bookinfo 的样式*/
 .callout.callout[data-callout*=bookinfo] .callout-content {
-     margin-top: 5px;
-     display: flex;
-     justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .callout.callout[data-callout*=bookinfo] .callout-content table {
      width: 68%;
@@ -7105,81 +7102,80 @@ minmax(0, auto));
 /*End*/
 /*================== callout timeline （时间线） =================*/
  .callout.callout[data-callout="timeline"] {
-     --callout-color: 31, 172, 139;
-     --callout-icon: '<svg t="1649346326592" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2210"><path d="M384 170.666667m42.666667 0l512 0q42.666667 0 42.666666 42.666666l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666666Z" p-id="2211"></path><path d="M384 469.333333m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666667Z" p-id="2212"></path><path d="M384 768m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666666l-512 0q-42.666667 0-42.666667-42.666666l0 0q0-42.666667 42.666667-42.666667Z" p-id="2213"></path><path d="M239.835143 127.973411m15.084945 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2214"></path><path d="M239.831988 426.647696m15.084944 15.084945l60.339779 60.339778q15.084945 15.084945 0 30.16989l-60.339779 60.339778q-15.084945 15.084945-30.169889 0l-60.339779-60.339778q-15.084945-15.084945 0-30.16989l60.339779-60.339778q15.084945-15.084945 30.169889 0Z" p-id="2215"></path><path d="M239.828832 725.321982m15.084944 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2216"></path><path d="M213.333333 853.333333H85.333333a42.666667 42.666667 0 0 1-42.666666-42.666666V213.333333a42.666667 42.666667 0 0 1 42.666666-42.666666h128v85.333333H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666667v192a10.709333 10.709333 0 0 0 10.666667 10.666666H213.333333v85.333334H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666666v192a10.709333 10.709333 0 0 0 10.666667 10.666667H213.333333v85.333333z" p-id="2217"></path></svg>';
-     border-left: none;
-     background-color: transparent;
+    --callout-color: 31, 172, 139;
+    --callout-icon: '<svg t="1649346326592" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="2210"><path d="M384 170.666667m42.666667 0l512 0q42.666667 0 42.666666 42.666666l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666666Z" p-id="2211"></path><path d="M384 469.333333m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666667l-512 0q-42.666667 0-42.666667-42.666667l0 0q0-42.666667 42.666667-42.666667Z" p-id="2212"></path><path d="M384 768m42.666667 0l512 0q42.666667 0 42.666666 42.666667l0 0q0 42.666667-42.666666 42.666666l-512 0q-42.666667 0-42.666667-42.666666l0 0q0-42.666667 42.666667-42.666667Z" p-id="2213"></path><path d="M239.835143 127.973411m15.084945 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2214"></path><path d="M239.831988 426.647696m15.084944 15.084945l60.339779 60.339778q15.084945 15.084945 0 30.16989l-60.339779 60.339778q-15.084945 15.084945-30.169889 0l-60.339779-60.339778q-15.084945-15.084945 0-30.16989l60.339779-60.339778q15.084945-15.084945 30.169889 0Z" p-id="2215"></path><path d="M239.828832 725.321982m15.084944 15.084944l60.339779 60.339779q15.084945 15.084945 0 30.169889l-60.339779 60.339779q-15.084945 15.084945-30.169889 0l-60.339779-60.339779q-15.084945-15.084945 0-30.169889l60.339779-60.339779q15.084945-15.084945 30.169889 0Z" p-id="2216"></path><path d="M213.333333 853.333333H85.333333a42.666667 42.666667 0 0 1-42.666666-42.666666V213.333333a42.666667 42.666667 0 0 1 42.666666-42.666666h128v85.333333H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666667v192a10.709333 10.709333 0 0 0 10.666667 10.666666H213.333333v85.333334H138.666667a10.709333 10.709333 0 0 0-10.666667 10.666666v192a10.709333 10.709333 0 0 0 10.666667 10.666667H213.333333v85.333333z" p-id="2217"></path></svg>';
+    border-left: none;
+    background-color: transparent;
 }
- .callout.callout[data-callout="timeline"] >.callout-content {
-     border-left: none;
-     display: -ms-grid;
-     display: grid;
-     -ms-grid-columns: auto auto 1fr;
-     grid-template-columns: 0.3fr auto 1fr;
-     -webkit-column-gap: 1.5rem;
-     column-gap: 1.5rem;
-     row-gap: 0.25rem;
-     margin: 2.3rem 1rem 0 0;
-     padding: 0px;
+.callout.callout[data-callout="timeline"] >.callout-content {
+    border-left: none;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto 1fr;
+    grid-template-columns: 0.3fr auto 1fr;
+    -webkit-column-gap: 1.5rem;
+    column-gap: 1.5rem;
+    row-gap: 0.25rem;
+    margin: 2.3rem 1rem 0 0;
+    padding: 0px;
 }
- .callout.callout[data-callout="timeline"] .callout-content hr::before {
-     display: none;
+.callout.callout[data-callout="timeline"] .callout-content hr::before {
+    display: none;
 }
- .callout.callout[data-callout="timeline"] .callout-content hr {
-     height: 100%;
-     width: 0.5rem;
-     -ms-grid-column: 2;
-     -ms-grid-column-span: 1;
-     grid-column: 2 / span 1;
-     -ms-grid-row: 1;
-     grid-row-start: 1;
-     background-color: var(--text-normal);
-    
-opacity: 0.1;
-     grid-row-end: 9;
-     margin: auto;
-     border: 0px;
-     overflow: hidden;
-     border-radius: 10px;
+.callout.callout[data-callout="timeline"] .callout-content hr {
+    height: 100%;
+    width: 0.5rem;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2 / span 1;
+    -ms-grid-row: 1;
+    grid-row-start: 1;
+    background-color: var(--text-normal);
+    opacity: 0.1;
+    grid-row-end: 9;
+    margin: auto;
+    border: 0px;
+    overflow: hidden;
+    border-radius: 10px;
 }
- .callout.callout[data-callout="timeline"] .callout-content blockquote {
-     display: block;
-     -ms-grid-column: 1;
-     -ms-grid-column-span: 1;
-     grid-column: 1 / span 1;
-     position: relative;
-     -ms-flex-item-align: start;
-     -ms-grid-row-align: start;
-     align-self: start;
-     text-align: left;
-     margin: 0px;
-     border: none;
-     padding: 0;
-     margin-inline-start: 0;
-     margin-inline-end: 0px;
-     background-color: unset;
+.callout.callout[data-callout="timeline"] .callout-content blockquote {
+    display: block;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / span 1;
+    position: relative;
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
+    text-align: left;
+    margin: 0px;
+    border: none;
+    padding: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0px;
+    background-color: unset;
 }
- .callout.callout[data-callout="timeline"] .callout-content blockquote p::before {
-     display: none;
+.callout.callout[data-callout="timeline"] .callout-content blockquote p::before {
+    display: none;
 }
- .callout.callout[data-callout="timeline"] .callout-content blockquote p {
-     display: block;
-     color: var(--time-font-color);
-     background-color: var(--time-color);
-     font-style: normal;
-     padding: 6px;
-     border-radius: 5px;
+.callout.callout[data-callout="timeline"] .callout-content blockquote p {
+    display: block;
+    color: var(--time-font-color);
+    background-color: var(--time-color);
+    font-style: normal;
+    padding: 6px;
+    border-radius: 5px;
 }
- .callout.callout[data-callout="timeline"] .callout-content>*:not(blockquote):not(hr) {
-     position: relative;
-     -ms-grid-column: 3;
-     -ms-grid-column-span: 1;
-     grid-column: 3 / span 1;
-     margin-block-start: 0;
-     margin-block-end: 0em;
+.callout.callout[data-callout="timeline"] .callout-content>*:not(blockquote):not(hr) {
+    position: relative;
+    -ms-grid-column: 3;
+    -ms-grid-column-span: 1;
+    grid-column: 3 / span 1;
+    margin-block-start: 0;
+    margin-block-end: 0em;
 }
- .callout.callout[data-callout="timeline"] table {
-     font-size: 13px;
+.callout.callout[data-callout="timeline"] table {
+    font-size: 13px;
 }
 /*End*/
 /* callout伪看板效果*/
@@ -7305,27 +7301,26 @@ opacity: 0.1;
  .callout.callout[data-callout*="kanban"] ul ul::before {
      border-left: 0;
 }
- .markdown-preview-view.is-readable-line-width.callout.callout[data-callout*="kanban"] .markdown-preview-sizer>div>ul {
-    
-max-width: 100%;
+.markdown-preview-view.is-readable-line-width.callout.callout[data-callout*="kanban"] .markdown-preview-sizer>div>ul {
+    max-width: 100%;
 }
  .callout.callout[data-callout*="kanban"] ul.contains-task-list ul, .callout.callout[data-callout*="kanban"] ol.contains-task-list ul, .callout.callout[data-callout*="kanban"] ul.contains-task-list ol, .callout.callout[data-callout*="kanban"] ol.contains-task-list ol {
-     position: initial;
+    position: initial;
 }
  .callout.callout[data-callout*="kanban"] ul.contains-task-list ul::before, .callout.callout[data-callout*="kanban"] ol.contains-task-list ul::before, .callout.callout[data-callout*="kanban"] ul.contains-task-list ol::before, .callout.callout[data-callout*="kanban"] ol.contains-task-list ol::before {
-     all: initial 
+    all: initial 
 }
  .callout.callout[data-callout*="kanban"] ul > li.task-list-item {
-     flex: 1 1 20%;
-     padding: 0.1em 1em;
-     margin: 0 0.1em 0.3em 0;
-     list-style: none;
-     border: 1px solid var(--p-kanban-border-color);
-     border-left: 1px solid var(--p-kanban-border-color) !important;
-     border-radius: var(--radius-s);
-     word-wrap: break-word;
-     word-break: break-word;
-     text-indent: 0;
+    flex: 1 1 20%;
+    padding: 0.1em 1em;
+    margin: 0 0.1em 0.3em 0;
+    list-style: none;
+    border: 1px solid var(--p-kanban-border-color);
+    border-left: 1px solid var(--p-kanban-border-color) !important;
+    border-radius: var(--radius-s);
+    word-wrap: break-word;
+    word-break: break-word;
+    text-indent: 0;
 }
  .callout.callout[data-callout*="kanban"] ul ul li.task-list-item {
      width: 100%;
@@ -7679,41 +7674,40 @@ opacity: 1.24;
      border-radius: 4px;
      font-size:1.4em;
 }
- div#quick-explorer {
-     width:90%;
-     flex-wrap: wrap;
-     display: flex 
+div#quick-explorer {
+    width:90%;
+    flex-wrap: wrap;
+    display: flex 
 }
- div#quick-explorer span.explorable {
-     align-items: center;
-     color: var(--text-muted);
-     display: flex;
-     font-size: calc((--font-adaptive-smaller) + 10px);
-     line-height: 24px;
-    
-opacity:1.0;
+div#quick-explorer span.explorable {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    font-size: calc((--font-adaptive-smaller) + 10px);
+    line-height: 24px;
+    opacity:1.0;
 }
- div#quick-explorer span.explorable:last-of-type {
-     font-size: calc((--font-adaptive-smaller) + 10px);
+div#quick-explorer span.explorable:last-of-type {
+    font-size: calc((--font-adaptive-smaller) + 10px);
 }
- div#quick-explorer span.explorable.selected,div#quick-explorer span.explorable:hover {
-     background-color: unset!important 
+div#quick-explorer span.explorable.selected,div#quick-explorer span.explorable:hover {
+    background-color: unset!important 
 }
- div#quick-explorer span.explorable.selected .explorable-name,div#quick-explorer span.explorable:hover .explorable-name {
-     color: var(--item-side);
-     font-size:18px;
+div#quick-explorer span.explorable.selected .explorable-name,div#quick-explorer span.explorable:hover .explorable-name {
+    color: var(--item-side);
+    font-size:18px;
 }
- div#quick-explorer .explorable-separator::before {
-     content: "\00a0›"!important;
-     font-size: 1.3em;
-     font-weight: 400;
-     margin: 0 
+div#quick-explorer .explorable-separator::before {
+    content: "\00a0›"!important;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin: 0 
 }
- .menu-item:hover, .menu-item .selected {
-     background-color: var(--item-side) !important;
-     color:white !important;
+.menu-item:hover, .menu-item .selected {
+    background-color: var(--item-side) !important;
+    color:white !important;
 }
- .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected,.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover {
+.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected,.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover {
      background-color: var(--item-side) !important;
      color:white !important;
 }
@@ -7721,17 +7715,17 @@ opacity:1.0;
 /* ============ 左侧导行栏Ribbon =========== */
 /* ======================================== */
 /*左侧Ribbon区域的右边界线*/
- .workspace-ribbon {
-     border-right:1px solid var(--background-modifier-border2);
+.workspace-ribbon {
+    border-right:1px solid var(--background-modifier-border2);
 }
 /*左侧Ribbon区域的右边界线，在左侧区收起后的样式*/
- .workspace-ribbon.mod-left.is-collapsed {
-     border-right:1px solid var(--background-modifier-border2);
+.workspace-ribbon.mod-left.is-collapsed {
+    border-right:1px solid var(--background-modifier-border2);
 }
 /*中间编辑区两侧的边界线*/
- .workspace-leaf {
-     border-right:1px solid rgba(12, 11, 11, 0.19);
-     border-left:1px solid rgba(12, 11, 11, 0.19);
+.workspace-leaf {
+    border-right:1px solid rgba(12, 11, 11, 0.19);
+    border-left:1px solid rgba(12, 11, 11, 0.19);
 }
 /*End*/
 /*左侧ribbon 区，设置工具按钮的位置*/
@@ -7741,60 +7735,64 @@ opacity:1.0;
 /*End*/
 /*左侧ribbon 区，收起按钮位置*/
  .workspace-ribbon.mod-left .workspace-ribbon-collapse-btn,.workspace-ribbon.mod-right .workspace-ribbon-collapse-btn {
-    
-opacity: 1;
-     position: fixed;
-     width: 26px;
-     display: flex;
-     align-items: center;
-     top: auto;
-     text-align: center;
-     bottom: 1.5em !important;
+    opacity: 1;
+    position: fixed;
+    width: 26px;
+    display: flex;
+    align-items: center;
+    top: auto;
+    text-align: center;
+    bottom: 1.5em !important;
     /*调整左侧ribbon 区域的收起按钮位置*/
-     z-index: 9 
+    z-index: 9 
 }
 /*End*/
 /* ======================================== */
 /* =========== 导航栏文件目录区域 ========== */
 /* ======================================== */
 /*导航栏的高度优化*/
- .nav-header {
-     height: 39px !important;
+.nav-header {
+    height: 39px !important;
 }
- .nav-action-button {
-     margin-top:-0.4em;
+.nav-action-button {
+    margin-top:-0.4em;
 }
- .nav-files-container {
-     margin-top:0.2em;
+.nav-files-container {
+    margin-top:0.2em;
 }
 /*End*/
 /*优化目录树的文件夹样式*/
- .nav-folder-children .nav-folder-title-content::before {
-     content: '';
-     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAhklEQVRIie2PwQ2DMAxFvzMHXYhBskKSE+WWjMAkHajMkc8pVSoBUkQQF7+TLdv/yYDyNFKKEMKYc14ADLuLInOM8d0qMKU4CwcAkpP3vlnw+8A5x9bjA1YANqX0AaoPOjKQXEpzhwAi8rpVUKMCFajgX7D2CiX53RPYenAl3Bhjr+Yo/dgAr4QoWjEjKLYAAAAASUVORK5CYII=);
-     background-size: 16px 16px;
-     transform: translate(0, 2px);
-     background-repeat: no-repeat;
-     display: inline-block;
-     height: 20px;
-     width: 20px;
-     margin-bottom: -0.3em;
+.nav-folder-children .nav-folder-title-content::before {
+    content: '';
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAhklEQVRIie2PwQ2DMAxFvzMHXYhBskKSE+WWjMAkHajMkc8pVSoBUkQQF7+TLdv/yYDyNFKKEMKYc14ADLuLInOM8d0qMKU4CwcAkpP3vlnw+8A5x9bjA1YANqX0AaoPOjKQXEpzhwAi8rpVUKMCFajgX7D2CiX53RPYenAl3Bhjr+Yo/dgAr4QoWjEjKLYAAAAASUVORK5CYII=);
+    background-size: 16px 16px;
+    transform: translate(0, 2px);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 20px;
+    width: 20px;
+    margin-bottom: -0.3em;
 }
- .nav-folder-title {
-     line-height:1.8;
+.mod-windows .nav-folder-title {
+    line-height:1.8;
 }
 /*End*/
+/*class="nav-file"*/
+.mod-windows .nav-folder-title {
+}
+.mod-windows  .nav-file-title {
+    width:100% !important;
+}
 /*文件目录树中，文件夹名的滚动动画*/
 .nav-files-container {
-     overflow-x: auto;
+    overflow-x: auto;
 }
 .nav-file {
-     display: table;
+    display: table;
 }
 .nav-folder-title-content:not(.is-being-renamed) {
-    
-min-width: 200px;
-     white-space: nowrap;
+    min-width: 200px;
+    white-space: nowrap;
 }
 .nav-folder-title-content:not(.is-being-renamed):hover {
      animation: filemove 1.5s 1 normal linear;
@@ -7817,29 +7815,29 @@ min-width: 200px;
 }
 /*End*/
 /*文件目录树中，文件夹更改名字时候的样式*/
- .nav-file-title-content .is-being-renamed {
-     color:black !important;
+.nav-file-title-content .is-being-renamed {
+    color:black !important;
 }
 /*End*/
 /*优化目录树的展开收起箭头*/
 /*文件目录树，文件夹的未展开（收起）箭头*/
- .nav-folder.is-collapsed .nav-folder-title::before {
-     transform: translateX(1px) translateY(0.4em) rotate(0deg);
+.nav-folder.is-collapsed .nav-folder-title::before {
+    transform: translateX(1px) translateY(0.4em) rotate(0deg);
 }
 /*End*/
 /*文件目录树中，文件夹的展开箭头*/
- .nav-folder .nav-folder-title::before {
-     content: "";
-     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZklEQVRIie3NMRKAMAhE0eChMWXSOVzYEhv7sMvgWGRr+K+1vd9PVa/M/7E6EJEzgyyBLBICMkgYYBEIYBAYQBEKQBAaeHeXAe4+zGyWANE4BSBxGEDjEMDEwwAbD633PkrCe5/tAV92N0rtyZlOAAAAAElFTkSuQmCC);
-     background-size: 13px 13px;
-     background-position: center;
-     transform: translate(0, 2px);
-     background-repeat: no-repeat;
-     display: inline-block;
-     height: 15px;
-     width: 15px;
-     margin-top:1.5px;
-     transform: translateX(-1px) translateY(0.35em) rotate(90deg);
+.nav-folder .nav-folder-title::before {
+    content: "";
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZklEQVRIie3NMRKAMAhE0eChMWXSOVzYEhv7sMvgWGRr+K+1vd9PVa/M/7E6EJEzgyyBLBICMkgYYBEIYBAYQBEKQBAaeHeXAe4+zGyWANE4BSBxGEDjEMDEwwAbD633PkrCe5/tAV92N0rtyZlOAAAAAElFTkSuQmCC);
+    background-size: 13px 13px;
+    background-position: center;
+    transform: translate(0, 2px);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin-top:1.5px;
+    transform: translateX(-1px) translateY(0.35em) rotate(90deg);
 }
 /*End*/
 /*文件目录树中，优化文件夹名自适应文本截断*/
@@ -7966,58 +7964,57 @@ min-width: 200px;
  .workspace-tab-header-container {
      border-bottom:1px solid var(--background-modifier-border2);
 }
- .workspace-tab-header:hover {
-     color: var(--text-muted);
-     text-align: center;
-     stroke-width: 2px;
-     cursor: pointer;
+.workspace-tab-header:hover {
+    color: var(--text-muted);
+    text-align: center;
+    stroke-width: 2px;
+    cursor: pointer;
 }
 /*End*/
 /*顶部导行按钮栏下边界线*/
- .nav-buttons-container {
-     border-bottom:1px solid var(--background-modifier-border2);
+.nav-buttons-container {
+    border-bottom:1px solid var(--background-modifier-border2);
 }
- .nav-action-button,.workspace-leaf-content[data-type=backlink] .nav-action-button,.workspace-leaf-content[data-type=search] .nav-action-button {
+.nav-action-button,.workspace-leaf-content[data-type=backlink] .nav-action-button,.workspace-leaf-content[data-type=search] .nav-action-button {
     /*调整导航栏宽度*/
-    /* padding: 3px 5px 3px;
-     margin: 0 0 7px 0;
-     */
-     height: 26px;
-     text-align: center;
-     border-radius: var(--radius-m) 
+    /*
+    padding: 3px 5px 3px;
+    margin: 0 0 7px 0;
+    */
+    height: 26px;
+    text-align: center;
+    border-radius: var(--radius-m) 
 }
 /*End*/
 /*文件导航栏目录树缩进线样式*/
- body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
-     border-left: 1px solid var(--background-modifier-border2);
-     margin-left:1.6em;
+body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
+    border-left: 1px solid var(--background-modifier-border2);
+    margin-left:1.6em;
 }
 /*End*/
 /*为文件导航栏目录树添加点击文件后条目颜色后缀，和控制点击后的颜色*/
- .nav-file-title.is-being-dragged, .nav-file-title.is-active, body:not(.is-grabbing) .nav-file-title.is-active:hover, .nav-folder-title.is-being-dragged {
-     border-right: 3px solid;
-     border-right-color: var(--item-side);
-     background-color: rgba(241, 243, 245, 0.92);
-     color: #858585;
-     font-weight: 600;
+.nav-file-title.is-being-dragged, .nav-file-title.is-active, body:not(.is-grabbing) .nav-file-title.is-active:hover, .nav-folder-title.is-being-dragged {
+    border-right: 3px solid;
+    border-right-color: var(--item-side);
+    background-color: rgba(241, 243, 245, 0.92);
+    color: #858585;
+    font-weight: 600;
 }
- .colorful-active #calendar-container .active,.colorful-active #calendar-container .active.today,.colorful-active #calendar-container .active:hover,.colorful-active #calendar-container .day:active,.colorful-active .menu-item.selected:not(.is-disabled):not(.is-label),.colorful-active .menu-item:hover,.colorful-active .menu-item:hover:not(.is-disabled):not(.is-label),.colorful-active .nav-file-title.is-active,.colorful-active .nav-file-title.is-being-dragged,.colorful-active .nav-folder-title.is-being-dragged,body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover,body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover {
-     background-color: var(--ax2);
-     color: var(--sp1);
+.colorful-active #calendar-container .active,.colorful-active #calendar-container .active.today,.colorful-active #calendar-container .active:hover,.colorful-active #calendar-container .day:active,.colorful-active .menu-item.selected:not(.is-disabled):not(.is-label),.colorful-active .menu-item:hover,.colorful-active .menu-item:hover:not(.is-disabled):not(.is-label),.colorful-active .nav-file-title.is-active,.colorful-active .nav-file-title.is-being-dragged,.colorful-active .nav-folder-title.is-being-dragged,body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover,body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover,body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-dragged:hover {
+    background-color: var(--ax2);
+    color: var(--sp1);
 }
 /*End*/
 /*工具图标的hover样式*/
- .graph-controls-button:hover,.nav-action-button.is-active:hover,.nav-action-button:hover,.side-dock-ribbon-action:hover,.side-dock-ribbon-tab:hover,.view-action.is-active:hover,.view-action:hover,.view-header-icon:hover,.workspace-tab-header:hover {
-     color: var(--icon-color-hover2);
-    
-opacity: 1;
-     transition:
-opacity .1s ease-in-out 
+.graph-controls-button:hover,.nav-action-button.is-active:hover,.nav-action-button:hover,.side-dock-ribbon-action:hover,.side-dock-ribbon-tab:hover,.view-action.is-active:hover,.view-action:hover,.view-header-icon:hover,.workspace-tab-header:hover {
+    color: var(--icon-color-hover2);
+    opacity: 1;
+    transition: opacity .1s ease-in-out 
 }
- .graph-controls-button:hover,.nav-action-button:hover,.side-dock-ribbon-action:hover,.view-action:hover,.workspace-drawer-header-icon:hover,.workspace-drawer-tab-option-item:hover,.workspace-leaf-content[data-type=backlink] .nav-action-button.is-active:hover,.workspace-leaf-content[data-type=search] .nav-action-button.is-active:hover,.workspace-tab-header-inner-icon:hover {
-     background-color: var(--background-tertiary);
-     border-radius: var(--radius-m);
-     color:var(--icon-color-hover2);
+.graph-controls-button:hover,.nav-action-button:hover,.side-dock-ribbon-action:hover,.view-action:hover,.workspace-drawer-header-icon:hover,.workspace-drawer-tab-option-item:hover,.workspace-leaf-content[data-type=backlink] .nav-action-button.is-active:hover,.workspace-leaf-content[data-type=search] .nav-action-button.is-active:hover,.workspace-tab-header-inner-icon:hover {
+    background-color: var(--background-tertiary);
+    border-radius: var(--radius-m);
+    color:var(--icon-color-hover2);
 }
 /*End*/
 /*目录中文件和文件夹的不同缩进样式*/
@@ -8030,27 +8027,27 @@ opacity .1s ease-in-out
 }
 /*End*/
 /*文件目录导航中文件夹支持导行超出后截断显示*/
- .nav-folder-title-content {
-     white-space: nowrap;
-     overflow: hidden;
-     text-overflow: ellipsis;
-     vertical-align: middle;
-     cursor: var(--cursor);
-     width:100%;
-	 font-size:1.25em;
+.nav-folder-title-content {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    vertical-align: middle;
+    cursor: var(--cursor);
+    width:100%;
+	font-size:1.25em;
 }
 /*markdown文件之外的文件类型，显示文件类型前缀*/
- .nav-file-tag {
-     color:white;
-     background-color: var(--item-side);
-     font-weight: 400;
-     margin-left: -4em;
+.nav-file-tag {
+    color:white;
+    background-color: var(--item-side);
+    font-weight: 400;
+    margin-left: -4em;
 }
 /*指向时文件类型反转颜色*/
 /*点击激活时文件类型反转颜色*/
- .nav-file-title:hover .nav-file-tag, .nav-file-title.is-active .nav-file-tag {
-     color:var(--item-side);
-     background-color: white;
+.nav-file-title:hover .nav-file-tag, .nav-file-title.is-active .nav-file-tag {
+    color:var(--item-side);
+    background-color: white;
 }
 /*End*/
 /* ===================================== */
@@ -8058,26 +8055,23 @@ opacity .1s ease-in-out
 /* ===================================== */
 /*设置界面导行栏的样式优化*/
  .colorful-active #calendar-container .active, .colorful-active #calendar-container .active.today, .colorful-active #calendar-container .active:hover, .colorful-active #calendar-container .day:active, .colorful-active .menu-item.selected:not(.is-disabled):not(.is-label), .colorful-active .menu-item:hover, .colorful-active .menu-item:hover:not(.is-disabled):not(.is-label), .colorful-active .nav-file-title.is-active, .colorful-active .nav-file-title.is-being-dragged, .colorful-active .nav-folder-title.is-being-dragged, body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover, body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover, body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-draggedd {
-     color:#000;
-     background-color: #f0f0f0;
+    color:#000;
+    background-color: #f0f0f0;
 }
 /*优化设置菜单，左侧导航栏样式*/
 /*优化设置菜单，左侧导行item 的左边框染色*/
-.vertical-tab-nav-item .is-active {
+.modal.mod-settings .vertical-tab-nav-item.is-active {
     /*调整设置页面导行菜单间距 padding: 5px 8px;
      */
-     margin: 0 8px 0;
-     color: var(--text-muted);
-     font-weight: 400;
-    /*background: var(--background-secondary);
-    cursor: var(--cursor);
-    */
-     border-radius: var(--radius-m);
-	 border-left-color: 2px solid var(--item-side);
-	 background-color:white;
-	 color:black;
- }
-
+    color: var(--text-muted);
+    font-weight: 400;
+	border-right-color: 1px solid var(--item-side);
+	background-color:white;
+	color:var(--tx1);
+}
+.vertical-tab-nav-item {
+    font-size:16px;
+}
 /*End*/
 /*设置菜单中菜单分组的设置*/
  .is-mobile .modal .vertical-tab-header-group-title {
@@ -8108,19 +8102,21 @@ opacity .1s ease-in-out
 }
 /*End*/
 /* ================================== */
-/* ======== tabs 控制 ======== */
+/* ======== tabs 标签控制 ======== */
 /* ================================== */
- .mod-root .workspace-tab-header-inner {
-  /*   padding: 3px 5px;*/
-  border-top:1px solid;
-  border-left:1px solid;
-  border-right:1px solid;
-  border-radius: 4px;
+.workspace-tab-header {
+    /*padding: 3px 5px;*/
+    /*border-color:var(--tab-outline-color);*/
+    box-shadow: 0 0 0 var(--tab-outline-width);
 }
  .workspace-tab-header-inner-title {
      line-height: 2.5;
 	 font-size:1.0em;
 }
+.workspace .mod-root .workspace-tab-header-inner::after {
+    background-color:transparent;
+}
+
 /* ================================== */
 /* ======== 编辑视图和正文控制 ======== */
 /* ================================== */
@@ -8140,10 +8136,10 @@ opacity .1s ease-in-out
 /*End*/
 /*自定义代码注释：控制编辑视图下列表连接线颜色和位置*/
 /*自定义代码注释：控制编辑视图下无序列表的前缀边线的样式*/
- .markdown-source-view.mod-cm6 .cm-indent::before {
-     transform: translateX(var(--ig-adjust-edit));
-     margin-left:-0.3em;
-     border-right: 1px solid var(--tx3);
+.markdown-source-view.mod-cm6 .cm-indent::before {
+    transform: translateX(var(--ig-adjust-edit));
+    margin-left:-0.3em;
+    border-right: 1px solid var(--tx3);
 }
 /*End*/
 /*控制无序列表前置标记（圆点等）的样式*/
@@ -8158,17 +8154,15 @@ opacity .1s ease-in-out
 }
 /*End*/
 /*控制每一个可编辑块的与实际的内容体之间的边距*/
- .is-live-preview.is-readable-line-width .cm-embed-block>div,.is-live-preview.is-readable-line-width .cm-embed-block>mjx-container,.is-live-preview.is-readable-line-width .mod-empty {
-    
-max-width: var(--max-width);
-     margin: 0 auto;
-     width: var(--line-width-adaptive);
-     padding-left: var(--folding-offset) 
+.is-live-preview.is-readable-line-width .cm-embed-block>div,.is-live-preview.is-readable-line-width .cm-embed-block,.is-live-preview.is-readable-line-width .mod-empty {
+    max-width: 100%;
+    margin: 0 auto;
+    width: var(--line-width-adaptive);
 }
 /*End*/
 /*正文编辑器的背景底色*/
- .cm-editor {
-     background-color: #fffffe;
+.cm-editor {
+    background-color: #fffffe;
 }
 /*End*/
 /*正文编辑器的图片边框*/
@@ -8177,41 +8171,39 @@ max-width: var(--max-width);
 }
 /*End*/
 /* 优化tooltip的样式 */
- .tooltip {
-     font-size: var(--font-adaptive-smaller);
-     line-height: 1.3;
-     font-weight: 500;
-     padding: 4px 8px;
-     border-radius: 4px;
-     transition: none;
-     text-align: left;
-     animation: none;
-    
-opacity: .8 
+.tooltip {
+    font-size: var(--font-adaptive-smaller);
+    line-height: 1.3;
+    font-weight: 500;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: none;
+    text-align: left;
+    animation: none;
+    opacity: .8 
 }
- .tooltip.mod-left,.tooltip.mod-right {
-     transform: none;
+.tooltip.mod-left,.tooltip.mod-right {
+    transform: none;
 }
- .tooltip, .tooltip.mod-right {
-     color: black;
-     background-color: white;
-     font-size:16px;
+.tooltip, .tooltip.mod-right {
+    color: black;
+    background-color: white;
+    font-size:16px;
 }
- .tooltip .tooltip-arrow {
-     border-bottom: 5px solid gray;
+.tooltip .tooltip-arrow {
+    border-bottom: 5px solid gray;
 }
- .tooltip.mod-right .tooltip-arrow {
-     border-right: 5px solid gray;
+.tooltip.mod-right .tooltip-arrow {
+    border-right: 5px solid gray;
 }
- .tooltip.mod-left .tooltip-arrow {
-     border-left: 5px solid gray;
+.tooltip.mod-left .tooltip-arrow {
+    border-left: 5px solid gray;
 }
 /*End*/
 /* ================= 正文:标题 =============== */
-/*文件名下方的边框线*/
- .view-header {
-     border-bottom: 1.5px solid var(--ui2) !important;
-     border-top:1.5px solid var(--ui2) !important;
+/*文件标题栏的下边框线*/
+.view-header {
+    border-bottom: 1.5px solid var(--ui2) !important;
 }
 /*End*/
 /*正文标题（headings）因为加了链接导致颜色变化*/
@@ -8366,6 +8358,7 @@ opacity: .8
  .markdown-reading-view li .list-bullet:after {
      background-color:unset !important;
 }
+
 /* ======================================= */
 /* =============== 插件 ================== */
 /* ======================================= */
@@ -8383,71 +8376,85 @@ opacity: .8
 }
 /*End*/
 /*为【task progress bar】插件，优化颜色效果*/
- .cm-task-progress-bar .progress-bar-inline-background {
-     border:1px solid var(--tx3);
+.cm-task-progress-bar .progress-bar-inline-background {
+    border:1px solid var(--tx3);
 }
 /*End*/
 /*为【task progress bar】插件，进度条长度优化*/
- .cm-task-progress-bar.with-number .progress-bar-inline-background {
-     width: 4.1rem !important;
+.cm-task-progress-bar.with-number .progress-bar-inline-background {
+    width: 4.1rem !important;
 }
 /*End*/
 /*End*/
 /*=================== 表格类优化 ====================*/
 /*给bookinfo 模式的表格增加指向（hover）的动画*/
- body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
-     background: var(--table-hover-raw-color);
-     color:white;
-     transform: scale(1.02);
-     transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
+body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
+    background: var(--table-hover-raw-color);
+    color:white;
+    transform: scale(1.02);
+    transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
 }
 /*End*/
-/*table
-title 边框*/
- .table-lines .table-view-table,.table-lines table:not(.calendar) {
-     border: 1px solid var(--bg3) 
+/*table title 边框*/
+.table-lines .table-view-table,.table-lines table:not(.calendar) {
+    border: 1px solid var(--bg3) 
+}
+/*增加表格标题栏背景色*/
+.markdown-rendered table thead {
+    background-color: var(--callout-color);
+}
+/*增加表格颜色更行显示不同背景色*/
+.markdown-rendered tbody tr:nth-child(2n+2) {
+    background-color: var(--bg3);
 }
 /*End*/
+/*=========== callout =============*/
+/*修复callout 的title 变现和文字边距*/
+.callout-title {
+    border-bottom:1px solid;
+    padding-bottom: 0.5em;
+}
+
 /*=================== dataview Cards ====================*/
 /*dataview Cards 视图下，增加指向（hover）的动画*/
  body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
-     background: var(--table-hover-raw-color);
-     color:white;
-     transform: scale(1.02);
-     transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
+    background: var(--table-hover-raw-color);
+    color:white;
+    transform: scale(1.02);
+    transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
 }
- :is(.markdown-preview-view,.markdown-rendered) table tbody>tr:hover, .markdown-source-view table tbody>tr:hover {
-     background-color: var(--table-hover-raw-color);
-     color:white;
+:is(.markdown-preview-view,.markdown-rendered) table tbody>tr:hover, .markdown-source-view table tbody>tr:hover {
+    background-color: var(--table-hover-raw-color);
+    color:white;
 }
- :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) table tbody>tr:hover {
-     background-color: var(--table-hover-raw-color);
-     color:white;
+:is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) table tbody>tr:hover {
+    background-color: var(--table-hover-raw-color);
+    color:white;
 }
- .table-view-table > tbody > tr:hover {
-     background-color: var(--text-selection);
+.table-view-table > tbody > tr:hover {
+    background-color: var(--text-selection);
 }
 /*End*/
 /*调整初始状态下 Cards View 的样式*/
- .cards table.dataview tbody>tr>td button img{
-     width: calc(var(--cards-width)/8 );
-     height: calc(var(--cards-width) /8);
-     margin-left: -1px;
+.cards table.dataview tbody>tr>td button img{
+    width: calc(var(--cards-width)/8 );
+    height: calc(var(--cards-width) /8);
+    margin-left: -1px;
 }
 /*End*/
 /*=================== tabel generator ====================*/
 /*tabel generator 的表头样式*/
- .cm-table-widget .ob-table-enhancer thead tr {
-     border-bottom: 1px solid black;
+.cm-table-widget .ob-table-enhancer thead tr {
+    border-bottom: 1px solid black;
 }
 /*End*/
 /*=================== edit toolbar 插件 ====================*/
 /*edit toolbar 在置顶模式下边框样式*/
- #cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic {
-     border:1px solid var(--background-modifier-border2) !important;
-     border-top: 1px solid var(--background-modifier-border2) !important;
-     border-bottom: 1px solid var(--background-modifier-border2) !important;
-     border-radius: 0 !important;
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic {
+    border:1px solid var(--background-modifier-border2) !important;
+    border-top: 1px solid var(--background-modifier-border2) !important;
+    border-bottom: 1px solid var(--background-modifier-border2) !important;
+    border-radius: 0 !important;
 }
 /*End*/
 /*为【edit toolbar】插件，优化工具icon指向（hover）的样式*/
@@ -8493,30 +8500,30 @@ title 边框*/
  .has-banner-icon.obsidian-banner-wrapper .obsidian-metatable {
      margin-top:30px;
 }
- .has-banner.cm-active.has-banner-icon.cm-line.obsidian-banner-icon .icon-box {
-     margin-top:var(--banner-height);
+.has-banner.cm-active.has-banner-icon.cm-line.obsidian-banner-icon .icon-box {
+    margin-top:var(--banner-height);
 }
 /*主窗口下，没有banner icon的情景下*/
- .obsidian-banner-wrapper .obsidian-metatable {
-     margin-top:var(--banner-height) 
+.obsidian-banner-wrapper .obsidian-metatable {
+    margin-top:var(--banner-height) 
 }
 /*弹出窗口，没有banner icon的情景下*/
- .is-popout-window .obsidian-banner-wrapper .obsidian-metatable {
-     margin-top:calc(var(--banner-height)+330px);
+.is-popout-window .obsidian-banner-wrapper .obsidian-metatable {
+    margin-top:calc(var(--banner-height)+330px);
 }
 /*弹出窗口，有banner icon的情景下*/
- .is-popout-window .obsidian-banner-wrapper.has-banner-icon .obsidian-banner-icon.cm5-banner-icon .icon-box {
-     margin-top:calc(var(--banner-height)+300px);
+.is-popout-window .obsidian-banner-wrapper.has-banner-icon .obsidian-banner-icon.cm5-banner-icon .icon-box {
+    margin-top:calc(var(--banner-height)+300px);
 }
- .is-popout-window .has-banner-icon.obsidian-banner-wrapper .obsidian-metatable {
-     margin-top:var(--banner-height)+30px;
+.is-popout-window .has-banner-icon.obsidian-banner-wrapper .obsidian-metatable {
+    margin-top:var(--banner-height)+30px;
 }
 /*End*/
 /*修复dataview Cards 视图下，图片和 grid 错位问题*/
  .col-alt table:not(.calendar) tr>td:nth-child(2n+2),.col-alt table:not(.calendar) tr>th:nth-child(2n+2),.row-alt table:not(.calendar) tbody>tr:nth-child(odd) {
     /*padding-left: 10px;
     */
-     background: var(--background-table-rows);
+    background: var(--background-table-rows);
 }
 /*End*/
 /* ================================== */
