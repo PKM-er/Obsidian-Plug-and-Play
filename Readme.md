@@ -280,6 +280,28 @@ v0.2.1
  **Advanced Tables**                                                                 | 表格辅助                                                          | 选择性开启    
  **obsidian\-math\-plus**                                                            | 提供 Obsidian 支持使用 latex 等方式书写数学公式                              | 选择性开启    
 
+## 待测试和融入插
+可以关注这些插件，他们未来也许会很伟大
+
+| **插件名称**                      | **功能概述**  |
+|-----------------------------------|--------------------------|
+| **waypoint**                      | 文件夹 moc 生成插件             |
+| **Obsidian Icon Folder**          | 文件自定义图标插件                |
+| **Obsidian\-Agtable**             | 普通表格转为可视化编辑表格            |
+| **obsidian\-checklist\-plugin**   | 任务列表插件                   |
+| **notion\-like\-tables**          | 类似notion 的database 功能    |
+| **tq\-obsidian**                  |                          |
+| **excalibrain**                   | 画板插件                     |
+| **supercharged\-links\-obsidian** |                          | 将属性和菜单选项添加到内部链接 |
+| **folder note**                   | 添加描述，摘要以及带有文件夹笔记的文件夹的信息。 |
+| **markmind **                     | 思维导图，大纲和pdf注释工具。         |
+
+## 感谢那些曾经让Obsidian 更伟大的插件
+
+| **obsidian\-admonition**    | **支持许多自定义callouts 块，自定义程度非常高。【后续】官方已经内置了多彩常用 callouts** | **已经从库中移除** |
+|-----------------------------|---------------------------------------------------------|-------------|
+| **cMenu plus**              | 被同一坐着的 【edit toolbar】 代替                                | 已经从库中移除     |
+| **obsidian\-collapse\-all** | 支持文件目录和管理上的折叠/展开管理。【后续】官方已经v1\.0\.0支持                   | 已经从库中移除     |
 
 
 ## 一些你可能在使用插件中遇到的问题
