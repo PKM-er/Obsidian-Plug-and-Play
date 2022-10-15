@@ -128,11 +128,8 @@ v0.2.1
 
 #### 4.2.8. 表格
 
-- 【Notion like tables】 这个插件过早的引入到这个库中，实在是因为Notion的表格体（database）体验太优秀了。期望大家
 - 【sorttable】可以赋予表格排序的功能；
-- 【table-extended】
-	Expermental: Exttended Native Table Syntax
-	和豆瓣书籍摘要模板冲突，会导致无法渲染bookinfo这样的标注文字（callouts）的语法格式("> []")，在阅读模式（markdown-reading-view）下展示异常。
+
 
 #### 4.2.9. 标签
 
@@ -144,12 +141,7 @@ v0.2.1
 	- 兼容：应对【Minimal 主题】和 【Banners】更新后导致的头图在不同浏览模式下高度异常的问题。
 - 【缺图示】
 
-#### 4.2.11. 更多特殊语法的支持
-
-- 数学公式：如果你有相关论文或者工作的需求，可以打开【 Math plus 】
-- 乐谱：如果你有相关论文或者工作的需求，可以打开【 music code blocks】
-
-#### 4.2.12. 标签（tags）
+#### 4.2.11. 标签（tags）
 【 tag-word-cloud 】生成一个带有标签嵌套的属性结构，方便你以标签形式进行管理
 #### 4.2.13. 进阶管理
 
@@ -173,11 +165,13 @@ v0.2.1
 
 #### 4.3.4. 文件历史版本管理
 - 支持管理文档的不同版本历史，甚至比对当前版本和之前版本的差异点【obsidian-version-history-diff】
+
 ### 4.4. All in One
 
 #### 4.4.1. 读书笔记沉淀
 通过 【BookNote】插件，你可以直接引入多个PDF、MOB的文件目录，做为附件的电子书管理，所有在电子书上做的记录都可以进入到对应文件中，相当于笔记，笔记也反向关联电子书，点击笔记可以回看书中的具体位置。
 ![|1000](Readme_image_2.png)
+
 #### 4.4.2. 图书和电影的收集
 
 基于 JS 和 【Buttons】插件执行宏命令，现在你可以通过命令，快速收藏你喜欢的电影和图书从豆瓣到你的库（Vault）
@@ -226,5 +220,72 @@ v0.2.1
 
 ![image](https://user-images.githubusercontent.com/241007/195344661-06526475-b6ae-4831-814e-1959ba27ddaa.png)
 
+## 插件更新目录
+ **插件名称**                                                                            | **解释**                                                        | **开启状态** 
+-------------------------------------------------------------------------------------|---------------------------------------------------------------|----------
+ **better\-fn**                                                                      | 更好的脚注插件和样式                                                    | 默认开启     
+ **buttons**                                                                         | 按钮插件                                                          | 默认开启     
+ **calendar**                                                                        | 日历插件                                                          | 默认开启     
+ **consistent\-attachments\-and\-links**                                             |                                                               | 默认开启     
+ **cm\-chs\-patch**                                                                  | （可选）中文分词插件                                                    | 默认开启     
+ **editing\-toolbar**                                                                | 更好的快捷文档编辑工具栏，支持置顶，浮动，跟随光标等多种方式                                | 默认开启     
+ **dataview**                                                                        | 用于数据痴迷的复杂数据视图                                                 | 默认开启     
+ **file\-explorer\-note\-count**                                                     | 为文件管理添加文件夹中文件的数量计数                                            | 默认开启     
+ **lapel**                                                                           | 支持快捷调整大纲标题                                                    | 默认开启     
+ **metaedit**                                                                        | 可编辑markdown 的meta信息，或者叫 yaml区                                 | 默认开启     
+ **obsidian\-banners**                                                               | 主页显示头图                                                        | 默认开启     
+ **obsidian\-booknote\-plugin**                                                      | pdf 查看和标注插件                                                   | 默认开启     
+ **number\-headings\-obsidian**                                                      | 在黑曜石文档中自动编号或重新编号标题                                            | 默认开启     
+ **obsidian\-attachment\-name\-formatting**                                          |                                                               | 默认开启     
+ **obsidian\-copy\-block\-link**                                                     | 右键菜单获得链接到块和标题                                                 | 默认开启     
+ **obsidian\-core\-search\-assistant\-plugin**                                       | 增强搜索插件，搜索结果卡片显示                                               | 默认开启     
+ **obsidian\-custom\-frames**                                                        |                                                               | 默认开启     
+ **obsidian\-dynamic\-highlights**                                                   | 实时预览模式下，按高亮指定文档比如日记中的时间                                       | 默认开启     
+ **obsidian\-diagrams\-net**                                                         | 使用diagrams\.net嵌入式编辑器启用diagrams类型图。                           | 默认开启     
+ **obsidian\-emoji\-toolbar**                                                        | 快速搜索并将Emojis插入您的笔记。                                           | 默认开启     
+ **obsidian\-kanban**                                                                | 在Obsidian 中创建标记支持的Kanban板。                                    | 默认开启     
+ **obsidian\-local\-images**                                                         | 本地图像插件在你的笔记中找到所有外部图像的链接，然后下载并在本地保存图像，最后调整你的笔记中的图像链接指向保存的图像文件。 | 默认开启     
+ **obsidian\-metatable**                                                             | 将完整的 frontmatter \(yaml区域\)显示为表格形式                            | 默认开启     
+ **obsidian\-pandoc**                                                                |                                                               | 默认开启     
+ **obsidian\-quiet\-outline**                                                        | 使大纲安静和更强大，包括是否自动展开，渲染标题作为标记，和搜索支持。                            | 默认开启     
+ **obsidian\-remember\-file\-state**                                                 | 记住每个文件的光标位置、选择、滚动等                                            | 默认开启     
+ **obsidian\-reminder\-plugin**                                                      | 为 task 或待办 添加提醒功能                                             | 默认开启     
+ **obsidian\-rich\-links**                                                           | 将 你写入的URL，转化成类似notion 的网页裁剪样式                                 | 默认开启     
+ **obsidian\-sortable**                                                              | 表格列排序插件                                                       | 默认开启     
+ **obsidian\-minimal\-settings**                                                     | 更改 minimal 主题的颜色，字体和功能。                                       | 默认开启     
+ **obsidian\-style\-settings**                                                       | 提供调整主题，插件和代码段CSS变量的控件                                         | 默认开启     
+ **obsidian\-table\-generator**                                                      | 可以像Typora一样快速生成表格                                             | 默认开启     
+ **ob\-table\-enhancer**                                                             |                                                               | 默认开启     
+ **obsidian\-tasks\-plugin**                                                         | 将Obsidian 中一些内容转换成任务，且这些任务可以管理和更丰富的事件                         | 默认开启     
+ **obsidian\-task\-progress\-bar**                                                   | 在Obsidian中为每个任务添加进度条，支持嵌套任务                                   | 默认开启     
+ **obsidian\-version\-history\-diff**                                                | 文档修改历史恢复插件，比目前官方体验更佳，但需要打开核心插件的“文件恢复”才可使用                     | 默认开启     
+ **obsidian\-view\-mode\-by\-frontmatter**                                           | 通过 yaml 设置文档默认打开是预览还是编辑模式                                     | 默认开启     
+ **omnisearch**                                                                      | 一个能正常工作的搜索引擎                                                  | 默认开启     
+ **quickadd**                                                                        | 快速添加命令和动作，如将新页面或内容添加到Vault。                                   | 默认开启     
+ **recent\-files\-obsidian**                                                         | 显示最近文件列表                                                      | 默认开启     
+ **tag\-wrangler**                                                                   | 重命名，合并，切换和标记窗格的标记                                             | 默认开启     
+ **templater\-obsidian**                                                             | Obsidian 模板插件，让你可以快速建立跟中模板化，简化输入                              | 默认开启     
+ **various\-complements**                                                            | 自动补全插件                                                        | 默认开启     
+ **obsidian42\-brat**                                                                | 用于更新哪些还没来得及上架社区插件，但是依然很好插件                                    
+ **我配置的主要是以下插件【Enhanced\-editing】【obsidian\-editing\-toolbar】【ob\-table\-enhancer】** | 默认开启                                                          
+ **Enhanced\-editing（又名ZH 增强编辑）**                                                    | 提供大量格式排版相关快捷操作                                                | 默认开启     
+ **quick\-explorer**                                                                 | 使用鼠标或键盘从标题栏执行文件资源管理器操作\(并查看当前文件路径\)                           | 默认开启     
+ **pane\-relief**                                                                    | 每个窗格历史，窗格运动的热键\+导航等等                                          | 默认开启     
+ **oz\-image\-plugin**                                                               | 您可以在不需要阅读模式的情况下，粘贴在编辑器内部查看图像。                                 | 默认开启     
+ **quick\-latex**                                                                    | 加速 latex 打字与自动分数，对齐块快捷方式，矩阵快捷方式等                              | 选择性开启    
+ **obsidian\-proxy\-github\-v1\.1\.0**                                               |                                                               | 选择性开启    
+ **music\-code\-blocks**                                                             |                                                               | 选择性开启    
+ **Search on Internet**                                                              | ob 中快捷进行网络搜索                                                  | 选择性开启    
+ **obsidian\-day\-planner**                                                          |                                                               | 选择性开启    
+ **Advanced Tables**                                                                 | 表格辅助                                                          | 选择性开启    
+ **obsidian\-math\-plus**                                                            | 提供 Obsidian 支持使用 latex 等方式书写数学公式                              | 选择性开启    
+
+
+
+## 一些你可能在使用插件中遇到的问题
+
+- 【table-extended】
+	Expermental: Exttended Native Table Syntax
+	和豆瓣书籍摘要模板冲突，会导致无法渲染bookinfo这样的标注文字（callouts）的语法格式("> []")，在阅读模式（markdown-reading-view）下展示异常。
 
 
