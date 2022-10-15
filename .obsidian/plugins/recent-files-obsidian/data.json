@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "Readme",
+      "path": "Readme.md"
+    },
+    {
+      "basename": "05 - White red",
+      "path": "Obsidian-example/Tables/05 - White red.md"
+    },
+    {
+      "basename": "《孤独与陪伴》",
+      "path": "People/Book/《孤独与陪伴》.md"
+    },
+    {
+      "basename": "FastStart-StartupScript",
+      "path": "Template/startup/FastStart-StartupScript.md"
+    },
+    {
       "basename": "保障房 To-Do",
       "path": "Works/58-房产-租房/01、保障性租赁住房/保障房 To-Do.md"
     },
@@ -13,16 +29,8 @@
       "path": "People/Movie/人生切割术 第一季 Severance Season 1.md"
     },
     {
-      "basename": "《孤独与陪伴》",
-      "path": "People/Book/《孤独与陪伴》.md"
-    },
-    {
       "basename": "❓语法帮助",
       "path": "📆EveryDay/❓语法帮助.md"
-    },
-    {
-      "basename": "FastStart-StartupScript",
-      "path": "Template/startup/FastStart-StartupScript.md"
     },
     {
       "basename": "FastStart-GenerateListOfInstalledPlugins",

@@ -1,5 +1,5 @@
 {
-  "baseFontSize": 17,
+  "baseFontSize": 18,
   "theme": "moonstone",
   "cssTheme": "Minimal",
   "translucency": false,
@@ -11,9 +11,17 @@
     "MCL Multi Column",
     "strong outline",
     "tag-pills",
+    "supercharged-links-gen",
+    "CalloutTypesetting",
+    "TabsInObsidian",
+    "ScrollHeadings",
+    "【图标】预览网址加图标 - External Link Icons",
     "tableStyles"
   ],
   "interfaceFontFamily": "Microsoft YaHei",
   "textFontFamily": "Microsoft YaHei",
-  "monospaceFontFamily": "Microsoft YaHei"
+  "monospaceFontFamily": "Microsoft YaHei",
+  "accentColor": "#0e29f1",
+  "showViewHeader": true,
+  "nativeMenus": true
 }

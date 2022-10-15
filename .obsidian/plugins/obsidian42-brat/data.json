@@ -1,12 +1,14 @@
 {
   "pluginList": [
-    "chthollyphile/obsidian-3d-graph-view-plugin"
+    "obsidian-canzi/Enhanced-editing",
+    "cumany/obsidian-editing-toolbar",
+    "Stardusten/ob-table-enhancer"
   ],
   "pluginSubListFrozenVersion": [],
   "themesList": [],
   "updateAtStartup": false,
   "updateThemesAtStartup": false,
-  "ribbonIconEnabled": true,
+  "ribbonIconEnabled": false,
   "loggingEnabled": false,
   "loggingPath": "BRAT-log",
   "loggingVerboseEnabled": false,

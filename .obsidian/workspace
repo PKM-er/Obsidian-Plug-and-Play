@@ -6,93 +6,10 @@
       {
         "id": "8812fa651d875f94",
         "type": "leaf",
-        "dimension": 26.4669163545568,
-        "pane-relief:history-v1": {
-          "pos": 0,
-          "stack": [
-            {
-              "leaf": "8812fa651d875f94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-StartupScript 1 1.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "8812fa651d875f94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-StartupScript 1.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{}"
-            },
-            {
-              "leaf": "8812fa651d875f94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-GenerateListOfInstalledPlugins.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "8812fa651d875f94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-ShortDelay.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "8812fa651d875f94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-StartupScript.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "8812fa651d875f94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongLongDelay.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "8812fa651d875f94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongDelay.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "8812fa651d875f94",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-GenerateListOfInstalledPlugins.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            }
-          ]
-        },
+        "dimension": 99.99999999999999,
         "state": {
-          "type": "empty",
+          "type": "custom-frames-markdown-to-excel",
           "state": {}
-        }
-      },
-      {
-        "id": "40971ffcd9b4c688",
-        "type": "leaf",
-        "dimension": 73.5330836454432,
-        "pane-relief:history-v1": {
-          "pos": 0,
-          "stack": [
-            {
-              "leaf": "40971ffcd9b4c688",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-StartupScript.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            },
-            {
-              "leaf": "40971ffcd9b4c688",
-              "group": null,
-              "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-StartupScript 1.md\",\"mode\":\"source\",\"source\":false}}",
-              "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-            }
-          ]
-        },
-        "state": {
-          "type": "markdown",
-          "state": {
-            "file": "Template/startup/FastStart-StartupScript.md",
-            "mode": "source",
-            "source": false
-          }
         }
       }
     ],
@@ -117,10 +34,6 @@
           {
             "id": "c55efec099ef9ac1",
             "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": []
-            },
             "state": {
               "type": "file-explorer",
               "state": {}
@@ -170,7 +83,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Template/startup/FastStart-StartupScript.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,7 +99,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Template/startup/FastStart-StartupScript.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -230,14 +141,14 @@
   },
   "active": "8812fa651d875f94",
   "lastOpenFiles": [
+    "Readme.md",
+    "Template/startup/FastStart-StartupScript.md",
     "Template/startup/FastStart-StartupScript 1.md",
     "Template/startup/FastStart-StartupScript 1 1.md",
     "Template/startup/FastStart-GenerateListOfInstalledPlugins.md",
     "Template/startup/FastStart-Plugins-ShortDelay.md",
-    "Template/startup/FastStart-StartupScript.md",
     "Template/startup/FastStart-Plugins-LongLongDelay.md",
     "Template/startup/FastStart-Plugins-LongDelay.md",
-    "Readme.md",
     "Obsidian-example/Readme.md",
     "Obsidian-example/Readme英文版.md"
   ]

@@ -1,22 +1,14 @@
 {
-  "scanned": true,
-  "reminders": {
-    "Works/58-房产-租房/01、保障性租赁住房/保障房 To-Do.md": [
-      {
-        "title": "对接剩余的系统对接",
-        "time": "2022-10-12 15:00",
-        "rowNumber": 28
-      }
-    ]
-  },
+  "scanned": false,
+  "reminders": {},
   "debug": false,
   "settings": {
     "reminderTime": "09:00",
     "laters": "In 30 minutes\nIn 1 hour\nIn 3 hours\nTomorrow\nNext week",
     "useSystemNotification": true,
     "autoCompleteTrigger": "@@",
-    "primaryReminderFormat": "ReminderPluginReminderFormat",
-    "enableReminderPluginReminderFormat": true,
+    "primaryReminderFormat": "TasksPluginReminderFormat",
+    "enableReminderPluginReminderFormat": false,
     "dateFormat": "YYYY-MM-DD",
     "dateTimeFormat": "YYYY-MM-DD HH:mm",
     "strictDateFormat": false,

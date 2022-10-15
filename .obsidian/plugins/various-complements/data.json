@@ -5,7 +5,7 @@
   "maxNumberOfWordsAsPhrase": 3,
   "minNumberOfCharactersTriggered": 1,
   "minNumberOfWordsTriggeredPhrase": 1,
-  "complementAutomatically": true,
+  "complementAutomatically": false,
   "delayMilliSeconds": 0,
   "disableSuggestionsDuringImeOn": false,
   "insertAfterCompletion": false,
