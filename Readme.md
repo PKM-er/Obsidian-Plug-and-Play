@@ -45,15 +45,7 @@ v0.2.x
 
 #### 4.2.1. 正文文字样式
 - 增强文本编辑时的体验
-	- 通过【cmenu】增加了文本编辑菜单的跟随模式，这个模式近似拟可以获得Notion，Word那样的跟随鼠标浮动菜单的体验。（@cumany 对这个插件的改版，另外推荐@ cumany的 [Blue-topaz-examples (github.com)](https://github.com/cumany/Blue-topaz-examples/tree/main/.obsidian) 也是一个非常不错的 Obsidian 即插即用库。）
-		- 在 cumany 的基础上，增加文字颜色 以及 马克笔效果 的icon和配置（默认配置了红蓝两色，额外支持橙色、黄色、绿色）；
-		- 在 cumany 的基础上，对浮动文字快捷工具栏做了展示位置的修改，尽可能更加跟随鼠标；
-		- 增加CMENU插件的浮窗模式
-		- 增加对应增加H1-H6的标题菜单选项，需要【增强编辑】插件支持
-		- 增加彩色字号，和对应的彩色菜单
-		- 增加彩色马克笔样式，和对应的彩色菜单
-	- 通过【增强编辑（Enhanced-editing）】插件可以和【cmenu】联动使用，大大增强了可以编辑文本内容格式。（感谢@蚕子，也是 Obsidian 中文圈的大佬了）
-		- 细节修改：这里将【增强编辑（Enhanced-editing）】转换背景，使用的"<span/>"，替换成了"<mark/>"，个人感觉mark的样式远比背景色更方便。【补充图片】
+	- 通过【Editing toolbar】增加了文本编辑快捷菜单，这个模式近似拟可以获得Notion，Word那样的菜单的体验。
 - 快速切换标题的等级：【Lapel】
 - 脚注增强，增强学术论文，引用脚注的体验。【Better footnote】插件
 
@@ -76,14 +68,13 @@ v0.2.x
 
 1、动态目录
 这里使用了【Number Headlings】 代替 更多人推荐的  【Dynamic Table of Contents】。
-- 为什么要兼容文档内的目录，而不是使用 Obsidian 的大纲侧边栏？主要是为了照顾小尺寸屏幕下，宝贵的屏幕宽度。
 - 【Dynamic Table of Contents】无法在实时预览模式下进行渲染，而【Number Headlings】可以。如果你习惯侧面栏的大纲功能的话，大可不必关心此点。
 - 优势：通过【Number Headlings】可以自动为你的标题进行编号
 - 缺点：因为利用【Number Headlings】实现了动态目录功能，所以会减少一层目录的使用，即你只能使用【H2】-【H6】
 
 2、目录管理增强
 【Quiet Outline】，支持多级目录导行，搜索定位，展开、收起。
-![|350](Readme_image_1.png)
+![readme_image](Readme_image_1.png)
 #### 4.2.4. 图片和附件的管理
 增强 Obsidian 对插入图片的文件管理和整理能力。
 
@@ -113,7 +104,6 @@ v0.2.x
 没有使用 【Admonition】插件，反而使用了原生的callouts语法。也符合降低耦合的逻辑。这样大家不用担心插件过多引入的各种问题。
 
 #### 4.2.7. 日期和数字
-- 支持自然描述方式插入时间，比如@Today 对应就是插入今天【natural language dates】。实际使用中我没有开启，感觉对我个人的习惯影响不大。
 - 支持将日期和时间强化展示样式【 dynamic highlights 】
 	- 17:00-19:00 参加生日会
 	- 购物买 Gucci 包包给老婆 2021-05-27
@@ -131,7 +121,6 @@ v0.2.x
 
 - 像 Notion 一样为你的每篇文章都可以自定义不同的头图，还有 icon。整个图片可以是来自网络的也可以是来自本地的，【 Banners 】插件。
 	- 兼容：应对【Minimal 主题】和 【Banners】更新后导致的头图在不同浏览模式下高度异常的问题。
-- 【缺图示】
 
 #### 4.2.11. 标签（tags）
 【 tag-word-cloud 】生成一个带有标签嵌套的属性结构，方便你以标签形式进行管理
