@@ -1,18 +1,18 @@
 {
   "strategy": "default",
   "matchStrategy": "prefix",
-  "maxNumberOfSuggestions": 13,
-  "maxNumberOfWordsAsPhrase": 3,
+  "maxNumberOfSuggestions": 10,
+  "maxNumberOfWordsAsPhrase": 1,
   "minNumberOfCharactersTriggered": 1,
   "minNumberOfWordsTriggeredPhrase": 1,
-  "complementAutomatically": false,
+  "complementAutomatically": true,
   "delayMilliSeconds": 0,
   "disableSuggestionsDuringImeOn": false,
   "insertAfterCompletion": false,
-  "firstCharactersDisableSuggestions": ":/^",
-  "showMatchStrategy": true,
-  "showComplementAutomatically": true,
-  "showIndexingStatus": true,
+  "firstCharactersDisableSuggestions": ":/^[{【(（",
+  "showMatchStrategy": false,
+  "showComplementAutomatically": false,
+  "showIndexingStatus": false,
   "descriptionOnSuggestion": "Full",
   "selectSuggestionKeys": "Tab",
   "additionalCycleThroughSuggestionsKeys": "None",
@@ -28,7 +28,7 @@
   "excludeCurrentVaultPathPrefixPatterns": "",
   "includeCurrentVaultOnlyFilesUnderCurrentDirectory": false,
   "enableCustomDictionaryComplement": true,
-  "customDictionaryPaths": "Knowledge\\Obisdian-learning\\var complete\\count_1w.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_animal.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_caijing.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_car.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_chengyu.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_diming.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_food.txt\nKnowledge\\Obisdian-learning\\var complete\\!dict.md\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_IT.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_law.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_lishimingren.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_medical.txt\nKnowledge\\Obisdian-learning\\var complete\\THUOCL_poem.txt",
+  "customDictionaryPaths": "Obisdian-learning\\var complete\\count_1w.txt\nObisdian-learning\\var complete\\THUOCL_animal.txt\nObisdian-learning\\var complete\\THUOCL_caijing.txt\nObisdian-learning\\var complete\\THUOCL_car.txt\nObisdian-learning\\var complete\\THUOCL_chengyu.txt\nObisdian-learning\\var complete\\THUOCL_diming.txt\nObisdian-learning\\var complete\\THUOCL_food.txt\nObisdian-learning\\var complete\\\\!dict.md\nObisdian-learning\\var complete\\THUOCL_IT.txt\nObisdian-learning\\var complete\\THUOCL_law.txt\nObisdian-learning\\var complete\\THUOCL_lishimingren.txt\nObisdian-learning\\var complete\\THUOCL_medical.txt\nObisdian-learning\\var complete\\THUOCL_poem.txt",
   "columnDelimiter": "Pipe",
   "customDictionaryWordRegexPattern": "",
   "delimiterToHideSuggestion": "+=",
@@ -41,16 +41,12 @@
   "enableFrontMatterComplement": true,
   "frontMatterComplementMatchStrategy": "prefix",
   "insertCommaAfterFrontMatterCompletion": false,
+  "intelligentSuggestionPrioritization": {
+    "maxDaysToKeepHistory": 30,
+    "maxNumberOfHistoryToKeep": 0
+  },
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
-    "保障性租赁住房的定义保租房和公租房等区别": {
-      "保障性租赁住房的定义保租房和公租房等区别": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1663309107146
-        }
-      }
-    },
     "3、数量：本质上对数量没有要求，越多越好，但是如果用户对加投有顾虑，建议保底100（用户代理运营": {
       "3、数量：本质上对数量没有要求，越多越好，但是如果用户对加投有顾虑，建议保底100（用户代理运营": {
         "currentFile": {
@@ -96,6 +92,14 @@
         "frontMatter": {
           "count": 1,
           "lastUpdated": 1665547570924
+        }
+      }
+    },
+    "测验焦虑\t1": {
+      "测验焦虑\t1": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1665998607479
         }
       }
     }
