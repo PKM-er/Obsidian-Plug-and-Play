@@ -5,6 +5,14 @@
       "path": "Readme.md"
     },
     {
+      "basename": "插件说明",
+      "path": "插件说明.md"
+    },
+    {
+      "basename": "《跟动物交换身体》",
+      "path": "People/Book/《跟动物交换身体》.md"
+    },
+    {
       "basename": "05 - White red",
       "path": "Obsidian-example/Tables/05 - White red.md"
     },
@@ -19,10 +27,6 @@
     {
       "basename": "保障房 To-Do",
       "path": "Works/58-房产-租房/01、保障性租赁住房/保障房 To-Do.md"
-    },
-    {
-      "basename": "《跟动物交换身体》",
-      "path": "People/Book/《跟动物交换身体》.md"
     },
     {
       "basename": "人生切割术 第一季 Severance Season 1",
