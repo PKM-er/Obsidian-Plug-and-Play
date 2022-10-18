@@ -1,7 +1,7 @@
 ## 1. 下个版本预告（TBA）
 v0.2.x
-- [ ] 计划：所有插件的样式（CSS）改造，都挪动到主题（theme）文件中，这样大部分时间大家可以按照自己对插件的进行升级。
-- [ ] 计划：兼容 Obsidian v1.0.0（insider v0.16）
+- [>] 计划：所有插件的样式（CSS）改造，都挪动到主题（theme）文件中，这样大部分时间大家可以按照自己对插件的进行升级。
+- [>] 计划：兼容 Obsidian v1.0.0（insider v0.16）
 
 ## 2. 概述
 诚然 Obsidian 是一款伟大的软件（I'm lovin it），但它还很年轻（市场占有率16%，不是它的终点），目前可以说是一个“成以社区，败也社区”的阶段。
@@ -124,7 +124,7 @@ v0.2.x
 
 #### 4.2.11. 标签（tags）
 【 tag-word-cloud 】生成一个带有标签嵌套的属性结构，方便你以标签形式进行管理
-#### 4.2.13. 进阶管理
+#### 4.2.12. 进阶管理
 
 - 【Meta Edit】
 - 【MetaTable】为每个文档的前面 【frontmatter】区域增加可视化的表格视图，优化你的浏览体验。
@@ -202,7 +202,7 @@ v0.2.x
 ![image](https://user-images.githubusercontent.com/241007/195344661-06526475-b6ae-4831-814e-1959ba27ddaa.png)
 
 
-## 一些你可能在使用插件中遇到的问题
+## 5. 一些你可能在使用插件中遇到的问题
 
 - 【table-extended】
 	Expermental: Exttended Native Table Syntax
