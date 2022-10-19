@@ -276,10 +276,10 @@ P.S. 鉴于Obsidian V0.16 是一个交代版本的更新，所以目前所有的
 
 ## 17. v0.1.5
 修复：  
--因为更新15.0后，引入新特性，在新窗口下，【banners】插件的显示异常  
+- 因为更新15.0后，引入新特性，在新窗口下，【banners】插件的显示异常  
 优化：  
--精简插件 【better-word-count】  
--精简插件 【cm-show-whitespace-obsidian】
+- 精简插件 【better-word-count】  
+- 精简插件 【cm-show-whitespace-obsidian】
 
 ## 18. v0.1.4
 1.  Dataview 更新至5.3.8
