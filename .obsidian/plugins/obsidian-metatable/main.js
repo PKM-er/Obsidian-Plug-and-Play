@@ -1573,7 +1573,7 @@ function Tag(props) {
     openTag
   } = useMixture();
   const url = () => `#${props.value}`;
-  const safeValue = () => encodeURI(props.value);
+  const safeValue = () => props.value;
   const clickHandler = (event) => {
     const trigger = event.target;
     event.preventDefault();
@@ -1721,7 +1721,7 @@ function Link(props) {
   } = useMixture();
   const label = props.label;
   const url = props.url;
-  const localUrl = encodeURI((0, import_obsidian2.getLinkpath)(url));
+  const localUrl = (0, import_obsidian2.getLinkpath)(url);
   const clickHandler = (event) => {
     event.preventDefault();
     openNote(event.target.dataset.href);

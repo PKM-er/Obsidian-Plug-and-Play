@@ -43,7 +43,6 @@
   "recent-files-obsidian",
   "various-complements",
   "obsidian-task-progress-bar",
-  "Enhanced-editing",
   "obsidian-table-generator",
   "ob-table-enhancer",
   "dataview",
@@ -51,11 +50,11 @@
   "obsidian-reminder-plugin",
   "obsidian-banners",
   "metaedit",
-  "ProxyGithub",
   "obsidian42-brat",
   "editing-toolbar",
   "obsidian-file-info-plugin",
   "file-explorer-note-count",
   "pane-relief",
-  "lapel"
+  "lapel",
+  "ProxyGithub"
 ]
