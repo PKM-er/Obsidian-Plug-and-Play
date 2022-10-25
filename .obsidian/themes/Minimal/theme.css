@@ -1,19 +1,10 @@
-/* ---------------------------------------------------------------------------
-
-minimal Obsidian 6.0.0 alpha by @kepano User interface replacement for Obsidian.
-  Designed to be used with the
-minimal Theme Settings plugin and the Hider plugin. 
-  Sponsor my work: https://www.buymeacoffee.com/kepano 
-  Readme: https://github.com/kepano/obsidian-minimal 
-  -----------------------------------------------------------------------------
- MIT License Copyright (c) 2020-2022 Stephan Ango (@kepano) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
+/* --------------------------------------------------------------------------- Minimal Theme by @kepano User interface replacement for Obsidian. Designed to be used with the Minimal Theme Settings plugin and the Hider plugin. Sponsor my work: https://www.buymeacoffee.com/kepano Readme: https://github.com/kepano/obsidian-minimal ----------------------------------------------------------------------------- MIT License Copyright (c) 2020-2022 Stephan Ango (@kepano) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
 body{
     --font-text-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
     --font-editor-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
     --font-monospace-theme:Menlo,SFMono-Regular,Consolas,"Roboto Mono",monospace;
     --font-interface-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
-    --font-editor:var(--font-editor-override),var(--font-text-override),var(--font-editor-theme);
-    --minimal-version:"You are currently using minimal 6.0\a\aIf you run into any issues, try updating to the latest version of the theme. It is also highly recommended to install minimal Theme Settings and Contextual Typography plugins.\a\a Full documentation:\aminimal.guide\a\a Support my work:\a buymeacoffee.com/kepano"
+    --font-editor:var(--font-editor-override),var(--font-text-override),var(--font-editor-theme)
 }
 body{
     --blockquote-style:normal;
@@ -64,6 +55,7 @@ body{
     --header-height:50px;
     --mobile-left-sidebar-width:280pt;
     --mobile-right-sidebar-width:240pt;
+    --top-left-padding-y:0px;
     --tag-radius:14px;
     --tag-border-width:1px;
     --top-left-padding-y:0px;
@@ -95,14 +87,14 @@ body{
     --accent-h:201;
     --accent-s:17%;
     --accent-l:50%;
-    --red:#d04255;
-    --yellow:#e5b567;
-    --green:#a8c373;
-    --orange:#d5763f;
-    --cyan:#73bbb2;
-    --blue:#6c99bb;
-    --purple:#9e86c8;
-    --pink:#b05279;
+    --color-red:#d04255;
+    --color-yellow:#e5b567;
+    --color-green:#a8c373;
+    --color-orange:#d5763f;
+    --color-cyan:#73bbb2;
+    --color-blue:#6c99bb;
+    --color-purple:#9e86c8;
+    --color-pink:#b05279
 }
 .theme-light,.theme-light.minimal-default-light,body .excalidraw{
     --bg1:white;
@@ -112,7 +104,7 @@ body{
     --ui2:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 12%) );
     --ui3:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 15%) );
 	--ui4:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 20%) );
-    --ui5:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 30%) );
+	--ui5:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 30%) );
     --tx1:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 90%) );
     --tx2:hsl( var(--base-h), calc(var(--base-s) - 20%), calc(var(--base-l) - 45%) );
     --tx3:hsl( var(--base-h), calc(var(--base-s) - 10%), calc(var(--base-l) - 25%) );
@@ -132,8 +124,8 @@ body{
     --ui1:hsl( var(--base-h), var(--base-s), calc(var(--base-l) + 6%) );
     --ui2:hsl( var(--base-h), var(--base-s), calc(var(--base-l) + 12%) );
     --ui3:hsl( var(--base-h), var(--base-s), calc(var(--base-l) + 20%) );
-    --ui4:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 20%) );
-    --ui5:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 30%) );
+	--ui4:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 20%) );
+	--ui5:hsl( var(--base-h), var(--base-s), calc(var(--base-l) - 30%) );
     --tx1:hsl( var(--base-h), calc(var(--base-s) - 10%), calc(var(--base-l) + 67%) );
     --tx2:hsl( var(--base-h), calc(var(--base-s) - 20%), calc(var(--base-l) + 45%) );
     --tx3:hsl( var(--base-h), calc(var(--base-s) - 10%), calc(var(--base-l) + 20%) );
@@ -149,7 +141,8 @@ body{
     --background-primary:white;
     --background-secondary:white;
     --background-secondary-alt:white;
-    --ribbon-background:white
+    --ribbon-background:white;
+    --bg1:white
 }
 .theme-dark.minimal-dark-black{
     --base-d:0%;
@@ -182,21 +175,22 @@ body{
 	--background-modifier-border2: rgba(12, 11, 11, 0.19);
     --background-modifier-form-field-highlighted:var(--bg1);
     --background-modifier-form-field:var(--bg1);
-    --background-modifier-success:var(--green);
+    --background-modifier-success:var(--color-green);
     --background-modifier-hover:var(--bg3);
     --background-modifier-active-hover:var(--bg3);
     --background-primary:var(--bg1);
     --background-primary-alt:var(--bg2);
     --background-secondary:var(--bg2);
     --background-secondary-alt:var(--bg1);
-    --background-table-rows:var(--white);
+    --background-table-rows:var(--bg2);
+    --checkbox-color:var(--ax3);
     --code-normal:var(--tx1);
     --divider-color:var(--ui1);
     --frame-divider-color:var(--ui1);
     --icon-color-active:var(--tx1);
     --icon-color-focused:var(--tx1);
     --icon-color-hover:var(--tx2);
-	--icon-color-hover2: var(--item-side);
+	--icon-color-hover2:var(--item-side)								   
     --icon-color:var(--tx2);
     --icon-hex:var(--mono0);
     --interactive-accent-hover:var(--ax3);
@@ -218,7 +212,7 @@ body{
     --ribbon-background:var(--bg2);
     --scrollbar-active-thumb-bg:var(--ui3);
     --scrollbar-bg:transparent;
-    --scrollbar-thumb-bg:var(--ui);
+    --scrollbar-thumb-bg:var(--ui1);
     --tab-text-color-focused-active:var(--tx1);
     --tab-outline-color:var(--ui5);
     --text-accent-hover:var(--ax2);
@@ -226,7 +220,7 @@ body{
     --text-blockquote:var(--tx2);
     --text-bold:var(--tx1);
     --text-code:var(--tx4);
-    --text-error:var(--red);
+    --text-error:var(--color-red);
     --text-faint:var(--tx3);
     --text-highlight-bg:var(--hl2);
     --text-italic:var(--tx1);
@@ -238,13 +232,14 @@ body{
     --title-color:var(--tx1);
     --titlebar-background:var(--bg2);
     --titlebar-background-focused:var(--bg2);
-    --titlebar-text-color-focused:var(--tx1);
-    --tag-color:var(--tx2);
+    --titlebar-text-color-focused:var(--tx1)
+	--tag-color:var(--tx2);
     --tag-bg:transparent;
-    --tag-bg2:transparent
+    --tag-bg2:transparent					   					 					 
 }
 .theme-light.minimal-light-contrast .theme-dark{
-    --tab-container-background:var(--bg2)
+    --tab-container-background:var(--bg2);
+    --ribbon-background-collapsed:var(--bg2)
 }
 .theme-light,body .excalidraw{
     --interactive-normal:var(--bg1);
@@ -301,23 +296,6 @@ body{
     --font-code:calc(var(--font-adaptive-normal) * 0.9);
     --table-text-size:calc(var(--font-adaptive-normal) * 0.875)
 }
-@media (max-width:400pt){
-    .is-mobile{
-       --font-adaptive-small:calc(var(--font-ui-medium) + 2px);
-       --font-adaptive-smaller:calc(var(--font-ui-smaller) + 2px);
-       --font-adaptive-smallest:calc(var(--font-ui-smaller) + 2px);
-       --max-width:88%
-    }
-}
-@media (min-width:400pt){
-    .is-mobile{
-       --font-adaptive-small:calc(var(--font-ui-medium) + 3px);
-       --font-adaptive-smaller:calc(var(--font-ui-smaller) + 2px);
-       --font-adaptive-smallest:calc(var(--font-ui-smallest) + 2px);
-       --line-width-adaptive:calc(var(--line-width) + 6rem);
-       --max-width:90%
-    }
-}
 .minimal-dev-block-width .mod-root .workspace-leaf-content:after{
     display:flex;
     align-items:flex-end;
@@ -326,8 +304,7 @@ body{
     color:gray;
     font-family:var(--font-monospace);
     width:100%;
-   
-max-width:100%;
+    max-width:100%;
     height:100vh;
     top:0;
     z-index:999;
@@ -395,8 +372,7 @@ max-width:100%;
     color:orange;
     font-family:var(--font-monospace);
     width:var(--line-width-wide);
-   
-max-width:var(--max-width);
+    max-width:var(--max-width);
     height:100vh;
     border-left:1px solid orange;
     border-right:1px solid orange;
@@ -416,8 +392,7 @@ max-width:var(--max-width);
     font-family:var(--font-monospace);
     content:"\00a0normal";
     width:var(--line-width-adaptive);
-   
-max-width:var(--max-width);
+    max-width:var(--max-width);
     height:100vh;
     border-left:1px solid #00f;
     border-right:1px solid #00f;
@@ -458,13 +433,12 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters{
     margin-left:0
 }
 .cm-editor .cm-lineNumbers .cm-gutterElement{
-   
-min-width:25px
+    min-width:25px
 }
 @media (max-width:400pt){
     .cm-editor .cm-lineNumbers .cm-gutterElement{
-       padding-right:4px;
-       padding-left:8px
+        padding-right:4px;
+        padding-left:8px
     }
 }
 .cm-editor .cm-lineNumbers .cm-gutterElement{
@@ -522,10 +496,6 @@ min-width:25px
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder{
     color:var(--text-faint)
 }
-.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote{
-    background-color:transparent;
-    border-left-width:1px
-}
 .cm-editor .cm-foldPlaceholder,.markdown-source-view.mod-cm6 .cm-fold-indicator .collapse-indicator{
     cursor:var(--cursor)
 }
@@ -551,12 +521,10 @@ min-width:25px
     opacity:1
 }
 body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-contentContainer{
-   
-max-width:100%
+    max-width:100%
 }
 body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer{
-   
-max-width:100%
+    max-width:100%
 }
 .theme-light .cm-link,.theme-light .cm-operator,.theme-light .cm-string,.theme-light .cm-string-2,.theme-light .language-css .token.string,.theme-light .style .token.string,.theme-light .token.entity,.theme-light .token.operator,.theme-light .token.url{
     background-color:transparent
@@ -581,12 +549,10 @@ max-width:100%
     margin:0
 }
 .workspace .markdown-preview-view .markdown-embed-content{
-   
-max-height:none
+    max-height:none
 }
 .internal-embed .markdown-preview-section,.markdown-embed-title{
-   
-max-width:100%
+    max-width:100%
 }
 .CodeMirror-linenumber{
     font-size:var(--font-adaptive-small)!important;
@@ -667,11 +633,24 @@ body:not(.minimal-status-off) .status-bar{
     --tab-stacked-text-transform:rotate(180deg);
     --tab-stacked-text-align:right
 }
+.tab-stack-center{
+    --tab-stacked-text-align:center
+}
+.tab-stack-center-flipped{
+    --tab-stacked-text-transform:rotate(180deg);
+    --tab-stacked-text-align:center
+}
 .tab-stack-bottom{
     --tab-stacked-text-transform:rotate(180deg)
 }
 .tab-stack-bottom-flipped{
     --tab-stacked-text-align:right
+}
+.view-header-title,.view-header-title-parent{
+    text-overflow:ellipsis
+}
+.view-header-title-container:not(.mod-at-end):after{
+    display:none
 }
 body:not(.is-mobile) .view-actions .view-action:last-child{
     margin-left:-1px
@@ -680,15 +659,29 @@ body:not(.is-mobile) .view-actions .view-action:last-child{
     opacity:1;
     transition:opacity .25s ease-in-out
 }
-.minimal-tab-title-hover .view-header-title-container{
+.view-header-title-container{
     opacity:0;
     transition:opacity .1s ease-in-out
 }
-.minimal-tab-title-hover .view-header:hover .view-header-title-container,.minimal-tab-title-hover .workspace-tab-header-container:hover+.workspace-tab-container .view-header-title-container{
+.view-header-title-container:focus-within{
     opacity:1;
     transition:opacity .1s ease-in-out
 }
+.view-header:hover .view-header-title-container,.workspace-tab-header-container:hover+.workspace-tab-container .view-header-title-container{
+    opacity:1;
+    transition:opacity .1s ease-in-out
+}
+.is-phone .view-header-title-container,.minimal-tab-title-visible .view-header-title-container{
+    opacity:1
+}
 .minimal-tab-title-hidden .view-header-title-container{
+    opacity:0
+}
+.minimal-tab-title-hidden .view-header-title-container:focus-within{
+    opacity:1;
+    transition:opacity .1s ease-in-out
+}
+.minimal-tab-title-hidden .view-header:hover .view-header-title-container,.minimal-tab-title-hidden .workspace-tab-header-container:hover+.workspace-tab-container .view-header-title-container{
     opacity:0
 }
 body.window-title-off .titlebar-text{
@@ -719,6 +712,9 @@ body .mod-right-split :not(.mod-top) .workspace-tab-header-container{
 .is-hidden-frameless:not(.colorful-frame) .mod-left-split .mod-top .workspace-tab-header-container{
     --tab-container-background:var(--background-secondary)
 }
+.mod-root .workspace-tab-header-status-icon{
+    color:var(--text-normal)
+}
 .modal button:not(.mod-warning),.modal.mod-settings button:not(.mod-cta):not(.mod-warning),.modal.mod-settings button:not(.mod-warning){
     white-space:nowrap;
     transition:background-color .2s ease-out,border-color .2s ease-out
@@ -736,13 +732,11 @@ button.mod-warning:hover{
     transition:background-color .2s ease-out
 }
 .document-replace,.document-search{
-   
-max-width:100%
+    max-width:100%
 }
 .document-search-container{
     margin:0 auto;
-   
-max-width:var(--max-width);
+    max-width:var(--max-width);
     width:var(--line-width-adaptive)
 }
 .minimal-focus-mode .document-search-container{
@@ -769,6 +763,9 @@ body{
 .markdown-rendered.show-indentation-guide li.task-list-item>ol::before,.markdown-rendered.show-indentation-guide li.task-list-item>ul::before,.markdown-rendered.show-indentation-guide li>ol::before,.markdown-rendered.show-indentation-guide li>ul::before{
     left:var(--ig-adjust-reading)
 }
+.markdown-source-view.mod-cm6 .cm-indent::before{
+    transform:translateX(var(--ig-adjust-edit))
+}
 .is-mobile .markdown-rendered.show-indentation-guide li>ol::before,.is-mobile .markdown-rendered.show-indentation-guide li>ul::before{
     left:calc(0em + var(--ig-adjust-reading))
 }
@@ -777,8 +774,7 @@ body{
 }
 .modal-container.mod-confirmation .modal{
     width:480px;
-   
-min-width:0
+    min-width:0
 }
 .modal-container.mod-confirmation .modal-content{
     margin-top:10px
@@ -819,22 +815,22 @@ min-width:0
     box-shadow:inset 0 0 0 var(--border-width) var(--progress-outline)
 }
 .markdown-preview-view progress[value^='1']::-webkit-progress-value,.markdown-preview-view progress[value^='2']::-webkit-progress-value,.markdown-preview-view progress[value^='3']::-webkit-progress-value,.markdown-rendered progress[value^='1']::-webkit-progress-value,.markdown-rendered progress[value^='2']::-webkit-progress-value,.markdown-rendered progress[value^='3']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value^='1']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value^='2']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value^='3']::-webkit-progress-value{
-    background-color:var(--red)
+    background-color:var(--color-red)
 }
 .markdown-preview-view progress[value^='4']::-webkit-progress-value,.markdown-preview-view progress[value^='5']::-webkit-progress-value,.markdown-rendered progress[value^='4']::-webkit-progress-value,.markdown-rendered progress[value^='5']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value^='4']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value^='5']::-webkit-progress-value{
-    background-color:var(--orange)
+    background-color:var(--color-orange)
 }
 .markdown-preview-view progress[value^='6']::-webkit-progress-value,.markdown-preview-view progress[value^='7']::-webkit-progress-value,.markdown-rendered progress[value^='6']::-webkit-progress-value,.markdown-rendered progress[value^='7']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value^='6']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value^='7']::-webkit-progress-value{
-    background-color:var(--yellow)
+    background-color:var(--color-yellow)
 }
 .markdown-preview-view progress[value^='8']::-webkit-progress-value,.markdown-preview-view progress[value^='9']::-webkit-progress-value,.markdown-rendered progress[value^='8']::-webkit-progress-value,.markdown-rendered progress[value^='9']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value^='8']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value^='9']::-webkit-progress-value{
-    background-color:var(--green)
+    background-color:var(--color-green)
 }
 .markdown-preview-view progress[value='1']::-webkit-progress-value,.markdown-preview-view progress[value='100']::-webkit-progress-value,.markdown-rendered progress[value='1']::-webkit-progress-value,.markdown-rendered progress[value='100']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value='1']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value='100']::-webkit-progress-value{
     background-color:var(--text-accent)
 }
 .markdown-preview-view progress[value='0']::-webkit-progress-value,.markdown-preview-view progress[value='2']::-webkit-progress-value,.markdown-preview-view progress[value='3']::-webkit-progress-value,.markdown-preview-view progress[value='4']::-webkit-progress-value,.markdown-preview-view progress[value='5']::-webkit-progress-value,.markdown-preview-view progress[value='6']::-webkit-progress-value,.markdown-preview-view progress[value='7']::-webkit-progress-value,.markdown-preview-view progress[value='8']::-webkit-progress-value,.markdown-preview-view progress[value='9']::-webkit-progress-value,.markdown-rendered progress[value='0']::-webkit-progress-value,.markdown-rendered progress[value='2']::-webkit-progress-value,.markdown-rendered progress[value='3']::-webkit-progress-value,.markdown-rendered progress[value='4']::-webkit-progress-value,.markdown-rendered progress[value='5']::-webkit-progress-value,.markdown-rendered progress[value='6']::-webkit-progress-value,.markdown-rendered progress[value='7']::-webkit-progress-value,.markdown-rendered progress[value='8']::-webkit-progress-value,.markdown-rendered progress[value='9']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value='0']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value='2']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value='3']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value='4']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value='5']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value='6']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value='7']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value='8']::-webkit-progress-value,.markdown-source-view.is-live-preview progress[value='9']::-webkit-progress-value{
-    background-color:var(--red)
+    background-color:var(--color-red)
 }
 body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar,body:not(.native-scrollbars) ::-webkit-scrollbar{
     width:11px;
@@ -855,8 +851,7 @@ body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar-thumb,body:not
     border:3px solid transparent;
     background-color:var(--background-modifier-border);
     border-width:3px 3px 3px 3px;
-   
-min-height:45px
+    min-height:45px
 }
 body:not(.hider-scrollbars).styled-scrollbars .mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb:hover,body:not(.hider-scrollbars).styled-scrollbars .modal .vertical-tab-header::-webkit-scrollbar-thumb:hover,body:not(.hider-scrollbars).styled-scrollbars ::-webkit-scrollbar-thumb:hover,body:not(.native-scrollbars) .mod-left-split .workspace-tabs ::-webkit-scrollbar-thumb:hover,body:not(.native-scrollbars) .modal .vertical-tab-header::-webkit-scrollbar-thumb:hover,body:not(.native-scrollbars) ::-webkit-scrollbar-thumb:hover{
     background-color:var(--background-modifier-border-hover)
@@ -914,7 +909,7 @@ body:not(.minimal-strike-lists){
 }
 input[type=checkbox]{
     padding:0;
-    margin:0 6px 0 0;
+    margin:0 6px 0 0
 }
 .markdown-preview-section>.contains-task-list{
     padding-bottom:.5em
@@ -923,21 +918,20 @@ ul>li.task-list-item .task-list-item-checkbox{
     margin-left:-1.35em
 }
 .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox{
-    margin:-2px 1px 0 -.6em
+    margin:1px 1px 1px -.4em
+}
+.mod-cm6 .HyperMD-task-line[data-task] .cm-formatting-list-ol~.task-list-label .task-list-item-checkbox{
+    margin:1px
 }
 .markdown-preview-view .task-list-item-checkbox{
     position:relative;
     top:var(--checkbox-top);
     left:var(--checkbox-left);
-    line-height:0;
-    margin:var(--checkbox-margin)
+    line-height:0
 }
 .markdown-preview-view ul>li.task-list-item{
     text-indent:0;
     line-height:var(--line-height)
-}
-.markdown-preview-view .task-list-item{
-    padding-inline-start:0
 }
 .is-mobile .mod-cm6 .HyperMD-task-line[data-task] .task-list-item-checkbox{
     margin-left:-.4em
@@ -964,11 +958,9 @@ ul>li.task-list-item .task-list-item-checkbox{
     padding-bottom:0!important
 }
 .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer,.markdown-preview-view.markdown-embed .markdown-preview-sizer{
-   
-max-width:100%;
+    max-width:100%;
     width:100%;
-   
-min-height:0!important;
+    min-height:0!important;
     padding-bottom:0!important
 }
 .markdown-embed .markdown-preview-section div:last-child p,.markdown-embed .markdown-preview-section div:last-child ul{
@@ -1011,12 +1003,10 @@ min-height:0!important;
     color:var(--text-muted)
 }
 .markdown-preview-view .markdown-embed-content>.markdown-preview-view{
-   
-max-height:none!important
+    max-height:none!important
 }
 .markdown-embed-content{
-   
-max-height:none!important
+    max-height:none!important
 }
 .markdown-embed .markdown-preview-view{
     padding:0
@@ -1036,8 +1026,7 @@ div>ol,div>ul{
     padding-inline-start:1.4em
 }
 ul>li{
-   
-min-height:1.4em
+    min-height:1.4em
 }
 ol>li{
     margin-left:0
@@ -1054,10 +1043,7 @@ ol{
     padding-bottom:var(--list-spacing)
 }
 body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after{
-    left:-5px
-}
-body:not(.is-mobile) .markdown-source-view.mod-cm6 span.cm-formatting.cm-formatting-list.cm-formatting-list-ol{
-    margin-left:-5px
+    left:-3px
 }
 .is-mobile ul>li:not(.task-list-item)::marker{
     font-size:.8em
@@ -1114,71 +1100,31 @@ body{
 }
 .is-live-preview .el-table{
     width:100%;
-   
-max-width:100%
+    max-width:100%
 }
 .cm-hmd-table-sep-dummy,.cm-s-obsidian .HyperMD-table-row span.cm-hmd-table-sep{
     color:var(--text-faint);
     font-weight:400
 }
-body.minimal-unstyled-tags .cm-s-obsidian span.cm-hashtag,body.minimal-unstyled-tags .frontmatter-container .tag,body.minimal-unstyled-tags a.tag{
-    color:var(--tag-color);
-    font-weight:var(--link-weight);
-    text-decoration:none
+body.minimal-unstyled-tags{
+    --tag-background:transparent;
+    --tag-background-hover:transparent;
+    --tag-border-width:0px;
+    --tag-padding-x:0;
+    --tag-padding-y:0;
+    --tag-size:inherit;
+    --tag-color-hover:var(--text-accent-hover)
 }
-body.minimal-unstyled-tags .cm-s-obsidian span.cm-hashtag:hover,body.minimal-unstyled-tags .frontmatter-container .tag:hover,body.minimal-unstyled-tags a.tag:hover{
-    color:var(--text-normal)
-}
-body:not(.minimal-unstyled-tags) .frontmatter-container .tag,body:not(.minimal-unstyled-tags) a.tag{
-    background-color:var(--tag-bg);
-    border:var(--tag-border-width) solid var(--background-modifier-border);
-    color:var(--tag-color);
-    font-size:calc(var(--font-adaptive-normal) * .8);
-    font-weight:var(--link-weight);
-    font-family:var(--font-interface);
-    vertical-align:middle;
-    display:inline-block;
-    margin:1px 0;
-    border-radius:var(--tag-radius)
-}
-body:not(.minimal-unstyled-tags) a.tag:hover{
-    color:var(--text-normal);
-    border-color:var(--background-modifier-border-hover);
-    background-color:var(--tag-bg2)
-}
-body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag{
-    background-color:var(--tag-bg);
-    border:var(--tag-border-width) solid var(--background-modifier-border);
-    color:var(--tag-color);
-    font-size:calc(var(--font-adaptive-normal) * .8);
-    font-family:var(--font-interface);
-    font-weight:var(--link-weight);
-    text-align:center;
-    text-decoration:none;
-    margin:0;
-    vertical-align:text-bottom;
-    padding-top:2px;
-    border-left:none;
-    border-right:none;
-    padding-bottom:3px;
-    cursor:text
-}
-body:not(.minimal-unstyled-tags) .cm-s-obsidian span.cm-hashtag:hover{
-    background-color:var(--tag-bg2)
-}
-body:not(.minimal-unstyled-tags) span.cm-hashtag.cm-hashtag-begin{
-    border-top-left-radius:var(--tag-radius);
-    border-bottom-left-radius:var(--tag-radius);
-    padding-left:8px;
-    border-right:none;
-    border-left:var(--tag-border-width) solid var(--background-modifier-border)
-}
-body:not(.minimal-unstyled-tags) span.cm-hashtag.cm-hashtag-end{
-    border-top-right-radius:var(--tag-radius);
-    border-bottom-right-radius:var(--tag-radius);
-    border-left:none;
-    padding-right:8px;
-    border-right:var(--tag-border-width) solid var(--background-modifier-border)
+body:not(.minimal-unstyled-tags){
+    --tag-size:0.8em;
+    --tag-padding-y:0.2em;
+    --tag-background:transparent;
+    --tag-background-hover:transparent;
+    --tag-color:var(--text-muted);
+    --tag-border-width:1px;
+    --tag-border-color:var(--background-modifier-border);
+    --tag-border-color-hover:var(--background-modifier-border-hover);
+    --tag-color-hover:var(--text-normal)
 }
 h1,h2,h3,h4{
     letter-spacing:-.02em
@@ -1187,17 +1133,17 @@ body,button,input{
     font-family:var(--font-interface)
 }
 .cm-s-obsidian span.cm-error{
-    color:var(--red)
+    color:var(--color-red)
 }
 .markdown-preview-view,.popover,.workspace-leaf-content[data-type=markdown]{
     font-family:var(--font-text)
 }
-.cm-s-obsidian,.cm-s-obsidian .cm-formatting-hashtag,.markdown-preview-view,.markdown-source-view.mod-cm6.is-live-preview .cm-scroller,body{
+.cm-s-obsidian,.markdown-preview-view,.markdown-source-view.mod-cm6.is-live-preview .cm-scroller,body{
     font-size:var(--font-adaptive-normal);
     font-weight:var(--normal-weight);
     line-height:var(--line-height)
 }
-.cm-s-obsidian,.cm-s-obsidian .cm-formatting-hashtag,.cm-s-obsidian span.cm-formatting-task,.markdown-source-view,.markdown-source-view.mod-cm6 .cm-scroller{
+.cm-s-obsidian,.cm-s-obsidian span.cm-formatting-task,.markdown-source-view,.markdown-source-view.mod-cm6 .cm-scroller{
     line-height:var(--line-height);
     font-family:var(--font-editor)
 }
@@ -1213,7 +1159,8 @@ body,button,input{
     box-shadow:-25vw 0 var(--active-line-bg),25vw 0 var(--active-line-bg)
 }
 .borders-none{
-    --divider-width:0px
+    --divider-width:0px;
+    --tab-outline-width:0px
 }
 :root{
     --cards-min-width:180px;
@@ -1225,12 +1172,11 @@ body,button,input{
     --cards-background:transparent;
     --cards-border-width:1px;
     --cards-aspect-ratio:auto;
-    --cards-columns:repeat(auto-fit,
-minmax(var(--cards-min-width), var(--cards-max-width)))
+    --cards-columns:repeat(auto-fit, minmax(var(--cards-min-width), var(--cards-max-width)))
 }
 @media (max-width:400pt){
     :root{
-       --cards-min-width:var(--cards-mobile-width)
+        --cards-min-width:var(--cards-mobile-width)
     }
 }
 .cards.table-100 table.dataview tbody,.table-100 .cards table.dataview tbody{
@@ -1253,7 +1199,8 @@ minmax(var(--cards-min-width), var(--cards-max-width)))
     padding:0 0 calc(var(--cards-padding)/3) 0;
     border-radius:6px;
     overflow:hidden;
-    transition:box-shadow .15s linear
+    transition:box-shadow .15s linear;
+    max-width:var(--cards-max-width)
 }
 .cards table.dataview>tbody>tr:hover{
     border:var(--cards-border-width) solid var(--background-modifier-border-hover);
@@ -1309,7 +1256,7 @@ minmax(var(--cards-min-width), var(--cards-max-width)))
 .cards table.dataview tbody>tr>td img{
     aspect-ratio:var(--cards-aspect-ratio);
     width:100%;
-    object-fit:var(--cards-image-fit);   
+    object-fit:var(--cards-image-fit);
     max-height:var(--cards-image-height);
     background-color:var(--background-secondary);
     vertical-align:bottom
@@ -1324,8 +1271,7 @@ minmax(var(--cards-min-width), var(--cards-max-width)))
     width:calc(100% - var(--cards-padding));
     margin:0 auto;
     overflow:visible!important;
-   
-max-width:100%;
+    max-width:100%;
     display:flex
 }
 .links-int-on .cards table.dataview tbody>tr>td a{
@@ -1428,12 +1374,10 @@ max-width:100%;
     --cards-aspect-ratio:2/3
 }
 .cards.cards-cols-1{
-    --cards-columns:repeat(1,
-minmax(0, 1fr))
+    --cards-columns:repeat(1, minmax(0, 1fr))
 }
 .cards.cards-cols-2{
-    --cards-columns:repeat(2,
-minmax(0, 1fr))
+    --cards-columns:repeat(2, minmax(0, 1fr))
 }
 .cards.cards-cover table.dataview tbody>tr>td img{
     object-fit:cover
@@ -1444,33 +1388,27 @@ minmax(0, 1fr))
 }
 @media (max-width:400pt){
     .cards table.dataview tbody>tr>td:not(:first-child){
-       font-size:80%
+        font-size:80%
     }
 }
 @media (min-width:400pt){
     .cards-cols-3{
-       --cards-columns:repeat(3,
-minmax(0, 1fr))
+        --cards-columns:repeat(3, minmax(0, 1fr))
     }
     .cards-cols-4{
-       --cards-columns:repeat(4,
-minmax(0, 1fr))
+        --cards-columns:repeat(4, minmax(0, 1fr))
     }
     .cards-cols-5{
-       --cards-columns:repeat(5,
-minmax(0, 1fr))
+        --cards-columns:repeat(5, minmax(0, 1fr))
     }
     .cards-cols-6{
-       --cards-columns:repeat(6,
-minmax(0, 1fr))
+        --cards-columns:repeat(6, minmax(0, 1fr))
     }
     .cards-cols-7{
-       --cards-columns:repeat(7,
-minmax(0, 1fr))
+        --cards-columns:repeat(7, minmax(0, 1fr))
     }
     .cards-cols-8{
-       --cards-columns:repeat(8,
-minmax(0, 1fr))
+        --cards-columns:repeat(8, minmax(0, 1fr))
     }
 }
 .cm-formatting.cm-formatting-task.cm-property{
@@ -1499,8 +1437,8 @@ input[data-task="<"]:checked,li[data-task="<"]>input:checked,li[data-task="<"]>p
 }
 input[data-task="?"]:checked,li[data-task="?"]>input:checked,li[data-task="?"]>p>input:checked{
     --checkbox-marker-color:transparent;
-    background-color:var(--yellow);
-    border-color:var(--yellow);
+    background-color:var(--color-yellow);
+    border-color:var(--color-yellow);
     background-position:50% 50%;
     background-size:200% 90%;
     background-image:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"%3E%3Cpath fill="white" fill-rule="evenodd" d="M4.475 5.458c-.284 0-.514-.237-.47-.517C4.28 3.24 5.576 2 7.825 2c2.25 0 3.767 1.36 3.767 3.215c0 1.344-.665 2.288-1.79 2.973c-1.1.659-1.414 1.118-1.414 2.01v.03a.5.5 0 0 1-.5.5h-.77a.5.5 0 0 1-.5-.495l-.003-.2c-.043-1.221.477-2.001 1.645-2.712c1.03-.632 1.397-1.135 1.397-2.028c0-.979-.758-1.698-1.926-1.698c-1.009 0-1.71.529-1.938 1.402c-.066.254-.278.461-.54.461h-.777ZM7.496 14c.622 0 1.095-.474 1.095-1.09c0-.618-.473-1.092-1.095-1.092c-.606 0-1.087.474-1.087 1.091S6.89 14 7.496 14Z"%2F%3E%3C%2Fsvg%3E')
@@ -1526,14 +1464,14 @@ input[data-task="/"]:checked:after,li[data-task="/"]>input:checked:after,li[data
     -webkit-mask-image:none
 }
 input[data-task="!"]:checked,li[data-task="!"]>input:checked,li[data-task="!"]>p>input:checked{
-    color:var(--orange);
+    color:var(--color-orange);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z' clip-rule='evenodd' /%3E%3C/svg%3E")
 }
 input[data-task="\""]:checked,input[data-task="“"]:checked,li[data-task="\""]>input:checked,li[data-task="\""]>p>input:checked,li[data-task="“"]>input:checked,li[data-task="“"]>p>input:checked{
     --checkbox-marker-color:transparent;
     background-position:50% 50%;
-    background-color:var(--cyan);
-    border-color:var(--cyan);
+    background-color:var(--color-cyan);
+    border-color:var(--color-cyan);
     background-size:75%;
     background-repeat:no-repeat;
     background-image:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"%3E%3Cpath fill="white" d="M6.5 10c-.223 0-.437.034-.65.065c.069-.232.14-.468.254-.68c.114-.308.292-.575.469-.844c.148-.291.409-.488.601-.737c.201-.242.475-.403.692-.604c.213-.21.492-.315.714-.463c.232-.133.434-.28.65-.35l.539-.222l.474-.197l-.485-1.938l-.597.144c-.191.048-.424.104-.689.171c-.271.05-.56.187-.882.312c-.318.142-.686.238-1.028.466c-.344.218-.741.4-1.091.692c-.339.301-.748.562-1.05.945c-.33.358-.656.734-.909 1.162c-.293.408-.492.856-.702 1.299c-.19.443-.343.896-.468 1.336c-.237.882-.343 1.72-.384 2.437c-.034.718-.014 1.315.028 1.747c.015.204.043.402.063.539l.025.168l.026-.006A4.5 4.5 0 1 0 6.5 10zm11 0c-.223 0-.437.034-.65.065c.069-.232.14-.468.254-.68c.114-.308.292-.575.469-.844c.148-.291.409-.488.601-.737c.201-.242.475-.403.692-.604c.213-.21.492-.315.714-.463c.232-.133.434-.28.65-.35l.539-.222l.474-.197l-.485-1.938l-.597.144c-.191.048-.424.104-.689.171c-.271.05-.56.187-.882.312c-.317.143-.686.238-1.028.467c-.344.218-.741.4-1.091.692c-.339.301-.748.562-1.05.944c-.33.358-.656.734-.909 1.162c-.293.408-.492.856-.702 1.299c-.19.443-.343.896-.468 1.336c-.237.882-.343 1.72-.384 2.437c-.034.718-.014 1.315.028 1.747c.015.204.043.402.063.539l.025.168l.026-.006A4.5 4.5 0 1 0 17.5 10z"%2F%3E%3C%2Fsvg%3E')
@@ -1550,17 +1488,17 @@ body:not(.tasks) .markdown-preview-view ul li[data-task="-"].task-list-item.is-c
     text-decoration:line-through solid var(--text-faint) 1px
 }
 input[data-task="*"]:checked,li[data-task="*"]>input:checked,li[data-task="*"]>p>input:checked{
-    color:var(--yellow);
+    color:var(--color-yellow);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z' /%3E%3C/svg%3E")
 }
 input[data-task="l"]:checked,li[data-task="l"]>input:checked,li[data-task="l"]>p>input:checked{
-    color:var(--red);
+    color:var(--color-red);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z' clip-rule='evenodd' /%3E%3C/svg%3E")
 }
 input[data-task="i"]:checked,li[data-task="i"]>input:checked,li[data-task="i"]>p>input:checked{
     --checkbox-marker-color:transparent;
-    background-color:var(--blue);
-    border-color:var(--blue);
+    background-color:var(--color-blue);
+    border-color:var(--color-blue);
     background-position:50%;
     background-size:100%;
     background-image:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 512 512"%3E%3Cpath fill="none" stroke="white" stroke-linecap="round" stroke-linejoin="round" stroke-width="40" d="M196 220h64v172"%2F%3E%3Cpath fill="none" stroke="white" stroke-linecap="round" stroke-miterlimit="10" stroke-width="40" d="M187 396h138"%2F%3E%3Cpath fill="white" d="M256 160a32 32 0 1 1 32-32a32 32 0 0 1-32 32Z"%2F%3E%3C%2Fsvg%3E')
@@ -1570,8 +1508,8 @@ input[data-task="i"]:checked,li[data-task="i"]>input:checked,li[data-task="i"]>p
 }
 input[data-task="S"]:checked,li[data-task="S"]>input:checked,li[data-task="S"]>p>input:checked{
     --checkbox-marker-color:transparent;
-    border-color:var(--green);
-    background-color:var(--green);
+    border-color:var(--color-green);
+    background-color:var(--color-green);
     background-size:100%;
     background-image:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"%3E%3Cpath fill="white" fill-rule="evenodd" d="M26 8a2 2 0 1 0-4 0v2a8 8 0 1 0 0 16v8a4.002 4.002 0 0 1-3.773-2.666a2 2 0 0 0-3.771 1.332A8.003 8.003 0 0 0 22 38v2a2 2 0 1 0 4 0v-2a8 8 0 1 0 0-16v-8a4.002 4.002 0 0 1 3.773 2.666a2 2 0 0 0 3.771-1.332A8.003 8.003 0 0 0 26 10V8Zm-4 6a4 4 0 0 0 0 8v-8Zm4 12v8a4 4 0 0 0 0-8Z" clip-rule="evenodd"%2F%3E%3C%2Fsvg%3E')
 }
@@ -1579,61 +1517,62 @@ input[data-task="S"]:checked,li[data-task="S"]>input:checked,li[data-task="S"]>p
     background-image:url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="20" height="20" preserveAspectRatio="xMidYMid meet" viewBox="0 0 48 48"%3E%3Cpath fill-opacity="0.8" fill="black" fill-rule="evenodd" d="M26 8a2 2 0 1 0-4 0v2a8 8 0 1 0 0 16v8a4.002 4.002 0 0 1-3.773-2.666a2 2 0 0 0-3.771 1.332A8.003 8.003 0 0 0 22 38v2a2 2 0 1 0 4 0v-2a8 8 0 1 0 0-16v-8a4.002 4.002 0 0 1 3.773 2.666a2 2 0 0 0 3.771-1.332A8.003 8.003 0 0 0 26 10V8Zm-4 6a4 4 0 0 0 0 8v-8Zm4 12v8a4 4 0 0 0 0-8Z" clip-rule="evenodd"%2F%3E%3C%2Fsvg%3E')
 }
 input[data-task="I"]:checked,li[data-task="I"]>input:checked,li[data-task="I"]>p>input:checked{
-    color:var(--yellow);
+    color:var(--color-yellow);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M11 3a1 1 0 10-2 0v1a1 1 0 102 0V3zM15.657 5.757a1 1 0 00-1.414-1.414l-.707.707a1 1 0 001.414 1.414l.707-.707zM18 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zM5.05 6.464A1 1 0 106.464 5.05l-.707-.707a1 1 0 00-1.414 1.414l.707.707zM5 10a1 1 0 01-1 1H3a1 1 0 110-2h1a1 1 0 011 1zM8 16v-1h4v1a2 2 0 11-4 0zM12 14c.015-.34.208-.646.477-.859a4 4 0 10-4.954 0c.27.213.462.519.476.859h4.002z' /%3E%3C/svg%3E")
 }
 input[data-task="f"]:checked,li[data-task="f"]>input:checked,li[data-task="f"]>p>input:checked{
-    color:var(--red);
+    color:var(--color-red);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z' clip-rule='evenodd' /%3E%3C/svg%3E")
 }
 input[data-task="k"]:checked,li[data-task="k"]>input:checked,li[data-task="k"]>p>input:checked{
-    color:var(--yellow);
+    color:var(--color-yellow);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M18 8a6 6 0 01-7.743 5.743L10 14l-1 1-1 1H6v2H2v-4l4.257-4.257A6 6 0 1118 8zm-6-4a1 1 0 100 2 2 2 0 012 2 1 1 0 102 0 4 4 0 00-4-4z' clip-rule='evenodd' /%3E%3C/svg%3E")
 }
 input[data-task="u"]:checked,li[data-task="u"]>input:checked,li[data-task="u"]>p>input:checked{
-    color:var(--green);
+    color:var(--color-green);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M12 7a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0V8.414l-4.293 4.293a1 1 0 01-1.414 0L8 10.414l-4.293 4.293a1 1 0 01-1.414-1.414l5-5a1 1 0 011.414 0L11 10.586 14.586 7H12z' clip-rule='evenodd' /%3E%3C/svg%3E")
 }
 input[data-task="d"]:checked,li[data-task="d"]>input:checked,li[data-task="d"]>p>input:checked{
-    color:var(--red);
+    color:var(--color-red);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M12 13a1 1 0 100 2h5a1 1 0 001-1V9a1 1 0 10-2 0v2.586l-4.293-4.293a1 1 0 00-1.414 0L8 9.586 3.707 5.293a1 1 0 00-1.414 1.414l5 5a1 1 0 001.414 0L11 9.414 14.586 13H12z' clip-rule='evenodd' /%3E%3C/svg%3E")
 }
 input[data-task="w"]:checked,li[data-task="w"]>input:checked,li[data-task="w"]>p>input:checked{
-    color:var(--purple);
+    color:var(--color-purple);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M6 3a1 1 0 011-1h.01a1 1 0 010 2H7a1 1 0 01-1-1zm2 3a1 1 0 00-2 0v1a2 2 0 00-2 2v1a2 2 0 00-2 2v.683a3.7 3.7 0 011.055.485 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0 3.704 3.704 0 014.11 0 1.704 1.704 0 001.89 0A3.7 3.7 0 0118 12.683V12a2 2 0 00-2-2V9a2 2 0 00-2-2V6a1 1 0 10-2 0v1h-1V6a1 1 0 10-2 0v1H8V6zm10 8.868a3.704 3.704 0 01-4.055-.036 1.704 1.704 0 00-1.89 0 3.704 3.704 0 01-4.11 0 1.704 1.704 0 00-1.89 0A3.704 3.704 0 012 14.868V17a1 1 0 001 1h14a1 1 0 001-1v-2.132zM9 3a1 1 0 011-1h.01a1 1 0 110 2H10a1 1 0 01-1-1zm3 0a1 1 0 011-1h.01a1 1 0 110 2H13a1 1 0 01-1-1z' clip-rule='evenodd' /%3E%3C/svg%3E")
 }
 input[data-task="p"]:checked,li[data-task="p"]>input:checked,li[data-task="p"]>p>input:checked{
-    color:var(--green);
+    color:var(--color-green);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.43a2 2 0 001.106 1.79l.05.025A4 4 0 008.943 18h5.416a2 2 0 001.962-1.608l1.2-6A2 2 0 0015.56 8H12V4a2 2 0 00-2-2 1 1 0 00-1 1v.667a4 4 0 01-.8 2.4L6.8 7.933a4 4 0 00-.8 2.4z' /%3E%3C/svg%3E")
 }
 input[data-task="c"]:checked,li[data-task="c"]>input:checked,li[data-task="c"]>p>input:checked{
-    color:var(--orange);
+    color:var(--color-orange);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M18 9.5a1.5 1.5 0 11-3 0v-6a1.5 1.5 0 013 0v6zM14 9.667v-5.43a2 2 0 00-1.105-1.79l-.05-.025A4 4 0 0011.055 2H5.64a2 2 0 00-1.962 1.608l-1.2 6A2 2 0 004.44 12H8v4a2 2 0 002 2 1 1 0 001-1v-.667a4 4 0 01.8-2.4l1.4-1.866a4 4 0 00.8-2.4z' /%3E%3C/svg%3E")
 }
 input[data-task="b"]:checked,li[data-task="b"]>input:checked,li[data-task="b"]>p>input:checked{
-    color:var(--orange);
+    color:var(--color-orange);
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z' /%3E%3C/svg%3E")
 }
 .colorful-active{
     --sp1:#fff
 }
 .colorful-active .nav-files-container{
-    --nav-item-background-active:var(--ax3);
+    --nav-item-background-active:var(--interactive-accent);
     --nav-item-color-active:var(--sp1)
 }
 .colorful-active #calendar-container .active,.colorful-active #calendar-container .active.today,.colorful-active #calendar-container .active:hover,.colorful-active #calendar-container .day:active{
-    background-color:var(--ax3);
+    background-color:var(--interactive-accent);
     color:var(--sp1)
 }
 .colorful-active #calendar-container .active .dot,.colorful-active #calendar-container .day:active .dot,.colorful-active #calendar-container .today.active .dot{
     fill:var(--sp1)
 }
-body:not(.colorful-active) .horizontal-tab-nav-item.is-active {
+body:not(.colorful-active) .horizontal-tab-nav-item.is-active,body:not(.colorful-active) .vertical-tab-nav-item.is-active{
     background-color:var(--background-modifier-hover);
     color:var(--text-normal)
 }
 body{
-    --frame-background:hsl( var(--frame-background-h), var(--frame-background-s), var(--frame-background-l))
+    --frame-background:hsl( var(--frame-background-h), var(--frame-background-s), var(--frame-background-l));
+    --frame-icon-color:var(--frame-muted-color)
 }
 .theme-light{
     --frame-background-h:var(--accent-h);
@@ -1655,29 +1594,44 @@ body{
 .colorful-frame,.colorful-frame.is-focused{
     --frame-divider-color:var(--frame-outline-color);
     --titlebar-background:var(--frame-background);
-    --titlebar-background-focused:var(--frame-background)
-}
-.colorful-frame .mod-top .workspace-tab-header-container,.colorful-frame .sidebar-toggle-button.mod-left,.colorful-frame .titlebar,.colorful-frame .workspace-ribbon.mod-left:before,.colorful-frame.is-focused .mod-top .workspace-tab-header-container,.colorful-frame.is-focused .sidebar-toggle-button.mod-left,.colorful-frame.is-focused .titlebar,.colorful-frame.is-focused .workspace-ribbon.mod-left:before{
+    --titlebar-background-focused:var(--frame-background);
     --titlebar-text-color:var(--frame-muted-color);
+    --minimal-tab-text-color:var(--frame-muted-color)
+}
+.colorful-frame .workspace-tabs:not(.mod-stacked),.colorful-frame.is-focused .workspace-tabs:not(.mod-stacked){
+    --tab-text-color:var(--minimal-tab-text-color);
+    --tab-text-color-focused:var(--minimal-tab-text-color)
+}
+.colorful-frame .mod-top .workspace-tab-header-container,.colorful-frame .titlebar,.colorful-frame .workspace-ribbon.mod-left:before,.colorful-frame.is-focused .mod-top .workspace-tab-header-container,.colorful-frame.is-focused .titlebar,.colorful-frame.is-focused .workspace-ribbon.mod-left:before{
     --tab-outline-color:var(--frame-outline-color);
-    --tab-divider-color:var(--frame-outline-color);
+    --tab-divider-color:var(--frame-outline-color)
+}
+.colorful-frame .mod-root .workspace-tab-header .workspace-tab-header-inner-icon,.colorful-frame.is-focused .mod-root .workspace-tab-header .workspace-tab-header-inner-icon{
+    --icon-color:var(--minimal-tab-text-color-active);
+    --icon-color-hover:var(--minimal-tab-text-color-active);
+    --icon-color-active:var(--minimal-tab-text-color-active);
+    --icon-color-focused:var(--minimal-tab-text-color-active)
+}
+.colorful-frame .mod-left-split .mod-top .workspace-tab-header,.colorful-frame .mod-right-split .mod-top .workspace-tab-header,.colorful-frame .sidebar-toggle-button,.colorful-frame .workspace-tab-header-new-tab,.colorful-frame .workspace-tab-header-tab-list,.colorful-frame .workspace-tab-header:not(.is-active),.colorful-frame.is-focused .mod-left-split .mod-top .workspace-tab-header,.colorful-frame.is-focused .mod-right-split .mod-top .workspace-tab-header,.colorful-frame.is-focused .sidebar-toggle-button,.colorful-frame.is-focused .workspace-tab-header-new-tab,.colorful-frame.is-focused .workspace-tab-header-tab-list,.colorful-frame.is-focused .workspace-tab-header:not(.is-active){
     --background-modifier-hover:var(--frame-outline-color);
-    --icon-color:var(--frame-muted-color);
-    --icon-color-hover:var(--frame-muted-color);
-    --icon-color-focus:var(--text-normal);
-    --tab-text-color:var(--frame-muted-color);
-    --tab-text-color-hover:var(--frame-muted-color);
-    --tab-text-color-focused:var(--frame-muted-color)
+    --icon-color:var(--frame-icon-color);
+    --icon-color-hover:var(--frame-icon-color);
+    --icon-color-active:var(--frame-icon-color);
+    --icon-color-focused:var(--frame-icon-color);
+    --icon-color-focus:var(--frame-icon-color)
+}
+.colorful-frame .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,.colorful-frame .mod-right-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,.colorful-frame.is-focused .mod-left-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon,.colorful-frame.is-focused .mod-right-split .mod-top .workspace-tab-header.is-active .workspace-tab-header-inner-icon{
+    color:var(--frame-icon-color)
 }
 .workspace-leaf-resize-handle{
     transition:none
 }
-.colorful-frame.is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle,.colorful-frame.is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle,.colorful-frame.is-hidden-frameless .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle{
+.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) .workspace-split.mod-left-split>.workspace-leaf-resize-handle,.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) .workspace-split.mod-right-split>.workspace-leaf-resize-handle,.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle{
     -webkit-app-region:no-drag;
     border:0;
     z-index:15
 }
-.colorful-frame.is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle:after,.colorful-frame.is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle:after,.colorful-frame.is-hidden-frameless .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle:after{
+.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) .workspace-split.mod-left-split>.workspace-leaf-resize-handle:after,.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) .workspace-split.mod-right-split>.workspace-leaf-resize-handle:after,.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle:after{
     content:"";
     height:100%;
     width:1px;
@@ -1685,30 +1639,30 @@ body{
     top:0;
     position:absolute
 }
-.colorful-frame.is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle:hover:after,.colorful-frame.is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle:hover:after,.colorful-frame.is-hidden-frameless .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle:hover:after{
+.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) .workspace-split.mod-left-split>.workspace-leaf-resize-handle:hover:after,.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) .workspace-split.mod-right-split>.workspace-leaf-resize-handle:hover:after,.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle:hover:after{
     background:var(--divider-color-hover)
 }
-.colorful-frame.is-hidden-frameless .workspace-split.mod-right-split>.workspace-leaf-resize-handle:after{
+.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) .workspace-split.mod-right-split>.workspace-leaf-resize-handle:after{
     left:0
 }
-.colorful-frame.is-hidden-frameless .workspace-split.mod-left-split>.workspace-leaf-resize-handle:after,.colorful-frame.is-hidden-frameless .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle:after{
+.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) .workspace-split.mod-left-split>.workspace-leaf-resize-handle:after,.colorful-frame.is-hidden-frameless:not(.minimal-focus-mode) .workspace-split.mod-vertical>*>.workspace-leaf-resize-handle:after{
     right:0
 }
 body.colorful-headings{
-    --h1-color:var(--red);
-    --h2-color:var(--orange);
-    --h3-color:var(--yellow);
-    --h4-color:var(--green);
-    --h5-color:var(--blue);
-    --h6-color:var(--purple)
+    --h1-color:var(--color-red);
+    --h2-color:var(--color-orange);
+    --h3-color:var(--color-yellow);
+    --h4-color:var(--color-green);
+    --h5-color:var(--color-blue);
+    --h6-color:var(--color-purple)
 }
 body.colorful-headings .modal{
-    --h1-color:var(--text-headings);
-    --h2-color:var(--text-headings);
-    --h3-color:var(--text-headings);
-    --h4-color:var(--text-headings);
-    --h5-color:var(--text-headings);
-    --h6-color:var(--text-headings)
+    --h1-color:var(--text-normal);
+    --h2-color:var(--text-normal);
+    --h3-color:var(--text-normal);
+    --h4-color:var(--text-normal);
+    --h5-color:var(--text-normal);
+    --h6-color:var(--text-normal)
 }
 .is-mobile .tree-item-self .collapse-icon{
     width:20px
@@ -1730,9 +1684,6 @@ body:not(.minimal-icons-off) svg.globe{
 }
 body:not(.minimal-icons-off) svg.obsidian-leaflet-plugin-icon-map{
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7' /%3E%3C/svg%3E")
-}
-body:not(.minimal-icons-off) svg.pencil_icon{
-    -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z' /%3E%3C/svg%3E")
 }
 body:not(.minimal-icons-off) .workspace-tab-header[data-type=dictionary-view] svg.quote-glyph{
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253' /%3E%3C/svg%3E")
@@ -1791,6 +1742,9 @@ body.fancy-cursor .markdown-source-view.mod-cm6 .cm-content,body.fancy-cursor .m
 }
 .minimal-focus-mode.borders-title .workspace-ribbon.mod-left.is-collapsed{
     border-right:none
+}
+.minimal-focus-mode .mod-top-right-space .sidebar-toggle-button.mod-right{
+    opacity:0
 }
 .minimal-focus-mode:not(.minimal-status-off) .status-bar{
     opacity:0;
@@ -1890,6 +1844,7 @@ body.minimal-focus-mode.show-view-header .view-content{
     font-variant-numeric:tabular-nums
 }
 .table-lines{
+    --table-border-width:1px;
     --table-header-border-width:1px;
     --table-column-first-border-width:1px;
     --table-column-last-border-width:1px;
@@ -1908,8 +1863,7 @@ body.minimal-focus-mode.show-view-header .view-content{
     content:" ";
     padding-right:.5em;
     display:inline-block;
-   
-min-width:2em
+    min-width:2em
 }
 .table-numbers table:not(.calendar)>tbody>tr>td:first-child::before{
     counter-increment:section;
@@ -1917,8 +1871,7 @@ min-width:2em
     text-align:center;
     padding-right:.5em;
     display:inline-block;
-   
-min-width:2em;
+    min-width:2em;
     color:var(--text-faint);
     font-variant-numeric:tabular-nums
 }
@@ -1940,6 +1893,11 @@ min-width:2em;
 .theme-dark .markdown-preview-view img,.theme-dark .markdown-source-view img{
     opacity:var(--image-muted);
     transition:opacity .25s linear
+}
+@media print{
+    body{
+        --image-muted:1
+    }
 }
 .theme-dark .markdown-preview-view img:hover,.theme-dark .markdown-source-view img:hover,.theme-dark .print-preview img{
     opacity:1;
@@ -2006,10 +1964,10 @@ div:not(.el-embed-image)+.el-embed-image{
 }
 @media (max-width:400pt){
     .el-embed-image{
-       margin-top:.25rem
+        margin-top:.25rem
     }
     .img-grid .markdown-preview-section>.el-embed-image>p{
-       grid-column-gap:0.25rem
+        grid-column-gap:0.25rem
     }
 }
 body:not(.zoom-off) .view-content img{
@@ -2068,6 +2026,12 @@ body:not(.zoom-off) .view-content .image-embed:active img{
     position:absolute;
     opacity:1
 }
+.labeled-nav.is-fullscreen:not(.colorful-frame){
+    --labeled-nav-top-margin:0
+}
+.labeled-nav{
+    --labeled-nav-top-margin:var(--header-height)
+}
 .labeled-nav.is-translucent .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner{
     background-color:transparent
 }
@@ -2090,7 +2054,7 @@ body:not(.zoom-off) .view-content .image-embed:active img{
 }
 .labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before{
     position:absolute;
-    top:0;
+	top:0;
     content:" "
 }
 .labeled-nav.hider-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window) .mod-left-split:not(.is-sidedock-collapsed) .workspace-tabs.mod-top-left-space .workspace-tab-header-container{
@@ -2122,7 +2086,7 @@ body:not(.zoom-off) .view-content .image-embed:active img{
 }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner{
     padding-top:var(--size-4-2);
-    margin-top:var(--header-height);
+    margin-top:var(--labeled-nav-top-margin);
     flex-direction:column!important;
     background-color:var(--background-secondary)
 }
@@ -2145,7 +2109,10 @@ body:not(.zoom-off) .view-content .image-embed:active img{
 }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header.is-active,.labeled-nav .mod-left-split .mod-top .workspace-tab-header:hover{
     opacity:1;
+    --tab-text-color-active:var(--text-normal);
     --tab-text-color-focused:var(--text-normal);
+    --tab-text-color-focused-active:var(--text-normal);
+    --tab-text-color-focused-active-current:var(--text-normal);
     --icon-color:var(--text-normal)
 }
 .labeled-nav .mod-left-split .mod-top .workspace-tab-header .workspace-tab-header-inner{
@@ -2196,8 +2163,7 @@ body{
     display:flex;
     flex-direction:column;
     width:100%;
-   
-max-width:100%;
+    max-width:100%;
     padding-left:0;
     padding-top:0
 }
@@ -2208,45 +2174,37 @@ max-width:100%;
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>div{
     margin-left:auto;
     margin-right:auto;
-   
-max-width:var(--max-width);
+    max-width:var(--max-width);
     width:var(--line-width-adaptive)
 }
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-embed .markdown-preview-sizer>div{
-   
-max-width:100%
+    max-width:100%
 }
 .contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-lang-dataview,.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-lang-dataviewjs,.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-table{
     width:100%;
-   
-max-width:100%;
+    max-width:100%;
     overflow-x:auto
 }
 .el-lang-dataview .block-language-dataview .contains-task-list,.el-lang-dataviewjs .block-language-dataviewjs .contains-task-list{
-   
-max-width:100%
+    max-width:100%
 }
 .is-readable-line-width .el-lang-dataview .dataview.table-view-table,.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table,.is-readable-line-width .el-table table{
     width:var(--table-max-width);
-   
-max-width:var(--line-width-adaptive);
+    max-width:var(--line-width-adaptive);
     margin:0 auto .5rem
 }
 .markdown-embed .el-lang-dataview .dataview.table-view-table,.markdown-embed .el-table table{
     width:100%
 }
 .markdown-preview-view.table-100.is-readable-line-width .el-lang-dataview .dataview.table-view-table,.markdown-preview-view.table-100.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table,.markdown-preview-view.table-100.is-readable-line-width .el-table table,.table-100 .el-lang-dataview .dataview.table-view-table,.table-100 .el-lang-dataviewjs .dataview.table-view-table,.table-100 .el-table table{
-   
-max-width:100%!important;
+    max-width:100%!important;
     width:100%!important
 }
 .markdown-preview-view.table-max .el-lang-dataview .dataview.table-view-table,.markdown-preview-view.table-max .el-lang-dataviewjs .dataview.table-view-table,.markdown-preview-view.table-max .el-table table,.table-max .el-lang-dataview .dataview.table-view-table,.table-max .el-lang-dataviewjs .dataview.table-view-table,.table-max .el-table table{
-   
-max-width:100%!important
+    max-width:100%!important
 }
 .markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataview .dataview.table-view-table,.markdown-preview-view.is-readable-line-width.table-wide .el-lang-dataviewjs .dataview.table-view-table,.markdown-preview-view.is-readable-line-width.table-wide .el-table table,.table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataview .dataview.table-view-table,.table-wide .markdown-preview-view.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table,.table-wide .markdown-preview-view.is-readable-line-width .el-table table{
-   
-max-width:var(--line-width-wide)!important
+    max-width:var(--line-width-wide)!important
 }
 .table-100 .dataview.table-view-table td:first-child,.table-100 .dataview.table-view-table th:first-child,.table-100 .markdown-source-view.mod-cm6 td:first-child,.table-100 .markdown-source-view.mod-cm6 th:first-child,.table-100 table td:first-child,.table-100 table th:first-child{
     padding-left:20px
@@ -2262,12 +2220,10 @@ max-width:var(--line-width-wide)!important
 }
 .contextual-typography .markdown-preview-view.iframe-100 .markdown-preview-sizer>.el-iframe,.contextual-typography .markdown-preview-view.img-100 .markdown-preview-sizer>.el-embed-image,.contextual-typography .markdown-preview-view.is-readable-line-width.chart-100 .markdown-preview-sizer>.el-lang-chart,.contextual-typography .markdown-preview-view.is-readable-line-width.map-100 .markdown-preview-sizer>.el-lang-leaflet,.contextual-typography.chart-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-lang-chart,.contextual-typography.iframe-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-iframe,.contextual-typography.img-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-embed-image,.contextual-typography.map-100 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-lang-leaflet{
     width:100%;
-   
-max-width:100%
+    max-width:100%
 }
 .is-readable-line-width .el-lang-dataview .dataview.table-view-table,.is-readable-line-width .el-lang-dataviewjs .dataview.table-view-table,.is-readable-line-width .el-table table{
-   
-max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
+    max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
     margin-left:var(--left-margin-table)!important
 }
 .chart-100 .el-lang-chart,.chart-max .el-lang-chart,.chart-wide .el-lang-chart,.embed-strict .el-embed-page p,.iframe-100 .el-iframe,.iframe-max .el-iframe,.iframe-wide .el-iframe,.img-100 .el-embed-image,.img-max .el-embed-image,.img-wide .el-embed-image,.map-100 .el-lang-leaflet,.map-max .el-lang-leaflet,.map-wide .el-lang-leaflet,.table-100 .el-lang-dataview,.table-100 .el-lang-dataviewjs,.table-100 .el-table,.table-max .el-lang-dataview,.table-max .el-lang-dataviewjs,.table-max .el-table,.table-wide .el-lang-dataview,.table-wide .el-lang-dataviewjs,.table-wide .el-table{
@@ -2275,46 +2231,43 @@ max-width:calc(var(--line-width-adaptive) - var(--folding-offset));
 }
 .chart-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,.chart-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,.img-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content>.image-embed,.img-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content>img,.img-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content>.image-embed,.img-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content>img,.map-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,.map-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block.cm-table-widget>div:not(.edit-block-button),.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataview,.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataviewjs,.table-max .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget>table,.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block.cm-table-widget>div:not(.edit-block-button),.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataview,.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataviewjs,.table-max.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget>table{
     width:var(--max-width)!important;
-   
-max-width:var(--max-width)!important;
+    max-width:var(--max-width)!important;
     transform:none!important;
     padding-left:0;
     margin:0 auto!important
 }
 .chart-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,.chart-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,.img-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content>.image-embed,.img-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content>img,.img-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content>.image-embed,.img-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content>img,.map-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,.map-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block.cm-table-widget>div:not(.edit-block-button),.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataview,.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataviewjs,.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget>table,.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block.cm-table-widget>div:not(.edit-block-button),.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataview,.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataviewjs,.table-wide.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-table-widget>table{
     width:var(--line-width-wide)!important;
-   
-max-width:var(--max-width);
+    max-width:var(--max-width);
     transform:none!important;
     padding-left:0;
     margin:0 auto!important
 }
 .chart-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,.chart-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-chart,.img-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content>.image-embed,.img-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content>img,.img-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content>.image-embed,.img-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-content>img,.map-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,.map-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .block-language-leaflet,.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block.cm-table-widget>div:not(.edit-block-button),.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataview,.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataviewjs,.table-100 .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width table,.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block.cm-table-widget>div:not(.edit-block-button),.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataview,.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataviewjs,.table-100.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width table{
     width:100%!important;
-   
-max-width:100%!important;
+    max-width:100%!important;
     transform:none!important;
     margin:0 auto!important;
     padding-left:0
 }
 @media (max-width:400pt){
     .markdown-preview-view .el-lang-dataview td:first-child .markdown-preview-view .el-lang-dataviewjs th:first-child,.markdown-preview-view .el-lang-dataview th:first-child,.markdown-preview-view .el-lang-dataviewjs td:first-child,.markdown-preview-view .el-table td:first-child,.markdown-preview-view .el-table th:first-child{
-       padding-left:6vw
+        padding-left:6vw
     }
     .markdown-preview-view .el-lang-dataview td:last-child,.markdown-preview-view .el-lang-dataview th:last-child,.markdown-preview-view .el-lang-dataviewjs td:last-child,.markdown-preview-view .el-lang-dataviewjs th:last-child,.markdown-preview-view .el-table td:last-child,.markdown-preview-view .el-table th:last-child{
-       padding-right:6vw
+        padding-right:6vw
     }
     .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-lang-dataview .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-lang-dataviewjs,.markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-table{
-       padding-left:0;
-       padding-right:0
+        padding-left:0;
+        padding-right:0
     }
     .markdown-preview-view .table-view-table table,.markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-lang-dataview .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-lang-dataviewjs,.markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-table{
-       width:100%
+        width:100%
     }
 }
 @media (max-width:400pt){
     .is-mobile{
-       --folding-offset:0px
+        --folding-offset:0px
     }
 }
 .markdown-preview-view.wide,.markdown-source-view.wide{
@@ -2325,8 +2278,7 @@ max-width:100%!important;
     --line-width-wide:300em
 }
 .markdown-preview-view.is-readable-line-width .markdown-preview-sizer{
-   
-max-width:var(--max-width);
+    max-width:var(--max-width);
     width:var(--line-width-adaptive);
     padding-left:0
 }
@@ -2335,12 +2287,10 @@ max-width:var(--max-width);
     padding-right:0;
     margin:0 auto 0 auto;
     width:var(--line-width-adaptive);
-   
-max-width:var(--max-width)
+    max-width:var(--max-width)
 }
 .markdown-reading-view .markdown-preview-view:not(.is-readable-line-width)>.markdown-preview-sizer{
-   
-max-width:var(--max-width);
+    max-width:var(--max-width);
     margin:0 auto;
     padding-left:var(--folding-offset)
 }
@@ -2446,6 +2396,17 @@ body:not(.links-int-on){
 body:not(.links-ext-on){
     --link-external-decoration:none
 }
+body{
+    --minimal-tab-text-color:var(--text-muted);
+    --minimal-tab-text-color-active:var(--text-normal)
+}
+.workspace-tabs:not(.mod-stacked){
+    --tab-text-color:var(--minimal-tab-text-color);
+    --tab-text-color-focused:var(--minimal-tab-text-color);
+    --tab-text-color-active:var(--minimal-tab-text-color-active);
+    --tab-text-color-focused-active:var(--minimal-tab-text-color-active);
+    --tab-text-color-focused-active-current:var(--minimal-tab-text-color-active)
+}
 .tabs-square .mod-root{
     --tab-curve:0;
     --tab-radius:0;
@@ -2476,8 +2437,144 @@ body:not(.links-ext-on){
 .tabs-underline .mod-root .workspace-tab-header-inner:hover{
     background-color:transparent
 }
-.workspace>.workspace-split:not(.mod-root) .workspace-tabs:not(.mod-top) .workspace-tab-header-container{
+body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-square) .workspace>.workspace-split:not(.mod-root) .workspace-tabs:not(.mod-top) .workspace-tab-header-container{
     --tab-outline-width:0
+}
+.tabs-modern.colorful-frame .mod-root .mod-top.workspace-tabs:not(.mod-stacked){
+    --tab-background:var(--frame-outline-color);
+    --tab-outline-width:1px
+}
+.tabs-modern.colorful-frame .mod-root .mod-top.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-close-button,.tabs-modern.colorful-frame .mod-root .mod-top.workspace-tabs:not(.mod-stacked) .workspace-tab-header:hover .workspace-tab-header-inner-close-button{
+    color:var(--minimal-tab-text-color-active)
+}
+.tabs-modern.minimal-focus-mode .mod-root .workspace-tab-header-container:hover{
+    --tab-outline-width:0px
+}
+.tabs-modern .mod-root{
+    --tab-container-background:var(--background-primary)
+}
+.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked){
+    --tab-background:var(--background-modifier-hover);
+    --tab-height:calc(var(--header-height) - 14px);
+    --tab-outline-width:0px
+}
+.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner::after,.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header::after,.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header::before{
+    display:none
+}
+.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-container-inner{
+    align-items:center;
+    margin:0;
+    padding:2px var(--size-4-2) 0 var(--size-4-1)
+}
+.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner-title{
+    text-overflow:ellipsis;
+    -webkit-mask-image:none
+}
+.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header{
+    background:0 0;
+    border-radius:5px;
+    border:none;
+    box-shadow:none;
+    height:var(--tab-height);
+    margin-left:var(--size-4-1);
+    padding:0
+}
+.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-title{
+    color:var(--tab-text-color-active)
+}
+.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active.mod-active,.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:hover{
+    opacity:1;
+    background-color:var(--tab-background)
+}
+.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-new-tab{
+    margin-right:0
+}
+.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header-inner{
+    padding:0 var(--size-4-1) 0 var(--size-4-2);
+    border:1px solid transparent
+}
+.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner{
+    background-color:transparent
+}
+.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active:not(.mod-active) .workspace-tab-header-inner,.tabs-modern .mod-root .workspace-tabs:not(.mod-stacked) .workspace-tab-header:not(:hover):not(.mod-active) .workspace-tab-header-inner{
+    border:1px solid var(--tab-outline-color)
+}
+.tabs-modern.sidebar-tabs-default .mod-right-split,.tabs-modern.sidebar-tabs-wide .mod-right-split{
+    --tab-outline-width:0
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-spacer,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-spacer,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-spacer{
+    display:none
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container{
+    padding-right:0
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container-inner{
+    padding:0;
+    margin:0;
+    flex-grow:1;
+    gap:0
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header{
+    flex-grow:1;
+    border-radius:0;
+    max-width:100px
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header:hover,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header:hover,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header:hover{
+    background-color:transparent
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner{
+    background-color:transparent
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner{
+    border-bottom:2px solid transparent;
+    border-radius:0
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover{
+    border-color:var(--ui2)
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner{
+    border-color:var(--ax3);
+    padding-top:1px
+}
+.sidebar-tabs-square .mod-left-split,.sidebar-tabs-square .mod-right-split{
+    --tab-radius:0px
+}
+.sidebar-tabs-index.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top),.sidebar-tabs-index:not(.labeled-nav) .mod-left-split,.sidebar-tabs-square.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top),.sidebar-tabs-square:not(.labeled-nav) .mod-left-split{
+    --tab-background-active:var(--background-secondary)
+}
+.sidebar-tabs-index .mod-right-split .workspace-tab-header-container-inner,.sidebar-tabs-index.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container-inner,.sidebar-tabs-index:not(.labeled-nav) .mod-left-split .workspace-tab-header-container-inner,.sidebar-tabs-square .mod-right-split .workspace-tab-header-container-inner,.sidebar-tabs-square.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container-inner,.sidebar-tabs-square:not(.labeled-nav) .mod-left-split .workspace-tab-header-container-inner{
+    padding:1px var(--size-4-2) 0;
+    margin:6px 0 calc(var(--tab-outline-width) * -1);
+    flex-grow:1
+}
+.sidebar-tabs-index .mod-right-split .workspace-tab-header,.sidebar-tabs-index.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header,.sidebar-tabs-index:not(.labeled-nav) .mod-left-split .workspace-tab-header,.sidebar-tabs-square .mod-right-split .workspace-tab-header,.sidebar-tabs-square.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header,.sidebar-tabs-square:not(.labeled-nav) .mod-left-split .workspace-tab-header{
+    flex-grow:1;
+    max-width:100px;
+    border-radius:var(--tab-radius) var(--tab-radius) 0 0
+}
+.sidebar-tabs-index .mod-right-split .workspace-tab-header.is-active,.sidebar-tabs-index.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active,.sidebar-tabs-index:not(.labeled-nav) .mod-left-split .workspace-tab-header.is-active,.sidebar-tabs-square .mod-right-split .workspace-tab-header.is-active,.sidebar-tabs-square.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active,.sidebar-tabs-square:not(.labeled-nav) .mod-left-split .workspace-tab-header.is-active{
+    box-shadow:0 0 0 var(--tab-outline-width) var(--tab-outline-color);
+    color:var(--tab-text-color-active);
+    background-color:var(--tab-background-active)
+}
+.sidebar-tabs-wide .mod-right-split .workspace-tab-header-container-inner,.sidebar-tabs-wide.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container-inner,.sidebar-tabs-wide:not(.labeled-nav) .mod-left-split .workspace-tab-header-container-inner{
+    flex-grow:1;
+    border:1px solid var(--tab-outline-color);
+    padding:3px;
+    margin:6px 8px 6px;
+    border-radius:4px
+}
+.sidebar-tabs-wide .mod-right-split .workspace-tab-header,.sidebar-tabs-wide.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header,.sidebar-tabs-wide:not(.labeled-nav) .mod-left-split .workspace-tab-header{
+    flex-grow:1
+}
+.sidebar-tabs-wide .mod-right-split .workspace-tab-header.is-active,.sidebar-tabs-wide.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header.is-active,.sidebar-tabs-wide:not(.labeled-nav) .mod-left-split .workspace-tab-header.is-active{
+    border-color:transparent
+}
+.sidebar-tabs-wide .mod-right-split .workspace-tab-header-container,.sidebar-tabs-wide.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,.sidebar-tabs-wide:not(.labeled-nav) .mod-left-split .workspace-tab-header-container{
+    padding-right:0
+}
+.sidebar-tabs-wide .mod-right-split .workspace-tab-header-spacer,.sidebar-tabs-wide.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-spacer,.sidebar-tabs-wide:not(.labeled-nav) .mod-left-split .workspace-tab-header-spacer{
+    display:none
 }
 .full-file-names{
     --nav-item-white-space:normal
@@ -2525,6 +2622,9 @@ body:not(.full-file-names) .tree-item-inner{
     padding-bottom:.4em;
     margin-block-end:0.6em
 }
+.is-tablet .workspace-drawer{
+    padding-top:0
+}
 .is-tablet .workspace-drawer:not(.is-pinned){
     margin:30px 16px 0;
     height:calc(100vh - 48px);
@@ -2534,6 +2634,12 @@ body:not(.full-file-names) .tree-item-inner{
 .is-tablet .workspace-drawer-ribbon{
     background-color:var(--background-primary);
     border-right:1px solid var(--background-modifier-border)
+}
+.is-tablet .workspace-drawer-header{
+    padding-top:var(--size-4-4)
+}
+.is-mobile .markdown-source-view.mod-cm6 .cm-gutters{
+    margin-left:0
 }
 .backlink-pane>.tree-item-self,.backlink-pane>.tree-item-self:hover,.outgoing-link-pane>.tree-item-self,.outgoing-link-pane>.tree-item-self:hover{
     color:var(--text-muted);
@@ -2554,6 +2660,9 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
 }
 .nav-buttons-container{
     justify-content:flex-start
+}
+input.prompt-input,input.prompt-input:focus,input.prompt-input:focus-visible,input.prompt-input:hover{
+    border-color:rgba(var(--mono-rgb-100),.05)
 }
 .is-mobile .mod-publish .modal-content{
     display:unset;
@@ -2581,43 +2690,42 @@ body:not(.is-mobile) .nav-folder.mod-root>.nav-folder-title .nav-folder-title-co
 }
 @media (max-width:400pt){
     .is-mobile .publish-changes-info,.is-mobile .publish-section-header{
-       flex-wrap:wrap;
-       border:none
+        flex-wrap:wrap;
+        border:none
     }
     .is-mobile .publish-changes-info .publish-changes-add-linked-btn{
-       flex-basis:100%;
-       margin-top:10px
+        flex-basis:100%;
+        margin-top:10px
     }
     .is-mobile .publish-section-header-text{
-       flex-basis:100%;
-       margin-bottom:10px;
-       margin-left:20px;
-       margin-top:-8px
+        flex-basis:100%;
+        margin-bottom:10px;
+        margin-left:20px;
+        margin-top:-8px
     }
     .is-mobile .publish-section{
-       background:var(--background-secondary);
-       border-radius:10px;
-       padding:12px 12px 1px
+        background:var(--background-secondary);
+        border-radius:10px;
+        padding:12px 12px 1px
     }
     .is-mobile .publish-changes-switch-site{
-       flex-grow:0;
-       margin-right:10px
+        flex-grow:0;
+        margin-right:10px
     }
 }
 .release-notes-view .cm-scroller.is-readable-line-width{
     width:var(--line-width-adaptive);
-   
-max-width:var(--max-width);
+    max-width:var(--max-width);
     margin:0 auto
 }
 @media (max-width:400pt){
     .is-mobile .modal.mod-sync-log{
-       width:100vw;
-       height:100vh;
-       max-height:calc(100vh - 32px);
-       box-shadow:0 -32px 0 32px var(--background-primary);
-       bottom:0;
-       padding-bottom:10px
+        width:100vw;
+        height:100vh;
+        max-height:calc(100vh - 32px);
+        box-shadow:0 -32px 0 32px var(--background-primary);
+        bottom:0;
+        padding-bottom:10px
     }
 }
 .obsidian-banner.solid{
@@ -2652,19 +2760,19 @@ body.theme-dark .button-default:active,body.theme-dark .button-default:focus,bod
     box-shadow:none
 }
 body .button-default.blue{
-    background-color:var(--blue)!important
+    background-color:var(--color-blue)!important
 }
 .button-default.red{
-    background-color:var(--red)!important
+    background-color:var(--color-red)!important
 }
 .button-default.green{
-    background-color:var(--green)!important
+    background-color:var(--color-green)!important
 }
 .button-default.yellow{
-    background-color:var(--yellow)!important
+    background-color:var(--color-yellow)!important
 }
 .button-default.purple{
-    background-color:var(--purple)!important
+    background-color:var(--color-purple)!important
 }
 .workspace-leaf-content[data-type=calendar] .view-content{
     padding:5px 0 0 0
@@ -2793,14 +2901,14 @@ body .button-default.blue{
     margin:1em 0
 }
 .theme-dark,.theme-light{
-    --chart-color-1:var(--blue);
-    --chart-color-2:var(--red);
-    --chart-color-3:var(--yellow);
-    --chart-color-4:var(--green);
-    --chart-color-5:var(--orange);
-    --chart-color-6:var(--purple);
-    --chart-color-7:var(--cyan);
-    --chart-color-8:var(--pink)
+    --chart-color-1:var(--color-blue);
+    --chart-color-2:var(--color-red);
+    --chart-color-3:var(--color-yellow);
+    --chart-color-4:var(--color-green);
+    --chart-color-5:var(--color-orange);
+    --chart-color-6:var(--color-purple);
+    --chart-color-7:var(--color-cyan);
+    --chart-color-8:var(--color-pink)
 }
 .checklist-plugin-main .group .classic,.checklist-plugin-main .group .compact,.checklist-plugin-main .group .page,.checklist-plugin-main .group svg{
     cursor:var(--cursor)
@@ -2946,8 +3054,7 @@ table.dataview ul.dataview-ul{
     margin-block-end:0em!important
 }
 .markdown-preview-view .table-view-table>tbody>tr>td,.markdown-source-view.mod-cm6 .table-view-table>tbody>tr>td{
-   
-max-width:var(--max-col-width)
+    max-width:var(--max-col-width)
 }
 body .dataview.small-text{
     color:var(--text-faint)
@@ -2967,8 +3074,7 @@ body .dataview-error{
     color:var(--text-muted)
 }
 body div.dataview-error-box{
-   
-min-height:0;
+    min-height:0;
     border:none;
     background-color:transparent;
     font-size:var(--table-text-size);
@@ -3032,8 +3138,7 @@ div[data-type=dictionary-view] .contents{
 div[data-type=dictionary-view] .results>.container{
     background-color:transparent;
     margin-top:0;
-   
-max-width:none;
+    max-width:none;
     padding:0 10px
 }
 div[data-type=dictionary-view] .error,div[data-type=dictionary-view] .errorDescription{
@@ -3210,8 +3315,7 @@ div[data-type=git-view] .search-input-container{
     margin-left:7px
 }
 div[data-type=git-view] .commit-msg{
-   
-min-height:2.5em!important;
+    min-height:2.5em!important;
     height:2.5em!important;
     padding:6.5px 8px!important
 }
@@ -3382,7 +3486,7 @@ body .kanban-plugin{
     background-color:var(--background-primary)
 }
 body .kanban-plugin__markdown-preview-view{
-    font-family:var(----text)
+    font-family:var(--font-text)
 }
 body .kanban-plugin__board>div{
     margin:0 auto
@@ -3539,11 +3643,11 @@ body .kanban-plugin__markdown-preview-view ol,body .kanban-plugin__markdown-prev
 }
 @media (max-width:400pt){
     .kanban-plugin__board{
-       flex-direction:column!important
+        flex-direction:column!important
     }
     .kanban-plugin__lane{
-       width:100%!important;
-       margin-bottom:1rem!important
+        width:100%!important;
+        margin-bottom:1rem!important
     }
 }
 body .cm-heading-marker{
@@ -3785,8 +3889,7 @@ body .NLT__button:active,body .NLT__button:focus,body .NLT__button:hover{
     cursor:var(--cursor)
 }
 .NLT__menu div.NLT__selectable{
-   
-min-width:110px;
+    min-width:110px;
     border-radius:var(--radius-m);
     padding:3px 8px 3px 4px;
     margin:1px 2px 1px;
@@ -3832,6 +3935,9 @@ div#quick-explorer span.explorable{
     font-size:var(--font-adaptive-smaller);
     line-height:16px
 }
+div#quick-explorer span.explorable:last-of-type{
+    font-size:var(--font-adaptive-smaller)
+}
 div#quick-explorer span.explorable.selected,div#quick-explorer span.explorable:hover{
     background-color:unset!important
 }
@@ -3862,8 +3968,7 @@ body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-l
     padding-top:10px
 }
 .mod-root .workspace-leaf-content[data-type=reminder-list] main{
-   
-max-width:var(--max-width);
+    max-width:var(--max-width);
     margin:0 auto;
     padding:0
 }
@@ -3973,16 +4078,14 @@ body .markdown-preview-view th,body .markdown-source-view.mod-cm6 .dataview.tabl
 }
 .workspace-leaf-content[data-type=style-settings] .view-content>div{
     width:var(--line-width-adaptive);
-   
-max-width:var(--max-width);
+    max-width:var(--max-width);
     margin:0 auto
 }
 .workspace-leaf-content[data-type=style-settings] .style-settings-heading[data-level="0"] .setting-item-name{
     padding-left:17px
 }
 .workspace-leaf-content[data-type=style-settings] .setting-item{
-   
-max-width:100%;
+    max-width:100%;
     margin:0 auto
 }
 .workspace-leaf-content[data-type=style-settings] .setting-item-name{
@@ -4082,8 +4185,7 @@ body .todoist-refresh-button:hover{
 .todoist-refresh-button svg{
     width:15px;
     height:15px;
-   
-opacity:var(--icon-muted)
+    opacity:var(--icon-muted)
 }
 ul.todoist-task-list{
     margin-left:-.25em
@@ -4106,22 +4208,22 @@ ul.todoist-task-list{
     padding-left:calc(var(--checkbox-size) + .6em)
 }
 .todoist-task-list .task-date.task-overdue{
-    color:var(--orange)
+    color:var(--color-orange)
 }
 body .todoist-p1>input[type=checkbox]{
-    border:1px solid var(--red)
+    border:1px solid var(--color-red)
 }
 body .todoist-p1>input[type=checkbox]:hover{
     opacity:.8
 }
 body .todoist-p2>input[type=checkbox]{
-    border:1px solid var(--yellow)
+    border:1px solid var(--color-yellow)
 }
 body .todoist-p2>input[type=checkbox]:hover{
     opacity:.8
 }
 body .todoist-p3>input[type=checkbox]{
-    border:1px solid var(--blue)
+    border:1px solid var(--color-blue)
 }
 body .todoist-p3>input[type=checkbox]:hover{
     opacity:.8
@@ -4139,24 +4241,24 @@ body.theme-light{
     color:var(--ui2)
 }
 .theme-dark.minimal-atom-dark{
-    --red:#e16d76;
-    --orange:#d19a66;
-    --yellow:#cec167;
-    --green:#98c379;
-    --cyan:#58b6c2;
-    --blue:#62afef;
-    --purple:#c678de;
-    --pink:#e16d76
+    --color-red:#e16d76;
+    --color-orange:#d19a66;
+    --color-yellow:#cec167;
+    --color-green:#98c379;
+    --color-cyan:#58b6c2;
+    --color-blue:#62afef;
+    --color-purple:#c678de;
+    --color-pink:#e16d76
 }
 .theme-light.minimal-atom-light{
-    --red:#e45749;
-    --orange:#b76b02;
-    --yellow:#c18302;
-    --green:#50a150;
-    --cyan:#0d97b3;
-    --blue:#62afef;
-    --purple:#a626a4;
-    --pink:#e45749
+    --color-red:#e45749;
+    --color-orange:#b76b02;
+    --color-yellow:#c18302;
+    --color-green:#50a150;
+    --color-cyan:#0d97b3;
+    --color-blue:#62afef;
+    --color-purple:#a626a4;
+    --color-pink:#e45749
 }
 .theme-light.minimal-atom-light{
     --base-h:106;
@@ -4208,15 +4310,86 @@ body.theme-light{
     --divider-color:#282c34;
     --tab-outline-color:#282c34
 }
+.theme-light.minimal-catppuccin-light{
+    --color-red:#E64553;
+    --color-orange:#FE640C;
+    --color-yellow:#DF8E1D;
+    --color-green:#40A02B;
+    --color-purple:#8938EF;
+    --color-pink:#EA77CB;
+    --color-cyan:#17929A;
+    --color-blue:#2166F6
+}
+.theme-dark.minimal-catppuccin-dark{
+    --color-red:#EB999C;
+    --color-orange:#EFA076;
+    --color-yellow:#E5C890;
+    --color-green:#A6D18A;
+    --color-purple:#CA9EE6;
+    --color-pink:#F4B9E5;
+    --color-cyan:#81C8BE;
+    --color-blue:#8CAAEE
+}
+.theme-light.minimal-catppuccin-light{
+    --base-h:228;
+    --base-s:20%;
+    --base-l:95%;
+    --accent-h:11;
+    --accent-s:59%;
+    --accent-l:67%;
+    --bg1:#F0F1F5;
+    --bg2:#DCE0E8;
+    --bg3:hsla(228,11%,65%,.25);
+    --ui1:#CCD0DA;
+    --ui2:#BCC0CC;
+    --ui3:#ACB0BE;
+    --tx1:#4D4F69;
+    --tx2:#5D5F77;
+    --tx3:#8D8FA2;
+    --ax1:#DC8A78;
+    --hl1:rgba(172,176,190,.3);
+    --hl2:rgba(223,142,29,.3)
+}
+.theme-light.minimal-catppuccin-light.minimal-light-tonal{
+    --bg2:#DCE0E8
+}
+.theme-light.minimal-catppuccin-light.minimal-light-white{
+    --bg3:#F0F1F5;
+    --ui1:#DCE0E8
+}
+.theme-dark.minimal-catppuccin-dark,.theme-light.minimal-catppuccin-light.minimal-light-contrast .mod-left-split,.theme-light.minimal-catppuccin-light.minimal-light-contrast .titlebar,.theme-light.minimal-catppuccin-light.minimal-light-contrast .workspace-drawer.mod-left,.theme-light.minimal-catppuccin-light.minimal-light-contrast .workspace-ribbon.mod-left:not(.is-collapsed),.theme-light.minimal-catppuccin-light.minimal-light-contrast.minimal-status-off .status-bar{
+    --base-h:229;
+    --base-s:19%;
+    --base-l:23%;
+    --accent-h:10;
+    --accent-s:57%;
+    --accent-l:88%;
+    --bg1:#303446;
+    --bg2:#242634;
+    --bg3:hsla(229,13%,52%,0.25);
+    --ui1:#41455A;
+    --ui2:#51576D;
+    --ui3:#626880;
+    --tx1:#C6D0F5;
+    --tx2:#A6ADCE;
+    --tx3:#848BA7;
+    --ax1:#F2D5CF;
+    --hl1:rgba(98,104,128,.5);
+    --hl2:rgba(223,142,29,.4)
+}
+.theme-dark.minimal-catppuccin-dark.minimal-dark-black{
+    --ui1:#303446;
+    --hl2:rgba(223,142,29,.5)
+}
 .theme-dark.minimal-dracula-dark{
-    --red:#ff5555;
-    --yellow:#f1fa8c;
-    --green:#50fa7b;
-    --orange:#ffb86c;
-    --purple:#bd93f9;
-    --pink:#ff79c6;
-    --cyan:#8be9fd;
-    --blue:#6272a4
+    --color-red:#ff5555;
+    --color-yellow:#f1fa8c;
+    --color-green:#50fa7b;
+    --color-orange:#ffb86c;
+    --color-purple:#bd93f9;
+    --color-pink:#ff79c6;
+    --color-cyan:#8be9fd;
+    --color-blue:#6272a4
 }
 .theme-dark.minimal-dracula-dark,.theme-light.minimal-dracula-light.minimal-light-contrast .titlebar,.theme-light.minimal-dracula-light.minimal-light-contrast .workspace-drawer.mod-left,.theme-light.minimal-dracula-light.minimal-light-contrast.minimal-status-off .status-bar{
     --base-h:232;
@@ -4239,24 +4412,24 @@ body.theme-light{
     --ui1:#282a36
 }
 .theme-light.minimal-everforest-light{
-    --red:#f85552;
-    --orange:#f57d26;
-    --yellow:#dfa000;
-    --green:#8da101;
-    --purple:#df69ba;
-    --pink:#df69ba;
-    --cyan:#35a77c;
-    --blue:#7fbbb3
+    --color-red:#f85552;
+    --color-orange:#f57d26;
+    --color-yellow:#dfa000;
+    --color-green:#8da101;
+    --color-purple:#df69ba;
+    --color-pink:#df69ba;
+    --color-cyan:#35a77c;
+    --color-blue:#7fbbb3
 }
 .theme-dark.minimal-everforest-dark{
-    --red:#e67e80;
-    --orange:#e69875;
-    --yellow:#dbbc7f;
-    --green:#a7c080;
-    --purple:#d699b6;
-    --pink:#d699b6;
-    --cyan:#83c092;
-    --blue:#7fbbb3
+    --color-red:#e67e80;
+    --color-orange:#e69875;
+    --color-yellow:#dbbc7f;
+    --color-green:#a7c080;
+    --color-purple:#d699b6;
+    --color-pink:#d699b6;
+    --color-cyan:#83c092;
+    --color-blue:#7fbbb3
 }
 .theme-light.minimal-everforest-light{
     --base-h:46;
@@ -4315,14 +4488,14 @@ body.theme-light{
     --ui1:#2b3339
 }
 .theme-dark.minimal-gruvbox-dark,.theme-light.minimal-gruvbox-light{
-    --red:#cc241d;
-    --yellow:#d79921;
-    --green:#98971a;
-    --orange:#d65d0e;
-    --purple:#b16286;
-    --pink:#b16286;
-    --cyan:#689d6a;
-    --blue:#458588
+    --color-red:#cc241d;
+    --color-yellow:#d79921;
+    --color-green:#98971a;
+    --color-orange:#d65d0e;
+    --color-purple:#b16286;
+    --color-pink:#b16286;
+    --color-cyan:#689d6a;
+    --color-blue:#458588
 }
 .theme-light.minimal-gruvbox-light{
     --base-h:49;
@@ -4378,14 +4551,14 @@ body.theme-light{
     --ui1:#282828
 }
 .theme-dark.minimal-macos-dark,.theme-light.minimal-macos-light{
-    --red:#ff3b31;
-    --yellow:#ffcc00;
-    --green:#2acd41;
-    --orange:#ff9502;
-    --purple:#b051de;
-    --pink:#ff2e55;
-    --cyan:#02c7be;
-    --blue:#027aff
+    --color-red:#ff3b31;
+    --color-yellow:#ffcc00;
+    --color-green:#2acd41;
+    --color-orange:#ff9502;
+    --color-purple:#b051de;
+    --color-pink:#ff2e55;
+    --color-cyan:#02c7be;
+    --color-blue:#027aff
 }
 .theme-light.minimal-macos-light{
     --base-h:106;
@@ -4439,14 +4612,14 @@ body.theme-light{
     --tab-outline-color:#1e1e1e
 }
 .theme-dark.minimal-nord-dark,.theme-light.minimal-nord-light{
-    --red:#BF616A;
-    --yellow:#EBCB8B;
-    --green:#A3BE8C;
-    --orange:#D08770;
-    --purple:#B48EAD;
-    --pink:#B48EAD;
-    --cyan:#88C0D0;
-    --blue:#81A1C1
+    --color-red:#BF616A;
+    --color-yellow:#EBCB8B;
+    --color-green:#A3BE8C;
+    --color-orange:#D08770;
+    --color-purple:#B48EAD;
+    --color-pink:#B48EAD;
+    --color-cyan:#88C0D0;
+    --color-blue:#81A1C1
 }
 .theme-light.minimal-nord-light{
     --base-h:221;
@@ -4540,14 +4713,14 @@ body.theme-light{
     --ui1:#2f3437
 }
 .theme-dark.minimal-solarized-dark,.theme-light.minimal-solarized-light{
-    --red:#dc322f;
-    --orange:#cb4b16;
-    --yellow:#b58900;
-    --green:#859900;
-    --cyan:#2aa198;
-    --blue:#268bd2;
-    --purple:#6c71c4;
-    --pink:#d33682
+    --color-red:#dc322f;
+    --color-orange:#cb4b16;
+    --color-yellow:#b58900;
+    --color-green:#859900;
+    --color-cyan:#2aa198;
+    --color-blue:#268bd2;
+    --color-purple:#6c71c4;
+    --color-pink:#d33682
 }
 .theme-light.minimal-solarized-light{
     --base-h:44;
@@ -4600,19 +4773,19 @@ body.theme-light{
     --ui1:#002b36
 }
 .theme-dark.minimal-things-dark,.theme-light.minimal-things-light{
-    --red:#FF306C;
-    --yellow:#FFD500;
-    --green:#4BBF5E;
-    --orange:#ff9502;
-    --purple:#b051de;
-    --pink:#ff2e55;
-    --cyan:#49AEA4
+    --color-red:#FF306C;
+    --color-yellow:#FFD500;
+    --color-green:#4BBF5E;
+    --color-orange:#ff9502;
+    --color-purple:#b051de;
+    --color-pink:#ff2e55;
+    --color-cyan:#49AEA4
 }
 .theme-light.minimal-things-light{
-    --blue:#1b61c2
+    --color-blue:#1b61c2
 }
 .theme-dark.minimal-things-dark{
-    --blue:#4d95f7
+    --color-blue:#4d95f7
 }
 .theme-light.minimal-things-light{
     --accent-h:215;
@@ -4670,49 +4843,48 @@ body.theme-light{
 }
 /* Plugin compatibility */
 /* @plugins core:
-- backlink
-- command-palette
-- daily-notes
-- file-explorer
-- file-recovery
-- global-search
-- graph
-- outgoing-link
-- outline
-- page-preview
-- publish
-- random-note
-- starred
-- switcher
-- sync
-- tag-pane
-- word-count
+    - backlink
+    - command-palette
+    - daily-notes
+    - file-explorer
+    - file-recovery
+    - global-search
+    - graph
+    - outgoing-link
+    - outline
+    - page-preview
+    - publish
+    - random-note
+    - starred
+    - switcher
+    - sync
+    - tag-pane
+    - word-count
 community:
-- buttons
-- dataview
-- calendar
-- obsidian-charts
-- obsidian-checklist-plugin
-- obsidian-codemirror-options
-- obsidian-dictionary-plugin
-- obsidian-embedded-note-titles
-- obsidian-excalidraw-plugin
-- obsidian-git - obsidian-hider
-- obsidian-hover-editor
-- obsidian-kanban
-- obsidian-metatable
-- obsidian-minimal-settings
-- obsidian-outliner
-- obsidian-system-dark-mode
-- obsidian-style-settings
-- quickadd
-- sliding-panes-obsidian
-- todoist-sync-plugin
+    - buttons
+    - dataview
+    - calendar
+    - obsidian-charts
+    - obsidian-checklist-plugin
+    - obsidian-codemirror-options
+    - obsidian-dictionary-plugin
+    - obsidian-embedded-note-titles
+    - obsidian-excalidraw-plugin
+    - obsidian-git - obsidian-hider
+    - obsidian-hover-editor
+    - obsidian-kanban
+    - obsidian-metatable
+    - obsidian-minimal-settings
+    - obsidian-outliner
+    - obsidian-system-dark-mode
+    - obsidian-style-settings
+    - quickadd
+    - sliding-panes-obsidian
+    - todoist-sync-plugin
 */
-/* @settings name:
-minimal 
-id:
-minimal-style 
+/* @settings
+name: minimal
+id: minimal-style
 settings: 
 	-
 		id: instructions
@@ -4723,19 +4895,19 @@ settings:
 		description: Use the minimal Theme Settings plugin to access hotkeys, adjust features, select fonts, and choose from preset color schemes. Use the settings below for more granular customization. Visit minimal.guide for documentation.
 	
 	-	
-		id: interface 
-	 	title: Interface colors 
-		type: heading 
-		level: 2 
-		collapsed: true 
+		id: interface
+	    title: Interface colors
+		type: heading
+		level: 2
+		collapsed: true
 	-
-		id: base 
-		title: Base color 
-		description: Defines all background and border colors unless overridden in more granular settings 
+		id: base
+		title: Base color
+		description: Defines all background and border colors unless overridden in more granular settings
 		type: variable-themed-color
 		format: hsl-split
 		default-light: '#'
-		default-dark: '#' 
+		default-dark: '#'
 	-
 		id: bg1
 		title: Primary background
@@ -4797,8 +4969,7 @@ settings:
 	-
 		id: red
 		title: Red
-		description: Extended palette colors are
-		defaults used for progress bar status, syntax highlighting, colorful headings, and graph nodes variable-themed-color
+		description: Extended palette colors are defaults used for progress bar status, syntax highlighting, colorful headings, and graph nodes variable-themed-color
 		opacity: true
 		format: hex
 		default-light: '#'
@@ -4806,7 +4977,7 @@ settings:
 	-
 		id: orange
 		title: Orange
-				type: variable-themed-color
+		type: variable-themed-color
 		opacity: true
 		format: hex
 		default-light: '#'
@@ -4874,8 +5045,7 @@ settings:
 	-
 		id: active-line-bg
 		title: Active line background
-		description: Using a low
-		opacity color is recommended to avoid conflicting with highlights
+		description: Using a low opacity color is recommended to avoid conflicting with highlights
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -4897,8 +5067,7 @@ settings:
 	-
 		id: blockquote-size
 		title: Blockquotes font size
-		description: Accepts any CSS font-size
-		value
+		description: Accepts any CSS font-size value
 		type: variable-text
 		default: ''
 	-
@@ -4999,7 +5168,7 @@ settings:
 	-
 		id: code-string
 		title: "Syntax: strings"
-		description: Syntax highlighting for strings
+        description: Syntax highlighting for strings
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -5099,8 +5268,8 @@ settings:
 		level: 2
 		collapsed: true
 	-
-		id:level-1-headings
-		title:level 1 Headings
+		id: level-1-headings
+		title: level 1 Headings
 		type: heading
 		level: 3
 		collapsed: true
@@ -5115,14 +5284,15 @@ settings:
 		title: H1 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: 1.125em
+		default: 1.4em
 	-
 		id: h1-weight
 		title: H1 font weight
 		type: variable-number-slider
 		default: 600
 		min: 100
-		max: 900 step: 100
+		max: 900
+        step: 100
 	-
 		id: h1-color
 		title: H1 text color
@@ -5166,7 +5336,7 @@ settings:
 		type: class-toggle
 		default: false
 	-
-		id:	level-2-headings
+		id: level-2-headings
 		title: level 2 Headings
 		type: heading
 		level: 3
@@ -5182,14 +5352,15 @@ settings:
 		title: H2 font size
 		description: Accepts any CSS font-size value
 		type: variable-text
-		default: 1em
+		default: 1.3em
 	-
 		id: h2-weight
 		title: H2 font weight
 		type: variable-number-slider
 		default: 600
 		min: 100
-		max: 900 step: 100
+		max: 900
+        step: 100
 	-
 		id: h2-color
 		title: H2 text color
@@ -5233,10 +5404,8 @@ settings:
 		type: class-toggle
 		default: false
 	-
-		id:
-		level-3-headings
-		title:
-		level 3 Headings
+		id: level-3-headings
+		title: level 3 Headings
 		type: heading
 		level: 3
 		collapsed: true
@@ -5249,17 +5418,17 @@ settings:
 	-
 		id: h3-size
 		title: H3 font size
-		description: Accepts any CSS font-size
-		value
+		description: Accepts any CSS font-size value
 		type: variable-text
-		default: 1em
+		default: 1.3em
 	-
 		id: h3-weight
 		title: H3 font weight
 		type: variable-number-slider
 		default: 600
 		min: 100
-		max: 900 step: 100
+		max: 900
+        step: 100
 	-
 		id: h3-color
 		title: H3 text color
@@ -5274,15 +5443,15 @@ settings:
 		allowEmpty: false
 		default: normal
 		options:
-		-
-			label: Normal
-			value: normal
-		-
-			label: Small caps
-			value: small-caps
-		-
-			label: All small caps
-			value: all-small-caps
+            -
+                label: Normal
+                value: normal
+            -
+                label: Small caps
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps
 	-
 		id: h3-style
 		title: H3 font style
@@ -5297,16 +5466,14 @@ settings:
 				label: Italic
 				value: italic
 	-
-		id: h3-l
+        id: h3-l
 		title: H3 divider line
 		description: Adds a border below the heading
 		type: class-toggle
 		default: false
     -
-       id:
-       level-4-headings
-       title:
-       level 4 Headings
+       id: level-4-headings
+       title: level 4 Headings
        type: heading
        level: 3
        collapsed: true
@@ -5319,47 +5486,47 @@ settings:
     -
        id: h4-size
        title: H4 font size
-       description: Accepts any CSS font-size
-       value
+       description: Accepts any CSS font-size value
        type: variable-text
-       default: 0.9em
+       default: 1.2em
     -
        id: h4-weight
        title: H4 font weight
        type: variable-number-slider
-       default: 500
+       default: 600
        min: 100
-       max: 900 step: 100
+       max: 900
+       step: 100
     -
-       id: h4-color
-       title: H4 text color
-       type: variable-themed-color
-       format: hex
-       default-light: '#'
-       default-dark: '#'
+        id: h4-color
+        title: H4 text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
     -
-       id: h4-variant
-       title: H4 font variant
-       type: variable-select
-       allowEmpty: false
-       default: small-caps
-       options:
-       -
-          label: Normal
-          value: normal
-       -
-          label: Small caps
-          value: small-caps
-       -
-          label: All small caps
-          value: all-small-caps
-       -
-          id: h4-style
-          title: H4 font style
-          type: variable-select
-          allowEmpty: false
-          default: normal
-          options:
+        id: h4-variant
+        title: H4 font variant
+        type: variable-select
+        allowEmpty: false
+        default: no
+        options:
+            -
+                label: Normal
+                value: normal
+            -
+                label: Small caps
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps
+    -
+        id: h4-style
+        title: H4 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
              -
                 label: Normal
                 value: normal
@@ -5373,10 +5540,8 @@ settings:
        type: class-toggle
        default: false
     -
-       id:
-       level-5-headings
-       title:
-       level 5 Headings
+       id: level-5-headings
+       title: level 5 Headings
        type: heading
        level: 3
        collapsed: true
@@ -5389,17 +5554,17 @@ settings:
     -
        id: h5-size
        title: H5 font size
-       description: Accepts any CSS font-size
-       value
+       description: Accepts any CSS font-size value
        type: variable-text
-       default: 0.85em
+       default: 1.1em
     -
        id: h5-weight
        title: H5 font weight
        type: variable-number-slider
-       default: 500
+       default: 600
        min: 100
-       max: 900 step: 100
+       max: 900
+       step: 100
     -
        id: h5-color
        title: H5 text color
@@ -5408,28 +5573,96 @@ settings:
        default-light: '#'
        default-dark: '#'
     -
-       id: h5-variant
-       title: H5 font variant
-       type: variable-select
-       allowEmpty: false
-       default: small-caps
-       options:
-          -
-             label: Normal
-             value: normal
-          -
-             label: Small caps
-             value: small-caps
-          -
-             label: All small caps
-             value: all-small-caps
+        id: h5-variant
+        title: H5 font variant
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            -
+                label: Normal
+                value: normal
+            -
+                label: Small caps
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps
     -
-       id: h5-style
-       title: H5 font style
-       type: variable-select
-       allowEmpty: false
-       default: normal
-       options:
+        id: h5-style
+        title: H5 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            -
+                label: Normal
+                value: normal
+            -
+                label: Italic
+                value: italic
+    -
+        id: h5-l
+        title: H5 divider line
+        description: Adds a border below the heading
+        type: class-toggle
+        default: false
+    -
+        id: level-6-headings
+        title: level 6 Headings
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: h6-font
+        title: H6 font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    -
+        id: h6-size
+        title: H6 font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.1em
+    -
+        id: h6-weight
+        title: H6 font weight
+        type: variable-number-slider
+        default: 600
+        min: 100
+        max: 900
+        step: 100
+    -
+        id: h6-color
+        title: H6 text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: h6-variant
+        title: H6 font variant
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
+            -
+                label: Normal
+                value: normal
+            -
+                label: Small caps
+                value: small-caps
+            -
+                label: All small caps
+                value: all-small-caps
+    -
+        id: h6-style
+        title: H6 font style
+        type: variable-select
+        allowEmpty: false
+        default: normal
+        options:
           -
              label: Normal
              value: normal
@@ -5437,95 +5670,25 @@ settings:
              label: Italic
              value: italic
     -
-       id: h5-l
-       title: H5 divider line
-       description: Adds a border below the heading
-       type: class-toggle
-       default: false
+        id: h6-l
+        title: H6 divider line
+        type: class-toggle
+        description: Adds a border below the heading
+        default: false
     -
-       id:
-       level-6-headings
-       title:
-       level 6 Headings
-       type: heading
-       level: 3
-       collapsed: true
+        id: icons
+        title: Icons
+        type: heading
+        level: 2
+        collapsed: true
     -
-       id: h6-font
-       title: H6 font
-       description: Name of the font as it appears on your system
-       type: variable-text
-       default: ''
-    -
-       id: h6-size
-       title: H6 font size
-       description: Accepts any CSS font-size
-       value
-       type: variable-text
-       default: 0.85em
-    -
-       id: h6-weight
-       title: H6 font weight
-       type: variable-number-slider
-       default: 400
-       min: 100
-       max: 900 step: 100
-    -
-       id: h6-color
-       title: H6 text color
-       type: variable-themed-color
-       format: hex
-       default-light: '#'
-       default-dark: '#'
-    -
-       id: h6-variant
-       title: H6 font variant
-       type: variable-select
-       allowEmpty: false
-       default: small-caps
-       options:
-          -
-             label: Normal
-             value: normal
-          -
-             label: Small caps
-             value: small-caps
-          -
-             label: All small caps
-             value: all-small-caps
-    -
-       id: h6-style
-       title: H6 font style
-       type: variable-select
-       allowEmpty: false
-       default: normal
-       options:
-          -
-             label: Normal
-             value: normal
-          -
-             label: Italic
-             value: italic
-    -
-       id: h6-l
-       title: H6 divider line
-       type: class-toggle
-       description: Adds a border below the heading
-       default: false
-    -
-       id: icons
-       title: Icons
-       type: heading
-       level: 2
-       collapsed: true
-    -
-       id: icon-muted
-       title: Icon
-       opacity (inactive)
-       type: variable-number-slider
-       default: 0.5
-       min: 0.25
-       max: 1 step: 0.05
+        id: icon-muted
+        title: Icon opacity (inactive)
+        type: variable-number-slider
+        default: 0.5
+        min: 0.25
+        max: 1
+        step: 0.05
     -
        id: icon-color
        title: Icon color
@@ -5565,33 +5728,6 @@ settings:
        level: 2
        collapsed: true
     -
-       id: image-muted
-       title: Image
-       opacity in dark mode
-       description:
-       level of fading for images in dark mode. Hover over images to display at full brightness.
-       type: variable-number-slider
-       default: 0.7
-       min: 0.25
-       max: 1 step: 0.05
-    -
-       id: zoom-off
-       title: Disable image zoom
-       description: Turns off click + hold to zoom images
-       type: class-toggle
-    -
-       id: indentation-guides
-       title: Indentation guides
-       type: heading
-       level: 2
-       collapsed: true
-    -
-       id: ig-adjust-reading
-       title: Horizontal adjustment in reading mode
-       type: variable-number-slider
-       default: -0.65
-       min: -1.2
-       max: 0 step: 0.05
        format: em
     -
        id: ig-adjust-edit
@@ -5599,7 +5735,8 @@ settings:
        type: variable-number-slider
        default: -1
        min: -10
-       max: 10 step: 1
+       max: 10
+       step: 1
        format: px
     -
        id: links
@@ -5627,7 +5764,8 @@ settings:
        type: variable-number-slider
        default: 400
        min: 100
-       max: 900 step: 100
+       max: 900
+       step: 100
     -
        id: lists
        title: Lists and tasks
@@ -5649,15 +5787,14 @@ settings:
        allowEmpty: false
        default: checkbox-circle
        options:
-          -
-             label: Circle
-             value: checkbox-circle
-          -
-             label: Square
-              value: checkbox-square
+            -
+                label: Circle
+                value: checkbox-circle
+            -
+                label: Square
+                value: checkbox-square
     -
-       id:
-       minimal-strike-lists
+       id: minimal-strike-lists
        title: Strike completed tasks
        description: Adds strikethrough line and greyed text for completed tasks
        type: class-toggle
@@ -5669,595 +5806,552 @@ settings:
        type: variable-number-slider
        default: 0.075
        min: 0
-       max: 0.3 step: 0.005
+       max: 0.3
+       step: 0.005
        format: em
--
-id: list-indent
-title: Nested list indentation
-description: Horizontal space from left in em units
-type: variable-number-slider
-default: 2
-min: 1
-max: 3.5 step: 0.1
-format: em
--
-id: sidebars
-title: Sidebars
-type: heading
-level: 2
-collapsed: true
--
-id: sidebar-lines-off
-title: Disable sidebar relationship lines
-description: Turns off lines in file navigation
-type: class-toggle
--
-id: mobile-left-sidebar-width
-title: Mobile left sidebar width
-description:
-maximum width for pinned left sidebar on mobile
-type: variable-number
-default: 280
-format: pt
--
-id: mobile-right-sidebar-width
-title: Mobile right sidebar width
-description:
-maximum width for pinned right sidebar on mobile
-type: variable-number
-default: 240
-format: pt
--
-id: tables
-title: Tables
-type: heading
-level: 2
-collapsed: true
--
-id: table-text-size
-title: Table font size
-description: All of the following settings apply to all tables globally. To turn on these features on a per-note basis use helper classes. See documentation.
-type: variable-text
-default: 1em
--
-id:
-maximize-tables-off
-title:
-maximize table width (beta)
-description: Tables fill the width of the line
-type: class-select
-allowEmpty: false
-default:
-maximize-tables
-options:
--
-label: Always
-value:
-maximize-tables
--
-label: Automatic
-value:
-maximize-tables-auto
--
-label: Never
-value:
-maximize-tables-off
--
-id: row-lines
-title: Row lines
-description: Display borders between table rows globally
-type: class-toggle
-default: false
--
-id: col-lines
-title: Column lines
-description: Display borders between table columns globally
-type: class-toggle
-default: false
--
-id: table-lines
-title: Cell lines
-description: Display borders around all table cells globally
-type: class-toggle
-default: false
--
-id: row-alt
-title: Striped rows
-description: Display striped background in alternating table rows globally
-type: class-toggle
-default: false
--
-id: col-alt
-title: Striped columns
-description: Display striped background in alternating table columns globally
-type: class-toggle
-default: false
--
-id: table-tabular
-title: Tabular figures
-description: Use fixed width numbers in tables globally
-type: class-toggle
-default: false
--
-id: table-numbers
-title: Row numbers
-description: Display row numbers in tables globally
-type: class-toggle
-default: false
--
-id: table-nowrap
-title: Disable line wrap
-description: Turn off line wrapping in table cells globally
-type: class-toggle
-default: false
--
-id: row-hover
-title: Highlight active row
-description: Highlight rows on hover
-type: class-toggle
-default: false
--
-id: table-row-background-hover
-title: Active row background
-description: Background color for hovered tables rows
-type: variable-themed-color
-format: hex
-opacity: true
-default-light: '#'
-default-dark: '#'
--
-id: tabs
-title: Tabs
-type: heading
-level: 2
-collapsed: true
--
-id: header-height
-title: Tab bar height
-type: variable-text
-default: 40px
--
-id: tabs-style
-title: Tab style
-type: class-select
-allowEmpty: false
-default: tabs-default
-options: -
-label:
-default
-value: tabs-default
--
-label: Square
-value: tabs-square
--
-label: Underline
-value: tabs-underline
--
-id: tab-stacks
-title: Tab stacks
-type: heading
-level: 2
-collapsed: true
--
-id: tab-stacked-pane-width
-title: Stacked width
-type: variable-number
-description: Width of a stacked tab in pixels
-default: 700
-format: px
--
-id: tab-stacked-header-width
-title: Spine width
-type: variable-number
-description: Width of the spine in pixels
-default: 40
-format: px
--
-id: tab-stacked-spine-orientation
-title: Spine text orientation
-type: class-select
-default: tab-stack-top
-options:
--
-label: Top aligned
-value: tab-stack-top
--
-label: Top aligned flipped
-value: tab-stack-top-flipped
--
-label: Bottom aligned
-value: tab-stack-bottom
--
-label: Bottom aligned flipped
-value: tab-stack-bottom-flipped
--
-id: tags
-title: Tags
-type: heading
-level: 2
-collapsed: true
--
-id:
-minimal-unstyled-tags
-title: Plain tags
-description: Tags will render as normal text, overrides settings below
-type: class-toggle
-default: false
--
-id: tag-radius
-title: Tag shape
-type: variable-select
-default: 14px
-options:
--
-label: Pill
-value: 14px
--
-label: Rounded
-value: 4px
--
-label: Square
-value: 0px
--
-id: tag-border-width
-title: Tag border width
-type: variable-select
-default: 1px
-options:
--
-label: None
-value: 0
--
-label: Thin
-value: 1px
--
-label: Thick
-value: 2px
--
-id: tag-color
-title: Tag text color
-type: variable-themed-color
-opacity: true
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: tag-bg
-title: Tag background color
-type: variable-themed-color
-opacity: true
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: tag-bg2
-title: Tag background color (hover)
-type: variable-themed-color
-opacity: true
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: text
-title: Text
-type: heading
-level: 2
-collapsed: true
--
-id: tx1
-title: Normal text color
-type: variable-themed-color
-description: Primary text color used by
-default across all elements
-opacity: true
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: hl1
-title: Selected text background
-type: variable-themed-color
-opacity: true
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: hl2
-title: Highlighted text background
-type: variable-themed-color
-opacity: true
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: tx2
-title: Muted text color
-description: Secondary text such as sidebar note
-titles and table headings
-type: variable-themed-color
-opacity: true
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: tx3
-title: Faint text color
-description: tertiary text such as input placeholders, empty checkboxes, and disabled statuses
-type: variable-themed-color
-opacity: true
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: italic-color
-title: Italic text color
-type: variable-themed-color
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: bold-color
-title: Bold text color
-type: variable-themed-color
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: bold-weight
-title: Bold text weight
-type: variable-number-slider
-default: 600
-min: 100
-max: 900 step: 100
--
-id: spacing-p
-title: Paragraph spacing
-description: Space between paragraphs in reading mode
-type: variable-text
-default: 0.75em
--
-id: titles
-title: titles
-type: heading
-level: 2
-collapsed: true
--
-id: tab-title-bar
-title: Tab
-title bar
-description: Tab
-title bar must be turned on in Appearance settings
-type: heading
-level: 3
-collapsed: true
--
-id: file-header-visibility
-title: Tab
-title visibility
-description: Visibility of the tab
-title text
-type: class-select
-default:
-minimal-tab-title-visible
-options:
--
-label: Visible
-value:
-minimal-tab-title-visible
--
-label: Hidden
-value:
-minimal-tab-title-hidden
--
-label: Hover only
-value:
-minimal-tab-title-hover
--
-id: file-header-font-size
-title: Tab
-title font size
-description: Accepts any CSS font-size
-value
-type: variable-text
-default: 0.9em
--
-id: file-header-font-weight
-title: Tab
-title font weight
-type: variable-number-slider
-default: 400
-min: 100
-max: 900 step: 100
--
-id: file-header-justify
-title: Tab
-title alignment
-type: variable-select
-default: center
-options:
--
-label: Center
-value: center
--
-label: Left
-value: left
--
-id:
-title-color
-title: Tab
-title text color (active)
-type: variable-themed-color
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id:
-title-color-inactive
-title: Tab
-title color (inactive)
-type: variable-themed-color
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: inline-title
-title: Inline
-title
-description: Inline
-titles must be turned on in Appearance settings
-type: heading
-level: 3
-collapsed: true
--
-id: inline-title-font
-title: Inline
-title font
-description: Name of the font as it appears on your system
-type: variable-text
-default: ''
--
-id: inline-title-size
-title: Inline
-title font size
-description: Accepts any CSS font-size
-value
-type: variable-text
-default: 1.125em
--
-id: inline-title-weight
-title: Inline
-title font weight
-type: variable-number-slider
-default: 600
-min: 100
-max: 900 step: 100
--
-id: inline-title-color
-title: Inline
-title text color (active)
-type: variable-themed-color
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: translucency
-title: Translucency
-type: heading
-level: 2
-collapsed: true
--
-id: workspace-background-translucent
-title: Translucent background color
-type: variable-themed-color
-opacity: true
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id: window-frame
-title: Window frame
-type: heading
-level: 2
-collapsed: true
--
-id: window-title-off
-title: Hide window
-title
-description: Hide
-title in the custom
-title bar
-type: class-toggle
--
-id: frame-background
-title: Window frame background
-description: Requires colorful window frame
-type: variable-themed-color
-opacity: true
-format: hsl-split
-default-light: '#'
-default-dark: '#'
--
-id:
-titlebar-text-color-focused
-title: Window
-title color (focused)
-description: Requires custom
-title bar
-type: variable-themed-color
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id:
-titlebar-text-color
-title: Window
-title color (inactive)
-description: Requires custom
-title bar
-type: variable-themed-color
-format: hex
-default-light: '#'
-default-dark: '#'
--
-id:
-titlebar-text-weight
-title: Window
-title font weight
-description: Requires custom
-title bar
-type: variable-number-slider
-default: 600
-min: 100
-max: 900 step: 100 */
-/* @settings name:
-minimal Cards
-id:
-minimal-cards-style settings:
--
-id: cards-min-width
-title: Card
-minimum width
-type: variable-text
-default: 180px
--
-id: cards-max-width
-title: Card
-maximum width
-description:
-default fills the available width, accepts valid CSS units
-type: variable-text
-default: 1fr
--
-id: cards-mobile-width
-title: Card
-minimum width on mobile
-type: variable-text
-default: 120px
--
-id: cards-padding
-title: Card padding
-type: variable-text
-default: 1.2em
--
-id: cards-image-height
-title: Card
-maximum image height
-type: variable-text
-default: 400px
--
-id: cards-border-width
-title: Card border width
-type: variable-text
-default: 1px
--
-id: cards-background
-title: Card background color
-type: variable-themed-color
-format: hex
-default-light: '#'
-default-dark: '#' */
-
-/* @settings name: minimal Mobile
+    -
+        id: list-indent
+        title: Nested list indentation
+        description: Horizontal space from left in em units
+        type: variable-number-slider
+        default: 2
+        min: 1
+        max: 3.5
+        step: 0.1
+        format: em
+    -
+        id: sidebars
+        title: Sidebars
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: sidebar-lines-off
+        title: Disable sidebar relationship lines
+        description: Turns off lines in file navigation
+        type: class-toggle
+    -
+        id: mobile-left-sidebar-width
+        title: Mobile left sidebar width
+        description: maximum width for pinned left sidebar on mobile
+        type: variable-number
+        default: 280
+        format: pt
+    -
+        id: mobile-right-sidebar-width
+        title: Mobile right sidebar width
+        description: maximum width for pinned right sidebar on mobile
+        type: variable-number
+        default: 240
+        format: pt
+    -
+        id: tables
+        title: Tables
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: table-text-size
+        title: Table font size
+        description: All of the following settings apply to all tables globally. To turn on these features on a per-note basis use helper classes. See documentation.
+        type: variable-text
+        default: 1em
+    -
+        id: maximize-tables-off
+        title: maximize table width (beta)
+        description: Tables fill the width of the line
+        type: class-select
+        allowEmpty: false
+        default: maximize-tables
+        options:
+            -
+                label: Always
+                value: maximize-tables
+            -
+                label: Automatic
+                value: maximize-tables-auto
+            -
+                label: Never
+                value: maximize-tables-off
+    -
+        id: row-lines
+        title: Row lines
+        description: Display borders between table rows globally
+        type: class-toggle
+        default: false
+    -
+        id: col-lines
+        title: Column lines
+        description: Display borders between table columns globally
+        type: class-toggle
+        default: false
+    -
+        id: table-lines
+        title: Cell lines
+        description: Display borders around all table cells globally
+        type: class-toggle
+        default: false
+    -
+        id: row-alt
+        title: Striped rows
+        description: Display striped background in alternating table rows globally
+        type: class-toggle
+        default: false
+    -
+        id: col-alt
+        title: Striped columns
+        description: Display striped background in alternating table columns globally
+        type: class-toggle
+        default: false
+    -
+        id: table-tabular
+        title: Tabular figures
+        description: Use fixed width numbers in tables globally
+        type: class-toggle
+        default: false
+    -
+        id: table-numbers
+        title: Row numbers
+        description: Display row numbers in tables globally
+        type: class-toggle
+        default: false
+    -
+        id: table-nowrap
+        title: Disable line wrap
+        description: Turn off line wrapping in table cells globally
+        type: class-toggle
+        default: false
+    -
+        id: row-hover
+        title: Highlight active row
+        description: Highlight rows on hover
+        type: class-toggle
+        default: false
+    -
+        id: table-row-background-hover
+        title: Active row background
+        description: Background color for hovered tables rows
+        type: variable-themed-color
+        format: hex
+        opacity: true
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: tabs
+        title: Tabs
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: header-height
+        title: Tab bar height
+        type: variable-text
+        default: 40px
+    -
+        id: tabs-style
+        title: Tab style
+        type: class-select
+        allowEmpty: false
+        default: tabs-default
+        options: 
+            - 
+                label: default
+                value: tabs-default
+            -
+                label: Square
+                value: tabs-square
+            -
+                label: Underline
+                value: tabs-underline
+    -
+        id: tab-stacks
+        title: Tab stacks
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: tab-stacked-pane-width
+        title: Stacked width
+        type: variable-number
+        description: Width of a stacked tab in pixels
+        default: 700
+        format: px
+    -
+        id: tab-stacked-header-width
+        title: Spine width
+        type: variable-number
+        description: Width of the spine in pixels
+        default: 40
+        format: px
+    -
+        id: tab-stacked-spine-orientation
+        title: Spine text orientation
+        type: class-select
+        default: tab-stack-top
+        options:
+            -
+                label: Top aligned
+                value: tab-stack-top
+            -
+                label: Top aligned flipped
+                value: tab-stack-top-flipped
+            -
+                label: Bottom aligned
+                value: tab-stack-bottom
+            -
+                label: Bottom aligned flipped
+                value: tab-stack-bottom-flipped
+    -
+        id: tags
+        title: Tags
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: minimal-unstyled-tags
+        title: Plain tags
+        description: Tags will render as normal text, overrides settings below
+        type: class-toggle
+        default: false
+    -
+        id: tag-radius
+        title: Tag shape
+        type: variable-select
+        default: 14px
+        options:
+            -
+                label: Pill
+                value: 14px
+            -
+                label: Rounded
+                value: 4px
+            -
+                label: Square
+                value: 0px
+    -
+        id: tag-border-width
+        title: Tag border width
+        type: variable-select
+        default: 1px
+        options:
+            -
+                label: None
+                value: 0
+            -
+                label: Thin
+                value: 1px
+            -
+                label: Thick
+                value: 2px
+    -
+        id: tag-color
+        title: Tag text color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: tag-bg
+        title: Tag background color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: tag-bg2
+        title: Tag background color (hover)
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: text
+        title: Text
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: tx1
+        title: Normal text color
+        type: variable-themed-color
+        description: Primary text color used by default across all elements
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: hl1
+        title: Selected text background
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: hl2
+        title: Highlighted text background
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: tx2
+        title: Muted text color
+        description: Secondary text such as sidebar note titles and table headings
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: tx3
+        title: Faint text color
+        description: tertiary text such as input placeholders, empty checkboxes, and disabled statuses
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: italic-color
+        title: Italic text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: bold-color
+        title: Bold text color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: bold-weight
+        title: Bold text weight
+        type: variable-number-slider
+        default: 600
+        min: 100
+        max: 900
+        step: 100
+    -
+        id: spacing-p
+        title: Paragraph spacing
+        description: Space between paragraphs in reading mode
+        type: variable-text
+        default: 0.75em
+    -
+        id: titles
+        title: titles
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: tab-title-bar
+        title: Tab title bar
+        description: Tab title bar must be turned on in Appearance settings
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: file-header-visibility
+        title: Tab title visibility
+        description: Visibility of the tab title text
+        type: class-select
+        default: minimal-tab-title-visible
+        options:
+            -
+                label: Visible
+                value: minimal-tab-title-visible
+            -
+                label: Hidden
+                value: minimal-tab-title-hidden
+            -
+                label: Hover only
+                value: minimal-tab-title-hover
+    -
+        id: file-header-font-size
+        title: Tab title font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 0.9em
+    -
+        id: file-header-font-weight
+        title: Tab title font weight
+        type: variable-number-slider
+        default: 400
+        min: 100
+        max: 900
+        step: 100
+    -
+        id: file-header-justify
+        title: Tab title alignment
+        type: variable-select
+        default: center
+        options:
+            -
+                label: Center
+                value: center
+            -
+                label: Left
+                value: left
+    -
+        id: title-color
+        title: Tab title text color (active)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: title-color-inactive
+        title: Tab title color (inactive)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: inline-title
+        title: Inline title
+        description: Inline titles must be turned on in Appearance settings
+        type: heading
+        level: 3
+        collapsed: true
+    -
+        id: inline-title-font
+        title: Inline title font
+        description: Name of the font as it appears on your system
+        type: variable-text
+        default: ''
+    -
+        id: inline-title-size
+        title: Inline title font size
+        description: Accepts any CSS font-size value
+        type: variable-text
+        default: 1.125em
+    -
+        id: inline-title-weight
+        title: Inline title font weight
+        type: variable-number-slider
+        default: 600
+        min: 100
+        max: 900
+        step: 100
+    -
+        id: inline-title-color
+        title: Inline title text color (active)
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: translucency
+        title: Translucency
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: workspace-background-translucent
+        title: Translucent background color
+        type: variable-themed-color
+        opacity: true
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: window-frame
+        title: Window frame
+        type: heading
+        level: 2
+        collapsed: true
+    -
+        id: window-title-off
+        title: Hide window title
+        description: Hide title in the custom title bar
+        type: class-toggle
+    -
+        id: frame-background
+        title: Window frame background
+        description: Requires colorful window frame
+        type: variable-themed-color
+        opacity: true
+        format: hsl-split
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: titlebar-text-color-focused
+        title: Window title color (focused)
+        description: Requires custom title bar
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: titlebar-text-color
+        title: Window title color (inactive)
+        description: Requires custom title bar
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+    -
+        id: titlebar-text-weight
+        title: Window title font weight
+        description: Requires custom title bar
+        type: variable-number-slider
+        default: 600
+        min: 100
+        max: 900
+        step: 100
+*/
+/* @settings
+name: minimal Cards
+id: minimal-cards-style
+settings:
+    -
+        id: cards-min-width
+        title: Card minimum width
+        type: variable-text
+        default: 180px
+    -
+        id: cards-max-width
+        title: Card maximum width
+        description: default fills the available width, accepts valid CSS units
+        type: variable-text
+        default: 1fr
+    -
+        id: cards-mobile-width
+        title: Card minimum width on mobile
+        type: variable-text
+        default: 120px
+    -
+        id: cards-padding
+        title: Card padding
+        type: variable-text
+        default: 1.2em
+    -
+        id: cards-image-height
+        title: Card maximum image height
+        type: variable-text
+        default: 400px
+    -
+        id: cards-border-width
+        title: Card border width
+        type: variable-text
+        default: 1px
+    -
+        id: cards-background
+        title: Card background color
+        type: variable-themed-color
+        format: hex
+        default-light: '#'
+        default-dark: '#'
+*/
+/* @settings
+name: minimal Mobile
 id: minimal-mobile
 settings:
 	-
@@ -6266,7 +6360,8 @@ settings:
 		description: Turns off mobile toolbar
 		type: class-toggle
 */
-/* @settings name: minimal Advanced Settings
+/* @settings
+name: minimal Advanced Settings
 id: minimal-advanced
 settings:
 	-
@@ -6279,19 +6374,18 @@ settings:
 		title: Cursor style
 		description: The cursor style for UI elements
 		type: variable-select
-		default:
-		default
+		default: default
 		options: 
-		-	
-			label:default
-			value:default
-		-
-			label: Pointer
-			value: pointer
-		-
-			label: Crosshair
-			value: crosshair
-	-
+            -	
+                label:default
+                value:default
+            -
+                label: Pointer
+                value: pointer
+            -
+                label: Crosshair
+                value: crosshair
+    -
 		id: font-ui-small
 		title: Small font size
 		description: Font size in px of smaller text
@@ -6312,7 +6406,8 @@ settings:
 		type: variable-number-slider
 		default: 10
 		min: 0
-		max: 30 step: 1
+		max: 30
+        step: 1
 		format: px
 */
 /* ======================== 自定义代码 ======================== */
@@ -6780,7 +6875,7 @@ opacity: .5;
     padding-left: 9px!important;
     transform: none!important 
 }
- .markdown-source-view.mod-cm6 .cm-embed-block {
+.markdown-source-view.mod-cm6 .cm-embed-block {
     border: 0;
     padding-top: 9px;
 }
@@ -7107,7 +7202,7 @@ opacity: .5;
 }
 /*End*/
 /* callout伪看板效果*/
- .callout.callout[data-callout*="kanban"] {
+.callout.callout[data-callout*="kanban"] {
     --callout-color: var(--text-normal);
     --callout-icon: layout-dashboard;
     background: transparent;
@@ -7116,21 +7211,21 @@ opacity: .5;
     width: auto;
     padding: 0;
 }
- .callout.callout[data-callout*="kanban"] {
+.callout.callout[data-callout*="kanban"] {
     overflow: visible;
     background-color: rgba(255, 255, 255, 0)!important;
     border-left: 0px!important;
     margin: auto;
     box-shadow: none!important;
 }
- .callout.callout[data-callout*="kanban"] .admonition-content {
+.callout.callout[data-callout*="kanban"] .admonition-content {
     overflow: visible;
     margin: 0;
 }
- .callout.callout[data-callout*="kanban"] .is-mobile ul {
+.callout.callout[data-callout*="kanban"] .is-mobile ul {
     display: flex;
 }
- .callout.callout[data-callout*="kanban"] ul {
+.callout.callout[data-callout*="kanban"] ul {
     display: flex;
     margin: 0;
     flex-direction: row;
@@ -7139,7 +7234,7 @@ opacity: .5;
     border-radius: var(--radius-m);
     flex-wrap: wrap;
 }
- .callout.callout[data-callout*="kanban"] ul>li:not(.task-list-item) {
+.callout.callout[data-callout*="kanban"] ul>li:not(.task-list-item) {
     flex: 1 1 20%;
     padding: 0.1em 1em 0.1em 0.8em !important;
     margin: 0 0.1em 0.3em 0 !important;
@@ -7150,47 +7245,47 @@ opacity: .5;
     word-wrap: break-word;
     word-break: break-word;
 }
- .callout.callout[data-callout*="kanban"] ul .list-collapse-indicator.collapse-indicator.collapse-icon {
+.callout.callout[data-callout*="kanban"] ul .list-collapse-indicator.collapse-indicator.collapse-icon {
     margin-left: -1.2em;
     position: absolute;
 }
- .callout.callout[data-callout*="kanban"] ul .list-collapse-indicator.collapse-indicator.collapse-icon::before {
+.callout.callout[data-callout*="kanban"] ul .list-collapse-indicator.collapse-indicator.collapse-icon::before {
     color: var(--text-accent);
     transition: transform 10ms linear 0s 
 }
- .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+1) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+1) {
     background-color: var(--p-kanban-color-1);
     padding-left: 1em;
 }
- .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+2) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+2) {
     background-color: var(--p-kanban-color-2);
     padding-left: 1em;
 }
- .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+3) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+3) {
     background-color: var(--p-kanban-color-3);
     padding-left: 1em;
 }
- .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+4) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+4) {
     background-color: var(--p-kanban-color-4);
     padding-left: 1em;
 }
- .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+5) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+5) {
     background-color: var(--p-kanban-color-5);
     padding-left: 1em;
 }
- .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+6) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+6) {
     background-color: var(--p-kanban-color-6);
     padding-left: 1em;
 }
- .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+7) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n+7) {
     background-color: var(--p-kanban-color-7);
     padding-left: 1em;
 }
- .callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n) {
+.callout.callout[data-callout*="kanban"] ul>li:nth-of-type(8n) {
     background-color: var(--p-kanban-color-8);
     padding-left: 1em;
 }
- .callout.callout[data-callout*="kanban"] ul ul {
+.callout.callout[data-callout*="kanban"] ul ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -7200,45 +7295,45 @@ opacity: .5;
     border: 0;
     background: none;
 }
- .callout.callout[data-callout*="kanban"] ul ul li:not(.task-list-item) {
+.callout.callout[data-callout*="kanban"] ul ul li:not(.task-list-item) {
     width: 100%;
     display: block;
     background-color: var(--p-kanban-card-color-1) !important;
 }
- .callout.callout[data-callout*="kanban"] ul ul li:nth-child(even) {
+.callout.callout[data-callout*="kanban"] ul ul li:nth-child(even) {
     background-color: var(--p-kanban-card-color-2) !important;
 }
- .callout.callout[data-callout*="kanban"] ul>li:hover {
+.callout.callout[data-callout*="kanban"] ul>li:hover {
     border-color: var(--p-kanban-border-color) !important;
 }
- .callout.callout[data-callout*="kanban"] ul ul li:hover {
+.callout.callout[data-callout*="kanban"] ul ul li:hover {
     background: transparent !important;
     border-color: var(--p-kanban-border-color) !important;
     border-left: 1px solid var(--p-kanban-border-color) !important;
 }
- .theme-dark .callout.callout[data-callout*="kanban"] ul ul li:hover {
+.theme-dark .callout.callout[data-callout*="kanban"] ul ul li:hover {
     border-color: #696969e1 !important;
     border-left: 1px solid #696969e1 !important;
 }
- .callout.callout[data-callout*="kanban"] ul ul li .task-list-item-checkbox {
+.callout.callout[data-callout*="kanban"] ul ul li .task-list-item-checkbox {
     margin-left: 1.5rem;
 }
- .callout.callout[data-callout*="kanban"] ul ul ul {
+.callout.callout[data-callout*="kanban"] ul ul ul {
     margin-right: 0;
 }
- .callout.callout[data-callout*="kanban"] ul ul::before {
+.callout.callout[data-callout*="kanban"] ul ul::before {
     border-left: 0;
 }
 .markdown-preview-view.is-readable-line-width.callout.callout[data-callout*="kanban"] .markdown-preview-sizer>div>ul {
     max-width: 100%;
 }
- .callout.callout[data-callout*="kanban"] ul.contains-task-list ul, .callout.callout[data-callout*="kanban"] ol.contains-task-list ul, .callout.callout[data-callout*="kanban"] ul.contains-task-list ol, .callout.callout[data-callout*="kanban"] ol.contains-task-list ol {
+.callout.callout[data-callout*="kanban"] ul.contains-task-list ul, .callout.callout[data-callout*="kanban"] ol.contains-task-list ul, .callout.callout[data-callout*="kanban"] ul.contains-task-list ol, .callout.callout[data-callout*="kanban"] ol.contains-task-list ol {
     position: initial;
 }
- .callout.callout[data-callout*="kanban"] ul.contains-task-list ul::before, .callout.callout[data-callout*="kanban"] ol.contains-task-list ul::before, .callout.callout[data-callout*="kanban"] ul.contains-task-list ol::before, .callout.callout[data-callout*="kanban"] ol.contains-task-list ol::before {
+.callout.callout[data-callout*="kanban"] ul.contains-task-list ul::before, .callout.callout[data-callout*="kanban"] ol.contains-task-list ul::before, .callout.callout[data-callout*="kanban"] ul.contains-task-list ol::before, .callout.callout[data-callout*="kanban"] ol.contains-task-list ol::before {
     all: initial 
 }
- .callout.callout[data-callout*="kanban"] ul > li.task-list-item {
+.callout.callout[data-callout*="kanban"] ul > li.task-list-item {
     flex: 1 1 20%;
     padding: 0.1em 1em;
     margin: 0 0.1em 0.3em 0;
@@ -7250,7 +7345,7 @@ opacity: .5;
     word-break: break-word;
     text-indent: 0;
 }
- .callout.callout[data-callout*="kanban"] ul ul li.task-list-item {
+.callout.callout[data-callout*="kanban"] ul ul li.task-list-item {
     width: 100%;
     display: block;
     padding-left: 2em;
@@ -7258,7 +7353,7 @@ opacity: .5;
     background-color: var(--p-kanban-card-color-1) !important;
 }
 /*================== callout icon ==================*/
- .callout.callout:is([data-callout-metadata^='icon'], [data-callout='icon']) {
+.callout.callout:is([data-callout-metadata^='icon'], [data-callout='icon']) {
     flex: none !important;
     border-left: 0;
     background-color: transparent;
@@ -7267,20 +7362,20 @@ opacity: .5;
     margin-top: -4em;
     margin-bottom: 0;
 }
- .is-live-preview .callout.callout:is([data-callout-metadata^='icon'], [data-callout='icon']) {
+.is-live-preview .callout.callout:is([data-callout-metadata^='icon'], [data-callout='icon']) {
     margin-top: -2em;
 }
- .callout.callout:is([data-callout-metadata^='icon'], [data-callout='icon']) .callout-title {
+.callout.callout:is([data-callout-metadata^='icon'], [data-callout='icon']) .callout-title {
     display: none;
 }
- .callout.callout:is([data-callout-metadata^='icon'], [data-callout='icon']) .callout {
+.callout.callout:is([data-callout-metadata^='icon'], [data-callout='icon']) .callout {
     overflow: visible;
     margin: 0;
 }
- .callout.callout:is([data-callout-metadata^='icon'], [data-callout='icon']) > .callout-content {
+.callout.callout:is([data-callout-metadata^='icon'], [data-callout='icon']) > .callout-content {
     padding: 0;
 }
- .callout.callout:is([data-callout-metadata^='icon'], [data-callout='icon']) > .callout-content>svg {
+.callout.callout:is([data-callout-metadata^='icon'], [data-callout='icon']) > .callout-content>svg {
     height: calc(1em + 12px);
     padding: 6px;
     border-radius: 4px;
@@ -7290,7 +7385,7 @@ opacity: .5;
 }
 /*End*/
 /*================== blockquote ==================*/
- :is(.markdown-preview-view,.markdown-rendered) blockquote {
+:is(.markdown-preview-view,.markdown-rendered) blockquote {
     padding: 0.5em 0.5em 0.5em 0.6em;
     border-right-width: 0;
     border-left: solid;
@@ -7303,7 +7398,7 @@ opacity: .5;
     margin-inline-start: 2.5%;
     margin-inline-end: 2.5%;
 }
- :is(.markdown-preview-view,.markdown-rendered) blockquote p {
+:is(.markdown-preview-view,.markdown-rendered) blockquote p {
     margin-left: 1px;
     margin-right: 0;
     font-size: var(--font-size-preview-blockquote);
@@ -7312,67 +7407,67 @@ opacity: .5;
     font-family: var(--font-text);
 }
 /*Quote (> lorem ipsum ...) in edit mode with left border rendered instead of >*/
- div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
+div:not(.CodeMirror-activeline)>.CodeMirror-line span.cm-formatting-quote {
     color: transparent !important;
 }
- .CodeMirror-line span.cm-formatting-quote {
+.CodeMirror-line span.cm-formatting-quote {
     color: var(--red) !important;
 }
- .HyperMD-quote.CodeMirror-line {
+.HyperMD-quote.CodeMirror-line {
     background-color: var(--background-blockquote);
-    /*border-radius: var(--radius-s-border);
+    /*
+    border-radius: var(--radius-s-border);
     */
 }
- .cm-quote:not([class*="link"]):not([class*="string"]):not([class*="em"]):not([class*="strong"]) {
+.cm-quote:not([class*="link"]):not([class*="string"]):not([class*="em"]):not([class*="strong"]) {
     color: var(--text-normal);
 }
 /* ================================== */
 /* =========== Hover editor=========== */
 /* ================================== */
- body.theme-light .popover.hover-popover:not(.is-loaded) {
+body.theme-light .popover.hover-popover:not(.is-loaded) {
     box-shadow: 0px 2.7px 3.1px rgba(0, 0, 0, 0.032), 0px 5.9px 8.7px rgba(0, 0, 0, 0.052), 0px 10.4px 18.1px rgba(0, 0, 0, 0.071), 0px 20px 40px rgba(0, 0, 0, 0.11);
 }
- body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown-rendered), .popover.hover-popover:not(.is-loaded) .markdown-source-view .cm-scroller {
+body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown-rendered), .popover.hover-popover:not(.is-loaded) .markdown-source-view .cm-scroller {
     padding: 5px 10px 0;
 }
- body.theme-dark .popover.hover-popover:not(.is-loaded) {
+body.theme-dark .popover.hover-popover:not(.is-loaded) {
     box-shadow: 0px 2.7px 3.1px rgba(0, 0, 0, 0.081), 0px 5.9px 8.7px rgba(0, 0, 0, 0.131), 0px 10.4px 18.1px rgba(0, 0, 0, 0.18), 0px 20px 40px rgba(0, 0, 0, 0.28);
 }
- .popover.hover-popover {
+.popover.hover-popover {
     width: 400px;
-    
-max-height: 40vh;
+    max-height: 40vh;
 }
- .popover.hover-popover:not(.is-loaded) .markdown-source-view .cm-scroller, .popover.hover-popover:not(.is-loaded) .markdown-source-view .cm-gutters, body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown-rendered) {
+.popover.hover-popover:not(.is-loaded) .markdown-source-view .cm-scroller, .popover.hover-popover:not(.is-loaded) .markdown-source-view .cm-gutters, body .popover.hover-popover:not(.is-loaded) :is(.markdown-preview-view,.markdown-rendered) {
     font-size: 0.95em;
 }
 /*============================================*/
 /* ============ image position ============*/
 /*==========================================*/
- img[alt$="left"], img[alt$="Left"], img[alt$="LEFT"], img[alt$="L"], .markdown-source-view.mod-cm6 img[alt$="left"], .markdown-source-view.mod-cm6 img[alt$="Left"], .markdown-source-view.mod-cm6 img[alt$="LEFT"], .markdown-source-view.mod-cm6 img[alt$="L"], .internal-embed.image-embed.is-loaded[alt$="left"] img[alt$="left"], .internal-embed.image-embed.is-loaded[alt$="Left"] img[alt$="Left"], .internal-embed.image-embed.is-loaded[alt$="LEFT"] img[alt$="LEFT"], .internal-embed.image-embed.is-loaded[alt$="L"] img[alt$="L"], body:not(.image-zoom) .view-content img[alt$="left"]:not([class="emoji"]), body:not(.image-zoom) .view-content img[alt$="Left"]:not([class="emoji"]), body:not(.image-zoom) .view-content img[alt$="LEFT"]:not([class="emoji"]), body:not(.image-zoom) .view-content img[alt$="L"]:not([class="emoji"]) {
+img[alt$="left"], img[alt$="Left"], img[alt$="LEFT"], img[alt$="L"], .markdown-source-view.mod-cm6 img[alt$="left"], .markdown-source-view.mod-cm6 img[alt$="Left"], .markdown-source-view.mod-cm6 img[alt$="LEFT"], .markdown-source-view.mod-cm6 img[alt$="L"], .internal-embed.image-embed.is-loaded[alt$="left"] img[alt$="left"], .internal-embed.image-embed.is-loaded[alt$="Left"] img[alt$="Left"], .internal-embed.image-embed.is-loaded[alt$="LEFT"] img[alt$="LEFT"], .internal-embed.image-embed.is-loaded[alt$="L"] img[alt$="L"], body:not(.image-zoom) .view-content img[alt$="left"]:not([class="emoji"]), body:not(.image-zoom) .view-content img[alt$="Left"]:not([class="emoji"]), body:not(.image-zoom) .view-content img[alt$="LEFT"]:not([class="emoji"]), body:not(.image-zoom) .view-content img[alt$="L"]:not([class="emoji"]) {
     margin-left: 0 !important;
 }
  img[alt$="right"], img[alt$="Right"], img[alt$="RIGHT"], img[alt$="R"], .markdown-source-view.mod-cm6 img[alt$="right"], .markdown-source-view.mod-cm6 img[alt$="Right"], .markdown-source-view.mod-cm6 img[alt$="RIGHT"], .markdown-source-view.mod-cm6 img[alt$="R"], .internal-embed.image-embed.is-loaded[alt$="right"] img[alt$="right"], .internal-embed.image-embed.is-loaded[alt$="Right"] img[alt$="Right"], .internal-embed.image-embed.is-loaded[alt$="RIGHT"] img[alt$="RIGHT"], .internal-embed.image-embed.is-loaded[alt$="R"] img[alt$="R"], body:not(.image-zoom) .view-content img[alt$="right"]:not([class="emoji"]), body:not(.image-zoom) .view-content img[alt$="Right"]:not([class="emoji"]), body:not(.image-zoom) .view-content img[alt$="RIGHT"]:not([class="emoji"]), body:not(.image-zoom) .view-content img[alt$="R"]:not([class="emoji"]) {
     margin-right: 0 !important;
     display: block;
 }
- img[alt$="inline"], img[alt$="Inline"], img[alt$="INLINE"], img[alt$="inl"] {
+img[alt$="inline"], img[alt$="Inline"], img[alt$="INLINE"], img[alt$="inl"] {
     display: inline !important;
     padding: 0.05em 0.05em !important;
     vertical-align: bottom;
 }
- img[alt$="inlineL"], img[alt$="InlineL"], img[alt$="INLINEL"], img[alt$="inlL"] {
+img[alt$="inlineL"], img[alt$="InlineL"], img[alt$="INLINEL"], img[alt$="inlL"] {
     float: left;
     padding: 0 0.05em 0.05em 0 !important;
 }
- img[alt$="inlineR"], img[alt$="InlineR"], img[alt$="INLINER"], img[alt$="inlR"] {
+img[alt$="inlineR"], img[alt$="InlineR"], img[alt$="INLINER"], img[alt$="inlR"] {
     float: right;
     padding: 0 0 0.05em 0.05em !important;
 }
 /*=====================================*/
 /*======== frontmatter 边框格式 ========*/
 /*=====================================*/
- .frontmatter-container .frontmatter-container-header {
+.frontmatter-container .frontmatter-container-header {
     user-select: none;
     -webkit-user-select: none;
     cursor: pointer;
@@ -7384,7 +7479,7 @@ max-height: 40vh;
     border-bottom: 1px solid var(--background-modifier-border);
     margin: 2px 0 10px 0;
 }
- .frontmatter-container {
+.frontmatter-container {
     border: 1px solid #585442;
     padding: 6px 14px;
     padding-top: 6px;
@@ -7393,86 +7488,80 @@ max-height: 40vh;
     padding-left: 14px;
 }
 /*modified from https://codepen.io/brettdewoody/pen/oBjbbB */
- body.no-wrapped-table-cell table:not([class*="table-view-table"]), body.no-wrapped-dvtable-cell .dataview.table-view-table {
+body.no-wrapped-table-cell table:not([class*="table-view-table"]), body.no-wrapped-dvtable-cell .dataview.table-view-table {
     width: 100%;
     table-layout: fixed;
 }
- body.no-wrapped-table-cell table:not([class*="table-view-table"]) :is(th,td), body.no-wrapped-dvtable-cell .dataview.table-view-table :is(th,td) {
+body.no-wrapped-table-cell table:not([class*="table-view-table"]) :is(th,td), body.no-wrapped-dvtable-cell .dataview.table-view-table :is(th,td) {
     white-space: nowrap;
     overflow-x: auto;
     text-overflow: ellipsis;
 }
- body.no-wrapped-table-cell table:not([class*="table-view-table"]) :is(th,td):hover, body.no-wrapped-dvtable-cell .dataview.table-view-table :is(th,td):hover {
+body.no-wrapped-table-cell table:not([class*="table-view-table"]) :is(th,td):hover, body.no-wrapped-dvtable-cell .dataview.table-view-table :is(th,td):hover {
     text-overflow: clip;
 }
 /*modified from https://forum.obsidian.md/t/custom-css-for-tables-5-new-styles-ready-to-use-in-your-notes/17084 */
 /****dataview table***/
- table.table-view-table > thead > tr > th {
+table.table-view-table > thead > tr > th {
     font-size: 0.9em;
 }
- table.table-view-table > tbody > tr > td {
+table.table-view-table > tbody > tr > td {
     font-size: 0.85em;
 }
- body.wrapped-dvtable:not(.no-wrapped-dvtable-cell):not(.no-wrapped-dvtable) :is(.markdown-preview-view,.markdown-rendered) table.dataview.table-view-table>thead>tr, body.wrapped-dvtable:not(.no-wrapped-dvtable-cell):not(.no-wrapped-dvtable) :is(.markdown-preview-view,.markdown-rendered) .table.dataview.table-view-table>tbody>tr, body.wrapped-table:not(.no-wrapped-table-cell):not(.no-wrapped-table) :is(.markdown-preview-view,.markdown-rendered) table:not([class*="table-view-table"]) >thead>tr, body.wrapped-table:not(.no-wrapped-table-cell):not(.no-wrapped-table) :is(.markdown-preview-view,.markdown-rendered) table:not([class*="table-view-table"]) >tbody>tr {
+body.wrapped-dvtable:not(.no-wrapped-dvtable-cell):not(.no-wrapped-dvtable) :is(.markdown-preview-view,.markdown-rendered) table.dataview.table-view-table>thead>tr, body.wrapped-dvtable:not(.no-wrapped-dvtable-cell):not(.no-wrapped-dvtable) :is(.markdown-preview-view,.markdown-rendered) .table.dataview.table-view-table>tbody>tr, body.wrapped-table:not(.no-wrapped-table-cell):not(.no-wrapped-table) :is(.markdown-preview-view,.markdown-rendered) table:not([class*="table-view-table"]) >thead>tr, body.wrapped-table:not(.no-wrapped-table-cell):not(.no-wrapped-table) :is(.markdown-preview-view,.markdown-rendered) table:not([class*="table-view-table"]) >tbody>tr {
     white-space: pre-wrap;
     word-break: break-word;
     overflow-wrap: anywhere;
 }
- body.no-wrapped-dvtable .block-language-dataview, body.no-wrapped-table table:not([class*="table-view-table"]) {
+body.no-wrapped-dvtable .block-language-dataview, body.no-wrapped-table table:not([class*="table-view-table"]) {
     width: 100%;
     margin: 0;
     overflow-x: auto;
     white-space: nowrap;
 }
- body.no-wrapped-dvtable table.dataview th {
+body.no-wrapped-dvtable table.dataview th {
     padding: 0 20px;
     font-size: 1em;
 }
- body.no-wrapped-dvtable table.dataview tbody tr td:first-child {
+body.no-wrapped-dvtable table.dataview tbody tr td:first-child {
     font-size: 0.9em;
 }
- body.no-wrapped-dvtable table.dataview td:not(:first-child), body.no-wrapped-dvtable table.dataview tr > td:last-of-type {
+body.no-wrapped-dvtable table.dataview td:not(:first-child), body.no-wrapped-dvtable table.dataview tr > td:last-of-type {
     font-size: 0.9em;
-    
-max-width: unset;
+    max-width: unset;
 }
  body.auto-serial-number-dvtable .markdown-source-view:not(.cards) .dataview.table-view-table {
     counter-reset: sec;
 }
- body.auto-serial-number-dvtable .markdown-source-view:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before {
+body.auto-serial-number-dvtable .markdown-source-view:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before {
     counter-increment: sec;
     content:counter(sec) ". ";
 }
- body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table {
+body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table {
     counter-reset: section;
 }
- body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before {
+body.auto-serial-number-dvtable .markdown-preview-view:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before {
     counter-increment: section;
     content:counter(section) ". ";
 }
- body:not(.no-wrapped-dvtable) :is(.markdown-preview-view,.markdown-rendered) .table-view-table>tbody>tr>td, body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tbody>tr>td {
-    
-max-width: 18em;
+body:not(.no-wrapped-dvtable) :is(.markdown-preview-view,.markdown-rendered) .table-view-table>tbody>tr>td, body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tbody>tr>td { 
+    max-width: 18em;
 }
- :is(.markdown-preview-view,.markdown-rendered) table tbody>tr:nth-child(odd), .markdown-source-view table tbody>tr:nth-child(odd) {
+:is(.markdown-preview-view,.markdown-rendered) table tbody>tr:nth-child(odd), .markdown-source-view table tbody>tr:nth-child(odd) {
     background-color: var(--table-background-color-odd);
 }
- :is(.markdown-preview-view,.markdown-rendered) table tbody>tr, .markdown-source-view table tbody>tr {
+:is(.markdown-preview-view,.markdown-rendered) table tbody>tr, .markdown-source-view table tbody>tr {
     background-color: var(--table-background-color);
 }
- :is(.markdown-preview-view,.markdown-rendered) :is(th,td) {
+:is(.markdown-preview-view,.markdown-rendered) :is(th,td) {
     padding: 4px 10px;
     border: none;
-}
- :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) th {
-    background-color: var(--table-thead-background-color);
-    font-family: var(--font-family-strong);
 }
 /* ================================== */
 /* ========= 启动动画和loading ======= */
 /* ================================== */
 /* the gif animation was created by @Jake Fleming https://dribbble.com/shots/9948351-kitty-wiggle */
- body.loading-animation .progress-bar-message::before {
+body.loading-animation .progress-bar-message::before {
     content: "";
     display: block;
     width: 660px;
@@ -7486,27 +7575,27 @@ max-width: 18em;
 }
 /** 
 /*备选的启动动画 google calendar background: no-repeat center/cover url("http://searchengineland.com/wp-content/seloads/2016/02/Google-leap-doodle-sketch.gif") google 讲课 doodle colorful circle loading */
- body.loading-animation.theme-dark .progress-bar-message::before {
+body.loading-animation.theme-dark .progress-bar-message::before {
     filter: invert(100%) hue-rotate(153deg) saturate(250%);
 }
- body.loading-animation.theme-light .progress-bar {
+body.loading-animation.theme-light .progress-bar {
     background-color: white;
 }
- body.loading-animation.theme-dark .progress-bar {
+body.loading-animation.theme-dark .progress-bar {
     background-color: black;
 }
- body.loading-animation .progress-bar-message {
+body.loading-animation .progress-bar-message {
     color: var(--text-normal);
     font-size: 25px;
 }
 /*End*/
 /*加载画面的进度条框*/
- body:not(.default-loading-page) .progress-bar-line {
+body:not(.default-loading-page) .progress-bar-line {
     display: none;
 }
 /*End*/
 /*加载画面的进度条*/
- body:not(.default-loading-page) .progress-bar-subline {
+body:not(.default-loading-page) .progress-bar-subline {
     display: none;
 }
 /*End*/
@@ -7514,41 +7603,39 @@ max-width: 18em;
 /* =========== 顶部 titlebar ======== */
 /* ================================== */
 /*顶部 titlebar 下边框*/
- .titlebar {
+.titlebar {
     border-bottom:1px solid var(--background-modifier-border2);
 }
 /*End*/
 /*顶部 titlebar 按钮的样式优化*/
- .mod-windows .titlebar-button:hover {
+.mod-windows .titlebar-button:hover {
     background-color: var(--background-primary-alt) 
 }
- .mod-windows .titlebar-button.mod-close:hover {
+.mod-windows .titlebar-button.mod-close:hover {
     background-color: var(--background-modifier-error) 
 }
- .mod-windows .mod-close:hover svg {
+.mod-windows .mod-close:hover svg {
     fill: white!important;
     stroke: white!important 
 }
 /*End*/
 /*顶部 titlebar 按钮的样式优化*/
- .titlebar-text {
+.titlebar-text {
     font-weight: 600;
     padding-top: 6px;
     color: var(--text-normal);
     letter-spacing: inherit 
 }
- body:not(.window-title-on) .titlebar-text {
+body:not(.window-title-on) .titlebar-text {
     display: none 
 }
- .titlebar-button:hover {
-    
-opacity: 1;
+.titlebar-button:hover {
+    opacity: 1;
     transition:
 opacity .1s ease-out 
 }
- .titlebar-button {
-    
-opacity: .5;
+.titlebar-button {
+    opacity: .5;
     cursor: var(--cursor);
     color: var(--tx1);
     padding: 2px 4px;
@@ -7556,10 +7643,10 @@ opacity: .5;
     line-height: 1;
     display: flex;
 }
- .titlebar-button:hover {
+.titlebar-button:hover {
     background-color: var(--background-tertiary) 
 }
- .titlebar-button-container {
+.titlebar-button-container {
     height: var(--titlebar-height);
     top: 0;
     display: flex;
@@ -7595,39 +7682,6 @@ opacity: 1.24;
  .titlebar .history-counter {
     margin-top: 0.1em !important;
     font-size:1.0em !important;
-}
-/*titlebar quick explore 上目录和文件名样式尺寸*/
- div#quick-explorer .explorable-name {
-    padding: 0 4px;
-    border-radius: 4px;
-    font-size:1.2em;
-}
-div#quick-explorer {
-    width:90%;
-    flex-wrap: wrap;
-    display: flex 
-}
-div#quick-explorer span.explorable {
-    align-items: center;
-    color: var(--text-muted);
-    display: flex;
-    font-size: calc(var(--font-adaptive-smaller)+15px);
-    line-height: 24px;
-    opacity:1.0;
-}
-div#quick-explorer span.explorable:hover {
-    color: var(--item-side);
-    font-size: calc(var(--font-adaptive-smaller)+15px);
-}
-/*展开路径中，最后一级文件名显示高亮色*/
-div#quick-explorer .explorable.titlebar-button:last-child .explorable-name {
-    color: var(--item-side);
-}
-div#quick-explorer .explorable-separator::before {
-    content: "\00a0›"!important;
-    font-size: 1.3em;
-    font-weight: 400;
-    margin: 0 
 }
 /*展开的子菜单显示高亮配色*/
 .menu-item:hover, .menu-item .selected {
@@ -7674,9 +7728,10 @@ div#quick-explorer .explorable-separator::before {
     text-align: center;
     bottom: 1.5em !important;
     /*调整左侧ribbon 区域的收起按钮位置*/
-    z-index: 9 
+    z-index: 9;
 }
 /*End*/
+
 /* ======================================== */
 /* =========== 导航栏文件目录区域 ========== */
 /* ======================================== */
@@ -7871,14 +7926,6 @@ div#quick-explorer .explorable-separator::before {
     transform: translateX(1px) translateY(1px) rotate(-90deg);
 	opacity: 0.5;
 }
-/*左侧导航栏，顶部导航样式调整*/
-.workspace-tab-header-inner {
-    padding: 3px 5px;
-}
-/*End*/
-.workspace-tab-header-inner {
-    box-sizing: child;
-}
 .workspace-tab-header-inner .workspace-tab-header-inner-icon {
     box-sizing:content-box;
     font-size:1.3em;
@@ -7998,7 +8045,7 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     border-bottom: 1px solid var(--bg3);
 }
 .mod-windows .modal.mod-settings .vertical-tab-nav-item {
-    font-size:1.3em;
+    font-size:1.27em;
     border-radius: var(--radius-none);
 }
 .mod-windows .modal.mod-settings .vertical-tab-nav-item:hover {
@@ -8060,6 +8107,7 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     /*border-color:var(--tab-outline-color);*/
     box-shadow: 0 0 0 var(--tab-outline-width);
 }
+ /*tabs上的标题大小*/
 .workspace-tab-header-inner-title {
     line-height: 2.5;
 	font-size:1.0em;
@@ -8085,12 +8133,6 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     padding-top: .5em 
 }
 /*End*/
-/*编辑视图下:插入代码块embed 左侧对齐和宽度*/
-.is-live-preview.is-readable-line-width .cm-embed-block {
-    margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/ 2),calc(50% + var(--folding-offset) - var(--max-width)/ 2)) !important;
-    max-width: calc(var(--max-width) - var(--folding-offset)) !important;
-    width: calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
-}
 /*编辑视图下，控制列表连接线颜色和位置*/
 /*编辑视图下，无序列表的前缀边线的样式*/
 .markdown-source-view.mod-cm6 .cm-indent::before {
@@ -8118,13 +8160,7 @@ ol li ol::before {
     height: calc(var(--icon-size)+10);
 }
 /*End*/
-/*控制每一个可编辑块的与实际的内容体之间的边距*/
-.is-live-preview.is-readable-line-width .cm-embed-block>div,.is-live-preview.is-readable-line-width .cm-embed-block,.is-live-preview.is-readable-line-width .mod-empty {
-    max-width: 100%;
-    margin: 0 auto;
-    width: var(--line-width-adaptive);
-}
-/*End*/
+
 /*浅色和深色模式下，正文编辑器的背景底色*/
 .theme-light .cm-editor {
     background-color: #fffffe;
@@ -8135,8 +8171,10 @@ ol li ol::before {
 }
 /*End*/
 /*正文编辑器的图片边框*/
- .cm-content .internal-embed.image-embed.is-loaded {
-    border:0.5px solid black;
+ .cm-content .internal-embed.image-embed.is-loaded img {
+    border-width:2px;
+    border:1px dashed black;
+    padding: 2px;
 }
 /*End*/
 /* 优化tooltip的样式 */
@@ -8186,21 +8224,27 @@ ol li ol::before {
 /*编辑模式下：标题下方线的粗细和颜色样式，分割线距离标题和紧跟标题的内容块的距离*/
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-1.cm-line  {
     border-bottom: 1.5px solid var(--ui2);
+    margin-bottom: 0.2em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-2.cm-line {
     border-bottom: 1.5px solid var(--ui2);
+    margin-bottom: 0.2em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-3.cm-line {
     border-bottom: 1.5px solid var(--ui2);
+    margin-bottom: 0.2em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-4.cm-line {
     border-bottom: 1.5px solid var(--ui2);
+    margin-bottom: 0.2em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-5.cm-line {
     border-bottom: 1.5px solid var(--ui2);
+    margin-bottom: 0.2em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-6.cm-line {
     border-bottom: 1.5px solid var(--ui2);
+    margin-bottom: 0.2em !important;
 }
 /*预览视图下：标题下方线的粗细和颜色样式，分割线距离标题和紧跟标题的内容块的距离*/
 .cm-s-obsidian .cm-header-1,.empty-state-title,.markdown-preview-view h1,.markdown-rendered h1,h1 {
@@ -8351,45 +8395,22 @@ ol li ol::before {
     background-color:unset !important;
 }
 /*End*/
-/*编辑模式下，修复 quick-explorer 跨度适配 v1.0.1*/
-input[type=checkbox] {
-    border-radius:0px !important;
-}
-/*预览模式下，修复 quick-explorer 跨度适配 v1.0.1*/
 
-/* ======================================= */
-/* =============== 插件 ================== */
-/* ======================================= */
-/*修复 quick-explorer 跨度适配 v1.0.1*/
-div#quick-explorer {
-    width:100% !important;
-}
-/*为【Lapel】插件的任务进度条添加边框，优化完全没有完成的任务，进度显示不够明显*/
-.cm-gutterElement .cm-heading-marker {
-    font-size:small;
-}
-.cm-gutterElement .cm-heading-marker:hover {
-    font-weight: bolder !important;
-    font-size: larger !important;
-}
-/*End*/
-/*为【task progress bar】插件，优化效果*/
-.cm-task-progress-bar.with-number .progress-bar-inline-background {
-    border:1px solid var(--tx3);
-    background-color: var(--bg1) !important;
-    width: 4.1rem !important;
-}
-/*End*/
-/*End*/
-/*【rich link】插件样式修复*/
-.rich-link-card .rich-link-card-title {
-    font-size:calc(var(--font-ui-smaller)+2);
-}
-.rich-link-card .rich-link-card-description {
-    font-size:calc(var(--font-ui-smaller)+1);
-}
-/*End*/
 /*=================== 表格类优化 ====================*/
+/*控制每一个可编辑块的与实际的内容体之间的边距*/
+.is-live-preview.is-readable-line-width .cm-embed-block>div,.is-live-preview.is-readable-line-width .cm-embed-block,.is-live-preview.is-readable-line-width .mod-empty {
+    max-width: 100%;
+    margin: 0 auto;
+    width: var(--line-width-adaptive);
+}
+/*End*/
+/*编辑视图下:插入代码块embed 左侧对齐和宽度*/
+.is-live-preview.is-readable-line-width .cm-embed-block {
+    margin-left: max(calc(50% + var(--folding-offset) - var(--line-width-adaptive)/ 2),calc(50% + var(--folding-offset) - var(--max-width)/ 2)) !important;
+    max-width: calc(var(--max-width) - var(--folding-offset)) !important;
+    width: calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
+}
+/*End*/
 /*给bookinfo 的表格增加指向（hover）的动画*/
 body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
     background: var(--table-hover-raw-color);
@@ -8403,14 +8424,237 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
     border: 1px solid var(--bg3) 
 }
 /*增加表格标题栏背景色*/
-.markdown-rendered table thead {
-    background-color: var(--callout-color);
+.cm-embed-block.markdown-rendered .ob-table-enhancer thead > tr {
+    background-color: rgba(var(--callout-color), 0.1);
+    color:rgb(233, 35, 35) !important;
 }
-/*增加表格颜色更行显示不同背景色*/
+.markdown-rendered .callout-content table > thead {
+    background-color: rgba(var(--callout-color), 0.1);
+}
+/*增加表格颜色隔行显示不同背景色*/
 .markdown-rendered tbody tr:nth-child(2n+2) {
     background-color: var(--bg3);
 }
 /*End*/
+/*=================== End ====================*/
+
+
+/* ======================================= */
+/* ========= 核心插件 core plugin ========= */
+/* ======================================= */
+
+/* 【大纲】的层级指向器优化 */
+/* 1. 树状结构，显示层级路径 */
+/* 2. 基于AccentColor的高亮 */
+/* 3. 和文档无序列表类似，父节点收起时，前面的圆点有阴影 */
+.workspace-leaf-content[data-type=outline] .view-content .outline {
+    padding-left: 0 !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon {
+    cursor: pointer !important;
+    margin-right: var(--size-4-1) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon::before {
+    width: var(--size-4-2) !important;
+    height: var(--size-4-2) !important;
+    background-color: var(--text-accent) !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    left: calc(var(--size-4-5)) !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon svg path {
+    display: none !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-children {
+    overflow: hidden !important;
+    border-left: none !important;
+    margin-left: var(--size-4-2) !important;
+    padding-left: var(--size-4-4) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self {
+    position: relative !important;
+    padding-left: var(--size-4-6) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner {
+    padding-left: var(--size-4-5) !important;
+  }
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner::after {
+    content: "" !important;
+    width: var(--size-4-1) !important;
+    height: var(--size-4-1) !important;
+    border: 2px solid var(--text-accent) !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    left: calc(var(--size-4-5)) !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner::before {
+    content: "" !important;
+    width: var(--size-4-2) !important;
+    height: 50vh !important;
+    opacity: 0 !important;
+    border-left: 2px solid var(--text-accent) !important;
+    border-bottom: 2px solid var(--text-accent) !important;
+    border-bottom-left-radius: var(--size-4-2) !important;
+    position: absolute !important;
+    bottom: calc(var(--line-height-tight) * var(--nav-item-size) / 2 + var(--size-4-1));
+    left: -1px !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon + .tree-item-inner {
+    padding-left: 0;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon + .tree-item-inner::after {
+    content: none !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover {
+    background-color: transparent !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover .tree-item-inner::before {
+    opacity: 1 !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover .tree-item-icon::before {
+    background-color: var(--text-normal) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover .tree-item-inner::after {
+    border-color: var(--text-normal) !important;
+    background-color: var(--text-normal) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-inner {
+    z-index: 2 !important;
+    background-color: var(--background-secondary) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item > .tree-item-children:hover .tree-item-icon + .tree-item-inner::before {
+    opacity: 1 !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item.is-collapsed .tree-item-icon::before {
+    box-shadow: 0 0 0 4px var(--background-modifier-hover) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline > .tree-item > .tree-item-self .tree-item-inner::before {
+    content: none !important;
+}
+
+
+/* ======================================= */
+/* ====== 第三方插件 community plugin ====== */
+/* ======================================= */
+/*编辑模式下，修复 quick-explorer 跨度适配 v1.0.1*/
+input[type=checkbox] {
+    border-radius:var(--radius-none) !important;
+}
+/*修复 quick-explorer 跨度适配 v1.0.0*/
+/*
+div#quick-explorer {
+    width:100% !important;
+}
+*/
+/*quick explore 上目录和文件名样式尺寸*/
+div#quick-explorer .explorable-name {
+    padding: 0 4px;
+    border-radius: 4px;
+    font-size:1.2em;
+}
+div#quick-explorer {
+    /*
+    width:90%;
+    */
+    flex-wrap: wrap;
+    display: flex 
+}
+div#quick-explorer span.explorable {
+    align-items: center;
+    color: var(--text-muted);
+    display: flex;
+    font-size: calc(var(--font-adaptive-smaller)+15px);
+    line-height: 24px;
+    opacity:1.0;
+}
+div#quick-explorer span.explorable:hover {
+    color: var(--item-side);
+    font-size: calc(var(--font-adaptive-smaller)+15px);
+}
+/*展开路径中，最后一级文件名显示高亮色*/
+div#quick-explorer .explorable.titlebar-button:last-child .explorable-name {
+    color: var(--item-side);
+}
+div#quick-explorer .explorable-separator::before {
+    content: "\00a0›"!important;
+    font-size: 1.3em;
+    font-weight: 400;
+    margin: 0 
+}
+/*End*/
+/*=================== tabel cnhancer ====================*/
+/*tabel enhancer 的表头样式*/
+.cm-table-widget .ob-table-enhancer > thead tr {
+    border-bottom: 1px solid black;
+}
+.callout-content .ob-table-enhancer thead {
+    border-bottom: 1px solid black;
+}
+/*End*/
+/*table-enhancer 插件,表格的行高*/
+.ob-table-enhancer > thead > tr > th, .ob-table-enhancer > tbody > tr > td {
+	height: 2.5em !important;
+}
+/*table-enhancer 插件,行编辑浮动按钮与表格的边距*/
+.ob-table-enhancer-row-bar-button {
+    margin-right:0.6em;
+}
+/*table-enhancer 插件,行、列编辑浮动按钮的大小*/
+.ob-table-enhancer-row-bar-button .icon,.ob-table-enhancer-col-bar-button .icon{
+    width:22px;
+    height: 22px;
+}
+/*table-enhancer,优化当单元格获得焦点（is-editing）时，在部分情况下会产生模糊的问题*/
+.is-editing {
+	filter:none !important;
+}
+/*End*/
+/*为【Lapel】插件,显示的大小*/
+.cm-gutters .cm-gutter.cm-lapel .cm-gutterElement .cm-heading-marker {
+    font-size:medium;
+}
+.cm-gutters .cm-gutter.cm-lapel .cm-gutterElement .cm-heading-marker:hover {
+    font-weight: bolder;
+    font-size: larger;
+}
+/*End*/
+/*为【Lapel】插件，修复headings 下方添加边距后产生差分距离*/
+.cm-gutter.cm-lapel .cm-gutterElement {
+    margin-bottom: 0.33em;
+}
+/*End*/
+/*为【task progress bar】插件，优化效果*/
+.cm-task-progress-bar.with-number .progress-bar-inline-background {
+    border:1px solid var(--tx3);
+    background-color: var(--bg1) !important;
+    width: 4.1rem !important;
+}
+/*End*/
+/*End*/
+/*【Rich links】插件样式修复*/
+.rich-link-card .rich-link-card-title {
+    font-size:calc(var(--font-ui-smaller)+2);
+}
+.rich-link-card .rich-link-card-description {
+    font-size:calc(var(--font-ui-smaller)+1);
+}
+/*End*/
+/*【chronology】有内容的日子堆叠背景色加强*/
+.chronology-container .chronology-calendar-heat-background {
+    background-color: var(--color-cyan) !important;
+}
+.chronology-container {
+    width:100%;
+}
+.chronology-calendar-box {
+    font-size:large !important;
+    max-width: 20em;
+    flex: 0;
+}
 /*=========== callout =============*/
 /*修复 callout 标题栏的背景色*/
 .callout {
@@ -8464,45 +8708,50 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
     margin-left: -1px;
 }
 /*End*/
-/*=================== tabel generator ====================*/
-/*tabel generator 的表头样式*/
-.cm-table-widget .ob-table-enhancer thead tr {
-    border-bottom: 1px solid black;
-}
-/*End*/
 /*=================== edit toolbar 插件 ====================*/
 /*edit toolbar 在置顶模式下边框样式*/
 #cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic {
-    border:1px solid var(--background-modifier-border2) !important;
-    border-top: 1px solid var(--background-modifier-border2) !important;
-    border-bottom: 1px solid var(--background-modifier-border2) !important;
     border-radius: 0 !important;
 }
 /*End*/
 /*为【edit toolbar】插件，优化工具icon指向（hover）的样式*/
-/*一级菜单*/
- .cMenuToolbarCommandItem:hover {
+/*【edit toolbar】一级菜单*/
+.cMenuToolbarCommandItem:hover {
     color: white !important;
     background-color: var(--item-side) !important;
 }
-/*多级菜单*/
- [class^="cMenuToolbarCommandsubItem"]:hover {
+/*【edit toolbar】一级菜单尺寸*/
+button[class^=cMenuToolbarCommandsubItem] {
+    height:2.0em;
+    width:2.0em;
+}
+/*【edit toolbar】子菜单*/
+/*【edit toolbar】子菜单尺寸*/
+button[class^=cMenuToolbarCommandsubItem] >.subitem button.menu-item {
+    height:3.0em;
+    width:3.0em;
+}
+button[class^=cMenuToolbarCommandsubItem] >.subitem button.menu-item svg{
+    height:3.0em !important;
+    width:3.0em !important;
+}
+button[class^="cMenuToolbarCommandsubItem"]:hover {
     color: white !important;
     background-color: var(--item-side) !important;
     height:22px;
     width:22px;
 }
-/*插件设置菜单的指向样式*/
- .setting-item.cMenuToolbarCommandItem:hover,.setting-item.cMenuToolbarCommandItem.cMenuToolbarCommandsubItem:hover {
+/*【edit toolbar】插件设置菜单的指向样式*/
+.setting-item.cMenuToolbarCommandItem:hover,.setting-item.cMenuToolbarCommandItem.cMenuToolbarCommandsubItem:hover {
     color:white !important;
     background-color: var(--item-side) !important;
 }
- .setting-item.cMenuToolbarCommandItem:hover .setting-item-name {
+.setting-item.cMenuToolbarCommandItem:hover .setting-item-name {
     color:white !important;
 }
 /*End*/
-/*插件在独立窗口模式下的子菜单高度问题*/
- button[class^=cMenuToolbarCommandsubItem] >.subitem {
+/*【edit toolbar】插件在独立窗口模式下的子菜单高度问题*/
+button[class^=cMenuToolbarCommandsubItem] >.subitem {
     height:32px !important;
 }
 /*End*/
@@ -8518,10 +8767,10 @@ body.css-settings-manager {
 /*End*/
 /*修复banner 和 metatable 在没有banner icon下的高度问题*/
 /*主窗口下，有banner icon的情景下*/
- .obsidian-banner-wrapper.has-banner-icon {
+.obsidian-banner-wrapper.has-banner-icon {
     margin-top:var(--banner-height);
 }
- .has-banner-icon.obsidian-banner-wrapper .obsidian-metatable {
+.has-banner-icon.obsidian-banner-wrapper .obsidian-metatable {
     margin-top:30px;
 }
 .has-banner.cm-active.has-banner-icon.cm-line.obsidian-banner-icon .icon-box {
@@ -8544,8 +8793,9 @@ body.css-settings-manager {
 }
 /*End*/
 /*修复dataview Cards 视图下，图片和 grid 错位问题*/
- .col-alt table:not(.calendar) tr>td:nth-child(2n+2),.col-alt table:not(.calendar) tr>th:nth-child(2n+2),.row-alt table:not(.calendar) tbody>tr:nth-child(odd) {
-    /*padding-left: 10px;
+.col-alt table:not(.calendar) tr>td:nth-child(2n+2),.col-alt table:not(.calendar) tr>th:nth-child(2n+2),.row-alt table:not(.calendar) tbody>tr:nth-child(odd) {
+    /*
+    padding-left: 10px;
     */
     background: var(--background-table-rows);
 }
@@ -8553,6 +8803,61 @@ body.css-settings-manager {
 /* ================================== */
 /* ============ 测试代码 ============ */
 /* ================================== */
+
+
+/* 在编辑模式下，自动为标题编号。List styling for outline pane */
+/*
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline {
+    counter-reset: h1;
+}
+
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.pane-clickable-item {
+    counter-reset: h2;
+}
+
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.pane-clickable-item {
+    counter-reset: h3;
+}
+
+
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item {
+    counter-reset: h4;
+}
+
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item {
+    counter-reset: h5;
+}
+
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item {
+    counter-reset: h6;
+}
+
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.pane-clickable-item:before {
+    counter-increment: h1;
+    content: counter(h1) ". ";
+}
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.pane-clickable-item:before {
+    counter-increment: h2;
+    content: counter(h1) "." counter(h2) ". ";
+}
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item:before {
+    counter-increment: h3;
+    content: counter(h1) "." counter(h2) "." counter(h3) ". ";
+}
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item:before {
+    counter-increment: h4;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". ";
+}
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item:before {
+    counter-increment: h5;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
+}
+body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item:before {
+    counter-increment: h6;
+    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". ";
+}
+*/
+
 /*预览模式下：展示有序列表的不同层级逻辑*/
 /* decimal = "1., 2.", upper-latin = "A., B.", lower-roman = "I., II." */
 /* ol {
@@ -8588,6 +8893,7 @@ ol li:before {
 section > ol li::before {
     position: relative;
 }
+/*修改输出 打印时候的 标题的颜色*/
 /* @media print {
     h1 {
         color: DarkSlateBlue !important;
@@ -8678,3 +8984,11 @@ section > ol li::before {
 
 }
 */
+/*左侧导航栏，顶部导航样式调整*/
+/*
+.workspace-tab-header-inner {
+    padding: 3px 5px;
+}
+*/
+/*End*/																																											
+ 
