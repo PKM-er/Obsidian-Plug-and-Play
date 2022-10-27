@@ -8736,27 +8736,27 @@ ol li ol::before {
 }
 /*End*/
 /*预览视图下，无序列表各个层级的前缀标识 */
-.markdown-reading-view ul.has-list-bullet li::after {
+.markdown-reading-view ul.has-list-bullet li::marker {
     content: var(--cm-edit-bullet-list-1) !important;
 	font-size:1.1em;
 	color:black;
 }
-.markdown-reading-view ul.has-list-bullet li li::after {
+.markdown-reading-view ul.has-list-bullet li li::marker {
     content: var(--cm-edit-bullet-list-2) !important;
 	font-size:1.1em;
 	color:black;
 }
-.markdown-reading-view ul.has-list-bullet li li li::after{
+.markdown-reading-view ul.has-list-bullet li li li::marker{
     content: var(--cm-edit-bullet-list-3) !important;
 	font-size:1.1em;
 	color:black;
 }
-.markdown-reading-view ul.has-list-bullet li li li li::after {
+.markdown-reading-view ul.has-list-bullet li li li li::marker {
     content: var(--cm-edit-bullet-list-4) !important;
 	font-size:1.1em;
 	color:black;
 }
-.markdown-reading-view ul.has-list-bullet li li li li li::after {
+.markdown-reading-view ul.has-list-bullet li li li li li::marker {
     content: var(--cm-edit-bullet-list-5) !important;
 	font-size:1.1em;
 	margint-top:-1.3em;
