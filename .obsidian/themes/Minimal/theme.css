@@ -1,4 +1,38 @@
-/* --------------------------------------------------------------------------- Minimal Theme by @kepano User interface replacement for Obsidian. Designed to be used with the Minimal Theme Settings plugin and the Hider plugin. Sponsor my work: https://www.buymeacoffee.com/kepano Readme: https://github.com/kepano/obsidian-minimal ----------------------------------------------------------------------------- MIT License Copyright (c) 2020-2022 Stephan Ango (@kepano) Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
+/* ---------------------------------------------------------------------------
+
+Minimal Theme by @kepano
+User interface replacement for Obsidian.
+Designed to be used with the Minimal Theme Settings 
+plugin and the Hider plugin.
+Sponsor my work:
+https://www.buymeacoffee.com/kepano
+Readme:
+https://github.com/kepano/obsidian-minimal
+-----------------------------------------------------------------------------
+
+MIT License
+
+Copyright (c) 2020-2022 Stephan Ango (@kepano)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in 
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+*/
 body{
     --font-text-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
     --font-editor-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
@@ -42,7 +76,7 @@ body{
     --h6-style:normal;
     --line-width:40rem;
     --line-height:1.5;
-    --max-width:85%;
+    --max-width:88%;
     --max-col-width:18em;
     --icon-muted:0.5;
     --border-width:1px;
@@ -52,7 +86,7 @@ body{
     --list-indent:2em;
     --list-spacing:0.075em;
     --input-height:32px;
-    --header-height:50px;
+    --header-height:45px;
     --mobile-left-sidebar-width:280pt;
     --mobile-right-sidebar-width:240pt;
     --top-left-padding-y:0px;
@@ -61,7 +95,7 @@ body{
     --top-left-padding-y:0px;
     --image-muted:0.7;
     --spacing-p:0.75em;
-    --item-side:#007aff;
+	--item-side:#007aff;
     --text-headings:var(--item-side);
     --h1-color:var(--text-headings);
     --h2-color:var(--text-headings);
@@ -76,6 +110,11 @@ body{
 	--radius-m: 5px;
 	--radius-l: 12px;
 	--radius-xl: 16px;
+	--cm-edit-bullet-list-1: '●';
+	--cm-edit-bullet-list-2: '○';
+	--cm-edit-bullet-list-3: '■';
+	--cm-edit-bullet-list-4: '□';
+	--cm-edit-bullet-list-5: '▸';
 }
 .mod-macos{
     --top-left-padding-y:24px
@@ -94,7 +133,7 @@ body{
     --color-cyan:#73bbb2;
     --color-blue:#6c99bb;
     --color-purple:#9e86c8;
-    --color-pink:#b05279
+    --color-pink:#b05279;
 }
 .theme-light,.theme-light.minimal-default-light,body .excalidraw{
     --bg1:white;
@@ -113,7 +152,9 @@ body{
     --ax2:hsl( var(--accent-h), var(--accent-s), calc(var(--accent-l) - 10%) );
     --ax3:hsl( var(--accent-h), var(--accent-s), calc(var(--accent-l) + 10%) );
     --hl1:hsla( var(--accent-h), 50%, calc(var(--base-l) - 20%), 30% );
-    --hl2:rgba(255, 225, 0, 0.5)
+    --hl2:rgba(255, 225, 0, 0.5);
+    --sp1:white;
+	--cm-editor-backgroud-color: #fffffe;
 }
 .excalidraw.theme--dark,.theme-dark,.theme-dark.minimal-default-dark,.theme-light.minimal-light-contrast .titlebar,.theme-light.minimal-light-contrast.minimal-status-off .status-bar{
     --accent-l:60%;
@@ -131,11 +172,12 @@ body{
     --tx3:hsl( var(--base-h), calc(var(--base-s) - 10%), calc(var(--base-l) + 20%) );
     --tx4:hsl( var(--base-h), calc(var(--base-s) - 10%), calc(var(--base-l) + 50%) );
     --ax1:hsl( var(--accent-h), var(--accent-s), var(--accent-l) );
-    --ax2:hsl( var(--accent-h), var(--accent-s), calc(var(--accent-l) + 12%) );
-    --ax3:hsl( var(--accent-h), var(--accent-s), calc(var(--accent-l) - 12%) );
+    --ax2:hsl( var(--accent-h), var(--accent-s), calc(var(--accent-l) + 8%) );
+    --ax3:hsl( var(--accent-h), var(--accent-s), calc(var(--accent-l) - 5%) );
     --hl1:hsla( var(--accent-h), 50%, 40%, 30% );
     --hl2:rgba(255, 177, 80, 0.3);
-    --sp1:#fff
+    --sp1:white;
+	--cm-editor-backgroud-color: #121212;
 }
 .theme-light.minimal-light-white{
     --background-primary:white;
@@ -190,11 +232,11 @@ body{
     --icon-color-active:var(--tx1);
     --icon-color-focused:var(--tx1);
     --icon-color-hover:var(--tx2);
-	--icon-color-hover2:var(--item-side)								   
+	--icon-color-hover2:var(--item-side)	
     --icon-color:var(--tx2);
     --icon-hex:var(--mono0);
     --interactive-accent-hover:var(--ax3);
-	--interactive-accent-hover2:#4ba8ff;
+	--interactive-accent-hover2:#4ba8ff;								 
     --interactive-accent:var(--ax3);
     --interactive-hover:var(--ui1);
     --list-marker-color:var(--tx3);
@@ -213,6 +255,7 @@ body{
     --scrollbar-active-thumb-bg:var(--ui3);
     --scrollbar-bg:transparent;
     --scrollbar-thumb-bg:var(--ui1);
+    --search-result-background:var(--tx1);
     --tab-text-color-focused-active:var(--tx1);
     --tab-outline-color:var(--ui5);
     --text-accent-hover:var(--ax2);
@@ -226,16 +269,16 @@ body{
     --text-italic:var(--tx1);
     --text-muted:var(--tx2);
     --text-normal:var(--tx1);
-    --text-on-accent:white;
+    --text-on-accent:var(--sp1);
     --text-selection:var(--hl1);
     --title-color-inactive:var(--tx2);
     --title-color:var(--tx1);
     --titlebar-background:var(--bg2);
     --titlebar-background-focused:var(--bg2);
-    --titlebar-text-color-focused:var(--tx1)
+    --titlebar-text-color-focused:var(--tx1);
 	--tag-color:var(--tx2);
     --tag-bg:transparent;
-    --tag-bg2:transparent					   					 					 
+    --tag-bg2:transparent		
 }
 .theme-light.minimal-light-contrast .theme-dark{
     --tab-container-background:var(--bg2);
@@ -690,7 +733,7 @@ body.window-title-off .titlebar-text{
 .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame),.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame){
     --titlebar-background:var(--bg1)
 }
-.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .sidebar-toggle-button.mod-right,.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-ribbon.mod-left.is-collapsed,.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-tabs.mod-top,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .sidebar-toggle-button.mod-right,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-ribbon.mod-left.is-collapsed,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-tabs.mod-top{
+.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .sidebar-toggle-button.mod-right,.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .titlebar-button-container.mod-right,.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-ribbon.mod-left.is-collapsed,.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-tabs.mod-top,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .sidebar-toggle-button.mod-right,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .titlebar-button-container.mod-right,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-ribbon.mod-left.is-collapsed,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-tabs.mod-top{
     --titlebar-background-focused:var(--bg1)
 }
 .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame):not(.minimal-light-white) .workspace-ribbon.mod-left:not(.is-collapsed),.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame):not(.minimal-light-white) .workspace-ribbon.mod-left:not(.is-collapsed){
@@ -703,17 +746,17 @@ body.window-title-off .titlebar-text{
 body.is-focused{
     --titlebar-background-focused:var(--background-secondary)
 }
-body .mod-right-split{
-    --background-secondary:var(--background-primary)
-}
-body .mod-right-split :not(.mod-top) .workspace-tab-header-container{
-    --tab-container-background:var(--background-primary)
-}
+					  
+													
+ 
+																	 
+														
+ 
 .is-hidden-frameless:not(.colorful-frame) .mod-left-split .mod-top .workspace-tab-header-container{
     --tab-container-background:var(--background-secondary)
 }
 .mod-root .workspace-tab-header-status-icon{
-    color:var(--text-normal)
+    color:var(--text-muted)
 }
 .modal button:not(.mod-warning),.modal.mod-settings button:not(.mod-cta):not(.mod-warning),.modal.mod-settings button:not(.mod-warning){
     white-space:nowrap;
@@ -739,9 +782,9 @@ button.mod-warning:hover{
     max-width:var(--max-width);
     width:var(--line-width-adaptive)
 }
-.minimal-focus-mode .document-search-container{
-    margin-top:var(--header-height)
-}
+											   
+								   
+ 
 .is-mobile .CodeMirror-foldgutter-open:after,.is-mobile span[title="Fold line"]:after{
     transform:translateX(-2px)!important
 }
@@ -771,6 +814,9 @@ body{
 }
 .is-mobile .markdown-source-view.mod-cm6 .cm-indent::before{
     transform:translateX(calc(2px + var(--ig-adjust-edit)))
+}
+.modal-button-container .mod-checkbox{
+    --checkbox-radius:4px
 }
 .modal-container.mod-confirmation .modal{
     width:480px;
@@ -893,9 +939,9 @@ body{
     --checkbox-margin:0px 6px 0px -1.35em
 }
 .checkbox-square{
-    --checkbox-size:15px;
-    --checkbox-icon:17px;
-    --checkbox-radius:4px;
+    --checkbox-size:17px;
+    --checkbox-icon:20px;
+    --checkbox-radius:2px;
     --checkbox-top:1px;
     --checkbox-left:0px;
     --checkbox-margin:0px 8px 0px -1.35em
@@ -938,6 +984,16 @@ ul>li.task-list-item .task-list-item-checkbox{
 }
 .is-mobile .markdown-preview-view input[type=checkbox].task-list-item-checkbox{
     top:.2em
+}
+.minimal-code-scroll{
+    --code-white-space:pre
+}
+.minimal-code-scroll .HyperMD-codeblock.HyperMD-codeblock-bg{
+    overflow-y:scroll;
+    white-space:pre
+}
+.minimal-code-scroll .cm-hmd-codeblock{
+    white-space:pre!important
 }
 .embed-strict .internal-embed .markdown-embed{
     padding:0;
@@ -1114,6 +1170,9 @@ body.minimal-unstyled-tags{
     --tag-padding-y:0;
     --tag-size:inherit;
     --tag-color-hover:var(--text-accent-hover)
+}
+body.minimal-unstyled-tags.is-mobile.theme-dark{
+    --tag-background:transparent
 }
 body:not(.minimal-unstyled-tags){
     --tag-size:0.8em;
@@ -1553,7 +1612,8 @@ input[data-task="b"]:checked,li[data-task="b"]>input:checked,li[data-task="b"]>p
     -webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath d='M5 4a2 2 0 012-2h6a2 2 0 012 2v14l-5-2.5L5 18V4z' /%3E%3C/svg%3E")
 }
 .colorful-active{
-    --sp1:#fff
+    --sp1:#fff;
+    --text-on-accent:var(--sp1)
 }
 .colorful-active .nav-files-container{
     --nav-item-background-active:var(--interactive-accent);
@@ -2043,18 +2103,21 @@ body:not(.zoom-off) .view-content .image-embed:active img{
     position:absolute;
     width:calc(100% - var(--divider-width));
     height:calc(var(--header-height) - var(--tab-outline-width));
-    border-bottom:var(--labeled-nav-outline-width) solid var(--tab-outline-color)
+    border-bottom:0 solid var(--tab-outline-color)
 }
-.labeled-nav.mod-macos .workspace-ribbon.mod-left:not(.is-collapsed),.labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-ribbon.mod-left:not(.is-collapsed){
+.labeled-nav.mod-macos.is-hidden-frameless:not(.is-fullscreen) .workspace-ribbon.mod-left:not(.is-collapsed){
     border:none;
     --tab-outline-width:0px
 }
 .labeled-nav.colorful-frame.is-hidden-frameless:not(.is-fullscreen) .mod-left-split .mod-top .workspace-tab-header-container:before,.labeled-nav.mod-macos:not(.hider-ribbon) .mod-left-split .mod-top .workspace-tab-header-container:before,.labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before{
     border-bottom:var(--tab-outline-width) solid var(--tab-outline-color)
 }
+.labeled-nav.colorful-frame.is-hidden-frameless:not(.is-fullscreen) .workspace-ribbon.mod-left:not(.is-collapsed),.labeled-nav.mod-macos:not(.hider-ribbon) .workspace-ribbon.mod-left:not(.is-collapsed),.labeled-nav:not(.is-hidden-frameless) .workspace-ribbon.mod-left:not(.is-collapsed){
+    --tab-outline-width:1px
+}
 .labeled-nav:not(.is-hidden-frameless) .mod-left-split .mod-top .workspace-tab-header-container:before{
     position:absolute;
-	top:0;
+    top:0;
     content:" "
 }
 .labeled-nav.hider-ribbon.mod-macos.is-hidden-frameless:not(.is-fullscreen):not(.is-popout-window) .mod-left-split:not(.is-sidedock-collapsed) .workspace-tabs.mod-top-left-space .workspace-tab-header-container{
@@ -2395,6 +2458,12 @@ body:not(.links-int-on){
 }
 body:not(.links-ext-on){
     --link-external-decoration:none
+}
+body:not(.sidebar-color) .mod-right-split{
+    --background-secondary:var(--background-primary)
+}
+body:not(.sidebar-color) .mod-right-split :not(.mod-top) .workspace-tab-header-container{
+    --tab-container-background:var(--background-primary)
 }
 body{
     --minimal-tab-text-color:var(--text-muted);
@@ -4264,12 +4333,12 @@ body.theme-light{
     --base-h:106;
     --base-s:0%;
     --base-l:98%;
-    --accent-h:209;
-    --accent-s:100%;
-    --accent-l:55%;
+    --accent-h:231;
+    --accent-s:76%;
+    --accent-l:62%;
     --bg1:#fafafa;
     --bg2:#eaeaeb;
-    --bg3:#dbdbdc;
+    --bg3:rgba(0,0,0,.1);
     --ui1:#dbdbdc;
     --ui2:#d8d8d9;
     --tx1:#232324;
@@ -4373,7 +4442,7 @@ body.theme-light{
     --tx1:#C6D0F5;
     --tx2:#A6ADCE;
     --tx3:#848BA7;
-    --ax1:#F2D5CF;
+    --sp1:#242634;
     --hl1:rgba(98,104,128,.5);
     --hl2:rgba(223,142,29,.4)
 }
@@ -4569,7 +4638,7 @@ body.theme-light{
     --accent-l:50%;
     --bg1:#fff;
     --bg2:#f0f0f0;
-    --bg3:#d7d7d7;
+    --bg3:rgba(0,0,0,.11);
     --ui1:#e7e7e7;
     --tx1:#454545;
     --tx2:#808080;
@@ -4603,7 +4672,7 @@ body.theme-light{
     --tx3:#686868;
     --ax1:#027aff;
     --ax2:#3f9bff;
-    --ax3:#007bff;
+    --ax3:#007bff;  
     --hl1:rgba(98,169,252,0.5);
     --sp1:#fff
 }
@@ -4653,7 +4722,7 @@ body.theme-light{
     --bg3:rgba(135,152,190,0.15);
     --ui1:#434c5e;
     --ui2:#58647b;
-    --ui3:#5e81ac;
+    --ui3:#58647b;
     --tx1:#d8dee9;
     --tx2:#9eafcc;
     --tx3:#4c566a;
@@ -4669,8 +4738,8 @@ body.theme-light{
     --base-s:18%;
     --base-d:96%;
     --accent-h:197;
-    --accent-s:65%;
-    --accent-l:71%;
+    --accent-s:71%;
+    --accent-l:52%;
     --bg2:#f7f6f4;
     --bg3:#e8e7e4;
     --ui1:#ededec;
@@ -4690,8 +4759,8 @@ body.theme-light{
     --base-s:8%;
     --base-d:20%;
     --accent-h:197;
-    --accent-s:48%;
-    --accent-l:43%;
+    --accent-s:71%;
+    --accent-l:52%;
     --bg1:#2f3437;
     --bg2:#373c3f;
     --bg3:#4b5053;
@@ -4764,7 +4833,7 @@ body.theme-light{
     --tx3:#31535B;
     --tx4:#657b83;
     --ax1:#268bd2;
-    --ax3:#268bd2;
+    --ax3:#268bd2;  
     --hl1:rgba(15,81,98,0.3);
     --hl2:rgba(203, 75, 22, 0.35)
 }
@@ -4802,7 +4871,7 @@ body.theme-light{
     --tx3:#a9abb0;
     --ax1:#1b61c2;
     --ax2:#1C88DD;
-    --ax3:#1b61c2;
+    --ax3:#1b61c2; 
     --hl1:#cae2ff
 }
 .theme-light.minimal-things-light.minimal-light-tonal{
@@ -4831,7 +4900,7 @@ body.theme-light{
     --tx3:#6c6e70;
     --ax1:#4d95f7;
     --ax2:#79a9ec;
-    --ax3:#4d95f7;
+    --ax3:#4d95f7;  
     --hl1:rgba(40,119,236,0.35);
     --sp1:#fff
 }
@@ -4841,62 +4910,67 @@ body.theme-light{
     --divider-color:#24262a;
     --tab-outline-color:#24262a
 }
+
+
 /* Plugin compatibility */
-/* @plugins core:
-    - backlink
-    - command-palette
-    - daily-notes
-    - file-explorer
-    - file-recovery
-    - global-search
-    - graph
-    - outgoing-link
-    - outline
-    - page-preview
-    - publish
-    - random-note
-    - starred
-    - switcher
-    - sync
-    - tag-pane
-    - word-count
+
+/* @plugins
+core:
+- backlink
+- command-palette
+- daily-notes
+- file-explorer
+- file-recovery
+- global-search
+- graph
+- outgoing-link
+- outline
+- page-preview
+- publish
+- random-note
+- starred
+- switcher
+- sync
+- tag-pane
+- word-count
 community:
-    - buttons
-    - dataview
-    - calendar
-    - obsidian-charts
-    - obsidian-checklist-plugin
-    - obsidian-codemirror-options
-    - obsidian-dictionary-plugin
-    - obsidian-embedded-note-titles
-    - obsidian-excalidraw-plugin
-    - obsidian-git - obsidian-hider
-    - obsidian-hover-editor
-    - obsidian-kanban
-    - obsidian-metatable
-    - obsidian-minimal-settings
-    - obsidian-outliner
-    - obsidian-system-dark-mode
-    - obsidian-style-settings
-    - quickadd
-    - sliding-panes-obsidian
-    - todoist-sync-plugin
+- buttons
+- dataview
+- calendar
+- obsidian-charts
+- obsidian-checklist-plugin
+- obsidian-codemirror-options
+- obsidian-dictionary-plugin
+- obsidian-embedded-note-titles
+- obsidian-excalidraw-plugin
+- obsidian-git
+- obsidian-hider
+- obsidian-hover-editor
+- obsidian-kanban
+- obsidian-metatable
+- obsidian-minimal-settings
+- obsidian-outliner
+- obsidian-system-dark-mode
+- obsidian-style-settings
+- quickadd
+- sliding-panes-obsidian
+- todoist-sync-plugin
 */
 /* @settings
-name: minimal
+name: Minimal
 id: minimal-style
-settings: 
+settings:
 	-
 		id: instructions
-		title: Welcome 👋 
-		type: heading 
-		level: 2 
-		collapsed: true 
-		description: Use the minimal Theme Settings plugin to access hotkeys, adjust features, select fonts, and choose from preset color schemes. Use the settings below for more granular customization. Visit minimal.guide for documentation.
-	
-	-	
+		title: Welcome 👋
+		type: heading
+		level: 2
+		collapsed: true
+		description: Use the Minimal Theme Settings plugin to access hotkeys, adjust features, select fonts, and choose from preset color schemes. Use the settings below for more granular customization. Visit minimal.guide for documentation.
+ 
+	-
 		id: interface
-	    title: Interface colors
+		title: Interface colors
 		type: heading
 		level: 2
 		collapsed: true
@@ -4961,21 +5035,60 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: extended-palette
-		title: Interface extended palette
+		id: accent-color
+		title: Accent color
 		type: heading
 		level: 2
 		collapsed: true
 	-
-		id: red
+		id: ax1
+		title: Accent color
+		type: variable-themed-color
+		description: Used primarily for links
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: ax2
+		title: Accent color (hover)
+		type: variable-themed-color
+		description: Used primarily for hovered links
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: ax3
+		title: Accent color interactive
+		type: variable-themed-color
+		description: Used for buttons, checklists, toggles
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: sp1
+		title: Text on accent
+		type: variable-themed-color
+		description: Used primarily for text on accented buttons
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: extended-palette
+		title: Extended colors
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: color-red
 		title: Red
-		description: Extended palette colors are defaults used for progress bar status, syntax highlighting, colorful headings, and graph nodes variable-themed-color
+		description: Extended palette colors are defaults used for progress bar status, syntax highlighting, colorful headings, and graph nodes
+		type: variable-themed-color
 		opacity: true
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: orange
+		id: color-orange
 		title: Orange
 		type: variable-themed-color
 		opacity: true
@@ -4983,7 +5096,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: yellow
+		id: color-yellow
 		title: Yellow
 		type: variable-themed-color
 		opacity: true
@@ -4991,7 +5104,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: green
+		id: color-green
 		title: Green
 		type: variable-themed-color
 		opacity: true
@@ -4999,7 +5112,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: cyan
+		id: color-cyan
 		title: Cyan
 		type: variable-themed-color
 		opacity: true
@@ -5007,7 +5120,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: blue
+		id: color-blue
 		title: Blue
 		type: variable-themed-color
 		opacity: true
@@ -5015,7 +5128,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: purple
+		id: color-purple
 		title: Purple
 		type: variable-themed-color
 		opacity: true
@@ -5023,7 +5136,7 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
-		id: pink
+		id: color-pink
 		title: Pink
 		type: variable-themed-color
 		opacity: true
@@ -5065,6 +5178,29 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: blockquote-background-color
+		title: Blockquotes background color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: blockquote-border-color
+		title: Blockquotes border color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: blockquote-border-thickness
+		title: Blockquote border thickness
+		type: variable-number-slider
+		format: px
+		default: 1
+		min: 0
+		max: 5
+		step: 1
+	-
 		id: blockquote-size
 		title: Blockquotes font size
 		description: Accepts any CSS font-size value
@@ -5077,12 +5213,32 @@ settings:
 		allowEmpty: false
 		default: normal
 		options:
-		-
-			label: Normal
-			value: normal
-		-
-			label: Italic
-			value: italic
+			-
+				label: Normal
+				value: normal
+			-
+				label: Italic
+				value: italic
+	-
+		id: callouts
+		title: Callouts
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: callout-blend-mode
+		title: Color blending
+		description: Blend the color of nested callouts
+		type: variable-select
+		allowEmpty: false
+		default: var(--highlight-mix-blend-mode)
+		options:
+			-
+				label: On
+				value: var(--highlight-mix-blend-mode)
+			-
+				label: Off
+				value: normal
 	-
 		id: code-blocks
 		title: Code and syntax highlighting
@@ -5095,6 +5251,12 @@ settings:
 		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 13px
+	-
+		id: minimal-code-scroll
+		title: Scroll long lines
+		description: Turns off line wrap for code
+		type: class-toggle
+		default: false
 	-
 		id: code-background
 		title: Code background color
@@ -5150,6 +5312,14 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: code-operator
+		title: "Syntax: operators"
+		description: Syntax highlighting for operators
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: code-property
 		title: "Syntax: properties"
 		description: Syntax highlighting for properties
@@ -5168,7 +5338,7 @@ settings:
 	-
 		id: code-string
 		title: "Syntax: strings"
-        description: Syntax highlighting for strings
+		description: Syntax highlighting for strings
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -5204,7 +5374,7 @@ settings:
 	-
 		id: max-col-width
 		title: Dataview maximum column width
-		description: maximum width for Dataview columns, accepts any CSS width value
+		description: Maximum width for Dataview columns, accepts any CSS width value
 		type: variable-text
 		default: 18em
 	-
@@ -5240,28 +5410,74 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	-
+	-  
 		id: graph-node-tag
 		title: Tag node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	-
+	-  
 		id: graph-node-attachment
 		title: Attachment node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	-
+	-  
 		id: graph-node-unresolved
 		title: Unresolved node color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	-
+    -
+		id: cm-editor
+		title: 编辑器
+		type: heading
+		level: 2
+		collapsed: true
+    -
+		id: cm-editor-backgroud-color
+		title: 编辑器背景
+		level: 3
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-		   
+		id: cm-edit-bullet-list
+		title: 无序列表前缀
+		description: 填写前缀符号，需要将符号放入''内才可生效
+		type: heading
+		level: 2
+		collapsed: true
+	-		   
+		id: cm-edit-bullet-list-1
+		title: 无序列表前缀-级别1
+		type: variable-text
+		default: '●'
+	-		   
+		id: cm-edit-bullet-list-2
+		title: 无序列表前缀-级别2
+		type: variable-text
+		default: '○'
+	-		   
+		id: cm-edit-bullet-list-3
+		title: 无序列表前缀-级别3
+		type: variable-text
+		default: '■'
+	-		   
+		id: cm-edit-bullet-list-4
+		title: 无序列表前缀-级别4
+		type: variable-text
+		default: '□'
+	-		   
+		id: cm-edit-bullet-list-5
+		title: 无序列表前缀-级别5
+		type: variable-text
+		default: '▸'
+	-		   
 		id: headings
 		title: Headings
 		type: heading
@@ -5269,7 +5485,7 @@ settings:
 		collapsed: true
 	-
 		id: level-1-headings
-		title: level 1 Headings
+		title: Level 1 Headings
 		type: heading
 		level: 3
 		collapsed: true
@@ -5292,7 +5508,7 @@ settings:
 		default: 600
 		min: 100
 		max: 900
-        step: 100
+		step: 100
 	-
 		id: h1-color
 		title: H1 text color
@@ -5307,15 +5523,15 @@ settings:
 		allowEmpty: false
 		default: normal
 		options:
-			- 
+			-
 				label: Normal
 				value: normal
-			- 
-				label: Small caps 
+			-
+				label: Small caps
 				value: small-caps
-			- 
+			-
 				label: All small caps
-				value: all-small-caps
+				value: all-small-caps 
 	-
 		id: h1-style
 		title: H1 font style
@@ -5337,7 +5553,7 @@ settings:
 		default: false
 	-
 		id: level-2-headings
-		title: level 2 Headings
+		title: Level 2 Headings
 		type: heading
 		level: 3
 		collapsed: true
@@ -5360,7 +5576,7 @@ settings:
 		default: 600
 		min: 100
 		max: 900
-        step: 100
+		step: 100
 	-
 		id: h2-color
 		title: H2 text color
@@ -5405,7 +5621,7 @@ settings:
 		default: false
 	-
 		id: level-3-headings
-		title: level 3 Headings
+		title: Level 3 Headings
 		type: heading
 		level: 3
 		collapsed: true
@@ -5428,7 +5644,7 @@ settings:
 		default: 600
 		min: 100
 		max: 900
-        step: 100
+		step: 100
 	-
 		id: h3-color
 		title: H3 text color
@@ -5443,15 +5659,15 @@ settings:
 		allowEmpty: false
 		default: normal
 		options:
-            -
-                label: Normal
-                value: normal
-            -
-                label: Small caps
-                value: small-caps
-            -
-                label: All small caps
-                value: all-small-caps
+			-
+				label: Normal
+				value: normal
+			-
+				label: Small caps
+				value: small-caps
+			-
+				label: All small caps
+				value: all-small-caps
 	-
 		id: h3-style
 		title: H3 font style
@@ -5466,892 +5682,1034 @@ settings:
 				label: Italic
 				value: italic
 	-
-        id: h3-l
+		id: h3-l
 		title: H3 divider line
 		description: Adds a border below the heading
 		type: class-toggle
 		default: false
-    -
-       id: level-4-headings
-       title: level 4 Headings
-       type: heading
-       level: 3
-       collapsed: true
-    -
-       id: h4-font
-       title: H4 font
-       description: Name of the font as it appears on your system
-       type: variable-text
-       default: ''
-    -
-       id: h4-size
-       title: H4 font size
-       description: Accepts any CSS font-size value
-       type: variable-text
-       default: 1.2em
-    -
-       id: h4-weight
-       title: H4 font weight
-       type: variable-number-slider
-       default: 600
-       min: 100
-       max: 900
-       step: 100
-    -
-        id: h4-color
-        title: H4 text color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: h4-variant
-        title: H4 font variant
-        type: variable-select
-        allowEmpty: false
-        default: no
-        options:
-            -
-                label: Normal
-                value: normal
-            -
-                label: Small caps
-                value: small-caps
-            -
-                label: All small caps
-                value: all-small-caps
-    -
-        id: h4-style
-        title: H4 font style
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-             -
-                label: Normal
-                value: normal
-             -
-                label: Italic
-                value: italic
-    -
-       id: h4-l
-       title: H4 divider line
-       description: Adds a border below the heading
-       type: class-toggle
-       default: false
-    -
-       id: level-5-headings
-       title: level 5 Headings
-       type: heading
-       level: 3
-       collapsed: true
-    -
-       id: h5-font
-       title: H5 font
-       description: Name of the font as it appears on your system
-       type: variable-text
-       default: ''
-    -
-       id: h5-size
-       title: H5 font size
-       description: Accepts any CSS font-size value
-       type: variable-text
-       default: 1.1em
-    -
-       id: h5-weight
-       title: H5 font weight
-       type: variable-number-slider
-       default: 600
-       min: 100
-       max: 900
-       step: 100
-    -
-       id: h5-color
-       title: H5 text color
-       type: variable-themed-color
-       format: hex
-       default-light: '#'
-       default-dark: '#'
-    -
-        id: h5-variant
-        title: H5 font variant
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            -
-                label: Normal
-                value: normal
-            -
-                label: Small caps
-                value: small-caps
-            -
-                label: All small caps
-                value: all-small-caps
-    -
-        id: h5-style
-        title: H5 font style
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            -
-                label: Normal
-                value: normal
-            -
-                label: Italic
-                value: italic
-    -
-        id: h5-l
-        title: H5 divider line
-        description: Adds a border below the heading
-        type: class-toggle
-        default: false
-    -
-        id: level-6-headings
-        title: level 6 Headings
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: h6-font
-        title: H6 font
-        description: Name of the font as it appears on your system
-        type: variable-text
-        default: ''
-    -
-        id: h6-size
-        title: H6 font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.1em
-    -
-        id: h6-weight
-        title: H6 font weight
-        type: variable-number-slider
-        default: 600
-        min: 100
-        max: 900
-        step: 100
-    -
-        id: h6-color
-        title: H6 text color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: h6-variant
-        title: H6 font variant
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-            -
-                label: Normal
-                value: normal
-            -
-                label: Small caps
-                value: small-caps
-            -
-                label: All small caps
-                value: all-small-caps
-    -
-        id: h6-style
-        title: H6 font style
-        type: variable-select
-        allowEmpty: false
-        default: normal
-        options:
-          -
-             label: Normal
-             value: normal
-          -
-             label: Italic
-             value: italic
-    -
-        id: h6-l
-        title: H6 divider line
-        type: class-toggle
-        description: Adds a border below the heading
-        default: false
-    -
-        id: icons
-        title: Icons
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: icon-muted
-        title: Icon opacity (inactive)
-        type: variable-number-slider
-        default: 0.5
-        min: 0.25
-        max: 1
-        step: 0.05
-    -
-       id: icon-color
-       title: Icon color
-       type: variable-themed-color
-       opacity: true
-       format: hex
-       default-light: '#'
-       default-dark: '#'
-    -
-       id: icon-color-hover
-       title: Icon color (hover)
-       type: variable-themed-color
-       opacity: true
-       format: hex
-       default-light: '#'
-       default-dark: '#'
-    -
-       id: icon-color-active
-       title: Icon color (active)
-       type: variable-themed-color
-       opacity: true
-       format: hex
-       default-light: '#'
-       default-dark: '#'
-    -
-       id: icon-color-focused
-       title: Icon color (focused)
-       type: variable-themed-color
-       opacity: true
-       format: hex
-       default-light: '#'
-       default-dark: '#'
-    -
-       id: images
-       title: Images
-       type: heading
-       level: 2
-       collapsed: true
-    -
-       format: em
-    -
-       id: ig-adjust-edit
-       title: Horizontal adjustment in edit mode
-       type: variable-number-slider
-       default: -1
-       min: -10
-       max: 10
-       step: 1
-       format: px
-    -
-       id: links
-       title: Links
-       type: heading
-       level: 2
-       collapsed: true
-    -
-       id: ax1
-       title: Link color
-       type: variable-themed-color
-       format: hex
-       default-light: '#'
-       default-dark: '#'
-    -
-       id: ax2
-       title: Link color (hovering)
-       type: variable-themed-color
-       format: hex
-       default-light: '#'
-       default-dark: '#'
-    -
-       id: link-weight
-       title: Link font weight
-       type: variable-number-slider
-       default: 400
-       min: 100
-       max: 900
-       step: 100
-    -
-       id: lists
-       title: Lists and tasks
-       type: heading
-       level: 2
-       collapsed: true
-    -
-       id: ax3
-       title: Checkbox color
-       description: Background color for completed tasks
-       type: variable-themed-color
-       format: hex
-       default-light: '#'
-       default-dark: '#'
-    -
-       id: checkbox-shape
-       title: Checkbox shape
-       type: class-select
-       allowEmpty: false
-       default: checkbox-circle
-       options:
-            -
-                label: Circle
-                value: checkbox-circle
-            -
-                label: Square
-                value: checkbox-square
-    -
-       id: minimal-strike-lists
-       title: Strike completed tasks
-       description: Adds strikethrough line and greyed text for completed tasks
-       type: class-toggle
-       default: false
-    -
-       id: list-spacing
-       title: List item spacing
-       description: Vertical space between list items in em units
-       type: variable-number-slider
-       default: 0.075
-       min: 0
-       max: 0.3
-       step: 0.005
-       format: em
-    -
-        id: list-indent
-        title: Nested list indentation
-        description: Horizontal space from left in em units
-        type: variable-number-slider
-        default: 2
-        min: 1
-        max: 3.5
-        step: 0.1
-        format: em
-    -
-        id: sidebars
-        title: Sidebars
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: sidebar-lines-off
-        title: Disable sidebar relationship lines
-        description: Turns off lines in file navigation
-        type: class-toggle
-    -
-        id: mobile-left-sidebar-width
-        title: Mobile left sidebar width
-        description: maximum width for pinned left sidebar on mobile
-        type: variable-number
-        default: 280
-        format: pt
-    -
-        id: mobile-right-sidebar-width
-        title: Mobile right sidebar width
-        description: maximum width for pinned right sidebar on mobile
-        type: variable-number
-        default: 240
-        format: pt
-    -
-        id: tables
-        title: Tables
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: table-text-size
-        title: Table font size
-        description: All of the following settings apply to all tables globally. To turn on these features on a per-note basis use helper classes. See documentation.
-        type: variable-text
-        default: 1em
-    -
-        id: maximize-tables-off
-        title: maximize table width (beta)
-        description: Tables fill the width of the line
-        type: class-select
-        allowEmpty: false
-        default: maximize-tables
-        options:
-            -
-                label: Always
-                value: maximize-tables
-            -
-                label: Automatic
-                value: maximize-tables-auto
-            -
-                label: Never
-                value: maximize-tables-off
-    -
-        id: row-lines
-        title: Row lines
-        description: Display borders between table rows globally
-        type: class-toggle
-        default: false
-    -
-        id: col-lines
-        title: Column lines
-        description: Display borders between table columns globally
-        type: class-toggle
-        default: false
-    -
-        id: table-lines
-        title: Cell lines
-        description: Display borders around all table cells globally
-        type: class-toggle
-        default: false
-    -
-        id: row-alt
-        title: Striped rows
-        description: Display striped background in alternating table rows globally
-        type: class-toggle
-        default: false
-    -
-        id: col-alt
-        title: Striped columns
-        description: Display striped background in alternating table columns globally
-        type: class-toggle
-        default: false
-    -
-        id: table-tabular
-        title: Tabular figures
-        description: Use fixed width numbers in tables globally
-        type: class-toggle
-        default: false
-    -
-        id: table-numbers
-        title: Row numbers
-        description: Display row numbers in tables globally
-        type: class-toggle
-        default: false
-    -
-        id: table-nowrap
-        title: Disable line wrap
-        description: Turn off line wrapping in table cells globally
-        type: class-toggle
-        default: false
-    -
-        id: row-hover
-        title: Highlight active row
-        description: Highlight rows on hover
-        type: class-toggle
-        default: false
-    -
-        id: table-row-background-hover
-        title: Active row background
-        description: Background color for hovered tables rows
-        type: variable-themed-color
-        format: hex
-        opacity: true
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: tabs
-        title: Tabs
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: header-height
-        title: Tab bar height
-        type: variable-text
-        default: 40px
-    -
-        id: tabs-style
-        title: Tab style
-        type: class-select
-        allowEmpty: false
-        default: tabs-default
-        options: 
-            - 
-                label: default
-                value: tabs-default
-            -
-                label: Square
-                value: tabs-square
-            -
-                label: Underline
-                value: tabs-underline
-    -
-        id: tab-stacks
-        title: Tab stacks
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: tab-stacked-pane-width
-        title: Stacked width
-        type: variable-number
-        description: Width of a stacked tab in pixels
-        default: 700
-        format: px
-    -
-        id: tab-stacked-header-width
-        title: Spine width
-        type: variable-number
-        description: Width of the spine in pixels
-        default: 40
-        format: px
-    -
-        id: tab-stacked-spine-orientation
-        title: Spine text orientation
-        type: class-select
-        default: tab-stack-top
-        options:
-            -
-                label: Top aligned
-                value: tab-stack-top
-            -
-                label: Top aligned flipped
-                value: tab-stack-top-flipped
-            -
-                label: Bottom aligned
-                value: tab-stack-bottom
-            -
-                label: Bottom aligned flipped
-                value: tab-stack-bottom-flipped
-    -
-        id: tags
-        title: Tags
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: minimal-unstyled-tags
-        title: Plain tags
-        description: Tags will render as normal text, overrides settings below
-        type: class-toggle
-        default: false
-    -
-        id: tag-radius
-        title: Tag shape
-        type: variable-select
-        default: 14px
-        options:
-            -
-                label: Pill
-                value: 14px
-            -
-                label: Rounded
-                value: 4px
-            -
-                label: Square
-                value: 0px
-    -
-        id: tag-border-width
-        title: Tag border width
-        type: variable-select
-        default: 1px
-        options:
-            -
-                label: None
-                value: 0
-            -
-                label: Thin
-                value: 1px
-            -
-                label: Thick
-                value: 2px
-    -
-        id: tag-color
-        title: Tag text color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: tag-bg
-        title: Tag background color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: tag-bg2
-        title: Tag background color (hover)
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: text
-        title: Text
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: tx1
-        title: Normal text color
-        type: variable-themed-color
-        description: Primary text color used by default across all elements
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: hl1
-        title: Selected text background
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: hl2
-        title: Highlighted text background
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: tx2
-        title: Muted text color
-        description: Secondary text such as sidebar note titles and table headings
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: tx3
-        title: Faint text color
-        description: tertiary text such as input placeholders, empty checkboxes, and disabled statuses
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: italic-color
-        title: Italic text color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: bold-color
-        title: Bold text color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: bold-weight
-        title: Bold text weight
-        type: variable-number-slider
-        default: 600
-        min: 100
-        max: 900
-        step: 100
-    -
-        id: spacing-p
-        title: Paragraph spacing
-        description: Space between paragraphs in reading mode
-        type: variable-text
-        default: 0.75em
-    -
-        id: titles
-        title: titles
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: tab-title-bar
-        title: Tab title bar
-        description: Tab title bar must be turned on in Appearance settings
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: file-header-visibility
-        title: Tab title visibility
-        description: Visibility of the tab title text
-        type: class-select
-        default: minimal-tab-title-visible
-        options:
-            -
-                label: Visible
-                value: minimal-tab-title-visible
-            -
-                label: Hidden
-                value: minimal-tab-title-hidden
-            -
-                label: Hover only
-                value: minimal-tab-title-hover
-    -
-        id: file-header-font-size
-        title: Tab title font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 0.9em
-    -
-        id: file-header-font-weight
-        title: Tab title font weight
-        type: variable-number-slider
-        default: 400
-        min: 100
-        max: 900
-        step: 100
-    -
-        id: file-header-justify
-        title: Tab title alignment
-        type: variable-select
-        default: center
-        options:
-            -
-                label: Center
-                value: center
-            -
-                label: Left
-                value: left
-    -
-        id: title-color
-        title: Tab title text color (active)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: title-color-inactive
-        title: Tab title color (inactive)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: inline-title
-        title: Inline title
-        description: Inline titles must be turned on in Appearance settings
-        type: heading
-        level: 3
-        collapsed: true
-    -
-        id: inline-title-font
-        title: Inline title font
-        description: Name of the font as it appears on your system
-        type: variable-text
-        default: ''
-    -
-        id: inline-title-size
-        title: Inline title font size
-        description: Accepts any CSS font-size value
-        type: variable-text
-        default: 1.125em
-    -
-        id: inline-title-weight
-        title: Inline title font weight
-        type: variable-number-slider
-        default: 600
-        min: 100
-        max: 900
-        step: 100
-    -
-        id: inline-title-color
-        title: Inline title text color (active)
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: translucency
-        title: Translucency
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: workspace-background-translucent
-        title: Translucent background color
-        type: variable-themed-color
-        opacity: true
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: window-frame
-        title: Window frame
-        type: heading
-        level: 2
-        collapsed: true
-    -
-        id: window-title-off
-        title: Hide window title
-        description: Hide title in the custom title bar
-        type: class-toggle
-    -
-        id: frame-background
-        title: Window frame background
-        description: Requires colorful window frame
-        type: variable-themed-color
-        opacity: true
-        format: hsl-split
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: titlebar-text-color-focused
-        title: Window title color (focused)
-        description: Requires custom title bar
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: titlebar-text-color
-        title: Window title color (inactive)
-        description: Requires custom title bar
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
-    -
-        id: titlebar-text-weight
-        title: Window title font weight
-        description: Requires custom title bar
-        type: variable-number-slider
-        default: 600
-        min: 100
-        max: 900
-        step: 100
+	-
+		id: level-4-headings
+		title: Level 4 Headings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: h4-font
+		title: H4 font
+		description: Name of the font as it appears on your system
+		type: variable-text
+		default: ''
+	-
+		id: h4-size
+		title: H4 font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: 1.2em
+	-
+		id: h4-weight
+		title: H4 font weight
+		type: variable-number-slider
+		default: 600
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: h4-color
+		title: H4 text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: h4-variant
+		title: H4 font variant
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Small caps
+				value: small-caps
+			-
+				label: All small caps
+				value: all-small-caps 
+	-
+		id: h4-style
+		title: H4 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Italic
+				value: italic
+	-
+		id: h4-l
+		title: H4 divider line
+		description: Adds a border below the heading
+		type: class-toggle
+		default: false   
+	-
+		id: level-5-headings
+		title: Level 5 Headings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: h5-font
+		title: H5 font
+		description: Name of the font as it appears on your system
+		type: variable-text
+		default: ''
+	- 
+		id: h5-size
+		title: H5 font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: 1.1em
+	-
+		id: h5-weight
+		title: H5 font weight
+		type: variable-number-slider
+		default: 600
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: h5-color
+		title: H5 text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: h5-variant
+		title: H5 font variant
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Small caps
+				value: small-caps
+			-
+				label: All small caps
+				value: all-small-caps 
+	-
+		id: h5-style
+		title: H5 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Italic
+				value: italic
+	-
+		id: h5-l
+		title: H5 divider line
+		description: Adds a border below the heading
+		type: class-toggle
+		default: false
+	-
+		id: level-6-headings
+		title: Level 6 Headings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: h6-font
+		title: H6 font
+		description: Name of the font as it appears on your system
+		type: variable-text
+		default: ''
+	-
+		id: h6-size
+		title: H6 font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: 1.1em
+	-
+		id: h6-weight
+		title: H6 font weight
+		type: variable-number-slider
+		default: 600
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: h6-color
+		title: H6 text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: h6-variant
+		title: H6 font variant
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Small caps
+				value: small-caps
+			-
+				label: All small caps
+				value: all-small-caps
+	-
+		id: h6-style
+		title: H6 font style
+		type: variable-select
+		allowEmpty: false
+		default: normal
+		options:
+			-
+				label: Normal
+				value: normal
+			-
+				label: Italic
+				value: italic
+	-
+		id: h6-l
+		title: H6 divider line
+		type: class-toggle
+		description: Adds a border below the heading
+		default: false
+	-
+		id: icons
+		title: Icons
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: icon-muted
+		title: Icon opacity (inactive)
+		type: variable-number-slider
+		default: 0.5
+		min: 0.25
+		max: 1
+		step: 0.05
+	-
+		id: icon-color
+		title: Icon color
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: icon-color-hover
+		title: Icon color (hover)
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: icon-color-active
+		title: Icon color (active)
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: icon-color-focused
+		title: Icon color (focused)
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: images
+		title: Images
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: image-muted
+		title: Image opacity in dark mode
+		description: Level of fading for images in dark mode. Hover over images to display at full brightness.
+		type: variable-number-slider
+		default: 0.7
+		min: 0.25
+		max: 1
+		step: 0.05
+	-
+		id: zoom-off
+		title: Disable image zoom
+		description: Turns off click + hold to zoom images
+		type: class-toggle
+	-
+		id: indentation-guides
+		title: Indentation guides
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: ig-adjust-reading
+		title: Horizontal adjustment in reading mode
+		type: variable-number-slider
+		default: -0.65
+		min: -1.2
+		max: 0
+		step: 0.05
+		format: em
+	-
+		id: ig-adjust-edit
+		title: Horizontal adjustment in edit mode
+		type: variable-number-slider
+		default: -1
+		min: -10
+		max: 10
+		step: 1
+		format: px
+	-
+		id: indentation-guide-color
+		title: Indentation guide color
+		type: variable-themed-color
+		format: hex
+		opacity:  true
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: indentation-guide-color-active
+		title: Indentation guide color (active)
+		type: variable-themed-color
+		format: hex
+		opacity:  true
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: links
+		title: Links
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: links-internal
+		title: Internal links
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: link-color
+		title: Internal link color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: link-color-hover
+		title: Internal link color (hover)
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: link-unresolved-opacity
+		title: Unresolved link opacity
+		type: variable-number-slider
+		default: 0.7
+		min: 0.25
+		max: 1
+		step: 0.05
+	-
+		id: link-unresolved-color
+		title: Unresolved link color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: link-unresolved-decoration-color
+		title: Unresolved link underline color
+		type: variable-themed-color
+		format: hex
+		opacity:  true
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: links-external
+		title: External links
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: link-external-color
+		title: External link color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: link-external-color-hover
+		title: External link color (hover)
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: lists
+		title: Lists and tasks
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: checkbox-color
+		title: Checkbox color
+		description: Background color for completed tasks
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: checkbox-shape
+		title: Checkbox shape
+		type: class-select
+		allowEmpty: false
+		default: checkbox-circle
+		options:
+			-
+				label: Circle
+				value: checkbox-circle
+			-
+				label: Square
+				value: checkbox-square
+	-
+		id: minimal-strike-lists
+		title: Strike completed tasks
+		description: Adds strikethrough line and greyed text for completed tasks
+		type: class-toggle
+		default: false
+	-
+		id: list-spacing
+		title: List item spacing
+		description: Vertical space between list items in em units
+		type: variable-number-slider
+		default: 0.075
+		min: 0
+		max: 0.3
+		step: 0.005
+		format: em
+	-
+		id: list-indent
+		title: Nested list indentation
+		description: Horizontal space from left in em units
+		type: variable-number-slider
+		default: 2
+		min: 1
+		max: 3.5
+		step: 0.1
+		format: em
+	-
+		id: sidebars
+		title: Sidebars
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: sidebar-lines-off
+		title: Disable sidebar relationship lines
+		description: Turns off lines in file navigation
+		type: class-toggle
+	-
+		id: sidebar-tabs-style
+		title: Sidebar tab style
+		type: class-select
+		allowEmpty: false
+		default: sidebar-tabs-default
+		options:
+			-
+				label: Index round
+				value: sidebar-tabs-index
+			-
+				label: Index square
+				value: sidebar-tabs-square
+			-
+				label: Modern compact
+				value: sidebar-tabs-default
+			-
+				label: Modern wide
+				value: sidebar-tabs-wide
+			-
+				label: Underline
+				value: sidebar-tabs-underline
+	-
+		id: mobile-left-sidebar-width
+		title: Mobile left sidebar width
+		description: Maximum width for pinned left sidebar on mobile
+		type: variable-number
+		default: 280
+		format: pt
+	-
+		id: mobile-right-sidebar-width
+		title: Mobile right sidebar width
+		description: Maximum width for pinned right sidebar on mobile
+		type: variable-number
+		default: 240
+		format: pt
+	-
+		id: tables
+		title: Tables
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: table-text-size
+		title: Table font size
+		description: All of the following settings apply to all tables globally. To turn on these features on a per-note basis use helper classes. See documentation.
+		type: variable-text
+		default: 1em
+	-
+		id: maximize-tables-off
+		title: Maximize table width (beta)
+		description: Tables fill the width of the line
+		type: class-select
+		allowEmpty: false
+		default: maximize-tables
+		options:
+			-
+				label: Always
+				value: maximize-tables
+			-
+				label: Automatic
+				value: maximize-tables-auto
+			-
+				label: Never
+				value: maximize-tables-off
+	-
+		id: row-lines
+		title: Row lines
+		description: Display borders between table rows globally
+		type: class-toggle
+		default: false
+	-
+		id: col-lines
+		title: Column lines
+		description: Display borders between table columns globally
+		type: class-toggle
+		default: false
+	-
+		id: table-lines
+		title: Cell lines
+		description: Display borders around all table cells globally
+		type: class-toggle
+		default: false 
+	-
+		id: row-alt
+		title: Striped rows
+		description: Display striped background in alternating table rows globally
+		type: class-toggle
+		default: false
+	-
+		id: col-alt
+		title: Striped columns
+		description: Display striped background in alternating table columns globally
+		type: class-toggle
+		default: false
+	-
+		id: table-tabular
+		title: Tabular figures
+		description: Use fixed width numbers in tables globally
+		type: class-toggle
+		default: false
+	-
+		id: table-numbers
+		title: Row numbers
+		description: Display row numbers in tables globally
+		type: class-toggle
+		default: false
+	-
+		id: table-nowrap
+		title: Disable line wrap
+		description: Turn off line wrapping in table cells globally
+		type: class-toggle
+		default: false
+	-
+		id: row-hover
+		title: Highlight active row
+		description: Highlight rows on hover
+		type: class-toggle
+		default: false
+	-
+		id: table-row-background-hover
+		title: Active row background
+		description: Background color for hovered tables rows
+		type: variable-themed-color
+		format: hex
+		opacity: true
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: tabs
+		title: Tabs
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: header-height
+		title: Tab bar height
+		type: variable-text
+		default: 40px
+	-
+		id: tabs-style
+		title: Tab style
+		type: class-select
+		allowEmpty: false
+		default: tabs-default
+		options:
+			-
+				label: Index round
+				value: tabs-default
+			-
+				label: Index square
+				value: tabs-square
+			-
+				label: Modern
+				value: tabs-modern
+			-
+				label: Underline
+				value: tabs-underline
+	-
+		id: minimal-tab-text-color
+		title: Tab text color
+		type: variable-themed-color
+		format: hex
+		opacity: true
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: minimal-tab-text-color-active
+		title: Tab text color (active)
+		type: variable-themed-color
+		format: hex
+		opacity: true
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: tab-stacks
+		title: Tab stacks
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: tab-stacked-pane-width
+		title: Stacked width
+		type: variable-number
+		description: Width of a stacked tab in pixels
+		default: 700
+		format: px
+	-
+		id: tab-stacked-header-width
+		title: Spine width
+		type: variable-number
+		description: Width of the spine in pixels
+		default: 40
+		format: px
+	-
+		id: tab-stacked-spine-orientation
+		title: Spine text orientation
+		type: class-select
+		default: tab-stack-top
+		options:
+			-
+				label: Top
+				value: tab-stack-top
+			-
+				label: Top flipped
+				value: tab-stack-top-flipped
+			-
+				label: Bottom
+				value: tab-stack-bottom
+			-
+				label: Bottom flipped
+				value: tab-stack-bottom-flipped
+			-
+				label: Center
+				value: tab-stack-center
+			-
+				label: Center flipped
+				value: tab-stack-center-flipped
+	-
+		id: tags
+		title: Tags
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: minimal-unstyled-tags
+		title: Plain tags
+		description: Tags will render as normal text, overrides settings below
+		type: class-toggle
+		default: false
+	-
+		id: tag-radius
+		title: Tag shape
+		type: variable-select
+		default: 14px
+		options:
+			-
+				label: Pill
+				value: 14px
+			-
+				label: Rounded
+				value: 4px
+			-
+				label: Square
+				value: 0px
+	-
+		id: tag-border-width
+		title: Tag border width
+		type: variable-select
+		default: 1px
+		options:
+			-
+				label: None
+				value: 0
+			-
+				label: Thin
+				value: 1px
+			-
+				label: Thick
+				value: 2px
+	-
+		id: tag-color
+		title: Tag text color
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: tag-background
+		title: Tag background color
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: tag-background-hover
+		title: Tag background color (hover)
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: text
+		title: Text
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: tx1
+		title: Normal text color
+		type: variable-themed-color
+		description: Primary text color used by default across all elements
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: hl1
+		title: Selected text background
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: hl2
+		title: Highlighted text background
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: tx2
+		title: Muted text color
+		description: Secondary text such as sidebar note titles and table headings
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: tx3
+		title: Faint text color
+		description: tertiary text such as input placeholders, empty checkboxes, and disabled statuses
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: italic-color
+		title: Italic text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: bold-color
+		title: Bold text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: bold-weight
+		title: Bold text weight
+		type: variable-number-slider
+		default: 600
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: spacing-p
+		title: Paragraph spacing
+		description: Space between paragraphs in reading mode
+		type: variable-text
+		default: 0.75em
+	-
+		id: titles
+		title: Titles
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: tab-title-bar
+		title: Tab title bar
+		description: Tab title bar must be turned on in Appearance settings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: file-header-visibility
+		title: Tab title visibility
+		description: Visibility of the tab title text
+		type: class-select
+		default: minimal-tab-title-hover
+		options:
+			-
+				label: Hover only
+				value: minimal-tab-title-hover
+			-
+				label: Hidden
+				value: minimal-tab-title-hidden
+			-
+				label: Visible
+				value: minimal-tab-title-visible
+	-
+		id: file-header-font-size
+		title: Tab title font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: 0.9em
+	-
+		id: file-header-font-weight
+		title: Tab title font weight
+		type: variable-number-slider
+		default: 400
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: file-header-justify
+		title: Tab title alignment
+		type: variable-select
+		default: center
+		options:
+			-
+				label: Center
+				value: center
+			-
+				label: Left
+				value: left
+	-
+		id: title-color
+		title: Tab title text color (active)
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: title-color-inactive
+		title: Tab title color (inactive)
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: inline-title
+		title: Inline title
+		description: Inline titles must be turned on in Appearance settings
+		type: heading
+		level: 3
+		collapsed: true
+	-
+		id: inline-title-font
+		title: Inline title font
+		description: Name of the font as it appears on your system
+		type: variable-text
+		default: ''
+	-
+		id: inline-title-size
+		title: Inline title font size
+		description: Accepts any CSS font-size value
+		type: variable-text
+		default: 1.125em
+	-
+		id: inline-title-weight
+		title: Inline title font weight
+		type: variable-number-slider
+		default: 600
+		min: 100
+		max: 900
+		step: 100
+	-
+		id: inline-title-color
+		title: Inline title text color (active)
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: translucency
+		title: Translucency
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: workspace-background-translucent
+		title: Translucent background color
+		type: variable-themed-color
+		opacity: true
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: window-frame
+		title: Window frame
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: window-title-off
+		title: Hide window frame title
+		description: Hide title in the custom title bar
+		type: class-toggle
+	-
+		id: frame-background
+		title: Frame background
+		description: Requires colorful window frame
+		type: variable-themed-color
+		opacity: true
+		format: hsl-split
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: frame-icon-color
+		title: Frame icon color
+		description: Requires colorful frame
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: titlebar-text-color-focused
+		title: Frame title color (focused)
+		description: Requires custom title bar
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: titlebar-text-color
+		title: Frame title color (inactive)
+		description: Requires custom title bar
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
+		id: titlebar-text-weight
+		title: Frame title font weight
+		description: Requires custom title bar
+		type: variable-number-slider
+		default: 600
+		min: 100
+		max: 900
+		step: 100
 */
+
 /* @settings
-name: minimal Cards
+name: Minimal Cards
 id: minimal-cards-style
 settings:
-    -
-        id: cards-min-width
-        title: Card minimum width
-        type: variable-text
-        default: 180px
-    -
-        id: cards-max-width
-        title: Card maximum width
-        description: default fills the available width, accepts valid CSS units
-        type: variable-text
-        default: 1fr
-    -
-        id: cards-mobile-width
-        title: Card minimum width on mobile
-        type: variable-text
-        default: 120px
-    -
-        id: cards-padding
-        title: Card padding
-        type: variable-text
-        default: 1.2em
-    -
-        id: cards-image-height
-        title: Card maximum image height
-        type: variable-text
-        default: 400px
-    -
-        id: cards-border-width
-        title: Card border width
-        type: variable-text
-        default: 1px
-    -
-        id: cards-background
-        title: Card background color
-        type: variable-themed-color
-        format: hex
-        default-light: '#'
-        default-dark: '#'
+	-
+		id: cards-min-width
+		title: Card minimum width
+		type: variable-text
+		default: 180px
+	-
+		id: cards-max-width
+		title: Card maximum width
+		description: Default fills the available width, accepts valid CSS units
+		type: variable-text
+		default: 1fr
+	-
+		id: cards-mobile-width
+		title: Card minimum width on mobile
+		type: variable-text
+		default: 120px
+	-
+		id: cards-padding
+		title: Card padding
+		type: variable-text
+		default: 1.2em
+	-
+		id: cards-image-height
+		title: Card maximum image height
+		type: variable-text
+		default: 400px
+	-
+		id: cards-border-width
+		title: Card border width
+		type: variable-text
+		default: 1px
+	- 
+		id: cards-background
+		title: Card background color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+
 */
+
 /* @settings
-name: minimal Mobile
+name: Minimal Mobile
 id: minimal-mobile
 settings:
 	-
@@ -6360,8 +6718,9 @@ settings:
 		description: Turns off mobile toolbar
 		type: class-toggle
 */
+
 /* @settings
-name: minimal Advanced Settings
+name: Minimal Advanced Settings
 id: minimal-advanced
 settings:
 	-
@@ -6375,17 +6734,17 @@ settings:
 		description: The cursor style for UI elements
 		type: variable-select
 		default: default
-		options: 
-            -	
-                label:default
-                value:default
-            -
-                label: Pointer
-                value: pointer
-            -
-                label: Crosshair
-                value: crosshair
-    -
+		options:
+			-
+				label: Default
+				value: default
+			-
+				label: Pointer
+				value: pointer
+			-
+				label: Crosshair
+				value: crosshair
+	-
 		id: font-ui-small
 		title: Small font size
 		description: Font size in px of smaller text
@@ -6407,9 +6766,9 @@ settings:
 		default: 10
 		min: 0
 		max: 30
-        step: 1
+		step: 1
 		format: px
-*/
+*/  
 /* ======================== 自定义代码 ======================== */
 /* ======================================== */
 /* ============ Dataview Cards ============ */
@@ -7812,12 +8171,12 @@ opacity: 1.24;
     text-overflow: ellipsis;
 }
 /*End*/
-/*优化目录树的文件夹样式*/
+/*文件目录树中，文件夹样式*/
 .nav-folder-children .nav-folder-title-content::before {
     content: '';
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAhklEQVRIie2PwQ2DMAxFvzMHXYhBskKSE+WWjMAkHajMkc8pVSoBUkQQF7+TLdv/yYDyNFKKEMKYc14ADLuLInOM8d0qMKU4CwcAkpP3vlnw+8A5x9bjA1YANqX0AaoPOjKQXEpzhwAi8rpVUKMCFajgX7D2CiX53RPYenAl3Bhjr+Yo/dgAr4QoWjEjKLYAAAAASUVORK5CYII=);
     background-size: 16px 16px;
-    transform: translate(0, 2px);
+    transform: translate(1px, 5px);
     background-repeat: no-repeat;
     display: inline-block;
     height: 20px;
@@ -7826,20 +8185,20 @@ opacity: 1.24;
 .mod-windows .nav-folder-title {
     line-height:1.8;
 }
-/*End*/
  body:not(.is-grabbing) .nav-folder-title:hover+,.nav-folder-children .nav-folder-title-content::before {
     content: "";
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZklEQVRIie3NMRKAMAhE0eChMWXSOVzYEhv7sMvgWGRr+K+1vd9PVa/M/7E6EJEzgyyBLBICMkgYYBEIYBAYQBEKQBAaeHeXAe4+zGyWANE4BSBxGEDjEMDEwwAbD633PkrCe5/tAV92N0rtyZlOAAAAAElFTkSuQmCC);
     background-size: 13px 13px;
     background-position: center;
-    transform: translate(0, 2px);
+    transform: translate(1px, 5px);
     background-repeat: no-repeat;
     display: inline-block;
     height: 15px;
     width: 15px;
     margin-top:1.5px;
-    transform: translateX(-1px) translateY(035em) rotate(90deg);
+    transform: translateX(1px) translateY(5px) rotate(90deg);
 }
+/*End*/
 /*文件目录树，文件夹被选中后的焦点样式*/
  .nav-folder .nav-folder-children .nav-file.has-focus .nav-file-title.is-active {
     background-color: var(--icon-color-hover2) !important;
@@ -8005,7 +8364,7 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 }
 .nav-file .nav-file-title .nav-file-title-content {
     margin-left: 0.3rem;
-	font-size:1.2em;
+	font-size:1.0em;
 }
 /*End*/
 /*文件目录导航中文件夹支持导航超出后截断显示*/
@@ -8016,7 +8375,7 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     vertical-align: middle;
     cursor: var(--cursor);
     width:100%;
-	font-size:1.25em;
+	font-size:1.1em;
 }
 /*markdown文件之外的文件类型，显示文件类型前缀*/
 .nav-file-tag {
@@ -8045,11 +8404,11 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     border-bottom: 1px solid var(--bg3);
 }
 .mod-windows .modal.mod-settings .vertical-tab-nav-item {
-    font-size:1.27em;
+    font-size:1.1em;
     border-radius: var(--radius-none);
 }
 .mod-windows .modal.mod-settings .vertical-tab-nav-item:hover {
-    font-size:1.3em;
+    font-size:1.12em;
     border-radius: var(--radius-none);
     color: var(--text-muted);
     font-weight: 400;
@@ -8100,22 +8459,39 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 }
 /*End*/
 /* ================================== */
-/* ======== tabs 标签控制 ======== */
+/* ======== tabs 标签栏控制 ======== */
 /* ================================== */
 .workspace-tab-header {
     /*padding: 3px 5px;*/
-    /*border-color:var(--tab-outline-color);*/
-    box-shadow: 0 0 0 var(--tab-outline-width);
+    box-shadow: 0 0 0 1px;
 }
  /*tabs上的标题大小*/
 .workspace-tab-header-inner-title {
-    line-height: 2.5;
-	font-size:1.0em;
+    line-height: 1.0;
 }
 .workspace .mod-root .workspace-tab-header-inner::after {
     background-color:transparent;
 }
-
+/*控制icon大小*/
+.workspace-tab-header-inner.workspace-tab-header-inner-icon {
+    width: calc(var(--icon-size)+10);
+    height: calc(var(--icon-size)+10);
+}
+/*End*/
+/*tabs 标签栏，修改焦点tab 和 非焦点tab 的样式*/
+.workspace-tab-header-container-inner .workspace-tab-header.is-active.mod-active {
+    box-shadow: 0 0 0 var(--tab-outline-width);
+    color:var(--tx1)
+}
+.workspace-tab-header-container-inner .workspace-tab-header {
+    color:var(--tx3)
+}
+/*End*/
+/*tabs 标签栏，stack模式下文字自上到下排列*/
+.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header .workspace-tab-header-inner-title {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
 /* ================================== */
 /* ======== 编辑视图和正文控制 ======== */
 /* ================================== */
@@ -8154,27 +8530,20 @@ ol li ol::before {
     margin-left:1.0em;
 }
 /*End*/
-/*控制icon大小*/
-.workspace-tab-header-inner.workspace-tab-header-inner-icon {
-    width: calc(var(--icon-size)+10);
-    height: calc(var(--icon-size)+10);
-}
-/*End*/
-
 /*浅色和深色模式下，正文编辑器的背景底色*/
 .theme-light .cm-editor {
-    background-color: #fffffe;
+    background-color: var(--cm-editor-backgroud-color);
 }
 .theme-dark .cm-editor {
-    background-color: #121111c8;
+    background-color: var(--cm-editor-backgroud-color);
     color:white;
 }
-/*End*/
-/*正文编辑器的图片边框*/
- .cm-content .internal-embed.image-embed.is-loaded img {
-    border-width:2px;
-    border:1px dashed black;
-    padding: 2px;
+.theme-light .markdown-reading-view {
+    background-color: var(--cm-editor-backgroud-color);
+}
+.theme-dark .markdown-reading-view {
+    background-color:var(--cm-editor-backgroud-color);
+    color:white;
 }
 /*End*/
 /* 优化tooltip的样式 */
@@ -8337,50 +8706,61 @@ ol li ol::before {
 }
 /*1级实心原点*/
 .markdown-source-view .HyperMD-list-line-1 .list-bullet:after{
-    content: '\2022';
-    font-size:1.3em;
+    content: var(--cm-edit-bullet-list-1) !important;
+    font-size:1.1em;
     margin-top:-1.4em;
 }
 /*2级空心圆*/
 .markdown-source-view .HyperMD-list-line-2 .list-bullet:after{
-    content: '\2218' !important;
-    font-size:1.4em;
+    content: var(--cm-edit-bullet-list-2) !important;
+    font-size:1.1em;
     margin-top:-1.4em;
 }
 /*3级实心方块*/
 .markdown-source-view .HyperMD-list-line-3 .list-bullet:after{
-    content: '\25AA' !important;
-    font-size:1.4em;
+    content: var(--cm-edit-bullet-list-3) !important;
+    font-size:1.1em;
     margin-top:-1.3em;
 }
 /*4级空心方块*/
 .markdown-source-view .HyperMD-list-line-4 .list-bullet:after{
-    content: '\25AB' !important;
-    font-size:1.4em;
+    content: var(--cm-edit-bullet-list-4) !important;
+    font-size:1.1em;
     margin-top:-1.2em;
 }
 /*5级箭头*/
  .markdown-source-view .HyperMD-list-line-5 .list-bullet:after{
-    content: '\2023' !important;
-    font-size:1.4em;
-    margin-top:-1.4em;
+    content: var(--cm-edit-bullet-list-5) !important;
+    font-size:1.1em;
+    margin-top:-1.8em;
 }
 /*End*/
 /*预览视图下，无序列表各个层级的前缀标识 */
-.markdown-reading-view ul.has-list-bullet li:not(.task-list-item) {
-    list-style-type: disc;
+.markdown-reading-view ul.has-list-bullet li::after {
+    content: var(--cm-edit-bullet-list-1) !important;
+	font-size:1.1em;
+	color:black;
 }
-.markdown-reading-view ul.has-list-bullet li li:not(.task-list-item) {
-    list-style-type: circle;
+.markdown-reading-view ul.has-list-bullet li li::after {
+    content: var(--cm-edit-bullet-list-2) !important;
+	font-size:1.1em;
+	color:black;
 }
- .markdown-reading-view ul.has-list-bullet li li li:not(.task-list-item) {
-    list-style-type: square;
+.markdown-reading-view ul.has-list-bullet li li li::after{
+    content: var(--cm-edit-bullet-list-3) !important;
+	font-size:1.1em;
+	color:black;
 }
-.markdown-reading-view ul.has-list-bullet li li li li:not(.task-list-item) {
-    list-style-type: '\25AB   ';
+.markdown-reading-view ul.has-list-bullet li li li li::after {
+    content: var(--cm-edit-bullet-list-4) !important;
+	font-size:1.1em;
+	color:black;
 }
-.markdown-reading-view ul.has-list-bullet li li li li li:not(.task-list-item) {
-    list-style-type: '\2023   ';
+.markdown-reading-view ul.has-list-bullet li li li li li::after {
+    content: var(--cm-edit-bullet-list-5) !important;
+	font-size:1.1em;
+	margint-top:-1.3em;
+	color:black;
 }
 .markdown-reading-view ul.has-list-bullet li li li li:not(.task-list-item-checkbox)::marker {
     margin-left: 10px;
@@ -8432,17 +8812,16 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
     background-color: rgba(var(--callout-color), 0.1);
 }
 /*增加表格颜色隔行显示不同背景色*/
-.markdown-rendered tbody tr:nth-child(2n+2) {
+.markdown-rendered tbody tr:nth-child(2n+1) {
     background-color: var(--bg3);
 }
 /*End*/
 /*=================== End ====================*/
 
-
 /* ======================================= */
 /* ========= 核心插件 core plugin ========= */
 /* ======================================= */
-
+/*=============== 【大纲】 ===============*/
 /* 【大纲】的层级指向器优化 */
 /* 1. 树状结构，显示层级路径 */
 /* 2. 基于AccentColor的高亮 */
@@ -8540,21 +8919,12 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
 /* ======================================= */
 /* ====== 第三方插件 community plugin ====== */
 /* ======================================= */
-/*编辑模式下，修复 quick-explorer 跨度适配 v1.0.1*/
-input[type=checkbox] {
-    border-radius:var(--radius-none) !important;
-}
-/*修复 quick-explorer 跨度适配 v1.0.0*/
-/*
-div#quick-explorer {
-    width:100% !important;
-}
-*/
+/*quick-explorer 跨度适配 v1.0.0*/
 /*quick explore 上目录和文件名样式尺寸*/
 div#quick-explorer .explorable-name {
     padding: 0 4px;
     border-radius: 4px;
-    font-size:1.2em;
+    font-size:1.0em;
 }
 div#quick-explorer {
     /*
@@ -8645,7 +9015,7 @@ div#quick-explorer .explorable-separator::before {
 /*End*/
 /*【chronology】有内容的日子堆叠背景色加强*/
 .chronology-container .chronology-calendar-heat-background {
-    background-color: var(--color-cyan) !important;
+    background-color: var(--color-orange) !important;
 }
 .chronology-container {
     width:100%;
@@ -8941,54 +9311,3 @@ section > ol li::before {
 /* ================================== */
 /* ============ 陈旧代码 ============ */
 /* ================================== */
-/*修复dataviewjs 在gallery视图下的和banners高度冲突 .markdown-reading-view .block-language-dataviewjs {
-    margin-top:var(--banner-height);
-}
-/*End*/
-/* body:not(.minimal-icons-off) svg.folder {
-    -webkit-mask-image: url('data:image/svg+xml;
-    utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M83.333 75H16.667V33.333h66.667m0 -8.333h-33.333l-8.333 -8.333H16.667c-4.625 0 -8.333 3.708 -8.333 8.333v50a8.333 8.333 0 0 0 8.333 8.333h66.667a8.333 8.333 0 0 0 8.333 -8.333V33.333a8.333 8.333 0 0 0 -8.333 -8.333z"></path></svg>') 
-}
- body:not(.minimal-icons-off) .workspace-tab-header[aria-label="File explorer"] svg.folder,body:not(.minimal-icons-off) .workspace-tab-header[data-type=file-explorer] svg.folder {
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6' /%3E%3C/svg%3E") 
-}
- body:not(.minimal-icons-off) .nav-action-button[aria-label="New folder"] svg.folder,body:not(.minimal-icons-off) .workspace-leaf-content[data-type=file-explorer] .nav-action-button:nth-child(2) svg.folder {
-    -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' class='h-6 w-6' fill='none' viewBox='0 0 24 24' stroke='currentColor'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M9 13h6m-3-3v6m-9 1V7a2 2 0 012-2h6l2 2h6a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z' /%3E%3C/svg%3E") 
-}
- */
-/*table 内容右侧边框*/
-/* .col-lines .table-view-table thead>tr>th:not(:last-child),.col-lines .table-view-table>tbody>tr>td:not(:last-child),.col-lines table:not(.calendar) tbody>tr>td:not(:last-child) {
-    border-right: 1px solid var(--background-modifier-border) 
-}
- */
-/*table 内容边框*/
-/* .row-lines .table-view-table>tbody>tr>td,.row-lines table:not(.calendar) tbody>tr>td {
-    border: 1px solid var(--bg3) 
-}
- */
-/* body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected,body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover {
-    background-color: var(--background-tertiary);
-    color: var(--text-normal) 
-}
- body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected .menu-item-icon,body:not(.colorful-active) .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover .menu-item-icon {
-    color: var(--text-normal) 
-}
- */
-/* div#quick-explorer span.explorable.selected .explorable-separator,div#quick-explorer span.explorable:hover .explorable-separator {
-    color: blue;
-}
- */
-/*预览视图下，无序列表的前缀边线的样式*/
-/*
-.markdown-rendered.show-indentation-guide li > ul::before, .markdown-rendered.show-indentation-guide li > ol::before {
-
-}
-*/
-/*左侧导航栏，顶部导航样式调整*/
-/*
-.workspace-tab-header-inner {
-    padding: 3px 5px;
-}
-*/
-/*End*/																																											
- 
