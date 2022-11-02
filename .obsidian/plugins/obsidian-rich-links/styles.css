@@ -10,10 +10,7 @@
 
 .rich-link-card-container {
   position: relative;
-  margin:10px !important;
 }
-
-
 
 .rich-link-card-container::after {
   position: absolute;

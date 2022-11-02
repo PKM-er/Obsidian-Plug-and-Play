@@ -115,6 +115,9 @@ body{
 	--cm-edit-bullet-list-3: '■';
 	--cm-edit-bullet-list-4: '□';
 	--cm-edit-bullet-list-5: '▸';
+    --embed-width:90%;
+    --cm-edit-sourceview-indentline-margin-left:-0.1em;
+    --cm-edit-readview-indentline-margin-left:0.0em;
 }
 .mod-macos{
     --top-left-padding-y:24px
@@ -155,6 +158,7 @@ body{
     --hl2:rgba(255, 225, 0, 0.5);
     --sp1:white;
 	--cm-editor-backgroud-color: #fffffe;
+    --cm-edit-bullet-list-color:gray;
 }
 .excalidraw.theme--dark,.theme-dark,.theme-dark.minimal-default-dark,.theme-light.minimal-light-contrast .titlebar,.theme-light.minimal-light-contrast.minimal-status-off .status-bar{
     --accent-l:60%;
@@ -178,6 +182,7 @@ body{
     --hl2:rgba(255, 177, 80, 0.3);
     --sp1:white;
 	--cm-editor-backgroud-color: #121212;
+    --cm-edit-bullet-list-color:white;
 }
 .theme-light.minimal-light-white{
     --background-primary:white;
@@ -232,7 +237,7 @@ body{
     --icon-color-active:var(--tx1);
     --icon-color-focused:var(--tx1);
     --icon-color-hover:var(--tx2);
-	--icon-color-hover2:var(--item-side)	
+	--icon-color-hover2:var(--item-side);
     --icon-color:var(--tx2);
     --icon-hex:var(--mono0);
     --interactive-accent-hover:var(--ax3);
@@ -5452,6 +5457,26 @@ settings:
 		type: heading
 		level: 2
 		collapsed: true
+    -		   
+		id: cm-edit-sourceview-indent-margin-left
+		title: 无序列表源码/编辑模式下前缀水平对齐
+        level: 3
+        type: variable-text
+		default: -0.1em
+    -		   
+		id: cm-edit-readview-indentline-margin-left
+		title: 无序列表阅读/预览模式下前缀水平对齐
+        level: 3
+        type: variable-text
+		default: -0.0em
+	-		   
+		id: cm-edit-bullet-list-color
+		title: 无序列表前缀颜色
+        level: 3
+        type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-		   
 		id: cm-edit-bullet-list-1
 		title: 无序列表前缀-级别1
@@ -7236,7 +7261,6 @@ opacity: .5;
 }
 .markdown-source-view.mod-cm6 .cm-embed-block {
     border: 0;
-    padding-top: 9px;
 }
 .markdown-source-view.mod-cm6 .edit-block-button {
     padding: 0px;
@@ -7290,9 +7314,17 @@ opacity: .5;
     opacity: 1 
 }
 /*End*/
+.markdown-source-view.mod-cm6.is-readable-line-width .cm-embed-block.cm-callout>.callout {
+    --max-width:100% !important;
+    margin-left:10px !important;
+    margin-right:10px !important;
+}
+.markdown-source-view.mod-cm6 .callout .callout-title , .markdown-source-view.mod-cm6 .callout .callout-content {
+    --max-width:100% !important;
+}
 /*============ 段落自动缩进 ============*/
 /*支持两种写法 > [!note|indent] > [!note indent] */
- .callout.callout:is([data-callout-metadata*="indent"], [data-callout*=indent]) .callout-content p br {
+.callout.callout:is([data-callout-metadata*="indent"], [data-callout*=indent]) .callout-content p br {
     content: '';
     white-space: pre;
 }
@@ -8120,22 +8152,53 @@ opacity: 1.24;
     white-space: nowrap;
 }
 .nav-folder-title-content:not(.is-being-renamed):hover,.nav-folder-title-content:not(::before):hover {
-    animation: filemove 1.5s 1 normal linear;
+    animation: 3s linear 1s infinite alternate;
+    -webkit-animation: 3s linear 1s infinite alternate;
 }
 /*文件目录树中，文件名的滚动动画*/
 .nav-file-title-content:not(.is-being-renamed) {
  	min-width: 200px;
     white-space: nowrap;
 }
+
+.nav-file-title-content:not(.is-being-renamed):hover {
+    animation: 3s linear 1s infinite alternate;
+    -webkit-animation: 3s linear 1s infinite alternate;
+}
+
+/*单向滚动
 .nav-file-title-content:not(.is-being-renamed):hover {
     animation: filemove 1.5s 1 normal linear;
 }
+
 @keyframes filemove {
     0% {
        transform: translate(0, 0);
     }
     100% {
        transform: translate(calc(-100% + 200px), 0);
+    }
+}
+*/
+
+@keyframes wordsLoop {
+    0% {
+        transform:translatex(100%);
+        -webkit-transform:translatex(100%);
+    }
+    100% {
+        transform:translatex(-100%);
+        -webkit-transform:translatex(-100%);
+    }
+}
+@-webkit-keyframes wordsLoop {
+    0% {
+        transform:translatex(100%);
+        -webkit-transform:translatex(100%);
+    }
+    100% {
+        transform:translatex(-100%);
+    -webkit-transform:translatex(-100%);
     }
 }
 /*End*/
@@ -8495,27 +8558,31 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 /* ================================== */
 /* ======== 编辑视图和正文控制 ======== */
 /* ================================== */
-/*预览模式下，*/
+/*预览模式下，无序列表的样式*/
 .markdown-preview-view ul>li:not(.task-list-item)::marker {
     font-size: .9em;
-    border-color:gray;
+    color:var(--cm-edit-bullet-list-color);
 }
 /*End*/
 /*正文段落前面的段前距离*/
 .mod-cm6 .cm-editor .cm-line {
-    padding: 0 
+    padding: 0
 }
 .cm-editor .cm-content {
-    padding-top: .5em 
+    padding-top: .5em
 }
 /*End*/
 /*编辑视图下，控制列表连接线颜色和位置*/
 /*编辑视图下，无序列表的前缀边线的样式*/
 .markdown-source-view.mod-cm6 .cm-indent::before {
     transform: translateX(var(--ig-adjust-edit));
-    margin-left:-0.15em;
+    margin-left:var(--cm-edit-sourceview-indentline-margin-left) !important;
     border-right: 1px solid var(--tx3);
 }
+.markdown-rendered.show-indentation-guide li > ul::before, .markdown-rendered.show-indentation-guide li > ol::before {
+    margin-left:var(--cm-edit-readview-indentline-margin-left)  !important;
+}
+
 /*预览视图下，控制有序列表前置标记（圆点等）的样式*/
 ol>li::marker,ul>li::marker {
     color: var(--text-faint)
@@ -8700,7 +8767,7 @@ ol li ol::before {
 }
 /*End*/
 /*编辑视图下，无序列表各个层级的前缀标识 */
-.markdown-source-view .list-bullet::after {
+.markdown-source-view .list-bullet:not(.task-list-item):after {
     margin-top: -1.0em;
     background-color:unset !important;
 }
@@ -8720,48 +8787,75 @@ ol li ol::before {
 .markdown-source-view .HyperMD-list-line-3 .list-bullet:after{
     content: var(--cm-edit-bullet-list-3) !important;
     font-size:1.1em;
-    margin-top:-1.3em;
+    margin-top:-1.6em;
 }
 /*4级空心方块*/
 .markdown-source-view .HyperMD-list-line-4 .list-bullet:after{
     content: var(--cm-edit-bullet-list-4) !important;
     font-size:1.1em;
-    margin-top:-1.2em;
+    margin-top:-1.5em;
 }
 /*5级箭头*/
  .markdown-source-view .HyperMD-list-line-5 .list-bullet:after{
     content: var(--cm-edit-bullet-list-5) !important;
     font-size:1.1em;
-    margin-top:-1.8em;
+    margin-top:-1.3em;
 }
 /*End*/
 /*预览视图下，无序列表各个层级的前缀标识 */
-.markdown-reading-view ul.has-list-bullet li::marker {
+.theme-light .markdown-reading-view ul.has-list-bullet li:not(.task-list-item)::marker {
     content: var(--cm-edit-bullet-list-1) !important;
 	font-size:1.1em;
-	color:black;
+	color:var(--cm-edit-bullet-list-color);
+    margin-right:-1.5em;
 }
-.markdown-reading-view ul.has-list-bullet li li::marker {
+.theme-light .markdown-reading-view ul.has-list-bullet li li:not(.task-list-item)::marker {
     content: var(--cm-edit-bullet-list-2) !important;
 	font-size:1.1em;
-	color:black;
+	color:var(--cm-edit-bullet-list-color);
 }
-.markdown-reading-view ul.has-list-bullet li li li::marker{
+.theme-light .markdown-reading-view ul.has-list-bullet li li li:not(.task-list-item)::marker{
     content: var(--cm-edit-bullet-list-3) !important;
 	font-size:1.1em;
-	color:black;
+	color:var(--cm-edit-bullet-list-color);
 }
-.markdown-reading-view ul.has-list-bullet li li li li::marker {
+.theme-light .markdown-reading-view ul.has-list-bullet li li li li:not(.task-list-item)::marker {
     content: var(--cm-edit-bullet-list-4) !important;
-	font-size:1.1em;
-	color:black;
+	color:var(--cm-edit-bullet-list-color);
 }
-.markdown-reading-view ul.has-list-bullet li li li li li::marker {
+.theme-light  .markdown-reading-view ul.has-list-bullet li li li li li:not(.task-list-item)::marker {
     content: var(--cm-edit-bullet-list-5) !important;
 	font-size:1.1em;
-	margint-top:-1.3em;
-	color:black;
+	margin-top:-1.3em;
+	color:var(--cm-edit-bullet-list-color);
 }
+.theme-dark .markdown-reading-view ul.has-list-bullet li:not(.task-list-item)::marker {
+    content: var(--cm-edit-bullet-list-1) !important;
+	font-size:1.1em;
+	color:var(--cm-edit-bullet-list-color);
+    margin-right:-1.5em;
+}
+.theme-dark .markdown-reading-view ul.has-list-bullet li li:not(.task-list-item)::marker {
+    content: var(--cm-edit-bullet-list-2) !important;
+	font-size:1.1em;
+	color:var(--cm-edit-bullet-list-color);
+}
+.theme-dark .markdown-reading-view ul.has-list-bullet li li li:not(.task-list-item)::marker{
+    content: var(--cm-edit-bullet-list-3) !important;
+	font-size:1.1em;
+	color:var(--cm-edit-bullet-list-color);
+}
+.theme-dark .markdown-reading-view ul.has-list-bullet li li li li:not(.task-list-item)::marker {
+    content: var(--cm-edit-bullet-list-4) !important;
+	color:var(--cm-edit-bullet-list-color);
+}
+.theme-dark .markdown-reading-view ul.has-list-bullet li li li li li:not(.task-list-item)::marker {
+    content: var(--cm-edit-bullet-list-5) !important;
+	font-size:1.1em;
+	margin-top:-1.3em;
+	color:var(--cm-edit-bullet-list-color);
+}
+
 .markdown-reading-view ul.has-list-bullet li li li li:not(.task-list-item-checkbox)::marker {
     margin-left: 10px;
 }
@@ -9090,26 +9184,20 @@ div#quick-explorer .explorable-separator::before {
     color: white !important;
     background-color: var(--item-side) !important;
 }
-/*【edit toolbar】一级菜单尺寸*/
-button[class^=cMenuToolbarCommandsubItem] {
-    height:2.0em;
-    width:2.0em;
+/*【edit toolbar】一级菜单icon尺寸*/
+button[class^=cMenuToolbarCommandItem] > svg{
+    height: 1.2em;
+    width: 1.2em;
 }
-/*【edit toolbar】子菜单*/
-/*【edit toolbar】子菜单尺寸*/
-button[class^=cMenuToolbarCommandsubItem] >.subitem button.menu-item {
-    height:3.0em;
-    width:3.0em;
+/*【edit toolbar】子菜单icon尺寸*/
+button[class^=cMenuToolbarCommandsubItem] > svg{
+    height: 2.2em;
+    width: 2.2em;
 }
-button[class^=cMenuToolbarCommandsubItem] >.subitem button.menu-item svg{
-    height:3.0em !important;
-    width:3.0em !important;
-}
+/*【edit toolbar】子菜单hover样式*/
 button[class^="cMenuToolbarCommandsubItem"]:hover {
     color: white !important;
     background-color: var(--item-side) !important;
-    height:22px;
-    width:22px;
 }
 /*【edit toolbar】插件设置菜单的指向样式*/
 .setting-item.cMenuToolbarCommandItem:hover,.setting-item.cMenuToolbarCommandItem.cMenuToolbarCommandsubItem:hover {

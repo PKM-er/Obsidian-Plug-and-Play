@@ -10,6 +10,17 @@
       "zoomLevel": 1,
       "forceIframe": true,
       "customCss": ""
+    },
+    {
+      "url": "http://www.bing.com",
+      "displayName": "Bing",
+      "icon": "search",
+      "hideOnMobile": true,
+      "addRibbonIcon": true,
+      "openInCenter": true,
+      "zoomLevel": 1,
+      "forceIframe": true,
+      "customCss": ""
     }
   ],
   "padding": 5

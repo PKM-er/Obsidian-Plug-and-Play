@@ -1,12 +1,14 @@
 {
   "pluginList": [
+    "Trikzon/obsidian-web-browser",
+    "liamcain/obsidian-calendar-plugin",
     "obsidian-canzi/Enhanced-editing",
     "cumany/obsidian-editing-toolbar",
     "Stardusten/ob-table-enhancer"
   ],
   "pluginSubListFrozenVersion": [],
   "themesList": [],
-  "updateAtStartup": false,
+  "updateAtStartup": true,
   "updateThemesAtStartup": false,
   "ribbonIconEnabled": false,
   "loggingEnabled": false,

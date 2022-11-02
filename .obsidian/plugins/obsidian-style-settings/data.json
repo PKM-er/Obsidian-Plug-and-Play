@@ -45,5 +45,9 @@
   "minimal-style@@h6-l": true,
   "minimal-style@@h4-variant": "normal",
   "minimal-style@@h5-variant": "normal",
-  "minimal-style@@h6-variant": "normal"
+  "minimal-style@@h6-variant": "normal",
+  "minimal-style@@tab-stacked-spine-orientation": "tab-stack-up-bottom",
+  "minimal-style@@row-hover": true,
+  "minimal-style@@minimal-strike-lists": true,
+  "minimal-style@@file-header-visibility": "minimal-tab-title-visible"
 }
