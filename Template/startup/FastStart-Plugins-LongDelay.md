@@ -8,3 +8,4 @@ various-complements
 obsidian-sortable
 obsidian-local-images
 obsidian-custom-frames
+quick-explorer

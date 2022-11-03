@@ -1,6 +1,22 @@
 {
   "recentFiles": [
     {
+      "basename": "FastStart-Plugins-LongLongDelay",
+      "path": "Template/startup/FastStart-Plugins-LongLongDelay.md"
+    },
+    {
+      "basename": "FastStart-Plugins-LongDelay",
+      "path": "Template/startup/FastStart-Plugins-LongDelay.md"
+    },
+    {
+      "basename": "FastStart-Plugins-ShortDelay",
+      "path": "Template/startup/FastStart-Plugins-ShortDelay.md"
+    },
+    {
+      "basename": "Readme",
+      "path": "Readme.md"
+    },
+    {
       "basename": "Releases 修改日志",
       "path": "People/Obsidian-plug-and-play/Releases 修改日志.md"
     },
@@ -101,10 +117,6 @@
       "path": "未命名.md"
     },
     {
-      "basename": "Readme",
-      "path": "Readme.md"
-    },
-    {
       "basename": "插件说明",
       "path": "插件说明.md"
     },
@@ -123,18 +135,6 @@
     {
       "basename": "FastStart-GenerateListOfInstalledPlugins",
       "path": "Template/startup/FastStart-GenerateListOfInstalledPlugins.md"
-    },
-    {
-      "basename": "FastStart-Plugins-LongLongDelay",
-      "path": "Template/startup/FastStart-Plugins-LongLongDelay.md"
-    },
-    {
-      "basename": "FastStart-Plugins-ShortDelay",
-      "path": "Template/startup/FastStart-Plugins-ShortDelay.md"
-    },
-    {
-      "basename": "FastStart-Plugins-LongDelay",
-      "path": "Template/startup/FastStart-Plugins-LongDelay.md"
     },
     {
       "basename": "洛基 第一季 Loki Season 1",
