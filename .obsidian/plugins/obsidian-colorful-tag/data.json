@@ -1,0 +1,102 @@
+{
+  "firstTime": false,
+  "global_enable": {
+    "border": true,
+    "font-weight": true
+  },
+  "global": {
+    "border": "none",
+    "font-weight": "900"
+  },
+  "attrList": [
+    "radius",
+    "prefix",
+    "suffix",
+    "background color",
+    "text color",
+    "text size",
+    "border",
+    "font weight"
+  ],
+  "defaultStyle": {},
+  "defaultGlobal": {},
+  "styleList": [
+    {
+      "radius": "",
+      "prefix": "",
+      "suffix": "",
+      "background-color": "#1fd56d",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "working",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "",
+      "suffix": "",
+      "background-color": "#1fd56d",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "meeting",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "",
+      "suffix": "",
+      "background-color": "#0077f8",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "Email",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "",
+      "suffix": "",
+      "background-color": "#ef7311",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "shopping",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "",
+      "suffix": "",
+      "background-color": "#0077f8",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "todo",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "",
+      "suffix": "",
+      "background-color": "red",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "important",
+      "enable": true
+    }
+  ],
+  "useTagDetail": true,
+  "tagDetail": {},
+  "tagItem": {
+    "#Email": {}
+  }
+}

@@ -18,6 +18,72 @@
                   "eState": "{}"
                 },
                 {
+                  "title": "Obsidian-样式",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/高级语法/Obsidian-样式.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "DataView syntax",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/高级语法/DataView syntax.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "未命名",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "插件说明",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"插件说明.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "FastStart-Plugins-LongLongDelay",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongLongDelay.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":14,\"ch\":33},\"to\":{\"line\":14,\"ch\":33}}}"
+                },
+                {
+                  "title": "FastStart-Plugins-LongDelay",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongDelay.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":14},\"to\":{\"line\":10,\"ch\":14}}}"
+                },
+                {
+                  "title": "FastStart-Plugins-LongLongDelay",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongLongDelay.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":18},\"to\":{\"line\":6,\"ch\":18}}}"
+                },
+                {
+                  "title": "FastStart-Plugins-LongDelay",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongDelay.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "FastStart-Plugins-LongLongDelay",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongLongDelay.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":19,\"ch\":25},\"to\":{\"line\":19,\"ch\":25}}}"
+                },
+                {
+                  "title": "FastStart-Plugins-ShortDelay",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-ShortDelay.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "Readme",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
                   "title": "插件说明",
                   "icon": "lucide-file",
                   "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"插件说明.md\",\"mode\":\"source\",\"source\":false}}",
@@ -46,13 +112,98 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Readme.md",
+                "file": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6cd6c657c9ffec59",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                },
+                {
+                  "title": "Obsidian教程——基础语法和操作",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":1656,\"ch\":0},\"to\":{\"line\":1656,\"ch\":0}},\"scroll\":1657.0269607843138}"
+                },
+                {
+                  "title": "Obsidian 教程——Latex",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian 教程——Latex.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                }
+              ]
+            },
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Obsidian-example/Obsidian使用教程/Obsidian 教程——Latex.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "db3ac3378c8f6016",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                },
+                {
+                  "title": "Obsidian 教程——mermaid",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian 教程——mermaid.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":377,\"ch\":0},\"to\":{\"line\":377,\"ch\":0}},\"scroll\":342.0567226890756}"
+                },
+                {
+                  "title": "Obsidian教程——基础语法和操作",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":1660,\"ch\":0},\"to\":{\"line\":1660,\"ch\":0}},\"scroll\":1638.012254901961}"
+                },
+                {
+                  "title": "Obsidian 教程——mermaid",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian 教程——mermaid.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+                },
+                {
+                  "title": "Obsidian 教程——Latex",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian 教程——Latex.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":83,\"ch\":0},\"to\":{\"line\":83,\"ch\":0}},\"scroll\":66.84018342391305}"
+                },
+                {
+                  "title": "Obsidian 教程——mermaid",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian 教程——mermaid.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                }
+              ]
+            },
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -68,6 +219,15 @@
           {
             "id": "f70f39237c7cd7f5",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
             "state": {
               "type": "recent-files",
               "state": {}
@@ -95,6 +255,15 @@
           {
             "id": "b0a47a1490c3954e",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
             "state": {
               "type": "search",
               "state": {
@@ -110,6 +279,15 @@
           {
             "id": "9a63bc5b1fa84f6f",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
             "state": {
               "type": "starred",
               "state": {}
@@ -120,7 +298,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 305.5
+    "width": 378.5
   },
   "right": {
     "id": "0afdab19216adf86",
@@ -133,10 +311,19 @@
           {
             "id": "79b83872d38fae1a",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Readme.md",
+                "file": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,10 +337,19 @@
           {
             "id": "1816a5255b9bdd70",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Readme.md",
+                "file": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,6 +358,15 @@
           {
             "id": "4bb83e5cfb104650",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
             "state": {
               "type": "tag",
               "state": {
@@ -173,6 +378,15 @@
           {
             "id": "1cf08152007094bd",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
             "state": {
               "type": "quiet-outline",
               "state": {}
@@ -181,6 +395,15 @@
           {
             "id": "b6443d2a7ed3990d",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
             "state": {
               "type": "tlfItemView",
               "state": {}
@@ -189,9 +412,54 @@
           {
             "id": "9c67d0b3d6ce8733",
             "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
             "state": {
               "type": "reminder-list",
               "state": {}
+            }
+          },
+          {
+            "id": "b7f06721b7d45109",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "4a2babfae034cbba",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md"
+              }
             }
           }
         ],
@@ -199,22 +467,18 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.72222900390625,
-    "collapsed": true
+    "width": 353.72222900390625
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
-  "active": "8812fa651d875f94",
+  "active": "c55efec099ef9ac1",
   "lastOpenFiles": [
+    "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md",
+    "Obsidian-example/Obsidian使用教程/Obsidian 教程——代码域.md",
+    "Obsidian-example/Obsidian使用教程/Obsidian 教程——mermaid.md",
+    "Obsidian-example/Obsidian使用教程/Obsidian 教程——Latex.md",
+    "Obsidian-example/高级语法/Obsidian-样式.md",
+    "Obsidian-example/高级语法/DataView syntax.md",
+    "Obsidian-example/语法记不住系列/表格（图形化处理，加格式转化）.md",
     "插件说明.md",
-    "Readme.md",
-    "People/Book/《跟动物交换身体》.md",
-    "Template/startup/FastStart-StartupScript.md",
-    "Template/startup/FastStart-StartupScript 1.md",
-    "Template/startup/FastStart-StartupScript 1 1.md",
-    "Template/startup/FastStart-GenerateListOfInstalledPlugins.md",
-    "Template/startup/FastStart-Plugins-ShortDelay.md",
     "Template/startup/FastStart-Plugins-LongLongDelay.md",
     "Template/startup/FastStart-Plugins-LongDelay.md"
   ]

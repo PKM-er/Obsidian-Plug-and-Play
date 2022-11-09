@@ -5263,7 +5263,7 @@ class OnFileModifyAutomatorManager {
             return;
         // Return on Excalidraw files to prevent conflict with its auto-save feature.
         const metadata = await this.app.metadataCache.getFileCache(outfile);
-        const keys = Object.keys(metadata === null || metadata === void 0 ? void 0 : metadata.frontmatter);
+        //const keys = Object.keys(metadata === null || metadata === void 0 ? void 0 : metadata.frontmatter);
         if (keys && keys.some(key => key.toLowerCase().contains("excalidraw"))) {
             return;
         }

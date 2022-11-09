@@ -3,7 +3,6 @@
   "ignoreNulls": false,
   "nullValue": "",
   "skipKey": "metatable",
-  "ignoredKeys": [],
   "filterKeys": [
     "metatable",
     "frontmatter"
@@ -11,5 +10,7 @@
   "filterMode": "ignore",
   "autolinks": false,
   "naked": false,
+  "theme": "light",
+  "ignoredKeys": [],
   "vault": null
 }

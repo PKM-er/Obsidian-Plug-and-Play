@@ -1,8 +1,8 @@
 {
   "pluginList": [
+    "rien7/obsidian-colorful-tag",
+    "proog/obsidian-trash-explorer",
     "Trikzon/obsidian-web-browser",
-    "liamcain/obsidian-calendar-plugin",
-    "obsidian-canzi/Enhanced-editing",
     "cumany/obsidian-editing-toolbar",
     "Stardusten/ob-table-enhancer"
   ],
@@ -14,6 +14,6 @@
   "loggingEnabled": false,
   "loggingPath": "BRAT-log",
   "loggingVerboseEnabled": false,
-  "debuggingMode": true,
-  "notificationsEnabled": true
+  "debuggingMode": false,
+  "notificationsEnabled": false
 }

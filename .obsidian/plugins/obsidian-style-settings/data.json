@@ -26,7 +26,6 @@
   "time@@time-color@@light": "#88CFF0",
   "time@@time-color@@dark": "#88CFF0",
   "minimal-style@@checkbox-shape": "checkbox-square",
-  "minimal-style@@ig-adjust-edit": 3,
   "minimal-style@@ax1@@light": "#4B77C9",
   "minimal-style@@ax2@@light": "#4B77C9",
   "minimal-style@@ax2@@dark": "#4B77C9",
@@ -49,5 +48,11 @@
   "minimal-style@@tab-stacked-spine-orientation": "tab-stack-up-bottom",
   "minimal-style@@row-hover": true,
   "minimal-style@@minimal-strike-lists": true,
-  "minimal-style@@file-header-visibility": "minimal-tab-title-visible"
+  "minimal-style@@file-header-visibility": "minimal-tab-title-visible",
+  "minimal-style@@backlinks-embed-txcolor@@dark": "#FFFFFF",
+  "minimal-style@@backlinks-embed-bgcolor@@dark": "#000000",
+  "minimal-style@@ig-adjust-edit": 0.05,
+  "minimal-style@@ig-adjust-reading": 0.05,
+  "minimal-style@@checkbox-tada": true,
+  "minimal-style@@tag-border-width": "1px"
 }

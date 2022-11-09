@@ -95,15 +95,6 @@ body{
     --top-left-padding-y:0px;
     --image-muted:0.7;
     --spacing-p:0.75em;
-	--item-side:#007aff;
-    --text-headings:var(--item-side);
-    --h1-color:var(--text-headings);
-    --h2-color:var(--text-headings);
-    --h3-color:var(--text-headings);
-    --h4-color:var(--text-headings);
-    --h5-color:var(--text-headings);
-    --h6-color:var(--text-headings);
-	--table-hover-raw-color:var(--item-side);
     --icon-size:21px;
     --radius-none:0px;
     --radius-s: 2px;
@@ -116,8 +107,10 @@ body{
 	--cm-edit-bullet-list-4: '□';
 	--cm-edit-bullet-list-5: '▸';
     --embed-width:90%;
-    --cm-edit-sourceview-indentline-margin-left:-0.1em;
-    --cm-edit-readview-indentline-margin-left:0.0em;
+}
+body{
+    --ig-adjust-reading:0.05em;
+    --ig-adjust-edit:0.05em;
 }
 .mod-macos{
     --top-left-padding-y:24px
@@ -137,6 +130,18 @@ body{
     --color-blue:#6c99bb;
     --color-purple:#9e86c8;
     --color-pink:#b05279;
+    --item-side:#007aff;
+    --text-headings:var(--item-side);
+    --h1-color:var(--text-headings);
+    --h2-color:var(--text-headings);
+    --h3-color:var(--text-headings);
+    --h4-color:var(--text-headings);
+    --h5-color:var(--text-headings);
+    --h6-color:var(--text-headings);
+	--table-hover-raw-color:var(--item-side);
+    --backlinks-embed-txcolor:black;
+    --backlinks-embed-bgcolor:white;
+
 }
 .theme-light,.theme-light.minimal-default-light,body .excalidraw{
     --bg1:white;
@@ -159,6 +164,7 @@ body{
     --sp1:white;
 	--cm-editor-backgroud-color: #fffffe;
     --cm-edit-bullet-list-color:gray;
+
 }
 .excalidraw.theme--dark,.theme-dark,.theme-dark.minimal-default-dark,.theme-light.minimal-light-contrast .titlebar,.theme-light.minimal-light-contrast.minimal-status-off .status-bar{
     --accent-l:60%;
@@ -181,8 +187,7 @@ body{
     --hl1:hsla( var(--accent-h), 50%, 40%, 30% );
     --hl2:rgba(255, 177, 80, 0.3);
     --sp1:white;
-	--cm-editor-backgroud-color: #121212;
-    --cm-edit-bullet-list-color:white;
+
 }
 .theme-light.minimal-light-white{
     --background-primary:white;
@@ -804,18 +809,14 @@ body.is-mobile .CodeMirror-foldgutter-open:after,body.is-mobile span[title="Fold
     font-family:sans-serif;
     transform:rotate(360deg)
 }
-body{
-    --ig-adjust-reading:-0.65em;
-    --ig-adjust-edit:-1px
-}
 .markdown-rendered.show-indentation-guide li.task-list-item>ol::before,.markdown-rendered.show-indentation-guide li.task-list-item>ul::before,.markdown-rendered.show-indentation-guide li>ol::before,.markdown-rendered.show-indentation-guide li>ul::before{
-    left:var(--ig-adjust-reading)
+    transform:translateX(ar(--ig-adjust-reading))
 }
 .markdown-source-view.mod-cm6 .cm-indent::before{
     transform:translateX(var(--ig-adjust-edit))
 }
 .is-mobile .markdown-rendered.show-indentation-guide li>ol::before,.is-mobile .markdown-rendered.show-indentation-guide li>ul::before{
-    left:calc(0em + var(--ig-adjust-reading))
+    transform:translateX(ar(--ig-adjust-reading))
 }
 .is-mobile .markdown-source-view.mod-cm6 .cm-indent::before{
     transform:translateX(calc(2px + var(--ig-adjust-edit)))
@@ -5451,58 +5452,6 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-		   
-		id: cm-edit-bullet-list
-		title: 无序列表前缀
-		description: 填写前缀符号，需要将符号放入''内才可生效
-		type: heading
-		level: 2
-		collapsed: true
-    -		   
-		id: cm-edit-sourceview-indent-margin-left
-		title: 无序列表源码/编辑模式下前缀水平对齐
-        level: 3
-        type: variable-text
-		default: -0.1em
-    -		   
-		id: cm-edit-readview-indentline-margin-left
-		title: 无序列表阅读/预览模式下前缀水平对齐
-        level: 3
-        type: variable-text
-		default: -0.0em
-	-		   
-		id: cm-edit-bullet-list-color
-		title: 无序列表前缀颜色
-        level: 3
-        type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-	-		   
-		id: cm-edit-bullet-list-1
-		title: 无序列表前缀-级别1
-		type: variable-text
-		default: '●'
-	-		   
-		id: cm-edit-bullet-list-2
-		title: 无序列表前缀-级别2
-		type: variable-text
-		default: '○'
-	-		   
-		id: cm-edit-bullet-list-3
-		title: 无序列表前缀-级别3
-		type: variable-text
-		default: '■'
-	-		   
-		id: cm-edit-bullet-list-4
-		title: 无序列表前缀-级别4
-		type: variable-text
-		default: '□'
-	-		   
-		id: cm-edit-bullet-list-5
-		title: 无序列表前缀-级别5
-		type: variable-text
-		default: '▸'
-	-		   
 		id: headings
 		title: Headings
 		type: heading
@@ -5992,21 +5941,51 @@ settings:
 		id: ig-adjust-reading
 		title: Horizontal adjustment in reading mode
 		type: variable-number-slider
-		default: -0.65
-		min: -1.2
-		max: 0
+		default: 0.05
+		min: -2
+		max: 2
 		step: 0.05
 		format: em
 	-
 		id: ig-adjust-edit
 		title: Horizontal adjustment in edit mode
 		type: variable-number-slider
-		default: -1
-		min: -10
-		max: 10
-		step: 1
-		format: px
-	-
+		default: -0.1
+		min: -2
+		max: 2
+		step: 0.05
+		format: em
+	-		   
+		id: cm-edit-bullet-list-1
+		title: 无序列表前缀-级别1
+        description: 填写前缀符号，需要将符号放入''内才可生效
+		type: variable-text
+		default: '●'
+	-		   
+		id: cm-edit-bullet-list-2
+		title: 无序列表前缀-级别2
+        description: 填写前缀符号，需要将符号放入''内才可生效
+		type: variable-text
+		default: '○'
+	-		   
+		id: cm-edit-bullet-list-3
+		title: 无序列表前缀-级别3
+        description: 填写前缀符号，需要将符号放入''内才可生效
+		type: variable-text
+		default: '■'
+	-		   
+		id: cm-edit-bullet-list-4
+		title: 无序列表前缀-级别4
+        description: 填写前缀符号，需要将符号放入''内才可生效
+		type: variable-text
+		default: '□'
+	-		   
+		id: cm-edit-bullet-list-5
+		title: 无序列表前缀-级别5
+        description: 填写前缀符号，需要将符号放入''内才可生效
+		type: variable-text
+		default: '▸'
+    -
 		id: indentation-guide-color
 		title: Indentation guide color
 		type: variable-themed-color
@@ -6092,6 +6071,26 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: back-links
+		title: Backlink embed style
+		type: heading
+		level: 3
+		collapsed: true
+    -
+		id: backlinks-embed-txcolor
+		title: Backlink embed text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    -
+		id: backlinks-embed-bgcolor
+		title: Backlink embed background color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    -
 		id: lists
 		title: Lists and tasks
 		type: heading
@@ -6119,6 +6118,12 @@ settings:
 				label: Square
 				value: checkbox-square
 	-
+		id: checkbox-tada
+		title: Checkbox tada animation
+		description: Checkbox hased 'tada' animation when you mouseover
+        type: class-toggle
+		default: true
+    -
 		id: minimal-strike-lists
 		title: Strike completed tasks
 		description: Adds strikethrough line and greyed text for completed tasks
@@ -8574,13 +8579,8 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 /*End*/
 /*编辑视图下，控制列表连接线颜色和位置*/
 /*编辑视图下，无序列表的前缀边线的样式*/
-.markdown-source-view.mod-cm6 .cm-indent::before {
-    transform: translateX(var(--ig-adjust-edit));
-    margin-left:var(--cm-edit-sourceview-indentline-margin-left) !important;
-    border-right: 1px solid var(--tx3);
-}
 .markdown-rendered.show-indentation-guide li > ul::before, .markdown-rendered.show-indentation-guide li > ol::before {
-    margin-left:var(--cm-edit-readview-indentline-margin-left)  !important;
+    margin-left:var(--ig-adjust-reading)  !important;
 }
 
 /*预览视图下，控制有序列表前置标记（圆点等）的样式*/
@@ -8661,26 +8661,32 @@ ol li ol::before {
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-1.cm-line  {
     border-bottom: 1.5px solid var(--ui2);
     margin-bottom: 0.2em !important;
+    margin-top: 0.3em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-2.cm-line {
     border-bottom: 1.5px solid var(--ui2);
     margin-bottom: 0.2em !important;
+    margin-top: 0.3em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-3.cm-line {
     border-bottom: 1.5px solid var(--ui2);
     margin-bottom: 0.2em !important;
+    margin-top: 0.3em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-4.cm-line {
     border-bottom: 1.5px solid var(--ui2);
     margin-bottom: 0.2em !important;
+    margin-top: 0.3em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-5.cm-line {
     border-bottom: 1.5px solid var(--ui2);
     margin-bottom: 0.2em !important;
+    margin-top: 0.3em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-6.cm-line {
     border-bottom: 1.5px solid var(--ui2);
     margin-bottom: 0.2em !important;
+    margin-top: 0.3em !important;
 }
 /*预览视图下：标题下方线的粗细和颜色样式，分割线距离标题和紧跟标题的内容块的距离*/
 .cm-s-obsidian .cm-header-1,.empty-state-title,.markdown-preview-view h1,.markdown-rendered h1,h1 {
@@ -8885,14 +8891,6 @@ ol li ol::before {
     width: calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
 }
 /*End*/
-/*给bookinfo 的表格增加指向（hover）的动画*/
-body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
-    background: var(--table-hover-raw-color);
-    color:white;
-    transform: scale(1.02);
-    transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
-}
-/*End*/
 /*table title 边框*/
 .table-lines .table-view-table,.table-lines table:not(.calendar) {
     border: 1px solid var(--bg3) 
@@ -9009,7 +9007,6 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
     content: none !important;
 }
 
-
 /* ======================================= */
 /* ====== 第三方插件 community plugin ====== */
 /* ======================================= */
@@ -9050,7 +9047,7 @@ div#quick-explorer .explorable-separator::before {
     margin: 0 
 }
 /*End*/
-/*=================== tabel cnhancer ====================*/
+/*=================== tabel enhancer ====================*/
 /*tabel enhancer 的表头样式*/
 .cm-table-widget .ob-table-enhancer > thead tr {
     border-bottom: 1px solid black;
@@ -9088,7 +9085,7 @@ div#quick-explorer .explorable-separator::before {
 /*End*/
 /*为【Lapel】插件，修复headings 下方添加边距后产生差分距离*/
 .cm-gutter.cm-lapel .cm-gutterElement {
-    margin-bottom: 0.33em;
+    margin-bottom: 0.91em;
 }
 /*End*/
 /*为【task progress bar】插件，优化效果*/
@@ -9213,6 +9210,7 @@ button[class^=cMenuToolbarCommandsubItem] >.subitem {
     height:32px !important;
 }
 /*End*/
+
 /* ================================== */
 /* =========== 插件间兼容性 ========== */
 /* ================================== */
@@ -9261,7 +9259,82 @@ body.css-settings-manager {
 /* ================================== */
 /* ============ 测试代码 ============ */
 /* ================================== */
+/*图片边框*/
+.internal-embed.image-embed.is-loaded {
+    border:2px double var(--ax1);
+    border-radius: 5px;
+}
+/*End*/
+/*为引用的内容，增加边框*/
+.internal-embed.is-loaded {
+    border:2px double var(--ax1);
+    padding:10px;
+    border-radius: 5px;
+}
+/*End*/
+/*搜索结果的样式适配浅/深色主题*/
+.theme-light .mod-left-split .search-result-file-matches {
+    color: var(--backlinks-embed-txcolor);
+    background-color: var(--backlinks-embed-bgcolor);
+}
+.theme-dark .mod-left-split .search-result-file-matches {
+    color: var(--backlinks-embed-txcolor);
+    background-color: var(--backlinks-embed-bgcolor);
+}
+/*End*/
+/*backlinks，在浅/深主题下的自定义样式*/
+.theme-dark .workspace-split .cm-editor .embedded-backlinks .tree-item.search-result .search-result-file-matches {
+    color: var(--backlinks-embed-txcolor);
+    background-color: var(--backlinks-embed-bgcolor);
+}
+.theme-light .workspace-split .cm-editor .embedded-backlinks .tree-item.search-result .search-result-file-matches {
+    color: var(--backlinks-embed-txcolor);
+    background-color: var(--backlinks-embed-bgcolor);
+}
+/*End*/
+/*编辑模式下，修复callouts 的段前段后距离*/
+.cm-embed-block.markdown-rendered.cm-callout {
+    margin-top:0.1em !important;
+    margin-bottom:0.1em !important;
+}
+/*End*/
+/*checkbox,显示 tada 效果*/
+body:not(.unmute-checkbox-animation).checkbox-tada .is-flashing input.task-list-item-checkbox[type=checkbox]:checked:hover, 
+body:not(.unmute-checkbox-animation).checkbox-tada input.task-list-item-checkbox[type=checkbox]:checked:hover {
+  animation: tada 1s;
+  filter: hue-rotate(160deg);
+}
 
+@keyframes tada {
+    from {-webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1);}
+    10%,
+    20% {-webkit-transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);}
+    30%,
+    50%,
+    70%,
+    90% {-webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);}
+    40%,
+    60%,
+    80% {-webkit-transform: rotate3d(0, 0, 1, -10deg); transform: rotate3d(0, 0, 1, -10deg);}
+    to {-webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1);}
+  }
+/*End*/
+/*
+/*Obsidian 关闭按钮顺序调整
+body.reversal-titlebar .titlebar-button-container.mod-right {
+    direction: rtl;
+}
+*/
+/*禁用点击超链接跳转 需要跳转 按ctrl+超链接即可
+body.link-click .cm-s-obsidian span.cm-link {
+    pointer-events: none;
+}
+*/
+/*禁用实时预览点击标签跳转 需要跳转 点击#号即可
+body.tag-click .cm-line span.cm-hashtag:not(.cm-formatting) {
+    pointer-events: none;
+}
+*/
 
 /* 在编辑模式下，自动为标题编号。List styling for outline pane */
 /*
@@ -9399,3 +9472,13 @@ section > ol li::before {
 /* ================================== */
 /* ============ 陈旧代码 ============ */
 /* ================================== */
+/*给bookinfo 的表格增加指向（hover）的动画*/
+/*
+body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
+    background: var(--table-hover-raw-color);
+    color:white;
+    transform: scale(1.02);
+    transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
+}
+*/
+/*End*/

@@ -1,10 +1,12 @@
 ---
 cssclass: "cards"
 usage: 对dataview表格渲染成卡片视图
-banner: "![[MovieList_image_1.gif]]"
+banner: "![[sergei-eisensteins-120th-birthday-5380775741489152-2xagif.gif]]"
 obsidianUIMode: preview
+banner_icon: 🎬
 banner_x: 0.5
 banner_y: 0.5
+updated: 2022-03-15 14:19
 ---
 
 ```dataviewjs

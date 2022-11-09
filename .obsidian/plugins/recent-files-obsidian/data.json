@@ -1,6 +1,34 @@
 {
   "recentFiles": [
     {
+      "basename": "Obsidian教程——基础语法和操作",
+      "path": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md"
+    },
+    {
+      "basename": "Obsidian 教程——代码域",
+      "path": "Obsidian-example/Obsidian使用教程/Obsidian 教程——代码域.md"
+    },
+    {
+      "basename": "Obsidian 教程——mermaid",
+      "path": "Obsidian-example/Obsidian使用教程/Obsidian 教程——mermaid.md"
+    },
+    {
+      "basename": "Obsidian 教程——Latex",
+      "path": "Obsidian-example/Obsidian使用教程/Obsidian 教程——Latex.md"
+    },
+    {
+      "basename": "Obsidian-样式",
+      "path": "Obsidian-example/高级语法/Obsidian-样式.md"
+    },
+    {
+      "basename": "DataView syntax",
+      "path": "Obsidian-example/高级语法/DataView syntax.md"
+    },
+    {
+      "basename": "插件说明",
+      "path": "插件说明.md"
+    },
+    {
       "basename": "FastStart-Plugins-LongLongDelay",
       "path": "Template/startup/FastStart-Plugins-LongLongDelay.md"
     },
@@ -15,10 +43,6 @@
     {
       "basename": "Readme",
       "path": "Readme.md"
-    },
-    {
-      "basename": "Releases 修改日志",
-      "path": "People/Obsidian-plug-and-play/Releases 修改日志.md"
     },
     {
       "basename": "主题和snippests 测试用例",
@@ -117,12 +141,8 @@
       "path": "未命名.md"
     },
     {
-      "basename": "插件说明",
-      "path": "插件说明.md"
-    },
-    {
       "basename": "05 - White red",
-      "path": "Obsidian-example/Tables/05 - White red.md"
+      "path": "Obsidian-example/Tables 表格样式/05 - White red.md"
     },
     {
       "basename": "《孤独与陪伴》",

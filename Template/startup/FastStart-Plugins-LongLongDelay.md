@@ -1,15 +1,10 @@
 obsidian-file-info-plugin
 tag-word-cloud
 obsidian-emoji-toolbar
-obsidian-minimal-settings
-supercharged-links-obsidian
-obsidian-file-link
+quick-explorer
 obsidian-excalidraw-plugin
-obsidian-emoji-toolbar
-url-into-selection
 obsidian-pandoc
 obsidian-math-plus
-music-code-blocks
 lapel
 obsidian-enhancing-mindmap
 obsidian-view-mode-by-frontmatter

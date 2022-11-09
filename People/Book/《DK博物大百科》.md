@@ -1,5 +1,4 @@
 ---
-banner: "https://img3.doubanio.com/view/subject/l/public/s29928580.jpg"
 obsidianUIMode: preview
 name: DK博物大百科
 cover: https://img3.doubanio.com/view/subject/l/public/s29928580.jpg
@@ -16,6 +15,7 @@ progress: ⭐⭐⭐⭐
 status: 想看
 pagecount: 624
 progress: ⭐⭐⭐⭐
+banner_y: 0.53403
 ---
 > [!bookinfo]+ **《DK博物大百科》**
 >
@@ -54,3 +54,23 @@ progress: ⭐⭐⭐⭐
 
 ## 1. 心得体会
 
+
+
+<div class="rich-link-card-container"><a class="rich-link-card" href="https://movie.douban.com/subject/26873582/?from=showing" target="_blank">
+	<div class="rich-link-image-container">
+		<div class="rich-link-image" style="background-image: url('https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2873135507.jpg')">
+	</div>
+	</div>
+	<div class="rich-link-card-text">
+		<h1 class="rich-link-card-title">侏罗纪世界3 Jurassic World: Dominion</h1>
+		<p class="rich-link-card-description">
+		影片为《侏罗纪世界》系列的完结篇，故事的开篇设定在纳布拉尔岛被摧毁的四年后。如今，恐龙在世界各地与人类共同生活、共同捕猎。这一脆弱的平衡将重塑未来，并最终决定人类能否与史上最可怕生物共享这颗星球，并继...
+		</p>
+		<p class="rich-link-card-rating">
+			⭐6.3
+		</p>
+		<p class="rich-link-href">
+			https://movie.douban.com/subject/26873582/?from=showing
+		</p>
+	</div>
+</a></div>

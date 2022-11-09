@@ -1,0 +1,780 @@
+{
+  "settings": {
+    "countType": "note",
+    "countType2": "none",
+    "countType3": "none",
+    "abbreviateDescriptions": true,
+    "alignment": "inline",
+    "debugMode": false,
+    "wordsPerPage": 300,
+    "charsPerPage": 1500,
+    "pageCountType": "ByWords"
+  },
+  "cachedCounts": {
+    "📊Every Day/📊Every Day.md": {
+      "noteCount": 1,
+      "wordCount": 201,
+      "pageCount": 0.67,
+      "characterCount": 1912,
+      "nonWhitespaceCharacterCount": 1578,
+      "createdDate": 1658195328336,
+      "modifiedDate": 1658195328336
+    },
+    "📊Every Day/✅每日检查To-Do.md": {
+      "noteCount": 1,
+      "wordCount": 1426,
+      "pageCount": 4.753333333333333,
+      "characterCount": 13713,
+      "nonWhitespaceCharacterCount": 11216,
+      "createdDate": 1658195328288,
+      "modifiedDate": 1658195328288
+    },
+    "更新日志（Changelog）.md": {
+      "noteCount": 1,
+      "wordCount": 786,
+      "pageCount": 2.62,
+      "characterCount": 7835,
+      "nonWhitespaceCharacterCount": 6425,
+      "createdDate": 1666160084897,
+      "modifiedDate": 1666160084897
+    },
+    "插件说明.md": {
+      "noteCount": 1,
+      "wordCount": 540,
+      "pageCount": 1.8,
+      "characterCount": 10613,
+      "nonWhitespaceCharacterCount": 4193,
+      "createdDate": 1666060444995,
+      "modifiedDate": 1666079607532
+    },
+    "Template/Video Template.md": {
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 57,
+      "nonWhitespaceCharacterCount": 48,
+      "createdDate": 1665556680447,
+      "modifiedDate": 1653285302093
+    },
+    "Template/tp-movie.md": {
+      "noteCount": 1,
+      "wordCount": 33,
+      "pageCount": 0.11,
+      "characterCount": 427,
+      "nonWhitespaceCharacterCount": 388,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1653285293464
+    },
+    "Template/tp-movie-douban.md": {
+      "noteCount": 1,
+      "wordCount": 52,
+      "pageCount": 0.17333333333333334,
+      "characterCount": 582,
+      "nonWhitespaceCharacterCount": 512,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1658204494903
+    },
+    "Template/tp-book.md": {
+      "noteCount": 1,
+      "wordCount": 40,
+      "pageCount": 0.13333333333333333,
+      "characterCount": 509,
+      "nonWhitespaceCharacterCount": 463,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1653285318302
+    },
+    "Template/tp-book-callout.md": {
+      "noteCount": 1,
+      "wordCount": 94,
+      "pageCount": 0.31333333333333335,
+      "characterCount": 1079,
+      "nonWhitespaceCharacterCount": 770,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1658204636749
+    },
+    "Template/startup/FastStart-StartupScript.md": {
+      "noteCount": 1,
+      "wordCount": 45,
+      "pageCount": 0.15,
+      "characterCount": 510,
+      "nonWhitespaceCharacterCount": 414,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1665555808557
+    },
+    "Template/startup/FastStart-Plugins-ShortDelay.md": {
+      "noteCount": 1,
+      "wordCount": 6,
+      "pageCount": 0.02,
+      "characterCount": 118,
+      "nonWhitespaceCharacterCount": 113,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1667918006890
+    },
+    "Template/startup/FastStart-Plugins-LongLongDelay.md": {
+      "noteCount": 1,
+      "wordCount": 10,
+      "pageCount": 0.03333333333333333,
+      "characterCount": 207,
+      "nonWhitespaceCharacterCount": 198,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1667917998048
+    },
+    "Template/startup/FastStart-Plugins-LongDelay.md": {
+      "noteCount": 1,
+      "wordCount": 9,
+      "pageCount": 0.03,
+      "characterCount": 192,
+      "nonWhitespaceCharacterCount": 184,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1665999045405
+    },
+    "Template/startup/FastStart-GenerateListOfInstalledPlugins.md": {
+      "noteCount": 1,
+      "wordCount": 3,
+      "pageCount": 0.01,
+      "characterCount": 98,
+      "nonWhitespaceCharacterCount": 96,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1646116530000
+    },
+    "Template/Literature Template.md": {
+      "noteCount": 1,
+      "wordCount": 17,
+      "pageCount": 0.056666666666666664,
+      "characterCount": 108,
+      "nonWhitespaceCharacterCount": 88,
+      "createdDate": 1665556680394,
+      "modifiedDate": 1641032644000
+    },
+    "Template/Fleeting Template.md": {
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 50,
+      "nonWhitespaceCharacterCount": 42,
+      "createdDate": 1665556680390,
+      "modifiedDate": 1641032954000
+    },
+    "Template/Daily Template.md": {
+      "noteCount": 1,
+      "wordCount": 10,
+      "pageCount": 0.03333333333333333,
+      "characterCount": 47,
+      "nonWhitespaceCharacterCount": 36,
+      "createdDate": 1665556680386,
+      "modifiedDate": 1641032864000
+    },
+    "Template/Book Template.md": {
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 55,
+      "nonWhitespaceCharacterCount": 47,
+      "createdDate": 1665556680360,
+      "modifiedDate": 1641032586000
+    },
+    "Template/Article Template.md": {
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 58,
+      "nonWhitespaceCharacterCount": 50,
+      "createdDate": 1665556680357,
+      "modifiedDate": 1641032583000
+    },
+    "Readme.md": {
+      "noteCount": 1,
+      "wordCount": 427,
+      "pageCount": 1.4233333333333333,
+      "characterCount": 5851,
+      "nonWhitespaceCharacterCount": 5285,
+      "createdDate": 1667392294189,
+      "modifiedDate": 1667484991675
+    },
+    "People/Obsidian-plug-and-play/测试文件夹/测试引用.md": {
+      "noteCount": 1,
+      "wordCount": 6,
+      "pageCount": 0.02,
+      "characterCount": 33,
+      "nonWhitespaceCharacterCount": 26,
+      "createdDate": 1668010972152,
+      "modifiedDate": 1667733489180
+    },
+    "People/Obsidian-plug-and-play/主题和snippests 测试用例.md": {
+      "noteCount": 1,
+      "wordCount": 1149,
+      "pageCount": 3.83,
+      "characterCount": 18908,
+      "nonWhitespaceCharacterCount": 17408,
+      "createdDate": 1668010972139,
+      "modifiedDate": 1668008330255
+    },
+    "People/Movie/研究/电影种类分类.md": {
+      "noteCount": 1,
+      "wordCount": 11,
+      "pageCount": 0.03666666666666667,
+      "characterCount": 151,
+      "nonWhitespaceCharacterCount": 141,
+      "createdDate": 1668010972093,
+      "modifiedDate": 1656496485239
+    },
+    "People/Movie/洛基 第一季 Loki Season 1.md": {
+      "noteCount": 1,
+      "wordCount": 53,
+      "pageCount": 0.17666666666666667,
+      "characterCount": 679,
+      "nonWhitespaceCharacterCount": 615,
+      "createdDate": 1658195328084,
+      "modifiedDate": 1667897915482
+    },
+    "People/Movie/太空部队 第二季 Space Force Season 2.md": {
+      "noteCount": 1,
+      "wordCount": 56,
+      "pageCount": 0.18666666666666668,
+      "characterCount": 702,
+      "nonWhitespaceCharacterCount": 635,
+      "createdDate": 1658195328084,
+      "modifiedDate": 1667897911835
+    },
+    "People/Movie/升级 Upgrade.md": {
+      "noteCount": 1,
+      "wordCount": 54,
+      "pageCount": 0.18,
+      "characterCount": 935,
+      "nonWhitespaceCharacterCount": 849,
+      "createdDate": 1668010972067,
+      "modifiedDate": 1658204304639
+    },
+    "People/Movie/上载新生 第二季 Upload Season 2.md": {
+      "noteCount": 1,
+      "wordCount": 52,
+      "pageCount": 0.17333333333333334,
+      "characterCount": 746,
+      "nonWhitespaceCharacterCount": 683,
+      "createdDate": 1658195328084,
+      "modifiedDate": 1667897891134
+    },
+    "People/Movie/人生切割术 第一季 Severance Season 1.md": {
+      "noteCount": 1,
+      "wordCount": 51,
+      "pageCount": 0.17,
+      "characterCount": 683,
+      "nonWhitespaceCharacterCount": 621,
+      "createdDate": 1658195328084,
+      "modifiedDate": 1667897894921
+    },
+    "People/Movie/TVplayList.md": {
+      "noteCount": 1,
+      "wordCount": 203,
+      "pageCount": 0.6766666666666666,
+      "characterCount": 2339,
+      "nonWhitespaceCharacterCount": 2035,
+      "createdDate": 1668010972048,
+      "modifiedDate": 1667897933772
+    },
+    "People/Movie/MovieList.md": {
+      "noteCount": 1,
+      "wordCount": 203,
+      "pageCount": 0.6766666666666666,
+      "characterCount": 2337,
+      "nonWhitespaceCharacterCount": 2033,
+      "createdDate": 1658195328084,
+      "modifiedDate": 1664349573396
+    },
+    "People/Movie/Movie database.md": {
+      "noteCount": 1,
+      "wordCount": 423,
+      "pageCount": 1.41,
+      "characterCount": 4919,
+      "nonWhitespaceCharacterCount": 3575,
+      "createdDate": 1668010972035,
+      "modifiedDate": 1667904274482
+    },
+    "People/Movie/Movie.md": {
+      "noteCount": 1,
+      "wordCount": 7,
+      "pageCount": 0.023333333333333334,
+      "characterCount": 58,
+      "nonWhitespaceCharacterCount": 47,
+      "createdDate": 1663246755138,
+      "modifiedDate": 1664347416362
+    },
+    "People/Book/《跟动物交换身体》.md": {
+      "noteCount": 1,
+      "wordCount": 113,
+      "pageCount": 0.37666666666666665,
+      "characterCount": 2033,
+      "nonWhitespaceCharacterCount": 1703,
+      "createdDate": 1658195328084,
+      "modifiedDate": 1667372742864
+    },
+    "People/Book/《网络是怎样连接的》.md": {
+      "noteCount": 1,
+      "wordCount": 121,
+      "pageCount": 0.4033333333333333,
+      "characterCount": 1795,
+      "nonWhitespaceCharacterCount": 1460,
+      "createdDate": 1658195328084,
+      "modifiedDate": 1657687129465
+    },
+    "People/Book/《棉花帝国》.md": {
+      "noteCount": 1,
+      "wordCount": 190,
+      "pageCount": 0.6333333333333333,
+      "characterCount": 3620,
+      "nonWhitespaceCharacterCount": 3215,
+      "createdDate": 1658195328084,
+      "modifiedDate": 1665457176900
+    },
+    "People/Book/《枪炮、病菌与钢铁》.md": {
+      "noteCount": 1,
+      "wordCount": 126,
+      "pageCount": 0.42,
+      "characterCount": 3859,
+      "nonWhitespaceCharacterCount": 3518,
+      "createdDate": 1658195328084,
+      "modifiedDate": 1657687122698
+    },
+    "People/Book/《最简单的图形与最复杂的信息》.md": {
+      "noteCount": 1,
+      "wordCount": 127,
+      "pageCount": 0.42333333333333334,
+      "characterCount": 2048,
+      "nonWhitespaceCharacterCount": 1706,
+      "createdDate": 1658195328084,
+      "modifiedDate": 1656294216711
+    },
+    "People/Book/《孤独与陪伴》.md": {
+      "noteCount": 1,
+      "wordCount": 107,
+      "pageCount": 0.3566666666666667,
+      "characterCount": 1899,
+      "nonWhitespaceCharacterCount": 1576,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1667061059160
+    },
+    "People/Book/《写给全人类的数学魔法书》.md": {
+      "noteCount": 1,
+      "wordCount": 105,
+      "pageCount": 0.35,
+      "characterCount": 1550,
+      "nonWhitespaceCharacterCount": 1234,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1667061053917
+    },
+    "People/Book/《Freedom 4》.md": {
+      "noteCount": 1,
+      "wordCount": 98,
+      "pageCount": 0.32666666666666666,
+      "characterCount": 1006,
+      "nonWhitespaceCharacterCount": 685,
+      "createdDate": 1668010971768,
+      "modifiedDate": 1663245333169
+    },
+    "People/Book/《DK博物大百科》.md": {
+      "noteCount": 1,
+      "wordCount": 149,
+      "pageCount": 0.49666666666666665,
+      "characterCount": 2963,
+      "nonWhitespaceCharacterCount": 2571,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1662995045729
+    },
+    "People/Book/《DK儿童图解百科全书·化学元素》.md": {
+      "noteCount": 1,
+      "wordCount": 128,
+      "pageCount": 0.4266666666666667,
+      "characterCount": 1724,
+      "nonWhitespaceCharacterCount": 1378,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1656044372676
+    },
+    "People/Book/《DK万物透视图解百科》.md": {
+      "noteCount": 1,
+      "wordCount": 100,
+      "pageCount": 0.3333333333333333,
+      "characterCount": 1662,
+      "nonWhitespaceCharacterCount": 1352,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1662995502570
+    },
+    "People/Book/BookList.md": {
+      "noteCount": 1,
+      "wordCount": 203,
+      "pageCount": 0.6766666666666666,
+      "characterCount": 2282,
+      "nonWhitespaceCharacterCount": 1976,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1662995227498
+    },
+    "People/Book/Book database.md": {
+      "noteCount": 1,
+      "wordCount": 393,
+      "pageCount": 1.31,
+      "characterCount": 4593,
+      "nonWhitespaceCharacterCount": 3364,
+      "createdDate": 1668010971743,
+      "modifiedDate": 1667894300523
+    },
+    "Obsidian-learning/var complete/!dict.md": {
+      "noteCount": 1,
+      "wordCount": 148,
+      "pageCount": 0.49333333333333335,
+      "characterCount": 1449,
+      "nonWhitespaceCharacterCount": 1233,
+      "createdDate": 1658195327991,
+      "modifiedDate": 1658195327991
+    },
+    "Obsidian-learning/StartPage/Startpage.md": {
+      "noteCount": 1,
+      "wordCount": 4,
+      "pageCount": 0.013333333333333334,
+      "characterCount": 272,
+      "nonWhitespaceCharacterCount": 264,
+      "createdDate": 1658195327959,
+      "modifiedDate": 1667485246825
+    },
+    "Obsidian-example/高级语法/Obsidian-样式.md": {
+      "noteCount": 1,
+      "wordCount": 566,
+      "pageCount": 1.8866666666666667,
+      "characterCount": 8372,
+      "nonWhitespaceCharacterCount": 7497,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1668008978361
+    },
+    "Obsidian-example/高级语法/DataView syntax.md": {
+      "noteCount": 1,
+      "wordCount": 909,
+      "pageCount": 3.03,
+      "characterCount": 8021,
+      "nonWhitespaceCharacterCount": 6682,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1668008963671
+    },
+    "Obsidian-example/优化/加速.md": {
+      "noteCount": 1,
+      "wordCount": 151,
+      "pageCount": 0.5033333333333333,
+      "characterCount": 4989,
+      "nonWhitespaceCharacterCount": 4665,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1658195328069
+    },
+    "Obsidian-example/Tables 表格样式/Tables.md": {
+      "noteCount": 1,
+      "wordCount": 14,
+      "pageCount": 0.04666666666666667,
+      "characterCount": 193,
+      "nonWhitespaceCharacterCount": 165,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1658195328069
+    },
+    "Obsidian-example/Tables 表格样式/Extend table.md": {
+      "noteCount": 1,
+      "wordCount": 986,
+      "pageCount": 3.2866666666666666,
+      "characterCount": 11181,
+      "nonWhitespaceCharacterCount": 9401,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1658195328069
+    },
+    "Obsidian-example/Tables 表格样式/06 - Yellow cab.md": {
+      "noteCount": 1,
+      "wordCount": 128,
+      "pageCount": 0.4266666666666667,
+      "characterCount": 714,
+      "nonWhitespaceCharacterCount": 480,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1658195328069
+    },
+    "Obsidian-example/Tables 表格样式/05 - White red.md": {
+      "noteCount": 1,
+      "wordCount": 128,
+      "pageCount": 0.4266666666666667,
+      "characterCount": 694,
+      "nonWhitespaceCharacterCount": 478,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1665753782240
+    },
+    "Obsidian-example/Tables 表格样式/05 - White red rounded.md": {
+      "noteCount": 1,
+      "wordCount": 130,
+      "pageCount": 0.43333333333333335,
+      "characterCount": 738,
+      "nonWhitespaceCharacterCount": 502,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1658195328069
+    },
+    "Obsidian-example/Tables 表格样式/04 - Latex like.md": {
+      "noteCount": 1,
+      "wordCount": 138,
+      "pageCount": 0.46,
+      "characterCount": 799,
+      "nonWhitespaceCharacterCount": 550,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1658195328069
+    },
+    "Obsidian-example/Tables 表格样式/03 - FlatBlue.md": {
+      "noteCount": 1,
+      "wordCount": 128,
+      "pageCount": 0.4266666666666667,
+      "characterCount": 712,
+      "nonWhitespaceCharacterCount": 478,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1658195328069
+    },
+    "Obsidian-example/Tables 表格样式/02 - PurpleRed.md": {
+      "noteCount": 1,
+      "wordCount": 128,
+      "pageCount": 0.4266666666666667,
+      "characterCount": 722,
+      "nonWhitespaceCharacterCount": 488,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1658195328069
+    },
+    "Obsidian-example/Tables 表格样式/01 - Default Table.md": {
+      "noteCount": 1,
+      "wordCount": 126,
+      "pageCount": 0.42,
+      "characterCount": 697,
+      "nonWhitespaceCharacterCount": 464,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1658195328069
+    },
+    "Obsidian-example/Readme英文版.md": {
+      "noteCount": 1,
+      "wordCount": 491,
+      "pageCount": 1.6366666666666667,
+      "characterCount": 5284,
+      "nonWhitespaceCharacterCount": 4654,
+      "createdDate": 1658195328053,
+      "modifiedDate": 1664529260988
+    },
+    "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md": {
+      "noteCount": 1,
+      "wordCount": 2936,
+      "pageCount": 9.786666666666667,
+      "characterCount": 24111,
+      "nonWhitespaceCharacterCount": 19301,
+      "createdDate": 1668008957730,
+      "modifiedDate": 1668010228081
+    },
+    "Obsidian-example/Obsidian使用教程/Obsidian 教程——代码域.md": {
+      "noteCount": 1,
+      "wordCount": 721,
+      "pageCount": 2.4033333333333333,
+      "characterCount": 4405,
+      "nonWhitespaceCharacterCount": 3223,
+      "createdDate": 1668010135824,
+      "modifiedDate": 1668010214850
+    },
+    "Obsidian-example/Obsidian使用教程/Obsidian 教程——mermaid.md": {
+      "noteCount": 1,
+      "wordCount": 673,
+      "pageCount": 2.243333333333333,
+      "characterCount": 6551,
+      "nonWhitespaceCharacterCount": 3963,
+      "createdDate": 1668009950009,
+      "modifiedDate": 1668010041253
+    },
+    "Obsidian-example/Obsidian使用教程/Obsidian 教程——Latex.md": {
+      "noteCount": 1,
+      "wordCount": 228,
+      "pageCount": 0.76,
+      "characterCount": 1819,
+      "nonWhitespaceCharacterCount": 1471,
+      "createdDate": 1668009874016,
+      "modifiedDate": 1668009974245
+    },
+    "Obsidian-example/Example and showcase/11、乐谱.md": {
+      "noteCount": 1,
+      "wordCount": 121,
+      "pageCount": 0.4033333333333333,
+      "characterCount": 2270,
+      "nonWhitespaceCharacterCount": 2088,
+      "createdDate": 1658195328053,
+      "modifiedDate": 1658195328053
+    },
+    "Obsidian-example/Example and showcase/10、数学公式.md": {
+      "noteCount": 1,
+      "wordCount": 68,
+      "pageCount": 0.22666666666666666,
+      "characterCount": 895,
+      "nonWhitespaceCharacterCount": 749,
+      "createdDate": 1658195328053,
+      "modifiedDate": 1658195328053
+    },
+    "Obsidian-example/Example and showcase/09、代码块.md": {
+      "noteCount": 1,
+      "wordCount": 63,
+      "pageCount": 0.21,
+      "characterCount": 943,
+      "nonWhitespaceCharacterCount": 811,
+      "createdDate": 1658195328053,
+      "modifiedDate": 1658195328053
+    },
+    "Obsidian-example/Example and showcase/08、Timeline 记录.md": {
+      "noteCount": 1,
+      "wordCount": 152,
+      "pageCount": 0.5066666666666667,
+      "characterCount": 1817,
+      "nonWhitespaceCharacterCount": 1538,
+      "createdDate": 1658195328053,
+      "modifiedDate": 1658195328053
+    },
+    "Obsidian-example/Example and showcase/07、脑图和流程图（Mermaid）.md": {
+      "noteCount": 1,
+      "wordCount": 731,
+      "pageCount": 2.4366666666666665,
+      "characterCount": 6263,
+      "nonWhitespaceCharacterCount": 4747,
+      "createdDate": 1663246755137,
+      "modifiedDate": 1663246755137
+    },
+    "Obsidian-example/Example and showcase/06、图片和表格嵌套.md": {
+      "noteCount": 1,
+      "wordCount": 50,
+      "pageCount": 0.16666666666666666,
+      "characterCount": 563,
+      "nonWhitespaceCharacterCount": 292,
+      "createdDate": 1658195328053,
+      "modifiedDate": 1658195328053
+    },
+    "Obsidian-example/Example and showcase/05、图表.md": {
+      "noteCount": 1,
+      "wordCount": 0,
+      "pageCount": 0,
+      "characterCount": 0,
+      "nonWhitespaceCharacterCount": 0,
+      "createdDate": 1658195328053,
+      "modifiedDate": 1658195328053
+    },
+    "Obsidian-example/Example and showcase/04、环绕布局、缩进效果示例，Wiki效果.md": {
+      "noteCount": 1,
+      "wordCount": 279,
+      "pageCount": 0.93,
+      "characterCount": 6759,
+      "nonWhitespaceCharacterCount": 6381,
+      "createdDate": 1658195328053,
+      "modifiedDate": 1658195328053
+    },
+    "Obsidian-example/Example and showcase/03、提示框(callout)样式展示.md": {
+      "noteCount": 1,
+      "wordCount": 889,
+      "pageCount": 2.9633333333333334,
+      "characterCount": 7683,
+      "nonWhitespaceCharacterCount": 5440,
+      "createdDate": 1658195328053,
+      "modifiedDate": 1658195328053
+    },
+    "Obsidian-example/Example and showcase/02、表格（Table）.md": {
+      "noteCount": 1,
+      "wordCount": 139,
+      "pageCount": 0.4633333333333333,
+      "characterCount": 1137,
+      "nonWhitespaceCharacterCount": 606,
+      "createdDate": 1658195328053,
+      "modifiedDate": 1658195328053
+    },
+    "Obsidian-example/Example and showcase/02、笔记多栏样式.md": {
+      "noteCount": 1,
+      "wordCount": 182,
+      "pageCount": 0.6066666666666667,
+      "characterCount": 1109,
+      "nonWhitespaceCharacterCount": 905,
+      "createdDate": 1658195328053,
+      "modifiedDate": 1658848208430
+    },
+    "Obsidian-example/Example and showcase/01、基本语法.md": {
+      "noteCount": 1,
+      "wordCount": 1061,
+      "pageCount": 3.5366666666666666,
+      "characterCount": 7889,
+      "nonWhitespaceCharacterCount": 6455,
+      "createdDate": 1658195328053,
+      "modifiedDate": 1660827391323
+    },
+    "Knowledge/Book-Note/读书笔记-麦肯锡.md": {
+      "noteCount": 1,
+      "wordCount": 201,
+      "pageCount": 0.67,
+      "characterCount": 5000,
+      "nonWhitespaceCharacterCount": 4770,
+      "createdDate": 1658195327959,
+      "modifiedDate": 1662094277199
+    },
+    "Knowledge/Book-Note/读书笔记-网络是怎么连接的 How to connect Internet.md": {
+      "noteCount": 1,
+      "wordCount": 902,
+      "pageCount": 3.006666666666667,
+      "characterCount": 18389,
+      "nonWhitespaceCharacterCount": 16941,
+      "createdDate": 1658195327959,
+      "modifiedDate": 1658195327959
+    },
+    "Knowledge/Book-Note/读书笔记-数据中台 让数据用起来.md": {
+      "noteCount": 1,
+      "wordCount": 40,
+      "pageCount": 0.13333333333333333,
+      "characterCount": 5344,
+      "nonWhitespaceCharacterCount": 5247,
+      "createdDate": 1658195327959,
+      "modifiedDate": 1658195327959
+    },
+    "Knowledge/Book-Note/读书笔记-平台革命 改变世界的商业模式.md": {
+      "noteCount": 1,
+      "wordCount": 32,
+      "pageCount": 0.10666666666666667,
+      "characterCount": 1310,
+      "nonWhitespaceCharacterCount": 1229,
+      "createdDate": 1663246755136,
+      "modifiedDate": 1663246755136
+    },
+    "Knowledge/Book-Note/读书笔记-圖解商業模式2.0.md": {
+      "noteCount": 1,
+      "wordCount": 12,
+      "pageCount": 0.04,
+      "characterCount": 224,
+      "nonWhitespaceCharacterCount": 194,
+      "createdDate": 1658195327959,
+      "modifiedDate": 1658195327959
+    },
+    "Knowledge/Book-Note/读书笔记-OKR使用手册.md": {
+      "noteCount": 1,
+      "wordCount": 102,
+      "pageCount": 0.34,
+      "characterCount": 12614,
+      "nonWhitespaceCharacterCount": 12467,
+      "createdDate": 1658195327959,
+      "modifiedDate": 1662094430340
+    },
+    "Knowledge/Book-Note/Readingresponse List.md": {
+      "noteCount": 1,
+      "wordCount": 82,
+      "pageCount": 0.2733333333333333,
+      "characterCount": 1443,
+      "nonWhitespaceCharacterCount": 1303,
+      "createdDate": 1658195327913,
+      "modifiedDate": 1664349526499
+    },
+    "Knowledge/Book-Note/Book-Note.md": {
+      "noteCount": 1,
+      "wordCount": 7,
+      "pageCount": 0.023333333333333334,
+      "characterCount": 62,
+      "nonWhitespaceCharacterCount": 51,
+      "createdDate": 1658195327913,
+      "modifiedDate": 1664349532264
+    },
+    "booknote/books-data/(annots)平台革命  改变世界的商业模式_14344952.pdf/(annots)平台革命  改变世界的商业模式_14344952.pdf.md": {
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 95,
+      "nonWhitespaceCharacterCount": 76,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1658195328100
+    }
+  }
+}

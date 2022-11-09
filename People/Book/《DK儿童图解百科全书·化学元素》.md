@@ -11,7 +11,7 @@ banner: "https://img1.doubanio.com/view/subject/l/public/s33467769.jpg"
 banner_icon: 📖
 publish: 中国大百科全书出版社
 publishyear: 2019-7
-progress: ⭐⭐⭐
+progress: ⭐⭐⭐⭐
 status: 想看
 pagecount: 208
 pageprogress: 

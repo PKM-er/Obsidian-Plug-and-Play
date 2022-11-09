@@ -37,6 +37,7 @@
   "forceWrap": false,
   "pageTransclusionCharLimit": 200,
   "wordWrappingDefault": 0,
+  "removeTransclusionQuoteSigns": true,
   "iframelyAllowed": true,
   "pngExportScale": 1,
   "exportWithTheme": true,

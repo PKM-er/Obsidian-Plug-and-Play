@@ -1,6 +1,5 @@
 oz-image-plugin
 obsidian-markmind
-obsidian-enhancing-mindmap
 tag-wrangler
 obsidian-core-search-assistant-plugin
 obsidian-copy-block-link
@@ -8,4 +7,3 @@ various-complements
 obsidian-sortable
 obsidian-local-images
 obsidian-custom-frames
-quick-explorer

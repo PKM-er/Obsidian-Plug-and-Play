@@ -53,8 +53,12 @@
   "obsidian42-brat",
   "editing-toolbar",
   "obsidian-file-info-plugin",
-  "file-explorer-note-count",
   "pane-relief",
   "lapel",
-  "ProxyGithub"
+  "chronology",
+  "obsidian-colorful-tag",
+  "dbfolder",
+  "obsidian-emoji-toolbar",
+  "obsidian-view-mode-by-frontmatter",
+  "novel-word-count"
 ]

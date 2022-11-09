@@ -1,12 +1,12 @@
 
 ---
-cssclass: "cards"
+cssclass: cards
 usage: 对dataview表格渲染成卡片视图
-banner: "![[BookList_image_1.gif]]"
+banner: "![[R-C.gif]]"
 obsidianUIMode: preview
-banner_icon: 📖
 banner_x: 0.5
 banner_y: 0.5
+banner_icon: 📖
 updated: 2022-03-15 14:19
 ---
 
