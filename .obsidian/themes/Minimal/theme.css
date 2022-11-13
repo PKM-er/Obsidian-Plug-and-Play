@@ -9178,12 +9178,6 @@ span[class^=cm-list] .day-time-8 {
 /* ================================== */
 /* ============ 测试代码 ============ */
 /* ================================== */
-
-/*ToolTips 隐藏*/
-.tooltip {
-    display: none !important;
-}
-
 /* 's' for question/more info task ('- [s]') */
 .markdown-source-view input[data-task="s"].task-list-item-checkbox:checked::after {
     content: "";
