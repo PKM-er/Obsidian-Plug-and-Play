@@ -47,14 +47,14 @@ let include = [
 
 // 匹配URL
 function matchUrl(e) {
-	console.log("开始访问：" + JSON.stringify(e))
+	//console.log("开始访问：" + JSON.stringify(e))
     for (var key in include) {
         let item = include[key]
-		console.log(key)
-		console.log(item)
+		//console.log(key)
+		//console.log(item)
         if (e && e.url && item.match(e.url)) {
             e.url = item.to(e.url)
-            console.log("要访问的地址：" + e.url)
+            //console.log("要访问的地址：" + e.url)
             if (!e.headers) {
                 e.headers = {}
             }
@@ -151,7 +151,7 @@ function apProxy() {
             if (!matchUrl(e)) {
                 return ap(e);
             }
-            new window.Notice("正在通过 ProxyGithub 来代理访问社区插件！")
+            //new window.Notice("正在通过代理访问社区插件！")
             return proxy(e)
         }
     }
@@ -165,16 +165,16 @@ function apProxy() {
     var ap;
     this.regedit = function() {
         ap = window.Capacitor.registerPlugin("App").request;
-        console.log(ap)
+        //console.log(ap)
         window.Capacitor.registerPlugin("App").request = function (e){
             matchUrl(e);
-            new window.Notice("正在通过 ProxyGithub 来代理访问社区插件！")
+            //new window.Notice("正在通过 ProxyGithub 来代理访问社区插件！")
             ap(e);
             // if (matchUrl(e)) {
             //     return ap(e);
             // }
         }
-        console.log("apc注册成功")
+        //console.log("apc注册成功")
     }
     this.unRegedit = function() {
         window.window.Capacitor.registerPlugin("App").request = ap;
@@ -186,17 +186,17 @@ function apElectron() {
     this.regedit = function() {
         ap = window.require("electron").ipcRenderer.send;
 		debugger
-        console.log(ap)
+        //console.log(ap)
         window.require("electron").ipcRenderer.send = function (a,b,e,...rest){
-			debugger
+			//debugger
             matchUrl(e);
-            new window.Notice("正在通过 ProxyGithub 来代理访问社区插件！")
+            //new window.Notice("正在通过 ProxyGithub 来代理访问社区插件！")
             ap(a,b,e, ...rest);
             // if (matchUrl(e)) {
             //     return ap(e);
             // }
         }
-        console.log("apc注册成功")
+        //console.log("apc注册成功")
     }
     this.unRegedit = function() {
         window.require("electron").ipcRenderer.send = ap;
@@ -209,7 +209,7 @@ function apElectron() {
 class ProxyGithubSettingTab extends PluginSettingTab {
 
     constructor(app, plugin) {
-        console.log("加载了tab~~~~~~~~~~~~~~~~~~~~~~")
+        //console.log("加载了tab~~~~~~~~~~~~~~~~~~~~~~")
         super(app, plugin)
         this.plugin = plugin
     }
