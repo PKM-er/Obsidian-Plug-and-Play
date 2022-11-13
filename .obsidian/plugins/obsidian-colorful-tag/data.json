@@ -2,11 +2,12 @@
   "firstTime": false,
   "global_enable": {
     "border": true,
-    "font-weight": true
+    "font-weight": true,
+    "prefix": false
   },
   "global": {
-    "border": "none",
-    "font-weight": "900"
+    "font-weight": "900",
+    "border": "1"
   },
   "attrList": [
     "radius",
@@ -23,7 +24,7 @@
   "styleList": [
     {
       "radius": "",
-      "prefix": "",
+      "prefix": "💼",
       "suffix": "",
       "background-color": "#1fd56d",
       "text-color": "#ffffff",
@@ -35,7 +36,7 @@
     },
     {
       "radius": "",
-      "prefix": "",
+      "prefix": "💬",
       "suffix": "",
       "background-color": "#1fd56d",
       "text-color": "#ffffff",
@@ -47,7 +48,7 @@
     },
     {
       "radius": "",
-      "prefix": "",
+      "prefix": "📧",
       "suffix": "",
       "background-color": "#0077f8",
       "text-color": "#ffffff",
@@ -59,7 +60,7 @@
     },
     {
       "radius": "",
-      "prefix": "",
+      "prefix": "🛒",
       "suffix": "",
       "background-color": "#ef7311",
       "text-color": "#ffffff",
@@ -71,7 +72,7 @@
     },
     {
       "radius": "",
-      "prefix": "",
+      "prefix": "📝",
       "suffix": "",
       "background-color": "#0077f8",
       "text-color": "#ffffff",
@@ -83,7 +84,7 @@
     },
     {
       "radius": "",
-      "prefix": "",
+      "prefix": "✴️",
       "suffix": "",
       "background-color": "red",
       "text-color": "#ffffff",
@@ -91,6 +92,78 @@
       "border": "",
       "font-weight": "",
       "tag": "important",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "🤙",
+      "suffix": "",
+      "background-color": "#1fd56d",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "call",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "🍽️",
+      "suffix": "",
+      "background-color": "#0077f8",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "dine",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "📔",
+      "suffix": "",
+      "background-color": "",
+      "text-color": "",
+      "text-size": "",
+      "border": "1",
+      "font-weight": "",
+      "tag": "book",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "🎞️",
+      "suffix": "",
+      "background-color": "",
+      "text-color": "",
+      "text-size": "",
+      "border": "1",
+      "font-weight": "",
+      "tag": "movie",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "🔗",
+      "suffix": "",
+      "background-color": "",
+      "text-color": "",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "URL",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "🗃️",
+      "suffix": "",
+      "background-color": "",
+      "text-color": "",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "archive",
       "enable": true
     }
   ],

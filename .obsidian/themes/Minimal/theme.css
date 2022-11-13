@@ -682,6 +682,7 @@ body:not(.minimal-status-off) .status-bar{
     text-align:center;
     background-color:var(--background-modifier-hover)!important
 }
+/*tab-stack：标签上标题的不同对齐方式*/
 .tab-stack-top-flipped{
     --tab-stacked-text-transform:rotate(180deg);
     --tab-stacked-text-align:right
@@ -702,6 +703,7 @@ body:not(.minimal-status-off) .status-bar{
 .view-header-title,.view-header-title-parent{
     text-overflow:ellipsis
 }
+/*============================================*/
 .view-header-title-container:not(.mod-at-end):after{
     display:none
 }
@@ -756,12 +758,6 @@ body.window-title-off .titlebar-text{
 body.is-focused{
     --titlebar-background-focused:var(--background-secondary)
 }
-					  
-													
- 
-																	 
-														
- 
 .is-hidden-frameless:not(.colorful-frame) .mod-left-split .mod-top .workspace-tab-header-container{
     --tab-container-background:var(--background-secondary)
 }
@@ -792,9 +788,7 @@ button.mod-warning:hover{
     max-width:var(--max-width);
     width:var(--line-width-adaptive)
 }
-											   
-								   
- 
+
 .is-mobile .CodeMirror-foldgutter-open:after,.is-mobile span[title="Fold line"]:after{
     transform:translateX(-2px)!important
 }
@@ -5439,14 +5433,13 @@ settings:
 		default-dark: '#'
     -
 		id: cm-editor
-		title: 编辑器
+		title: Editor 编辑器
 		type: heading
 		level: 2
 		collapsed: true
     -
 		id: cm-editor-backgroud-color
 		title: 编辑器背景
-		level: 3
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -6361,9 +6354,6 @@ settings:
 		default: tab-stack-top
 		options:
 			-
-				label: Top
-				value: tab-stack-top
-			-
 				label: Top flipped
 				value: tab-stack-top-flipped
 			-
@@ -6378,6 +6368,9 @@ settings:
 			-
 				label: Center flipped
 				value: tab-stack-center-flipped
+			-
+				label: Top vertical
+				value: tab-stack-top-verticald
 	-
 		id: tags
 		title: Tags
@@ -6445,6 +6438,40 @@ settings:
 		default-light: '#'
 		default-dark: '#'
 	-
+		id: tag-line-height
+		title: Tag line height
+		type: variable-number
+		description: Line height of the tag in body
+		default: 2.2
+		format: em
+    -
+		id: tag-embed-line-height
+		title: Tag line height in embed
+		type: variable-number
+		description: Line height of the tag in embed
+		default: 2.2
+		format: em
+    -
+		id: goblesearch
+		title: Search
+		type: heading
+		level: 2
+		collapsed: true
+    -
+		id: search-result-txcolor
+		title: Search results text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    -
+		id: search-result-bgcolor
+		title: Search results background color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    -
 		id: text
 		title: Text
 		type: heading
@@ -7259,7 +7286,7 @@ opacity: .5;
     background-color: var(--background-secondary);
 }
 /*============ 编辑代码块按钮调整 ============*/
-.is-live-preview.is-readable-line-width .cm-embed-block>.edit-block-button {
+.markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.edit-block-button {
     width: 60px!important;
     padding-left: 9px!important;
     transform: none!important 
@@ -7597,7 +7624,7 @@ opacity: .5;
     font-size: 13px;
 }
 /*End*/
-/* callout伪看板效果*/
+/* callout伪看板效果 */
 .callout.callout[data-callout*="kanban"] {
     --callout-color: var(--text-normal);
     --callout-icon: layout-dashboard;
@@ -7776,7 +7803,7 @@ opacity: .5;
     padding: 6px;
     border-radius: 4px;
     pointer-events: initial;
-    transition: ease .2s background;
+    transition: ease .2s;
     font-size: 4em;
 }
 /*End*/
@@ -8129,7 +8156,7 @@ opacity: 1.24;
 /*End*/
 
 /* ======================================== */
-/* =========== 导航栏文件目录区域 ========== */
+/* =========== 文件管理器区域 ========== */
 /* ======================================== */
 /*导航栏的高度优化*/
 .nav-header {
@@ -8145,7 +8172,7 @@ opacity: 1.24;
 .mod-windows .nav-file-title {
     width:100% !important;
 }
-/*文件目录树中，文件夹名的滚动动画*/
+/*文件管理器中，文件夹名的滚动动画*/
 .nav-files-container {
     overflow-x: auto;
 }
@@ -8160,7 +8187,7 @@ opacity: 1.24;
     animation: 3s linear 1s infinite alternate;
     -webkit-animation: 3s linear 1s infinite alternate;
 }
-/*文件目录树中，文件名的滚动动画*/
+/*文件管理器中，文件名的滚动动画*/
 .nav-file-title-content:not(.is-being-renamed) {
  	min-width: 200px;
     white-space: nowrap;
@@ -8207,39 +8234,19 @@ opacity: 1.24;
     }
 }
 /*End*/
-/*文件目录树中，文件夹更改名字时候的样式*/
+/*文件管理器中，文件夹更改名字时候的样式*/
 .nav-file-title-content .is-being-renamed {
     color:black !important;
 }
 /*End*/
-/*优化目录树的展开收起箭头*/
-/*文件目录树，文件夹的未展开（收起）箭头*/
-.nav-folder.is-collapsed .nav-folder-title::before {
-    transform: translateX(1px) translateY(0.4em) rotate(0deg);
-}
-/*End*/
-/*文件目录树中，文件夹的展开箭头*/
-.nav-folder .nav-folder-title::before {
-    content: "";
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZklEQVRIie3NMRKAMAhE0eChMWXSOVzYEhv7sMvgWGRr+K+1vd9PVa/M/7E6EJEzgyyBLBICMkgYYBEIYBAYQBEKQBAaeHeXAe4+zGyWANE4BSBxGEDjEMDEwwAbD633PkrCe5/tAV92N0rtyZlOAAAAAElFTkSuQmCC);
-    background-size: 13px 13px;
-    background-position: center;
-    transform: translate(0, 2px);
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    margin-top:1.5px;
-    transform: translateX(-1px) translateY(0.35em) rotate(90deg);
-}
-/*End*/
-/*文件目录树中，优化文件夹名自适应文本截断*/
+
+/*文件管理器中，优化文件夹名自适应文本截断*/
  .nav-folder .nav-folder-title-content::before{
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 /*End*/
-/*文件目录树中，文件夹样式*/
+/*文件管理器中，文件夹样式*/
 .nav-folder-children .nav-folder-title-content::before {
     content: '';
     background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAhklEQVRIie2PwQ2DMAxFvzMHXYhBskKSE+WWjMAkHajMkc8pVSoBUkQQF7+TLdv/yYDyNFKKEMKYc14ADLuLInOM8d0qMKU4CwcAkpP3vlnw+8A5x9bjA1YANqX0AaoPOjKQXEpzhwAi8rpVUKMCFajgX7D2CiX53RPYenAl3Bhjr+Yo/dgAr4QoWjEjKLYAAAAASUVORK5CYII=);
@@ -8267,96 +8274,29 @@ opacity: 1.24;
     transform: translateX(1px) translateY(5px) rotate(90deg);
 }
 /*End*/
-/*文件目录树，文件夹被选中后的焦点样式*/
+/*文件管理器中，文件夹被选中后的焦点样式*/
  .nav-folder .nav-folder-children .nav-file.has-focus .nav-file-title.is-active {
     background-color: var(--icon-color-hover2) !important;
     color:white;
 }
 /*End*/
-/*文件目录树，优化文件目录名计数器位置*/
+/*文件管理器中，优化文件目录名计数器位置*/
  .nav-folder-title::after {
     text-align: right;
 }
 /*End*/
-/*文件目录树，鼠标hover事件的样式*/
+/*文件管理器中，鼠标hover事件的样式*/
  .nav-file-title.is-active, .nav-folder-title.is-active, body:not(.is-grabbing) .nav-file-title:hover, body:not(.is-grabbing) .nav-folder-title:hover {
     background-color: var(--item-side);
     color: white;
 }
 /*End*/
-/*文件目录树，文件选中的样式*/
+/*文件管理器中，文件选中的样式*/
 .nav-file .nav-file-title.is-active {
     background-color: var(--item-side) !important;
     color: white !important;
 }
-/*---- nav arrows adjust location ----*/
-.nav-folder-collapse-indicator {
-    position: absolute;
-    left: 21px;
-    top: 3px;
-    transition: transform 20ms linear 0s;
-}
-.nav-folder-collapse-indicator svg {
-    display: none;
-    color: var(--accent-strong);
-    height: 7px;
-    width: 7px;
-}
-/*search icon 1*/
- .backlink-pane .search-result-container .collapse-icon {
-    left: 0px;
-    top: 7px;
-    margin-top: 0px;
-    transition: transform 20ms linear 0s;
-}
-.backlink-pane .search-result-container .collapse-icon::before {
-    content : "↓";
-    font-size: 14px;
-    font-family: 'Inter';
-    font-weight: bold;
-    color: var(--text-accent);
-    transition: transform 10ms linear 0s;
-}
-.backlink-pane .search-result-container .collapse-icon svg {
-    display: none;
-    color:var(--accent-strong);
-    height:7px;
-    width:7px;
-}
-.backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon {
-    transform: translateX(1px) translateY(1px) rotate(-90deg);
-    opacity: 0.5;
-}
-/* search panel icons */
-.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon {
-    left: 0px;
-    top: 7px;
-    margin-top: 0px;
-    transition: transform 20ms linear 0s;
-}
-.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon::before {
-    content : "↓";
-    font-size: 14px;
-    margin-left: 0px;
-    font-weight: bold;
-    font-family: 'Inter';
-    color: var(--text-accent);
-    transition: transform 10ms linear 0s;
-}
-.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon svg {
-    display: none;
-    color:var(--accent-strong);
-    height:7px;
-    width:7px;
-}
-.workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon {
-    transform: translateX(1px) translateY(1px) rotate(-90deg);
-	opacity: 0.5;
-}
-.workspace-tab-header-inner .workspace-tab-header-inner-icon {
-    box-sizing:content-box;
-    font-size:1.3em;
-}
+
 /*顶部导航栏的自适应布局*/
 .workspace-tabs .workspace-tab-header-container .workspace-tab-container-inner {
     flex-wrap:wrap;
@@ -8364,15 +8304,6 @@ opacity: 1.24;
     display: flex;
 }
 /*End*/
-/*顶部导航栏下边界线*/
-/*
-.workspace-sidedock-empty-state .workspace-tabs {
-    border-bottom:1px solid var(--background-modifier-border2);
-}
-.workspace-tab-header-container {
-    border-bottom:1px solid var(--background-modifier-border2);
-}
-*/
 .workspace-tab-header:hover {
     color: var(--text-muted);
     text-align: center;
@@ -8395,13 +8326,13 @@ opacity: 1.24;
     border-radius: var(--radius-m) 
 }
 /*End*/
-/*文件导航栏目录树缩进线样式*/
+/*文件管理器中，缩进线样式*/
 body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     border-left: 1px solid var(--background-modifier-border2);
     margin-left:1.6em;
 }
 /*End*/
-/*为文件导航栏目录树添加点击文件后条目颜色后缀，和控制点击后的颜色*/
+/*文件管理器中，添加点击文件后条目颜色后缀，和控制点击后的颜色*/
 .nav-file-title.is-being-dragged, .nav-file-title.is-active, body:not(.is-grabbing) .nav-file-title.is-active:hover, .nav-folder-title.is-being-dragged {
     border-right: 3px solid;
     border-right-color: var(--item-side);
@@ -8556,13 +8487,21 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 }
 /*End*/
 /*tabs 标签栏，stack模式下文字自上到下排列*/
-.workspace .mod-root .workspace-tabs.mod-stacked .workspace-tab-container .workspace-tab-header .workspace-tab-header-inner-title {
+.tab-stack-top-verticald .mod-stacked .workspace-tab-container .workspace-tab-header .workspace-tab-header-inner-title {
     writing-mode: vertical-rl;
     text-orientation: upright;
 }
 /* ================================== */
-/* ======== 编辑视图和正文控制 ======== */
+/* ======== 文件标题和路径栏 ======== */
 /* ================================== */
+/*文件标题栏的下边框线*/
+.view-header {
+    border-bottom: 1.5px solid var(--ui2) !important;
+}
+/*End*/
+/* ================================================== */
+/* ============= 编辑视图和正文控制 ================= */
+/* ================================================= */
 /*预览模式下，无序列表的样式*/
 .markdown-preview-view ul>li:not(.task-list-item)::marker {
     font-size: .9em;
@@ -8613,7 +8552,7 @@ ol li ol::before {
     color:white;
 }
 /*End*/
-/* 优化tooltip的样式 */
+/* 优化 tooltip 样式 */
 .tooltip {
     font-size: var(--font-adaptive-smaller);
     line-height: 1.3;
@@ -8643,12 +8582,8 @@ ol li ol::before {
     border-left: 5px solid gray;
 }
 /*End*/
+
 /* ================= 正文:标题 =============== */
-/*文件标题栏的下边框线*/
-.view-header {
-    border-bottom: 1.5px solid var(--ui2) !important;
-}
-/*End*/
 /*正文标题（headings）因为加了链接导致颜色变化*/
 .is-live-preview.cm-s-obsidian .cm-link {
     color: var(--h2-color);
@@ -8656,39 +8591,32 @@ ol li ol::before {
     text-decoration-color: var(--h2-color);
 }
 /*End*/
-/*======= 正文标题（headings）标题下面分割线的样式控制 =======*/
-/*编辑模式下：标题下方线的粗细和颜色样式，分割线距离标题和紧跟标题的内容块的距离*/
+/*正文标题（headings）控制标题与上一个宽的段前段后编剧*/
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-1.cm-line  {
-    border-bottom: 1.5px solid var(--ui2);
     margin-bottom: 0.2em !important;
     margin-top: 0.3em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-2.cm-line {
-    border-bottom: 1.5px solid var(--ui2);
     margin-bottom: 0.2em !important;
     margin-top: 0.3em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-3.cm-line {
-    border-bottom: 1.5px solid var(--ui2);
     margin-bottom: 0.2em !important;
     margin-top: 0.3em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-4.cm-line {
-    border-bottom: 1.5px solid var(--ui2);
     margin-bottom: 0.2em !important;
     margin-top: 0.3em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-5.cm-line {
-    border-bottom: 1.5px solid var(--ui2);
     margin-bottom: 0.2em !important;
     margin-top: 0.3em !important;
 }
 .markdown-source-view .cm-content .HyperMD-header.HyperMD-header-6.cm-line {
-    border-bottom: 1.5px solid var(--ui2);
     margin-bottom: 0.2em !important;
     margin-top: 0.3em !important;
 }
-/*预览视图下：标题下方线的粗细和颜色样式，分割线距离标题和紧跟标题的内容块的距离*/
+/*编辑视图下：标题下方线的粗细和颜色样式，分割线距离标题和紧跟标题的内容块的距离*/
 .cm-s-obsidian .cm-header-1,.empty-state-title,.markdown-preview-view h1,.markdown-rendered h1,h1 {
 	font-variant: var(--h1-variant);
 	letter-spacing: -.01em;
@@ -8747,31 +8675,8 @@ ol li ol::before {
 	font-weight: var(--h6-weight);
 	font-style: var(--h6-style);
 }
-.markdown-preview-view h1, .markdown-rendered h1 {
-    border-bottom: 1.5px solid var(--ui2);
-    padding-bottom: 0.4em;
-}
-.markdown-preview-view h2, .markdown-rendered h2 {
-    border-bottom: 1.5px solid var(--ui2);
-    padding-bottom: 0.4em;
-}
-.markdown-preview-view h3, .markdown-rendered h3 {
-    border-bottom: 1.5px solid var(--ui2);
-    padding-bottom: 0.4em;
-}
-.markdown-preview-view h4, .markdown-rendered h4 {
-    border-bottom: 1.5px solid var(--ui2);
-    padding-bottom: 0.4em;
-}
-.markdown-preview-view h5, .markdown-rendered h5 {
-    border-bottom: 1.5px solid var(--ui2);
-    padding-bottom: 0.4em;
-}
-.markdown-preview-view h6, .markdown-rendered h6 {
-    border-bottom: 1.5px solid var(--ui2);
-    padding-bottom: 0.4em;
-}
-/*End*/
+/* ================= 正文:标题 End=============== */
+/* ================= 正文:无序列表和有序列表=============== */
 /*编辑视图下，无序列表各个层级的前缀标识 */
 .markdown-source-view .list-bullet:not(.task-list-item):after {
     margin-top: -1.0em;
@@ -8875,8 +8780,9 @@ ol li ol::before {
     background-color:unset !important;
 }
 /*End*/
+/* ================= 正文:无序列表和有序列表 End=============== */
 
-/*=================== 表格类优化 ====================*/
+/*=================== 代码域（embed）优化 ====================*/
 /*控制每一个可编辑块的与实际的内容体之间的边距*/
 .is-live-preview.is-readable-line-width .cm-embed-block>div,.is-live-preview.is-readable-line-width .cm-embed-block,.is-live-preview.is-readable-line-width .mod-empty {
     max-width: 100%;
@@ -8891,6 +8797,8 @@ ol li ol::before {
     width: calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
 }
 /*End*/
+/*================= 代码域（embed）优化 End ==================*/
+/*=================== 表格类（table）优化 ====================*/
 /*table title 边框*/
 .table-lines .table-view-table,.table-lines table:not(.calendar) {
     border: 1px solid var(--bg3) 
@@ -8903,9 +8811,9 @@ ol li ol::before {
 .markdown-rendered .callout-content table > thead {
     background-color: rgba(var(--callout-color), 0.1);
 }
-/*增加表格颜色隔行显示不同背景色*/
-.markdown-rendered tbody tr:nth-child(2n+1) {
-    background-color: var(--bg3);
+/*修复表格镶边行的代码*/
+.col-alt table:not(.calendar) tr>td:nth-child(2n+2),.col-alt table:not(.calendar) tr>th:nth-child(2n+2),.row-alt table:not(.calendar) tbody>tr:nth-child(odd) {
+    background: var(--background-table-rows);
 }
 /*End*/
 /*=================== End ====================*/
@@ -9006,10 +8914,24 @@ ol li ol::before {
 .workspace-leaf-content[data-type=outline] .view-content .outline > .tree-item > .tree-item-self .tree-item-inner::before {
     content: none !important;
 }
+/* ================= End ====================== */
+/* ================= Tag ====================== */
+/*正文中， tag 标签堆叠行高*/
+.cm-line .cm-hashtag {
+    line-height: var(--tag-line-height);
+}
+/*标签嵌套下， tag 标签堆叠行高*/
+a.tag {
+    line-height: var(--tag-embed-line-height);
+}
+a.tag::before {
+    
+}
+/*==================Tag End=====================*/
 
-/* ======================================= */
-/* ====== 第三方插件 community plugin ====== */
-/* ======================================= */
+/* ============================================ */
+/* ======== 第三方插件 community plugin ======== */
+/* ============================================ */
 /*quick-explorer 跨度适配 v1.0.0*/
 /*quick explore 上目录和文件名样式尺寸*/
 div#quick-explorer .explorable-name {
@@ -9047,8 +8969,8 @@ div#quick-explorer .explorable-separator::before {
     margin: 0 
 }
 /*End*/
-/*=================== tabel enhancer ====================*/
-/*tabel enhancer 的表头样式*/
+/*==================== tabel enhancer ====================*/
+/*【table-enhancer】插件：表头样式*/
 .cm-table-widget .ob-table-enhancer > thead tr {
     border-bottom: 1px solid black;
 }
@@ -9060,21 +8982,22 @@ div#quick-explorer .explorable-separator::before {
 .ob-table-enhancer > thead > tr > th, .ob-table-enhancer > tbody > tr > td {
 	height: 2.5em !important;
 }
-/*table-enhancer 插件,行编辑浮动按钮与表格的边距*/
+/*【table-enhancer】插件,行编辑浮动按钮与表格的边距*/
 .ob-table-enhancer-row-bar-button {
     margin-right:0.6em;
 }
-/*table-enhancer 插件,行、列编辑浮动按钮的大小*/
+/*【table-enhancer】插件行、列编辑浮动按钮的大小*/
 .ob-table-enhancer-row-bar-button .icon,.ob-table-enhancer-col-bar-button .icon{
     width:22px;
     height: 22px;
 }
-/*table-enhancer,优化当单元格获得焦点（is-editing）时，在部分情况下会产生模糊的问题*/
+/*【table-enhancer】插件,优化当单元格获得焦点（is-editing）时，在部分情况下会产生模糊的问题*/
 .is-editing {
 	filter:none !important;
 }
 /*End*/
-/*为【Lapel】插件,显示的大小*/
+/*================【table-enhancer】插件End =================*/
+/*【Lapel】插件,显示的大小*/
 .cm-gutters .cm-gutter.cm-lapel .cm-gutterElement .cm-heading-marker {
     font-size:medium;
 }
@@ -9085,26 +9008,30 @@ div#quick-explorer .explorable-separator::before {
 /*End*/
 /*为【Lapel】插件，修复headings 下方添加边距后产生差分距离*/
 .cm-gutter.cm-lapel .cm-gutterElement {
-    margin-bottom: 0.91em;
+    margin-bottom: 1.2em;
 }
 /*End*/
-/*为【task progress bar】插件，优化效果*/
+/*=====================【Lapel】插件End =====================*/
+/*=================【task progress bar】插件 =================*/
+/*【task progress bar】插件，优化效果*/
 .cm-task-progress-bar.with-number .progress-bar-inline-background {
     border:1px solid var(--tx3);
     background-color: var(--bg1) !important;
     width: 4.1rem !important;
 }
 /*End*/
-/*End*/
-/*【Rich links】插件样式修复*/
+/*===============【task progress bar】插件End ===============*/
+/*====================【Rich links】插件 ====================*/
+/*【Rich links】插件，针对标题和描述字段的字号进行调整*/
 .rich-link-card .rich-link-card-title {
     font-size:calc(var(--font-ui-smaller)+2);
 }
 .rich-link-card .rich-link-card-description {
     font-size:calc(var(--font-ui-smaller)+1);
 }
-/*End*/
-/*【chronology】有内容的日子堆叠背景色加强*/
+/*====================【Rich links】插件End ================*/
+/*=====================【chronology】插件 ==================*/
+/*【chronology】插件：有内容的日子堆叠背景色加强*/
 .chronology-container .chronology-calendar-heat-background {
     background-color: var(--color-orange) !important;
 }
@@ -9116,6 +9043,7 @@ div#quick-explorer .explorable-separator::before {
     max-width: 20em;
     flex: 0;
 }
+/*====================【chronology】插件End ================*/
 /*=========== callout =============*/
 /*修复 callout 标题栏的背景色*/
 .callout {
@@ -9178,7 +9106,6 @@ div#quick-explorer .explorable-separator::before {
 /*为【edit toolbar】插件，优化工具icon指向（hover）的样式*/
 /*【edit toolbar】一级菜单*/
 .cMenuToolbarCommandItem:hover {
-    color: white !important;
     background-color: var(--item-side) !important;
 }
 /*【edit toolbar】一级菜单icon尺寸*/
@@ -9186,14 +9113,13 @@ button[class^=cMenuToolbarCommandItem] > svg{
     height: 1.2em;
     width: 1.2em;
 }
-/*【edit toolbar】子菜单icon尺寸*/
+/*【edit toolbar】子菜单 icon 尺寸*/
 button[class^=cMenuToolbarCommandsubItem] > svg{
     height: 2.2em;
     width: 2.2em;
 }
-/*【edit toolbar】子菜单hover样式*/
+/*【edit toolbar】子菜单 hover 样式*/
 button[class^="cMenuToolbarCommandsubItem"]:hover {
-    color: white !important;
     background-color: var(--item-side) !important;
 }
 /*【edit toolbar】插件设置菜单的指向样式*/
@@ -9210,18 +9136,18 @@ button[class^=cMenuToolbarCommandsubItem] >.subitem {
     height:32px !important;
 }
 /*End*/
-
-/* ================================== */
-/* =========== 插件间兼容性 ========== */
-/* ================================== */
-/*修复导航栏按钮的高度和文件标题栏高度，因为 theme settings 等插件的异常*/
-/*
-body.css-settings-manager {
-    --header-height: 44px !important;
+/* =============== dynamic-highlights ============== */
+/*dynamic-highlights的背景色圆角样式*/
+span[class^=cm-list] .day-time-8 {
+    border-radius: var(--radius-m);
+    color:var(--tx1);
+    background-color: #16c60c;
 }
-*/
-/*End*/
-/*修复banner 和 metatable 在没有banner icon下的高度问题*/
+/* =============== dynamic-highlights End ============== */
+/* ===================================================== */
+/* ==================== 插件间兼容性 ==================== */
+/* ===================================================== */
+/*修复：banner 和 metatable 在没有banner icon下的高度问题*/
 /*主窗口下，有banner icon的情景下*/
 .obsidian-banner-wrapper.has-banner-icon {
     margin-top:var(--banner-height);
@@ -9248,17 +9174,30 @@ body.css-settings-manager {
     margin-top:var(--banner-height)+30px;
 }
 /*End*/
-/*修复dataview Cards 视图下，图片和 grid 错位问题*/
-.col-alt table:not(.calendar) tr>td:nth-child(2n+2),.col-alt table:not(.calendar) tr>th:nth-child(2n+2),.row-alt table:not(.calendar) tbody>tr:nth-child(odd) {
-    /*
-    padding-left: 10px;
-    */
-    background: var(--background-table-rows);
-}
-/*End*/
+
 /* ================================== */
 /* ============ 测试代码 ============ */
 /* ================================== */
+
+/*ToolTips 隐藏*/
+.tooltip {
+    display: none !important;
+}
+
+/* 's' for question/more info task ('- [s]') */
+.markdown-source-view input[data-task="s"].task-list-item-checkbox:checked::after {
+    content: "";
+    -webkit-mask-position: 52% 52%;
+    -webkit-mask-size: 65%;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"%3E%3Cpath fill="red" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64zm234.8 736.5L223.5 277.2c16-19.7 34-37.7 53.7-53.7l523.3 523.3c-16 19.6-34 37.7-53.7 53.7z"%2F%3E%3C%2Fsvg%3E') !important;
+}
+/* yellow background colour for question/more info task ('- [s]') */
+.markdown-source-view input[data-task="s"].task-list-item-checkbox:checked {
+    background-color:transparent !important;
+    border:transparent;
+}
+
 /*图片边框*/
 .internal-embed.image-embed.is-loaded {
     border:2px double var(--ax1);
@@ -9274,12 +9213,12 @@ body.css-settings-manager {
 /*End*/
 /*搜索结果的样式适配浅/深色主题*/
 .theme-light .mod-left-split .search-result-file-matches {
-    color: var(--backlinks-embed-txcolor);
-    background-color: var(--backlinks-embed-bgcolor);
+    color: var(--search-result-txcolor);
+    background-color: var(--search-result-bgcolor);
 }
 .theme-dark .mod-left-split .search-result-file-matches {
-    color: var(--backlinks-embed-txcolor);
-    background-color: var(--backlinks-embed-bgcolor);
+    color: var(--search-result-txcolor);
+    background-color: var(--search-result-bgcolor);
 }
 /*End*/
 /*backlinks，在浅/深主题下的自定义样式*/
@@ -9319,6 +9258,9 @@ body:not(.unmute-checkbox-animation).checkbox-tada input.task-list-item-checkbox
     to {-webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1);}
   }
 /*End*/
+
+
+
 /*
 /*Obsidian 关闭按钮顺序调整
 body.reversal-titlebar .titlebar-button-container.mod-right {
@@ -9335,6 +9277,7 @@ body.tag-click .cm-line span.cm-hashtag:not(.cm-formatting) {
     pointer-events: none;
 }
 */
+
 
 /* 在编辑模式下，自动为标题编号。List styling for outline pane */
 /*
@@ -9479,6 +9422,133 @@ body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered
     color:white;
     transform: scale(1.02);
     transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
+}
+*/
+/*End*/
+
+/*编辑模式：控制标题和分割线的距离
+.markdown-preview-view h1, .markdown-rendered h1 {
+    padding-bottom: 0.4em;
+}
+.markdown-preview-view h2, .markdown-rendered h2 {
+    padding-bottom: 12em;
+}
+.markdown-preview-view h3, .markdown-rendered h3 {
+    padding-bottom: 0.4em;
+}
+.markdown-preview-view h4, .markdown-rendered h4 {
+    padding-bottom: 0.4em;
+}
+.markdown-preview-view h5, .markdown-rendered h5 {
+    padding-bottom: 0.4em;
+}
+.markdown-preview-view h6, .markdown-rendered h6 {
+    padding-bottom: 0.4em;
+}
+/*End*/
+/*---- nav arrows adjust location ----
+.nav-folder-collapse-indicator {
+    position: absolute;
+    left: 21px;
+    top: 3px;
+    transition: transform 20ms linear 0s;
+}
+.nav-folder-collapse-indicator svg {
+    display: none;
+    color: var(--accent-strong);
+    height: 7px;
+    width: 7px;
+}
+/*search icon 1
+ .backlink-pane .search-result-container .collapse-icon {
+    left: 0px;
+    top: 7px;
+    margin-top: 0px;
+    transition: transform 20ms linear 0s;
+}
+.backlink-pane .search-result-container .collapse-icon::before {
+    content : "↓";
+    font-size: 14px;
+    font-family: 'Inter';
+    font-weight: bold;
+    color: var(--text-accent);
+    transition: transform 10ms linear 0s;
+}
+.backlink-pane .search-result-container .collapse-icon svg {
+    display: none;
+    color:var(--accent-strong);
+    height:7px;
+    width:7px;
+}
+.backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon {
+    transform: translateX(1px) translateY(1px) rotate(-90deg);
+    opacity: 0.5;
+}
+/* search panel icons
+.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon {
+    left: 0px;
+    top: 7px;
+    margin-top: 0px;
+    transition: transform 20ms linear 0s;
+}
+.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon::before {
+    content : "↓";
+    font-size: 14px;
+    margin-left: 0px;
+    font-weight: bold;
+    font-family: 'Inter';
+    color: var(--text-accent);
+    transition: transform 10ms linear 0s;
+}
+.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon svg {
+    display: none;
+    color:var(--accent-strong);
+    height:7px;
+    width:7px;
+}
+.workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon {
+    transform: translateX(1px) translateY(1px) rotate(-90deg);
+	opacity: 0.5;
+}
+.workspace-tab-header-inner .workspace-tab-header-inner-icon {
+    box-sizing:content-box;
+    font-size:1.3em;
+}
+*/
+/*优化目录树的展开收起箭头
+/*文件目录树，文件夹的未展开（收起）箭头
+.nav-folder.is-collapsed .nav-folder-title::before {
+    transform: translateX(1px) translateY(0.4em) rotate(0deg);
+}
+/*End*/
+/*文件目录树中，文件夹的展开箭头
+.nav-folder .nav-folder-title::before {
+    content: "";
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZklEQVRIie3NMRKAMAhE0eChMWXSOVzYEhv7sMvgWGRr+K+1vd9PVa/M/7E6EJEzgyyBLBICMkgYYBEIYBAYQBEKQBAaeHeXAe4+zGyWANE4BSBxGEDjEMDEwwAbD633PkrCe5/tAV92N0rtyZlOAAAAAElFTkSuQmCC);
+    background-size: 13px 13px;
+    background-position: center;
+    transform: translate(0, 2px);
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    margin-top:1.5px;
+    transform: translateX(-1px) translateY(0.35em) rotate(90deg);
+}
+/*End*/
+/*顶部导航栏下边界线*/
+/*
+.workspace-sidedock-empty-state .workspace-tabs {
+    border-bottom:1px solid var(--background-modifier-border2);
+}
+.workspace-tab-header-container {
+    border-bottom:1px solid var(--background-modifier-border2);
+}
+*/
+/*修复：导航栏按钮的高度和文件标题栏高度，因为 theme settings 等插件的异常*/
+/*
+body.css-settings-manager {
+    --header-height: 44px !important;
 }
 */
 /*End*/
