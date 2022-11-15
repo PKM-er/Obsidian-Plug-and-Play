@@ -54,47 +54,54 @@ function dirname2(path) {
 
 // src/models.ts
 var TRASH_ROOT = (0, import_obsidian.normalizePath)(".trash");
-var TrashRoot = class {
+var Trash = class {
   constructor(vault) {
     this.vault = vault;
-    this.items = [];
+    this.root = new TrashedFolder(this.vault, TRASH_ROOT, null);
     this.collator = new Intl.Collator(void 0, {
       sensitivity: "base"
     });
     this.compareName = (a, b) => this.collator.compare(a, b);
   }
+  get items() {
+    return this.root.children;
+  }
+  get isEmpty() {
+    return this.root.isEmpty;
+  }
   async refresh() {
-    if (await this.vault.adapter.exists(TRASH_ROOT)) {
-      const trashedFiles = await this.vault.adapter.list(TRASH_ROOT);
-      this.items = await this.buildItems(trashedFiles);
+    if (await this.vault.adapter.exists(this.root.path)) {
+      const trashedFiles = await this.vault.adapter.list(this.root.path);
+      this.root.children = await this.buildItems(trashedFiles, this.root);
     } else {
-      this.items = [];
+      this.root.children = [];
     }
   }
   async empty() {
-    if (await this.vault.adapter.exists(TRASH_ROOT)) {
-      await this.vault.adapter.rmdir(TRASH_ROOT, true);
+    if (await this.vault.adapter.exists(this.root.path)) {
+      await this.root.remove();
     }
-    this.items = [];
+    this.root.children = [];
   }
-  async buildItems(trashedFiles) {
+  async buildItems(trashedFiles, parent) {
     const items = [];
     for (const path of trashedFiles.folders.sort(this.compareName)) {
       const files = await this.vault.adapter.list(path);
-      const children = await this.buildItems(files);
-      const trashedFolder = new TrashedFolder(this.vault, path, children);
+      const trashedFolder = new TrashedFolder(this.vault, path, parent);
       items.push(trashedFolder);
+      trashedFolder.children = await this.buildItems(files, trashedFolder);
     }
     for (const path of trashedFiles.files.sort(this.compareName)) {
-      const trashedFile = new TrashedFile(this.vault, path);
+      const trashedFile = new TrashedFile(this.vault, path, parent);
       items.push(trashedFile);
     }
     return items;
   }
 };
 var TrashedBase = class {
-  constructor(vault, path) {
+  constructor(vault, path, parent) {
     this.vault = vault;
+    this.parent = parent;
     this.path = (0, import_obsidian.normalizePath)(path);
     this.basename = basename2(this.path);
   }
@@ -116,18 +123,47 @@ var TrashedFile = class extends TrashedBase {
     super(...arguments);
     this.kind = "file";
   }
+  async restore() {
+    var _a;
+    const restored = await super.restore();
+    if (restored) {
+      (_a = this.parent) == null ? void 0 : _a.removeChild(this);
+    }
+    return restored;
+  }
   async remove() {
+    var _a;
     await this.vault.adapter.remove(this.path);
+    (_a = this.parent) == null ? void 0 : _a.removeChild(this);
   }
 };
 var TrashedFolder = class extends TrashedBase {
-  constructor(vault, path, children) {
-    super(vault, path);
-    this.children = children;
+  constructor() {
+    super(...arguments);
     this.kind = "folder";
+    this.children = [];
+  }
+  get isEmpty() {
+    return this.children.length === 0;
+  }
+  async restore() {
+    var _a;
+    const restored = await super.restore();
+    if (restored) {
+      (_a = this.parent) == null ? void 0 : _a.removeChild(this);
+    }
+    return restored;
   }
   async remove() {
+    var _a;
     await this.vault.adapter.rmdir(this.path, true);
+    (_a = this.parent) == null ? void 0 : _a.removeChild(this);
+  }
+  removeChild(child) {
+    const index = this.children.indexOf(child);
+    if (index !== -1) {
+      this.children.splice(index, 1);
+    }
   }
 };
 
@@ -153,16 +189,25 @@ var TrashExplorerView = class extends import_obsidian2.ItemView {
   async refresh() {
     const container = this.contentEl;
     container.empty();
+    if (this.trash.isEmpty) {
+      this.renderEmptyMessage(container);
+    }
     this.renderItems(this.trash.items, container);
   }
-  async renderItems(items, container) {
+  renderEmptyMessage(container) {
+    container.createEl("div", {
+      cls: "pane-empty",
+      text: "The trash is empty."
+    });
+  }
+  renderItems(items, container) {
     for (const item of items) {
       const itemContainer = container.createEl("div");
       this.renderItem(item, itemContainer);
       if (item.kind === "folder") {
         const nestedContainer = itemContainer.createEl("div");
         nestedContainer.style.paddingLeft = "1em";
-        await this.renderItems(item.children, nestedContainer);
+        this.renderItems(item.children, nestedContainer);
       }
     }
   }
@@ -182,7 +227,7 @@ var TrashExplorerView = class extends import_obsidian2.ItemView {
     restoreButton.setTooltip("Restore");
     restoreButton.onClick(async () => {
       if (await this.restoreFile(item)) {
-        container.remove();
+        this.refresh();
       }
     });
     const deleteButton = new import_obsidian2.ButtonComponent(buttons);
@@ -191,10 +236,9 @@ var TrashExplorerView = class extends import_obsidian2.ItemView {
     deleteButton.setWarning();
     deleteButton.onClick(async () => {
       if (await this.deleteFile(item)) {
-        container.remove();
+        this.refresh();
       }
     });
-    return el;
   }
   async restoreFile(item) {
     if (await item.restore()) {
@@ -246,7 +290,7 @@ var ConfirmModal = class extends import_obsidian2.Modal {
 // src/main.ts
 var TrashExplorerPlugin = class extends import_obsidian3.Plugin {
   async onload() {
-    this.trash = new TrashRoot(this.app.vault);
+    this.trash = new Trash(this.app.vault);
     await this.trash.refresh();
     this.registerView(VIEW_TYPE, (leaf) => new TrashExplorerView(leaf, this.trash));
     this.addRibbonIcon("trash", "Open trash explorer", () => this.activateView());
@@ -269,12 +313,14 @@ var TrashExplorerPlugin = class extends import_obsidian3.Plugin {
     this.app.workspace.detachLeavesOfType(VIEW_TYPE);
   }
   async activateView() {
-    this.app.workspace.detachLeavesOfType(VIEW_TYPE);
-    await this.app.workspace.getLeftLeaf(false).setViewState({
-      type: VIEW_TYPE,
-      active: true
-    });
-    const leaf = this.app.workspace.getLeavesOfType(VIEW_TYPE)[0];
+    let leaf = this.app.workspace.getLeavesOfType(VIEW_TYPE)[0];
+    if (!leaf) {
+      await this.app.workspace.getLeftLeaf(false).setViewState({
+        type: VIEW_TYPE,
+        active: true
+      });
+      leaf = this.app.workspace.getLeavesOfType(VIEW_TYPE)[0];
+    }
     await this.trash.refresh();
     await leaf.view.refresh();
     this.app.workspace.revealLeaf(leaf);
