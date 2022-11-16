@@ -8,3 +8,5 @@ obsidian-math-plus
 lapel
 obsidian-enhancing-mindmap
 obsidian-view-mode-by-frontmatter
+obsidian-colorful-tag
+obsidian-custom-frames

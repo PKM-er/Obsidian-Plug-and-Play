@@ -10,6 +10,9 @@
     "border": "1"
   },
   "attrList": [
+    "nest tag",
+    "remove hash",
+    "remove tag name",
     "radius",
     "prefix",
     "suffix",
@@ -164,6 +167,21 @@
       "border": "",
       "font-weight": "",
       "tag": "archive",
+      "enable": true
+    },
+    {
+      "nest-tag": "",
+      "remove-hash": "",
+      "remove-tag-name": "",
+      "radius": "",
+      "prefix": "🐞",
+      "suffix": "",
+      "background-color": "red",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "bug",
       "enable": true
     }
   ],

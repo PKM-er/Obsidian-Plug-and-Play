@@ -3739,9 +3739,9 @@ var DEFAULT_SETTINGS = {
   firstTime: true,
   global_enable: /* @__PURE__ */ new Map(),
   global: /* @__PURE__ */ new Map(),
-  attrList: ["radius", "prefix", "suffix", "background color", "text color", "text size", "border", "font weight"],
-  defaultStyle: /* @__PURE__ */ new Map([["radius", "4px"], ["prefix", ""], ["suffix", ""], ["background-color", "#fff"], ["text-color", "#000"], ["text-size", "12px"], ["border", "none"], ["font-weight", "900"]]),
-  defaultGlobal: /* @__PURE__ */ new Map([["radius", false], ["prefix", false], ["suffix", false], ["background-color", false], ["text-color", false], ["text-size", false], ["border", true], ["font-weight", true]]),
+  attrList: ["nest tag", "remove hash", "remove tag name", "radius", "prefix", "suffix", "background color", "text color", "text size", "border", "font weight"],
+  defaultStyle: /* @__PURE__ */ new Map([["nest-tag", "false"], ["remove-hash", "false"], ["remove-tag-name", "false"], ["radius", "4px"], ["prefix", ""], ["suffix", ""], ["background-color", "#fff"], ["text-color", "#000"], ["text-size", "12px"], ["border", "none"], ["font-weight", "900"]]),
+  defaultGlobal: /* @__PURE__ */ new Map([["nest-tag", false], ["remove-hash", false], ["remove-tag-name", false], ["radius", false], ["prefix", false], ["suffix", false], ["background-color", false], ["text-color", false], ["text-size", false], ["border", true], ["font-weight", true]]),
   styleList: new Array(),
   useTagDetail: false,
   tagDetail: /* @__PURE__ */ new Map(),
@@ -3982,7 +3982,7 @@ var ColorfulTag = class extends import_obsidian.Plugin {
     if (suffix != "") {
       css += `.colorful-tag-popup-header:after { content: "${suffix}"; }`;
     }
-    css += `.colorful-tag-popup-body { padding: 0 10px; border: 4px solid ${background_color}; border-radius: 0 0 10px 10px; border-top: none; background-color: #fff; }`;
+    css += `.colorful-tag-popup-body { padding: 0 10px; border: 4px solid ${background_color}; border-radius: 0 0 10px 10px; border-top: none;}`;
     css += `.setting-item.colorful-tag-popup-item { padding: 5px 0 }`;
     css += `#colorful-tag-popup input[type="text"] { border: none; }`;
     css += `#colorful-tag-popup input[type="text"]:focus { border: inherit; }`;
@@ -4198,16 +4198,47 @@ var ColorfulTag = class extends import_obsidian.Plugin {
       let text_size = m.get("text-size") || global.get("text-size") || "";
       let border = m.get("border") || global.get("border") || "";
       let font_weight = m.get("font-weight") || global.get("font-weight") || "";
+      let nest_tag = m.get("nest-tag") || global.get("nest-tag") || "";
+      let remove_hash = m.get("remove-hash") || global.get("remove-hash") || "";
+      let remove_tag_name = m.get("remove-tag-name") || global.get("remove-tag-name") || "";
       let padding_size = "";
-      css += `body a.tag[href="#${tag}"], body .cm-s-obsidian .cm-line span.cm-hashtag.cm-tag-${tag_lp} { font-weight: ${font_weight}; background-color: ${background_color}; color: ${text_color}; font-size: ${text_size}; white-space: nowrap; border: ${border}; }`;
-      css += `body a.tag[href="#${tag}"] { border-radius: ${radius}; padding-left: ${padding_size}; padding-right: ${padding_size}; }`;
-      css += `body .cm-s-obsidian .cm-line span.cm-hashtag.cm-tag-${tag_lp}.cm-hashtag-begin { border-top-right-radius: 0; border-bottom-right-radius: 0; padding-right: 0px; border-top-left-radius: ${radius}; border-bottom-left-radius: ${radius}; padding-left: ${padding_size}; }`;
-      css += `body .cm-s-obsidian .cm-line span.cm-hashtag.cm-tag-${tag_lp}.cm-hashtag-end { border-bottom-left-radius: 0; border-top-left-radius: 0; padding-left: 0px; border-top-right-radius: ${radius}; border-bottom-right-radius: ${radius}; padding-right: ${padding_size}; }`;
+      let reading_selector = `href="#${tag}"`;
+      let editing_selector = `span.cm-tag-${tag_lp}`;
+      if (nest_tag.toLowerCase() == "true") {
+        reading_selector = `href^="#${tag}"`;
+        editing_selector = `span[class*="cm-tag-${tag_lp}"]`;
+      }
+      let style1 = `font-weight: ${font_weight}; background-color: ${background_color}; color: ${text_color}; font-size: ${text_size}; white-space: nowrap; border: ${border};`;
+      let style2 = `border-radius: ${radius}; padding-left: ${padding_size}; padding-right: ${padding_size};`;
+      let style3 = `border-top-right-radius: 0; border-bottom-right-radius: 0; padding-right: 0px; border-top-left-radius: ${radius}; border-bottom-left-radius: ${radius}; padding-left: ${padding_size};`;
+      let style4 = `border-bottom-left-radius: 0; border-top-left-radius: 0; padding-left: 0px; border-top-right-radius: ${radius}; border-bottom-right-radius: ${radius}; padding-right: ${padding_size};`;
+      css += `body a.tag[${reading_selector}], body .cm-s-obsidian .cm-line ${editing_selector}.cm-hashtag { ${style1} }`;
+      css += `body a.tag[${reading_selector}] { ${style2} }`;
+      css += `body .cm-s-obsidian .cm-line ${editing_selector}.cm-hashtag.cm-hashtag-begin { ${style3} }`;
+      css += `body .cm-s-obsidian .cm-line ${editing_selector}.cm-hashtag.cm-hashtag-end { ${style4} }`;
+      if (remove_hash.toLowerCase() == "true") {
+        css += `body .cm-s-obsidian .cm-line ${editing_selector}.cm-hashtag.cm-hashtag-begin { font-size: 0px; }`;
+        if (remove_tag_name.toLowerCase() == "true" && suffix == "") {
+          css += `body .cm-s-obsidian .cm-line ${editing_selector}.cm-hashtag.cm-hashtag-begin::before { padding-right: var(--tag-padding-x); border-top-right-radius: ${radius} !important; border-bottom-right-radius: ${radius} !important; }`;
+        }
+      }
+      if (remove_tag_name.toLowerCase() == "true") {
+        css += `body .cm-s-obsidian .cm-line ${editing_selector}.cm-hashtag.cm-hashtag-end { font-size: 0px; }`;
+        if (remove_hash.toLowerCase() == "true" && prefix == "") {
+          css += `body .cm-s-obsidian .cm-line ${editing_selector}.cm-hashtag.cm-hashtag-end::after { padding-left: var(--tag-padding-x); border-top-left-radius: ${radius} !important; border-bottom-left-radius: ${radius} !important; }`;
+        }
+      }
       if (prefix != "") {
-        css += `:is(body a.tag[href="#${tag}"], body .cm-s-obsidian .cm-line span.cm-hashtag.cm-tag-${tag_lp}.cm-hashtag-begin)::before { content: "${prefix} "; }`;
+        css += `body a.tag[${reading_selector}]::before { content: "${prefix} "; }`;
+        css += `body .cm-s-obsidian .cm-line ${editing_selector}.cm-hashtag.cm-hashtag-begin::before { content: "${prefix} "; ${style1} }`;
+        css += `body a.tag[${reading_selector}]::before { ${style2}; }`;
+        css += `body .cm-s-obsidian .cm-line ${editing_selector}.cm-hashtag.cm-hashtag-begin::before { ${style3}; padding-top: var(--tag-padding-y); padding-bottom: var(--tag-padding-y); padding-left: var(--tag-padding-x); }`;
       }
       if (suffix != "") {
-        css += `:is(body a.tag[href="#${tag}"], body .cm-s-obsidian .cm-line span.cm-hashtag.cm-tag-${tag_lp}.cm-hashtag-end)::after { content: " ${suffix}"; }`;
+        css += `body a.tag[${reading_selector}]::after { content: " ${suffix}"; }`;
+        css += `body .cm-s-obsidian .cm-line ${editing_selector}.cm-hashtag.cm-hashtag-end::after { content: " ${suffix}"; ${style1} }`;
+        css += `body a.tag[${reading_selector}]::after { ${style2}; }`;
+        css += `body .cm-s-obsidian .cm-line ${editing_selector}.cm-hashtag.cm-hashtag-end::after { ${style4}; padding-top: var(--tag-padding-y); padding-bottom: var(--tag-padding-y); padding-right: var(--tag-padding-x); }`;
       }
     }
     css += `.colorful-tag-rule.setting-item { margin-top: 0px }`;

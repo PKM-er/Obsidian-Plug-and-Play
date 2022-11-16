@@ -28,7 +28,6 @@
   "consistent-attachments-and-links",
   "obsidian-dynamic-highlights",
   "obsidian-local-images",
-  "music-code-blocks",
   "number-headings-obsidian",
   "obsidian-math-plus",
   "obsidian-style-settings",
@@ -60,5 +59,6 @@
   "dbfolder",
   "obsidian-emoji-toolbar",
   "obsidian-view-mode-by-frontmatter",
-  "novel-word-count"
+  "novel-word-count",
+  "music-code-blocks"
 ]

@@ -6,4 +6,3 @@ obsidian-copy-block-link
 various-complements
 obsidian-sortable
 obsidian-local-images
-obsidian-custom-frames

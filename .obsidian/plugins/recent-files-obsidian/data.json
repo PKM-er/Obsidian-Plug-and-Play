@@ -1,8 +1,44 @@
 {
   "recentFiles": [
     {
+      "basename": "Readme",
+      "path": "Readme.md"
+    },
+    {
+      "basename": "更新日志（Changelog）",
+      "path": "更新日志（Changelog）.md"
+    },
+    {
+      "basename": "优化Obsidian 启动速度",
+      "path": "Obsidian-learning/优化Obsidian 启动速度.md"
+    },
+    {
+      "basename": "FastStart-StartupScript",
+      "path": "Template/startup/FastStart-StartupScript.md"
+    },
+    {
+      "basename": "FastStart-Plugins-LongDelay",
+      "path": "Template/startup/FastStart-Plugins-LongDelay.md"
+    },
+    {
+      "basename": "使用问题&FAQ",
+      "path": "使用问题&FAQ.md"
+    },
+    {
+      "basename": "插件大全",
+      "path": "插件大全.md"
+    },
+    {
       "basename": "Obsidian教程——基础语法和操作",
       "path": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md"
+    },
+    {
+      "basename": "!dict",
+      "path": "Obsidian-learning/var complete/!dict.md"
+    },
+    {
+      "basename": "插件说明",
+      "path": "插件说明.md"
     },
     {
       "basename": "Obsidian 教程——代码域",
@@ -25,24 +61,12 @@
       "path": "Obsidian-example/高级语法/DataView syntax.md"
     },
     {
-      "basename": "插件说明",
-      "path": "插件说明.md"
-    },
-    {
       "basename": "FastStart-Plugins-LongLongDelay",
       "path": "Template/startup/FastStart-Plugins-LongLongDelay.md"
     },
     {
-      "basename": "FastStart-Plugins-LongDelay",
-      "path": "Template/startup/FastStart-Plugins-LongDelay.md"
-    },
-    {
       "basename": "FastStart-Plugins-ShortDelay",
       "path": "Template/startup/FastStart-Plugins-ShortDelay.md"
-    },
-    {
-      "basename": "Readme",
-      "path": "Readme.md"
     },
     {
       "basename": "主题和snippests 测试用例",
@@ -89,14 +113,6 @@
       "path": "Works/58-房产-租房/人员对接表/租房sever后台.md"
     },
     {
-      "basename": "未命名 1",
-      "path": "Works/temp/未命名 1.md"
-    },
-    {
-      "basename": "未命名",
-      "path": "Works/temp/未命名.md"
-    },
-    {
       "basename": "租房概述和历史",
       "path": "Works/58-房产-租房/租房概述和历史.md"
     },
@@ -137,20 +153,12 @@
       "path": "3-Family/👶儿童教育/🎓Education/读书/3.高中 senior high school.md"
     },
     {
-      "basename": "未命名",
-      "path": "未命名.md"
-    },
-    {
       "basename": "05 - White red",
       "path": "Obsidian-example/Tables 表格样式/05 - White red.md"
     },
     {
       "basename": "《孤独与陪伴》",
       "path": "People/Book/《孤独与陪伴》.md"
-    },
-    {
-      "basename": "FastStart-StartupScript",
-      "path": "Template/startup/FastStart-StartupScript.md"
     },
     {
       "basename": "FastStart-GenerateListOfInstalledPlugins",

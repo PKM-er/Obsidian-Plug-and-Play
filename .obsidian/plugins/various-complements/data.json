@@ -47,22 +47,6 @@
   },
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
-    "Sp": {
-      "Sp": {
-        "customDictionary": {
-          "count": 1,
-          "lastUpdated": 1665017242692
-        }
-      }
-    },
-    "📚": {
-      "📚": {
-        "frontMatter": {
-          "count": 1,
-          "lastUpdated": 1665547570924
-        }
-      }
-    },
     "测验焦虑\t1": {
       "测验焦虑\t1": {
         "customDictionary": {
@@ -124,6 +108,14 @@
         "currentFile": {
           "count": 1,
           "lastUpdated": 1667384797410
+        }
+      }
+    },
+    "更新日志（Changelog）：每个版本变更明细；": {
+      "更新日志（Changelog）：每个版本变更明细；": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1668563091222
         }
       }
     }
