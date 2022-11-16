@@ -52,6 +52,7 @@ v0.2.x
 			- 支持跳转到对应的原始 Task 位置；
 			- 将模式依赖的文件集成到 Template 文件夹（路径：Template > tasksCalendar）
 		- Tips：这不是一个插件，而是集成在某个地方一段脚本代码，基于【Dataview】插件；
+		- Tips：你可以在 [⏰DashBoard](📊Every%20Day/⏰DashBoard.md) 中找到示例；
 	- 【Kanban】插件，更改为默认不开启，提升启动速度，需要的同学可以自行开启；
 	- 【ABC Music Notation】插件，更改为默认不开启，提升启动速度；有对乐谱需要的同学可以自行开启；
 3、🎨样式
