@@ -46,18 +46,15 @@ v0.2.x
 			- 支持将常用 Web工具集成到 Obsidain；
 			- 支持命令行，Ribbon 区域固定图标（图标可自定义）多方式调用；
 - ⚙️插件设置
-	- Obsidian-Tasks-Calendar（默认开启）
+	- Obsidian-Tasks-Calendar（默认：开启）
 		- 功能：
 			- 将 Task 按照月历视图展示，可以嵌入任意页面；
 			- 支持跳转到对应的原始 Task 位置；
 			- 将模式依赖的文件集成到 Template 文件夹（路径：Template > tasksCalendar）
 		- Tips：这不是一个插件，而是集成在某个地方一段脚本代码，基于【Dataview】插件；
-
+	- 【Kanban】插件，更改为默认不开启，提升启动速度，需要的同学可以自行开启；
+	- 【ABC Music Notation】插件，更改为默认不开启，提升启动速度；有对乐谱需要的同学可以自行开启；
 3、🎨样式
-- ✔️样式新增
-	- 集成样式设置，现在你可以进入 style settings 的设置中；
-		- 集成：。路径：theme settings > minmal > ；
-		- 集成：
 - 🛠️样式修复
 	- 修复：【严重】修复独立窗口（pop-window）模式下，embed 和 【banners】的错乱排版；
 	- 修复：【严重】引用内容边框 和  list 中图片样式的错乱排版； 
