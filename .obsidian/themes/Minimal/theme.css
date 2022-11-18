@@ -107,6 +107,7 @@ body{
 	--cm-edit-bullet-list-4: '□';
 	--cm-edit-bullet-list-5: '▸';
     --embed-width:90%;
+    --banner-height:300px;
 }
 body{
     --ig-adjust-reading:0.05em;
@@ -131,7 +132,7 @@ body{
     --color-purple:#9e86c8;
     --color-pink:#b05279;
     --item-side:#007aff;
-    --text-headings:var(--item-side);
+    --text-headings:#007aff;
     --h1-color:var(--text-headings);
     --h2-color:var(--text-headings);
     --h3-color:var(--text-headings);
@@ -139,9 +140,6 @@ body{
     --h5-color:var(--text-headings);
     --h6-color:var(--text-headings);
 	--table-hover-raw-color:var(--item-side);
-    --backlinks-embed-txcolor:black;
-    --backlinks-embed-bgcolor:white;
-
 }
 .theme-light,.theme-light.minimal-default-light,body .excalidraw{
     --bg1:white;
@@ -164,7 +162,8 @@ body{
     --sp1:white;
 	--cm-editor-backgroud-color: #fffffe;
     --cm-edit-bullet-list-color:gray;
-
+    --backlinks-embed-txcolor:black;
+    --backlinks-embed-bgcolor:white;
 }
 .excalidraw.theme--dark,.theme-dark,.theme-dark.minimal-default-dark,.theme-light.minimal-light-contrast .titlebar,.theme-light.minimal-light-contrast.minimal-status-off .status-bar{
     --accent-l:60%;
@@ -187,7 +186,8 @@ body{
     --hl1:hsla( var(--accent-h), 50%, 40%, 30% );
     --hl2:rgba(255, 177, 80, 0.3);
     --sp1:white;
-
+    --backlinks-embed-txcolor:white;
+    --backlinks-embed-bgcolor:black;
 }
 .theme-light.minimal-light-white{
     --background-primary:white;
@@ -649,7 +649,7 @@ body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-l
 .inline-title{
     padding-top:16px
 }
-.minimal-status-off .status-bar{
+.minimal-status-off .status-bar {
     --status-bar-position:static;
     --status-bar-radius:0;
     --status-bar-border-width:1px 0 0 0;
@@ -1722,7 +1722,7 @@ body.colorful-headings .modal{
     --h3-color:var(--text-normal);
     --h4-color:var(--text-normal);
     --h5-color:var(--text-normal);
-    --h6-color:var(--text-normal)
+    --h6-color:var(--text-normal);
 }
 .is-mobile .tree-item-self .collapse-icon{
     width:20px
@@ -2086,10 +2086,10 @@ body:not(.zoom-off) .view-content .image-embed:active img{
     position:absolute;
     opacity:1
 }
-.labeled-nav.is-fullscreen:not(.colorful-frame){
+.labeled-nav.is-fullscreen:not(.colorful-frame) {
     --labeled-nav-top-margin:0
 }
-.labeled-nav{
+.labeled-nav {
     --labeled-nav-top-margin:var(--header-height)
 }
 .labeled-nav.is-translucent .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner{
@@ -2147,9 +2147,12 @@ body:not(.zoom-off) .view-content .image-embed:active img{
     top:0;
     right:0
 }
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner{
+/*修复：在 Minimal theme settings 中 打开如下开关
+Text labels for primary navigation后，导航栏样式异常*/
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
     padding-top:var(--size-4-2);
-    margin-top:var(--labeled-nav-top-margin);
+    /*margin-top:var(--labeled-nav-top-margin);*/
+    margin-top:auto;
     flex-direction:column!important;
     background-color:var(--background-secondary)
 }
@@ -2571,40 +2574,7 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 .tabs-modern.sidebar-tabs-default .mod-right-split,.tabs-modern.sidebar-tabs-wide .mod-right-split{
     --tab-outline-width:0
 }
-.sidebar-tabs-underline .mod-right-split .workspace-tab-header-spacer,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-spacer,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-spacer{
-    display:none
-}
-.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container{
-    padding-right:0
-}
-.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container-inner{
-    padding:0;
-    margin:0;
-    flex-grow:1;
-    gap:0
-}
-.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header{
-    flex-grow:1;
-    border-radius:0;
-    max-width:100px
-}
-.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header:hover,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header:hover,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header:hover{
-    background-color:transparent
-}
-.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner{
-    background-color:transparent
-}
-.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner{
-    border-bottom:2px solid transparent;
-    border-radius:0
-}
-.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover{
-    border-color:var(--ui2)
-}
-.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner{
-    border-color:var(--ax3);
-    padding-top:1px
-}
+
 .sidebar-tabs-square .mod-left-split,.sidebar-tabs-square .mod-right-split{
     --tab-radius:0px
 }
@@ -8230,7 +8200,7 @@ opacity: 1.24;
     }
     100% {
         transform:translatex(-100%);
-    -webkit-transform:translatex(-100%);
+        -webkit-transform:translatex(-100%);
     }
 }
 /*End*/
@@ -8354,8 +8324,12 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 .graph-controls-button:hover,.nav-action-button:hover,.side-dock-ribbon-action:hover,.view-action:hover,.workspace-drawer-header-icon:hover,.workspace-drawer-tab-option-item:hover,.workspace-leaf-content[data-type=backlink] .nav-action-button.is-active:hover,.workspace-leaf-content[data-type=search] .nav-action-button.is-active:hover,.workspace-tab-header-inner-icon:hover {
     background-color: var(--background-tertiary);
     border-radius: var(--radius-s);
-    color:var(--icon-color-hover2);
+    color:var(--icon-color-hover2) !important;
 }
+.workspace-tab-header:hover .workspace-tab-header-inner-icon {
+    color:var(--icon-color-hover2) !important;
+}
+
 /*End*/
 /*目录中文件和文件夹的不同缩进*/
 .nav-file-tag+ .nav-file-title-content {
@@ -8391,14 +8365,18 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 }
 /*End*/
 /* ===================================== */
-/* ======= 设置（settings）菜单 ========== */
+/* ======= 设置（Settings）菜单 ========== */
 /* ===================================== */
-/*设置界面导航栏的样式优化*/
+/*设置界面:导航栏左侧导行边距*/
 .colorful-active #calendar-container .active, .colorful-active #calendar-container .active.today, .colorful-active #calendar-container .active:hover, .colorful-active #calendar-container .day:active, .colorful-active .menu-item.selected:not(.is-disabled):not(.is-label), .colorful-active .menu-item:hover, .colorful-active .menu-item:hover:not(.is-disabled):not(.is-label), .colorful-active .nav-file-title.is-active, .colorful-active .nav-file-title.is-being-dragged, .colorful-active .nav-folder-title.is-being-dragged, body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover, body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover, body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-draggedd {
     color:#000;
     background-color: #f0f0f0;
 }
-/*优化设置菜单，左侧导航栏样式*/
+/*设置界面:导航栏左侧导行边距*/
+.vertical-tab-header {
+    padding-left:unset;
+}
+/*设置界面:导航栏分组分割线*/
 .vertical-tab-header-group-title {
     border-bottom: 1px solid var(--bg3);
 }
@@ -8416,36 +8394,36 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 }
 .mod-windows .modal.mod-settings .vertical-tab-nav-item.is-active {
     /*调整设置页面导航菜单间距*/
-    /*
-    padding: 5px 8px;
-    */
     font-weight: 400;
     color:black;
 	background-color:rgb(255, 255, 255);
     border-left: 4px solid var(--item-side);
 }
 /*End*/
-/*设置菜单中菜单分组的设置*/
+/*设置菜单:标题文本的样式*/
 .is-mobile .modal .vertical-tab-header-group-title {
     padding: 15px 20px 10px 20px;
     letter-spacing: .05em;
 }
-/*End*/
-.vertical-tab-content-container .setting-item .setting-item-control button {
-    background-color:var(--item-side);
-    color:white;
-}
+/*设置菜单:分组标题的文本样式*/
 .vertical-tab-header-group-title {
     color: var(--tx1);
     font-size: 16px;
     letter-spacing: 0;
     font-weight: 300;
 }
-/*End*/
 /*设置菜单中内容设置项的分割线*/
 .setting-item {
     border-top: 0.5px solid var(--bg3);
 }
+/*End*/
+/*设置菜单:按钮（button）的样式控制*/
+.vertical-tab-content-container .setting-item .setting-item-control button {
+    background-color:var(--item-side);
+    color:white;
+    border-radius:var(--radius-m);
+}
+/*End*/
 /*设置菜单中按钮指向后的颜色*/
 .modal button:not(.mod-warning):hover, .modal.mod-settings button:not(.mod-warning):hover, button:hover {
     background-color: var(--interactive-accent-hover2);
@@ -8460,17 +8438,6 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 /* ================================== */
 /* ======== tabs 标签栏控制 ======== */
 /* ================================== */
-.workspace-tab-header {
-    /*padding: 3px 5px;*/
-    box-shadow: 0 0 0 1px;
-}
- /*tabs上的标题大小*/
-.workspace-tab-header-inner-title {
-    line-height: 1.0;
-}
-.workspace .mod-root .workspace-tab-header-inner::after {
-    background-color:transparent;
-}
 /*控制icon大小*/
 .workspace-tab-header-inner.workspace-tab-header-inner-icon {
     width: calc(var(--icon-size)+10);
@@ -8478,18 +8445,37 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 }
 /*End*/
 /*tabs 标签栏，修改焦点tab 和 非焦点tab 的样式*/
-.workspace-tab-header-container-inner .workspace-tab-header.is-active.mod-active {
+.workspace-split .workspace-tab-header-container .workspace-tab-header.is-active {
     box-shadow: 0 0 0 var(--tab-outline-width);
-    color:var(--tx1)
+    z-index:2;
 }
 .workspace-tab-header-container-inner .workspace-tab-header {
-    color:var(--tx3)
+    color:var(--tx3);
+    z-index:1;
+}
+.workspace-tab-header {
+    /*padding: 3px 5px;*/
+    box-shadow: 0 0 0 1px;
 }
 /*End*/
-/*tabs 标签栏，stack模式下文字自上到下排列*/
-.tab-stack-top-verticald .mod-stacked .workspace-tab-container .workspace-tab-header .workspace-tab-header-inner-title {
+.theme-dark .workspace-tab-header-container {
+    border-bottom: var(--tab-outline-width) solid #ebebeb;
+}
+.theme-dark .workspace-tab-header.is-active.mod-active::before,.theme-dark .workspace-tab-header.is-active.mod-active::after {
+    position: absolute;
+    width: calc(var(--tab-curve) * 2);
+    height: calc(var(--tab-curve) * 2);
+    border-radius: 16px;
+    box-shadow: 0 0 0 calc(var(--tab-curve) * 3) transparent;
+}
+.theme-light .workspace-tab-header-container {
+    border-bottom: var(--tab-outline-width) solid var(--tab-outline-color);
+}
+
+/*tabs 标签栏，stack模式下文字自上到下排列*/.tab-stack-top-verticald .mod-stacked .workspace-tab-container .workspace-tab-header .workspace-tab-header-inner-title {
     writing-mode: vertical-rl;
     text-orientation: upright;
+
 }
 /* ================================== */
 /* ======== 文件标题和路径栏 ======== */
@@ -8623,7 +8609,7 @@ ol li ol::before {
 	line-height: 1.3;
 	font-family: var(--h1-font);
 	font-size: var(--h1);
-	color: var(--h1-color);
+	color: var(--h1-color) !important;
 	font-weight: var(--h1-weight);
 	font-style: var(--h1-style);
 }
@@ -8633,7 +8619,7 @@ ol li ol::before {
 	line-height: 1.3;
 	font-family: var(--h2-font);
 	font-size: var(--h2);
-	color: var(--h2-color);
+	color: var(--h2-color) !important;
 	font-weight: var(--h2-weight);
 	font-style: var(--h2-style);
 }
@@ -8643,7 +8629,7 @@ ol li ol::before {
 	line-height: 1.4;
 	font-family: var(--h3-font);
 	font-size: var(--h3);
-	color: var(--h3-color);
+	color: var(--h3-color) !important;
 	font-weight: var(--h3-weight);
 	font-style: var(--h3-style);
 }
@@ -8653,7 +8639,7 @@ ol li ol::before {
 	letter-spacing: .02em;
 	font-family: var(--h4-font);
 	font-size: var(--h4);
-	color: var(--h4-color);
+	color: var(--h4-color) !important;
 	font-weight: var(--h4-weight);
 	font-style: var(--h4-style);
 }
@@ -8662,7 +8648,7 @@ ol li ol::before {
 	letter-spacing: .02em;
 	font-family: var(--h5-font);
 	font-size: var(--h5);
-	color: var(--h5-color);
+	color: var(--h5-color) !important;
 	font-weight: var(--h5-weight);
 	font-style: var(--h5-style);
 }
@@ -8671,7 +8657,7 @@ ol li ol::before {
 	letter-spacing: .02em;
 	font-family: var(--h6-font);
 	font-size: var(--h6);
-	color: var(--h6-color);
+	color: var(--h6-color) !important;
 	font-weight: var(--h6-weight);
 	font-style: var(--h6-style);
 }
@@ -8782,7 +8768,7 @@ ol li ol::before {
 /*End*/
 /* ================= 正文:无序列表和有序列表 End=============== */
 
-/*=================== 代码域（embed）优化 ====================*/
+/*=================== 代码块（embed）优化 ====================*/
 /*控制每一个可编辑块的与实际的内容体之间的边距*/
 .is-live-preview.is-readable-line-width .cm-embed-block>div,.is-live-preview.is-readable-line-width .cm-embed-block,.is-live-preview.is-readable-line-width .mod-empty {
     max-width: 100%;
@@ -8797,17 +8783,13 @@ ol li ol::before {
     width: calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
 }
 /*End*/
-/*================= 代码域（embed）优化 End ==================*/
+/*================= 代码块（embed）优化 End ==================*/
 /*=================== 表格类（table）优化 ====================*/
 /*table title 边框*/
 .table-lines .table-view-table,.table-lines table:not(.calendar) {
     border: 1px solid var(--bg3) 
 }
-/*增加表格标题栏背景色*/
-.cm-embed-block.markdown-rendered .ob-table-enhancer thead > tr {
-    background-color: rgba(var(--callout-color), 0.1);
-    color:rgb(233, 35, 35) !important;
-}
+
 .markdown-rendered .callout-content table > thead {
     background-color: rgba(var(--callout-color), 0.1);
 }
@@ -8826,93 +8808,122 @@ ol li ol::before {
 /* 1. 树状结构，显示层级路径 */
 /* 2. 基于AccentColor的高亮 */
 /* 3. 和文档无序列表类似，父节点收起时，前面的圆点有阴影 */
-.workspace-leaf-content[data-type=outline] .view-content .outline {
-    padding-left: 0 !important;
+body {
+  /* 引导线粗细 */
+  --outline-guideline-width: 2px;
+  /* 引导线颜色 */
+  --outline-guideline-color: hsla(var(--color-accent-hsl), 0.9);
+  /* 一行高度 */
+  --outline-item-height: calc(var(--nav-item-size) * 1.8);
+  /* 鼠标经过颜色 */
+  --nav-item-background-hover: hsla(var(--color-accent-hsl), 0.15);
+  --accent-active: hsl(
+    var(--accent-h),
+    var(--accent-s),
+    calc(var(--accent-l) + 4%)
+  );
 }
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon {
-    cursor: pointer !important;
-    margin-right: var(--size-4-1) !important;
+
+.workspace-leaf-content[data-type=outline] .view-content .outline .collapse-icon {
+  padding-inline-end: var(--size-2-3);
 }
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon::before {
-    width: var(--size-4-2) !important;
-    height: var(--size-4-2) !important;
-    background-color: var(--text-accent) !important;
-    border-radius: 50% !important;
-    position: absolute !important;
-    left: calc(var(--size-4-5)) !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
+.workspace-leaf-content[data-type=outline] .view-content .outline .collapse-icon::before {
+  content: "" !important;
 }
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon svg path {
-    display: none !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-children {
-    overflow: hidden !important;
-    border-left: none !important;
-    margin-left: var(--size-4-2) !important;
-    padding-left: var(--size-4-4) !important;
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item {
+  position: relative;
 }
 .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self {
-    position: relative !important;
-    padding-left: var(--size-4-6) !important;
+  position: relative;
+  margin-bottom: 0;
+  white-space: nowrap;
+  margin-top: -1px; /* fix item gap */
 }
 .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner {
-    padding-left: var(--size-4-5) !important;
-  }
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner::after {
-    content: "" !important;
-    width: var(--size-4-1) !important;
-    height: var(--size-4-1) !important;
-    border: 2px solid var(--text-accent) !important;
-    border-radius: 50% !important;
-    position: absolute !important;
-    left: calc(var(--size-4-5)) !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
+  padding-left: 16px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: var(--outline-item-height);
+  line-height: var(--outline-item-height);
 }
 .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner::before {
-    content: "" !important;
-    width: var(--size-4-2) !important;
-    height: 50vh !important;
-    opacity: 0 !important;
-    border-left: 2px solid var(--text-accent) !important;
-    border-bottom: 2px solid var(--text-accent) !important;
-    border-bottom-left-radius: var(--size-4-2) !important;
-    position: absolute !important;
-    bottom: calc(var(--line-height-tight) * var(--nav-item-size) / 2 + var(--size-4-1));
-    left: -1px !important;
+  content: "";
+  width: var(--size-4-1);
+  height: var(--size-4-1);
+  border: 2px solid var(--outline-guideline-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
 }
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon + .tree-item-inner {
-    padding-left: 0;
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon ~ .tree-item-inner {
+  padding-left: 4px;
 }
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon + .tree-item-inner::after {
-    content: none !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover {
-    background-color: transparent !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover .tree-item-inner::before {
-    opacity: 1 !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover .tree-item-icon::before {
-    background-color: var(--text-normal) !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover .tree-item-inner::after {
-    border-color: var(--text-normal) !important;
-    background-color: var(--text-normal) !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-inner {
-    z-index: 2 !important;
-    background-color: var(--background-secondary) !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item > .tree-item-children:hover .tree-item-icon + .tree-item-inner::before {
-    opacity: 1 !important;
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon ~ .tree-item-inner::before {
+  content: none;
 }
 .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item.is-collapsed .tree-item-icon::before {
-    box-shadow: 0 0 0 4px var(--background-modifier-hover) !important;
+  box-shadow: 0 0 0 4px var(--background-modifier-hover);
 }
-.workspace-leaf-content[data-type=outline] .view-content .outline > .tree-item > .tree-item-self .tree-item-inner::before {
-    content: none !important;
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item::after {
+  content: "";
+  width: var(--outline-guideline-width);
+  position: absolute;
+  background-color: transparent;
+  top: calc(var(--outline-item-height) / 2 * -1);
+  left: -10px;
+  height: calc(100% - var(--outline-item-height) + var(--size-4-8));
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon {
+  cursor: pointer;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon::before {
+  width: var(--size-4-2);
+  height: var(--size-4-2);
+  background-color: var(--outline-guideline-color);
+  border-radius: 50%;
+  position: absolute;
+  left: 7px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon svg {
+  display: block;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon svg path {
+  display: none;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-children > .tree-item::after {
+  background-color: var(--outline-guideline-color);
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-self:hover + .tree-item-children .tree-item::after {
+  background-color: transparent;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-children > .tree-item:hover::after, .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-children > .tree-item:hover ~ .tree-item::after {
+  background-color: transparent;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item:hover > .tree-item-children > .tree-item:hover::before {
+  content: "";
+  position: absolute;
+  top: calc(var(--outline-item-height) / 2 * -1);
+  left: -10px;
+  bottom: calc(100% - (var(--outline-item-height) + var(--size-4-2)) / 2 - 1px);
+  width: 16px;
+  border-bottom-left-radius: var(--radius-m);
+  border-bottom: var(--outline-guideline-width) solid var(--outline-guideline-color);
+  border-left: var(--outline-guideline-width) solid var(--outline-guideline-color);
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline :is(.tree-item-children, .tree-item-self .tree-item-self) {
+  padding-left: 0;
+  margin-left: var(--size-4-5);
+  border-left: none;
+}
+.tree-item-self.is-clickable:hover {
+    background-color:unset !important;
+}
+.tree-item-self.is-clickable .tree-item-inner:hover {
+    background-color:var(--nav-item-background-hover)
 }
 /* ================= End ====================== */
 /* ================= Tag ====================== */
@@ -8923,9 +8934,6 @@ ol li ol::before {
 /*标签嵌套下， tag 标签堆叠行高*/
 a.tag {
     line-height: var(--tag-embed-line-height);
-}
-a.tag::before {
-    
 }
 /*==================Tag End=====================*/
 
@@ -8996,7 +9004,18 @@ div#quick-explorer .explorable-separator::before {
 	filter:none !important;
 }
 /*End*/
+/*增加表格标题栏背景色*/
+.cm-embed-block.markdown-rendered .ob-table-enhancer thead > tr {
+    background-color: rgba(var(--callout-color), 0.1);
+    color:rgb(233, 35, 35) !important;
+}
+/*【table enhanced】：修复由该插件生成的表格，不响应鼠标滑过时候的高亮行问题*/
+.ob-table-enhancer > tbody > tr:hover > td > a {
+    color:white !important;
+}
+/*End*/
 /*================【table-enhancer】插件End =================*/
+/*=======================【Lapel】插件 =======================*/
 /*【Lapel】插件,显示的大小*/
 .cm-gutters .cm-gutter.cm-lapel .cm-gutterElement .cm-heading-marker {
     font-size:medium;
@@ -9008,14 +9027,15 @@ div#quick-explorer .explorable-separator::before {
 /*End*/
 /*为【Lapel】插件，修复headings 下方添加边距后产生差分距离*/
 .cm-gutter.cm-lapel .cm-gutterElement {
-    margin-bottom: 1.2em;
+    margin-bottom: 0.76em;
+
 }
 /*End*/
 /*=====================【Lapel】插件End =====================*/
 /*=================【task progress bar】插件 =================*/
 /*【task progress bar】插件，优化效果*/
 .cm-task-progress-bar.with-number .progress-bar-inline-background {
-    border:1px solid var(--tx3);
+    border: 0.5px solid var(--tx3);
     background-color: var(--bg1) !important;
     width: 4.1rem !important;
 }
@@ -9071,13 +9091,21 @@ div#quick-explorer .explorable-separator::before {
     padding-bottom: 0.5em;
 }
 /*=================== dataview Cards ====================*/
-/*dataview Cards 视图下，增加指向（hover）的动画*/
- body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
-    background: var(--table-hover-raw-color);
-    color:white;
+/*table：增加指向（hover）的动画*/
+ body:not(.remove-table-transition) :is(.markdown-preview-view,
+ .markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover
+ , body:not(.remove-table-transition) :is(.markdown-preview-view
+ ,.markdown-rendered,.markdown-source-view) tbody tr:hover {
+    background-color: var(--table-hover-raw-color) !important;
+    color:white !important;
     transform: scale(1.02);
     transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
 }
+
+:is(.markdown-preview-view,.markdown-rendered) tbody tr:hover span a {
+    color:white;
+}
+
 :is(.markdown-preview-view,.markdown-rendered) table tbody>tr:hover, .markdown-source-view table tbody>tr:hover {
     background-color: var(--table-hover-raw-color);
     color:white;
@@ -9144,6 +9172,14 @@ span[class^=cm-list] .day-time-8 {
     background-color: #16c60c;
 }
 /* =============== dynamic-highlights End ============== */
+/* =============== CardBoard ============== */
+.card-board-card {
+    border-radius: var(--radius-l);
+    background-color: var(--bg1);
+}
+/* =============== CardBoard End ============== */
+
+
 /* ===================================================== */
 /* ==================== 插件间兼容性 ==================== */
 /* ===================================================== */
@@ -9175,36 +9211,89 @@ span[class^=cm-list] .day-time-8 {
 }
 /*End*/
 
-/* ================================== */
-/* ============ 测试代码 ============ */
-/* ================================== */
-/* 's' for question/more info task ('- [s]') */
-.markdown-source-view input[data-task="s"].task-list-item-checkbox:checked::after {
-    content: "";
-    -webkit-mask-position: 52% 52%;
-    -webkit-mask-size: 65%;
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-image: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 1024 1024"%3E%3Cpath fill="red" d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448s448-200.6 448-448S759.4 64 512 64zm234.8 736.5L223.5 277.2c16-19.7 34-37.7 53.7-53.7l523.3 523.3c-16 19.6-34 37.7-53.7 53.7z"%2F%3E%3C%2Fsvg%3E') !important;
-}
-/* yellow background colour for question/more info task ('- [s]') */
-.markdown-source-view input[data-task="s"].task-list-item-checkbox:checked {
-    background-color:transparent !important;
-    border:transparent;
+/* =========================================================== */
+/* ========================= 测试代码 ========================= */
+/* ============================================================ */
+
+
+.nav-file.book-pdf .nav-file-title .nav-file-tag {
+    margin-left:calc(var(--line-width-wide)+10px);
 }
 
+/*Siderbar区域 tab 按钮的 underline 样式优化，更见扁平化*/
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-spacer,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-spacer,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-spacer{
+    display:none
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container{
+    padding-right:0
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container-inner{
+    padding:0;
+    margin:0;
+    flex-grow:1;
+    gap:0
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header{
+    flex-grow:1;
+    border-radius:0;
+    max-width:100px
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header:hover,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header:hover,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header:hover{
+    /*background-color:transparent*/
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner{
+    background-color:transparent
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner{
+    border-bottom:4px solid transparent;
+    /*border-radius:0*/
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover{
+    /*border-color:var(--ui2)*/
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner{
+    border-bottom-color:var(--accent-active);
+    padding-top:1px
+}
+:is(.mod-left-split,.mod-right-split) .workspace-tab-header-container .workspace-tab-header.is-active {
+    box-shadow: unset;
+}
+
+/*【sidekick】插件，优化高亮建议的样式*/
+.cm-suggestion-candidate {
+}
+.cm-suggestion-candidate::before {
+    height: 0.35em !important;
+    top:unset !important;
+}
+/*================ End ==============*/
+
+/*代码块（embed）下，dataviewjs 插入内容的宽度和布局*/
+.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataviewjs {
+    margin: auto;
+    max-width:90% !important;
+}
+/*代码块（embed）下，dataviewjs 插入table 内容的宽度和布局*/
+.cm-preview-code-block.cm-embed-block.markdown-rendered .block-language-dataview {
+    margin: auto;
+    max-width:90% !important;
+}
+/*======================== 图片 ========================*/
 /*图片边框*/
-.internal-embed.image-embed.is-loaded {
+.internal-embed.image-embed.is-loaded img {
     border:2px double var(--ax1);
     border-radius: 5px;
 }
 /*End*/
 /*为引用的内容，增加边框*/
-.internal-embed.is-loaded {
+.internal-embed.is-loaded .markdown-embed {
     border:2px double var(--ax1);
     padding:10px;
     border-radius: 5px;
 }
 /*End*/
+/*====================== 图片 End ======================*/
+/*==================== 搜索（Search） ====================*/
 /*搜索结果的样式适配浅/深色主题*/
 .theme-light .mod-left-split .search-result-file-matches {
     color: var(--search-result-txcolor);
@@ -9215,22 +9304,30 @@ span[class^=cm-list] .day-time-8 {
     background-color: var(--search-result-bgcolor);
 }
 /*End*/
+/*=================== 搜索（Search） End ===================*/
+/*=================== 正文出链 和 回链（backlinks） ===================*/
 /*backlinks，在浅/深主题下的自定义样式*/
-.theme-dark .workspace-split .cm-editor .embedded-backlinks .tree-item.search-result .search-result-file-matches {
-    color: var(--backlinks-embed-txcolor);
+.theme-dark .workspace-split .internal-embed .markdown-embed {
     background-color: var(--backlinks-embed-bgcolor);
 }
-.theme-light .workspace-split .cm-editor .embedded-backlinks .tree-item.search-result .search-result-file-matches {
-    color: var(--backlinks-embed-txcolor);
+.theme-light .workspace-split .internal-embed .markdown-embed {
     background-color: var(--backlinks-embed-bgcolor);
+}
+.theme-dark .workspace-split .internal-embed .markdown-embed .markdown-preview-sizer.markdown-preview-section {
+    color: var(--backlinks-embed-txcolor);
+}
+.theme-light .workspace-split .internal-embed .markdown-embed .markdown-preview-sizer.markdown-preview-section {
+    color: var(--backlinks-embed-txcolor);
 }
 /*End*/
+/*=================== 正文出链 和 回链（backlinks） End ===================*/
 /*编辑模式下，修复callouts 的段前段后距离*/
 .cm-embed-block.markdown-rendered.cm-callout {
     margin-top:0.1em !important;
     margin-bottom:0.1em !important;
 }
 /*End*/
+
 /*checkbox,显示 tada 效果*/
 body:not(.unmute-checkbox-animation).checkbox-tada .is-flashing input.task-list-item-checkbox[type=checkbox]:checked:hover, 
 body:not(.unmute-checkbox-animation).checkbox-tada input.task-list-item-checkbox[type=checkbox]:checked:hover {
@@ -9252,8 +9349,6 @@ body:not(.unmute-checkbox-animation).checkbox-tada input.task-list-item-checkbox
     to {-webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1);}
   }
 /*End*/
-
-
 
 /*
 /*Obsidian 关闭按钮顺序调整
@@ -9406,9 +9501,9 @@ section > ol li::before {
  em {
     color: #66d9ef;
 }
-/* ================================== */
-/* ============ 陈旧代码 ============ */
-/* ================================== */
+/* ====================================================== */
+/* ====================== 陈旧代码 ====================== */
+/* ====================================================== */
 /*给bookinfo 的表格增加指向（hover）的动画*/
 /*
 body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
@@ -9546,3 +9641,102 @@ body.css-settings-manager {
 }
 */
 /*End*/
+
+/*大纲美化*/
+/*
+.workspace-leaf-content[data-type=outline] .view-content .outline {
+    padding-left: 0 !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon {
+    cursor: pointer !important;
+    margin-right: var(--size-4-1) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon::before {
+    width: var(--size-4-2) !important;
+    height: var(--size-4-2) !important;
+    background-color: var(--text-accent) !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    left: calc(var(--size-4-5)) !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon svg path {
+    display: none !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-children {
+    overflow: hidden !important;
+    border-left: none !important;
+    margin-left: var(--size-4-2) !important;
+    padding-left: var(--size-4-4) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self {
+    position: relative !important;
+    padding-left: var(--size-4-6) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner {
+    padding-left: var(--size-4-5) !important;
+  }
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner::after {
+    content: "" !important;
+    width: var(--size-4-1) !important;
+    height: var(--size-4-1) !important;
+    border: 2px solid var(--text-accent) !important;
+    border-radius: 50% !important;
+    position: absolute !important;
+    left: calc(var(--size-4-5)) !important;
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner::before {
+    content: "" !important;
+    width: var(--size-4-2) !important;
+    height: 50vh !important;
+    opacity: 0 !important;
+    border-left: 2px solid var(--text-accent) !important;
+    border-bottom: 2px solid var(--text-accent) !important;
+    border-bottom-left-radius: var(--size-4-2) !important;
+    position: absolute !important;
+    bottom: calc(var(--line-height-tight) * var(--nav-item-size) / 2 + var(--size-4-1));
+    left: -1px !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon + .tree-item-inner {
+    padding-left: 0;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon + .tree-item-inner::after {
+    content: none !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover {
+    background-color: transparent !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover .tree-item-inner::before {
+    opacity: 1 !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover .tree-item-icon::before {
+    background-color: var(--text-normal) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover .tree-item-inner::after {
+    border-color: var(--text-normal) !important;
+    background-color: var(--text-normal) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-inner {
+    z-index: 2 !important;
+    background-color: var(--background-secondary) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item > .tree-item-children:hover .tree-item-icon + .tree-item-inner::before {
+    opacity: 1 !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item.is-collapsed .tree-item-icon::before {
+    box-shadow: 0 0 0 4px var(--background-modifier-hover) !important;
+}
+.workspace-leaf-content[data-type=outline] .view-content .outline > .tree-item > .tree-item-self .tree-item-inner::before {
+    content: none !important;
+}
+/*tabs上的标题大小
+.workspace-tab-header-inner-title {
+    line-height: 1.0;
+}
+.workspace .mod-root .workspace-tab-header-inner::after {
+    background-color:transparent;
+}
+*/

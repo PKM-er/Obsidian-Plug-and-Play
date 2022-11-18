@@ -73,7 +73,7 @@ function proxy(e) {
         e.error = function (e, t) {
             return n(t)
         }
-        debugger
+        //debugger
         if (app.isMobile) {
             forMobile(e);
             return;

@@ -1,0 +1,10 @@
+{
+  "id": "obsidian-sidekick",
+  "name": "Sidekick",
+  "description": "A companion to identify hidden connections that match your tags and pages",
+  "version": "1.5.1",
+  "minAppVersion": "0.13.8",
+  "author": "Hady Osman",
+  "authorUrl": "https://hady.geek.nz",
+  "isDesktopOnly": false
+}

@@ -20,32 +20,14 @@
       "createdDate": 1668572776097,
       "modifiedDate": 1668437490703
     },
-    "📊Every Day/📊Every Day.md": {
-      "noteCount": 1,
-      "wordCount": 201,
-      "pageCount": 0.67,
-      "characterCount": 1912,
-      "nonWhitespaceCharacterCount": 1578,
-      "createdDate": 1658195328336,
-      "modifiedDate": 1658195328336
-    },
-    "📊Every Day/✅每日检查To-Do.md": {
-      "noteCount": 1,
-      "wordCount": 1426,
-      "pageCount": 4.753333333333333,
-      "characterCount": 13713,
-      "nonWhitespaceCharacterCount": 11216,
-      "createdDate": 1658195328288,
-      "modifiedDate": 1658195328288
-    },
     "更新日志（Changelog）.md": {
       "noteCount": 1,
-      "wordCount": 1650,
-      "pageCount": 5.5,
-      "characterCount": 14926,
-      "nonWhitespaceCharacterCount": 12663,
+      "wordCount": 1752,
+      "pageCount": 5.84,
+      "characterCount": 15890,
+      "nonWhitespaceCharacterCount": 13478,
       "createdDate": 1666160084897,
-      "modifiedDate": 1668571392177
+      "modifiedDate": 1668775021277
     },
     "插件说明.md": {
       "noteCount": 1,
@@ -67,12 +49,57 @@
     },
     "使用问题&FAQ.md": {
       "noteCount": 1,
-      "wordCount": 51,
-      "pageCount": 0.17,
-      "characterCount": 508,
-      "nonWhitespaceCharacterCount": 452,
+      "wordCount": 191,
+      "pageCount": 0.6366666666666667,
+      "characterCount": 1836,
+      "nonWhitespaceCharacterCount": 1619,
       "createdDate": 1668478666322,
-      "modifiedDate": 1668482628276
+      "modifiedDate": 1668774311951
+    },
+    "Template/Video Template.md": {
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 57,
+      "nonWhitespaceCharacterCount": 48,
+      "createdDate": 1665556680447,
+      "modifiedDate": 1653285302093
+    },
+    "Template/tp-movie-douban.md": {
+      "noteCount": 1,
+      "wordCount": 52,
+      "pageCount": 0.17333333333333334,
+      "characterCount": 582,
+      "nonWhitespaceCharacterCount": 512,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1658204494903
+    },
+    "Template/tp-movie.md": {
+      "noteCount": 1,
+      "wordCount": 33,
+      "pageCount": 0.11,
+      "characterCount": 427,
+      "nonWhitespaceCharacterCount": 388,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1653285293464
+    },
+    "Template/tp-book.md": {
+      "noteCount": 1,
+      "wordCount": 40,
+      "pageCount": 0.13333333333333333,
+      "characterCount": 509,
+      "nonWhitespaceCharacterCount": 463,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1653285318302
+    },
+    "Template/tp-book-callout.md": {
+      "noteCount": 1,
+      "wordCount": 94,
+      "pageCount": 0.31333333333333335,
+      "characterCount": 1079,
+      "nonWhitespaceCharacterCount": 770,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1658204636749
     },
     "Template/tasksCalendar/Styles/style-previews.md": {
       "noteCount": 1,
@@ -91,51 +118,6 @@
       "nonWhitespaceCharacterCount": 7433,
       "createdDate": 1668572742828,
       "modifiedDate": 1668403505922
-    },
-    "Template/Video Template.md": {
-      "noteCount": 1,
-      "wordCount": 8,
-      "pageCount": 0.02666666666666667,
-      "characterCount": 57,
-      "nonWhitespaceCharacterCount": 48,
-      "createdDate": 1665556680447,
-      "modifiedDate": 1653285302093
-    },
-    "Template/tp-movie.md": {
-      "noteCount": 1,
-      "wordCount": 33,
-      "pageCount": 0.11,
-      "characterCount": 427,
-      "nonWhitespaceCharacterCount": 388,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1653285293464
-    },
-    "Template/tp-movie-douban.md": {
-      "noteCount": 1,
-      "wordCount": 52,
-      "pageCount": 0.17333333333333334,
-      "characterCount": 582,
-      "nonWhitespaceCharacterCount": 512,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1658204494903
-    },
-    "Template/tp-book-callout.md": {
-      "noteCount": 1,
-      "wordCount": 94,
-      "pageCount": 0.31333333333333335,
-      "characterCount": 1079,
-      "nonWhitespaceCharacterCount": 770,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1658204636749
-    },
-    "Template/tp-book.md": {
-      "noteCount": 1,
-      "wordCount": 40,
-      "pageCount": 0.13333333333333333,
-      "characterCount": 509,
-      "nonWhitespaceCharacterCount": 463,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1653285318302
     },
     "Template/startup/FastStart-StartupScript.md": {
       "noteCount": 1,
@@ -229,12 +211,12 @@
     },
     "Readme.md": {
       "noteCount": 1,
-      "wordCount": 655,
-      "pageCount": 2.183333333333333,
-      "characterCount": 7664,
-      "nonWhitespaceCharacterCount": 6816,
+      "wordCount": 518,
+      "pageCount": 1.7266666666666666,
+      "characterCount": 6532,
+      "nonWhitespaceCharacterCount": 5912,
       "createdDate": 1668477875446,
-      "modifiedDate": 1668572690035
+      "modifiedDate": 1668775125840
     },
     "People/Obsidian-plug-and-play/测试文件夹/测试引用.md": {
       "noteCount": 1,
@@ -317,15 +299,6 @@
       "createdDate": 1668010972048,
       "modifiedDate": 1667897933772
     },
-    "People/Movie/MovieList.md": {
-      "noteCount": 1,
-      "wordCount": 203,
-      "pageCount": 0.6766666666666666,
-      "characterCount": 2337,
-      "nonWhitespaceCharacterCount": 2033,
-      "createdDate": 1658195328084,
-      "modifiedDate": 1664349573396
-    },
     "People/Movie/Movie.md": {
       "noteCount": 1,
       "wordCount": 7,
@@ -334,6 +307,15 @@
       "nonWhitespaceCharacterCount": 47,
       "createdDate": 1663246755138,
       "modifiedDate": 1664347416362
+    },
+    "People/Movie/MovieList.md": {
+      "noteCount": 1,
+      "wordCount": 203,
+      "pageCount": 0.6766666666666666,
+      "characterCount": 2337,
+      "nonWhitespaceCharacterCount": 2033,
+      "createdDate": 1658195328084,
+      "modifiedDate": 1664349573396
     },
     "People/Movie/Movie database.md": {
       "noteCount": 1,
@@ -506,14 +488,14 @@
       "createdDate": 1658195328069,
       "modifiedDate": 1668008963671
     },
-    "Obsidian-example/优化/加速.md": {
+    "Obsidian-example/常见的语法罗列.md": {
       "noteCount": 1,
-      "wordCount": 151,
-      "pageCount": 0.5033333333333333,
-      "characterCount": 4989,
-      "nonWhitespaceCharacterCount": 4665,
-      "createdDate": 1658195328069,
-      "modifiedDate": 1658195328069
+      "wordCount": 1231,
+      "pageCount": 4.1033333333333335,
+      "characterCount": 19430,
+      "nonWhitespaceCharacterCount": 17842,
+      "createdDate": 1668773102337,
+      "modifiedDate": 1668774791340
     },
     "Obsidian-example/Tables 表格样式/Tables.md": {
       "noteCount": 1,
@@ -596,14 +578,14 @@
       "createdDate": 1658195328069,
       "modifiedDate": 1658195328069
     },
-    "Obsidian-example/Readme英文版.md": {
+    "Obsidian-example/优化/加速.md": {
       "noteCount": 1,
-      "wordCount": 491,
-      "pageCount": 1.6366666666666667,
-      "characterCount": 5284,
-      "nonWhitespaceCharacterCount": 4654,
-      "createdDate": 1658195328053,
-      "modifiedDate": 1664529260988
+      "wordCount": 151,
+      "pageCount": 0.5033333333333333,
+      "characterCount": 4989,
+      "nonWhitespaceCharacterCount": 4665,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1658195328069
     },
     "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md": {
       "noteCount": 1,

@@ -3,11 +3,12 @@
   "global_enable": {
     "border": true,
     "font-weight": true,
-    "prefix": false
+    "prefix": false,
+    "background-color": false
   },
   "global": {
     "font-weight": "900",
-    "border": "1"
+    "border": "2"
   },
   "attrList": [
     "nest tag",
@@ -182,6 +183,36 @@
       "border": "",
       "font-weight": "",
       "tag": "bug",
+      "enable": true
+    },
+    {
+      "nest-tag": "",
+      "remove-hash": "",
+      "remove-tag-name": "",
+      "radius": "",
+      "prefix": "🎨",
+      "suffix": "",
+      "background-color": "#2965f1",
+      "text-color": "white",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "CSS",
+      "enable": true
+    },
+    {
+      "nest-tag": "",
+      "remove-hash": "",
+      "remove-tag-name": "",
+      "radius": "",
+      "prefix": "☕",
+      "suffix": "",
+      "background-color": "#f7df1e",
+      "text-color": "white",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "JavaScript",
       "enable": true
     }
   ],

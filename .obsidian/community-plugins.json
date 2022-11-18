@@ -5,7 +5,6 @@
   "obsidian-kanban",
   "obsidian-excalidraw-plugin",
   "obsidian-icon-folder",
-  "oz-image-plugin",
   "quickadd",
   "templater-obsidian",
   "obsidian-annotator",
@@ -59,6 +58,5 @@
   "dbfolder",
   "obsidian-emoji-toolbar",
   "obsidian-view-mode-by-frontmatter",
-  "novel-word-count",
-  "music-code-blocks"
+  "novel-word-count"
 ]

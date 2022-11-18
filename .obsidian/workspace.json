@@ -18,6 +18,102 @@
                   "eState": "{}"
                 },
                 {
+                  "title": "Readme",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":19,\"ch\":48},\"to\":{\"line\":19,\"ch\":48}},\"scroll\":0.11703239289446186}"
+                },
+                {
+                  "title": "优化Obsidian 启动速度",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-learning/优化Obsidian 启动速度.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":13,\"ch\":37},\"to\":{\"line\":13,\"ch\":37}},\"scroll\":0}"
+                },
+                {
+                  "title": "更新日志（Changelog）",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":339,\"ch\":51},\"to\":{\"line\":330,\"ch\":0}},\"scroll\":326.1546798406863}"
+                },
+                {
+                  "title": "优化Obsidian 启动速度",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-learning/优化Obsidian 启动速度.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+                },
+                {
+                  "title": "更新日志（Changelog）",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":33.043571920955884}"
+                },
+                {
+                  "title": "使用问题&FAQ",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"使用问题&FAQ.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
+                },
+                {
+                  "title": "Readme",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":6.639067038511619}"
+                },
+                {
+                  "title": "更新日志（Changelog）",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":78,\"ch\":33},\"to\":{\"line\":44,\"ch\":1}},\"scroll\":27.80392156862745}"
+                },
+                {
+                  "title": "Readme",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":51,\"ch\":48},\"to\":{\"line\":7,\"ch\":0}},\"scroll\":4.066720999923407}"
+                },
+                {
+                  "title": "更新日志（Changelog）",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":33.056985294117645}"
+                },
+                {
+                  "title": "Readme",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":154,\"ch\":52},\"to\":{\"line\":154,\"ch\":52}},\"scroll\":170.87928921568627}"
+                },
+                {
+                  "title": "更新日志（Changelog）",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":556,\"ch\":0},\"to\":{\"line\":556,\"ch\":0}},\"scroll\":550.1572712916953}"
+                },
+                {
+                  "title": "Readme",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":29,\"ch\":15},\"to\":{\"line\":29,\"ch\":15}},\"scroll\":28.16094731349571}"
+                },
+                {
+                  "title": "更新日志（Changelog）",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":145,\"ch\":26},\"to\":{\"line\":145,\"ch\":26}},\"scroll\":130.84313725490196}"
+                },
+                {
+                  "title": "插件说明",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"插件说明.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":3.3903186274509802}"
+                },
+                {
+                  "title": "Obsidian教程——基础语法和操作",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
                   "title": "Obsidian-样式",
                   "icon": "lucide-file",
                   "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/高级语法/Obsidian-样式.md\",\"mode\":\"source\",\"source\":false}}",
@@ -110,16 +206,12 @@
               ]
             },
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           },
           {
-            "id": "6cd6c657c9ffec59",
+            "id": "314befff63dcd0b6",
             "type": "leaf",
             "pane-relief:history-v1": {
               "pos": 0,
@@ -129,15 +221,39 @@
                   "eState": "{}"
                 },
                 {
-                  "title": "Obsidian教程——基础语法和操作",
+                  "title": "⏰DashBoard",
                   "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":1656,\"ch\":0},\"to\":{\"line\":1656,\"ch\":0}},\"scroll\":1657.0269607843138}"
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"📊Every Day/⏰DashBoard.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
                 },
                 {
-                  "title": "Obsidian 教程——Latex",
+                  "title": "Readme",
                   "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian 教程——Latex.md\",\"mode\":\"source\",\"source\":false}}",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":43.67320101868872}"
+                },
+                {
+                  "title": "⏰DashBoard",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"📊Every Day/⏰DashBoard.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":141.14142573844066}"
+                },
+                {
+                  "title": "Readme",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":52,\"ch\":6},\"to\":{\"line\":52,\"ch\":6}},\"scroll\":31.790747549019606}"
+                },
+                {
+                  "title": "更新日志（Changelog）",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":78,\"ch\":59},\"to\":{\"line\":78,\"ch\":4}},\"scroll\":62.708060470281865}"
+                },
+                {
+                  "title": "优化Obsidian 启动速度",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-learning/优化Obsidian 启动速度.md\",\"mode\":\"source\",\"source\":false}}",
                   "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
                 }
               ]
@@ -145,14 +261,14 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian-example/Obsidian使用教程/Obsidian 教程——Latex.md",
+                "file": "更新日志（Changelog）.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "db3ac3378c8f6016",
+            "id": "f5e88eb45f6043d4",
             "type": "leaf",
             "pane-relief:history-v1": {
               "pos": 0,
@@ -160,50 +276,40 @@
                 {
                   "state": "{}",
                   "eState": "{}"
-                },
-                {
-                  "title": "Obsidian 教程——mermaid",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian 教程——mermaid.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":377,\"ch\":0},\"to\":{\"line\":377,\"ch\":0}},\"scroll\":342.0567226890756}"
-                },
-                {
-                  "title": "Obsidian教程——基础语法和操作",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":1660,\"ch\":0},\"to\":{\"line\":1660,\"ch\":0}},\"scroll\":1638.012254901961}"
-                },
-                {
-                  "title": "Obsidian 教程——mermaid",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian 教程——mermaid.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-                },
-                {
-                  "title": "Obsidian 教程——Latex",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian 教程——Latex.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":83,\"ch\":0},\"to\":{\"line\":83,\"ch\":0}},\"scroll\":66.84018342391305}"
-                },
-                {
-                  "title": "Obsidian 教程——mermaid",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian 教程——mermaid.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
                 }
               ]
             },
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md",
+                "file": "使用问题&FAQ.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "578162c92891e7b4",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Obsidian-example/常见的语法罗列.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -216,23 +322,6 @@
         "id": "64e10c94fea2703f",
         "type": "tabs",
         "children": [
-          {
-            "id": "f70f39237c7cd7f5",
-            "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "state": "{}",
-                  "eState": "{}"
-                }
-              ]
-            },
-            "state": {
-              "type": "recent-files",
-              "state": {}
-            }
-          },
           {
             "id": "c55efec099ef9ac1",
             "type": "leaf",
@@ -253,6 +342,23 @@
             }
           },
           {
+            "id": "f70f39237c7cd7f5",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
+            "state": {
+              "type": "recent-files",
+              "state": {}
+            }
+          },
+          {
             "id": "b0a47a1490c3954e",
             "type": "leaf",
             "pane-relief:history-v1": {
@@ -267,7 +373,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#javascript",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -292,13 +398,29 @@
               "type": "starred",
               "state": {}
             }
+          },
+          {
+            "id": "6a7bbb4e8fb709eb",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
+            "state": {
+              "type": "book-explorer-view",
+              "state": {}
+            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 378.5
+    "width": 309.5
   },
   "right": {
     "id": "0afdab19216adf86",
@@ -323,7 +445,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -349,7 +470,6 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -457,9 +577,7 @@
             },
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md"
-              }
+              "state": {}
             }
           }
         ],
@@ -467,19 +585,20 @@
       }
     ],
     "direction": "horizontal",
-    "width": 353.72222900390625
+    "width": 353.72222900390625,
+    "collapsed": true
   },
   "active": "c55efec099ef9ac1",
   "lastOpenFiles": [
-    "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md",
-    "Obsidian-example/Obsidian使用教程/Obsidian 教程——代码域.md",
-    "Obsidian-example/Obsidian使用教程/Obsidian 教程——mermaid.md",
-    "Obsidian-example/Obsidian使用教程/Obsidian 教程——Latex.md",
-    "Obsidian-example/高级语法/Obsidian-样式.md",
-    "Obsidian-example/高级语法/DataView syntax.md",
-    "Obsidian-example/语法记不住系列/表格（图形化处理，加格式转化）.md",
-    "插件说明.md",
-    "Template/startup/FastStart-Plugins-LongLongDelay.md",
-    "Template/startup/FastStart-Plugins-LongDelay.md"
+    "Readme.md",
+    "更新日志（Changelog）.md",
+    "使用问题&FAQ.md",
+    "Obsidian-example/常见的语法罗列.md",
+    "Obsidian-example/Readme英文版.md",
+    "未命名.md",
+    "Template/startup/FastStart-StartupScript.md",
+    "📊Every Day/⏰DashBoard.md",
+    "📊Every Day/📊Every Day.md",
+    "📊Every Day/✅每日检查To-Do.md"
   ]
 }

@@ -9,20 +9,28 @@
       "path": "更新日志（Changelog）.md"
     },
     {
-      "basename": "优化Obsidian 启动速度",
-      "path": "Obsidian-learning/优化Obsidian 启动速度.md"
+      "basename": "使用问题&FAQ",
+      "path": "使用问题&FAQ.md"
+    },
+    {
+      "basename": "常见的语法罗列",
+      "path": "Obsidian-example/常见的语法罗列.md"
     },
     {
       "basename": "FastStart-StartupScript",
       "path": "Template/startup/FastStart-StartupScript.md"
     },
     {
-      "basename": "FastStart-Plugins-LongDelay",
-      "path": "Template/startup/FastStart-Plugins-LongDelay.md"
+      "basename": "⏰DashBoard",
+      "path": "📊Every Day/⏰DashBoard.md"
     },
     {
-      "basename": "使用问题&FAQ",
-      "path": "使用问题&FAQ.md"
+      "basename": "优化Obsidian 启动速度",
+      "path": "Obsidian-learning/优化Obsidian 启动速度.md"
+    },
+    {
+      "basename": "FastStart-Plugins-LongDelay",
+      "path": "Template/startup/FastStart-Plugins-LongDelay.md"
     },
     {
       "basename": "插件大全",
