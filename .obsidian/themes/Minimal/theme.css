@@ -6354,6 +6354,12 @@ settings:
 		type: class-toggle
 		default: false
 	-
+		id: tag-font-size
+		description: Font size in px of Tag
+		type: variable-number
+		default: 14
+		format: px
+	-
 		id: tag-radius
 		title: Tag shape
 		type: variable-select
@@ -9214,7 +9220,9 @@ span[class^=cm-list] .day-time-8 {
 /* =========================================================== */
 /* ========================= 测试代码 ========================= */
 /* ============================================================ */
-
+.cm-hashtag {
+    font-size:var(--tag-font-size);
+}
 
 .nav-file.book-pdf .nav-file-title .nav-file-tag {
     margin-left:calc(var(--line-width-wide)+10px);
