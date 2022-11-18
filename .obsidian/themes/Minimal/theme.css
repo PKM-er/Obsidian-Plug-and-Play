@@ -6355,6 +6355,7 @@ settings:
 		default: false
 	-
 		id: tag-font-size
+		title: Tag font size
 		description: Font size in px of Tag
 		type: variable-number
 		default: 14
