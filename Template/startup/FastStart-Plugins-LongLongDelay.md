@@ -1,12 +1,5 @@
-obsidian-file-info-plugin
-tag-word-cloud
 obsidian-emoji-toolbar
-quick-explorer
-obsidian-excalidraw-plugin
 obsidian-pandoc
 obsidian-math-plus
 lapel
-obsidian-enhancing-mindmap
-obsidian-view-mode-by-frontmatter
-obsidian-colorful-tag
-obsidian-custom-frames
+quickadd

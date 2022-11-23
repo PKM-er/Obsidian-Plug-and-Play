@@ -1,0 +1,8 @@
+{
+  "defaultSearchEngine": "duckduckgo",
+  "customSearchUrl": "https://duckduckgo.com/?q=",
+  "customHighlightFormat": false,
+  "highlightFormat": "[{CONTENT}]({URL})",
+  "openInSameTab": false,
+  "openInObsidianWeb": true
+}

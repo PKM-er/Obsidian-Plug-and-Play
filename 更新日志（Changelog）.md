@@ -34,20 +34,27 @@
 ## 1. v0.2.9
 1、📝概况
 - 适配 
-	- 适配 Obsidian v1.0.3；
-	- 适配 Minimal 主题的 v6.1.8 版；
-	- 配色：Notion；
+	- 适配版本 ：Obsidian v1.0.3；
+	- 适配主题： Minimal 主题的 v6.1.8 版；
+	- 主题配色：Notion；
 - 插件  
 	-  插件数量：62个（15个插件默认未开启）
-	- 是的这个版本
+		- 是的，此版本大幅度调整了预启动的插件数量
+		- 首先为了启动速度更快
+		- 其次：发现之前版本中，默认启动的插件存在内存泄漏，做为现在主力的笔记和工作软件，常常要开启一整天。这种内存泄漏会导致界面响应变慢或引发不可知问题。
+		- 我尝试去定位这些问题，但能力有限，需要很长时间，甚至依赖原作者的修复。权宜（~~偷懒~~）方法就是依赖在用的时候开启它们。
+		- 如果你的电脑配置够强悍，可以忽略这个问题。
 
-2、🔌插件 
+2、🔌插件
 - 插件更新 
-	- 【Attachment Name Formatting】更新至 1.6.0；
+	- 【Attachment Name Formatting】更新至 1.6.3；
+		- 修复：原作者修复了统一文件重命名时，导致图片在文件中嵌入丢失的问题；
+	- 【DB Folder】更新至 2.9.1；
 	- 【Exclalidraw】更新至 1.8.0；
 	- 【Omnisearch】更新至 1.8.1；
-	- 【QuickAdd】更新至0.6.1；
-	- 【Quick Expolorer】更新至0.2.4；
+	- 【QuickAdd】更新至0.6.2；
+	- 【Quick Explorer】更新至0.2.4；
+	- 【Another Web Browser】插件替换【Web Browser】:功能一样， 只是为了后续可能稳定性更佳；
  - ✔️插件新增
 	- 【SideKick】（默认：不开启）
 		- 🎖️功能：
@@ -62,21 +69,29 @@
 	- 【Convert url to Preview(iframe)】移除
 		- 是的，我感觉她已经可以被【】
 - ⚙️插件设置
-	- 【Booknote】1.0后会因为样式异常，标题（file-content）和对应的文件类型标签（file-tag）样式错乱，导致渲染错乱问题。
+	- 【Tasks Calendar】更新至 1.3.3
+		- 【Tasks Calendar】是基于Dataview 的JS和样式配置；路径：Template > tasksCalendar；
+		- 原作者支持了统计，你可以在嵌入代码的实例中找到；路径：Every Day > Dash Board；
+		- 原作者支持了不同演示的切换；
+	- 【Booknote】1.0后会因为样式异常，标题（file-content）和对应的文件类型标签（file-tag）样式错乱，保持和常用文件浏览器样式一致；
 	- 【SideKick】优化了高亮提示的样式；
 	- 【Kanban】设置为默认不启动；P.S.我自用的库中已经将其去掉了；
 
 3、🎨样式
+- 新增
+	- 移植 Mado 11 的自动隐藏 ribbon 功能，鼠标进入到边缘时候展现；路径：theme settings > Minmal > Ribbon；
 - 样式优化
-	- 优化：Siderbar 区域 tab 按钮的 underline 样式优化，更见扁平化
-	- [ ] 优化：移植 Mado 11 的自动隐藏 ribbon 功能，鼠标进入到边缘时候展现； #todo
-	- [ ] 优化：移植 Mado  11 在设置界面（settings）的配色； #todo
+	- 优化：Siderbar 区域 tab 按钮的 underline 样式优化，更见扁平化；路径：theme settings > Minmal > Sidebars > Sidebar tab style；
+	- 优化：针对【TaskCalendar】进行了样式配置，放大了对应表格的字号；
+	- 优化：移植 Mado  11 在设置界面（Settings）的配色；
 - 🛠️样式修复
 	- 修复：修复了之前焦点标签页（active Tab）右侧内圆角，和非焦点标签页边框冲突的问题；
 	- 修复：在【Minimal Theme Settings】 中 打开【Text labels for primary navigation】开关后，导致导航栏布局有莫名留白；
 	- 修复：设置菜单（settings）中，按钮（button）边框弧度；
 	- 修复：正文引用内容的文字颜色和背景色设置；
-
+4、🙁遗留问题
+- 在页面搜索时，会触发整体布局页面的抖动，目前已经派出了主题的原因，正在排查是哪一个插件；
+	
 ## 2. v0.2.8
 1、📝概况
 - 适配 
@@ -183,14 +198,14 @@
 		- 功能：支持插件设置页面以标签页（Tab）的方式出现，不需要每次进入设置页面，调整的所见即所得效果更好（命令面板：Stlye Settings:Show style settings view）
 - ⚙️插件设置
 	- 【Color Tag】增加了一些示例，希望对不了解这个插件的朋友有用；
-	- 【proxy github】针对插件的JS进行一些微小调整，不影响功能的情况，注释 弹窗提示 和 console 的功能，这样不会有密密麻麻的弹窗了。（我在中文论坛里面也回答过类似的 pull ）  
+	- 【Proxy Github】针对插件的JS进行一些微小调整，不影响功能的情况，注释 弹窗提示 和 console 的功能，这样不会有密密麻麻的弹窗了。（我在中文论坛里面也回答过类似的 pull ）  
 
 3、🎨样式
 - ✔️样式新增
 	- 集成样式设置，现在你可以进入 style settings 的设置中；
-		- 集成：搜素结果的文字和背景颜色设定。路径：theme settings > minmal > Search；
-		- 集成：标签页堆叠（Tab-stacked）：增加自上而下竖排模式。路径：theme settings > minmal > Tab stacks（option：Top-vertical）；
-		- 集成：标签（Tag）：增加内嵌模式和正文中行高的设定，防止过度标签堆叠时候的换行拥挤； 路径：路径：theme settings > minmal > Tags > Tag line height/Tag line height in embed；
+		- 集成：搜素结果的文字和背景颜色设定。路径：theme settings > Minmal > Search；
+		- 集成：标签页堆叠（Tab-stacked）：增加自上而下竖排模式。路径：theme settings > Minmal > Tab stacks（option：Top-vertical）；
+		- 集成：标签（Tag）：增加内嵌模式和正文中行高的设定，防止过度标签堆叠时候的换行拥挤； 路径：路径：theme settings > Minmal > Tags > Tag line height/Tag line height in embed；
 
 - 🛠️样式修复
 	- **修复：【严重】代码块（embed ）编辑块按钮不易点击的问题；**
@@ -245,9 +260,9 @@
 3、🎨样式
 - ✔️样式新增
 	- 集成样式设置，现在你可以进入 style settings 的设置中；
-		- 合并样式所有缩进线的设置整合；Indentation guides 中，包括缩进先水平位置调整，无序列表前缀；路径：theme settings > minmal > Indentation guides
-		- 引入了类似 blue topz 中，checkbox 的 tada 动画，你可以自由开关该动效；路径：theme settings > minmal > list and tasks；
-		- 回链（backlinks）在深浅主题下的适配和设置；路径：theme settings > minmal > Links > Backlink embed style
+		- 合并样式所有缩进线的设置整合；Indentation guides 中，包括缩进先水平位置调整，无序列表前缀；路径：theme settings > Minmal > Indentation guides
+		- 引入了类似 blue topz 中，checkbox 的 tada 动画，你可以自由开关该动效；路径：theme settings > Minmal > list and tasks；
+		- 回链（backlinks）在深浅主题下的适配和设置；路径：theme settings > Minmal > Links > Backlink embed style
 		- 针对搜索结果的样式进行了修复
 - 🛠️样式修复
 	- 修复：无需列表前缀符号，在阅读视图下的错位；
@@ -288,7 +303,7 @@
 3、样式
 - 新增
 	- 集成样式设置，现在你可以进入 style settings 的设置中；
-		- 针对无序列表或者有序列表，缩进线的水平布局调整，这可以有效缓解不同主题或者样式导致的错误；路径：theme settings > minmal > 无序列表；
+		- 针对无序列表或者有序列表，缩进线的水平布局调整，这可以有效缓解不同主题或者样式导致的错误；路径：theme settings > Minmal > 无序列表；
 - 修复
 	- 修复：无需列表前缀符号，在阅读视图下的错位；
 
@@ -308,8 +323,8 @@
 	- 标签栏（tabs），优化焦点tab 和 非焦点tab 的样式；
 	- 标签栏（tabs），堆叠模式（stacked）支持自上而下显示文字排版；
 	- 集成样式设置，现在你可以进入 style settings 的设置中；
-		- 编辑器-背景颜色（适配浅/暗色模式），路径：theme settings > minmal > 编辑器背景色；
-		- 无序列表前缀自定义，路径：theme settings > minmal > 无序列表前缀（填写前缀符号，需要将符号放入''内才可生效）；
+		- 编辑器-背景颜色（适配浅/暗色模式），路径：theme settings > Minmal > 编辑器背景色；
+		- 无序列表前缀自定义，路径：theme settings > Minmal > 无序列表前缀（填写前缀符号，需要将符号放入''内才可生效）；
 - 修复
 	- 文件目录导航中，字号过大的问题【故障原因：因为 Obsidian 的 ctrl +滚轮，导致之前的适配工作有问题】
 	- 设置界面，菜单字号过大的问题；【故障原因：同上】

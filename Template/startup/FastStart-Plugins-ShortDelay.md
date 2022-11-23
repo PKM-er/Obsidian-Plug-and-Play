@@ -1,5 +1,4 @@
-quickadd
-obsidian-advanced-uri
-obsidian-quiet-outline
 obsidian-image-toolkit
-obsidian-minimal-settings
+obsidian-view-mode-by-frontmatter
+obsidian-colorful-tag
+obsidian-custom-frames

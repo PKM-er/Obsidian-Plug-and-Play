@@ -22,12 +22,12 @@
     },
     "更新日志（Changelog）.md": {
       "noteCount": 1,
-      "wordCount": 1752,
-      "pageCount": 5.84,
-      "characterCount": 15890,
-      "nonWhitespaceCharacterCount": 13478,
+      "wordCount": 1943,
+      "pageCount": 6.476666666666667,
+      "characterCount": 17812,
+      "nonWhitespaceCharacterCount": 15130,
       "createdDate": 1666160084897,
-      "modifiedDate": 1668775021277
+      "modifiedDate": 1669186007793
     },
     "插件说明.md": {
       "noteCount": 1,
@@ -55,168 +55,6 @@
       "nonWhitespaceCharacterCount": 1619,
       "createdDate": 1668478666322,
       "modifiedDate": 1668774311951
-    },
-    "Template/Video Template.md": {
-      "noteCount": 1,
-      "wordCount": 8,
-      "pageCount": 0.02666666666666667,
-      "characterCount": 57,
-      "nonWhitespaceCharacterCount": 48,
-      "createdDate": 1665556680447,
-      "modifiedDate": 1653285302093
-    },
-    "Template/tp-movie-douban.md": {
-      "noteCount": 1,
-      "wordCount": 52,
-      "pageCount": 0.17333333333333334,
-      "characterCount": 582,
-      "nonWhitespaceCharacterCount": 512,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1658204494903
-    },
-    "Template/tp-movie.md": {
-      "noteCount": 1,
-      "wordCount": 33,
-      "pageCount": 0.11,
-      "characterCount": 427,
-      "nonWhitespaceCharacterCount": 388,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1653285293464
-    },
-    "Template/tp-book.md": {
-      "noteCount": 1,
-      "wordCount": 40,
-      "pageCount": 0.13333333333333333,
-      "characterCount": 509,
-      "nonWhitespaceCharacterCount": 463,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1653285318302
-    },
-    "Template/tp-book-callout.md": {
-      "noteCount": 1,
-      "wordCount": 94,
-      "pageCount": 0.31333333333333335,
-      "characterCount": 1079,
-      "nonWhitespaceCharacterCount": 770,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1658204636749
-    },
-    "Template/tasksCalendar/Styles/style-previews.md": {
-      "noteCount": 1,
-      "wordCount": 199,
-      "pageCount": 0.6633333333333333,
-      "characterCount": 1847,
-      "nonWhitespaceCharacterCount": 1610,
-      "createdDate": 1668572742834,
-      "modifiedDate": 1668403517738
-    },
-    "Template/tasksCalendar/README.md": {
-      "noteCount": 1,
-      "wordCount": 1263,
-      "pageCount": 4.21,
-      "characterCount": 8796,
-      "nonWhitespaceCharacterCount": 7433,
-      "createdDate": 1668572742828,
-      "modifiedDate": 1668403505922
-    },
-    "Template/startup/FastStart-StartupScript.md": {
-      "noteCount": 1,
-      "wordCount": 45,
-      "pageCount": 0.15,
-      "characterCount": 510,
-      "nonWhitespaceCharacterCount": 414,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1665555808557
-    },
-    "Template/startup/FastStart-Plugins-ShortDelay.md": {
-      "noteCount": 1,
-      "wordCount": 5,
-      "pageCount": 0.016666666666666666,
-      "characterCount": 102,
-      "nonWhitespaceCharacterCount": 98,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1668436224473
-    },
-    "Template/startup/FastStart-Plugins-LongLongDelay.md": {
-      "noteCount": 1,
-      "wordCount": 12,
-      "pageCount": 0.04,
-      "characterCount": 252,
-      "nonWhitespaceCharacterCount": 241,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1668568873679
-    },
-    "Template/startup/FastStart-Plugins-LongDelay.md": {
-      "noteCount": 1,
-      "wordCount": 8,
-      "pageCount": 0.02666666666666667,
-      "characterCount": 169,
-      "nonWhitespaceCharacterCount": 162,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1668436331386
-    },
-    "Template/startup/FastStart-GenerateListOfInstalledPlugins.md": {
-      "noteCount": 1,
-      "wordCount": 3,
-      "pageCount": 0.01,
-      "characterCount": 98,
-      "nonWhitespaceCharacterCount": 96,
-      "createdDate": 1658195328100,
-      "modifiedDate": 1646116530000
-    },
-    "Template/Literature Template.md": {
-      "noteCount": 1,
-      "wordCount": 17,
-      "pageCount": 0.056666666666666664,
-      "characterCount": 108,
-      "nonWhitespaceCharacterCount": 88,
-      "createdDate": 1665556680394,
-      "modifiedDate": 1641032644000
-    },
-    "Template/Fleeting Template.md": {
-      "noteCount": 1,
-      "wordCount": 8,
-      "pageCount": 0.02666666666666667,
-      "characterCount": 50,
-      "nonWhitespaceCharacterCount": 42,
-      "createdDate": 1665556680390,
-      "modifiedDate": 1641032954000
-    },
-    "Template/Daily Template.md": {
-      "noteCount": 1,
-      "wordCount": 10,
-      "pageCount": 0.03333333333333333,
-      "characterCount": 47,
-      "nonWhitespaceCharacterCount": 36,
-      "createdDate": 1665556680386,
-      "modifiedDate": 1641032864000
-    },
-    "Template/Book Template.md": {
-      "noteCount": 1,
-      "wordCount": 8,
-      "pageCount": 0.02666666666666667,
-      "characterCount": 55,
-      "nonWhitespaceCharacterCount": 47,
-      "createdDate": 1665556680360,
-      "modifiedDate": 1641032586000
-    },
-    "Template/Article Template.md": {
-      "noteCount": 1,
-      "wordCount": 8,
-      "pageCount": 0.02666666666666667,
-      "characterCount": 58,
-      "nonWhitespaceCharacterCount": 50,
-      "createdDate": 1665556680357,
-      "modifiedDate": 1641032583000
-    },
-    "Readme.md": {
-      "noteCount": 1,
-      "wordCount": 518,
-      "pageCount": 1.7266666666666666,
-      "characterCount": 6532,
-      "nonWhitespaceCharacterCount": 5912,
-      "createdDate": 1668477875446,
-      "modifiedDate": 1668775125840
     },
     "People/Obsidian-plug-and-play/测试文件夹/测试引用.md": {
       "noteCount": 1,
@@ -299,15 +137,6 @@
       "createdDate": 1668010972048,
       "modifiedDate": 1667897933772
     },
-    "People/Movie/Movie.md": {
-      "noteCount": 1,
-      "wordCount": 7,
-      "pageCount": 0.023333333333333334,
-      "characterCount": 58,
-      "nonWhitespaceCharacterCount": 47,
-      "createdDate": 1663246755138,
-      "modifiedDate": 1664347416362
-    },
     "People/Movie/MovieList.md": {
       "noteCount": 1,
       "wordCount": 203,
@@ -316,6 +145,15 @@
       "nonWhitespaceCharacterCount": 2033,
       "createdDate": 1658195328084,
       "modifiedDate": 1664349573396
+    },
+    "People/Movie/Movie.md": {
+      "noteCount": 1,
+      "wordCount": 7,
+      "pageCount": 0.023333333333333334,
+      "characterCount": 58,
+      "nonWhitespaceCharacterCount": 47,
+      "createdDate": 1663246755138,
+      "modifiedDate": 1664347416362
     },
     "People/Movie/Movie database.md": {
       "noteCount": 1,
@@ -443,6 +281,168 @@
       "createdDate": 1668010971743,
       "modifiedDate": 1667894300523
     },
+    "Readme.md": {
+      "noteCount": 1,
+      "wordCount": 517,
+      "pageCount": 1.7233333333333334,
+      "characterCount": 6746,
+      "nonWhitespaceCharacterCount": 5909,
+      "createdDate": 1669186362252,
+      "modifiedDate": 1669186362252
+    },
+    "Template/Video Template.md": {
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 57,
+      "nonWhitespaceCharacterCount": 48,
+      "createdDate": 1665556680447,
+      "modifiedDate": 1653285302093
+    },
+    "Template/tp-movie.md": {
+      "noteCount": 1,
+      "wordCount": 33,
+      "pageCount": 0.11,
+      "characterCount": 427,
+      "nonWhitespaceCharacterCount": 388,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1653285293464
+    },
+    "Template/tp-movie-douban.md": {
+      "noteCount": 1,
+      "wordCount": 52,
+      "pageCount": 0.17333333333333334,
+      "characterCount": 582,
+      "nonWhitespaceCharacterCount": 512,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1658204494903
+    },
+    "Template/tp-book.md": {
+      "noteCount": 1,
+      "wordCount": 40,
+      "pageCount": 0.13333333333333333,
+      "characterCount": 509,
+      "nonWhitespaceCharacterCount": 463,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1653285318302
+    },
+    "Template/tp-book-callout.md": {
+      "noteCount": 1,
+      "wordCount": 94,
+      "pageCount": 0.31333333333333335,
+      "characterCount": 1079,
+      "nonWhitespaceCharacterCount": 770,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1658204636749
+    },
+    "Template/tasksCalendar/Styles/style-previews.md": {
+      "noteCount": 1,
+      "wordCount": 189,
+      "pageCount": 0.63,
+      "characterCount": 1796,
+      "nonWhitespaceCharacterCount": 1569,
+      "createdDate": 1668572742834,
+      "modifiedDate": 1669136916000
+    },
+    "Template/tasksCalendar/README.md": {
+      "noteCount": 1,
+      "wordCount": 1216,
+      "pageCount": 4.053333333333334,
+      "characterCount": 8175,
+      "nonWhitespaceCharacterCount": 6861,
+      "createdDate": 1668572742828,
+      "modifiedDate": 1669136916000
+    },
+    "Template/startup/FastStart-StartupScript.md": {
+      "noteCount": 1,
+      "wordCount": 45,
+      "pageCount": 0.15,
+      "characterCount": 510,
+      "nonWhitespaceCharacterCount": 414,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1665555808557
+    },
+    "Template/startup/FastStart-Plugins-ShortDelay.md": {
+      "noteCount": 1,
+      "wordCount": 5,
+      "pageCount": 0.016666666666666666,
+      "characterCount": 102,
+      "nonWhitespaceCharacterCount": 98,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1668436224473
+    },
+    "Template/startup/FastStart-Plugins-LongLongDelay.md": {
+      "noteCount": 1,
+      "wordCount": 12,
+      "pageCount": 0.04,
+      "characterCount": 252,
+      "nonWhitespaceCharacterCount": 241,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1668568873679
+    },
+    "Template/startup/FastStart-Plugins-LongDelay.md": {
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 169,
+      "nonWhitespaceCharacterCount": 162,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1668436331386
+    },
+    "Template/startup/FastStart-GenerateListOfInstalledPlugins.md": {
+      "noteCount": 1,
+      "wordCount": 3,
+      "pageCount": 0.01,
+      "characterCount": 98,
+      "nonWhitespaceCharacterCount": 96,
+      "createdDate": 1658195328100,
+      "modifiedDate": 1646116530000
+    },
+    "Template/Literature Template.md": {
+      "noteCount": 1,
+      "wordCount": 17,
+      "pageCount": 0.056666666666666664,
+      "characterCount": 108,
+      "nonWhitespaceCharacterCount": 88,
+      "createdDate": 1665556680394,
+      "modifiedDate": 1641032644000
+    },
+    "Template/Fleeting Template.md": {
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 50,
+      "nonWhitespaceCharacterCount": 42,
+      "createdDate": 1665556680390,
+      "modifiedDate": 1641032954000
+    },
+    "Template/Daily Template.md": {
+      "noteCount": 1,
+      "wordCount": 10,
+      "pageCount": 0.03333333333333333,
+      "characterCount": 47,
+      "nonWhitespaceCharacterCount": 36,
+      "createdDate": 1665556680386,
+      "modifiedDate": 1641032864000
+    },
+    "Template/Book Template.md": {
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 55,
+      "nonWhitespaceCharacterCount": 47,
+      "createdDate": 1665556680360,
+      "modifiedDate": 1641032586000
+    },
+    "Template/Article Template.md": {
+      "noteCount": 1,
+      "wordCount": 8,
+      "pageCount": 0.02666666666666667,
+      "characterCount": 58,
+      "nonWhitespaceCharacterCount": 50,
+      "createdDate": 1665556680357,
+      "modifiedDate": 1641032583000
+    },
     "Obsidian-learning/优化Obsidian 启动速度.md": {
       "noteCount": 1,
       "wordCount": 30,
@@ -496,6 +496,15 @@
       "nonWhitespaceCharacterCount": 17842,
       "createdDate": 1668773102337,
       "modifiedDate": 1668774791340
+    },
+    "Obsidian-example/优化/加速.md": {
+      "noteCount": 1,
+      "wordCount": 151,
+      "pageCount": 0.5033333333333333,
+      "characterCount": 4989,
+      "nonWhitespaceCharacterCount": 4665,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1658195328069
     },
     "Obsidian-example/Tables 表格样式/Tables.md": {
       "noteCount": 1,
@@ -575,15 +584,6 @@
       "pageCount": 0.42,
       "characterCount": 697,
       "nonWhitespaceCharacterCount": 464,
-      "createdDate": 1658195328069,
-      "modifiedDate": 1658195328069
-    },
-    "Obsidian-example/优化/加速.md": {
-      "noteCount": 1,
-      "wordCount": 151,
-      "pageCount": 0.5033333333333333,
-      "characterCount": 4989,
-      "nonWhitespaceCharacterCount": 4665,
       "createdDate": 1658195328069,
       "modifiedDate": 1658195328069
     },

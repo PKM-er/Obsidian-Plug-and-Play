@@ -1,12 +1,16 @@
 {
   "recentFiles": [
     {
+      "basename": "更新日志（Changelog）",
+      "path": "更新日志（Changelog）.md"
+    },
+    {
       "basename": "Readme",
       "path": "Readme.md"
     },
     {
-      "basename": "更新日志（Changelog）",
-      "path": "更新日志（Changelog）.md"
+      "basename": "⏰DashBoard",
+      "path": "📊Every Day/⏰DashBoard.md"
     },
     {
       "basename": "使用问题&FAQ",
@@ -19,10 +23,6 @@
     {
       "basename": "FastStart-StartupScript",
       "path": "Template/startup/FastStart-StartupScript.md"
-    },
-    {
-      "basename": "⏰DashBoard",
-      "path": "📊Every Day/⏰DashBoard.md"
     },
     {
       "basename": "优化Obsidian 启动速度",

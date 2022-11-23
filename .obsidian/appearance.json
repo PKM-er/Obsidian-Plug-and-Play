@@ -5,22 +5,21 @@
   "translucency": false,
   "enabledCssSnippets": [
     "B-time",
-    "bigger link popup preview",
-    "blackstatusbar",
     "TabsInObsidian",
     "ScrollHeadings",
     "【图标】预览网址加图标 - External Link Icons",
     "aaxiufu",
     "CalloutTypesetting",
-    "tag-pills",
     "MCL Multi Column",
     "dataview-cards",
-    "strong outline"
+    "strong outline",
+    "tableStyles",
+    "bigger link popup preview"
   ],
   "interfaceFontFamily": "Microsoft YaHei",
   "textFontFamily": "Microsoft YaHei",
   "monospaceFontFamily": "Microsoft YaHei",
-  "accentColor": "#0e29f1",
+  "accentColor": "#007aff",
   "showViewHeader": true,
   "nativeMenus": true
 }

@@ -108,6 +108,8 @@ body{
 	--cm-edit-bullet-list-5: '▸';
     --embed-width:90%;
     --banner-height:300px;
+    --color-base-shadow: hsla(212, 17%, 80%, 0.2);
+    --panel-shadow: 0 1px 3px var(--color-base-shadow);
 }
 body{
     --ig-adjust-reading:0.05em;
@@ -131,8 +133,8 @@ body{
     --color-blue:#6c99bb;
     --color-purple:#9e86c8;
     --color-pink:#b05279;
-    --item-side:#007aff;
-    --text-headings:#007aff;
+    --item-side:#3396ff;
+    --text-headings:#3396ff;
     --h1-color:var(--text-headings);
     --h2-color:var(--text-headings);
     --h3-color:var(--text-headings);
@@ -6113,6 +6115,38 @@ settings:
 		step: 0.1
 		format: em
 	-
+		id: ribbon
+		title: Ribbon
+		type: heading
+		level: 2
+		collapsed: true
+	-
+		id: ribbon-floating
+		title: Floating of Ribbon
+		description: The Ribbon area is hidden by default, and will expand automatically when you touch the edge.
+		type: class-toggle
+		default: true
+    -
+		id: goblesearch
+		title: Search
+		type: heading
+		level: 2
+		collapsed: true
+    -
+		id: search-result-txcolor
+		title: Search results text color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    -
+		id: search-result-bgcolor
+		title: Search results background color
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'	
+    -
 		id: sidebars
 		title: Sidebars
 		type: heading
@@ -6428,26 +6462,6 @@ settings:
 		description: Line height of the tag in embed
 		default: 2.2
 		format: em
-    -
-		id: goblesearch
-		title: Search
-		type: heading
-		level: 2
-		collapsed: true
-    -
-		id: search-result-txcolor
-		title: Search results text color
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
-    -
-		id: search-result-bgcolor
-		title: Search results background color
-		type: variable-themed-color
-		format: hex
-		default-light: '#'
-		default-dark: '#'
     -
 		id: text
 		title: Text
@@ -7999,6 +8013,7 @@ body:not(.default-loading-page) .progress-bar-subline {
     display: none;
 }
 /*End*/
+
 /* ================================== */
 /* =========== 顶部 titlebar ======== */
 /* ================================== */
@@ -8095,8 +8110,9 @@ opacity: 1.24;
     font-size:var(--font-adaptive-smaller)
 }
 /*End*/
+
 /* ======================================== */
-/* ============ 左侧导航栏Ribbon =========== */
+/* ============ Ribbon 区域 =========== */
 /* ======================================== */
 /*左侧Ribbon区域的右边界线*/
 .workspace-ribbon {
@@ -8131,6 +8147,7 @@ opacity: 1.24;
     z-index: 9;
 }
 /*End*/
+/* ============ Ribbon End =========== */
 
 /* ======================================== */
 /* =========== 文件管理器区域 ========== */
@@ -8371,6 +8388,7 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     background-color: white;
 }
 /*End*/
+
 /* ===================================== */
 /* ======= 设置（Settings）菜单 ========== */
 /* ===================================== */
@@ -8383,13 +8401,16 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 .vertical-tab-header {
     padding-left:unset;
 }
-/*设置界面:导航栏分组分割线*/
+/*设置界面:导航栏分组分割线 和 标题样式*/
 .vertical-tab-header-group-title {
     border-bottom: 1px solid var(--bg3);
+    color:var(--item-side);
+    font-weight:bolder !important;
 }
 .mod-windows .modal.mod-settings .vertical-tab-nav-item {
     font-size:1.1em;
     border-radius: var(--radius-none);
+    padding-left:20px;
 }
 .mod-windows .modal.mod-settings .vertical-tab-nav-item:hover {
     font-size:1.12em;
@@ -8414,7 +8435,6 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 }
 /*设置菜单:分组标题的文本样式*/
 .vertical-tab-header-group-title {
-    color: var(--tx1);
     font-size: 16px;
     letter-spacing: 0;
     font-weight: 300;
@@ -8442,6 +8462,8 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     background-color: var(--item-side) 
 }
 /*End*/
+/* ======= 设置（Settings）菜单 End ========== */
+
 /* ================================== */
 /* ======== tabs 标签栏控制 ======== */
 /* ================================== */
@@ -8484,6 +8506,8 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     text-orientation: upright;
 
 }
+/* ======== 文件标题和路径栏 End ======== */
+
 /* ================================== */
 /* ======== 文件标题和路径栏 ======== */
 /* ================================== */
@@ -8575,6 +8599,7 @@ ol li ol::before {
     border-left: 5px solid gray;
 }
 /*End*/
+/* ============= 编辑视图和正文控制 End ================= */
 
 /* ================= 正文:标题 =============== */
 /*正文标题（headings）因为加了链接导致颜色变化*/
@@ -8932,7 +8957,8 @@ body {
 .tree-item-self.is-clickable .tree-item-inner:hover {
     background-color:var(--nav-item-background-hover)
 }
-/* ================= End ====================== */
+/* ================= 核心插件 core plugin  End ====================== */
+
 /* ================= Tag ====================== */
 /*正文中， tag 标签堆叠行高*/
 .cm-line .cm-hashtag {
@@ -9217,14 +9243,56 @@ span[class^=cm-list] .day-time-8 {
     margin-top:var(--banner-height)+30px;
 }
 /*End*/
-
 /* =========================================================== */
 /* ========================= 测试代码 ========================= */
 /* ============================================================ */
+/* ========================= tasksCalendar ========================= */
+div[class^="tasksCalendar"]  div.gridHead {
+    font-size: var(--size-4-4) !important;
+}
+div[class^="tasksCalendar"] .note {
+    font-size: var(--size-4-4) !important;
+}
+
+/* ========================= tasksCalendar End ========================= */
+.modal {
+    animation: 0.2s popup forwards;
+    animation-duration: 0.2s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+    animation-name: popup;
+}
+
+/*控制 ribbon 区域自动隐藏*/
+.ribbon-floating .workspace-ribbon.side-dock-ribbon.mod-left {
+    left:calc(var(--hovering-trigger-size) - var(--ribbon-width))
+}
+.ribbon-floating .workspace-ribbon.side-dock-ribbon:hover:hover:hover {
+    left: 0;
+    opacity: 1;
+}
+body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace-ribbon.side-dock-ribbon {
+    position: absolute;
+    height: 100%;
+    left: calc(var(--hovering-trigger-size) - var(--ribbon-width));
+    margin-top: 0;
+    padding-top: var(--header-height);
+    background: var(--background-secondary);
+    border-right: var(--border);
+    box-shadow: var(--panel-shadow);
+    z-index: 50;
+    transition: left 0.2s, opacity 0.1s;
+    opacity: 0;
+}
+/*控制标签（Tags）的字号大小*/
 .cm-hashtag {
     font-size:var(--tag-font-size);
 }
-
+/*【Booknote】插件：修改文件类型标记和正文的距离*/
 .nav-file.book-pdf .nav-file-title .nav-file-tag {
     margin-left:calc(var(--line-width-wide)+10px);
 }
@@ -9749,3 +9817,12 @@ body.css-settings-manager {
     background-color:transparent;
 }
 */
+
+
+
+
+
+
+
+
+
