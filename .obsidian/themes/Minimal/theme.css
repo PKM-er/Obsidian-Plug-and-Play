@@ -9254,7 +9254,7 @@ div[class^="tasksCalendar"] .note {
     font-size: var(--size-4-4) !important;
 }
 
-/* ========================= tasksCalendar End ========================= */
+/* ========================= tasksCalendar End ====================== */
 .modal {
     animation: 0.2s popup forwards;
     animation-duration: 0.2s;
@@ -9271,20 +9271,24 @@ div[class^="tasksCalendar"] .note {
 .ribbon-floating .workspace-ribbon.side-dock-ribbon.mod-left {
     left:calc(var(--hovering-trigger-size) - var(--ribbon-width))
 }
-.ribbon-floating .workspace-ribbon.side-dock-ribbon:hover:hover:hover {
+.ribbon-floating .workspace-ribbon.side-dock-ribbon:hover:hover {
     left: 0;
     opacity: 1;
+    flex:0 0 var(--ribbon-width);
 }
+.ribbon-floating .workspace-ribbon {
+    width:0 !important;
+    left:0 !important;
+    flex:unset;
+}
+
 body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace-ribbon.side-dock-ribbon {
-    position: absolute;
     height: 100%;
-    left: calc(var(--hovering-trigger-size) - var(--ribbon-width));
     margin-top: 0;
     padding-top: var(--header-height);
     background: var(--background-secondary);
     border-right: var(--border);
     box-shadow: var(--panel-shadow);
-    z-index: 50;
     transition: left 0.2s, opacity 0.1s;
     opacity: 0;
 }
@@ -9372,11 +9376,11 @@ body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace
 /*====================== 图片 End ======================*/
 /*==================== 搜索（Search） ====================*/
 /*搜索结果的样式适配浅/深色主题*/
-.theme-light .mod-left-split .search-result-file-matches {
+.theme-light .mod-left-split .search-result-file-match {
     color: var(--search-result-txcolor);
     background-color: var(--search-result-bgcolor);
 }
-.theme-dark .mod-left-split .search-result-file-matches {
+.theme-dark .mod-left-split .search-result-file-match {
     color: var(--search-result-txcolor);
     background-color: var(--search-result-bgcolor);
 }
@@ -9384,22 +9388,24 @@ body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace
 /*=================== 搜索（Search） End ===================*/
 /*=================== 正文出链 和 回链（backlinks） ===================*/
 /*backlinks，在浅/深主题下的自定义样式*/
-.theme-dark .workspace-split .internal-embed .markdown-embed {
+.theme-light .workspace-split .view-content .embedded-backlinks .search-result-container .search-result-file-matches .search-result-file-match {
     background-color: var(--backlinks-embed-bgcolor);
 }
-.theme-light .workspace-split .internal-embed .markdown-embed {
+
+.theme-dark .workspace-split .view-content .embedded-backlinks .search-result-container .search-result-file-matches .search-result-file-match {
     background-color: var(--backlinks-embed-bgcolor);
 }
-.theme-dark .workspace-split .internal-embed .markdown-embed .markdown-preview-sizer.markdown-preview-section {
-    color: var(--backlinks-embed-txcolor);
+
+.theme-light .workspace-split .view-content .embedded-backlinks .search-result-container .search-result-file-matches .search-result-file-match .search-result-file-matched-text {
+    color: var(--backlinks-embed-txcolor) !important;
 }
-.theme-light .workspace-split .internal-embed .markdown-embed .markdown-preview-sizer.markdown-preview-section {
-    color: var(--backlinks-embed-txcolor);
+.theme-dark .workspace-split .view-content .embedded-backlinks .search-result-container .search-result-file-matches .search-result-file-match .search-result-file-matched-text {
+    color: var(--backlinks-embed-txcolor) !important;
 }
 /*End*/
 /*=================== 正文出链 和 回链（backlinks） End ===================*/
 /*编辑模式下，修复callouts 的段前段后距离*/
-.cm-embed-block.markdown-rendered.cm-callout {
+.cm-embed-block .markdown-rendered.cm-callout {
     margin-top:0.1em !important;
     margin-bottom:0.1em !important;
 }
