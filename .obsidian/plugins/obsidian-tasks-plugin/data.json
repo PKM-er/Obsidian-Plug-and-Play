@@ -6,6 +6,8 @@
   "autoSuggestMinMatch": 0,
   "autoSuggestMaxItems": 7,
   "provideAccessKeys": true,
+  "useFilenameAsScheduledDate": false,
+  "filenameAsDateFolders": [],
   "features": {
     "INTERNAL_TESTING_ENABLED_BY_DEFAULT": true
   }

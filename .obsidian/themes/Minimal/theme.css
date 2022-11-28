@@ -110,6 +110,9 @@ body{
     --banner-height:300px;
     --color-base-shadow: hsla(212, 17%, 80%, 0.2);
     --panel-shadow: 0 1px 3px var(--color-base-shadow);
+    --theme-color-translucent-015: hsla(var(--interactive-accent-hsl),0.15);
+    --background-code: #1111118c;
+    --tag-line-height:2.4;
 }
 body{
     --ig-adjust-reading:0.05em;
@@ -166,6 +169,8 @@ body{
     --cm-edit-bullet-list-color:gray;
     --backlinks-embed-txcolor:black;
     --backlinks-embed-bgcolor:white;
+    --search-result-txcolor:black;
+    --search-result-bgcolor:white;
 }
 .excalidraw.theme--dark,.theme-dark,.theme-dark.minimal-default-dark,.theme-light.minimal-light-contrast .titlebar,.theme-light.minimal-light-contrast.minimal-status-off .status-bar{
     --accent-l:60%;
@@ -190,6 +195,8 @@ body{
     --sp1:white;
     --backlinks-embed-txcolor:white;
     --backlinks-embed-bgcolor:black;
+    --search-result-txcolor:white;
+    --search-result-bgcolor:black;
 }
 .theme-light.minimal-light-white{
     --background-primary:white;
@@ -205,7 +212,7 @@ body{
     --background-secondary:black;
     --background-secondary-alt:black;
     --ribbon-background:black;
-    --background-modifier-hover:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 10%));
+    --background-modifier-hover:var(--bg3);
     --tx1:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 75%) );
     --tx2:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 50%) );
     --tx3:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 25%) );
@@ -6137,15 +6144,15 @@ settings:
 		title: Search results text color
 		type: variable-themed-color
 		format: hex
-		default-light: '#'
-		default-dark: '#'
+		default-light: '#000000'
+		default-dark: '#FFFFFF'
     -
 		id: search-result-bgcolor
 		title: Search results background color
 		type: variable-themed-color
 		format: hex
-		default-light: '#'
-		default-dark: '#'	
+		default-light: '#FFFFFF'
+		default-dark: '#000000'
     -
 		id: sidebars
 		title: Sidebars
@@ -6295,7 +6302,7 @@ settings:
 		id: header-height
 		title: Tab bar height
 		type: variable-text
-		default: 40px
+		default: 45px
 	-
 		id: tabs-style
 		title: Tab style
@@ -6392,7 +6399,7 @@ settings:
 		title: Tag font size
 		description: Font size in px of Tag
 		type: variable-number
-		default: 14
+		default: 13.5
 		format: px
 	-
 		id: tag-radius
@@ -6453,7 +6460,7 @@ settings:
 		title: Tag line height
 		type: variable-number
 		description: Line height of the tag in body
-		default: 2.2
+		default: 2.4
 		format: em
     -
 		id: tag-embed-line-height
@@ -8014,9 +8021,9 @@ body:not(.default-loading-page) .progress-bar-subline {
 }
 /*End*/
 
-/* ================================== */
-/* =========== 顶部 titlebar ======== */
-/* ================================== */
+/* ========================================================== */
+/* ======================= 顶部 titlebar ==================== */
+/* ========================================================== */
 /*顶部 titlebar 下边框*/
 .titlebar {
     border-bottom:1px solid var(--background-modifier-border2);
@@ -8068,15 +8075,23 @@ opacity .1s ease-out
     align-items: center 
 }
 /*End*/
-/*历史，前进后退按钮位置样式*/
- .titlebar:hover .titlebar-button-container.mod-left {
-    
-opacity: 1.24;
+/*顶部 titlebar：背景色配置*/
+.theme-light .titlebar {
+    background-color:#f6f6f6;
 }
- .titlebar-button-container.mod-left .titlebar-button {
+.theme-dark .titlebar {
+    background-color:#21262d;
+}
+/* ==================== 顶部 titlebar  End ================== */
+
+/*历史，前进后退按钮位置样式*/
+.titlebar:hover .titlebar-button-container.mod-left {
+    opacity: 1.24;
+}
+.titlebar-button-container.mod-left .titlebar-button {
     margin-right: 5px;
 }
- .titlebar-button-container.mod-right .titlebar-button {
+.titlebar-button-container.mod-right .titlebar-button {
     border-radius: 0;
     height: 100%;
     align-items: center;
@@ -8084,27 +8099,43 @@ opacity: 1.24;
     padding: 2px 15px;
 }
 /*历史，前进按钮位置样式*/
- body:not(.minimal-icons-off) svg.right-arrow-with-tail {
+body:not(.minimal-icons-off) svg.right-arrow-with-tail {
     -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" width="20px" height="20px"><path fill="black" d="M47.054 72.054l5.892 5.892L80.892 50l-27.946 -27.946l-5.892 5.892L64.942 45.833H25v8.333h39.942z"></path></svg>');
     margin-top: -1px;
 }
 /*历史，后退按钮的位置样式*/
- body:not(.minimal-icons-off) svg.left-arrow-with-tail {
+body:not(.minimal-icons-off) svg.left-arrow-with-tail {
     -webkit-mask-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100" width="20px" height="20px"><path fill="black" d="M52.946 72.054L35.058 54.167H75v-8.333H35.058l17.888 -17.888l-5.892 -5.892L19.108 50l27.946 27.946z"></path></svg>');
     margin-top: -1px;
 }
 /*历史,前进后退按钮计数器的位置样式*/
- .titlebar .history-counter {
+.titlebar .history-counter {
     margin-top: 0.1em !important;
     font-size:1.0em !important;
 }
 /*展开的子菜单显示高亮配色*/
-.menu-item:hover, .menu-item .selected {
+/*
+.theme-light .menu-item:hover,.theme-light .menu-item .selected {
     background-color: var(--item-side) !important;
     color:white !important;
     font-size:var(--font-adaptive-smaller)
 }
-.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected,.qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover {
+*/
+.theme-light .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected,.theme-light .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover {
+    background-color: var(--item-side) !important;
+    color:white !important;
+    font-size:var(--font-adaptive-smaller)
+}
+
+.theme-dark .qe-popup-menu .menu-item-title {
+    color:white;
+}
+.theme-dark .menu-item:hover,.theme-dark .menu-item .selected {
+    background-color: var(--item-side) !important;
+    color:white !important;
+    font-size:var(--font-adaptive-smaller)
+}
+.theme-dark .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label).selected,.theme-dark .qe-popup-menu .menu-item:not(.is-disabled):not(.is-label):hover {
     background-color: var(--item-side) !important;
     color:white !important;
     font-size:var(--font-adaptive-smaller)
@@ -8389,15 +8420,37 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 }
 /*End*/
 
-/* ===================================== */
-/* ======= 设置（Settings）菜单 ========== */
-/* ===================================== */
-/*设置界面:导航栏左侧导行边距*/
+/* ======================================================= */
+/* =============== 设置（Settings）菜单 =================== */
+/* ======================================================= */
+/*设置（settings）界面打开时的动画效果*/
+body {
+    --window-radius:23px;
+}
+.modal {
+	border-radius:var(--window-radius);
+	animation:0.2s popup forwards;
+}
+@keyframes popup{
+	0% { transform:scale(70%); opacity:0; }
+	15% { transform:scale(80%); opacity:0.1; }
+	35% { transform:scale(102%);  }
+	45% { opacity:0.3; }
+	65% { opacity:0.7; }
+	100% { transform:scale(100%); opacity:1; }
+}
+
+/*设置界面:导航栏左侧导航边距*/
 .colorful-active #calendar-container .active, .colorful-active #calendar-container .active.today, .colorful-active #calendar-container .active:hover, .colorful-active #calendar-container .day:active, .colorful-active .menu-item.selected:not(.is-disabled):not(.is-label), .colorful-active .menu-item:hover, .colorful-active .menu-item:hover:not(.is-disabled):not(.is-label), .colorful-active .nav-file-title.is-active, .colorful-active .nav-file-title.is-being-dragged, .colorful-active .nav-folder-title.is-being-dragged, body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover, body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover, body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-draggedd {
     color:#000;
     background-color: #f0f0f0;
 }
-/*设置界面:导航栏左侧导行边距*/
+/*设置界面:导航栏左侧导航条目边距*/
+.vertical-tab-header-group-items {
+    padding-left: var(--size-3-1);
+}
+
+/*设置界面:导航栏左侧导航边距*/
 .vertical-tab-header {
     padding-left:unset;
 }
@@ -8407,24 +8460,46 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     color:var(--item-side);
     font-weight:bolder !important;
 }
-.mod-windows .modal.mod-settings .vertical-tab-nav-item {
+.theme-light .mod-windows .modal.mod-settings .vertical-tab-nav-item {
     font-size:1.1em;
     border-radius: var(--radius-none);
     padding-left:20px;
 }
-.mod-windows .modal.mod-settings .vertical-tab-nav-item:hover {
+.theme-light .mod-windows .modal.mod-settings .vertical-tab-nav-item:hover {
     font-size:1.12em;
     border-radius: var(--radius-none);
-    color: var(--text-muted);
+    color: white;
     font-weight: 400;
 	border-left: 4px solid var(--item-side);
-	background-color:rgb(255, 255, 255);
+	background-color:var(--item-side) !important;
 }
-.mod-windows .modal.mod-settings .vertical-tab-nav-item.is-active {
+.theme-light .modal.mod-settings .vertical-tab-nav-item.is-active {
     /*调整设置页面导航菜单间距*/
     font-weight: 400;
     color:black;
-	background-color:rgb(255, 255, 255);
+	background-color:rgb(255, 255, 255) !important;
+    border-left: 4px solid var(--item-side) !important;
+}
+
+.theme-dark .modal.mod-settings .vertical-tab-nav-item {
+    font-size:1.1em;
+    border-radius: var(--radius-none);
+    padding-left:20px;
+    color:white;
+}
+.theme-dark .modal.mod-settings .vertical-tab-nav-item:hover {
+    font-size:1.12em;
+    border-radius: var(--radius-none);
+    color: white;
+    font-weight: 400;
+	border-left: 4px solid var(--item-side);
+	background-color:#0d1117;
+}
+.theme-dark .modal.mod-settings .vertical-tab-nav-item.is-active {
+    /*调整设置页面导航菜单间距*/
+    font-weight: 400;
+    color:var(--tx1);
+	background-color:#0d1117;
     border-left: 4px solid var(--item-side);
 }
 /*End*/
@@ -8444,6 +8519,15 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     border-top: 0.5px solid var(--bg3);
 }
 /*End*/
+/*设置：导航栏背景色*/
+.theme-light .vertical-tab-header {
+    background-color: #f6f6f6 !important;
+} 
+/*设置：内容区背景色*/
+.theme-light  .vertical-tab-content {
+    background-color: white !important;
+}
+
 /*设置菜单:按钮（button）的样式控制*/
 .vertical-tab-content-container .setting-item .setting-item-control button {
     background-color:var(--item-side);
@@ -8462,16 +8546,33 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     background-color: var(--item-side) 
 }
 /*End*/
-/* ======= 设置（Settings）菜单 End ========== */
+/*设置（settings）界面打开时的动画效果*/
+body {
+    --window-radius:23px;
+}
+.modal {
+	border-radius:var(--window-radius);
+	animation:0.2s popup forwards;
+}
+@keyframes popup{
+	0% { transform:scale(70%); opacity:0; }
+	15% { transform:scale(80%); opacity:0.1; }
+	35% { transform:scale(102%);  }
+	45% { opacity:0.3; }
+	65% { opacity:0.7; }
+	100% { transform:scale(100%); opacity:1; }
+}
+/*End*/
+/* ================== 设置（Settings）菜单 End ================== */
 
-/* ================================== */
-/* ======== tabs 标签栏控制 ======== */
-/* ================================== */
-/*控制icon大小*/
+/* ==================================================== */
+/* ================= Tabs 标签页控制 ================= */
+/* ==================================================== */
+/*控制icon大小
 .workspace-tab-header-inner.workspace-tab-header-inner-icon {
     width: calc(var(--icon-size)+10);
     height: calc(var(--icon-size)+10);
-}
+}*/
 /*End*/
 /*tabs 标签栏，修改焦点tab 和 非焦点tab 的样式*/
 .workspace-split .workspace-tab-header-container .workspace-tab-header.is-active {
@@ -8482,13 +8583,29 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     color:var(--tx3);
     z-index:1;
 }
-.workspace-tab-header {
-    /*padding: 3px 5px;*/
-    box-shadow: 0 0 0 1px;
+.workspace-tab-header:not(.is-active):hover .workspace-tab-header-inner {
+    background-color: var(--bg3);
 }
+
+/* 标签页（Tabs）：增加边框*//* 
+.workspace-tab-header {
+    padding: 3px 5px;
+    box-shadow: 0 0 0 1px;
+}*/
 /*End*/
+/*标签页（Tabs）：底色配置*/
+.theme-light .workspace-tab-header-container {
+    background-color:#f6f6f6;
+}
 .theme-dark .workspace-tab-header-container {
-    border-bottom: var(--tab-outline-width) solid #ebebeb;
+    background-color:black;
+}
+/*标签页（Tabs）：底部边界线颜色*/
+.theme-light .workspace-tab-header-container {
+    border-bottom: var(--tab-outline-width) solid var(--tab-outline-color);
+}
+.theme-dark .workspace-tab-header-container {
+    border-bottom: 0.1px solid #585d5f
 }
 .theme-dark .workspace-tab-header.is-active.mod-active::before,.theme-dark .workspace-tab-header.is-active.mod-active::after {
     position: absolute;
@@ -8497,28 +8614,38 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     border-radius: 16px;
     box-shadow: 0 0 0 calc(var(--tab-curve) * 3) transparent;
 }
-.theme-light .workspace-tab-header-container {
-    border-bottom: var(--tab-outline-width) solid var(--tab-outline-color);
+/*
+.theme-light .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover {
+    background-color: var(--bg2);
 }
+*/
 
-/*tabs 标签栏，stack模式下文字自上到下排列*/.tab-stack-top-verticald .mod-stacked .workspace-tab-container .workspace-tab-header .workspace-tab-header-inner-title {
+/*标签页（Tabs）：stack模式下文字自上到下排列*/
+.tab-stack-top-verticald .mod-stacked .workspace-tab-container .workspace-tab-header .workspace-tab-header-inner-title {
     writing-mode: vertical-rl;
     text-orientation: upright;
-
 }
-/* ======== 文件标题和路径栏 End ======== */
 
-/* ================================== */
-/* ======== 文件标题和路径栏 ======== */
-/* ================================== */
+/* Tabs 修复：标签末尾分割线*/
+/* 
+.workspace .mod-root .workspace-tab-header-inner::after {
+    background-color:;
+}*/
+/* ========================= Tabs End ========================= */
+
+/* ====================================================== */
+/* ================== 文件标题和路径栏 ================== */
+/* ====================================================== */
 /*文件标题栏的下边框线*/
 .view-header {
     border-bottom: 1.5px solid var(--ui2) !important;
 }
 /*End*/
-/* ================================================== */
-/* ============= 编辑视图和正文控制 ================= */
-/* ================================================= */
+/* ================== 文件标题和路径栏 End ================== */
+
+/* ======================================================== */
+/* ================ 编辑视图和正文控制 ==================== */
+/* ======================================================= */
 /*预览模式下，无序列表的样式*/
 .markdown-preview-view ul>li:not(.task-list-item)::marker {
     font-size: .9em;
@@ -8542,10 +8669,6 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 /*预览视图下，控制有序列表前置标记（圆点等）的样式*/
 ol>li::marker,ul>li::marker {
     color: var(--text-faint)
-}
-/*编辑视图下，控制有序列表前置标记（圆点等）的样式*/
-.markdown-source-view .cm-hmd-list-indent .cm-indent:before {
-    margin-left:0.0em;
 }
 /*End*/
 /*预览模式下，有序列表前缀边线的样式*/
@@ -8599,9 +8722,33 @@ ol li ol::before {
     border-left: 5px solid gray;
 }
 /*End*/
-/* ============= 编辑视图和正文控制 End ================= */
+/* =================== 编辑视图和正文控制 End ======================= */
 
-/* ================= 正文:标题 =============== */
+/*====================== 任务（task）（checkbox） ======================*/
+/*checkbox,显示 tada 效果*/
+body:not(.unmute-checkbox-animation).checkbox-tada .is-flashing input.task-list-item-checkbox[type=checkbox]:checked:hover, 
+body:not(.unmute-checkbox-animation).checkbox-tada input.task-list-item-checkbox[type=checkbox]:checked:hover {
+  animation: tada 1s;
+  filter: hue-rotate(160deg);
+}
+
+@keyframes tada {
+    from {-webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1);}
+    10%,
+    20% {-webkit-transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);}
+    30%,
+    50%,
+    70%,
+    90% {-webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);}
+    40%,
+    60%,
+    80% {-webkit-transform: rotate3d(0, 0, 1, -10deg); transform: rotate3d(0, 0, 1, -10deg);}
+    to {-webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1);}
+  }
+/*End*/
+/* =================== 任务（task）（checkbox） End =================== */
+
+/* ============================= 正文:标题 ========================== */
 /*正文标题（headings）因为加了链接导致颜色变化*/
 .is-live-preview.cm-s-obsidian .cm-link {
     color: var(--h2-color);
@@ -8693,8 +8840,8 @@ ol li ol::before {
 	font-weight: var(--h6-weight);
 	font-style: var(--h6-style);
 }
-/* ================= 正文:标题 End=============== */
-/* ================= 正文:无序列表和有序列表=============== */
+/* ============================= 正文:标题 End =========================== */
+/* ======================= 正文:无序列表和有序列表======================== */
 /*编辑视图下，无序列表各个层级的前缀标识 */
 .markdown-source-view .list-bullet:not(.task-list-item):after {
     margin-top: -1.0em;
@@ -8815,8 +8962,8 @@ ol li ol::before {
     width: calc(var(--line-width-adaptive) - var(--folding-offset)) !important;
 }
 /*End*/
-/*================= 代码块（embed）优化 End ==================*/
-/*=================== 表格类（table）优化 ====================*/
+/*==================== 代码块（embed）优化 End =====================*/
+/*====================== 表格类（table）优化 =======================*/
 /*table title 边框*/
 .table-lines .table-view-table,.table-lines table:not(.calendar) {
     border: 1px solid var(--bg3) 
@@ -8830,25 +8977,48 @@ ol li ol::before {
     background: var(--background-table-rows);
 }
 /*End*/
-/*=================== End ====================*/
+/*============================ End ================================*/
 
-/* ======================================= */
-/* ========= 核心插件 core plugin ========= */
-/* ======================================= */
-/*=============== 【大纲】 ===============*/
+/* ========================== Tag ================================== */
+/*正文中， tag 标签堆叠行高*/
+.cm-line .cm-hashtag {
+    line-height: var(--tag-line-height);
+}
+.cm-line span.cm-hashtag {
+    line-height: var(--tag-line-height);
+}
+/*标签嵌套下， tag 标签堆叠行高*/
+a.tag {
+    line-height: var(--tag-embed-line-height);
+}
+/*控制标签（Tags）的字号大小*/
+.cm-hashtag {
+    font-size:var(--tag-font-size);
+}
+/*======================= Tag End ================================*/
+
+/* =========================================================== */
+/* =================== 核心插件 core plugin =================== */
+/* =========================================================== */
+/*========================= 【大纲】 =========================*/
 /* 【大纲】的层级指向器优化 */
 /* 1. 树状结构，显示层级路径 */
 /* 2. 基于AccentColor的高亮 */
 /* 3. 和文档无序列表类似，父节点收起时，前面的圆点有阴影 */
 body {
+  
   /* 引导线粗细 */
   --outline-guideline-width: 2px;
+  
   /* 引导线颜色 */
   --outline-guideline-color: hsla(var(--color-accent-hsl), 0.9);
+  
   /* 一行高度 */
   --outline-item-height: calc(var(--nav-item-size) * 1.8);
+  
   /* 鼠标经过颜色 */
   --nav-item-background-hover: hsla(var(--color-accent-hsl), 0.15);
+  
   --accent-active: hsl(
     var(--accent-h),
     var(--accent-s),
@@ -8945,59 +9115,39 @@ body {
   border-bottom-left-radius: var(--radius-m);
   border-bottom: var(--outline-guideline-width) solid var(--outline-guideline-color);
   border-left: var(--outline-guideline-width) solid var(--outline-guideline-color);
+  z-index:99;
 }
 .workspace-leaf-content[data-type=outline] .view-content .outline :is(.tree-item-children, .tree-item-self .tree-item-self) {
   padding-left: 0;
   margin-left: var(--size-4-5);
   border-left: none;
 }
-.tree-item-self.is-clickable:hover {
-    background-color:unset !important;
-}
-.tree-item-self.is-clickable .tree-item-inner:hover {
-    background-color:var(--nav-item-background-hover)
-}
 /* ================= 核心插件 core plugin  End ====================== */
 
-/* ================= Tag ====================== */
-/*正文中， tag 标签堆叠行高*/
-.cm-line .cm-hashtag {
-    line-height: var(--tag-line-height);
-}
-/*标签嵌套下， tag 标签堆叠行高*/
-a.tag {
-    line-height: var(--tag-embed-line-height);
-}
-/*==================Tag End=====================*/
-
-/* ============================================ */
-/* ======== 第三方插件 community plugin ======== */
-/* ============================================ */
-/*quick-explorer 跨度适配 v1.0.0*/
-/*quick explore 上目录和文件名样式尺寸*/
+/* ============================================================== */
+/* ============== 第三方插件 community plugin ==================== */
+/* ============================================================== */
+/*Quick Explorer 跨度适配 v1.0.0*/
+/*Quick Explorer 上目录和文件名样式尺寸*/
 div#quick-explorer .explorable-name {
-    padding: 0 4px;
-    border-radius: 4px;
-    font-size:1.0em;
+    font-weight:lighter !important;
 }
 div#quick-explorer {
-    /*
-    width:90%;
-    */
+    /*    width:90%;    */
     flex-wrap: wrap;
-    display: flex 
 }
 div#quick-explorer span.explorable {
     align-items: center;
     color: var(--text-muted);
     display: flex;
-    font-size: calc(var(--font-adaptive-smaller)+15px);
+    font-size: var(--font-adaptive-smaller);
     line-height: 24px;
     opacity:1.0;
 }
 div#quick-explorer span.explorable:hover {
     color: var(--item-side);
-    font-size: calc(var(--font-adaptive-smaller)+15px);
+    font-size: calc(var(--font-adaptive-smaller)+15);
+    font-weight:800 !important;
 }
 /*展开路径中，最后一级文件名显示高亮色*/
 div#quick-explorer .explorable.titlebar-button:last-child .explorable-name {
@@ -9006,12 +9156,13 @@ div#quick-explorer .explorable.titlebar-button:last-child .explorable-name {
 div#quick-explorer .explorable-separator::before {
     content: "\00a0›"!important;
     font-size: 1.3em;
-    font-weight: 400;
-    margin: 0 
+    margin: 0;
 }
 /*End*/
-/*==================== tabel enhancer ====================*/
-/*【table-enhancer】插件：表头样式*/
+/* ======================= Quick Explorer End ======================= */
+
+/* ======================== Tabel Enhancer ========================== */
+/*【Tabel Enhancer】插件：表头样式*/
 .cm-table-widget .ob-table-enhancer > thead tr {
     border-bottom: 1px solid black;
 }
@@ -9019,20 +9170,20 @@ div#quick-explorer .explorable-separator::before {
     border-bottom: 1px solid black;
 }
 /*End*/
-/*table-enhancer 插件,表格的行高*/
+/*【Tabel Enhancer】 插件,表格的行高*/
 .ob-table-enhancer > thead > tr > th, .ob-table-enhancer > tbody > tr > td {
 	height: 2.5em !important;
 }
-/*【table-enhancer】插件,行编辑浮动按钮与表格的边距*/
+/*【Tabel Enhancer】插件,行编辑浮动按钮与表格的边距*/
 .ob-table-enhancer-row-bar-button {
     margin-right:0.6em;
 }
-/*【table-enhancer】插件行、列编辑浮动按钮的大小*/
+/*【Tabel Enhancer】插件行、列编辑浮动按钮的大小*/
 .ob-table-enhancer-row-bar-button .icon,.ob-table-enhancer-col-bar-button .icon{
     width:22px;
     height: 22px;
 }
-/*【table-enhancer】插件,优化当单元格获得焦点（is-editing）时，在部分情况下会产生模糊的问题*/
+/*【Tabel Enhancer】插件,优化当单元格获得焦点（is-editing）时，在部分情况下会产生模糊的问题*/
 .is-editing {
 	filter:none !important;
 }
@@ -9042,13 +9193,21 @@ div#quick-explorer .explorable-separator::before {
     background-color: rgba(var(--callout-color), 0.1);
     color:rgb(233, 35, 35) !important;
 }
-/*【table enhanced】：修复由该插件生成的表格，不响应鼠标滑过时候的高亮行问题*/
+/*【Tabel Enhancer】插件：修复由该插件生成的表格，不响应鼠标滑过时候的高亮行问题*/
 .ob-table-enhancer > tbody > tr:hover > td > a {
     color:white !important;
 }
 /*End*/
-/*================【table-enhancer】插件End =================*/
-/*=======================【Lapel】插件 =======================*/
+/*=====================【Tabel Enhancer】插件 End ================= */
+
+/* =======================【Booknote】插件 ======================== */
+/*【Booknote】插件：修改文件类型标记和正文的距离*/
+.nav-file.book-pdf .nav-file-title .nav-file-tag {
+    margin-left:calc(var(--line-width-wide)+10px);
+}
+/* =======================【Booknote】插件 End ======================== */
+
+/* =======================【Lapel】插件 ============================ */
 /*【Lapel】插件,显示的大小*/
 .cm-gutters .cm-gutter.cm-lapel .cm-gutterElement .cm-heading-marker {
     font-size:medium;
@@ -9065,16 +9224,18 @@ div#quick-explorer .explorable-separator::before {
 }
 /*End*/
 /*=====================【Lapel】插件End =====================*/
-/*=================【task progress bar】插件 =================*/
-/*【task progress bar】插件，优化效果*/
+
+/*=================【Task Progress Bar】插件 =================*/
+/*【Task Progress Bar】插件，优化效果*/
 .cm-task-progress-bar.with-number .progress-bar-inline-background {
     border: 0.5px solid var(--tx3);
     background-color: var(--bg1) !important;
     width: 4.1rem !important;
 }
 /*End*/
-/*===============【task progress bar】插件End ===============*/
-/*====================【Rich links】插件 ====================*/
+/*====================【Task Progress Bar】插件 End ====================*/
+
+/*=========================【Rich links】插件 =========================*/
 /*【Rich links】插件，针对标题和描述字段的字号进行调整*/
 .rich-link-card .rich-link-card-title {
     font-size:calc(var(--font-ui-smaller)+2);
@@ -9082,8 +9243,9 @@ div#quick-explorer .explorable-separator::before {
 .rich-link-card .rich-link-card-description {
     font-size:calc(var(--font-ui-smaller)+1);
 }
-/*====================【Rich links】插件End ================*/
-/*=====================【chronology】插件 ==================*/
+/*=========================【Rich links】插件End =====================*/
+
+/*==========================【chronology】插件 =======================*/
 /*【chronology】插件：有内容的日子堆叠背景色加强*/
 .chronology-container .chronology-calendar-heat-background {
     background-color: var(--color-orange) !important;
@@ -9096,8 +9258,9 @@ div#quick-explorer .explorable-separator::before {
     max-width: 20em;
     flex: 0;
 }
-/*====================【chronology】插件End ================*/
-/*=========== callout =============*/
+/*=========================【chronology】插件End =====================*/
+
+/*============================ callout ==============================*/
 /*修复 callout 标题栏的背景色*/
 .callout {
     /* 圆角 */
@@ -9107,6 +9270,7 @@ div#quick-explorer .explorable-separator::before {
     padding: 0;
     border-left: solid 4px rgb(var(--callout-color));
 }
+
 /* 嵌套底部间隔 */
 .callout .callout.callout {
     margin-bottom: 12px;
@@ -9123,7 +9287,7 @@ div#quick-explorer .explorable-separator::before {
     border-bottom:1px solid;
     padding-bottom: 0.5em;
 }
-/*=================== dataview Cards ====================*/
+/*======================== dataview Cards =========================*/
 /*table：增加指向（hover）的动画*/
  body:not(.remove-table-transition) :is(.markdown-preview-view,
  .markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover
@@ -9158,7 +9322,7 @@ div#quick-explorer .explorable-separator::before {
     margin-left: -1px;
 }
 /*End*/
-/*=================== edit toolbar 插件 ====================*/
+/*======================== edit toolbar 插件 ========================*/
 /*edit toolbar 在置顶模式下边框样式*/
 #cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic {
     border-radius: 0 !important;
@@ -9206,12 +9370,35 @@ span[class^=cm-list] .day-time-8 {
 }
 /* =============== dynamic-highlights End ============== */
 /* =============== CardBoard ============== */
-.card-board-card {
+.theme-light .card-board-card {
+    border-radius: var(--radius-l);
+    background-color: var(--bg1);
+}
+.theme-dark .card-board-card {
+    color:white;
     border-radius: var(--radius-l);
     background-color: var(--bg1);
 }
 /* =============== CardBoard End ============== */
 
+/* =============== Quite Outline ============== */
+/*【Quite Outline】：适配深色主题下，搜索栏的底色*/
+.theme-dark .n-input.n-input--resizable.n-input--stateful {
+    background-color: #24262a;
+}
+/*    border-color:#585d5f !important;*/
+.theme-dark .n-tree-node-content__text {
+    color:var(--tx4);
+}
+/*【Quite Outline】：适配深色主题下，大纲树hover下的文字颜色*/
+.theme-dark .n-tree-node-content__text {
+    color:var(--tx4);
+}
+/*【Quite Outline】：适配深色主题下，大纲树hover下的文字颜色*/
+.theme-dark .quiet-outline .n-tree.n-tree--block-line .n-tree-node:not(.n-tree-node--disabled):hover .n-tree-node-content__text {
+    color:white;
+}
+/* =============== Quite Outline End ============== */
 
 /* ===================================================== */
 /* ==================== 插件间兼容性 ==================== */
@@ -9246,6 +9433,45 @@ span[class^=cm-list] .day-time-8 {
 /* =========================================================== */
 /* ========================= 测试代码 ========================= */
 /* ============================================================ */
+
+/*编辑模式下，修复callouts 的段前段后距离*/
+.cm-embed-block .markdown-rendered.cm-callout {
+    margin-top:0.1em !important;
+    margin-bottom:0.1em !important;
+}
+/*End*/
+
+
+@property --hidden {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 24px;
+  }
+
+.callout.callout[data-callout*="hidden"] .callout-title {
+    background-color: var(--callout-color);
+}
+
+div[data-callout="hidden"] > .callout-title {
+    display:flex !important;    
+}
+
+.callout.callout[data-callout*="hidden"] .callout-content {
+    position: relative;
+    height: auto;
+    overflow: hidden;
+    color: transparent;
+}
+
+.callout.callout[data-callout*="hidden"] .callout-content:hover {
+    color: var(--text-normal);
+    --hidden: var(--cards-min-width);
+    overflow: auto;
+    background: radial-gradient(circle at 0px 0px, var(--theme-color-translucent-015) 0, var(--theme-color-translucent-015) var(--hidden), transparent var(--hidden), transparent 0);
+    transition: 900 1.2s linear;
+    color: var(--background-code);
+}
+
 /* ========================= tasksCalendar ========================= */
 div[class^="tasksCalendar"]  div.gridHead {
     font-size: var(--size-4-4) !important;
@@ -9253,33 +9479,39 @@ div[class^="tasksCalendar"]  div.gridHead {
 div[class^="tasksCalendar"] .note {
     font-size: var(--size-4-4) !important;
 }
-
+div[class^="tasksCalendar"] .wrapperButton {
+    color:white !important;
+    background-color: var(--item-side) !important;
+    font-size:small !important;
+}
+/*优化:*/
+div[class^="tasksCalendar"] button.current {
+    font-size:medium !important;
+}
+/*关闭日历中的当前月份显示*/
+.tasksCalendar[view='month'] .wrappers:before {
+    content:unset !important;
+}
 /* ========================= tasksCalendar End ====================== */
-.modal {
-    animation: 0.2s popup forwards;
-    animation-duration: 0.2s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-iteration-count: 1;
-    animation-direction: normal;
-    animation-fill-mode: forwards;
-    animation-play-state: running;
-    animation-name: popup;
+
+/* ============================ Ribbon ========================= */
+/*控制 Ribbon 区域自动隐藏侯画出抖动的效果*/
+.ribbon-floating .workspace-ribbon.side-dock-ribbon:hover:hover {
+    flex:0 0 var(--ribbon-width);
+    animation:0.8s slide-left both;
+}
+@keyframes slide-left {
+	0% { transform:translateX(0%); opacity:0; }
+    20% { transform:translateX(-8px); opacity:0.3; }
+    35% { transform:translateX(-10px); }
+	65% { opacity:0.7; }
+	100% { opacity:1; }
 }
 
-/*控制 ribbon 区域自动隐藏*/
-.ribbon-floating .workspace-ribbon.side-dock-ribbon.mod-left {
-    left:calc(var(--hovering-trigger-size) - var(--ribbon-width))
-}
-.ribbon-floating .workspace-ribbon.side-dock-ribbon:hover:hover {
-    left: 0;
-    opacity: 1;
-    flex:0 0 var(--ribbon-width);
-}
 .ribbon-floating .workspace-ribbon {
-    width:0 !important;
-    left:0 !important;
+    width:10px !important;
     flex:unset;
+    padding-right: unset;
 }
 
 body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace-ribbon.side-dock-ribbon {
@@ -9289,17 +9521,10 @@ body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace
     background: var(--background-secondary);
     border-right: var(--border);
     box-shadow: var(--panel-shadow);
-    transition: left 0.2s, opacity 0.1s;
+    transition: left 0.8s, opacity 0.4s;
     opacity: 0;
 }
-/*控制标签（Tags）的字号大小*/
-.cm-hashtag {
-    font-size:var(--tag-font-size);
-}
-/*【Booknote】插件：修改文件类型标记和正文的距离*/
-.nav-file.book-pdf .nav-file-title .nav-file-tag {
-    margin-left:calc(var(--line-width-wide)+10px);
-}
+/* ============================ Ribbon End ========================= */
 
 /*Siderbar区域 tab 按钮的 underline 样式优化，更见扁平化*/
 .sidebar-tabs-underline .mod-right-split .workspace-tab-header-spacer,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-spacer,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-spacer{
@@ -9320,7 +9545,7 @@ body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace
     max-width:100px
 }
 .sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header:hover,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header:hover,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header:hover{
-    /*background-color:transparent*/
+    background-color:transparent
 }
 .sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner{
     background-color:transparent
@@ -9330,7 +9555,7 @@ body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace
     /*border-radius:0*/
 }
 .sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover{
-    /*border-color:var(--ui2)*/
+    border-color:var(--ui2)
 }
 .sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner{
     border-bottom-color:var(--accent-active);
@@ -9341,8 +9566,6 @@ body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace
 }
 
 /*【sidekick】插件，优化高亮建议的样式*/
-.cm-suggestion-candidate {
-}
 .cm-suggestion-candidate::before {
     height: 0.35em !important;
     top:unset !important;
@@ -9385,7 +9608,8 @@ body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace
     background-color: var(--search-result-bgcolor);
 }
 /*End*/
-/*=================== 搜索（Search） End ===================*/
+/*======================= 搜索（Search） End =======================*/
+
 /*=================== 正文出链 和 回链（backlinks） ===================*/
 /*backlinks，在浅/深主题下的自定义样式*/
 .theme-light .workspace-split .view-content .embedded-backlinks .search-result-container .search-result-file-matches .search-result-file-match {
@@ -9404,34 +9628,6 @@ body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace
 }
 /*End*/
 /*=================== 正文出链 和 回链（backlinks） End ===================*/
-/*编辑模式下，修复callouts 的段前段后距离*/
-.cm-embed-block .markdown-rendered.cm-callout {
-    margin-top:0.1em !important;
-    margin-bottom:0.1em !important;
-}
-/*End*/
-
-/*checkbox,显示 tada 效果*/
-body:not(.unmute-checkbox-animation).checkbox-tada .is-flashing input.task-list-item-checkbox[type=checkbox]:checked:hover, 
-body:not(.unmute-checkbox-animation).checkbox-tada input.task-list-item-checkbox[type=checkbox]:checked:hover {
-  animation: tada 1s;
-  filter: hue-rotate(160deg);
-}
-
-@keyframes tada {
-    from {-webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1);}
-    10%,
-    20% {-webkit-transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);transform: scale3d(.95, .95, .95) rotate3d(0, 0, 1, -10deg);}
-    30%,
-    50%,
-    70%,
-    90% {-webkit-transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);transform: scale3d(1, 1, 1) rotate3d(0, 0, 1, 10deg);}
-    40%,
-    60%,
-    80% {-webkit-transform: rotate3d(0, 0, 1, -10deg); transform: rotate3d(0, 0, 1, -10deg);}
-    to {-webkit-transform: scale3d(1, 1, 1); transform: scale3d(1, 1, 1);}
-  }
-/*End*/
 
 /*
 /*Obsidian 关闭按钮顺序调整
@@ -9823,12 +10019,3 @@ body.css-settings-manager {
     background-color:transparent;
 }
 */
-
-
-
-
-
-
-
-
-

@@ -298,5 +298,6 @@
       "runOnStartup": false
     }
   ],
-  "inputPrompt": "multi-line"
+  "inputPrompt": "multi-line",
+  "devMode": false
 }

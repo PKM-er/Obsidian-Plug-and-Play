@@ -3,8 +3,10 @@
   "global_enable": {
     "border": true,
     "font-weight": true,
-    "prefix": false,
-    "background-color": false
+    "prefix": true,
+    "background-color": false,
+    "remove-hash": false,
+    "remove-tag-name": false
   },
   "global": {
     "font-weight": "900",
@@ -217,8 +219,26 @@
     }
   ],
   "useTagDetail": true,
-  "tagDetail": {},
+  "tagDetail": {
+    "People/Obsidian-plug-and-play/主题和snippests 测试用例.md": {
+      "file_size": 17659,
+      "tag_num": 21
+    }
+  },
   "tagItem": {
-    "#Email": {}
+    "#Email": {},
+    "#shopping": {},
+    "#working": {
+      "#74b89c": "time",
+      "default-#74b89c": "{{DATETIME}}"
+    },
+    "#bug": {
+      "#9e3cb7": "time",
+      "default-#9e3cb7": "{{DATETIME}}"
+    },
+    "#todo": {
+      "#3e8bf4": "time",
+      "default-#3e8bf4": "{{DATETIME}}"
+    }
   }
 }

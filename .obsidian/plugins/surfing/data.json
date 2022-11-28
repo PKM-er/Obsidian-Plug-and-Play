@@ -1,0 +1,15 @@
+{
+  "defaultSearchEngine": "bing",
+  "customSearchEngine": [
+    {
+      "name": "duckduckgo",
+      "url": "https://duckduckgo.com/?q="
+    }
+  ],
+  "alwaysShowCustomSearch": false,
+  "showSearchBarInPage": true,
+  "customHighlightFormat": false,
+  "highlightFormat": "[{CONTENT}]({URL})",
+  "openInSameTab": false,
+  "openInObsidianWeb": false
+}

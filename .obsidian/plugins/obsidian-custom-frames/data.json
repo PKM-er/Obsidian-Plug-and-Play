@@ -12,14 +12,14 @@
       "customCss": ""
     },
     {
-      "url": "http://www.bing.com",
-      "displayName": "Bing",
-      "icon": "search",
+      "url": "https://wdbq9ccek2.feishu.cn/minutes/me",
+      "displayName": "飞书妙计",
+      "icon": "send",
       "hideOnMobile": true,
       "addRibbonIcon": true,
-      "openInCenter": true,
+      "openInCenter": false,
       "zoomLevel": 1,
-      "forceIframe": true,
+      "forceIframe": false,
       "customCss": ""
     }
   ],
