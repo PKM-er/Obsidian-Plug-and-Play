@@ -6,6 +6,7 @@
 
 ## 2. 新版本预告
 请点击 [更新日志（Changelog）](更新日志（Changelog）.md)
+正在完成的一些细节 https://github.com/users/juestchaos/projects/1
 
 ## 3. 目录结构
 - Readme：版本预告、这个库引入的特性，包括插件、功能和样式；
