@@ -5,12 +5,36 @@
       "path": "更新日志（Changelog）.md"
     },
     {
-      "basename": "Readme",
-      "path": "Readme.md"
+      "basename": "GIF 2022-12-3 22-48-00",
+      "path": "素材库/GIF 2022-12-3 22-48-00.gif"
+    },
+    {
+      "basename": "Readme_image_2",
+      "path": "素材库/Readme_image_2.png"
+    },
+    {
+      "basename": "使用问题&FAQ_image_1",
+      "path": "素材库/使用问题&FAQ_image_1.png"
+    },
+    {
+      "basename": "插件说明",
+      "path": "插件说明.md"
     },
     {
       "basename": "⏰DashBoard",
       "path": "📊Every Day/⏰DashBoard.md"
+    },
+    {
+      "basename": "BookList",
+      "path": "People/Book/BookList.md"
+    },
+    {
+      "basename": "Readme",
+      "path": "Readme.md"
+    },
+    {
+      "basename": "Book database",
+      "path": "People/Book/Book database.md"
     },
     {
       "basename": "使用问题&FAQ",
@@ -45,10 +69,6 @@
       "path": "Obsidian-learning/var complete/!dict.md"
     },
     {
-      "basename": "插件说明",
-      "path": "插件说明.md"
-    },
-    {
       "basename": "Obsidian 教程——代码域",
       "path": "Obsidian-example/Obsidian使用教程/Obsidian 教程——代码域.md"
     },
@@ -77,10 +97,6 @@
       "path": "Template/startup/FastStart-Plugins-ShortDelay.md"
     },
     {
-      "basename": "主题和snippests 测试用例",
-      "path": "People/Obsidian-plug-and-play/主题和snippests 测试用例.md"
-    },
-    {
       "basename": "保障性租赁住房 To-Do",
       "path": "Works/58-房产-租房/01、保障性租赁住房/保障性租赁住房 To-Do.md"
     },
@@ -103,10 +119,6 @@
     {
       "basename": "MovieList",
       "path": "People/Movie/MovieList.md"
-    },
-    {
-      "basename": "BookList",
-      "path": "People/Book/BookList.md"
     },
     {
       "basename": "第三次生日会",
