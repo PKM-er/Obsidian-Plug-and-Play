@@ -19,6 +19,7 @@ viewtime:
 updated: 
 status: 
 progress:
+grade:
 ---
 
 ## 1. 内容简介

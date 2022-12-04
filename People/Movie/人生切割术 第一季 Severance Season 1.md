@@ -12,6 +12,7 @@ banner: "https://img1.doubanio.com/view/photo/1/public/p2785225757.jpg"
 status: 已完成
 progress: ⭐⭐⭐⭐⭐
 banner_y: 0.34001
+grade:
 ---
 ## 1. 内容简介
 **人生切割术 第一季 Severance Season 1 [2022-02-18(美国)] | [ - ]** ![bookcover|inlR|220](https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2785225757.jpg)

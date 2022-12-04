@@ -10,9 +10,10 @@ year: 2018-03-10(西南偏南电影节)
 genre: 动作
 banner_icon: 🎞 
 banner: "https://img9.doubanio.com/view/photo/1/public/p2531034314.jpg"
-status: 
+status: 已完成
 progress: 
 banner_y: 0.21466
+grade: ⭐⭐⭐⭐
 ---
 
 ## 1. 内容简介

@@ -15,6 +15,7 @@ progress:
 status: 
 pagecount: {{VALUE:pagecount}}
 pageprogress: 
+grade:
 ---
 ## 1. 内容简介
 《{{VALUE:bookname}}》

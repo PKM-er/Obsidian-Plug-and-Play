@@ -39,7 +39,7 @@ columns:
     skipPersist: false
     csvCandidate: true
     position: 5
-    isHidden: false
+    isHidden: true
     sortIndex: -1
     config:
       enable_media_view: true
@@ -59,7 +59,7 @@ columns:
     skipPersist: false
     csvCandidate: true
     position: 6
-    isHidden: false
+    isHidden: true
     sortIndex: -1
     config:
       enable_media_view: true
@@ -79,7 +79,7 @@ columns:
     skipPersist: false
     csvCandidate: false
     position: 7
-    isHidden: false
+    isHidden: true
     sortIndex: -1
     config:
       enable_media_view: true
@@ -99,7 +99,7 @@ columns:
     skipPersist: false
     csvCandidate: false
     position: 8
-    isHidden: false
+    isHidden: true
     sortIndex: -1
     config:
       enable_media_view: true
@@ -119,7 +119,7 @@ columns:
     skipPersist: false
     csvCandidate: false
     position: 9
-    isHidden: false
+    isHidden: true
     sortIndex: -1
     config:
       enable_media_view: true
@@ -153,7 +153,7 @@ columns:
     label: name
     position: 1
     skipPersist: false
-    isHidden: false
+    isHidden: true
     sortIndex: -1
     width: 231
     config:
@@ -171,7 +171,24 @@ columns:
     label: cover
     position: 3
     skipPersist: false
-    isHidden: false
+    isHidden: true
+    sortIndex: -1
+    config:
+      enable_media_view: true
+      link_alias_enabled: true
+      media_width: 100
+      media_height: 100
+      isInline: false
+      task_hide_completed: true
+  grade:
+    input: text
+    accessorKey: grade
+    key: grade
+    id: grade
+    label: grade
+    position: 100
+    skipPersist: false
+    isHidden: true
     sortIndex: -1
     config:
       enable_media_view: true
@@ -207,6 +224,9 @@ config:
   date_format: yyyy-MM-dd
   datetime_format: "yyyy-MM-dd HH:mm:ss"
 filters:
-  enabled: false
+  enabled: true
   conditions:
+      - field: tags
+        operator: NOT_CONTAINS
+        value: 已读
 ```

@@ -13,6 +13,7 @@ banner: "https://img9.doubanio.com/view/photo/1/public/p2858386555.jpg"
 status: 正在进行
 progress: ⭐⭐⭐⭐
 banner_y: 0.38195
+grade:
 ---
 ## 1. 内容简介
 **上载新生 第二季 Upload Season 2 [2022-03-11(美国)] | [ - ]** ![bookcover|inlR|220](https://img9.doubanio.com/view/photo/s_ratio_poster/public/p2858386555.jpg)

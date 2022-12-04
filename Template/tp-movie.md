@@ -5,6 +5,7 @@ tags: Movie
 banner_icon: 🎞
 status: 
 progress: 
+grade:
 ---
 
 ![poster|inlR|240]({{VALUE:Poster}})

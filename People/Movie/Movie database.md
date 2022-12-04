@@ -163,7 +163,7 @@ columns:
       isInline: false
       task_hide_completed: true
   tags:
-    input: text
+    input: tags
     accessorKey: tags
     key: tags
     id: tags
@@ -172,6 +172,11 @@ columns:
     skipPersist: false
     isHidden: false
     sortIndex: -1
+    options:
+      - { label: "TV_play,美剧", backgroundColor: "hsl(335, 95%, 90%)"}
+      - { label: "Movie", backgroundColor: "hsl(299, 95%, 90%)"}
+      - { label: "TV_play", backgroundColor: "hsl(217, 95%, 90%)"}
+      - { label: "美剧", backgroundColor: "hsl(329, 95%, 90%)"}
     config:
       enable_media_view: true
       link_alias_enabled: true
@@ -186,6 +191,9 @@ columns:
     id: tag
     label: tag
     position: 100
+    skipPersist: false
+    isHidden: false
+    sortIndex: -1
     config:
       enable_media_view: true
       link_alias_enabled: true

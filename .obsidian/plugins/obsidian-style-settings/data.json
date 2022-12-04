@@ -47,5 +47,10 @@
   "minimal-style@@tag-font-size": 13.5,
   "minimal-style@@tag-embed-line-height": 2.3,
   "minimal-style@@tag-line-height": 2.5,
-  "minimal-style@@search-result-txcolor@@light": "#000000"
+  "minimal-style@@search-result-txcolor@@light": "#000000",
+  "default-obsidian-style@@inline-title-color@@dark": "#4C3BD8",
+  "default-obsidian-style@@inline-title-color@@light": "#1934D8",
+  "default-obsidian-style@@nav-item-color@@light": "#1416F3",
+  "default-obsidian-style@@nav-item-color@@dark": "#0B75F1",
+  "minimal-style@@ribbon-floating": false
 }

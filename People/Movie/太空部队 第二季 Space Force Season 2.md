@@ -13,6 +13,7 @@ banner: "https://img1.doubanio.com/view/photo/1/public/p2867194839.jpg"
 status: 正在进行
 progress: ⭐⭐⭐⭐
 banner_y: 0.77611
+grade:
 ---
 ## 1. 内容简介
 **太空部队 第二季 Space Force Season 2 [2022-02-18(美国)] | [ - ]** ![bookcover|inlR|220](https://img1.doubanio.com/view/photo/s_ratio_poster/public/p2867194839.jpg)

@@ -1,0 +1,16 @@
+div.workspace-split.mod-root > div.workspace-split.mod-vertical {
+    overflow: auto;
+}
+div.workspace-split.mod-root div.workspace-split.mod-vertical > div.workspace-tabs {
+    min-width: 550px;
+}
+
+/* Splitting sidebar individual pane horizontally */
+div.workspace-split.mod-root div.workspace-split.mod-vertical > div.workspace-split.mod-horizontal {
+    min-width: 550px;
+    height: calc(100% - 1px);
+    overflow: auto;
+}
+
+
+
