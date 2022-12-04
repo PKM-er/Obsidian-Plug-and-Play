@@ -4719,6 +4719,7 @@ body.theme-light{
     --accent-h:197;
     --accent-s:71%;
     --accent-l:52%;
+    --bg1:#f6f6f6;
     --bg2:#f7f6f4;
     --bg3:#e8e7e4;
     --ui1:#ededec;
@@ -6829,7 +6830,7 @@ settings:
 /* ============ Dataview Cards ============ */
 /* ======================================== */
 /*********covercards***********/
- :root {
+:root {
     --cards-width: 138px;
 }
  @media (max-width: 450px) {
@@ -8200,6 +8201,7 @@ body:not(.minimal-icons-off) svg.left-arrow-with-tail {
 /*文件管理器中，文件夹名的滚动动画*/
 .nav-files-container {
     overflow-x: auto;
+    background-color: var(--bg1);
 }
 .nav-file {
     display: table;
@@ -8410,7 +8412,6 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
     color:white;
     background-color: var(--item-side);
     font-weight: 400;
-    margin-left: -4em;
 }
 /*指向时文件类型反转颜色*/
 /*点击激活时文件类型反转颜色*/
@@ -8421,9 +8422,9 @@ body:not(.sidebar-lines-off) .nav-folder-children .nav-folder-children {
 /*End*/
 
 /* ======================================================= */
-/* =============== 设置（Settings）菜单 =================== */
+/* =============== 设置界面（Settings） =================== */
 /* ======================================================= */
-/*设置（settings）界面打开时的动画效果*/
+/*设置界面（Settings）：打开时的动画效果*/
 body {
     --window-radius:23px;
 }
@@ -8440,21 +8441,21 @@ body {
 	100% { transform:scale(100%); opacity:1; }
 }
 
-/*设置界面:导航栏左侧导航边距*/
+/*设置界面（Settings）:导航栏左侧导航边距*/
 .colorful-active #calendar-container .active, .colorful-active #calendar-container .active.today, .colorful-active #calendar-container .active:hover, .colorful-active #calendar-container .day:active, .colorful-active .menu-item.selected:not(.is-disabled):not(.is-label), .colorful-active .menu-item:hover, .colorful-active .menu-item:hover:not(.is-disabled):not(.is-label), .colorful-active .nav-file-title.is-active, .colorful-active .nav-file-title.is-being-dragged, .colorful-active .nav-folder-title.is-being-dragged, body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover, body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover, body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-draggedd {
     color:#000;
     background-color: #f0f0f0;
 }
-/*设置界面:导航栏左侧导航条目边距*/
-.vertical-tab-header-group-items {
-    padding-left: var(--size-3-1);
+/*设置界面（Settings）:导航栏左侧导航条目边距*/
+.modal.mod-settings .vertical-tab-nav-item {
+    padding-left: 20px;
 }
 
-/*设置界面:导航栏左侧导航边距*/
+/*设置界面（Settings）:导航栏左侧导航边距*/
 .vertical-tab-header {
     padding-left:unset;
 }
-/*设置界面:导航栏分组分割线 和 标题样式*/
+/*设置界面（Settings）:导航栏分组分割线 和 标题样式*/
 .vertical-tab-header-group-title {
     border-bottom: 1px solid var(--bg3);
     color:var(--item-side);
@@ -8503,66 +8504,50 @@ body {
     border-left: 4px solid var(--item-side);
 }
 /*End*/
-/*设置菜单:标题文本的样式*/
+/*设置界面（Settings）:标题文本的样式*/
 .is-mobile .modal .vertical-tab-header-group-title {
     padding: 15px 20px 10px 20px;
     letter-spacing: .05em;
 }
-/*设置菜单:分组标题的文本样式*/
+/*设置界面（Settings）:分组标题的文本样式*/
 .vertical-tab-header-group-title {
     font-size: 16px;
     letter-spacing: 0;
     font-weight: 300;
 }
-/*设置菜单中内容设置项的分割线*/
+/*设置界面（Settings）：中内容设置项的分割线*/
 .setting-item {
     border-top: 0.5px solid var(--bg3);
 }
 /*End*/
-/*设置：导航栏背景色*/
+/*设置界面（Settings）：导航栏背景色*/
 .theme-light .vertical-tab-header {
     background-color: #f6f6f6 !important;
 } 
-/*设置：内容区背景色*/
+/*设置界面（Settings）：内容区背景色*/
 .theme-light  .vertical-tab-content {
-    background-color: white !important;
+    background-color:white !important;
 }
 
-/*设置菜单:按钮（button）的样式控制*/
+/*设置界面（Settings）:按钮（button）的样式控制*/
 .vertical-tab-content-container .setting-item .setting-item-control button {
     background-color:var(--item-side);
     color:white;
     border-radius:var(--radius-m);
 }
 /*End*/
-/*设置菜单中按钮指向后的颜色*/
+/*设置界面（Settings）菜单中按钮指向后的颜色*/
 .modal button:not(.mod-warning):hover, .modal.mod-settings button:not(.mod-warning):hover, button:hover {
     background-color: var(--interactive-accent-hover2);
     color: white;
 }
 /*End*/
-/*设置菜单中单选按钮背景色*/
+/*设置界面（Settings）菜单中单选按钮背景色*/
 .checkbox-container.is-enabled {
     background-color: var(--item-side) 
 }
 /*End*/
-/*设置（settings）界面打开时的动画效果*/
-body {
-    --window-radius:23px;
-}
-.modal {
-	border-radius:var(--window-radius);
-	animation:0.2s popup forwards;
-}
-@keyframes popup{
-	0% { transform:scale(70%); opacity:0; }
-	15% { transform:scale(80%); opacity:0.1; }
-	35% { transform:scale(102%);  }
-	45% { opacity:0.3; }
-	65% { opacity:0.7; }
-	100% { transform:scale(100%); opacity:1; }
-}
-/*End*/
+
 /* ================== 设置（Settings）菜单 End ================== */
 
 /* ==================================================== */
@@ -8587,12 +8572,6 @@ body {
     background-color: var(--bg3);
 }
 
-/* 标签页（Tabs）：增加边框*//* 
-.workspace-tab-header {
-    padding: 3px 5px;
-    box-shadow: 0 0 0 1px;
-}*/
-/*End*/
 /*标签页（Tabs）：底色配置*/
 .theme-light .workspace-tab-header-container {
     background-color:#f6f6f6;
@@ -8614,12 +8593,17 @@ body {
     border-radius: 16px;
     box-shadow: 0 0 0 calc(var(--tab-curve) * 3) transparent;
 }
-/*
-.theme-light .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover {
-    background-color: var(--bg2);
+/*标签页（Tabs）：深色模式下的焦点标签的颜色*/
+.theme-dark .workspace-tab-header.is-active.mod-active {
+    box-shadow: 0 0 0 var(--tab-outline-width) var(--accent-active);
 }
-*/
-
+.theme-dark .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-title {
+    color:var(--accent-active);
+}
+/*标签页（Tabs）：深色模式下的非活跃标签获得焦点时，标签页表标题的颜色*/
+.theme-dark .workspace-tab-header-container .workspace-tab-header:hover {
+    color:var(--accent-active);
+}
 /*标签页（Tabs）：stack模式下文字自上到下排列*/
 .tab-stack-top-verticald .mod-stacked .workspace-tab-container .workspace-tab-header .workspace-tab-header-inner-title {
     writing-mode: vertical-rl;
@@ -8631,6 +8615,17 @@ body {
 .workspace .mod-root .workspace-tab-header-inner::after {
     background-color:;
 }*/
+/* 标签页（Tabs）：增加边框*//* 
+.workspace-tab-header {
+    padding: 3px 5px;
+    box-shadow: 0 0 0 1px;
+}*/
+/*End*/
+/*
+.theme-light .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover {
+    background-color: var(--bg2);
+}
+*/
 /* ========================= Tabs End ========================= */
 
 /* ====================================================== */
@@ -9243,6 +9238,27 @@ div#quick-explorer .explorable-separator::before {
 .rich-link-card .rich-link-card-description {
     font-size:calc(var(--font-ui-smaller)+1);
 }
+.rich-link-card .rich-link-image {
+    background-position:unset !important;
+}
+.rich-link-card-container {
+}
+.rich-link-card .rich-link-card-text {
+    width:80%;
+}
+.rich-link-card .rich-link-card-rating {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.rich-link-card-container::after{
+    background-color: unset;
+}
+
+.rich-link-card {
+    margin-top:unset;
+    margin-bottom:unset;
+}
+
 /*=========================【Rich links】插件End =====================*/
 
 /*==========================【chronology】插件 =======================*/
@@ -9370,14 +9386,32 @@ span[class^=cm-list] .day-time-8 {
 }
 /* =============== dynamic-highlights End ============== */
 /* =============== CardBoard ============== */
+.theme-light .card-board-board {
+    background-color: var(--bg1);
+}
+.theme-dark .card-board-board {
+    background-color: black;
+}
+.theme-light .card-board-board .card-board-column {
+    background-color: white;
+}
+.theme-dark .card-board-board .card-board-column {
+    background-color: black;
+}
+
 .theme-light .card-board-card {
     border-radius: var(--radius-l);
-    background-color: var(--bg1);
+    background-color: var(--bg4);
+    border-color: var(--ui2);
 }
 .theme-dark .card-board-card {
     color:white;
     border-radius: var(--radius-l);
     background-color: var(--bg1);
+}
+
+.theme-dark .card-board-card-highlight-area.important {
+    background-color: #007bff;
 }
 /* =============== CardBoard End ============== */
 
