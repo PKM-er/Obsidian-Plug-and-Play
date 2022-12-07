@@ -17,7 +17,7 @@
 - [常见的语法罗列](Obsidian-example/常见的语法罗列.md)：想了解本库在常用模块上做了哪些修改，可以查看文件；
 - [使用问题&FAQ](使用问题&FAQ.md)：积累你可能在词库中遇到的样式和冲突的 FAQ；
 - 完善 [Readme](Readme.md) 中对功能特性介绍更新；
-- 增加了优化加速插件的说明：[优化Obsidian 启动速度](Obsidian-learning/优化Obsidian%20启动速度.md)；
+- 增加了优化加速插件的说明：[优化Obsidian 启动速度](Obsidian-example/启动优化说明（基于模板插件）/优化Obsidian%20启动速度.md)；
 - 开始着手在后面每期的更新中增加各种 Markdown，Obsidian 和本库的使用范例； 
 
 ## 4. 概述

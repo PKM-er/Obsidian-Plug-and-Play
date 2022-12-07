@@ -1,10 +1,19 @@
 {
+  "enableImage": true,
   "image": "image",
+  "enableAudio": true,
   "audio": "audio",
+  "enableVideo": true,
   "video": "video",
+  "enablePdf": true,
   "pdf": "pdf",
+  "connector": "_",
+  "exportCurrentRiboon": false,
+  "exportUnusedRiboon": false,
   "exportCurrentDeletion": false,
   "exportUnusedDeletion": false,
   "copyPath": true,
-  "copyPathMode": "Relative"
+  "copyPathMode": "Relative",
+  "usingLog": false,
+  "logPath": "/"
 }

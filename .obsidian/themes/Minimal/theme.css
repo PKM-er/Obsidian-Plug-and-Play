@@ -1,38 +1,38 @@
-/* ---------------------------------------------------------------------------
+/* --------------------------------------------------------------------------- 
 
 Minimal Theme by @kepano
-User interface replacement for Obsidian.
-Designed to be used with the Minimal Theme Settings 
-plugin and the Hider plugin.
-Sponsor my work:
-https://www.buymeacoffee.com/kepano
-Readme:
-https://github.com/kepano/obsidian-minimal
------------------------------------------------------------------------------
+User interface replacement for Obsidian. 
+Designed to be used with the Minimal Theme Settings plugin and the Hider plugin. 
+							
+				
+								   
+	   
+										  
+Sponsor my work: https://www.buymeacoffee.com/kepano Readme: https://github.com/kepano/obsidian-minimal ----------------------------------------------------------------------------- MIT License Copyright (c) 2020-2022 
 
-MIT License
+		   
 
-Copyright (c) 2020-2022 Stephan Ango (@kepano)
+Stephan Ango (@kepano) 
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. 
+																			
+																			 
+																			
+																		 
+																	 
+														
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+																		   
+												   
 
-The above copyright notice and this permission notice shall be included in 
-all copies or substantial portions of the Software.
+																		  
+																		
+																		   
+																	  
+																			 
+																			 
+		 
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-*/
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE. */
 body{
     --font-text-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
     --font-editor-theme:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Inter,Ubuntu,sans-serif;
@@ -112,12 +112,12 @@ body{
     --panel-shadow: 0 1px 3px var(--color-base-shadow);
     --theme-color-translucent-015: hsla(var(--interactive-accent-hsl),0.15);
     --background-code: #1111118c;
-    --tag-line-height:2.4;
+    --tag-line-height:2.4;	
 }
 body{
     --ig-adjust-reading:0.05em;
     --ig-adjust-edit:0.05em;
-}
+} 
 .mod-macos{
     --top-left-padding-y:24px
 }
@@ -144,7 +144,7 @@ body{
     --h4-color:var(--text-headings);
     --h5-color:var(--text-headings);
     --h6-color:var(--text-headings);
-	--table-hover-raw-color:var(--item-side);
+	--table-hover-raw-color:var(--item-side);				  
 }
 .theme-light,.theme-light.minimal-default-light,body .excalidraw{
     --bg1:white;
@@ -170,7 +170,7 @@ body{
     --backlinks-embed-txcolor:black;
     --backlinks-embed-bgcolor:white;
     --search-result-txcolor:black;
-    --search-result-bgcolor:white;
+    --search-result-bgcolor:white;		  
 }
 .excalidraw.theme--dark,.theme-dark,.theme-dark.minimal-default-dark,.theme-light.minimal-light-contrast .titlebar,.theme-light.minimal-light-contrast.minimal-status-off .status-bar{
     --accent-l:60%;
@@ -212,7 +212,7 @@ body{
     --background-secondary:black;
     --background-secondary-alt:black;
     --ribbon-background:black;
-    --background-modifier-hover:var(--bg3);
+	--background-modifier-hover:var(--bg3);
     --tx1:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 75%) );
     --tx2:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 50%) );
     --tx3:hsl( var(--base-h), var(--base-s), calc(var(--base-d) + 25%) );
@@ -228,12 +228,12 @@ body{
     --mono100:white;
     --mono0:black
 }
-.excalidraw.theme--dark,.theme-dark,.theme-light,.theme-light.minimal-light-contrast .titlebar,.theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,.theme-light.minimal-light-contrast.minimal-status-off .status-bar,body .excalidraw{
+.theme-dark,.theme-light,.theme-light.minimal-light-contrast .titlebar,.theme-light.minimal-light-contrast.is-mobile .workspace-drawer.mod-left,.theme-light.minimal-light-contrast.minimal-status-off .status-bar{
     --background-modifier-accent:var(--ax3);
     --background-modifier-border-focus:var(--ui3);
     --background-modifier-border-hover:var(--ui2);
     --background-modifier-border:var(--ui1);
-	--background-modifier-border2: rgba(12, 11, 11, 0.19);
+	--background-modifier-border2: rgba(12, 11, 11, 0.19);													   
     --background-modifier-form-field-highlighted:var(--bg1);
     --background-modifier-form-field:var(--bg1);
     --background-modifier-success:var(--color-green);
@@ -255,7 +255,7 @@ body{
     --icon-color:var(--tx2);
     --icon-hex:var(--mono0);
     --interactive-accent-hover:var(--ax3);
-	--interactive-accent-hover2:#4ba8ff;								 
+	--interactive-accent-hover2:#4ba8ff;
     --interactive-accent:var(--ax3);
     --interactive-hover:var(--ui1);
     --list-marker-color:var(--tx3);
@@ -295,9 +295,10 @@ body{
     --titlebar-background:var(--bg2);
     --titlebar-background-focused:var(--bg2);
     --titlebar-text-color-focused:var(--tx1);
+    --workspace-background-translucent:hsla(var(--base-h),var(--base-s), var(--base-l), 0.7);
 	--tag-color:var(--tx2);
     --tag-bg:transparent;
-    --tag-bg2:transparent		
+    --tag-bg2:transparent	
 }
 .theme-light.minimal-light-contrast .theme-dark{
     --tab-container-background:var(--bg2);
@@ -315,6 +316,36 @@ body{
     --btn-shadow-color:rgba(0, 0, 0, 0.05)
 }
 .excalidraw.theme--dark,.theme-dark{
+    --interactive-normal:var(--bg3);
+    --interactive-accent-rgb:66,66,66;
+    --active-line-bg:rgba(255,255,255,0.04);
+    --background-modifier-cover:hsla(var(--base-h),var(--base-s), calc(var(--base-l) - 12%), 0.5);
+    --text-highlight-bg-active:rgba(255, 255, 255, 0.1);
+    --background-modifier-error:rgba(255,20,20,0.12);
+    --background-modifier-error-hover:rgba(255,20,20,0.18);
+    --background-modifier-box-shadow:rgba(0, 0, 0, 0.3);
+    --shadow-color:rgba(0, 0, 0, 0.3);
+    --btn-shadow-color:rgba(0, 0, 0, 0.2)
+}
+.theme-light.minimal-light-contrast{
+    --workspace-background-translucent:rgba(0,0,0,0.6)
+}
+.theme-light.minimal-light-contrast .theme-dark{
+    --tab-container-background:var(--bg2);
+    --ribbon-background-collapsed:var(--bg2)
+}
+.theme-light{
+    --interactive-normal:var(--bg1);
+    --interactive-accent-rgb:220,220,220;
+    --active-line-bg:rgba(0,0,0,0.035);
+    --background-modifier-cover:hsla(var(--base-h),calc(var(--base-s) - 70%),calc(var(--base-l) - 20%),0.5);
+    --text-highlight-bg-active:rgba(0, 0, 0, 0.1);
+    --background-modifier-error:rgba(255,0,0,0.14);
+    --background-modifier-error-hover:rgba(255,0,0,0.08);
+    --shadow-color:rgba(0, 0, 0, 0.1);
+    --btn-shadow-color:rgba(0, 0, 0, 0.05)
+}
+.theme-dark{
     --interactive-normal:var(--bg3);
     --interactive-accent-rgb:66,66,66;
     --active-line-bg:rgba(255,255,255,0.04);
@@ -555,6 +586,7 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .cm-gutters{
 .markdown-source-view.mod-cm6 .cm-embed-block:hover{
     border:0
 }
+/*对标异常*/
 .markdown-source-view.mod-cm6 .cm-foldPlaceholder{
     color:var(--text-faint)
 }
@@ -587,7 +619,8 @@ body .markdown-source-view.mod-cm6.is-readable-line-width:not(.is-rtl) .cm-conte
 }
 body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-line-width .cm-contentContainer{
     max-width:100%
-}
+}								  
+/*对标异常END*/					   
 .theme-light .cm-link,.theme-light .cm-operator,.theme-light .cm-string,.theme-light .cm-string-2,.theme-light .language-css .token.string,.theme-light .style .token.string,.theme-light .token.entity,.theme-light .token.operator,.theme-light .token.url{
     background-color:transparent
 }
@@ -625,6 +658,7 @@ body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-l
 .cm-s-obsidian .cm-active span.cm-link.cm-hmd-barelink.cm-formatting-link-start,.cm-s-obsidian .cm-formatting-link+span.cm-link.cm-formatting.cm-formatting-link-end,.cm-s-obsidian span.cm-footref.cm-formatting.cm-formatting-link.cm-formatting-link-end,.cm-s-obsidian span.cm-formatting-link,.cm-s-obsidian span.cm-link.cm-hmd-barelink.cm-formatting-link-start,span.cm-image-marker{
     color:var(--text-faint)
 }
+/*对标异常*/
 .cm-s-obsidian span.cm-footref{
     font-size:var(--font-adaptive-normal)
 }
@@ -632,6 +666,7 @@ body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-l
     font-size:var(--font-adaptive-small);
     padding-left:20px
 }
+/*对标异常END*/
 .cm-formatting-quote{
     color:var(--text-faint)!important
 }
@@ -658,7 +693,7 @@ body:not(.is-mobile).minimal-folding .markdown-source-view.mod-cm6.is-readable-l
 .inline-title{
     padding-top:16px
 }
-.minimal-status-off .status-bar {
+.minimal-status-off .status-bar{
     --status-bar-position:static;
     --status-bar-radius:0;
     --status-bar-border-width:1px 0 0 0;
@@ -712,7 +747,7 @@ body:not(.minimal-status-off) .status-bar{
 .view-header-title,.view-header-title-parent{
     text-overflow:ellipsis
 }
-/*============================================*/
+/*tab-stack：标签上标题的不同对齐方式End*/				
 .view-header-title-container:not(.mod-at-end):after{
     display:none
 }
@@ -751,10 +786,13 @@ body:not(.is-mobile) .view-actions .view-action:last-child{
 body.window-title-off .titlebar-text{
     display:none
 }
+.titlebar-button-container.mod-right{
+    background-color:transparent!important
+}
 .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame),.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame){
     --titlebar-background:var(--bg1)
 }
-.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .sidebar-toggle-button.mod-right,.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .titlebar-button-container.mod-right,.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-ribbon.mod-left.is-collapsed,.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-tabs.mod-top,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .sidebar-toggle-button.mod-right,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .titlebar-button-container.mod-right,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-ribbon.mod-left.is-collapsed,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-tabs.mod-top{
+.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .sidebar-toggle-button.mod-right,.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-ribbon.mod-left.is-collapsed,.is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame).is-focused .workspace-tabs.mod-top,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .sidebar-toggle-button.mod-right,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-ribbon.mod-left.is-collapsed,.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame).is-focused .workspace-tabs.mod-top{
     --titlebar-background-focused:var(--bg1)
 }
 .is-hidden-frameless.theme-dark:not(.minimal-dark-black):not(.colorful-frame):not(.minimal-light-white) .workspace-ribbon.mod-left:not(.is-collapsed),.is-hidden-frameless.theme-light:not(.minimal-light-tonal):not(.colorful-frame):not(.minimal-light-white) .workspace-ribbon.mod-left:not(.is-collapsed){
@@ -812,14 +850,21 @@ body.is-mobile .CodeMirror-foldgutter-open:after,body.is-mobile span[title="Fold
     font-family:sans-serif;
     transform:rotate(360deg)
 }
+body{
+    --ig-adjust-reading:-0.65em;
+    --ig-adjust-edit:-1px
+}
 .markdown-rendered.show-indentation-guide li.task-list-item>ol::before,.markdown-rendered.show-indentation-guide li.task-list-item>ul::before,.markdown-rendered.show-indentation-guide li>ol::before,.markdown-rendered.show-indentation-guide li>ul::before{
-    transform:translateX(ar(--ig-adjust-reading))
+    left:var(--ig-adjust-reading);
+	/*transform:translateX(ar(--ig-adjust-reading))*/
 }
 .markdown-source-view.mod-cm6 .cm-indent::before{
-    transform:translateX(var(--ig-adjust-edit))
+    transform:translateX(var(--ig-adjust-edit));
+	/*transform:translateX(ar(--ig-adjust-reading))*/
 }
 .is-mobile .markdown-rendered.show-indentation-guide li>ol::before,.is-mobile .markdown-rendered.show-indentation-guide li>ul::before{
-    transform:translateX(ar(--ig-adjust-reading))
+    left:calc(0em + var(--ig-adjust-reading));
+	/*transform:translateX(calc(2px + var(--ig-adjust-edit)))*/
 }
 .is-mobile .markdown-source-view.mod-cm6 .cm-indent::before{
     transform:translateX(calc(2px + var(--ig-adjust-edit)))
@@ -1151,12 +1196,27 @@ body:not(.is-mobile) .markdown-source-view.mod-cm6 .list-bullet:after{
 .markdown-preview-view table{
     margin-block-start:1em
 }
-.markdown-preview-view .dataview.table-view-table thead.table-view-thead tr th,.markdown-preview-view td,.markdown-preview-view th,.markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th,.markdown-source-view.mod-cm6 td,.markdown-source-view.mod-cm6 th{
+.markdown-preview-view table,.markdown-source-view.mod-cm6 table{
+    border:1px solid var(--border-color);
+    border-collapse:collapse
+}
+.markdown-preview-view td,.markdown-preview-view th,.markdown-source-view.mod-cm6 td,.markdown-source-view.mod-cm6 th{
     padding:4px 10px
 }
-.markdown-preview-view .dataview.table-view-table thead.table-view-thead tr th:first-child,.markdown-preview-view td:first-child,.markdown-preview-view th:first-child,.markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:first-child,.markdown-source-view.mod-cm6 td:first-child,.markdown-source-view.mod-cm6 th:first-child{
+.markdown-preview-view td:first-child,.markdown-preview-view th:first-child,.markdown-source-view.mod-cm6 td:first-child,.markdown-source-view.mod-cm6 th:first-child{
     padding-left:0
 }
+.markdown-preview-view th,.markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th,.table-view-table>thead>tr>th{
+    padding:4px 10px
+}
+.markdown-preview-view th:first-child,.markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th:first-child,.table-view-table>thead>tr>th:first-child{
+    padding-left:0
+}
+/*对标异常*/
+.markdown-preview-view .dataview.table-view-table thead.table-view-thead tr th,.markdown-preview-view td,.markdown-preview-view th,.markdown-source-view.mod-cm6 .dataview.table-view-table thead.table-view-thead tr th,.markdown-source-view.mod-cm6 td,.markdown-source-view.mod-cm6 th{	  
+    padding:4px 10px
+}
+/*对标异常END*/
 body{
     --table-header-border-width:0 1px;
     --table-column-first-border-width:0;
@@ -1731,7 +1791,7 @@ body.colorful-headings .modal{
     --h3-color:var(--text-normal);
     --h4-color:var(--text-normal);
     --h5-color:var(--text-normal);
-    --h6-color:var(--text-normal);
+    --h6-color:var(--text-normal)
 }
 .is-mobile .tree-item-self .collapse-icon{
     width:20px
@@ -1789,6 +1849,9 @@ body.fancy-cursor .markdown-source-view.mod-cm6 .cm-content,body.fancy-cursor .m
 .workspace-ribbon.mod-left{
     border-left:0;
     transition:none
+}
+.minimal-focus-mode.is-translucent .workspace-ribbon.mod-left.is-collapsed,.minimal-focus-mode.is-translucent .workspace-ribbon.mod-left.is-collapsed:before{
+    background-color:var(--background-primary)!important
 }
 .minimal-focus-mode .workspace-ribbon.mod-left{
     transition:background-color 0s linear 0s
@@ -2095,10 +2158,10 @@ body:not(.zoom-off) .view-content .image-embed:active img{
     position:absolute;
     opacity:1
 }
-.labeled-nav.is-fullscreen:not(.colorful-frame) {
+.labeled-nav.is-fullscreen:not(.colorful-frame){
     --labeled-nav-top-margin:0
 }
-.labeled-nav {
+.labeled-nav{
     --labeled-nav-top-margin:var(--header-height)
 }
 .labeled-nav.is-translucent .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner{
@@ -2157,11 +2220,11 @@ body:not(.zoom-off) .view-content .image-embed:active img{
     right:0
 }
 /*修复：在 Minimal theme settings 中 打开如下开关
-Text labels for primary navigation后，导航栏样式异常*/
-.labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner {
+Text labels for primary navigation后，导航栏样式异常*/	   
+.labeled-nav .mod-left-split .mod-top .workspace-tab-header-container .workspace-tab-header-container-inner{
     padding-top:var(--size-4-2);
     /*margin-top:var(--labeled-nav-top-margin);*/
-    margin-top:auto;
+	margin-top:auto;	
     flex-direction:column!important;
     background-color:var(--background-secondary)
 }
@@ -2282,7 +2345,7 @@ body{
     max-width:var(--line-width-wide)!important
 }
 .table-100 .dataview.table-view-table td:first-child,.table-100 .dataview.table-view-table th:first-child,.table-100 .markdown-source-view.mod-cm6 td:first-child,.table-100 .markdown-source-view.mod-cm6 th:first-child,.table-100 table td:first-child,.table-100 table th:first-child{
-    padding-left:20px
+    padding-left:20px!important
 }
 .table-100 .dataview.table-view-table td:last-child,.table-100 .dataview.table-view-table th:last-child,.table-100 table td:last-child,.table-100 table th:last-child{
     padding-right:20px
@@ -2526,7 +2589,7 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
     --tab-outline-width:1px
 }
 .tabs-modern.colorful-frame .mod-root .mod-top.workspace-tabs:not(.mod-stacked) .workspace-tab-header.is-active .workspace-tab-header-inner-close-button,.tabs-modern.colorful-frame .mod-root .mod-top.workspace-tabs:not(.mod-stacked) .workspace-tab-header:hover .workspace-tab-header-inner-close-button{
-    color:var(--minimal-tab-text-color-active)
+	color:var(--minimal-tab-text-color-active)
 }
 .tabs-modern.minimal-focus-mode .mod-root .workspace-tab-header-container:hover{
     --tab-outline-width:0px
@@ -2583,7 +2646,40 @@ body:not(.sidebar-tabs-underline):not(.sidebar-tabs-index):not(.sidebar-tabs-squ
 .tabs-modern.sidebar-tabs-default .mod-right-split,.tabs-modern.sidebar-tabs-wide .mod-right-split{
     --tab-outline-width:0
 }
-
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-spacer,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-spacer,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-spacer{
+    display:none
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container{
+    padding-right:0
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container-inner{
+    padding:0;
+    margin:0;
+    flex-grow:1;
+    gap:0
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header{
+    flex-grow:1;
+    border-radius:0;
+    max-width:100px
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header:hover,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header:hover,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header:hover{
+    background-color:transparent
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header:hover .workspace-tab-header-inner{
+    background-color:transparent
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner{
+    border-bottom:2px solid transparent;
+    border-radius:0
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover{
+    border-color:var(--ui2)
+}
+.sidebar-tabs-underline .mod-right-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-container .workspace-tab-header.is-active .workspace-tab-header-inner{
+    border-color:var(--ax3);
+    padding-top:1px
+}
 .sidebar-tabs-square .mod-left-split,.sidebar-tabs-square .mod-right-split{
     --tab-radius:0px
 }
@@ -3177,6 +3273,22 @@ body .dataview.inline-field-value{
 .markdown-preview-view .block-language-dataview table.calendar .day{
     font-size:var(--font-adaptive-small)
 }
+.database-plugin__navbar,.database-plugin__scroll-container,.database-plugin__table{
+    width:100%
+}
+.dbfolder-table-container{
+    --font-adaptive-normal:var(--table-text-size);
+    --font-size-text:12px
+}
+.database-plugin__cell_size_wide .database-plugin__td{
+    padding:.15rem
+}
+.database-plugin__table{
+    border-spacing:0!important
+}
+.MuiAppBar-root{
+    background-color:transparent!important
+}
 .workspace-leaf-content .view-content.dictionary-view-content{
     padding:0
 }
@@ -3250,20 +3362,24 @@ div[data-type=dictionary-view] .main>.opener{
 body .excalidraw,body .excalidraw.theme--dark{
     --color-primary-light:var(--text-selection);
     --color-primary:var(--interactive-accent);
-    --color-primary-chubb:var(--interactive-accent-hover);
+    --color-primary-chubb:var(--interactive-accent-hover);	  
     --color-primary-darker:var(--interactive-accent-hover);
     --color-primary-darkest:var(--interactive-accent-hover);
     --ui-font:var(--font-interface);
     --island-bg-color:var(--background-secondary);
+    --icon-fill-color:var(--text-normal);
+    --button-hover:var(--background-modifier-hover);
     --button-gray-1:var(--background-modifier-hover);
     --button-gray-2:var(--background-modifier-hover);
     --focus-highlight-color:var(--background-modifier-border-focus);
     --default-bg-color:var(--background-primary);
+    --default-border-color:var(--background-modifier-border);
     --input-border-color:var(--background-modifier-border);
     --link-color:var(--text-accent);
     --overlay-bg-color:rgba(255, 255, 255, 0.88);
     --text-primary-color:var(--text-normal)
 }
+/*对标异常*/
 .workspace-leaf-content[data-type=excalidraw] .view-header .view-header-title-container{
     width:auto
 }
@@ -3303,6 +3419,7 @@ body .excalidraw label.ToolIcon{
     cursor:var(--cursor);
     background-color:transparent
 }
+/*对标异常END*/				
 .git-view-body .opener{
     text-transform:uppercase;
     letter-spacing:.05em;
@@ -4730,7 +4847,7 @@ body.theme-light{
     --tx3:#aaa9a5;
     --ax1:#37352f;
     --ax2:#000;
-    --ax3:#2eaadc;
+    --ax3:#2eaadc; 
     --hl1:rgba(131,201,229,0.3);
     --link-weight:500
 }
@@ -4788,7 +4905,7 @@ body.theme-light{
     --tx2:#586e75;
     --tx3:#ABB2AC;
     --tx4:#586e75;
-    --ax1:#268bd2;
+    --ax1:#268bd2; 
     --hl1:rgba(202,197,182,0.3);
     --hl2:rgba(203,75,22,0.3)
 }
@@ -4890,7 +5007,6 @@ body.theme-light{
     --divider-color:#24262a;
     --tab-outline-color:#24262a
 }
-
 
 /* Plugin compatibility */
 
@@ -5152,21 +5268,21 @@ settings:
 		collapsed: true
 	-
 		id: blockquote-color
-		title: Blockquotes text color
+		title: Blockquote text color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: blockquote-background-color
-		title: Blockquotes background color
+		title: Blockquote background color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
 		default-dark: '#'
 	-
 		id: blockquote-border-color
-		title: Blockquotes border color
+		title: Blockquote border color
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -5182,13 +5298,13 @@ settings:
 		step: 1
 	-
 		id: blockquote-size
-		title: Blockquotes font size
+		title: Blockquote font size
 		description: Accepts any CSS font-size value
 		type: variable-text
 		default: ''
 	-
 		id: blockquote-font-style
-		title: Blockquotes font style
+		title: Blockquote font style
 		type: variable-select
 		allowEmpty: false
 		default: normal
@@ -5221,7 +5337,7 @@ settings:
 				value: normal
 	-
 		id: code-blocks
-		title: Code and syntax highlighting
+		title: Code blocks
 		type: heading
 		level: 2
 		collapsed: true
@@ -5376,9 +5492,17 @@ settings:
 		level: 2
 		collapsed: true
 	-
+		id: graph-line
+		title: Line color
+		description: Changing graph colors requires closing and reopening graph panes or restarting Obsidian
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+	-
 		id: graph-node
 		title: Node color
-		description: Changing node colors requires closing and reopening graph panes or restarting Obsidian
+		description: Changing node colors requires closing and reopening graph panes or restarting Obsidian 
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -5411,7 +5535,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-    -
+	-
 		id: cm-editor
 		title: Editor 编辑器
 		type: heading
@@ -5424,7 +5548,7 @@ settings:
 		format: hex
 		default-light: '#'
 		default-dark: '#'
-	-		   
+	-
 		id: headings
 		title: Headings
 		type: heading
@@ -5928,7 +6052,7 @@ settings:
 		max: 2
 		step: 0.05
 		format: em
-	-		   
+	-
 		id: cm-edit-bullet-list-1
 		title: 无序列表前缀-级别1
         description: 填写前缀符号，需要将符号放入''内才可生效
@@ -5957,7 +6081,7 @@ settings:
 		title: 无序列表前缀-级别5
         description: 填写前缀符号，需要将符号放入''内才可生效
 		type: variable-text
-		default: '▸'
+		default: '▸'	
     -
 		id: indentation-guide-color
 		title: Indentation guide color
@@ -6366,6 +6490,9 @@ settings:
 		default: tab-stack-top
 		options:
 			-
+				label: Top
+				value: tab-stack-top
+			-
 				label: Top flipped
 				value: tab-stack-top-flipped
 			-
@@ -6611,7 +6738,7 @@ settings:
 		default-dark: '#'
 	-
 		id: title-color-inactive
-		title: Tab title color (inactive)
+		title: Tab title text color (inactive)
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -6824,7 +6951,7 @@ settings:
 		max: 30
 		step: 1
 		format: px
-*/  
+*/ 
 /* ======================== 自定义代码 ======================== */
 /* ======================================== */
 /* ============ Dataview Cards ============ */
@@ -8441,7 +8568,7 @@ body {
 	100% { transform:scale(100%); opacity:1; }
 }
 
-/*设置界面（Settings）:导航栏左侧导航边距*/
+/*设置界面（Settings）:导航栏左侧导航颜色样式*/
 .colorful-active #calendar-container .active, .colorful-active #calendar-container .active.today, .colorful-active #calendar-container .active:hover, .colorful-active #calendar-container .day:active, .colorful-active .menu-item.selected:not(.is-disabled):not(.is-label), .colorful-active .menu-item:hover, .colorful-active .menu-item:hover:not(.is-disabled):not(.is-label), .colorful-active .nav-file-title.is-active, .colorful-active .nav-file-title.is-being-dragged, .colorful-active .nav-folder-title.is-being-dragged, body.colorful-active:not(.is-grabbing) .nav-file-title.is-active:hover, body.colorful-active:not(.is-grabbing) .nav-file-title.is-being-dragged:hover, body.colorful-active:not(.is-grabbing) .nav-folder-title.is-being-draggedd {
     color:#000;
     background-color: #f0f0f0;
@@ -8572,7 +8699,7 @@ body {
     background-color: var(--bg3);
 }
 
-/*标签页（Tabs）：底色配置*/
+/*标签页（Tabs）：标签底色配置*/
 .theme-light .workspace-tab-header-container {
     background-color:#f6f6f6;
 }
@@ -8586,22 +8713,27 @@ body {
 .theme-dark .workspace-tab-header-container {
     border-bottom: 0.1px solid #585d5f
 }
-.theme-dark .workspace-tab-header.is-active.mod-active::before,.theme-dark .workspace-tab-header.is-active.mod-active::after {
-    position: absolute;
-    width: calc(var(--tab-curve) * 2);
-    height: calc(var(--tab-curve) * 2);
-    border-radius: 16px;
-    box-shadow: 0 0 0 calc(var(--tab-curve) * 3) transparent;
+/*标签页（Tabs）：内圆角*/
+.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active::before,.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active::after {
+    box-shadow: inset 0 0 0 var(--tab-outline-width) var(--accent-active), 0 0 0 calc(var(--tab-curve) * 4) var(--tab-background-active) !important;
 }
-/*标签页（Tabs）：深色模式下的焦点标签的颜色*/
-.theme-dark .workspace-tab-header.is-active.mod-active {
+
+/*
+.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active::before,.theme-dark .workspace-split.mod-root .workspace-tab-header.is-active::after {
+	box-shadow: inset 0 0 0 var(--tab-outline-width) var(--accent-active) !important;
+}
+*/
+/*标签页（Tabs）：深色模式下的活跃标签的边框阴影*/
+:is(.theme-light,.theme-dark) .workspace-tab-header.is-active.mod-active {
     box-shadow: 0 0 0 var(--tab-outline-width) var(--accent-active);
 }
-.theme-dark .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-title {
-    color:var(--accent-active);
+
+/*标签页（Tabs）：深色模式下的焦点标签的颜色*/
+:is(.theme-light,.theme-dark) .is-active .workspace-tab-header-inner .workspace-tab-header-inner-icon {
+    color:var(--accent-active) !important;
 }
 /*标签页（Tabs）：深色模式下的非活跃标签获得焦点时，标签页表标题的颜色*/
-.theme-dark .workspace-tab-header-container .workspace-tab-header:hover {
+:is(.theme-light,.theme-dark) .workspace-tab-header-container .workspace-tab-header:hover {
     color:var(--accent-active);
 }
 /*标签页（Tabs）：stack模式下文字自上到下排列*/
@@ -8624,6 +8756,11 @@ body {
 /*
 .theme-light .workspace-tab-header-container .workspace-tab-header .workspace-tab-header-inner:hover {
     background-color: var(--bg2);
+}
+*/
+/*
+:is(.theme-light,.theme-dark) .workspace-tab-header.is-active.mod-active .workspace-tab-header-inner-title {
+    color:var(--accent-active);
 }
 */
 /* ========================= Tabs End ========================= */
@@ -9241,8 +9378,6 @@ div#quick-explorer .explorable-separator::before {
 .rich-link-card .rich-link-image {
     background-position:unset !important;
 }
-.rich-link-card-container {
-}
 .rich-link-card .rich-link-card-text {
     width:80%;
 }
@@ -9340,27 +9475,27 @@ div#quick-explorer .explorable-separator::before {
 /*End*/
 /*======================== edit toolbar 插件 ========================*/
 /*edit toolbar 在置顶模式下边框样式*/
-#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic {
+.cMenuToolbarTinyAesthetic #cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic {
     border-radius: 0 !important;
 }
 /*End*/
 /*为【edit toolbar】插件，优化工具icon指向（hover）的样式*/
 /*【edit toolbar】一级菜单*/
-.cMenuToolbarCommandItem:hover {
+.cMenuToolbarTinyAesthetic .cMenuToolbarCommandItem:hover {
     background-color: var(--item-side) !important;
 }
 /*【edit toolbar】一级菜单icon尺寸*/
-button[class^=cMenuToolbarCommandItem] > svg{
+.cMenuToolbarTinyAesthetic button[class^=cMenuToolbarCommandItem] > svg{
     height: 1.2em;
     width: 1.2em;
 }
 /*【edit toolbar】子菜单 icon 尺寸*/
-button[class^=cMenuToolbarCommandsubItem] > svg{
+.cMenuToolbarTinyAesthetic button[class^=cMenuToolbarCommandsubItem] > svg{
     height: 2.2em;
     width: 2.2em;
 }
 /*【edit toolbar】子菜单 hover 样式*/
-button[class^="cMenuToolbarCommandsubItem"]:hover {
+.cMenuToolbarTinyAesthetic button[class^="cMenuToolbarCommandsubItem"]:hover {
     background-color: var(--item-side) !important;
 }
 /*【edit toolbar】插件设置菜单的指向样式*/
@@ -9373,7 +9508,7 @@ button[class^="cMenuToolbarCommandsubItem"]:hover {
 }
 /*End*/
 /*【edit toolbar】插件在独立窗口模式下的子菜单高度问题*/
-button[class^=cMenuToolbarCommandsubItem] >.subitem {
+.cMenuToolbarTinyAesthetic button[class^=cMenuToolbarCommandsubItem] >.subitem {
     height:32px !important;
 }
 /*End*/
@@ -9413,6 +9548,10 @@ span[class^=cm-list] .day-time-8 {
 .theme-dark .card-board-card-highlight-area.important {
     background-color: #007bff;
 }
+:is(.theme-light,.theme-dark) .card-board-card-highlight-area.good {
+    background-color: #0fcf68 !important;; 
+}
+
 /* =============== CardBoard End ============== */
 
 /* =============== Quite Outline ============== */
@@ -9434,6 +9573,16 @@ span[class^=cm-list] .day-time-8 {
 }
 /* =============== Quite Outline End ============== */
 
+/* =============== Surfing ============== */
+/* 让新建按钮和搜索框更近一点 */
+.wb-page-search-bar .wb-icon-list-container {
+    bottom:unset !important;
+}
+/* 让新建按钮和更明显一点*/
+.wb-create-btn {
+    opacity: 1.4;
+}
+/* =============== Surfing End ============== */
 /* ===================================================== */
 /* ==================== 插件间兼容性 ==================== */
 /* ===================================================== */
@@ -9507,19 +9656,19 @@ div[data-callout="hidden"] > .callout-title {
 }
 
 /* ========================= tasksCalendar ========================= */
-div[class^="tasksCalendar"]  div.gridHead {
+.block-language-dataviewjs div[class^="tasksCalendar"]  div.gridHead {
     font-size: var(--size-4-4) !important;
 }
-div[class^="tasksCalendar"] .note {
+.block-language-dataviewjs div[class^="tasksCalendar"] .note {
     font-size: var(--size-4-4) !important;
 }
-div[class^="tasksCalendar"] .wrapperButton {
+.block-language-dataviewjs div[class^="tasksCalendar"] .wrapperButton {
     color:white !important;
     background-color: var(--item-side) !important;
     font-size:small !important;
 }
 /*优化:*/
-div[class^="tasksCalendar"] button.current {
+.block-language-dataviewjs div[class^="tasksCalendar"] button.current {
     font-size:medium !important;
 }
 /*关闭日历中的当前月份显示*/

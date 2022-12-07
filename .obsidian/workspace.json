@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d03bb426ddfd5512",
+        "id": "d71e7647cc489c08",
         "type": "tabs",
         "children": [
           {
-            "id": "8812fa651d875f94",
+            "id": "1e5fc819a367cd58",
             "type": "leaf",
             "pane-relief:history-v1": {
               "pos": 0,
@@ -16,245 +16,6 @@
                 {
                   "state": "{}",
                   "eState": "{}"
-                },
-                {
-                  "title": "Readme",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":19,\"ch\":48},\"to\":{\"line\":19,\"ch\":48}},\"scroll\":0.11703239289446186}"
-                },
-                {
-                  "title": "优化Obsidian 启动速度",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-learning/优化Obsidian 启动速度.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":13,\"ch\":37},\"to\":{\"line\":13,\"ch\":37}},\"scroll\":0}"
-                },
-                {
-                  "title": "更新日志（Changelog）",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":339,\"ch\":51},\"to\":{\"line\":330,\"ch\":0}},\"scroll\":326.1546798406863}"
-                },
-                {
-                  "title": "优化Obsidian 启动速度",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-learning/优化Obsidian 启动速度.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-                },
-                {
-                  "title": "更新日志（Changelog）",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":33.043571920955884}"
-                },
-                {
-                  "title": "使用问题&FAQ",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"使用问题&FAQ.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-                },
-                {
-                  "title": "Readme",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":6.639067038511619}"
-                },
-                {
-                  "title": "更新日志（Changelog）",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":78,\"ch\":33},\"to\":{\"line\":44,\"ch\":1}},\"scroll\":27.80392156862745}"
-                },
-                {
-                  "title": "Readme",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":51,\"ch\":48},\"to\":{\"line\":7,\"ch\":0}},\"scroll\":4.066720999923407}"
-                },
-                {
-                  "title": "更新日志（Changelog）",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":33.056985294117645}"
-                },
-                {
-                  "title": "Readme",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":154,\"ch\":52},\"to\":{\"line\":154,\"ch\":52}},\"scroll\":170.87928921568627}"
-                },
-                {
-                  "title": "更新日志（Changelog）",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":556,\"ch\":0},\"to\":{\"line\":556,\"ch\":0}},\"scroll\":550.1572712916953}"
-                },
-                {
-                  "title": "Readme",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":29,\"ch\":15},\"to\":{\"line\":29,\"ch\":15}},\"scroll\":28.16094731349571}"
-                },
-                {
-                  "title": "更新日志（Changelog）",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":145,\"ch\":26},\"to\":{\"line\":145,\"ch\":26}},\"scroll\":130.84313725490196}"
-                },
-                {
-                  "title": "插件说明",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"插件说明.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":3.3903186274509802}"
-                },
-                {
-                  "title": "Obsidian教程——基础语法和操作",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "Obsidian-样式",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/高级语法/Obsidian-样式.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "DataView syntax",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/高级语法/DataView syntax.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "未命名",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "插件说明",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"插件说明.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "FastStart-Plugins-LongLongDelay",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongLongDelay.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":14,\"ch\":33},\"to\":{\"line\":14,\"ch\":33}}}"
-                },
-                {
-                  "title": "FastStart-Plugins-LongDelay",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongDelay.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":14},\"to\":{\"line\":10,\"ch\":14}}}"
-                },
-                {
-                  "title": "FastStart-Plugins-LongLongDelay",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongLongDelay.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":6,\"ch\":18},\"to\":{\"line\":6,\"ch\":18}}}"
-                },
-                {
-                  "title": "FastStart-Plugins-LongDelay",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongDelay.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "FastStart-Plugins-LongLongDelay",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-LongLongDelay.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":19,\"ch\":25},\"to\":{\"line\":19,\"ch\":25}}}"
-                },
-                {
-                  "title": "FastStart-Plugins-ShortDelay",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Template/startup/FastStart-Plugins-ShortDelay.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "Readme",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "插件说明",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"插件说明.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":68,\"ch\":0},\"to\":{\"line\":68,\"ch\":0}},\"scroll\":0}"
-                },
-                {
-                  "title": "Readme",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "插件说明",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"插件说明.md\",\"mode\":\"preview\",\"source\":false}}",
-                  "eState": "{\"scroll\":71.05434782608695}"
-                },
-                {
-                  "title": "《跟动物交换身体》",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"People/Book/《跟动物交换身体》.md\",\"mode\":\"preview\",\"source\":false}}",
-                  "eState": "{\"scroll\":4.1420118343195265}"
-                }
-              ]
-            },
-            "state": {
-              "type": "empty",
-              "state": {}
-            }
-          },
-          {
-            "id": "314befff63dcd0b6",
-            "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "state": "{}",
-                  "eState": "{}"
-                },
-                {
-                  "title": "⏰DashBoard",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"📊Every Day/⏰DashBoard.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "Readme",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":43.67320101868872}"
-                },
-                {
-                  "title": "⏰DashBoard",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"📊Every Day/⏰DashBoard.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":141.14142573844066}"
-                },
-                {
-                  "title": "Readme",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Readme.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":52,\"ch\":6},\"to\":{\"line\":52,\"ch\":6}},\"scroll\":31.790747549019606}"
-                },
-                {
-                  "title": "更新日志（Changelog）",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":78,\"ch\":59},\"to\":{\"line\":78,\"ch\":4}},\"scroll\":62.708060470281865}"
-                },
-                {
-                  "title": "优化Obsidian 启动速度",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-learning/优化Obsidian 启动速度.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
                 }
               ]
             },
@@ -268,7 +29,7 @@
             }
           },
           {
-            "id": "f5e88eb45f6043d4",
+            "id": "9c8db4b3a2faeeba",
             "type": "leaf",
             "pane-relief:history-v1": {
               "pos": 0,
@@ -276,34 +37,175 @@
                 {
                   "state": "{}",
                   "eState": "{}"
-                }
-              ]
-            },
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "使用问题&FAQ.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "578162c92891e7b4",
-            "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
+                },
                 {
-                  "state": "{}",
-                  "eState": "{}"
+                  "title": "01.zettelkasten卡片盒",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":0},\"to\":{\"line\":10,\"ch\":0}}}"
+                },
+                {
+                  "title": "address operator",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/address operator.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":6},\"to\":{\"line\":1,\"ch\":18}}}"
+                },
+                {
+                  "title": "01.zettelkasten卡片盒",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "zettelkasten Gallery",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/zettelkasten Gallery.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "01.zettelkasten卡片盒",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "zettelkasten Gallery",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/zettelkasten Gallery.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":0},\"to\":{\"line\":1,\"ch\":10}}}"
+                },
+                {
+                  "title": "01.zettelkasten卡片盒",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":3},\"to\":{\"line\":8,\"ch\":3}}}"
+                },
+                {
+                  "title": "coral reef",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/coral reef.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":6},\"to\":{\"line\":1,\"ch\":18}}}"
+                },
+                {
+                  "title": "01.zettelkasten卡片盒",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":7,\"ch\":2},\"to\":{\"line\":7,\"ch\":5}}}"
+                },
+                {
+                  "title": "zettelkasten Gallery",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/zettelkasten Gallery.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":3,\"ch\":0},\"to\":{\"line\":3,\"ch\":0}}}"
+                },
+                {
+                  "title": "01.zettelkasten卡片盒",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":24},\"to\":{\"line\":1,\"ch\":24}}}"
+                },
+                {
+                  "title": "zettelkasten Gallery",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/zettelkasten Gallery.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":12},\"to\":{\"line\":1,\"ch\":24}}}"
+                },
+                {
+                  "title": "porpoises",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/porpoises.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "01.zettelkasten卡片盒",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":3},\"to\":{\"line\":8,\"ch\":3}}}"
+                },
+                {
+                  "title": "address operator",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/address operator.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "Chamberlain",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/Chamberlain.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "Apple M1 Max chip",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/Apple M1 Max chip.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "address operator",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/address operator.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "01.zettelkasten卡片盒",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":3,\"ch\":0},\"to\":{\"line\":3,\"ch\":0}}}"
+                },
+                {
+                  "title": "address operator",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/address operator.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":18},\"to\":{\"line\":1,\"ch\":18}}}"
+                },
+                {
+                  "title": "01.zettelkasten卡片盒",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":11},\"to\":{\"line\":5,\"ch\":23}}}"
+                },
+                {
+                  "title": "address operator",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/address operator.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "01.zettelkasten卡片盒",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":8,\"ch\":3},\"to\":{\"line\":8,\"ch\":3}}}"
+                },
+                {
+                  "title": "address operator",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/address operator.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "01.zettelkasten卡片盒",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":3,\"ch\":0},\"to\":{\"line\":3,\"ch\":0}}}"
+                },
+                {
+                  "title": "address operator",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/address operator.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
+                },
+                {
+                  "title": "01.zettelkasten卡片盒",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
                 }
               ]
             },
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian-example/常见的语法罗列.md",
+                "file": "Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md",
                 "mode": "source",
                 "source": false
               }
@@ -323,7 +225,7 @@
         "type": "tabs",
         "children": [
           {
-            "id": "c55efec099ef9ac1",
+            "id": "4b66687849498d57",
             "type": "leaf",
             "pane-relief:history-v1": {
               "pos": 0,
@@ -359,30 +261,6 @@
             }
           },
           {
-            "id": "b0a47a1490c3954e",
-            "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "state": "{}",
-                  "eState": "{}"
-                }
-              ]
-            },
-            "state": {
-              "type": "search",
-              "state": {
-                "query": "tag:#javascript",
-                "matchingCase": false,
-                "explainSearch": false,
-                "collapseAll": false,
-                "extraContext": false,
-                "sortOrder": "alphabetical"
-              }
-            }
-          },
-          {
             "id": "9a63bc5b1fa84f6f",
             "type": "leaf",
             "pane-relief:history-v1": {
@@ -400,7 +278,31 @@
             }
           },
           {
-            "id": "6a7bbb4e8fb709eb",
+            "id": "b0a47a1490c3954e",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "杂项",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "622f7cc55024961a",
             "type": "leaf",
             "pane-relief:history-v1": {
               "pos": 0,
@@ -420,7 +322,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 309.5
+    "width": 310.015625
   },
   "right": {
     "id": "0afdab19216adf86",
@@ -445,6 +347,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "更新日志（Changelog）.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -470,13 +373,14 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "更新日志（Changelog）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "4bb83e5cfb104650",
+            "id": "dc4954e1207dac0f",
             "type": "leaf",
             "pane-relief:history-v1": {
               "pos": 0,
@@ -496,7 +400,7 @@
             }
           },
           {
-            "id": "1cf08152007094bd",
+            "id": "3c84660d0819f9ca",
             "type": "leaf",
             "pane-relief:history-v1": {
               "pos": 0,
@@ -508,29 +412,14 @@
               ]
             },
             "state": {
-              "type": "quiet-outline",
-              "state": {}
+              "type": "outline",
+              "state": {
+                "file": "更新日志（Changelog）.md"
+              }
             }
           },
           {
-            "id": "b6443d2a7ed3990d",
-            "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "state": "{}",
-                  "eState": "{}"
-                }
-              ]
-            },
-            "state": {
-              "type": "tlfItemView",
-              "state": {}
-            }
-          },
-          {
-            "id": "9c67d0b3d6ce8733",
+            "id": "c21b77a0bdf1feef",
             "type": "leaf",
             "pane-relief:history-v1": {
               "pos": 0,
@@ -545,60 +434,29 @@
               "type": "reminder-list",
               "state": {}
             }
-          },
-          {
-            "id": "b7f06721b7d45109",
-            "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "state": "{}",
-                  "eState": "{}"
-                }
-              ]
-            },
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
-            "id": "4a2babfae034cbba",
-            "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "state": "{}",
-                  "eState": "{}"
-                }
-              ]
-            },
-            "state": {
-              "type": "outline",
-              "state": {}
-            }
           }
         ],
         "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 353.72222900390625,
+    "width": 351.5,
     "collapsed": true
   },
-  "active": "c55efec099ef9ac1",
+  "active": "1e5fc819a367cd58",
+  "ophidian:layout-settings": {
+    "pane-relief:focus-lock": false
+  },
   "lastOpenFiles": [
-    "Readme.md",
+    "Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md",
+    "Obsidian-example/设备 gallery/设备查询卡.md",
+    "Obsidian-example/进阶用法2-卡片知识集合/address operator.md",
+    "Obsidian-example/进阶用法2-卡片知识集合/zettelkasten Gallery.md",
+    "Obsidian-example/进阶用法2-卡片知识集合/coral reef.md",
+    "Obsidian-example/进阶用法2-卡片知识集合/porpoises.md",
+    "Obsidian-example/进阶用法2-卡片知识集合/Chamberlain.md",
+    "Obsidian-example/进阶用法2-卡片知识集合/Apple M1 Max chip.md",
     "更新日志（Changelog）.md",
-    "使用问题&FAQ.md",
-    "Obsidian-example/常见的语法罗列.md",
-    "Obsidian-example/Readme英文版.md",
-    "未命名.md",
-    "Template/startup/FastStart-StartupScript.md",
-    "📊Every Day/⏰DashBoard.md",
-    "📊Every Day/📊Every Day.md",
-    "📊Every Day/✅每日检查To-Do.md"
+    "Obsidian-example/启动优化说明（基于模板插件）/启动速度的简要说明.md"
   ]
 }

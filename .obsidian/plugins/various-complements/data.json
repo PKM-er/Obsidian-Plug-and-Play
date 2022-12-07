@@ -47,75 +47,27 @@
   },
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
-    "测验焦虑\t1": {
-      "测验焦虑\t1": {
-        "customDictionary": {
-          "count": 1,
-          "lastUpdated": 1665998607479
-        }
-      }
-    },
-    "测试：测试": {
-      "测试：测试": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1666176206427
-        }
-      }
-    },
-    "边框和lapel的兼容。": {
-      "边框和lapel的兼容。": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1666239859558
-        }
-      }
-    },
-    "广告主，占领触达端，或者植入触达端": {
-      "广告主，占领触达端，或者植入触达端": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1666260758921
-        }
-      }
-    },
-    "广告主，占领触达端，或者植入触达端占领触达端，或者植入触达端": {
-      "广告主，占领触达端，或者植入触达端占领触达端，或者植入触达端": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1666260761190
-        }
-      }
-    },
-    "Obsidian": {
-      "Obsidian": {
-        "customDictionary": {
-          "count": 1,
-          "lastUpdated": 1666878678395
-        }
-      }
-    },
-    "release": {
-      "release": {
-        "frontMatter": {
-          "count": 1,
-          "lastUpdated": 1667127073733
-        }
-      }
-    },
-    "核验城市显示：详情页会展示：已通过政府保障房认定字样；【解决C端感知和信赖问题】": {
-      "核验城市显示：详情页会展示：已通过政府保障房认定字样；【解决C端感知和信赖问题】": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1667384797410
-        }
-      }
-    },
     "更新日志（Changelog）：每个版本变更明细；": {
       "更新日志（Changelog）：每个版本变更明细；": {
         "currentFile": {
           "count": 1,
           "lastUpdated": 1668563091222
+        }
+      }
+    },
+    "2022-12-02": {
+      "2022-12-02": {
+        "currentFile": {
+          "count": 2,
+          "lastUpdated": 1670118037432
+        }
+      }
+    },
+    "功能：可以帮助你书写数学笔记，看不到下面公示渲染的同学，请开启": {
+      "功能：可以帮助你书写数学笔记，看不到下面公示渲染的同学，请开启": {
+        "currentFile": {
+          "count": 1,
+          "lastUpdated": 1670428299103
         }
       }
     }

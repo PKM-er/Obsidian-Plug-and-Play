@@ -1,6 +1,6 @@
 {
   "baseFontSize": 17,
-  "theme": "moonstone",
+  "theme": "obsidian",
   "cssTheme": "Minimal",
   "translucency": false,
   "enabledCssSnippets": [
@@ -14,7 +14,8 @@
     "dataview-cards",
     "strong outline",
     "tableStyles",
-    "bigger link popup preview"
+    "bigger link popup preview",
+    "【卡片视图】zettelkasten"
   ],
   "interfaceFontFamily": "Microsoft YaHei",
   "textFontFamily": "Microsoft YaHei",

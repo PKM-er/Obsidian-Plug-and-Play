@@ -21,9 +21,7 @@
   "buttons",
   "card-board",
   "obsidian-colorful-tag",
-  "consistent-attachments-and-links",
   "obsidian-custom-frames",
-  "dataview",
   "obsidian-diagrams-net",
   "dbfolder",
   "obsidian-dynamic-highlights",
@@ -57,5 +55,6 @@
   "obsidian-pandoc",
   "ProxyGithub",
   "another-web-browser",
-  "editing-toolbar"
+  "editing-toolbar",
+  "dataview"
 ]
