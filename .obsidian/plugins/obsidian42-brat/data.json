@@ -1,8 +1,8 @@
 {
   "pluginList": [
+    "Quorafind/Obsidian-Surfing",
     "rien7/obsidian-colorful-tag",
     "proog/obsidian-trash-explorer",
-    "Trikzon/obsidian-web-browser",
     "cumany/obsidian-editing-toolbar",
     "Stardusten/ob-table-enhancer"
   ],

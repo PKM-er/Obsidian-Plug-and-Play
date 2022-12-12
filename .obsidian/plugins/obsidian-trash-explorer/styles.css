@@ -12,10 +12,24 @@
 	align-items: center;
 }
 
-.trash-item__text {
+.trash-item__textcontainer {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.trash-item__name {
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+
+.trash-item__info {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	color: var(--text-faint);
+	font-size: var(--font-ui-small);
 }
 
 .trash-item__buttons {

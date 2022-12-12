@@ -1,5 +1,5 @@
 {
-  "version": "0.6.0",
+  "version": "0.7.0",
   "data": {
     "boardConfigs": [
       {
@@ -84,7 +84,16 @@
       }
     ],
     "globalSettings": {
-      "taskCompletionFormat": "ObsidianTasks"
+      "taskCompletionFormat": "ObsidianTasks",
+      "columnNames": {
+        "today": "",
+        "tomorrow": "",
+        "future": "",
+        "undated": "",
+        "others": "",
+        "untagged": "",
+        "completed": ""
+      }
     }
   }
 }

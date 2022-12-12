@@ -57,7 +57,7 @@ var TRASH_ROOT = (0, import_obsidian.normalizePath)(".trash");
 var Trash = class {
   constructor(vault) {
     this.vault = vault;
-    this.root = new TrashedFolder(this.vault, TRASH_ROOT, null);
+    this.root = new TrashedFolder(this.vault, TRASH_ROOT, null, null);
     this.collator = new Intl.Collator(void 0, {
       sensitivity: "base"
     });
@@ -87,23 +87,26 @@ var Trash = class {
     const items = [];
     for (const path of trashedFiles.folders.sort(this.compareName)) {
       const files = await this.vault.adapter.list(path);
-      const trashedFolder = new TrashedFolder(this.vault, path, parent);
+      const stat = await this.vault.adapter.stat(path);
+      const trashedFolder = new TrashedFolder(this.vault, path, stat, parent);
       items.push(trashedFolder);
       trashedFolder.children = await this.buildItems(files, trashedFolder);
     }
     for (const path of trashedFiles.files.sort(this.compareName)) {
-      const trashedFile = new TrashedFile(this.vault, path, parent);
+      const stat = await this.vault.adapter.stat(path);
+      const trashedFile = new TrashedFile(this.vault, path, stat, parent);
       items.push(trashedFile);
     }
     return items;
   }
 };
 var TrashedBase = class {
-  constructor(vault, path, parent) {
+  constructor(vault, path, stat, parent) {
     this.vault = vault;
     this.parent = parent;
     this.path = (0, import_obsidian.normalizePath)(path);
     this.basename = basename2(this.path);
+    this.size = (stat == null ? void 0 : stat.size) || 0;
   }
   async restore() {
     const restorePath = (0, import_obsidian.normalizePath)(this.path.replace(`${TRASH_ROOT}/`, ""));
@@ -176,6 +179,7 @@ var TrashExplorerView = class extends import_obsidian2.ItemView {
     this.trash = trash;
     this.icon = "trash";
     this.navigation = false;
+    this.infoFormatter = new InfoFormatter();
   }
   getViewType() {
     return VIEW_TYPE;
@@ -215,9 +219,16 @@ var TrashExplorerView = class extends import_obsidian2.ItemView {
     const el = container.createEl("div", {
       cls: "trash-item"
     });
-    el.createEl("div", {
-      cls: "trash-item__text",
+    const textContainer = el.createEl("div", {
+      cls: "trash-item__textcontainer"
+    });
+    textContainer.createEl("div", {
+      cls: "trash-item__name",
       text: item.basename
+    });
+    textContainer.createEl("div", {
+      cls: "trash-item__info",
+      text: this.infoFormatter.getInfo(item)
     });
     const buttons = el.createEl("div", {
       cls: "trash-item__buttons"
@@ -284,6 +295,24 @@ var ConfirmModal = class extends import_obsidian2.Modal {
   }
   onClose() {
     this.contentEl.empty();
+  }
+};
+var InfoFormatter = class {
+  constructor() {
+    this.units = [
+      { size: 0, name: "B", digits: 0 },
+      { size: 1024, name: "KB", digits: 1 },
+      { size: 1024 * 1024, name: "MB", digits: 1 },
+      { size: 1024 * 1024 * 1024, name: "GB", digits: 1 }
+    ];
+  }
+  getInfo(item) {
+    if (item.kind === "folder") {
+      return `${item.children.length} items`;
+    }
+    const bestUnit = this.units.reduce((best, unit) => item.size >= unit.size ? unit : best);
+    const displaySize = item.size / (bestUnit.size || 1);
+    return `${displaySize.toFixed(bestUnit.digits)} ${bestUnit.name}`;
   }
 };
 

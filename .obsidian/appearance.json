@@ -1,5 +1,5 @@
 {
-  "baseFontSize": 17,
+  "baseFontSize": 19,
   "theme": "obsidian",
   "cssTheme": "Minimal",
   "translucency": false,
@@ -15,7 +15,11 @@
     "strong outline",
     "tableStyles",
     "bigger link popup preview",
-    "【卡片视图】zettelkasten"
+    "【卡片视图】zettelkasten",
+    "masonry",
+    "【图标】External Link Icons",
+    "【Linkcard】",
+    "通过yaml区域控制样式"
   ],
   "interfaceFontFamily": "Microsoft YaHei",
   "textFontFamily": "Microsoft YaHei",

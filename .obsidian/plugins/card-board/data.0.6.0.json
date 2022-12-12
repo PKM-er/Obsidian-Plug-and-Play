@@ -1,0 +1,90 @@
+{
+  "version": "0.6.0",
+  "data": {
+    "boardConfigs": [
+      {
+        "tag": "dateBoardConfig",
+        "data": {
+          "completedCount": 1000,
+          "filters": [
+            {
+              "tag": "pathFilter",
+              "data": "Works"
+            }
+          ],
+          "filterPolarity": "Allow",
+          "showFilteredTags": true,
+          "includeUndated": true,
+          "title": "Work"
+        }
+      },
+      {
+        "tag": "dateBoardConfig",
+        "data": {
+          "completedCount": 1000,
+          "filters": [
+            {
+              "tag": "pathFilter",
+              "data": "3-Family/👨‍👩‍👧一家人"
+            }
+          ],
+          "filterPolarity": "Allow",
+          "showFilteredTags": true,
+          "includeUndated": true,
+          "title": "Family"
+        }
+      },
+      {
+        "tag": "dateBoardConfig",
+        "data": {
+          "completedCount": 1000,
+          "filters": [
+            {
+              "tag": "fileFilter",
+              "data": "People/Obsidian-plug-and-play/Releases 修改日志.md"
+            }
+          ],
+          "filterPolarity": "Allow",
+          "showFilteredTags": false,
+          "includeUndated": true,
+          "title": "Plug and Play"
+        }
+      },
+      {
+        "tag": "tagBoardConfig",
+        "data": {
+          "columns": [
+            {
+              "tag": "work",
+              "displayTitle": "Work"
+            },
+            {
+              "tag": "todo",
+              "displayTitle": "Todo"
+            },
+            {
+              "tag": "bug",
+              "displayTitle": "Bug"
+            }
+          ],
+          "showColumnTags": true,
+          "completedCount": 500,
+          "filters": [
+            {
+              "tag": "pathFilter",
+              "data": "/"
+            }
+          ],
+          "filterPolarity": "Allow",
+          "showFilteredTags": true,
+          "includeOthers": true,
+          "includeUntagged": false,
+          "title": "测试 tag board"
+        }
+      }
+    ],
+    "globalSettings": {
+      "taskCompletionFormat": "ObsidianTasks"
+    }
+  }
+}

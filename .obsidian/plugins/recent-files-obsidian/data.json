@@ -5,196 +5,188 @@
       "path": "更新日志（Changelog）.md"
     },
     {
-      "basename": "01.zettelkasten卡片盒",
-      "path": "Obsidian-example/进阶用法2-卡片知识集合/01.zettelkasten卡片盒.md"
+      "basename": "00、基本语法和简介",
+      "path": "Obsidian-example/基本使用/00、基本语法和简介.md"
     },
     {
-      "basename": "address operator",
-      "path": "Obsidian-example/进阶用法2-卡片知识集合/address operator.md"
+      "basename": "09、引用和脚注",
+      "path": "Obsidian-example/基本使用/09、引用和脚注.md"
     },
     {
-      "basename": "zettelkasten Gallery",
-      "path": "Obsidian-example/进阶用法2-卡片知识集合/zettelkasten Gallery.md"
+      "basename": "01、正文标题语法和样式设置",
+      "path": "Obsidian-example/基本使用/01、正文标题语法和样式设置.md"
     },
     {
-      "basename": "coral reef",
-      "path": "Obsidian-example/进阶用法2-卡片知识集合/coral reef.md"
+      "basename": "02、段落、换行、强调",
+      "path": "Obsidian-example/基本使用/02、段落、换行、强调.md"
     },
     {
-      "basename": "porpoises",
-      "path": "Obsidian-example/进阶用法2-卡片知识集合/porpoises.md"
+      "basename": "05、图片和链接",
+      "path": "Obsidian-example/基本使用/05、图片和链接.md"
     },
     {
-      "basename": "Chamberlain",
-      "path": "Obsidian-example/进阶用法2-卡片知识集合/Chamberlain.md"
+      "basename": "07、表格和表格嵌套",
+      "path": "Obsidian-example/基本使用/07、表格和表格嵌套.md"
     },
     {
-      "basename": "Apple M1 Max chip",
-      "path": "Obsidian-example/进阶用法2-卡片知识集合/Apple M1 Max chip.md"
+      "basename": "08、目录",
+      "path": "Obsidian-example/基本使用/08、目录.md"
     },
     {
-      "basename": "启动速度的简要说明",
-      "path": "Obsidian-example/启动优化说明（基于模板插件）/启动速度的简要说明.md"
+      "basename": "06、提示框(callout)样式展示",
+      "path": "Obsidian-example/基本使用/06、提示框(callout)样式展示.md"
     },
     {
-      "basename": "优化Obsidian 启动速度",
-      "path": "Obsidian-example/启动优化说明（基于模板插件）/优化Obsidian 启动速度.md"
+      "basename": "04、表格（Table）",
+      "path": "Obsidian-example/基本使用/04、表格（Table）.md"
     },
     {
-      "basename": "03、提示框(callout)样式展示",
-      "path": "Obsidian-example/基本使用/03、提示框(callout)样式展示.md"
+      "basename": "03、列表：有序列表和无序列表",
+      "path": "Obsidian-example/基本使用/03、列表：有序列表和无序列表.md"
     },
     {
-      "basename": "01、笔记多栏样式",
-      "path": "Obsidian-example/进阶用法/01、笔记多栏样式.md"
+      "basename": "13.嵌入视频和音频",
+      "path": "Obsidian-example/基本使用/13.嵌入视频和音频.md"
     },
     {
-      "basename": "02、脑图和流程图（Mermaid）",
-      "path": "Obsidian-example/进阶用法/02、脑图和流程图（Mermaid）.md"
+      "basename": "12、环绕布局、缩进效果示例，Wiki效果",
+      "path": "Obsidian-example/基本使用/12、环绕布局、缩进效果示例，Wiki效果.md"
     },
     {
-      "basename": "03、Timeline 记录",
-      "path": "Obsidian-example/进阶用法/03、Timeline 记录.md"
+      "basename": "11、代码块",
+      "path": "Obsidian-example/基本使用/11、代码块.md"
     },
     {
-      "basename": "04、乐谱",
-      "path": "Obsidian-example/进阶用法/04、乐谱.md"
-    },
-    {
-      "basename": "05、数学公式",
-      "path": "Obsidian-example/进阶用法/05、数学公式.md"
-    },
-    {
-      "basename": "Obsidian样式DIY",
-      "path": "Obsidian-example/DoItYourself/Obsidian样式DIY.md"
+      "basename": "10、任务",
+      "path": "Obsidian-example/基本使用/10、任务.md"
     },
     {
       "basename": "我的工作",
       "path": "Works/我的工作.md"
     },
     {
-      "basename": "tmp1670426498238_更新日志（Changelog）_image_1",
-      "path": "素材库/tmp1670426498238_更新日志（Changelog）_image_1.gif"
+      "basename": "使用问题&FAQ",
+      "path": "常见问题/使用问题&FAQ.md"
     },
     {
-      "basename": "Readme_image_2",
-      "path": "素材库/Readme_image_2.png"
+      "basename": "Obsidian样式DIY",
+      "path": "Obsidian-example/Obsidian样式DIY.md"
     },
     {
-      "basename": "使用问题&FAQ_image_1",
-      "path": "素材库/使用问题&FAQ_image_1.png"
+      "basename": "Tables",
+      "path": "Obsidian-example/进阶用法3-cssClasses/Tables.md"
     },
     {
-      "basename": "插件说明",
-      "path": "插件说明.md"
+      "basename": "Extend table",
+      "path": "Obsidian-example/进阶用法3-cssClasses/Extend table.md"
+    },
+    {
+      "basename": "08.自定义表格样式 - 文件标题样式",
+      "path": "Obsidian-example/进阶用法3-cssClasses/08.自定义表格样式 - 文件标题样式.md"
+    },
+    {
+      "basename": "07.自定义表格样式 - Yellow cab",
+      "path": "Obsidian-example/进阶用法3-cssClasses/07.自定义表格样式 - Yellow cab.md"
+    },
+    {
+      "basename": "06.自定义表格样式 - White red rounded",
+      "path": "Obsidian-example/进阶用法3-cssClasses/06.自定义表格样式 - White red rounded.md"
+    },
+    {
+      "basename": "05.自定义表格样式 - White red",
+      "path": "Obsidian-example/进阶用法3-cssClasses/05.自定义表格样式 - White red.md"
+    },
+    {
+      "basename": "04.自定义表格样式 - Latex like",
+      "path": "Obsidian-example/进阶用法3-cssClasses/04.自定义表格样式 - Latex like.md"
+    },
+    {
+      "basename": "03.自定义表格样式 - FlatBlue",
+      "path": "Obsidian-example/进阶用法3-cssClasses/03.自定义表格样式 - FlatBlue.md"
+    },
+    {
+      "basename": "02.自定义表格样式 - PurpleRed",
+      "path": "Obsidian-example/进阶用法3-cssClasses/02.自定义表格样式 - PurpleRed.md"
+    },
+    {
+      "basename": "01.自定义表格样式 - Default Table",
+      "path": "Obsidian-example/进阶用法3-cssClasses/01.自定义表格样式 - Default Table.md"
+    },
+    {
+      "basename": "常见的语法罗列",
+      "path": "Obsidian-example/该库的常见样式罗列/常见的语法罗列.md"
+    },
+    {
+      "basename": "Obsidian教程——基础语法和操作",
+      "path": "Obsidian-example/基本使用/Obsidian教程——基础语法和操作.md"
+    },
+    {
+      "basename": "02、脑图和流程图（Mermaid）",
+      "path": "Obsidian-example/进阶用法1/02、脑图和流程图（Mermaid）.md"
+    },
+    {
+      "basename": "05、数学公式",
+      "path": "Obsidian-example/进阶用法1/05、数学公式.md"
+    },
+    {
+      "basename": "taskCalendar",
+      "path": "Obsidian-example/进阶用法2-dataview/应用示例-taskCalendar/taskCalendar.md"
+    },
+    {
+      "basename": "01.zettelkasten卡片盒 展示属性",
+      "path": "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/01.zettelkasten卡片盒 展示属性.md"
+    },
+    {
+      "basename": "01.zettelkasten卡片盒",
+      "path": "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/01.zettelkasten卡片盒.md"
+    },
+    {
+      "basename": "DataView syntax",
+      "path": "Obsidian-example/进阶用法2-dataview/dataview语法/DataView syntax.md"
+    },
+    {
+      "basename": "README",
+      "path": "Template/tasksCalendar/README.md"
+    },
+    {
+      "basename": "01、笔记多栏样式",
+      "path": "Obsidian-example/进阶用法1/01、笔记多栏样式.md"
+    },
+    {
+      "basename": "04、乐谱",
+      "path": "Obsidian-example/进阶用法1/04、乐谱.md"
+    },
+    {
+      "basename": "03、Timeline 记录",
+      "path": "Obsidian-example/进阶用法1/03、Timeline 记录.md"
+    },
+    {
+      "basename": "tmp1670832241095_07、目录_image_1",
+      "path": "Obsidian-example/基本使用/素材库/tmp1670832241095_07、目录_image_1.gif"
+    },
+    {
+      "basename": "tmp1670832300229_07、目录_image_1",
+      "path": "Obsidian-example/基本使用/素材库/tmp1670832300229_07、目录_image_1.gif"
+    },
+    {
+      "basename": "01、正文标题语法和样式设置_image_3",
+      "path": "Obsidian-example/基本使用/素材库/01、正文标题语法和样式设置_image_3.png"
+    },
+    {
+      "basename": "08、目录_image_1",
+      "path": "Obsidian-example/基本使用/素材库/08、目录_image_1.gif"
+    },
+    {
+      "basename": "algae",
+      "path": "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/algae.md"
+    },
+    {
+      "basename": "Baader-Meinhof Phenomenon",
+      "path": "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/Baader-Meinhof Phenomenon.md"
     },
     {
       "basename": "⏰DashBoard",
       "path": "📊Every Day/⏰DashBoard.md"
-    },
-    {
-      "basename": "BookList",
-      "path": "People/Book/BookList.md"
-    },
-    {
-      "basename": "Readme",
-      "path": "Readme.md"
-    },
-    {
-      "basename": "Book database",
-      "path": "People/Book/Book database.md"
-    },
-    {
-      "basename": "使用问题&FAQ",
-      "path": "使用问题&FAQ.md"
-    },
-    {
-      "basename": "常见的语法罗列",
-      "path": "Obsidian-example/常见的语法罗列.md"
-    },
-    {
-      "basename": "FastStart-StartupScript",
-      "path": "Template/startup/FastStart-StartupScript.md"
-    },
-    {
-      "basename": "FastStart-Plugins-LongDelay",
-      "path": "Template/startup/FastStart-Plugins-LongDelay.md"
-    },
-    {
-      "basename": "插件大全",
-      "path": "插件大全.md"
-    },
-    {
-      "basename": "Obsidian教程——基础语法和操作",
-      "path": "Obsidian-example/Obsidian使用教程/Obsidian教程——基础语法和操作.md"
-    },
-    {
-      "basename": "!dict",
-      "path": "Obsidian-learning/var complete/!dict.md"
-    },
-    {
-      "basename": "Obsidian 教程——代码域",
-      "path": "Obsidian-example/Obsidian使用教程/Obsidian 教程——代码域.md"
-    },
-    {
-      "basename": "Obsidian 教程——mermaid",
-      "path": "Obsidian-example/Obsidian使用教程/Obsidian 教程——mermaid.md"
-    },
-    {
-      "basename": "Obsidian 教程——Latex",
-      "path": "Obsidian-example/Obsidian使用教程/Obsidian 教程——Latex.md"
-    },
-    {
-      "basename": "DataView syntax",
-      "path": "Obsidian-example/DoItYourself/DataView syntax.md"
-    },
-    {
-      "basename": "FastStart-Plugins-LongLongDelay",
-      "path": "Template/startup/FastStart-Plugins-LongLongDelay.md"
-    },
-    {
-      "basename": "FastStart-Plugins-ShortDelay",
-      "path": "Template/startup/FastStart-Plugins-ShortDelay.md"
-    },
-    {
-      "basename": "保障性租赁住房 To-Do",
-      "path": "Works/58-房产-租房/01、保障性租赁住房/保障性租赁住房 To-Do.md"
-    },
-    {
-      "basename": "成都融合项目周会会议纪要&To-Do",
-      "path": "Works/58-房产-租房/融合变革项目/成都融合项目周会会议纪要&To-Do.md"
-    },
-    {
-      "basename": "保障性租赁住房摸底和一线调研",
-      "path": "Works/58-房产-租房/01、保障性租赁住房/保障性租赁住房摸底和一线调研.md"
-    },
-    {
-      "basename": "2022.10.27 列表页面banner 运营位关闭按钮失效",
-      "path": "Works/58-房产-租房/02、58-房产-杂务/公共事务/2022.10.27 列表页面banner 运营位关闭按钮失效.md"
-    },
-    {
-      "basename": "《跟动物交换身体》",
-      "path": "People/Book/《跟动物交换身体》.md"
-    },
-    {
-      "basename": "MovieList",
-      "path": "People/Movie/MovieList.md"
-    },
-    {
-      "basename": "第三次生日会",
-      "path": "Works/58-房产-租房/租房分享/第三次生日会.md"
-    },
-    {
-      "basename": "⏰DashBoard",
-      "path": "📆EveryDay/⏰DashBoard.md"
-    },
-    {
-      "basename": "租房sever后台",
-      "path": "Works/58-房产-租房/人员对接表/租房sever后台.md"
-    },
-    {
-      "basename": "租房概述和历史",
-      "path": "Works/58-房产-租房/租房概述和历史.md"
     }
   ],
   "omittedPaths": [],

@@ -1,6 +1,13 @@
 /* bt设置 */
 /* Specific Settings for Blue Topaz Transplant */
 
+
+body.auto-serial-number-dvtable .zettelkasten:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before
+{
+content:'';
+	
+}
+
 .zettelkasten table.dataview tbody {
     margin-top: 0px;
     margin-left: 5px;
@@ -16,7 +23,8 @@
 .zettelkasten table.dataview>tbody>tr {
 	width: 100%;
 	height: auto;
-	box-shadow: 0 4px 6px 0 rgb(0 0 0 / 5%)
+ 
+box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
 }
 
 .zettelkasten table.dataview>tbody>tr:hover {
@@ -32,10 +40,11 @@
 .zettelkasten body:not(.no-wrapped-dvtable) :is(.markdown-preview-view,.markdown-rendered) .table-view-table>tbody>tr>td, body:not(.no-wrapped-dvtable) .markdown-source-view.mod-cm6 .table-view-table>tbody>tr>td {
 	max-width: 100%;
 }
-
+ 
 .zettelkasten table.dataview tbody>tr>td:first-child, .markdown-source-view.mod-cm6.zettelkasten .dataview.table-view-table>tbody>tr>td:first-child {
-	background-color: var(--zettelkasten-title-background);
-	padding: 0px, 0px, 5.6px ;
+	background-color: rgba(var(--interactive-accent-rgb), 0.05);
+	padding:  0 calc(var(--zettelkasten-padding)/2) ;
+	width: 100%;
 }
 
 /* 大一些的阴影取消 */
@@ -55,10 +64,10 @@
 	--zettelkasten-image-height: 400px;
 	--zettelkasten-padding: 1.2em;
 	--zettelkasten-image-fit: contain;
-	--zettelkasten-background: rgba(249, 249, 249, 0.925);
+	--zettelkasten-background: var(--background-secondary);
 	--zettelkasten-border-width: 0px;
-	/* 新参数 new params rgb(220, 239, 239)*/
-	--zettelkasten-title-background: transparent
+	/* 新参数 new params rgb(220, 239, 239)
+	--zettelkasten-title-background: rgb(220, 239, 239);*/
 }
 
 @media (max-width:400pt) {
@@ -117,7 +126,7 @@
 .zettelkasten table.dataview tbody>tr>td,
 .markdown-source-view.mod-cm6.zettelkasten .dataview.table-view-table>tbody>tr>td {
 	border-bottom: none;
-	padding: 0 !important;
+	padding: 0;
 	line-height: 1.2;
 	width: calc(100% - var(--zettelkasten-padding));
 	margin: 0 auto;

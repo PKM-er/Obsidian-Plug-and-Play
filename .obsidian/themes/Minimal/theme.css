@@ -46,6 +46,7 @@ body{
     --blockquote-border-thickness:1px;
     --blockquote-border-color:var(--quote-opening-modifier);
     --embed-block-shadow-hover:none;
+    --font-ui-small:12px;
     --font-ui-smaller:14px;
     --normal-weight:400;
     --bold-weight:600;
@@ -112,7 +113,8 @@ body{
     --panel-shadow: 0 1px 3px var(--color-base-shadow);
     --theme-color-translucent-015: hsla(var(--interactive-accent-hsl),0.15);
     --background-code: #1111118c;
-    --tag-line-height:2.4;	
+    --tag-line-height:2.4;
+    
 }
 body{
     --ig-adjust-reading:0.05em;
@@ -144,7 +146,13 @@ body{
     --h4-color:var(--text-headings);
     --h5-color:var(--text-headings);
     --h6-color:var(--text-headings);
-	--table-hover-raw-color:var(--item-side);				  
+	--table-hover-raw-color:var(--item-side);
+    --h1-line-color:#6f7071;
+    --h2-line-color:#6f7071;
+    --h3-line-color:#6f7071;
+    --h4-line-color:#6f7071;
+    --h5-line-color:#6f7071;
+    --h6-line-color:#6f7071;  
 }
 .theme-light,.theme-light.minimal-default-light,body .excalidraw{
     --bg1:white;
@@ -170,7 +178,8 @@ body{
     --backlinks-embed-txcolor:black;
     --backlinks-embed-bgcolor:white;
     --search-result-txcolor:black;
-    --search-result-bgcolor:white;		  
+    --search-result-bgcolor:white;
+    --minimal-tab-text-color-active:#61ADFD;
 }
 .excalidraw.theme--dark,.theme-dark,.theme-dark.minimal-default-dark,.theme-light.minimal-light-contrast .titlebar,.theme-light.minimal-light-contrast.minimal-status-off .status-bar{
     --accent-l:60%;
@@ -197,6 +206,7 @@ body{
     --backlinks-embed-bgcolor:black;
     --search-result-txcolor:white;
     --search-result-bgcolor:black;
+    --minimal-tab-text-color-active:#61ADFD;
 }
 .theme-light.minimal-light-white{
     --background-primary:white;
@@ -2736,36 +2746,171 @@ body:not(.full-file-names) .tree-item-inner{
     --h5l:var(--ui1);
     --h6l:var(--ui1)
 }
-.h1-l .markdown-reading-view h1:not(.embedded-note-title),.h1-l .mod-cm6 .cm-editor .HyperMD-header-1{
-    border-bottom:1px solid var(--h1l);
+/*H1-H6 下面的标题长线*/
+.h1-l .markdown-reading-view h1:not(.embedded-note-title),.h1-l .mod-cm6 .cm-editor .HyperMD-header-1 {
+    border-bottom:1px solid var(--h1-line-color);
     padding-bottom:.4em;
     margin-block-end:0.6em
 }
-.h2-l .markdown-reading-view h2,.h2-l .mod-cm6 .cm-editor .HyperMD-header-2{
-    border-bottom:1px solid var(--h2l);
+.h2-l .markdown-reading-view h2,.h2-l .mod-cm6 .cm-editor .HyperMD-header-2 {
+    border-bottom:1px solid var(--h2-line-color);
     padding-bottom:.4em;
     margin-block-end:0.6em
 }
-.h3-l .markdown-reading-view h3,.h3-l .mod-cm6 .cm-editor .HyperMD-header-3{
-    border-bottom:1px solid var(--h3l);
+.h3-l .markdown-reading-view h3,.h3-l .mod-cm6 .cm-editor .HyperMD-header-3 {
+    border-bottom:1px solid var(--h3-line-color);
     padding-bottom:.4em;
     margin-block-end:0.6em
 }
-.h4-l .markdown-reading-view h4,.h4-l .mod-cm6 .cm-editor .HyperMD-header-4{
-    border-bottom:1px solid var(--h4l);
+.h4-l .markdown-reading-view h4,.h4-l .mod-cm6 .cm-editor .HyperMD-header-4 {
+    border-bottom:1px solid var(--h4-line-color);
     padding-bottom:.4em;
     margin-block-end:0.6em
 }
-.h5-l .markdown-reading-view h5,.h5-l .mod-cm6 .cm-editor .HyperMD-header-5{
-    border-bottom:1px solid var(--h5l);
+.h5-l .markdown-reading-view h5,.h5-l .mod-cm6 .cm-editor .HyperMD-header-5 {
+    border-bottom:1px solid var(--h5-line-color);
     padding-bottom:.4em;
     margin-block-end:0.6em
 }
-.h6-l .markdown-reading-view h6,.h6-l .mod-cm6 .cm-editor .HyperMD-header-6{
-    border-bottom:1px solid var(--h6l);
+.h6-l .markdown-reading-view h6,.h6-l .mod-cm6 .cm-editor .HyperMD-header-6 {
+    border-bottom:1px solid var(--h6-line-color);
     padding-bottom:.4em;
     margin-block-end:0.6em
 }
+/*H1-H6 下面的标题长线 End*/
+
+/*H1-H6 下面的标题短线*/
+.h1-s .workspace-leaf-content[data-type='markdown'] div h1 {
+    border-bottom:1px solid var(--h1-line-color);
+    width:fit-content;
+    padding-left:10px;
+    padding-right:10px;
+}
+.h1-s .markdown-source-view.mod-cm6 .HyperMD-header-1 .cm-header-1 {
+    border-bottom:1px solid var(--h1-line-color);
+    margin-block-end:0.6em;
+    padding-bottom:4px;
+}
+.h2-s .workspace-leaf-content[data-type='markdown'] div h2 {
+    border-bottom:1px solid var(--h2-line-color);
+    width:fit-content;
+    padding-left:10px;
+    padding-right:10px;
+}
+.h2-s .markdown-source-view.mod-cm6 .HyperMD-header-2 .cm-header-2 {
+    border-bottom:1px solid var(--h2-line-color);
+    margin-block-end:0.6em;
+    padding-bottom:4px;
+}
+.h3-s .workspace-leaf-content[data-type='markdown'] div h3 {
+    border-bottom:1px solid var(--h3-line-color);;
+    width:fit-content;
+    padding-left:10px;
+    padding-right:10px;
+}
+.h3-s .markdown-source-view.mod-cm6 .HyperMD-header-3 .cm-header-3 {
+    border-bottom:1px solid var(--h3-line-color);
+    margin-block-end:0.6em;
+    padding-bottom:4px;
+}
+.h4-s .workspace-leaf-content[data-type='markdown'] div h4 {
+    border-bottom:1px solid var(--h4-line-color);;
+    width:fit-content;
+    padding-left:10px;
+    padding-right:10px;
+}
+.h4-s .markdown-source-view.mod-cm6 .HyperMD-header-4 .cm-header-4 {
+    border-bottom:1px solid var(--h4-line-color);
+    margin-block-end:0.6em;
+    padding-bottom:4px;
+}
+.h5-s .workspace-leaf-content[data-type='markdown'] div h5 {
+    border-bottom:1px solid var(--h5-line-color);;
+    width:fit-content;
+    padding-left:10px;
+    padding-right:10px;
+}
+.h5-s .markdown-source-view.mod-cm6 .HyperMD-header-5 .cm-header-5 {
+    border-bottom:1px solid var(--h5-line-color);
+    margin-block-end:0.6em;
+    padding-bottom:4px;
+}
+.h6-s .workspace-leaf-content[data-type='markdown'] div h6 {
+    border-bottom:1px solid var(--h6-line-color);;
+    width:fit-content;
+    padding-left:10px;
+    padding-right:10px;
+}
+.h6-s .markdown-source-view.mod-cm6 .HyperMD-header-6 .cm-header-6 {
+    border-bottom:1px solid var(--h6-line-color);
+    margin-block-end:0.6em;
+    padding-bottom:4px;
+}
+/*==================== H1-H6 下面的标题短线 End ====================*/
+
+/*==================== H1-H6 的标题左侧线 ====================*/
+.h1-left .markdown-source-view .HyperMD-header-1 {
+    margin-top:20px !important;
+    border-left:5px solid var(--h1-line-color) !important;
+    padding-left:calc(var(--h1-size) / 3)  !important;
+    border-bottom: unset !important;
+    font-weight:bolder !important;
+}
+.h1-left .is-live-preview .cm-header.cm-header-1 {
+  font-weight:bolder !important;
+}
+.h2-left .markdown-source-view .HyperMD-header-2 {
+    margin-top:20px !important;
+    border-left:5px solid var(--h2-line-color) !important;
+    padding-left:calc(var(--h1-size) / 3)  !important;
+    border-bottom: unset !important;
+    font-weight:bolder !important;
+}
+.h2-left .is-live-preview .cm-header.cm-header-2 {
+  font-weight:bolder !important;
+}
+.h3-left .markdown-source-view .HyperMD-header-3 {
+    margin-top:20px !important;
+    border-left:5px solid var(--h3-line-color) !important;
+    padding-left:calc(var(--h1-size) / 3)  !important;
+    border-bottom: unset !important;
+    font-weight:bolder !important;
+}
+.h3-left .is-live-preview .cm-header.cm-header-3 {
+  font-weight:bolder !important;
+}
+.h4-left .markdown-source-view .HyperMD-header-4 {
+    margin-top:20px !important;
+    border-left:5px solid var(--h4-line-color) !important;
+    padding-left:calc(var(--h1-size) / 3)  !important;
+    border-bottom: unset !important;
+    font-weight:bolder !important;
+}
+.h4-left .is-live-preview .cm-header.cm-header-4 {
+  font-weight:bolder !important;
+}
+.h5-left .markdown-source-view .HyperMD-header-5 {
+    margin-top:20px !important;
+    border-left:5px solid var(--h5-line-color) !important;
+    padding-left:calc(var(--h1-size) / 3)  !important;
+    border-bottom: unset !important;
+    font-weight:bolder !important;
+}
+.h5-left .is-live-preview .cm-header.cm-header-5 {
+  font-weight:bolder !important;
+}
+.h6-left .markdown-source-view .HyperMD-header-6 {
+    margin-top:20px !important;
+    border-left:5px solid var(--h6-line-color) !important;
+    padding-left:calc(var(--h1-size) / 3)  !important;
+    border-bottom: unset !important;
+    font-weight:bolder !important;
+}
+.h6-left .is-live-preview .cm-header.cm-header-6 {
+  font-weight:bolder !important;
+}
+/*==================== H1-H6 的标题左侧线 End ====================*/
+
 .is-tablet .workspace-drawer{
     padding-top:0
 }
@@ -5537,13 +5682,15 @@ settings:
 		default-dark: '#'
 	-
 		id: cm-editor
-		title: Editor 编辑器
+		title: Editor
+        title.zh: 编辑器设置
 		type: heading
 		level: 2
 		collapsed: true
     -
 		id: cm-editor-backgroud-color
-		title: 编辑器背景
+		title: Editor backgroud color
+        title.zh: 编辑器背景
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -5551,30 +5698,58 @@ settings:
 	-
 		id: headings
 		title: Headings
+        title.zh: 正文标题设置
 		type: heading
 		level: 2
 		collapsed: true
 	-
+        id: headings-other-option
+        title: Headings Others
+        title.zh: 正文标题（Headings）杂项设置
+		type: heading
+        level: 3
+		collapsed: true
+    -
+        id: clutter-free-headings
+        title: Clutter Free Headings
+        title.zh: 编辑状态使用H1-H6，来显示标题级别
+        description: Adapted from clutter-free-headings.css @deathau
+        description.zh: 来自 clutter-free-headings.css @deathau
+        type: class-toggle
+        default: false    
+    -
+        id: funny-header-anim
+        title: Funny header animation in Live Preview
+        title.zh: 编辑状态，开关标题侧滑动画
+        description: Adapted from  FunnyHeaderAnimLP.css  @sailKite
+        description.zh: 来自 FunnyHeaderAnimLP.css  @sailKite
+        type: class-toggle
+        default: false
+    -
 		id: level-1-headings
 		title: Level 1 Headings
+        title.zh: 标题等级1（#）
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: h1-font
 		title: H1 font
+        title.zh: 正文标题等级1字体
 		description: Name of the font as it appears on your system
 		type: variable-text
 		default: ''
 	-
 		id: h1-size
 		title: H1 font size
+        title.zh: 正文标题等级1的字号
 		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 1.4em
 	-
 		id: h1-weight
 		title: H1 font weight
+        title.zh: 正文标题等级1的粗细
 		type: variable-number-slider
 		default: 600
 		min: 100
@@ -5583,6 +5758,7 @@ settings:
 	-
 		id: h1-color
 		title: H1 text color
+        title.zh: 正文标题等级1的文字颜色
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -5602,29 +5778,77 @@ settings:
 				value: small-caps
 			-
 				label: All small caps
-				value: all-small-caps 
+				value: all-small-caps
 	-
 		id: h1-style
 		title: H1 font style
+        title.zh: 正文标题等级1是否斜体
 		type: variable-select
 		allowEmpty: false
 		default: normal
 		options:
-			-
-				label: Normal
+            -
+                label: Normal
 				value: normal
 			-
 				label: Italic
 				value: italic
-	-
-		id: h1-l
-		title: H1 divider line
-		description: Adds a border below the heading
-		type: class-toggle
-		default: false
-	-
+    -
+        id: h1-text-align-settings
+        title: H1 Text-align
+        title.zh: H1 标题的对齐方式
+        type: class-select
+        allowEmpty: false
+        default: h1-text-align-start
+        options:
+            -
+                label: Default (Left/Start)
+                value: h1-text-align-start
+            - 
+                label: Center
+                value: h1-text-align-center
+            -
+                label: Right/End
+                value: h1-text-align-end
+    -
+        id: h1-divider line
+		title: Toggle H1 divider line long or short
+        title.zh: 给等级1标题增加下划线（长/短线样式）
+		type: class-select
+        allowEmpty: false
+		default: h1-l
+		options:
+			-
+				label: divide line(长线)
+				value: h1-l
+			-
+				label: short divide line(短线)
+				value: h1-s
+            -
+                lable: no line(不显示)
+                value: h1-noline
+    -
+        id: h1-left
+        title: Toggle H1 left border
+        title.zh: Toggle H1 左侧横线
+        description: Adds a border next to the heading
+        description.zh: 给标题等级1增加左侧竖线
+        type: class-toggle
+        default: false
+    -
+        id: h1-line-color
+        title: Toggle H1 divider line color
+        title.zh: 切换H1下划线颜色
+        description: Adds a border below the heading
+        description.zh: 给标题等级1设置下划线、左侧线颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    -
 		id: level-2-headings
 		title: Level 2 Headings
+        title.zh: 标题等级2（##）
 		type: heading
 		level: 3
 		collapsed: true
@@ -5684,15 +5908,62 @@ settings:
 			-
 				label: Italic
 				value: italic
-	-
-		id: h2-l
-		title: H2 divider line
-		description: Adds a border below the heading
-		type: class-toggle
-		default: false
-	-
+    -
+        id: h2-text-align-settings
+        title: H2 Text-align
+        title.zh: H2 标题的对齐方式
+        type: class-select
+        allowEmpty: false
+        default: h2-text-align-start
+        options:
+            -
+                label: Default (Left/Start)
+                value: h2-text-align-start
+            - 
+                label: Center
+                value: h2-text-align-center
+            -
+                label: Right/End
+                value: h2-text-align-end
+    -
+        id: h2-divider line
+		title: Toggle H2 divider line long or short
+        title.zh: 给等级2标题增加下划线（长/短线样式）
+		type: class-select
+        allowEmpty: false
+		default: h2-l
+		options:
+			-
+				label: divide line(长线)
+				value: h2-l
+			-
+				label: short divide line(短线)
+				value: h2-s
+            -
+                lable: no line(不显示)
+                value: h2-noline
+    -
+        id: h2-left
+        title: Toggle H2 left border
+        title.zh: Toggle H2 左侧横线
+        description: Adds a border next to the heading
+        description.zh: 给标题等级2增加左侧竖线
+        type: class-toggle
+        default: false
+    -
+        id: h2-line-color
+        title: Toggle H2 divider line color
+        title.zh: 切换H2下划线颜色
+        description: Adds a border below the heading
+        description.zh: 给标题等级2设置下划线、左侧线颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
+    -
 		id: level-3-headings
 		title: Level 3 Headings
+        title.zh: 标题等级3（###）
 		type: heading
 		level: 3
 		collapsed: true
@@ -5752,15 +6023,62 @@ settings:
 			-
 				label: Italic
 				value: italic
-	-
-		id: h3-l
-		title: H3 divider line
-		description: Adds a border below the heading
-		type: class-toggle
-		default: false
+    -
+        id: h3-text-align-settings
+        title: H3 Text-align
+        title.zh: H3 标题的对齐方式
+        type: class-select
+        allowEmpty: false
+        default: h3-text-align-start
+        options:
+            -
+                label: Default (Left/Start)
+                value: h3-text-align-start
+            - 
+                label: Center
+                value: h3-text-align-center
+            -
+                label: Right/End
+                value: h3-text-align-end
+    -
+        id: h3-divider line
+		title: Toggle H3 divider line long or short
+        title.zh: 给等级3标题增加下划线（长/短线样式）
+		type: class-select
+        allowEmpty: false
+		default: h3-l
+		options:
+			-
+				label: divide line(长线)
+				value: h3-l
+			-
+				label: short divide line(短线)
+				value: h3-s
+            -
+                lable: no line(不显示)
+                value: h3-noline
+    -
+        id: h3-left
+        title: Toggle H3 left border
+        title.zh: Toggle H3 左侧横线
+        description: Adds a border next to the heading
+        description.zh: 给标题等级3增加左侧竖线
+        type: class-toggle
+        default: false
+    -
+        id: h3-line-color
+        title: Toggle H3 divider line color
+        title.zh: 切换H3下划线颜色
+        description: Adds a border below the heading
+        description.zh: 给标题等级3设置下划线、左侧线颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: level-4-headings
 		title: Level 4 Headings
+        title.zh: 标题等级4（####）
 		type: heading
 		level: 3
 		collapsed: true
@@ -5820,15 +6138,62 @@ settings:
 			-
 				label: Italic
 				value: italic
-	-
-		id: h4-l
-		title: H4 divider line
-		description: Adds a border below the heading
-		type: class-toggle
-		default: false   
+    -
+        id: h4-text-align-settings
+        title: H4 Text-align
+        title.zh: H4 标题的对齐方式
+        type: class-select
+        allowEmpty: false
+        default: h4-text-align-start
+        options:
+            -
+                label: Default (Left/Start)
+                value: h4-text-align-start
+            - 
+                label: Center
+                value: h4-text-align-center
+            -
+                label: Right/End
+                value: h4-text-align-end
+    -
+        id: h4-divider line
+		title: Toggle H4 divider line long or short
+        title.zh: 给等级4标题增加下划线（长/短线样式）
+		type: class-select
+        allowEmpty: false
+		default: h4-l
+		options:
+			-
+				label: divide line(长线)
+				value: h4-l
+			-
+				label: short divide line(短线)
+				value: h4-s
+            -
+                lable: no line(不显示)
+                value: h4-noline
+    -
+        id: h4-left
+        title: Toggle H4 left border
+        title.zh: Toggle H4 左侧横线
+        description: Adds a border next to the heading
+        description.zh: 给标题等级4增加左侧竖线
+        type: class-toggle
+        default: false
+    -
+        id: h4-line-color
+        title: Toggle H4 divider line color
+        title.zh: 切换H4下划线颜色
+        description: Adds a border below the heading
+        description.zh: 给标题等级4设置下划线、左侧线颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: level-5-headings
 		title: Level 5 Headings
+        title.zh: 标题等级5（#####）
 		type: heading
 		level: 3
 		collapsed: true
@@ -5888,15 +6253,62 @@ settings:
 			-
 				label: Italic
 				value: italic
-	-
-		id: h5-l
-		title: H5 divider line
-		description: Adds a border below the heading
-		type: class-toggle
-		default: false
+    -
+        id: h5-text-align-settings
+        title: H5 Text-align
+        title.zh: H5 标题的对齐方式
+        type: class-select
+        allowEmpty: false
+        default: h5-text-align-start
+        options:
+            -
+                label: Default (Left/Start)
+                value: h5-text-align-start
+            - 
+                label: Center
+                value: h5-text-align-center
+            -
+                label: Right/End
+                value: h5-text-align-end
+    -
+        id: h5-divider line
+		title: Toggle H5 divider line long or short
+        title.zh: 给等级5标题增加下划线（长/短线样式）
+		type: class-select
+        allowEmpty: false
+		default: h5-l
+		options:
+			-
+				label: divide line(长线)
+				value: h5-l
+			-
+				label: short divide line(短线)
+				value: h5-s
+            -
+                lable: no line(不显示)
+                value: h5-noline
+    -
+        id: h5-left
+        title: Toggle H5 left border
+        title.zh: Toggle H5 左侧横线
+        description: Adds a border next to the heading
+        description.zh: 给标题等级5增加左侧竖线
+        type: class-toggle
+        default: false
+    -
+        id: h5-line-color
+        title: Toggle H5 divider line color
+        title.zh: 切换H5 下划线颜色
+        description: Adds a border below the heading
+        description.zh: 给标题等级5设置下划线、左侧线颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: level-6-headings
 		title: Level 6 Headings
+        title.zh: 标题等级6（######）
 		type: heading
 		level: 3
 		collapsed: true
@@ -5956,21 +6368,69 @@ settings:
 			-
 				label: Italic
 				value: italic
-	-
-		id: h6-l
-		title: H6 divider line
-		type: class-toggle
-		description: Adds a border below the heading
-		default: false
+    -
+        id: h6-text-align-settings
+        title: H6 Text-align
+        title.zh: H6 标题的对齐方式
+        type: class-select
+        allowEmpty: false
+        default: h6-text-align-start
+        options:
+            -
+                label: Default (Left/Start)
+                value: h6-text-align-start
+            - 
+                label: Center
+                value: h6-text-align-center
+            -
+                label: Right/End
+                value: h6-text-align-end
+    -
+        id: h6-divider line
+		title: Toggle H6 divider line long or short
+        title.zh: 给等级6标题增加下划线（长/短线样式）
+		type: class-select
+		allowEmpty: false
+		default: h6-l
+		options:
+			-
+				label: divide line(长线)
+				value: h6-l
+			-
+				label: short divide line(短线)
+				value: h6-s
+            -   
+                lable: no line(不显示)
+				value: h6-noline
+    -
+        id: h6-left
+        title: Toggle H5 left border
+        title.zh: Toggle H6 左侧横线
+        description: Adds a border next to the heading
+        description.zh: 给标题等级6增加左侧竖线
+        type: class-toggle
+        default: false
+    -
+        id: h5-line-color
+        title: Toggle H6 divider line color
+        title.zh: 切换H6 下划线颜色
+        description: Adds a border below the heading
+        description.zh: 给标题等级6设置下划线、左侧线颜色
+		type: variable-themed-color
+		format: hex
+		default-light: '#'
+		default-dark: '#'
 	-
 		id: icons
 		title: Icons
+        title.zh: 图标设置
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: icon-muted
 		title: Icon opacity (inactive)
+        title.zh: 图标透明度
 		type: variable-number-slider
 		default: 0.5
 		min: 0.25
@@ -5979,6 +6439,7 @@ settings:
 	-
 		id: icon-color
 		title: Icon color
+        title.zh: 图标颜色
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -5987,6 +6448,7 @@ settings:
 	-
 		id: icon-color-hover
 		title: Icon color (hover)
+        title.zh: 图标指向时候的颜色
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -5995,6 +6457,7 @@ settings:
 	-
 		id: icon-color-active
 		title: Icon color (active)
+        title.zh: 图标选中后的颜色
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -6011,6 +6474,7 @@ settings:
 	-
 		id: images
 		title: Images
+        title.zh: 图片设置
 		type: heading
 		level: 2
 		collapsed: true
@@ -6031,12 +6495,14 @@ settings:
 	-
 		id: indentation-guides
 		title: Indentation guides
+        title.zh: 缩进线设置
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: ig-adjust-reading
 		title: Horizontal adjustment in reading mode
+        title.zh: 缩进线水平位置调整（阅读模式）
 		type: variable-number-slider
 		default: 0.05
 		min: -2
@@ -6046,6 +6512,7 @@ settings:
 	-
 		id: ig-adjust-edit
 		title: Horizontal adjustment in edit mode
+        title.zh: 缩进线水平位置调整（所见即所得模式）
 		type: variable-number-slider
 		default: -0.1
 		min: -2
@@ -6054,37 +6521,43 @@ settings:
 		format: em
 	-
 		id: cm-edit-bullet-list-1
-		title: 无序列表前缀-级别1
+		title: bullet list level 1
+        title.zh: 无序列表前缀-级别1
         description: 填写前缀符号，需要将符号放入''内才可生效
 		type: variable-text
 		default: '●'
 	-		   
 		id: cm-edit-bullet-list-2
-		title: 无序列表前缀-级别2
+		title: bullet list level 2
+        title.zh: 无序列表前缀-级别2
         description: 填写前缀符号，需要将符号放入''内才可生效
 		type: variable-text
 		default: '○'
 	-		   
 		id: cm-edit-bullet-list-3
-		title: 无序列表前缀-级别3
+		title: bullet list level 3
+        title.zh: 无序列表前缀-级别3
         description: 填写前缀符号，需要将符号放入''内才可生效
 		type: variable-text
 		default: '■'
 	-		   
 		id: cm-edit-bullet-list-4
-		title: 无序列表前缀-级别4
+		title: bullet list level 4
+        title.zh: 无序列表前缀-级别4
         description: 填写前缀符号，需要将符号放入''内才可生效
 		type: variable-text
 		default: '□'
 	-		   
 		id: cm-edit-bullet-list-5
-		title: 无序列表前缀-级别5
+		title: bullet list level 5
+        title.zh: 无序列表前缀-级别5
         description: 填写前缀符号，需要将符号放入''内才可生效
 		type: variable-text
 		default: '▸'	
     -
 		id: indentation-guide-color
 		title: Indentation guide color
+        title.zh: 缩进线颜色
 		type: variable-themed-color
 		format: hex
 		opacity:  true
@@ -6093,6 +6566,7 @@ settings:
 	-
 		id: indentation-guide-color-active
 		title: Indentation guide color (active)
+        title.zh: 缩进线激活时的颜色
 		type: variable-themed-color
 		format: hex
 		opacity:  true
@@ -6101,18 +6575,21 @@ settings:
 	-
 		id: links
 		title: Links
+        title.zh: 链接设置
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: links-internal
 		title: Internal links
+        title.zh: 内链设置
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: link-color
 		title: Internal link color
+        title.zh: 内链颜色
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -6120,6 +6597,7 @@ settings:
 	-
 		id: link-color-hover
 		title: Internal link color (hover)
+        title.zh: 内链鼠标指向时的颜色
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -6150,12 +6628,14 @@ settings:
 	-
 		id: links-external
 		title: External links
+        title.zh: 外链设置
 		type: heading
 		level: 3
 		collapsed: true
 	-
 		id: link-external-color
 		title: External link color
+        title.zh: 外链颜色
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -6163,6 +6643,7 @@ settings:
 	-
 		id: link-external-color-hover
 		title: External link color (hover)
+        title.zh: 外链指向时候的颜色
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -6170,12 +6651,14 @@ settings:
 	-
 		id: back-links
 		title: Backlink embed style
+        title.zh: 回链设置
 		type: heading
 		level: 3
 		collapsed: true
     -
 		id: backlinks-embed-txcolor
 		title: Backlink embed text color
+        title.zh: 回链在代码块中的颜色
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -6183,6 +6666,7 @@ settings:
     -
 		id: backlinks-embed-bgcolor
 		title: Backlink embed background color
+        title.zh: 回链在代码块中的背景色
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -6190,12 +6674,14 @@ settings:
     -
 		id: lists
 		title: Lists and tasks
+        title.zh: 列表和任务设置
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: checkbox-color
 		title: Checkbox color
+        title.zh: 复选框颜色
 		description: Background color for completed tasks
 		type: variable-themed-color
 		format: hex
@@ -6204,6 +6690,7 @@ settings:
 	-
 		id: checkbox-shape
 		title: Checkbox shape
+        title.zh: 复选框形状（圆形、方形等）
 		type: class-select
 		allowEmpty: false
 		default: checkbox-circle
@@ -6217,6 +6704,7 @@ settings:
 	-
 		id: checkbox-tada
 		title: Checkbox tada animation
+        title.zh: 复选框点击后的摇晃（Tada）效果
 		description: Checkbox hased 'tada' animation when you mouseover
         type: class-toggle
 		default: true
@@ -6249,24 +6737,29 @@ settings:
 	-
 		id: ribbon
 		title: Ribbon
+        title.zh: Ribbon功能区设置
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: ribbon-floating
 		title: Floating of Ribbon
+        title.zh: Ribbon功能区的浮动效果
 		description: The Ribbon area is hidden by default, and will expand automatically when you touch the edge.
+        description.zh: Ribbon 打开后区域默认隐藏，鼠标滑动到边缘后，展开。
 		type: class-toggle
 		default: true
     -
 		id: goblesearch
 		title: Search
+        title.zh: Obisdian 搜索设置
 		type: heading
 		level: 2
 		collapsed: true
     -
 		id: search-result-txcolor
 		title: Search results text color
+        title.zh: 搜索结果的文字颜色
 		type: variable-themed-color
 		format: hex
 		default-light: '#000000'
@@ -6274,6 +6767,7 @@ settings:
     -
 		id: search-result-bgcolor
 		title: Search results background color
+        title.zh: 搜索结果的背景色
 		type: variable-themed-color
 		format: hex
 		default-light: '#FFFFFF'
@@ -6281,6 +6775,7 @@ settings:
     -
 		id: sidebars
 		title: Sidebars
+        title.zh: 侧边栏设置
 		type: heading
 		level: 2
 		collapsed: true
@@ -6292,6 +6787,7 @@ settings:
 	-
 		id: sidebar-tabs-style
 		title: Sidebar tab style
+        title.zh: 侧边栏（同时影响左右）中标签页面的样式
 		type: class-select
 		allowEmpty: false
 		default: sidebar-tabs-default
@@ -6314,6 +6810,7 @@ settings:
 	-
 		id: mobile-left-sidebar-width
 		title: Mobile left sidebar width
+        title.zh: 移动端左侧边栏宽度（默认280）
 		description: Maximum width for pinned left sidebar on mobile
 		type: variable-number
 		default: 280
@@ -6321,6 +6818,7 @@ settings:
 	-
 		id: mobile-right-sidebar-width
 		title: Mobile right sidebar width
+        title.zh: 移动端右侧边栏宽度（默认240）
 		description: Maximum width for pinned right sidebar on mobile
 		type: variable-number
 		default: 240
@@ -6328,6 +6826,7 @@ settings:
 	-
 		id: tables
 		title: Tables
+        title.zh: 表格设置
 		type: heading
 		level: 2
 		collapsed: true
@@ -6357,30 +6856,35 @@ settings:
 	-
 		id: row-lines
 		title: Row lines
+        title.zh: 表格行
 		description: Display borders between table rows globally
 		type: class-toggle
 		default: false
 	-
 		id: col-lines
 		title: Column lines
+        title.zh: 表格列
 		description: Display borders between table columns globally
 		type: class-toggle
 		default: false
 	-
 		id: table-lines
 		title: Cell lines
+        title.zh: 单元格
 		description: Display borders around all table cells globally
 		type: class-toggle
 		default: false 
 	-
 		id: row-alt
 		title: Striped rows
+        title.zh: 表格-镶嵌行
 		description: Display striped background in alternating table rows globally
 		type: class-toggle
 		default: false
 	-
 		id: col-alt
 		title: Striped columns
+        title.zh: 表格-镶嵌列
 		description: Display striped background in alternating table columns globally
 		type: class-toggle
 		default: false
@@ -6393,6 +6897,7 @@ settings:
 	-
 		id: table-numbers
 		title: Row numbers
+        title.zh: 显示行数
 		description: Display row numbers in tables globally
 		type: class-toggle
 		default: false
@@ -6405,6 +6910,7 @@ settings:
 	-
 		id: row-hover
 		title: Highlight active row
+        title.zh: 行指向时候高亮
 		description: Highlight rows on hover
 		type: class-toggle
 		default: false
@@ -6420,17 +6926,20 @@ settings:
 	-
 		id: tabs
 		title: Tabs
+        title.zh: 标签页（Tabs）设置
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: header-height
 		title: Tab bar height
+        title.zh: 标签栏告诉
 		type: variable-text
 		default: 45px
 	-
 		id: tabs-style
 		title: Tab style
+        title.zh: 标签页的样式（圆角、矩形、下划高亮等）
 		type: class-select
 		allowEmpty: false
 		default: tabs-default
@@ -6450,6 +6959,7 @@ settings:
 	-
 		id: minimal-tab-text-color
 		title: Tab text color
+        title.zh: 标签页的标题颜色
 		type: variable-themed-color
 		format: hex
 		opacity: true
@@ -6458,6 +6968,7 @@ settings:
 	-
 		id: minimal-tab-text-color-active
 		title: Tab text color (active)
+        title.zh: 标签页选中后的标题颜色
 		type: variable-themed-color
 		format: hex
 		opacity: true
@@ -6466,12 +6977,14 @@ settings:
 	-
 		id: tab-stacks
 		title: Tab stacks
+        title.zh: 标签页堆叠（Tab stacks）模式
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: tab-stacked-pane-width
 		title: Stacked width
+        title.zh: 标签页堆叠宽度
 		type: variable-number
 		description: Width of a stacked tab in pixels
 		default: 700
@@ -6486,6 +6999,7 @@ settings:
 	-
 		id: tab-stacked-spine-orientation
 		title: Spine text orientation
+        title.zh: 堆叠标签的标题排序方式
 		type: class-select
 		default: tab-stack-top
 		options:
@@ -6513,6 +7027,7 @@ settings:
 	-
 		id: tags
 		title: Tags
+        title.zh: 标签（Tags）设置
 		type: heading
 		level: 2
 		collapsed: true
@@ -6525,6 +7040,7 @@ settings:
 	-
 		id: tag-font-size
 		title: Tag font size
+        title.zh: 标签文字大小
 		description: Font size in px of Tag
 		type: variable-number
 		default: 13.5
@@ -6532,6 +7048,7 @@ settings:
 	-
 		id: tag-radius
 		title: Tag shape
+        title.zh: 标签形状
 		type: variable-select
 		default: 14px
 		options:
@@ -6547,6 +7064,7 @@ settings:
 	-
 		id: tag-border-width
 		title: Tag border width
+        title.zh: 标签边框粗细
 		type: variable-select
 		default: 1px
 		options:
@@ -6562,6 +7080,7 @@ settings:
 	-
 		id: tag-color
 		title: Tag text color
+        title.zh: 标签文字颜色
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -6570,6 +7089,7 @@ settings:
 	-
 		id: tag-background
 		title: Tag background color
+        title.zh: 标签背景色
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -6578,6 +7098,7 @@ settings:
 	-
 		id: tag-background-hover
 		title: Tag background color (hover)
+        title.zh: 标签背景色（鼠标指向时）
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -6586,6 +7107,7 @@ settings:
 	-
 		id: tag-line-height
 		title: Tag line height
+        title.zh: 标签所在行的行高
 		type: variable-number
 		description: Line height of the tag in body
 		default: 2.4
@@ -6593,6 +7115,7 @@ settings:
     -
 		id: tag-embed-line-height
 		title: Tag line height in embed
+        title.zh: 标签在代码块中的行高
 		type: variable-number
 		description: Line height of the tag in embed
 		default: 2.2
@@ -6600,12 +7123,14 @@ settings:
     -
 		id: text
 		title: Text
+        title.zh: 文本设置
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: tx1
 		title: Normal text color
+        title.zh: 普通文本颜色
 		type: variable-themed-color
 		description: Primary text color used by default across all elements
 		opacity: true
@@ -6615,6 +7140,7 @@ settings:
 	-
 		id: hl1
 		title: Selected text background
+        title.zh: 选中的文本背景色
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -6623,6 +7149,7 @@ settings:
 	-
 		id: hl2
 		title: Highlighted text background
+        title.zh: 高亮文字的背景色
 		type: variable-themed-color
 		opacity: true
 		format: hex
@@ -6677,12 +7204,14 @@ settings:
 	-
 		id: titles
 		title: Titles
+        title.zh: 标题设置
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: tab-title-bar
 		title: Tab title bar
+        title.zh: 标签页（Tabs）上的标题设置
 		description: Tab title bar must be turned on in Appearance settings
 		type: heading
 		level: 3
@@ -6690,6 +7219,7 @@ settings:
 	-
 		id: file-header-visibility
 		title: Tab title visibility
+        title.zh: 标签页（Tabs）上标题的可见性（指向可见，始终隐藏，始终显示）
 		description: Visibility of the tab title text
 		type: class-select
 		default: minimal-tab-title-hover
@@ -6706,12 +7236,14 @@ settings:
 	-
 		id: file-header-font-size
 		title: Tab title font size
+        title.zh: 标签页上标题的字体大小
 		description: Accepts any CSS font-size value
 		type: variable-text
 		default: 0.9em
 	-
 		id: file-header-font-weight
 		title: Tab title font weight
+        title.zh: 标签页上字体粗细
 		type: variable-number-slider
 		default: 400
 		min: 100
@@ -6720,6 +7252,7 @@ settings:
 	-
 		id: file-header-justify
 		title: Tab title alignment
+        title.zh: 标签页上标题的对齐方式
 		type: variable-select
 		default: center
 		options:
@@ -6732,6 +7265,7 @@ settings:
 	-
 		id: title-color
 		title: Tab title text color (active)
+        title.zh: 标签页上的文字颜色
 		type: variable-themed-color
 		format: hex
 		default-light: '#'
@@ -6794,12 +7328,14 @@ settings:
 	-
 		id: window-frame
 		title: Window frame
+        title.zh: Obisidian 的主体对话框样式
 		type: heading
 		level: 2
 		collapsed: true
 	-
 		id: window-title-off
 		title: Hide window frame title
+        title.zh: 隐藏主体对话框的标题
 		description: Hide title in the custom title bar
 		type: class-toggle
 	-
@@ -8306,6 +8842,36 @@ body:not(.minimal-icons-off) svg.left-arrow-with-tail {
     z-index: 9;
 }
 /*End*/
+/*控制 Ribbon 区域自动隐藏侯画出抖动的效果*/
+.ribbon-floating .workspace-ribbon.side-dock-ribbon:hover:hover {
+    flex:0 0 var(--ribbon-width);
+    animation:0.8s slide-left both;
+}
+@keyframes slide-left {
+	0% { transform:translateX(0%); opacity:0; }
+    20% { transform:translateX(-8px); opacity:0.3; }
+    35% { transform:translateX(-10px); }
+	65% { opacity:0.7; }
+	100% { opacity:1; }
+}
+
+.ribbon-floating .workspace-ribbon {
+    width:10px !important;
+    flex:unset;
+    padding-right: unset;
+}
+
+body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace-ribbon.side-dock-ribbon {
+    height: 100%;
+    margin-top: 0;
+    padding-top: var(--header-height);
+    background: var(--background-secondary);
+    border-right: var(--border);
+    box-shadow: var(--panel-shadow);
+    transition: left 0.8s, opacity 0.4s;
+    opacity: 0;
+}
+
 /* ============ Ribbon End =========== */
 
 /* ======================================== */
@@ -9255,6 +9821,12 @@ body {
   border-left: none;
 }
 /* ================= 核心插件 core plugin  End ====================== */
+/* ============================================================== */
+/* ============== 第三方插件 snippets ==================== */
+/* ============================================================== */
+.zettelkasten .col-lines .table-view-table>tbody>tr>td:not(:last-child),.zettelkasten .col-lines table:not(.calendar) tbody>tr>td:not(:last-child) {
+    border-right: unset !important;
+}
 
 /* ============================================================== */
 /* ============== 第三方插件 community plugin ==================== */
@@ -9616,6 +10188,170 @@ span[class^=cm-list] .day-time-8 {
 /* =========================================================== */
 /* ========================= 测试代码 ========================= */
 /* ============================================================ */
+/*解决 task progress 与 标题滑动效果的冲突*/
+.funny-header-anim .cm-active.HyperMD-header-1.cm-line > span:not(.cm-formatting-header ).cm-header.cm-header-1 {
+    margin-right: 30px;
+}
+.funny-header-anim .cm-active.HyperMD-header-2.cm-line > span:not(.cm-formatting-header ).cm-header.cm-header-2 {
+    margin-right: 30px;
+}
+.funny-header-anim .cm-active.HyperMD-header-3.cm-line > span:not(.cm-formatting-header ).cm-header.cm-header-3 {
+    margin-right: 30px;
+}
+.funny-header-anim .cm-active.HyperMD-header-4.cm-line > span:not(.cm-formatting-header ).cm-header.cm-header-4 {
+    margin-right: 30px;
+}
+.funny-header-anim .cm-active.HyperMD-header-5.cm-line > span:not(.cm-formatting-header ).cm-header.cm-header-5 {
+    margin-right: 30px;
+}
+.funny-header-anim .cm-active.HyperMD-header-6.cm-line > span:not(.cm-formatting-header ).cm-header.cm-header-6 {
+    margin-right: 30px;
+}
+
+/*使用H1-H6 代替#号来显示标题等级*/
+/*适配Live preview模式*/
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header):not(.cm-hashtag):not(.cm-inline-code):not(.cm-highlight).cm-header::before {
+    font-size: 0.6rem;
+    width: auto;
+    margin-right: 1px;
+    border-radius: var(--radius-s);
+    border:1px solid var(--text-muted);
+    padding-left: 2px;
+    padding-right: 2px;
+    color: var(--text-muted);
+    overflow: visible;
+    font-family: var(--font-default);
+    font-weight: normal !important;
+}
+  
+body.clutter-free-headings div.mod-cm6.is-live-preview div:not(.cm-active).cm-line .cm-header ~ span.cm-header::before,
+body.clutter-free-headings div.mod-cm6.is-live-preview div:not(.cm-active).cm-line .cm-header.cm-hmd-internal-link::before {
+    display: none;
+}
+
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-1::before {
+    content: 'H1';
+    margin-top: calc(var(--h1-size) - 0.1em);
+    border:1px solid var(--border-color);
+}
+
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-2::before {
+    content: 'H2';
+    margin-top: calc(var(--h2-size) - 0.2em);
+}
+
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-3::before {
+    content: 'H3';
+    margin-top: calc(var(--h3-size) - 0.2em);
+}
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-4::before {
+    content: 'H4';
+    margin-top: calc(var(--h4-size) - 0.3em);
+}
+
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-5::before {
+    content: 'H5';
+    margin-top: calc(var(--h5-size) - 0.4em);
+}
+
+body.clutter-free-headings div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header-6::before {
+    content: 'H6';
+    margin-top: calc(var(--h6-size) - 0.4em);
+}
+
+/*适配source mode 模式*/
+body.clutter-free-headings div.mod-cm6:not(.is-live-preview) div:not(.cm-active).cm-line span:not(.cm-formatting-header).cm-header ~ span.cm-header::before {
+    display: none;
+}
+body.clutter-free-headings div.mod-cm6:not(.is-live-preview) div:not(.cm-active).cm-line span.cm-formatting-header {
+    display:none;
+}
+/*=============== 使用H1-H6 代替#号来显示标题等级 End ===============*/
+
+
+/* ===================== H1-H6 标题的文本对齐方式 ===================== */
+/* =============== H1-H6 标题的文本不设置，就是默认居左对齐 =============== */
+/* ===================== H1-H6 标题的文本居中对齐 ===================== */
+body.h1-text-align-center .HyperMD-header.HyperMD-header-1.cm-line,
+body.h2-text-align-center .HyperMD-header.HyperMD-header-2.cm-line,
+body.h3-text-align-center .HyperMD-header.HyperMD-header-3.cm-line,
+body.h4-text-align-center .HyperMD-header.HyperMD-header-4.cm-line,
+body.h5-text-align-center .HyperMD-header.HyperMD-header-5.cm-line,
+body.h6-text-align-center .HyperMD-header.HyperMD-header-6.cm-line,
+body.h1-text-align-center :is(.markdown-preview-view,.markdown-rendered) h1,
+body.h2-text-align-center :is(.markdown-preview-view,.markdown-rendered) h2,
+body.h3-text-align-center :is(.markdown-preview-view,.markdown-rendered) h3,
+body.h4-text-align-center :is(.markdown-preview-view,.markdown-rendered) h4,
+body.h5-text-align-center :is(.markdown-preview-view,.markdown-rendered) h5,
+body.h6-text-align-center :is(.markdown-preview-view,.markdown-rendered) h6 {
+  text-align: center;
+}
+/* =============== H1-H6 标题的文本右对齐 =============== */
+body.h1-text-align-end .HyperMD-header.HyperMD-header-1.cm-line,
+body.h2-text-align-end .HyperMD-header.HyperMD-header-2.cm-line,
+body.h3-text-align-end .HyperMD-header.HyperMD-header-3.cm-line,
+body.h4-text-align-end .HyperMD-header.HyperMD-header-4.cm-line,
+body.h5-text-align-end .HyperMD-header.HyperMD-header-5.cm-line,
+body.h6-text-align-end .HyperMD-header.HyperMD-header-6.cm-line,
+body.h1-text-align-end :is(.markdown-preview-view,.markdown-rendered) h1,
+body.h2-text-align-end :is(.markdown-preview-view,.markdown-rendered) h2,
+body.h3-text-align-end :is(.markdown-preview-view,.markdown-rendered) h3,
+body.h4-text-align-end :is(.markdown-preview-view,.markdown-rendered) h4,
+body.h5-text-align-end :is(.markdown-preview-view,.markdown-rendered) h5,
+body.h6-text-align-end :is(.markdown-preview-view,.markdown-rendered) h6 {
+  text-align: end;
+}
+/* =============== H1-H6 标题的文本对齐方式 End =============== */
+
+/* funny LP headers animation 开启标题动画
+from discord @sailKite https://cdn.discordapp.com/attachments/702656734631821413/1007258862606352424/FunnyHeaderAnimLP.css
+*/
+body.funny-header-anim .is-live-preview .cm-line > :is(.cm-header, .cm-widgetBuffer) + .cm-header,
+body.funny-header-anim.clutter-free-headings  .cm-line > :is(.cm-header, .cm-widgetBuffer) + .cm-header {
+  display: inline-block;
+}
+body.funny-header-anim  .is-live-preview .cm-line:not(.cm-active) :is(.cm-header, .cm-widgetBuffer) + .cm-header,
+body.funny-header-anim.clutter-free-headings  .cm-line:not(.cm-active) :is(.cm-header, .cm-widgetBuffer) + .cm-header {
+  transform: translateX(0ch);
+  transition: transform 333ms;
+}
+body.funny-header-anim  .is-live-preview .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-header, 
+body.funny-header-anim.clutter-free-headings  :is(.cm-header, .cm-widgetBuffer) + .cm-header {
+  transition: transform 333ms;
+  transform: translateX(30px);
+}
+body.funny-header-anim  .is-live-preview .cm-active :is(.cm-header) +.cm-widgetBuffer + .cm-html-embed,
+body.funny-header-anim.clutter-free-headings .cm-active  :is(.cm-header) + .cm-widgetBuffer + .cm-html-embed {
+  transition: margin-left 500ms;
+  margin-left: 30px;
+}
+body.funny-header-anim  .is-live-preview .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-bracket, 
+body.funny-header-anim.clutter-free-headings  .cm-active :is(.cm-header, .cm-widgetBuffer) + .cm-bracket {
+  transition: margin-left 333ms;
+  margin-left: 30px;
+}
+body.funny-header-anim  .is-live-preview .cm-line:not(.cm-active) .cm-header:first-of-type,
+body.funny-header-anim.clutter-free-headings   .cm-line:not(.cm-active) .cm-header:first-of-type {
+  display: none;
+  opacity: 0;
+}
+
+body.funny-header-anim  .is-live-preview .cm-active  .cm-formatting-header + .cm-header,
+body.funny-header-anim.clutter-free-headings   .cm-active  .cm-formatting-header + .cm-header{
+  margin-left: -30px;
+}
+
+body.funny-header-anim  .is-live-preview .cm-active .cm-header:first-of-type,
+body.funny-header-anim.clutter-free-headings  .cm-active .cm-header:first-of-type {
+  transform: translateX(0ch);
+  animation: opac 333ms;
+}
+
+@keyframes opac {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+/*============================== 开启标题动画 End ==============================*/
 
 /*编辑模式下，修复callouts 的段前段后距离*/
 .cm-embed-block .markdown-rendered.cm-callout {
@@ -9677,37 +10413,6 @@ div[data-callout="hidden"] > .callout-title {
 }
 /* ========================= tasksCalendar End ====================== */
 
-/* ============================ Ribbon ========================= */
-/*控制 Ribbon 区域自动隐藏侯画出抖动的效果*/
-.ribbon-floating .workspace-ribbon.side-dock-ribbon:hover:hover {
-    flex:0 0 var(--ribbon-width);
-    animation:0.8s slide-left both;
-}
-@keyframes slide-left {
-	0% { transform:translateX(0%); opacity:0; }
-    20% { transform:translateX(-8px); opacity:0.3; }
-    35% { transform:translateX(-10px); }
-	65% { opacity:0.7; }
-	100% { opacity:1; }
-}
-
-.ribbon-floating .workspace-ribbon {
-    width:10px !important;
-    flex:unset;
-    padding-right: unset;
-}
-
-body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace-ribbon.side-dock-ribbon {
-    height: 100%;
-    margin-top: 0;
-    padding-top: var(--header-height);
-    background: var(--background-secondary);
-    border-right: var(--border);
-    box-shadow: var(--panel-shadow);
-    transition: left 0.8s, opacity 0.4s;
-    opacity: 0;
-}
-/* ============================ Ribbon End ========================= */
 
 /*Siderbar区域 tab 按钮的 underline 样式优化，更见扁平化*/
 .sidebar-tabs-underline .mod-right-split .workspace-tab-header-spacer,.sidebar-tabs-underline.labeled-nav .mod-left-split .workspace-tabs:not(.mod-top) .workspace-tab-header-spacer,.sidebar-tabs-underline:not(.labeled-nav) .mod-left-split .workspace-tab-header-spacer{
@@ -9758,7 +10463,7 @@ body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace
 /*代码块（embed）下，dataviewjs 插入内容的宽度和布局*/
 .table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataviewjs {
     margin: auto;
-    max-width:90% !important;
+    max-width:90%;
 }
 /*代码块（embed）下，dataviewjs 插入table 内容的宽度和布局*/
 .cm-preview-code-block.cm-embed-block.markdown-rendered .block-language-dataview {
@@ -9782,38 +10487,28 @@ body:not(.is-mobile):is(:not(.css-settings-manager),.ribbon-floating) .workspace
 /*====================== 图片 End ======================*/
 /*==================== 搜索（Search） ====================*/
 /*搜索结果的样式适配浅/深色主题*/
-.theme-light .mod-left-split .search-result-file-match {
+:is(.theme-light,.theme-dark) .mod-left-split .search-result-file-match {
     color: var(--search-result-txcolor);
     background-color: var(--search-result-bgcolor);
 }
-.theme-dark .mod-left-split .search-result-file-match {
-    color: var(--search-result-txcolor);
-    background-color: var(--search-result-bgcolor);
-}
+
 /*End*/
 /*======================= 搜索（Search） End =======================*/
 
 /*=================== 正文出链 和 回链（backlinks） ===================*/
 /*backlinks，在浅/深主题下的自定义样式*/
-.theme-light .workspace-split .view-content .embedded-backlinks .search-result-container .search-result-file-matches .search-result-file-match {
+:is(.theme-light,.theme-dark) .workspace-split .view-content .embedded-backlinks .search-result-container .search-result-file-matches .search-result-file-match {
     background-color: var(--backlinks-embed-bgcolor);
 }
-
-.theme-dark .workspace-split .view-content .embedded-backlinks .search-result-container .search-result-file-matches .search-result-file-match {
-    background-color: var(--backlinks-embed-bgcolor);
-}
-
-.theme-light .workspace-split .view-content .embedded-backlinks .search-result-container .search-result-file-matches .search-result-file-match .search-result-file-matched-text {
-    color: var(--backlinks-embed-txcolor) !important;
-}
-.theme-dark .workspace-split .view-content .embedded-backlinks .search-result-container .search-result-file-matches .search-result-file-match .search-result-file-matched-text {
+:is(.theme-light,.theme-dark)  .workspace-split .view-content .embedded-backlinks .search-result-container .search-result-file-matches .search-result-file-match .search-result-file-matched-text {
     color: var(--backlinks-embed-txcolor) !important;
 }
 /*End*/
 /*=================== 正文出链 和 回链（backlinks） End ===================*/
 
 /*
-/*Obsidian 关闭按钮顺序调整
+/*Obsidian 关闭按钮顺序调整*/
+/*
 body.reversal-titlebar .titlebar-button-container.mod-right {
     direction: rtl;
 }
@@ -9826,60 +10521,6 @@ body.link-click .cm-s-obsidian span.cm-link {
 /*禁用实时预览点击标签跳转 需要跳转 点击#号即可
 body.tag-click .cm-line span.cm-hashtag:not(.cm-formatting) {
     pointer-events: none;
-}
-*/
-
-
-/* 在编辑模式下，自动为标题编号。List styling for outline pane */
-/*
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline {
-    counter-reset: h1;
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.pane-clickable-item {
-    counter-reset: h2;
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.pane-clickable-item {
-    counter-reset: h3;
-}
-
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item {
-    counter-reset: h4;
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item {
-    counter-reset: h5;
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item {
-    counter-reset: h6;
-}
-
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.pane-clickable-item:before {
-    counter-increment: h1;
-    content: counter(h1) ". ";
-}
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.pane-clickable-item:before {
-    counter-increment: h2;
-    content: counter(h1) "." counter(h2) ". ";
-}
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item:before {
-    counter-increment: h3;
-    content: counter(h1) "." counter(h2) "." counter(h3) ". ";
-}
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item:before {
-    counter-increment: h4;
-    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) ". ";
-}
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item:before {
-    counter-increment: h5;
-    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) ". ";
-}
-body > div > div.horizontal-main-container > div > div.workspace-split.mod-horizontal.mod-right-split > div.workspace-tabs > div.workspace-leaf > div > div.view-content > div.outline > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.outline-heading-children > div > div.pane-clickable-item:before {
-    counter-increment: h6;
-    content: counter(h1) "." counter(h2) "." counter(h3) "." counter(h4) "." counter(h5) "." counter(h6) ". ";
 }
 */
 
@@ -9963,242 +10604,4 @@ section > ol li::before {
  em {
     color: #66d9ef;
 }
-/* ====================================================== */
-/* ====================== 陈旧代码 ====================== */
-/* ====================================================== */
-/*给bookinfo 的表格增加指向（hover）的动画*/
-/*
-body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:nth-child(odd):hover, body:not(.remove-table-transition) :is(.markdown-preview-view,.markdown-rendered,.markdown-source-view) tbody tr:hover {
-    background: var(--table-hover-raw-color);
-    color:white;
-    transform: scale(1.02);
-    transition: transform 0.1s cubic-bezier(0.11, 0.33, 0.23, 0.33);
-}
-*/
-/*End*/
 
-/*编辑模式：控制标题和分割线的距离
-.markdown-preview-view h1, .markdown-rendered h1 {
-    padding-bottom: 0.4em;
-}
-.markdown-preview-view h2, .markdown-rendered h2 {
-    padding-bottom: 12em;
-}
-.markdown-preview-view h3, .markdown-rendered h3 {
-    padding-bottom: 0.4em;
-}
-.markdown-preview-view h4, .markdown-rendered h4 {
-    padding-bottom: 0.4em;
-}
-.markdown-preview-view h5, .markdown-rendered h5 {
-    padding-bottom: 0.4em;
-}
-.markdown-preview-view h6, .markdown-rendered h6 {
-    padding-bottom: 0.4em;
-}
-/*End*/
-/*---- nav arrows adjust location ----
-.nav-folder-collapse-indicator {
-    position: absolute;
-    left: 21px;
-    top: 3px;
-    transition: transform 20ms linear 0s;
-}
-.nav-folder-collapse-indicator svg {
-    display: none;
-    color: var(--accent-strong);
-    height: 7px;
-    width: 7px;
-}
-/*search icon 1
- .backlink-pane .search-result-container .collapse-icon {
-    left: 0px;
-    top: 7px;
-    margin-top: 0px;
-    transition: transform 20ms linear 0s;
-}
-.backlink-pane .search-result-container .collapse-icon::before {
-    content : "↓";
-    font-size: 14px;
-    font-family: 'Inter';
-    font-weight: bold;
-    color: var(--text-accent);
-    transition: transform 10ms linear 0s;
-}
-.backlink-pane .search-result-container .collapse-icon svg {
-    display: none;
-    color:var(--accent-strong);
-    height:7px;
-    width:7px;
-}
-.backlink-pane .search-result-container .tree-item.search-result.is-collapsed .collapse-icon {
-    transform: translateX(1px) translateY(1px) rotate(-90deg);
-    opacity: 0.5;
-}
-/* search panel icons
-.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon {
-    left: 0px;
-    top: 7px;
-    margin-top: 0px;
-    transition: transform 20ms linear 0s;
-}
-.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon::before {
-    content : "↓";
-    font-size: 14px;
-    margin-left: 0px;
-    font-weight: bold;
-    font-family: 'Inter';
-    color: var(--text-accent);
-    transition: transform 10ms linear 0s;
-}
-.workspace-leaf .search-result-container.mod-global-search .tree-item-self.search-result-file-title.is-clickable .collapse-icon svg {
-    display: none;
-    color:var(--accent-strong);
-    height:7px;
-    width:7px;
-}
-.workspace-leaf .search-result-container.mod-global-search .tree-item.search-result.is-collapsed .collapse-icon {
-    transform: translateX(1px) translateY(1px) rotate(-90deg);
-	opacity: 0.5;
-}
-.workspace-tab-header-inner .workspace-tab-header-inner-icon {
-    box-sizing:content-box;
-    font-size:1.3em;
-}
-*/
-/*优化目录树的展开收起箭头
-/*文件目录树，文件夹的未展开（收起）箭头
-.nav-folder.is-collapsed .nav-folder-title::before {
-    transform: translateX(1px) translateY(0.4em) rotate(0deg);
-}
-/*End*/
-/*文件目录树中，文件夹的展开箭头
-.nav-folder .nav-folder-title::before {
-    content: "";
-    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABmJLR0QA/wD/AP+gvaeTAAAAZklEQVRIie3NMRKAMAhE0eChMWXSOVzYEhv7sMvgWGRr+K+1vd9PVa/M/7E6EJEzgyyBLBICMkgYYBEIYBAYQBEKQBAaeHeXAe4+zGyWANE4BSBxGEDjEMDEwwAbD633PkrCe5/tAV92N0rtyZlOAAAAAElFTkSuQmCC);
-    background-size: 13px 13px;
-    background-position: center;
-    transform: translate(0, 2px);
-    background-repeat: no-repeat;
-    display: inline-block;
-    height: 15px;
-    width: 15px;
-    margin-top:1.5px;
-    transform: translateX(-1px) translateY(0.35em) rotate(90deg);
-}
-/*End*/
-/*顶部导航栏下边界线*/
-/*
-.workspace-sidedock-empty-state .workspace-tabs {
-    border-bottom:1px solid var(--background-modifier-border2);
-}
-.workspace-tab-header-container {
-    border-bottom:1px solid var(--background-modifier-border2);
-}
-*/
-/*修复：导航栏按钮的高度和文件标题栏高度，因为 theme settings 等插件的异常*/
-/*
-body.css-settings-manager {
-    --header-height: 44px !important;
-}
-*/
-/*End*/
-
-/*大纲美化*/
-/*
-.workspace-leaf-content[data-type=outline] .view-content .outline {
-    padding-left: 0 !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon {
-    cursor: pointer !important;
-    margin-right: var(--size-4-1) !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon::before {
-    width: var(--size-4-2) !important;
-    height: var(--size-4-2) !important;
-    background-color: var(--text-accent) !important;
-    border-radius: 50% !important;
-    position: absolute !important;
-    left: calc(var(--size-4-5)) !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon svg path {
-    display: none !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-children {
-    overflow: hidden !important;
-    border-left: none !important;
-    margin-left: var(--size-4-2) !important;
-    padding-left: var(--size-4-4) !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self {
-    position: relative !important;
-    padding-left: var(--size-4-6) !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner {
-    padding-left: var(--size-4-5) !important;
-  }
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner::after {
-    content: "" !important;
-    width: var(--size-4-1) !important;
-    height: var(--size-4-1) !important;
-    border: 2px solid var(--text-accent) !important;
-    border-radius: 50% !important;
-    position: absolute !important;
-    left: calc(var(--size-4-5)) !important;
-    top: 50% !important;
-    transform: translateY(-50%) !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner::before {
-    content: "" !important;
-    width: var(--size-4-2) !important;
-    height: 50vh !important;
-    opacity: 0 !important;
-    border-left: 2px solid var(--text-accent) !important;
-    border-bottom: 2px solid var(--text-accent) !important;
-    border-bottom-left-radius: var(--size-4-2) !important;
-    position: absolute !important;
-    bottom: calc(var(--line-height-tight) * var(--nav-item-size) / 2 + var(--size-4-1));
-    left: -1px !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon + .tree-item-inner {
-    padding-left: 0;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-icon + .tree-item-inner::after {
-    content: none !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover {
-    background-color: transparent !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover .tree-item-inner::before {
-    opacity: 1 !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover .tree-item-icon::before {
-    background-color: var(--text-normal) !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self:hover .tree-item-inner::after {
-    border-color: var(--text-normal) !important;
-    background-color: var(--text-normal) !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-inner {
-    z-index: 2 !important;
-    background-color: var(--background-secondary) !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item > .tree-item-children:hover .tree-item-icon + .tree-item-inner::before {
-    opacity: 1 !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline .tree-item.is-collapsed .tree-item-icon::before {
-    box-shadow: 0 0 0 4px var(--background-modifier-hover) !important;
-}
-.workspace-leaf-content[data-type=outline] .view-content .outline > .tree-item > .tree-item-self .tree-item-inner::before {
-    content: none !important;
-}
-/*tabs上的标题大小
-.workspace-tab-header-inner-title {
-    line-height: 1.0;
-}
-.workspace .mod-root .workspace-tab-header-inner::after {
-    background-color:transparent;
-}
-*/
