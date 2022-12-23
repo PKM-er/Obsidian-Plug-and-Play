@@ -1,28 +1,120 @@
 {
   "recentFiles": [
     {
+      "basename": "06-2、callout 便签效果",
+      "path": "Obsidian-example/基本使用/06-2、callout 便签效果.md"
+    },
+    {
       "basename": "更新日志（Changelog）",
       "path": "更新日志（Changelog）.md"
     },
     {
-      "basename": "00、基本语法和简介",
-      "path": "Obsidian-example/基本使用/00、基本语法和简介.md"
+      "basename": "Obsidian教程——基础语法和操作",
+      "path": "Obsidian-example/基本使用/Obsidian教程——基础语法和操作.md"
     },
     {
-      "basename": "09、引用和脚注",
-      "path": "Obsidian-example/基本使用/09、引用和脚注.md"
+      "basename": "05、图片和链接",
+      "path": "Obsidian-example/基本使用/05、图片和链接.md"
+    },
+    {
+      "basename": "Tables",
+      "path": "Obsidian-example/进阶用法3-cssClasses/Tables.md"
+    },
+    {
+      "basename": "09.通过cssClasses 控制彩色标题",
+      "path": "Obsidian-example/进阶用法3-cssClasses/09.通过cssClasses 控制彩色标题.md"
+    },
+    {
+      "basename": "dataviewmasonry",
+      "path": "Obsidian-example/进阶用法2-dataview/dataviewmasonry/dataviewmasonry.md"
+    },
+    {
+      "basename": "00.什么是cssClasses",
+      "path": "Obsidian-example/进阶用法3-cssClasses/00.什么是cssClasses.md"
+    },
+    {
+      "basename": "02.自定义表格样式 - PurpleRed",
+      "path": "Obsidian-example/进阶用法3-cssClasses/02.自定义表格样式 - PurpleRed.md"
+    },
+    {
+      "basename": "01.自定义表格样式 - Default Table",
+      "path": "Obsidian-example/进阶用法3-cssClasses/01.自定义表格样式 - Default Table.md"
+    },
+    {
+      "basename": "08.自定义表格样式 - 文件标题样式",
+      "path": "Obsidian-example/进阶用法3-cssClasses/08.自定义表格样式 - 文件标题样式.md"
+    },
+    {
+      "basename": "插件说明",
+      "path": "插件说明.md"
+    },
+    {
+      "basename": "中药别名",
+      "path": "Obsidian-example/进阶用法2-dataview/测试/中药别名.md"
+    },
+    {
+      "basename": "01 时间管理之难 - 少数派",
+      "path": "Obsidian-example/进阶用法2-dataview/dataviewmasonry/01 时间管理之难 - 少数派.md"
+    },
+    {
+      "basename": "01.zettelkasten卡片盒",
+      "path": "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/01.zettelkasten卡片盒.md"
+    },
+    {
+      "basename": "一个候鸟感到彷徨的冬天",
+      "path": "Obsidian-example/进阶用法2-dataview/dataviewmasonry/一个候鸟感到彷徨的冬天.md"
+    },
+    {
+      "basename": "为纸质书籍进行数字备份：如何制作一本功能完备的 PDF 电子书 - 少数派",
+      "path": "Obsidian-example/进阶用法2-dataview/dataviewmasonry/为纸质书籍进行数字备份：如何制作一本功能完备的 PDF 电子书 - 少数派.md"
+    },
+    {
+      "basename": "如何在 Notion 建立多级标签体系 - 少数派",
+      "path": "Obsidian-example/进阶用法2-dataview/dataviewmasonry/如何在 Notion 建立多级标签体系 - 少数派.md"
+    },
+    {
+      "basename": "卡片笔记写作法为什么管用？  - 少数派",
+      "path": "Obsidian-example/进阶用法2-dataview/dataviewmasonry/卡片笔记写作法为什么管用？  - 少数派.md"
+    },
+    {
+      "basename": "网页剪藏最初",
+      "path": "Obsidian-example/进阶用法2-dataview/dataviewmasonry/网页剪藏最初.md"
+    },
+    {
+      "basename": "porpoises",
+      "path": "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/porpoises.md"
+    },
+    {
+      "basename": "BookList",
+      "path": "People/Book/BookList.md"
+    },
+    {
+      "basename": "address operator",
+      "path": "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/address operator.md"
     },
     {
       "basename": "01、正文标题语法和样式设置",
       "path": "Obsidian-example/基本使用/01、正文标题语法和样式设置.md"
     },
     {
-      "basename": "02、段落、换行、强调",
-      "path": "Obsidian-example/基本使用/02、段落、换行、强调.md"
+      "basename": "更新日志（Changelog）_image_2",
+      "path": "素材库/更新日志（Changelog）_image_2.png"
     },
     {
-      "basename": "05、图片和链接",
-      "path": "Obsidian-example/基本使用/05、图片和链接.md"
+      "basename": "00、基本语法和简介",
+      "path": "Obsidian-example/基本使用/00、基本语法和简介.md"
+    },
+    {
+      "basename": "更新日志（Changelog）_image_4",
+      "path": "素材库/更新日志（Changelog）_image_4.gif"
+    },
+    {
+      "basename": "09、引用和脚注",
+      "path": "Obsidian-example/基本使用/09、引用和脚注.md"
+    },
+    {
+      "basename": "02、段落、换行、强调",
+      "path": "Obsidian-example/基本使用/02、段落、换行、强调.md"
     },
     {
       "basename": "07、表格和表格嵌套",
@@ -31,10 +123,6 @@
     {
       "basename": "08、目录",
       "path": "Obsidian-example/基本使用/08、目录.md"
-    },
-    {
-      "basename": "06、提示框(callout)样式展示",
-      "path": "Obsidian-example/基本使用/06、提示框(callout)样式展示.md"
     },
     {
       "basename": "04、表格（Table）",
@@ -73,18 +161,6 @@
       "path": "Obsidian-example/Obsidian样式DIY.md"
     },
     {
-      "basename": "Tables",
-      "path": "Obsidian-example/进阶用法3-cssClasses/Tables.md"
-    },
-    {
-      "basename": "Extend table",
-      "path": "Obsidian-example/进阶用法3-cssClasses/Extend table.md"
-    },
-    {
-      "basename": "08.自定义表格样式 - 文件标题样式",
-      "path": "Obsidian-example/进阶用法3-cssClasses/08.自定义表格样式 - 文件标题样式.md"
-    },
-    {
       "basename": "07.自定义表格样式 - Yellow cab",
       "path": "Obsidian-example/进阶用法3-cssClasses/07.自定义表格样式 - Yellow cab.md"
     },
@@ -105,20 +181,8 @@
       "path": "Obsidian-example/进阶用法3-cssClasses/03.自定义表格样式 - FlatBlue.md"
     },
     {
-      "basename": "02.自定义表格样式 - PurpleRed",
-      "path": "Obsidian-example/进阶用法3-cssClasses/02.自定义表格样式 - PurpleRed.md"
-    },
-    {
-      "basename": "01.自定义表格样式 - Default Table",
-      "path": "Obsidian-example/进阶用法3-cssClasses/01.自定义表格样式 - Default Table.md"
-    },
-    {
       "basename": "常见的语法罗列",
       "path": "Obsidian-example/该库的常见样式罗列/常见的语法罗列.md"
-    },
-    {
-      "basename": "Obsidian教程——基础语法和操作",
-      "path": "Obsidian-example/基本使用/Obsidian教程——基础语法和操作.md"
     },
     {
       "basename": "02、脑图和流程图（Mermaid）",
@@ -135,58 +199,6 @@
     {
       "basename": "01.zettelkasten卡片盒 展示属性",
       "path": "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/01.zettelkasten卡片盒 展示属性.md"
-    },
-    {
-      "basename": "01.zettelkasten卡片盒",
-      "path": "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/01.zettelkasten卡片盒.md"
-    },
-    {
-      "basename": "DataView syntax",
-      "path": "Obsidian-example/进阶用法2-dataview/dataview语法/DataView syntax.md"
-    },
-    {
-      "basename": "README",
-      "path": "Template/tasksCalendar/README.md"
-    },
-    {
-      "basename": "01、笔记多栏样式",
-      "path": "Obsidian-example/进阶用法1/01、笔记多栏样式.md"
-    },
-    {
-      "basename": "04、乐谱",
-      "path": "Obsidian-example/进阶用法1/04、乐谱.md"
-    },
-    {
-      "basename": "03、Timeline 记录",
-      "path": "Obsidian-example/进阶用法1/03、Timeline 记录.md"
-    },
-    {
-      "basename": "tmp1670832241095_07、目录_image_1",
-      "path": "Obsidian-example/基本使用/素材库/tmp1670832241095_07、目录_image_1.gif"
-    },
-    {
-      "basename": "tmp1670832300229_07、目录_image_1",
-      "path": "Obsidian-example/基本使用/素材库/tmp1670832300229_07、目录_image_1.gif"
-    },
-    {
-      "basename": "01、正文标题语法和样式设置_image_3",
-      "path": "Obsidian-example/基本使用/素材库/01、正文标题语法和样式设置_image_3.png"
-    },
-    {
-      "basename": "08、目录_image_1",
-      "path": "Obsidian-example/基本使用/素材库/08、目录_image_1.gif"
-    },
-    {
-      "basename": "algae",
-      "path": "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/algae.md"
-    },
-    {
-      "basename": "Baader-Meinhof Phenomenon",
-      "path": "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/Baader-Meinhof Phenomenon.md"
-    },
-    {
-      "basename": "⏰DashBoard",
-      "path": "📊Every Day/⏰DashBoard.md"
     }
   ],
   "omittedPaths": [],

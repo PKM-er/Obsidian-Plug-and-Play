@@ -45,11 +45,20 @@
   "quick-explorer@@qe-hide-breadcrumbs": false,
   "things-style-optimize@@paragraph-margin-top": "50px",
   "things-style-optimize@@paragraph-margin-bottom": "1px",
-  "minimal-style@@funny-header-anim": false,
+  "minimal-style@@funny-header-anim": true,
   "minimal-style@@clutter-free-headings": true,
   "minimal-style@@h2-divider line": "h2-l",
   "minimal-style@@h1-left": false,
   "minimal-style@@h1-divider line": "h1-l",
   "minimal-style@@window-title-off": false,
-  "minimal-style@@maximize-tables-off": "maximize-tables-auto"
+  "minimal-style@@maximize-tables-off": "maximize-tables-auto",
+  "minimal-style@@ribbon-floating": false,
+  "minimal-style@@background-image-settings-switch": false,
+  "minimal-style@@notebook-liked-markdown-page-options": "non-notebook-bg",
+  "minimal-advanced@@styled-scrollbars": false,
+  "minimal-style@@paragraph-margin-top": "10px",
+  "minimal-style@@paragraph-margin-bottom": "5px",
+  "minimal-style@@tag-font-size": 13.5,
+  "minimal-style@@tag-radius": "14px",
+  "minimal-style@@tag-line-height": 2.2
 }

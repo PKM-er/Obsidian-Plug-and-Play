@@ -47,14 +47,6 @@
   },
   "showLogAboutPerformanceInConsole": false,
   "selectionHistoryTree": {
-    "更新日志（Changelog）：每个版本变更明细；": {
-      "更新日志（Changelog）：每个版本变更明细；": {
-        "currentFile": {
-          "count": 1,
-          "lastUpdated": 1668563091222
-        }
-      }
-    },
     "2022-12-02": {
       "2022-12-02": {
         "currentFile": {
@@ -92,6 +84,54 @@
         "customDictionary": {
           "count": 1,
           "lastUpdated": 1670515437944
+        }
+      }
+    },
+    "zettelkasten": {
+      "zettelkasten": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1671206052186
+        }
+      }
+    },
+    "dataviewmasonry": {
+      "dataviewmasonry": {
+        "frontMatter": {
+          "count": 1,
+          "lastUpdated": 1671537542017
+        }
+      }
+    },
+    "Bingo": {
+      "Bingo": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1671775682084
+        }
+      }
+    },
+    "cssClasses:  ...": {
+      "cssClasses:  ...": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1671775850806
+        }
+      }
+    },
+    "red": {
+      "red": {
+        "customDictionary": {
+          "count": 1,
+          "lastUpdated": 1671775872515
+        }
+      }
+    },
+    "06-2、callout 便签效果": {
+      "06-2、callout 便签效果": {
+        "internalLink": {
+          "count": 1,
+          "lastUpdated": 1671782790739
         }
       }
     }

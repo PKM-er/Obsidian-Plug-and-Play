@@ -1,5 +1,5 @@
 {
-  "baseFontSize": 19,
+  "baseFontSize": 18,
   "theme": "obsidian",
   "cssTheme": "Minimal",
   "translucency": false,
@@ -19,7 +19,10 @@
     "masonry",
     "【图标】External Link Icons",
     "【Linkcard】",
-    "通过yaml区域控制样式"
+    "通过yaml区域控制样式",
+    "headings indent",
+    "dataviewmasonry",
+    "通过yaml区域控制标题"
   ],
   "interfaceFontFamily": "Microsoft YaHei",
   "textFontFamily": "Microsoft YaHei",

@@ -1,0 +1,440 @@
+/* bt设置 */
+/* Specific Settings for Blue Topaz Transplant */
+
+
+body.auto-serial-number-dvtable .dataviewmasonry:not(.cards) .dataview.table-view-table> tbody > tr> td:first-child::before
+{
+content:'';
+}
+
+.dataviewmasonry table.dataview tbody {
+    margin-top: 0px;
+    margin-left: 5px;
+}
+
+.dataviewmasonry table.dataview tbody>tr>td .el-p {    
+    word-wrap: break-word;
+    word-break: break-word;
+    white-space: pre-wrap;
+	z-index: 2;
+}
+
+.dataviewmasonry table.dataview>tbody>tr:hover {
+	box-shadow: 2px 8px 12px 6px rgb(0 0 0 / 100%) , 0 1px 3px 1px rgb(0 0 0 / 3%);
+	margin-left: 15px;
+}
+
+/* .dataviewmasonry table.dataview tbody>tr>td:first-child:after {
+	background-color: green;
+	z-index: -1;
+} */
+
+ 
+.dataviewmasonry table.dataview tbody>tr>td:first-child, .markdown-source-view.mod-cm6.dataviewmasonry .dataview.table-view-table>tbody>tr>td:first-child {
+	background-color: rgba(var(--interactive-accent-rgb), 0.05);
+	padding:  0 calc(var(--dataviewmasonry-padding)/2) ;
+	width: 400px;
+}
+
+/* 大一些的阴影取消 */
+/* box shadow disabled */
+
+:is(.markdown-preview-view,.markdown-rendered) table {
+	box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* minimal原本设置 */
+/* minimal original settings */
+
+:root {
+	--dataviewmasonry-min-width: 180px;
+	--dataviewmasonry-max-width: 1fr;
+	--dataviewmasonry-mobile-width: 120px;
+	--dataviewmasonry-image-height: 400px;
+	--dataviewmasonry-padding: 1.2em;
+	--dataviewmasonry-image-fit: contain;
+	--dataviewmasonry-background: var(--background-secondary);
+	--dataviewmasonry-border-width: 0px;
+}
+
+@media (max-width:400pt) {
+	:root {
+		--dataviewmasonry-min-width: var(--dataviewmasonry-mobile-width)
+	}
+}
+
+
+.dataviewmasonry.table-100 table.dataview tbody,
+.table-100 .dataviewmasonry table.dataview tbody {
+	padding: .25rem .75rem
+}
+
+.dataviewmasonry .el-pre+.el-lang-dataview .table-view-thead {
+	padding-top: 8px
+}
+
+.dataviewmasonry table.dataview>tbody>tr {
+	/* background-color: rgba(249, 249, 249, 0.925); */
+	background-color: var(--background-primary);
+}
+
+.dataviewmasonry table.dataview tbody {
+	clear: both;
+	padding: .5rem 0;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(var(--dataviewmasonry-min-width), var(--dataviewmasonry-max-width)));
+	grid-column-gap: 0.75rem;
+	grid-row-gap: 0.75rem
+}
+
+.dataviewmasonry table.dataview>tbody>tr {
+	background-color: var(--dataviewmasonry-background);
+	border: var(--dataviewmasonry-border-width) solid var(--background-modifier-border);
+	display: flex;
+	flex-direction: column;
+	margin: 0;
+	padding: 0 0 calc(var(--dataviewmasonry-padding)/3) 0;
+	border-radius: 6px;
+	overflow: auto;
+	transition: box-shadow .15s linear
+}
+
+.dataviewmasonry table.dataview>tbody>tr:hover {
+	border: var(--dataviewmasonry-border-width) solid var(--background-modifier-border-hover);
+	box-shadow: 0 4px 6px 0 rgba(0, 0, 0, .05), 0 1px 3px 1px rgba(0, 0, 0, .025);
+	transition: box-shadow .15s linear
+}
+
+.markdown-source-view.mod-cm6.dataviewmasonry .dataview.table-view-table>tbody>tr>td,
+.trim-cols .dataviewmasonry table.dataview tbody>tr>td {
+	white-space: normal
+}
+
+.dataviewmasonry table.dataview tbody>tr>td,
+.markdown-source-view.mod-cm6.dataviewmasonry .dataview.table-view-table>tbody>tr>td {
+	border-bottom: none;
+	padding: 0;
+	line-height: 1.2;
+	/*
+	width: calc(100% - var(--dataviewmasonry-padding));
+	*/
+	/*
+	margin: 0 auto;
+	*/
+	overflow: auto !important;
+	max-width: 100%;
+	display: flex
+}
+
+.dataviewmasonry table.dataview tbody>tr>td .el-p {
+	display: block;
+	width: 100%
+}
+
+.dataviewmasonry table.dataview tbody>tr>td:first-child {
+	font-weight: var(--bold-weight)
+}
+
+.dataviewmasonry table.dataview tbody>tr>td:first-child a {
+	padding: 0 0 calc(var(--dataviewmasonry-padding)/3);
+	display: block
+}
+
+.dataviewmasonry table.dataview tbody>tr>td:not(:first-child) {
+	font-size: 90%;
+	color: var(--text-muted)
+}
+
+.is-readable-line-widt.dataviewmasonry .block-language-dataviewjs table.dataview {
+	width: unset !important;
+	max-width: 400% !important;
+}
+
+@media (max-width:400pt) {
+	.dataviewmasonry table.dataview tbody>tr>td:not(:first-child) {
+		font-size: 80%
+	}
+}
+
+.dataviewmasonry-cover.dataviewmasonry table.dataview tbody>tr>td img {
+	object-fit: cover
+}
+
+.dataviewmasonry-16-9.dataviewmasonry table.dataview tbody>tr>td img {
+	aspect-ratio: 16/9
+}
+
+.dataviewmasonry-1-1.dataviewmasonry table.dataview tbody>tr>td img {
+	aspect-ratio: 1/1
+}
+
+.dataviewmasonry-2-1.dataviewmasonry table.dataview tbody>tr>td img {
+	aspect-ratio: 2/1
+}
+
+.dataviewmasonry-2-3.dataviewmasonry table.dataview tbody>tr>td img {
+	aspect-ratio: 2/3
+}
+
+.dataviewmasonry-align-bottom.dataviewmasonry table.dataview tbody>tr>td:last-child {
+	align-items: flex-end;
+	flex-grow: 1
+}
+
+.dataviewmasonry-cols-1 table.dataview tbody {
+	grid-template-columns: repeat(1, minmax(0, 1fr))
+}
+
+.dataviewmasonry-cols-2 table.dataview tbody {
+	grid-template-columns: repeat(2, minmax(0, 1fr))
+}
+
+@media (min-width:400pt) {
+	.dataviewmasonry-cols-3 table.dataview tbody {
+		grid-template-columns: repeat(3, minmax(0, 1fr))
+	}
+
+	.dataviewmasonry-cols-4 table.dataview tbody {
+		grid-template-columns: repeat(4, minmax(0, 1fr))
+	}
+
+	.dataviewmasonry-cols-5 table.dataview tbody {
+		grid-template-columns: repeat(5, minmax(0, 1fr))
+	}
+
+	.dataviewmasonry-cols-6 table.dataview tbody {
+		grid-template-columns: repeat(6, minmax(0, 1fr))
+	}
+
+	.dataviewmasonry-cols-7 table.dataview tbody {
+		grid-template-columns: repeat(7, minmax(0, 1fr))
+	}
+
+	.dataviewmasonry-cols-8 table.dataview tbody {
+		grid-template-columns: repeat(8, minmax(0, 1fr))
+	}
+}
+
+.dataviewmasonry table.dataview tbody>tr>td>:not(.el-embed-image) {
+	padding: calc(var(--dataviewmasonry-padding)/3) 0
+}
+
+.dataviewmasonry table.dataview tbody>tr>td:not(:last-child):not(:first-child)>.el-p:not(.el-embed-image) {
+	border-bottom: 1px solid var(--background-modifier-border);
+	width: 100%
+}
+
+.dataviewmasonry table.dataview tbody>tr>td a {
+	text-decoration: none
+}
+
+.links-int-on .dataviewmasonry table.dataview tbody>tr>td a {
+	text-decoration: none
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview tbody>tr>td>button {
+	width: 100%;
+	margin: calc(var(--dataviewmasonry-padding)/2) 0
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview tbody>tr>td:last-child>button {
+	margin-bottom: calc(var(--dataviewmasonry-padding)/6)
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview tbody>tr>td>ul {
+	width: 400px;
+	padding: .25em 0 !important;
+	/*
+	margin: 0 auto !important
+	*/
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview tbody>tr>td:not(:last-child)>ul {
+	border-bottom: 1px solid var(--background-modifier-border)
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview tbody>tr>td .el-embed-image {
+	background-color: var(--background-secondary);
+	display: block;
+	margin: 0 calc(var(--dataviewmasonry-padding)/-2) 0 calc(var(--dataviewmasonry-padding)/-2);
+	width: calc(100% + var(--dataviewmasonry-padding))
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview tbody>tr>td img {
+	width: unset !important;
+	object-fit: var(--dataviewmasonry-image-fit);
+	max-height: var(--dataviewmasonry-image-height);
+	background-color: var(--background-secondary);
+	vertical-align: bottom;
+    text-align:left;
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview thead {
+	user-select: none;
+	width: 180px;
+	display: block;
+	float: right;
+	position: relative;
+	text-align: right;
+	height: 24px;
+	padding-bottom: 4px
+}
+
+
+.dataviewmasonry .block-language-dataviewjs table.dataview thead>tr {
+	top: 0;
+	position: absolute;
+	display: none;
+	z-index: 9;
+	border: 1px solid var(--background-modifier-border);
+	background-color: var(--background-secondary);
+	box-shadow: 0 2px 8px var(--background-modifier-box-shadow);
+	padding: 6px;
+	border-radius: 6px;
+	flex-direction: column;
+	margin: 26px 0 0 0;
+	width: 100%
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview thead:hover>tr {
+	display: flex
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview thead>tr>th {
+	display: block;
+	padding: 3px 30px 3px 6px !important;
+	border-radius: 5px;
+	width: 100%;
+	font-weight: 400;
+	color: var(--text-muted);
+	cursor: var(--cursor);
+	border: none;
+	font-size: var(--font-adaptive-small)
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview thead>tr>th[sortable-style=sortable-asc],
+.dataviewmasonry .block-language-dataviewjs table.dataview thead>tr>th[sortable-style=sortable-desc] {
+	color: var(--text-normal)
+}
+
+
+.is-live-preview.is-readable-line-width.dataviewmasonry .cm-embed-block table.dataview,
+.is-readable-line-width.dataviewmasonry .block-language-dataviewjs table.dataview {
+	width:max-content !important;
+	max-width: 400% !important;
+}
+
+
+.dataviewmasonry .block-language-dataviewjs table {
+	text-align: center;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    height: 800px !important;
+}
+
+.dataviewmasonry .block-language-dataviewjs table tbody {
+	height: 800px;
+	white-space:normal !important;
+}
+
+.dataviewmasonry .block-language-dataviewjs table tbody td {
+	/*
+	width: fit-content;
+	*/
+	white-space:normal !important;
+}
+.dataviewmasonry .block-language-dataviewjs table.table-view-table {
+    display: inline-block;
+    height: calc(100% - 1px) !important;
+    overflow-y: scroll;
+}
+.dataviewmasonry .block-language-dataviewjs table.table-view-table thead,.dataviewmasonry table.dataview thead tbody tr{
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.dataviewmasonry {
+    overflow: auto !important;
+}
+.dataviewmasonry .block-language-dataviewjs table {
+    border-collapse: collapse !important;
+    margin: 10px 0;
+    border-spacing: 0;
+    text-align: center;
+	table-layout:fixed;
+}
+
+.dataviewmasonry .block-language-dataviewjs table > tr {
+	width:400px;
+}
+.dataviewmasonry .block-language-dataviewjs table.table-view-table {
+	text-align: center;
+	white-space: nowrap;
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+.dataviewmasonry .block-language-dataviewjs table > th > td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 10px;
+    width: fit-content !important;
+    White-space:nowrap !important;
+}
+
+
+.dataviewmasonry .block-language-dataviewjs table.dataview thead>tr>th:hover {
+	color: var(--text-normal);
+	background-color: var(--background-tertiary)
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview thead:before {
+	opacity: .25;
+	background-position: center center;
+	background-size: var(--icon-size);
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="white" d="M49.792 33.125l-5.892 5.892L33.333 28.45V83.333H25V28.45L14.438 39.017L8.542 33.125L29.167 12.5l20.625 20.625zm41.667 33.75L70.833 87.5l-20.625 -20.625l5.892 -5.892l10.571 10.567L66.667 16.667h8.333v54.883l10.567 -10.567l5.892 5.892z"></path></svg>')
+}
+
+.theme-light .dataviewmasonry table.dataview thead:before {
+	background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 100 100"><path fill="black" d="M49.792 33.125l-5.892 5.892L33.333 28.45V83.333H25V28.45L14.438 39.017L8.542 33.125L29.167 12.5l20.625 20.625zm41.667 33.75L70.833 87.5l-20.625 -20.625l5.892 -5.892l10.571 10.567L66.667 16.667h8.333v54.883l10.567 -10.567l5.892 5.892z"></path></svg>')
+}
+
+.dataviewmasonry table.dataview thead:hover:before {
+	opacity: .5
+}
+
+.markdown-source-view.mod-cm6.dataviewmasonry .edit-block-button {
+	top: 0;
+	right: 26px;
+	opacity: 1;
+	background-color: transparent
+}
+.dataviewmasonry.table-100 table.dataview thead>tr,
+.table-100 .dataviewmasonry table.dataview thead>tr {
+	right: .75rem
+}
+
+.dataviewmasonry.table-100 table.dataview thead:before,
+.table-100 .dataviewmasonry table.dataview thead:before {
+	margin-right: .75rem
+}
+.dataviewmasonry table.dataview thead:before {
+	content: '';
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: var(--icon-size);
+	background-repeat: no-repeat;
+	cursor: var(--cursor);
+	text-align: right;
+	padding: 4px 10px;
+	margin-bottom: 2px;
+	border-radius: 5px;
+	font-weight: 500;
+	font-size: var(--font-adaptive-small)
+}
+
+.dataviewmasonry table.dataview tr {
+	height:800px;
+}

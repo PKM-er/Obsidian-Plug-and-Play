@@ -2,7 +2,6 @@
 cssclass: cards
 usage: 对dataview表格渲染成卡片视图
 banner: "![[People/Book/素材库/BookList_image_1.gif]]"
-obsidianUIMode: preview
 banner_x: 0.5
 banner_y: 0.5
 banner_icon: 📖

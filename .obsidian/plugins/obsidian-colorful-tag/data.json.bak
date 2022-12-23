@@ -1,0 +1,244 @@
+{
+  "firstTime": false,
+  "global_enable": {
+    "border": true,
+    "font-weight": true,
+    "prefix": true,
+    "background-color": false,
+    "remove-hash": false,
+    "remove-tag-name": false
+  },
+  "global": {
+    "font-weight": "900",
+    "border": "2"
+  },
+  "attrList": [
+    "nest tag",
+    "remove hash",
+    "remove tag name",
+    "radius",
+    "prefix",
+    "suffix",
+    "background color",
+    "text color",
+    "text size",
+    "border",
+    "font weight"
+  ],
+  "defaultStyle": {},
+  "defaultGlobal": {},
+  "styleList": [
+    {
+      "radius": "",
+      "prefix": "💼",
+      "suffix": "",
+      "background-color": "#1fd56d",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "working",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "💬",
+      "suffix": "",
+      "background-color": "#1fd56d",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "meeting",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "📧",
+      "suffix": "",
+      "background-color": "#0077f8",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "Email",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "🛒",
+      "suffix": "",
+      "background-color": "#ef7311",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "shopping",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "📝",
+      "suffix": "",
+      "background-color": "#0077f8",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "todo",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "✴️",
+      "suffix": "",
+      "background-color": "red",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "important",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "🤙",
+      "suffix": "",
+      "background-color": "#1fd56d",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "call",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "🍽️",
+      "suffix": "",
+      "background-color": "#0077f8",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "dine",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "📔",
+      "suffix": "",
+      "background-color": "",
+      "text-color": "",
+      "text-size": "",
+      "border": "1",
+      "font-weight": "",
+      "tag": "book",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "🎞️",
+      "suffix": "",
+      "background-color": "",
+      "text-color": "",
+      "text-size": "",
+      "border": "1",
+      "font-weight": "",
+      "tag": "movie",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "🔗",
+      "suffix": "",
+      "background-color": "",
+      "text-color": "",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "URL",
+      "enable": true
+    },
+    {
+      "radius": "",
+      "prefix": "🗃️",
+      "suffix": "",
+      "background-color": "",
+      "text-color": "",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "archive",
+      "enable": true
+    },
+    {
+      "nest-tag": "",
+      "remove-hash": "",
+      "remove-tag-name": "",
+      "radius": "",
+      "prefix": "🐞",
+      "suffix": "",
+      "background-color": "red",
+      "text-color": "#ffffff",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "bug",
+      "enable": true
+    },
+    {
+      "nest-tag": "",
+      "remove-hash": "",
+      "remove-tag-name": "",
+      "radius": "",
+      "prefix": "🎨",
+      "suffix": "",
+      "background-color": "#2965f1",
+      "text-color": "white",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "CSS",
+      "enable": true
+    },
+    {
+      "nest-tag": "",
+      "remove-hash": "",
+      "remove-tag-name": "",
+      "radius": "",
+      "prefix": "☕",
+      "suffix": "",
+      "background-color": "#f7df1e",
+      "text-color": "white",
+      "text-size": "",
+      "border": "",
+      "font-weight": "",
+      "tag": "JavaScript",
+      "enable": true
+    }
+  ],
+  "useTagDetail": true,
+  "tagDetail": {
+    "People/Obsidian-plug-and-play/主题和snippests 测试用例.md": {
+      "file_size": 19208,
+      "tag_num": 5
+    }
+  },
+  "tagItem": {
+    "#Email": {},
+    "#shopping": {},
+    "#working": {
+      "#74b89c": "time",
+      "default-#74b89c": "{{DATETIME}}"
+    },
+    "#bug": {
+      "#9e3cb7": "time",
+      "default-#9e3cb7": "{{DATETIME}}"
+    },
+    "#todo": {
+      "#3e8bf4": "time",
+      "default-#3e8bf4": "{{DATETIME}}"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.markdown-reading-view h1:not(.embedded-note-title),.mod-cm6 .cm-header.cm-header-1 {
+    margin-left:unset;
+}
+.markdown-reading-view h2:not(.embedded-note-title),.mod-cm6 .cm-editor .cm-header.cm-header-2 {
+    margin-left:10px;
+}
+.markdown-reading-view h3:not(.embedded-note-title),.mod-cm6 .cm-editor .cm-header.cm-header-3 {
+    margin-left:20px;
+}
+.markdown-reading-view h4:not(.embedded-note-title),.mod-cm6 .cm-editor .cm-header.cm-header-4 {
+    margin-left:30px;
+}
+.markdown-reading-view h5:not(.embedded-note-title),.mod-cm6 .cm-editor .cm-header.cm-header-5 {
+    margin-left:40px;
+}
+.markdown-reading-view h6:not(.embedded-note-title),.mod-cm6 .cm-editor .cm-header.cm-header-6 {
+    margin-left:50px;
+}

@@ -1,4 +1,10 @@
 /*****************
+*   VARIABLES
+******************/
+.database-plugin__container {
+  --dbfolder-line-height: 1rem;
+}
+/*****************
 *      Base
 ******************/
 .database-plugin__html {
@@ -92,6 +98,13 @@ div.database-plugin__td.data-input:hover {
 /*** FOOTER ***/
 .database-plugin__tfoot {
   display: table-footer-group;
+  bottom: 0;
+  position: sticky;
+  z-index: 5;
+}
+
+.database-plugin__footer-group {
+  background-color: var(--background-primary);
 }
 
 .database-plugin__footer {
@@ -107,16 +120,16 @@ div.database-plugin__td.data-input:hover {
   border: none;
   padding: 0.5rem;
   color: var(--text-normal);
-  font-size: 1rem;
   resize: none;
   box-sizing: border-box;
   flex: 1 1 auto;
   text-align: -webkit-center;
   vertical-align: middle;
+  line-height: var(--dbfolder-line-height);
 }
 
 .database-plugin__td.data-input p {
-  margin: 6px 0px;
+  margin: 0;
 }
 /** children of data-input fills parent div*/
 .data-input > * {
@@ -137,16 +150,21 @@ div.database-plugin__td.data-input:hover {
   background-color: var(--background-secondary);
 }
 
-.database-plugin__td span.is-loaded,
-span.database-plugin__calendar,
-div.database-plugin__checkbox {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/******************************************************
+ *                  Editor cells
+ ******************************************************/
+.database-plugin__editor-cell {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .database-plugin__checkbox {
   place-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .database-plugin__checkbox input[type="checkbox"] {
@@ -407,14 +425,14 @@ div.database-plugin__checkbox {
 }
 
 .database-plugin__cell_size_wide .database-plugin__td {
-  padding: 0.6rem;
+  padding: 0.3rem;
 }
 
 .database-plugin__table .database-plugin__td:first-child,
 .database-plugin__table .database-plugin__th:first-child {
   position: sticky;
   left: 0;
-  z-index: 1;
+  z-index: 5;
 }
 
 .database-plugin__sticky_first_column .database-plugin__td:nth-child(2),
@@ -466,7 +484,7 @@ div.database-plugin__checkbox {
   position: sticky;
   left: 0;
   top: 0;
-  z-index: 2;
+  z-index: 10;
 }
 
 .database-plugin__thead {
@@ -504,12 +522,12 @@ div.database-plugin__checkbox {
 }
 
 .database-plugin__pagination {
-  width: 100%;
+  width: fit-content;
   height: 40px;
-  justify-content: flex-end;
   list-style: none;
   bottom: 1em;
-  position: sticky;
+  position: absolute;
+  right: 0;
   margin: 0;
   padding: 0 10px 0 0;
   display: flex;
@@ -529,11 +547,11 @@ div.database-plugin__checkbox {
 }
 
 .database-plugin__pagination-button:disabled {
-  opacity: 0.5;
-  cursor: "not-allowed";
+  cursor: not-allowed;
   background-color: var(--background-secondary);
-  box-shadow: var(--input-shadow);
   color: var(--text-normal);
+  border: thick double var(--text-accent);
+  opacity: 1;
 }
 
 .database-plugin__padding-left-05 {
@@ -541,7 +559,11 @@ div.database-plugin__checkbox {
 }
 
 .database-plugin__calendar {
-  align-self: center;
+  place-self: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .database-plugin__relationship,
@@ -596,6 +618,7 @@ div.database-plugin__checkbox {
   display: flex;
   justify-content: flex-end;
   text-align: right;
+  align-items: center;
 }
 
 .database-plugin__text-align-center {
@@ -609,6 +632,7 @@ div.database-plugin__checkbox {
   display: flex;
   justify-content: flex-start;
   text-align: left;
+  align-items: center;
 }
 
 .database-plugin__text-align-justify {
@@ -618,6 +642,7 @@ div.database-plugin__checkbox {
 
 .database-plugin__text-wrap {
   white-space: normal;
+  flex-wrap: wrap;
 }
 
 .database-plugin__text-nowrap {
@@ -663,22 +688,33 @@ div.database-plugin__checkbox {
 .database-plugin__scroll-container {
   will-change: transform;
   width: 100%;
-  height: 92%;
+  height: 98%;
+  scroll-margin-bottom: 1rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-height: 1440px) {
+  .database-plugin__scroll-container {
+    will-change: transform;
+    width: 100%;
+    height: 95%;
+  }
+}
+
+@media only screen and (max-height: 1024px) {
+  .database-plugin__scroll-container {
+    will-change: transform;
+    width: 100%;
+    height: 92%;
+  }
+}
+
+@media only screen and (max-height: 768px) {
   .database-plugin__scroll-container {
     will-change: transform;
     width: 100%;
     height: 85%;
   }
 }
-
-.draggable {
-  top: auto !important;
-  left: auto !important;
-}
-
 /*
 *  Settings styles
 */
@@ -787,10 +823,52 @@ div.database-plugin__checkbox {
   .database-plugin__file-suggestion-subtitle {
   color: var(--text-on-accent);
 }
+/************************************************************
+*                 Headers DnD styles
+************************************************************/
+.database-plugin__dnd-over {
+  background-color: var(--background-secondary);
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
 
-/*************************
-*  React-datepicker styles
-**************************/
+.database-plugin__dnd-dragging {
+  opacity: 0.5;
+  background-color: var(--background-modifier-box-shadow);
+}
+/************************************************************
+ *                    MODAL STYLES
+ ************************************************************/
+.database-plugin__text-modal {
+  width: 100%;
+  margin: 10px;
+}
+
+.database-plugin__textarea-modal {
+  width: 100%;
+  height: 100%;
+  margin: 10px;
+}
+
+.database-plugin__confirm-modal-controls {
+  display: flex;
+  justify-content: center;
+}
+
+.database-plugin__container div.dataview-error-box {
+  display: none;
+}
+/************************************************************
+ *                    EXTERNAL APIs STYLES
+ ************************************************************/
+.database-plugin__project-view-container {
+  width: 100%;
+  height: 100%;
+}
+/************************************************************
+*               React-datepicker styles
+************************************************************/
+/** VARIABLES */
 .react-datepicker {
   --react-datepicker-navigation-height: 24px;
   --react-datepicker-navigation-width: 24px;

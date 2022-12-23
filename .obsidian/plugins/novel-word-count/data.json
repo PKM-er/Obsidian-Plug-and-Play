@@ -22,12 +22,12 @@
     },
     "更新日志（Changelog）.md": {
       "noteCount": 1,
-      "wordCount": 2510,
-      "pageCount": 8.366666666666667,
-      "characterCount": 22931,
-      "nonWhitespaceCharacterCount": 19438,
+      "wordCount": 2636,
+      "pageCount": 8.786666666666667,
+      "characterCount": 23978,
+      "nonWhitespaceCharacterCount": 20307,
       "createdDate": 1670082731725,
-      "modifiedDate": 1670846442145
+      "modifiedDate": 1671782780392
     },
     "插件说明.md": {
       "noteCount": 1,
@@ -110,15 +110,6 @@
       "createdDate": 1658195328100,
       "modifiedDate": 1658204636749
     },
-    "Template/tp-book-callout-douban.md": {
-      "noteCount": 1,
-      "wordCount": 80,
-      "pageCount": 0.26666666666666666,
-      "characterCount": 758,
-      "nonWhitespaceCharacterCount": 612,
-      "createdDate": 1670117474917,
-      "modifiedDate": 1669799747676
-    },
     "Template/tasksCalendar/Styles/style-previews.md": {
       "noteCount": 1,
       "wordCount": 189,
@@ -136,6 +127,15 @@
       "nonWhitespaceCharacterCount": 6910,
       "createdDate": 1668572742828,
       "modifiedDate": 1670841413014
+    },
+    "Template/tp-book-callout-douban.md": {
+      "noteCount": 1,
+      "wordCount": 80,
+      "pageCount": 0.26666666666666666,
+      "characterCount": 758,
+      "nonWhitespaceCharacterCount": 612,
+      "createdDate": 1670117474917,
+      "modifiedDate": 1669799747676
     },
     "Template/startup/FastStart-StartupScript.md": {
       "noteCount": 1,
@@ -544,12 +544,12 @@
     },
     "People/Book/BookList.md": {
       "noteCount": 1,
-      "wordCount": 204,
-      "pageCount": 0.68,
-      "characterCount": 2317,
-      "nonWhitespaceCharacterCount": 2011,
+      "wordCount": 202,
+      "pageCount": 0.6733333333333333,
+      "characterCount": 2293,
+      "nonWhitespaceCharacterCount": 1989,
       "createdDate": 1670082731717,
-      "modifiedDate": 1669699523410
+      "modifiedDate": 1671205397956
     },
     "People/Book/Book database.md": {
       "noteCount": 1,
@@ -578,6 +578,15 @@
       "createdDate": 1658195327959,
       "modifiedDate": 1667485246825
     },
+    "Obsidian-example/进阶用法3-cssClasses/09.通过cssClasses 控制彩色标题.md": {
+      "noteCount": 1,
+      "wordCount": 26,
+      "pageCount": 0.08666666666666667,
+      "characterCount": 290,
+      "nonWhitespaceCharacterCount": 257,
+      "createdDate": 1671775586382,
+      "modifiedDate": 1671776331776
+    },
     "Obsidian-example/进阶用法3-cssClasses/Tables.md": {
       "noteCount": 1,
       "wordCount": 10,
@@ -586,15 +595,6 @@
       "nonWhitespaceCharacterCount": 132,
       "createdDate": 1658195328069,
       "modifiedDate": 1670844044232
-    },
-    "Obsidian-example/进阶用法3-cssClasses/Extend table.md": {
-      "noteCount": 1,
-      "wordCount": 986,
-      "pageCount": 3.2866666666666666,
-      "characterCount": 10963,
-      "nonWhitespaceCharacterCount": 9401,
-      "createdDate": 1658195328069,
-      "modifiedDate": 1670844017664
     },
     "Obsidian-example/进阶用法3-cssClasses/08.自定义表格样式 - 文件标题样式.md": {
       "noteCount": 1,
@@ -667,6 +667,24 @@
       "nonWhitespaceCharacterCount": 515,
       "createdDate": 1658195328069,
       "modifiedDate": 1670845266352
+    },
+    "Obsidian-example/进阶用法3-cssClasses/00.什么是cssClasses.md": {
+      "noteCount": 1,
+      "wordCount": 24,
+      "pageCount": 0.08,
+      "characterCount": 259,
+      "nonWhitespaceCharacterCount": 233,
+      "createdDate": 1671775746556,
+      "modifiedDate": 1671776079590
+    },
+    "Obsidian-example/进阶用法2-dataview/测试/中药别名.md": {
+      "noteCount": 1,
+      "wordCount": 735,
+      "pageCount": 2.45,
+      "characterCount": 23040,
+      "nonWhitespaceCharacterCount": 22292,
+      "createdDate": 1671434575736,
+      "modifiedDate": 1671438807424
     },
     "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/zettelkasten Gallery.md": {
       "noteCount": 1,
@@ -803,15 +821,6 @@
       "createdDate": 1670430355881,
       "modifiedDate": 1669705303950
     },
-    "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/Anarch.md": {
-      "noteCount": 1,
-      "wordCount": 38,
-      "pageCount": 0.12666666666666668,
-      "characterCount": 241,
-      "nonWhitespaceCharacterCount": 202,
-      "createdDate": 1670430355866,
-      "modifiedDate": 1669708222580
-    },
     "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/anemone.md": {
       "noteCount": 1,
       "wordCount": 31,
@@ -820,6 +829,15 @@
       "nonWhitespaceCharacterCount": 174,
       "createdDate": 1670430355873,
       "modifiedDate": 1669705303947
+    },
+    "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/Anarch.md": {
+      "noteCount": 1,
+      "wordCount": 38,
+      "pageCount": 0.12666666666666668,
+      "characterCount": 241,
+      "nonWhitespaceCharacterCount": 202,
+      "createdDate": 1670430355866,
+      "modifiedDate": 1669708222580
     },
     "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/algae.md": {
       "noteCount": 1,
@@ -843,10 +861,10 @@
       "noteCount": 1,
       "wordCount": 25,
       "pageCount": 0.08333333333333333,
-      "characterCount": 275,
-      "nonWhitespaceCharacterCount": 235,
+      "characterCount": 263,
+      "nonWhitespaceCharacterCount": 223,
       "createdDate": 1670430355846,
-      "modifiedDate": 1670842517619
+      "modifiedDate": 1671204804959
     },
     "Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/01.zettelkasten卡片盒 展示属性.md": {
       "noteCount": 1,
@@ -857,6 +875,15 @@
       "createdDate": 1670499874709,
       "modifiedDate": 1670842524623
     },
+    "Obsidian-example/进阶用法2-dataview/应用示例-taskCalendar/taskCalendar.md": {
+      "noteCount": 1,
+      "wordCount": 1011,
+      "pageCount": 3.37,
+      "characterCount": 7326,
+      "nonWhitespaceCharacterCount": 6223,
+      "createdDate": 1670841353207,
+      "modifiedDate": 1670842337738
+    },
     "Obsidian-example/进阶用法2-dataview/dataview语法/DataView syntax.md": {
       "noteCount": 1,
       "wordCount": 909,
@@ -866,14 +893,113 @@
       "createdDate": 1658195328069,
       "modifiedDate": 1668008963671
     },
-    "Obsidian-example/进阶用法2-dataview/应用示例-taskCalendar/taskCalendar.md": {
+    "Obsidian-example/进阶用法2-dataview/dataviewmasonry/网页剪藏最初.md": {
       "noteCount": 1,
-      "wordCount": 1011,
-      "pageCount": 3.37,
-      "characterCount": 7326,
-      "nonWhitespaceCharacterCount": 6223,
-      "createdDate": 1670841353207,
-      "modifiedDate": 1670842337738
+      "wordCount": 9,
+      "pageCount": 0.03,
+      "characterCount": 67,
+      "nonWhitespaceCharacterCount": 58,
+      "createdDate": 1671203633173,
+      "modifiedDate": 1671203870305
+    },
+    "Obsidian-example/进阶用法2-dataview/dataviewmasonry/如何在 Notion 建立多级标签体系 - 少数派.md": {
+      "noteCount": 1,
+      "wordCount": 35,
+      "pageCount": 0.11666666666666667,
+      "characterCount": 823,
+      "nonWhitespaceCharacterCount": 778,
+      "createdDate": 1671203664852,
+      "modifiedDate": 1671205873760
+    },
+    "Obsidian-example/进阶用法2-dataview/dataviewmasonry/如何在 Notion 建立多级标签体系 - 少数派 - 副本.md": {
+      "noteCount": 1,
+      "wordCount": 35,
+      "pageCount": 0.11666666666666667,
+      "characterCount": 823,
+      "nonWhitespaceCharacterCount": 778,
+      "createdDate": 1671206081585,
+      "modifiedDate": 1671205873760
+    },
+    "Obsidian-example/进阶用法2-dataview/dataviewmasonry/卡片笔记写作法为什么管用？  - 少数派.md": {
+      "noteCount": 1,
+      "wordCount": 22,
+      "pageCount": 0.07333333333333333,
+      "characterCount": 681,
+      "nonWhitespaceCharacterCount": 652,
+      "createdDate": 1671203677724,
+      "modifiedDate": 1671205869111
+    },
+    "Obsidian-example/进阶用法2-dataview/dataviewmasonry/卡片笔记写作法为什么管用？  - 少数派 - 副本.md": {
+      "noteCount": 1,
+      "wordCount": 22,
+      "pageCount": 0.07333333333333333,
+      "characterCount": 681,
+      "nonWhitespaceCharacterCount": 652,
+      "createdDate": 1671206081582,
+      "modifiedDate": 1671205869111
+    },
+    "Obsidian-example/进阶用法2-dataview/dataviewmasonry/为纸质书籍进行数字备份：如何制作一本功能完备的 PDF 电子书 - 少数派.md": {
+      "noteCount": 1,
+      "wordCount": 26,
+      "pageCount": 0.08666666666666667,
+      "characterCount": 345,
+      "nonWhitespaceCharacterCount": 313,
+      "createdDate": 1671203674559,
+      "modifiedDate": 1671205886604
+    },
+    "Obsidian-example/进阶用法2-dataview/dataviewmasonry/为纸质书籍进行数字备份：如何制作一本功能完备的 PDF 电子书 - 少数派 - 副本.md": {
+      "noteCount": 1,
+      "wordCount": 26,
+      "pageCount": 0.08666666666666667,
+      "characterCount": 345,
+      "nonWhitespaceCharacterCount": 313,
+      "createdDate": 1671206081590,
+      "modifiedDate": 1671205886604
+    },
+    "Obsidian-example/进阶用法2-dataview/dataviewmasonry/一个候鸟感到彷徨的冬天.md": {
+      "noteCount": 1,
+      "wordCount": 17,
+      "pageCount": 0.056666666666666664,
+      "characterCount": 885,
+      "nonWhitespaceCharacterCount": 860,
+      "createdDate": 1671203671137,
+      "modifiedDate": 1671205891925
+    },
+    "Obsidian-example/进阶用法2-dataview/dataviewmasonry/一个候鸟感到彷徨的冬天 - 副本.md": {
+      "noteCount": 1,
+      "wordCount": 17,
+      "pageCount": 0.056666666666666664,
+      "characterCount": 885,
+      "nonWhitespaceCharacterCount": 860,
+      "createdDate": 1671206081574,
+      "modifiedDate": 1671205891925
+    },
+    "Obsidian-example/进阶用法2-dataview/dataviewmasonry/dataviewmasonry.md": {
+      "noteCount": 1,
+      "wordCount": 11,
+      "pageCount": 0.03666666666666667,
+      "characterCount": 118,
+      "nonWhitespaceCharacterCount": 105,
+      "createdDate": 1671203534396,
+      "modifiedDate": 1671537544110
+    },
+    "Obsidian-example/进阶用法2-dataview/dataviewmasonry/01 时间管理之难 - 少数派.md": {
+      "noteCount": 1,
+      "wordCount": 26,
+      "pageCount": 0.08666666666666667,
+      "characterCount": 628,
+      "nonWhitespaceCharacterCount": 597,
+      "createdDate": 1671203661542,
+      "modifiedDate": 1671205862146
+    },
+    "Obsidian-example/进阶用法2-dataview/dataviewmasonry/01 时间管理之难 - 少数派 - 副本.md": {
+      "noteCount": 1,
+      "wordCount": 26,
+      "pageCount": 0.08666666666666667,
+      "characterCount": 628,
+      "nonWhitespaceCharacterCount": 597,
+      "createdDate": 1671206081578,
+      "modifiedDate": 1671205862146
     },
     "Obsidian-example/进阶用法1/05、数学公式.md": {
       "noteCount": 1,
@@ -929,15 +1055,6 @@
       "createdDate": 1670083074415,
       "modifiedDate": 1669904655623
     },
-    "Obsidian-example/该库的常见样式罗列/测试文件夹/测试引用.md": {
-      "noteCount": 1,
-      "wordCount": 36,
-      "pageCount": 0.12,
-      "characterCount": 172,
-      "nonWhitespaceCharacterCount": 123,
-      "createdDate": 1670082731721,
-      "modifiedDate": 1668508020245
-    },
     "Obsidian-example/该库的常见样式罗列/测试文件夹/测试插件.md": {
       "noteCount": 1,
       "wordCount": 7,
@@ -946,6 +1063,15 @@
       "nonWhitespaceCharacterCount": 31,
       "createdDate": 1670083074412,
       "modifiedDate": 1668432520073
+    },
+    "Obsidian-example/该库的常见样式罗列/测试文件夹/测试引用.md": {
+      "noteCount": 1,
+      "wordCount": 36,
+      "pageCount": 0.12,
+      "characterCount": 172,
+      "nonWhitespaceCharacterCount": 123,
+      "createdDate": 1670082731721,
+      "modifiedDate": 1668508020245
     },
     "Obsidian-example/该库的常见样式罗列/测试引用和链接.md": {
       "noteCount": 1,
@@ -974,23 +1100,50 @@
       "createdDate": 1670082731718,
       "modifiedDate": 1669884210965
     },
-    "Obsidian-example/基本使用/09、引用和脚注.md": {
+    "Obsidian-example/启动优化说明（基于模板插件）/启动速度的简要说明.md": {
       "noteCount": 1,
-      "wordCount": 289,
-      "pageCount": 0.9633333333333334,
-      "characterCount": 2045,
-      "nonWhitespaceCharacterCount": 1723,
-      "createdDate": 1670832958893,
-      "modifiedDate": 1670846827473
+      "wordCount": 151,
+      "pageCount": 0.5033333333333333,
+      "characterCount": 4856,
+      "nonWhitespaceCharacterCount": 4665,
+      "createdDate": 1658195328069,
+      "modifiedDate": 1670430628110
     },
-    "Obsidian-example/基本使用/05、图片和链接.md": {
+    "Obsidian-example/启动优化说明（基于模板插件）/优化Obsidian 启动速度.md": {
       "noteCount": 1,
-      "wordCount": 27,
-      "pageCount": 0.09,
-      "characterCount": 557,
-      "nonWhitespaceCharacterCount": 522,
+      "wordCount": 30,
+      "pageCount": 0.1,
+      "characterCount": 487,
+      "nonWhitespaceCharacterCount": 440,
+      "createdDate": 1668569159860,
+      "modifiedDate": 1668572512450
+    },
+    "Obsidian-example/基本使用/06-2、callout 便签效果.md": {
+      "noteCount": 1,
+      "wordCount": 187,
+      "pageCount": 0.6233333333333333,
+      "characterCount": 1365,
+      "nonWhitespaceCharacterCount": 1138,
+      "createdDate": 1671782200291,
+      "modifiedDate": 1671782716925
+    },
+    "Obsidian-example/基本使用/06-1、提示框(callout)样式展示.md": {
+      "noteCount": 1,
+      "wordCount": 986,
+      "pageCount": 3.2866666666666666,
+      "characterCount": 8715,
+      "nonWhitespaceCharacterCount": 6188,
       "createdDate": 1658195328053,
-      "modifiedDate": 1670846779696
+      "modifiedDate": 1670429515603
+    },
+    "Obsidian-example/基本使用/Obsidian教程——基础语法和操作.md": {
+      "noteCount": 1,
+      "wordCount": 2012,
+      "pageCount": 6.706666666666667,
+      "characterCount": 17250,
+      "nonWhitespaceCharacterCount": 13769,
+      "createdDate": 1668008957730,
+      "modifiedDate": 1671782116537
     },
     "Obsidian-example/基本使用/13.嵌入视频和音频.md": {
       "noteCount": 1,
@@ -1023,19 +1176,19 @@
       "noteCount": 1,
       "wordCount": 130,
       "pageCount": 0.43333333333333335,
-      "characterCount": 977,
-      "nonWhitespaceCharacterCount": 840,
+      "characterCount": 987,
+      "nonWhitespaceCharacterCount": 850,
       "createdDate": 1670846239343,
-      "modifiedDate": 1670846599611
+      "modifiedDate": 1671782750992
     },
-    "Obsidian-example/基本使用/Obsidian教程——基础语法和操作.md": {
+    "Obsidian-example/基本使用/09、引用和脚注.md": {
       "noteCount": 1,
-      "wordCount": 2012,
-      "pageCount": 6.706666666666667,
-      "characterCount": 17262,
-      "nonWhitespaceCharacterCount": 13774,
-      "createdDate": 1668008957730,
-      "modifiedDate": 1670843570295
+      "wordCount": 289,
+      "pageCount": 0.9633333333333334,
+      "characterCount": 2045,
+      "nonWhitespaceCharacterCount": 1723,
+      "createdDate": 1670832958893,
+      "modifiedDate": 1670846827473
     },
     "Obsidian-example/基本使用/08、目录.md": {
       "noteCount": 1,
@@ -1055,14 +1208,14 @@
       "createdDate": 1658195328053,
       "modifiedDate": 1670843779103
     },
-    "Obsidian-example/基本使用/06、提示框(callout)样式展示.md": {
+    "Obsidian-example/基本使用/05、图片和链接.md": {
       "noteCount": 1,
-      "wordCount": 986,
-      "pageCount": 3.2866666666666666,
-      "characterCount": 8715,
-      "nonWhitespaceCharacterCount": 6188,
+      "wordCount": 27,
+      "pageCount": 0.09,
+      "characterCount": 557,
+      "nonWhitespaceCharacterCount": 522,
       "createdDate": 1658195328053,
-      "modifiedDate": 1670429515603
+      "modifiedDate": 1670846779696
     },
     "Obsidian-example/基本使用/04、表格（Table）.md": {
       "noteCount": 1,
@@ -1082,6 +1235,15 @@
       "createdDate": 1670832999750,
       "modifiedDate": 1670845665642
     },
+    "Obsidian-example/基本使用/01、正文标题语法和样式设置.md": {
+      "noteCount": 1,
+      "wordCount": 179,
+      "pageCount": 0.5966666666666667,
+      "characterCount": 1574,
+      "nonWhitespaceCharacterCount": 1354,
+      "createdDate": 1670830788134,
+      "modifiedDate": 1670914774796
+    },
     "Obsidian-example/基本使用/02、段落、换行、强调.md": {
       "noteCount": 1,
       "wordCount": 210,
@@ -1091,41 +1253,14 @@
       "createdDate": 1670830812361,
       "modifiedDate": 1670843157843
     },
-    "Obsidian-example/基本使用/01、正文标题语法和样式设置.md": {
-      "noteCount": 1,
-      "wordCount": 138,
-      "pageCount": 0.46,
-      "characterCount": 1283,
-      "nonWhitespaceCharacterCount": 1121,
-      "createdDate": 1670830788134,
-      "modifiedDate": 1670842985477
-    },
     "Obsidian-example/基本使用/00、基本语法和简介.md": {
       "noteCount": 1,
-      "wordCount": 179,
-      "pageCount": 0.5966666666666667,
-      "characterCount": 1849,
-      "nonWhitespaceCharacterCount": 1627,
+      "wordCount": 175,
+      "pageCount": 0.5833333333333334,
+      "characterCount": 1829,
+      "nonWhitespaceCharacterCount": 1612,
       "createdDate": 1658195328053,
-      "modifiedDate": 1670846815696
-    },
-    "Obsidian-example/启动优化说明（基于模板插件）/启动速度的简要说明.md": {
-      "noteCount": 1,
-      "wordCount": 151,
-      "pageCount": 0.5033333333333333,
-      "characterCount": 4856,
-      "nonWhitespaceCharacterCount": 4665,
-      "createdDate": 1658195328069,
-      "modifiedDate": 1670430628110
-    },
-    "Obsidian-example/启动优化说明（基于模板插件）/优化Obsidian 启动速度.md": {
-      "noteCount": 1,
-      "wordCount": 30,
-      "pageCount": 0.1,
-      "characterCount": 487,
-      "nonWhitespaceCharacterCount": 440,
-      "createdDate": 1668569159860,
-      "modifiedDate": 1668572512450
+      "modifiedDate": 1670846840517
     },
     "Obsidian-example/Obsidian样式DIY.md": {
       "noteCount": 1,
