@@ -8,327 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "26b9111ac863e429",
-            "type": "leaf",
-            "pane-relief:history-v1": {
-              "pos": 0,
-              "stack": [
-                {
-                  "state": "{}",
-                  "eState": "{}"
-                },
-                {
-                  "title": "08.自定义表格样式 - 文件标题样式",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法3-cssClasses/08.自定义表格样式 - 文件标题样式.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "更新日志（Changelog）",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":68,\"ch\":30},\"to\":{\"line\":68,\"ch\":30}},\"scroll\":55.90534831859447}"
-                },
-                {
-                  "title": "插件说明",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"插件说明.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "dataviewmasonry",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/dataviewmasonry.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "01 时间管理之难 - 少数派",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/01 时间管理之难 - 少数派.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "dataviewmasonry",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/dataviewmasonry.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":1,\"ch\":24},\"to\":{\"line\":1,\"ch\":24}},\"scroll\":0}"
-                },
-                {
-                  "title": "网页剪藏最初",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/网页剪藏最初.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "dataviewmasonry",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/dataviewmasonry.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "为纸质书籍进行数字备份：如何制作一本功能完备的 PDF 电子书 - 少数派",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/为纸质书籍进行数字备份：如何制作一本功能完备的 PDF 电子书 - 少数派.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "如何在 Notion 建立多级标签体系 - 少数派",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/如何在 Notion 建立多级标签体系 - 少数派.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "网页剪藏最初",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/网页剪藏最初.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "01 时间管理之难 - 少数派",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/01 时间管理之难 - 少数派.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "卡片笔记写作法为什么管用？  - 少数派",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/卡片笔记写作法为什么管用？  - 少数派.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-                },
-                {
-                  "title": "网页剪藏最初",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/网页剪藏最初.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":4,\"ch\":17},\"to\":{\"line\":4,\"ch\":17}}}"
-                },
-                {
-                  "title": "dataviewmasonry",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/dataviewmasonry.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "网页剪藏最初",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/网页剪藏最初.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":2,\"ch\":0},\"to\":{\"line\":2,\"ch\":5}}}"
-                },
-                {
-                  "title": "dataviewmasonry",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/dataviewmasonry/dataviewmasonry.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":5,\"ch\":0},\"to\":{\"line\":5,\"ch\":0}}}"
-                },
-                {
-                  "title": "01.zettelkasten卡片盒",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":12,\"ch\":3},\"to\":{\"line\":8,\"ch\":0}}}"
-                },
-                {
-                  "title": "address operator",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/address operator.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "01.zettelkasten卡片盒",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/进阶用法2-dataview/应用示例-卡片知识集合/01.zettelkasten卡片盒.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":11,\"ch\":9},\"to\":{\"line\":11,\"ch\":9}},\"scroll\":0}"
-                },
-                {
-                  "title": "01、正文标题语法和样式设置",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/01、正文标题语法和样式设置.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":34.210993942543624}"
-                },
-                {
-                  "title": "更新日志（Changelog）_image_1",
-                  "icon": "lucide-image",
-                  "state": "{\"type\":\"image\",\"state\":{\"file\":\"素材库/更新日志（Changelog）_image_2.png\"}}",
-                  "eState": "{}"
-                },
-                {
-                  "title": "00、基本语法和简介",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/00、基本语法和简介.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":34.85867256030702}"
-                },
-                {
-                  "title": "09、引用和脚注",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/09、引用和脚注.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":80,\"ch\":0},\"to\":{\"line\":80,\"ch\":0}},\"scroll\":0}"
-                },
-                {
-                  "title": "00、基本语法和简介",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/00、基本语法和简介.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":68,\"ch\":0},\"to\":{\"line\":68,\"ch\":0}},\"scroll\":55.8234649122807}"
-                },
-                {
-                  "title": "09、引用和脚注",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/09、引用和脚注.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":10},\"to\":{\"line\":0,\"ch\":10}},\"scroll\":0}"
-                },
-                {
-                  "title": "00、基本语法和简介",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/00、基本语法和简介.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":71,\"ch\":0},\"to\":{\"line\":71,\"ch\":0}},\"scroll\":61.50767543859649}"
-                },
-                {
-                  "title": "01、正文标题语法和样式设置",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/01、正文标题语法和样式设置.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "02、段落、换行、强调",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/02、段落、换行、强调.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "05、图片和链接",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/05、图片和链接.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":15,\"ch\":25},\"to\":{\"line\":15,\"ch\":25}},\"scroll\":0}"
-                },
-                {
-                  "title": "07、表格和表格嵌套",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/07、表格和表格嵌套.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-                },
-                {
-                  "title": "08、目录",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/08、目录.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":29,\"ch\":37},\"to\":{\"line\":29,\"ch\":37}},\"scroll\":23.761888475836432}"
-                },
-                {
-                  "title": "07、表格和表格嵌套",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/07、表格和表格嵌套.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "06、提示框(callout)样式展示",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/06、提示框(callout)样式展示.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "05、图片和链接",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/05、图片和链接.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":12,\"ch\":19},\"to\":{\"line\":12,\"ch\":19}},\"scroll\":0}"
-                },
-                {
-                  "title": "04、表格（Table）",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/04、表格（Table）.md\",\"mode\":\"preview\",\"source\":false}}",
-                  "eState": "{}"
-                },
-                {
-                  "title": "05、图片和链接",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/05、图片和链接.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":10,\"ch\":225},\"to\":{\"line\":10,\"ch\":225}}}"
-                },
-                {
-                  "title": "07、表格和表格嵌套",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/07、表格和表格嵌套.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "05、图片和链接",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/05、图片和链接.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-                },
-                {
-                  "title": "00、基本语法和简介",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/00、基本语法和简介.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":73,\"ch\":0},\"to\":{\"line\":73,\"ch\":0}},\"scroll\":62.911184210526315}"
-                },
-                {
-                  "title": "01、正文标题语法和样式设置",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/01、正文标题语法和样式设置.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":0}"
-                },
-                {
-                  "title": "07、表格和表格嵌套",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/07、表格和表格嵌套.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":25.297149122807017}"
-                },
-                {
-                  "title": "06、提示框(callout)样式展示",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/06、提示框(callout)样式展示.md\",\"mode\":\"preview\",\"source\":false}}",
-                  "eState": "{}"
-                },
-                {
-                  "title": "05、图片和链接",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/05、图片和链接.md\",\"mode\":\"preview\",\"source\":false}}",
-                  "eState": "{}"
-                },
-                {
-                  "title": "04、表格（Table）",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/04、表格（Table）.md\",\"mode\":\"preview\",\"source\":false}}",
-                  "eState": "{\"scroll\":0}"
-                },
-                {
-                  "title": "03、列表：有序列表和无序列表",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/03、列表：有序列表和无序列表.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}},\"scroll\":97.12977099236642}"
-                },
-                {
-                  "title": "13.嵌入视频和音频",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/13.嵌入视频和音频.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
-                },
-                {
-                  "title": "12、环绕布局、缩进效果示例，Wiki效果",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/12、环绕布局、缩进效果示例，Wiki效果.md\",\"mode\":\"preview\",\"source\":false}}",
-                  "eState": "{}"
-                },
-                {
-                  "title": "11、代码块",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/11、代码块.md\",\"mode\":\"preview\",\"source\":false}}",
-                  "eState": "{}"
-                },
-                {
-                  "title": "10、任务",
-                  "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/基本使用/10、任务.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":48,\"ch\":31},\"to\":{\"line\":48,\"ch\":31}},\"scroll\":0}"
-                }
-              ]
-            },
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Obsidian-example/进阶用法3-cssClasses/Tables.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "7ad90b4bea8e2727",
             "type": "leaf",
             "pane-relief:history-v1": {
@@ -343,6 +22,54 @@
             "state": {
               "type": "card-board-view",
               "state": {}
+            }
+          },
+          {
+            "id": "fe417a58ad0ac55c",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Obsidian-example/进阶用法1/01、笔记多栏样式.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "3a9e2c59d956b9da",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                },
+                {
+                  "title": "更新日志（Changelog）",
+                  "icon": "lucide-file",
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":62,\"ch\":20},\"to\":{\"line\":62,\"ch\":20}},\"scroll\":63.74330357142857}"
+                }
+              ]
+            },
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Obsidian-example/进阶用法1/05、数学公式.md",
+                "mode": "source",
+                "source": false
+              }
             }
           },
           {
@@ -391,7 +118,70 @@
             }
           },
           {
-            "id": "70d2330ba15db114",
+            "id": "5db17d14699d93ff",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Obsidian-example/进阶用法2-dataview/测试/中药别名.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2d38dcbbc86de3b6",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Obsidian-example/该库的常见样式罗列/主题和snippests 测试用例.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "4a1b4d34f5abcbd8",
+            "type": "leaf",
+            "pane-relief:history-v1": {
+              "pos": 0,
+              "stack": [
+                {
+                  "state": "{}",
+                  "eState": "{}"
+                }
+              ]
+            },
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "更新日志（Changelog）.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9d547c169cedf383",
             "type": "leaf",
             "pane-relief:history-v1": {
               "pos": 0,
@@ -401,24 +191,24 @@
                   "eState": "{}"
                 },
                 {
-                  "title": "更新日志（Changelog）",
+                  "title": "主题和snippests 测试用例",
                   "icon": "lucide-file",
-                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"更新日志（Changelog）.md\",\"mode\":\"source\",\"source\":false}}",
-                  "eState": "{\"cursor\":{\"from\":{\"line\":80,\"ch\":10},\"to\":{\"line\":80,\"ch\":10}},\"scroll\":67.80883591263382}"
+                  "state": "{\"type\":\"markdown\",\"state\":{\"file\":\"Obsidian-example/该库的常见样式罗列/主题和snippests 测试用例.md\",\"mode\":\"source\",\"source\":false}}",
+                  "eState": "{\"cursor\":{\"from\":{\"line\":0,\"ch\":0},\"to\":{\"line\":0,\"ch\":0}}}"
                 }
               ]
             },
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Obsidian-example/基本使用/06-2、callout 便签效果.md",
+                "file": "Obsidian-example/该库的常见样式罗列/常见的语法罗列.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -499,7 +289,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "药",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -529,7 +319,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 385.5
+    "width": 385.5,
+    "collapsed": true
   },
   "right": {
     "id": "0afdab19216adf86",
@@ -554,7 +345,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Obsidian-example/基本使用/06-2、callout 便签效果.md",
+                "file": "更新日志（Changelog）.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -600,7 +391,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Obsidian-example/基本使用/06-2、callout 便签效果.md"
+                "file": "更新日志（Changelog）.md"
               }
             }
           },
@@ -636,7 +427,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Obsidian-example/基本使用/06-2、callout 便签效果.md",
+                "file": "更新日志（Changelog）.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -665,23 +456,23 @@
       "daily-notes:打开/创建今天的日记": false,
       "command-palette:打开命令面板": false,
       "workspaces:管理工作区布局": false,
-      "dbfolder:Create a new database table": false
+      "dbfolder:创建一个新数据库表": false
     }
   },
-  "active": "70d2330ba15db114",
+  "active": "4a1b4d34f5abcbd8",
   "ophidian:layout-settings": {
     "pane-relief:focus-lock": false
   },
   "lastOpenFiles": [
+    "Obsidian-example/该库的常见样式罗列/常见的语法罗列.md",
+    "Obsidian-example/该库的常见样式罗列/主题和snippests 测试用例.md",
     "更新日志（Changelog）.md",
-    "Obsidian-example/基本使用/06-2、callout 便签效果.md",
-    "Obsidian-example/基本使用/Obsidian教程——基础语法和操作.md",
-    "Obsidian-example/基本使用/06、提示框(callout)样式展示.md",
-    "Obsidian-example/基本使用/05、图片和链接.md",
-    "Obsidian-example/进阶用法3-cssClasses/Tables.md",
-    "Obsidian-example/进阶用法3-cssClasses/09.通过cssClasses 控制彩色标题.md",
+    "Obsidian-example/进阶用法1/01、笔记多栏样式.md",
+    "Obsidian-example/进阶用法2-dataview/测试/中药别名.md",
     "Obsidian-example/进阶用法2-dataview/dataviewmasonry/dataviewmasonry.md",
+    "Obsidian-example/进阶用法1/05、数学公式.md",
     "Obsidian-example/进阶用法3-cssClasses/00.什么是cssClasses.md",
-    "Obsidian-example/进阶用法3-cssClasses/02.自定义表格样式 - PurpleRed.md"
+    "Obsidian-example/进阶用法1/00、YAML 和 Frontmatter.md",
+    "Obsidian-example/进阶用法2-dataview/dataview语法/基本语法.md"
   ]
 }

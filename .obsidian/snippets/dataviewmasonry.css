@@ -438,3 +438,101 @@ content:'';
 .dataviewmasonry table.dataview tr {
 	height:800px;
 }
+
+.markdown-preview-view table,.markdown-source-view.mod-cm6 table{
+    border:1px solid var(--border-color);
+    border-collapse:collapse
+}
+
+.is-live-preview .el-table{
+    width:100%;
+    max-width:100%
+}
+
+.cards table.dataview tbody{
+    clear:both;
+    padding:.5rem 0;
+    display:grid;
+    grid-template-columns:var(--cards-columns);
+    grid-column-gap:0.75rem;
+    grid-row-gap:0.75rem
+}
+.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-lang-dataview,.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-lang-dataviewjs,.contextual-typography .markdown-preview-view.is-readable-line-width .markdown-preview-sizer>.el-table{
+    width:100%;
+    max-width:100%;
+    overflow-x:auto
+}
+.el-lang-dataview .block-language-dataview .contains-task-list,.el-lang-dataviewjs .block-language-dataviewjs .contains-task-list{
+    max-width:100%
+}
+/*代码块（embed）下，dataviewjs 插入内容的宽度和布局*/
+.table-wide .markdown-source-view.mod-cm6.is-live-preview.is-readable-line-width .cm-embed-block>.block-language-dataviewjs {
+    margin: auto;
+    max-width:90%;
+}
+/*代码块（embed）下，dataviewjs 插入table 内容的宽度和布局*/
+.cm-preview-code-block.cm-embed-block.markdown-rendered .block-language-dataview {
+    margin: auto;
+    max-width:90% !important;
+}
+
+/*调整初始状态下 Cards View 的样式*/
+.cards table.dataview tbody>tr>td button img{
+    width: calc(var(--cards-width)/8 );
+    height: calc(var(--cards-width) /8);
+    margin-left: -1px;
+}
+/*End*/
+
+.markdown-preview-view.is-readable-line-width .block-language-dataview h4,.markdown-preview-view.is-readable-line-width .block-language-dataview>h4,.markdown-preview-view.is-readable-line-width .block-language-dataviewjs h4,.markdown-preview-view.is-readable-line-width .block-language-dataviewjs>h1,.markdown-preview-view.is-readable-line-width .block-language-dataviewjs>h2,.markdown-preview-view.is-readable-line-width .block-language-dataviewjs>h3,.markdown-preview-view.is-readable-line-width .block-language-dataviewjs>h4,.markdown-preview-view.is-readable-line-width .block-language-dataviewjs>p,.markdown-preview-view.is-readable-line-width .dataview .contains-task-list,.markdown-preview-view.is-readable-line-width .dataview.dataview-error,.markdown-preview-view.is-readable-line-width .dataview.list-view-ul,.markdown-preview-view.is-readable-line-width .dataview.result-group{
+    --folding-offset:10px;
+    width:calc(var(--line-width-adaptive) - var(--folding-offset));
+    max-width:calc(var(--max-width) - var(--folding-offset));
+    margin-left:auto;
+    margin-right:max(calc(50% - var(--line-width-adaptive)/ 2),calc(50% - var(--max-width)/ 2))
+}
+.is-live-preview.is-readable-line-width .block-language-dataviewjs h4,.is-live-preview.is-readable-line-width .dataview .contains-task-list,.is-live-preview.is-readable-line-width .dataview.dataview-container .contains-task-list,.is-live-preview.is-readable-line-width .dataview.list-view-ul,.is-live-preview.is-readable-line-width .dataview>h4{
+    --folding-offset:10px;
+    width:calc(var(--line-width-adaptive) - var(--folding-offset));
+    max-width:calc(100% - var(--folding-offset));
+    transform:translateX(calc(var(--folding-offset)/2));
+    margin-right:auto;
+    margin-left:auto
+}
+.markdown-reading-view .markdown-preview-view:not(.is-readable-line-width)>.markdown-preview-sizer{
+    max-width:var(--max-width);
+    margin:0 auto;
+    padding-left:var(--folding-offset)
+}
+.markdown-preview-view.is-readable-line-width .markdown-preview-sizer{
+    max-width:var(--max-width);
+    width:var(--line-width-adaptive);
+    padding-left:0
+}
+.markdown-source-view.is-readable-line-width .CodeMirror{
+    padding-left:0;
+    padding-right:0;
+    margin:0 auto 0 auto;
+    width:var(--line-width-adaptive);
+    max-width:var(--max-width)
+}
+.markdown-preview-view.wide,.markdown-source-view.wide{
+    --line-width-adaptive:var(--line-width-wide)
+}
+.markdown-preview-view.max,.markdown-source-view.max{
+    --line-width-adaptive:300em;
+    --line-width-wide:300em
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview tr.table-view-tr-header {
+	height:auto;
+	margin-left: var(--dataviewmasonry-max-width);
+}
+.dataviewmasonry .block-language-dataviewjs table.table-view-table tr.table-view-tr-header {
+	width:300px !important;
+}
+
+.dataviewmasonry .block-language-dataviewjs table.dataview thead:hover>tr {
+	display: inline-flex;
+	right: 40px;
+}

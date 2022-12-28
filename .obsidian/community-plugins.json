@@ -20,7 +20,6 @@
   "obsidian-booknote-plugin",
   "buttons",
   "card-board",
-  "obsidian-colorful-tag",
   "obsidian-custom-frames",
   "obsidian-diagrams-net",
   "dbfolder",
@@ -47,15 +46,16 @@
   "obsidian-tasks-plugin",
   "obsidian-task-progress-bar",
   "tag-wrangler",
-  "obsidian-table-generator",
   "ob-table-enhancer",
   "obsidian-style-settings",
   "obsidian-sortable",
   "pane-relief",
   "obsidian-pandoc",
-  "ProxyGithub",
   "another-web-browser",
   "editing-toolbar",
   "dataview",
-  "surfing"
+  "surfing",
+  "music-code-blocks",
+  "obsidian-colorful-tag",
+  "obsidian-math-plus"
 ]

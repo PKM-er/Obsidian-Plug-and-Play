@@ -221,8 +221,12 @@
   "useTagDetail": true,
   "tagDetail": {
     "People/Obsidian-plug-and-play/主题和snippests 测试用例.md": {
-      "file_size": 19208,
-      "tag_num": 5
+      "file_size": 13271,
+      "tag_num": 20
+    },
+    "Works/58-房产-租房/融合变革项目/成都融合项目周会会议纪要&To-Do.md": {
+      "file_size": 6970,
+      "tag_num": 3
     }
   },
   "tagItem": {

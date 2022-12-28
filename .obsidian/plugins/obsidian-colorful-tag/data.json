@@ -1,244 +1,412 @@
 {
-  "firstTime": false,
-  "global_enable": {
-    "border": true,
-    "font-weight": true,
-    "prefix": true,
-    "background-color": false,
-    "remove-hash": false,
-    "remove-tag-name": false
-  },
-  "global": {
-    "font-weight": "900",
-    "border": "2"
-  },
-  "attrList": [
-    "nest tag",
-    "remove hash",
-    "remove tag name",
-    "radius",
-    "prefix",
-    "suffix",
-    "background color",
-    "text color",
-    "text size",
-    "border",
-    "font weight"
-  ],
-  "defaultStyle": {},
-  "defaultGlobal": {},
-  "styleList": [
+  "TagSettings": [
     {
-      "radius": "",
-      "prefix": "💼",
-      "suffix": "",
-      "background-color": "#1fd56d",
-      "text-color": "#ffffff",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "working",
-      "enable": true
+      "attributes": {
+        "radius": "",
+        "prefix": "💼",
+        "suffix": "",
+        "background-color": "#1fd56d",
+        "text-color": "#ffffff",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {
+          "-#74b89c": "{{DATETIME}}"
+        },
+        "opened": false,
+        "itemType": {
+          "#74b89c": [
+            "time",
+            "Text",
+            null
+          ],
+          "default-#74b89c": [
+            "{{DATETIME}}",
+            "Text",
+            null
+          ]
+        },
+        "tagIndex": 0
+      },
+      "name_": "working"
     },
     {
-      "radius": "",
-      "prefix": "💬",
-      "suffix": "",
-      "background-color": "#1fd56d",
-      "text-color": "#ffffff",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "meeting",
-      "enable": true
+      "attributes": {
+        "radius": "",
+        "prefix": "💬",
+        "suffix": "",
+        "background-color": "#1fd56d",
+        "text-color": "#ffffff",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {},
+        "opened": false,
+        "itemType": {},
+        "tagIndex": 1
+      },
+      "name_": "meeting"
     },
     {
-      "radius": "",
-      "prefix": "📧",
-      "suffix": "",
-      "background-color": "#0077f8",
-      "text-color": "#ffffff",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "Email",
-      "enable": true
+      "attributes": {
+        "radius": "",
+        "prefix": "📧",
+        "suffix": "",
+        "background-color": "#0077f8",
+        "text-color": "#ffffff",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {},
+        "opened": false,
+        "itemType": {},
+        "tagIndex": 2
+      },
+      "name_": "Email"
     },
     {
-      "radius": "",
-      "prefix": "🛒",
-      "suffix": "",
-      "background-color": "#ef7311",
-      "text-color": "#ffffff",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "shopping",
-      "enable": true
+      "attributes": {
+        "radius": "",
+        "prefix": "🛒",
+        "suffix": "",
+        "background-color": "#ef7311",
+        "text-color": "#ffffff",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {},
+        "opened": false,
+        "itemType": {},
+        "tagIndex": 3
+      },
+      "name_": "shopping"
     },
     {
-      "radius": "",
-      "prefix": "📝",
-      "suffix": "",
-      "background-color": "#0077f8",
-      "text-color": "#ffffff",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "todo",
-      "enable": true
+      "attributes": {
+        "radius": "",
+        "prefix": "📝",
+        "suffix": "",
+        "background-color": "#0077f8",
+        "text-color": "#ffffff",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {
+          "-#3e8bf4": "{{DATETIME}}"
+        },
+        "opened": false,
+        "itemType": {
+          "#3e8bf4": [
+            "time",
+            "Text",
+            null
+          ],
+          "default-#3e8bf4": [
+            "{{DATETIME}}",
+            "Text",
+            null
+          ]
+        },
+        "tagIndex": 4
+      },
+      "name_": "todo"
     },
     {
-      "radius": "",
-      "prefix": "✴️",
-      "suffix": "",
-      "background-color": "red",
-      "text-color": "#ffffff",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "important",
-      "enable": true
+      "attributes": {
+        "radius": "",
+        "prefix": "✴️",
+        "suffix": "",
+        "background-color": "red",
+        "text-color": "#ffffff",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {},
+        "opened": false,
+        "itemType": {},
+        "tagIndex": 5
+      },
+      "name_": "important"
     },
     {
-      "radius": "",
-      "prefix": "🤙",
-      "suffix": "",
-      "background-color": "#1fd56d",
-      "text-color": "#ffffff",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "call",
-      "enable": true
+      "attributes": {
+        "radius": "",
+        "prefix": "🤙",
+        "suffix": "",
+        "background-color": "#1fd56d",
+        "text-color": "#ffffff",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {},
+        "opened": false,
+        "itemType": {},
+        "tagIndex": 6
+      },
+      "name_": "call"
     },
     {
-      "radius": "",
-      "prefix": "🍽️",
-      "suffix": "",
-      "background-color": "#0077f8",
-      "text-color": "#ffffff",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "dine",
-      "enable": true
+      "attributes": {
+        "radius": "",
+        "prefix": "🍽️",
+        "suffix": "",
+        "background-color": "#0077f8",
+        "text-color": "#ffffff",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {},
+        "opened": false,
+        "itemType": {},
+        "tagIndex": 7
+      },
+      "name_": "dine"
     },
     {
-      "radius": "",
-      "prefix": "📔",
-      "suffix": "",
-      "background-color": "",
-      "text-color": "",
-      "text-size": "",
-      "border": "1",
-      "font-weight": "",
-      "tag": "book",
-      "enable": true
+      "attributes": {
+        "radius": "",
+        "prefix": "📔",
+        "suffix": "",
+        "background-color": "",
+        "text-color": "",
+        "text-size": "",
+        "border": "1",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {},
+        "opened": false,
+        "itemType": {},
+        "tagIndex": 8
+      },
+      "name_": "book"
     },
     {
-      "radius": "",
-      "prefix": "🎞️",
-      "suffix": "",
-      "background-color": "",
-      "text-color": "",
-      "text-size": "",
-      "border": "1",
-      "font-weight": "",
-      "tag": "movie",
-      "enable": true
+      "attributes": {
+        "radius": "",
+        "prefix": "🎞️",
+        "suffix": "",
+        "background-color": "",
+        "text-color": "",
+        "text-size": "",
+        "border": "1",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {},
+        "opened": false,
+        "itemType": {},
+        "tagIndex": 9
+      },
+      "name_": "movie"
     },
     {
-      "radius": "",
-      "prefix": "🔗",
-      "suffix": "",
-      "background-color": "",
-      "text-color": "",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "URL",
-      "enable": true
+      "attributes": {
+        "radius": "",
+        "prefix": "🔗",
+        "suffix": "",
+        "background-color": "",
+        "text-color": "",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {},
+        "opened": false,
+        "itemType": {},
+        "tagIndex": 10
+      },
+      "name_": "URL"
     },
     {
-      "radius": "",
-      "prefix": "🗃️",
-      "suffix": "",
-      "background-color": "",
-      "text-color": "",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "archive",
-      "enable": true
+      "attributes": {
+        "radius": "",
+        "prefix": "🗃️",
+        "suffix": "",
+        "background-color": "",
+        "text-color": "",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {},
+        "opened": false,
+        "itemType": {},
+        "tagIndex": 11
+      },
+      "name_": "archive"
     },
     {
-      "nest-tag": "",
-      "remove-hash": "",
-      "remove-tag-name": "",
-      "radius": "",
-      "prefix": "🐞",
-      "suffix": "",
-      "background-color": "red",
-      "text-color": "#ffffff",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "bug",
-      "enable": true
+      "attributes": {
+        "nest-tag": "",
+        "remove-hash": "",
+        "remove-tag-name": "",
+        "radius": "",
+        "prefix": "🐞",
+        "suffix": "",
+        "background-color": "red",
+        "text-color": "#ffffff",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {
+          "-#9e3cb7": "{{DATETIME}}"
+        },
+        "opened": false,
+        "itemType": {
+          "#9e3cb7": [
+            "time",
+            "Text",
+            null
+          ],
+          "default-#9e3cb7": [
+            "{{DATETIME}}",
+            "Text",
+            null
+          ]
+        },
+        "tagIndex": 12
+      },
+      "name_": "bug"
     },
     {
-      "nest-tag": "",
-      "remove-hash": "",
-      "remove-tag-name": "",
-      "radius": "",
-      "prefix": "🎨",
-      "suffix": "",
-      "background-color": "#2965f1",
-      "text-color": "white",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "CSS",
-      "enable": true
+      "attributes": {
+        "nest-tag": "",
+        "remove-hash": "",
+        "remove-tag-name": "",
+        "radius": "",
+        "prefix": "🎨",
+        "suffix": "",
+        "background-color": "#2965f1",
+        "text-color": "white",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {},
+        "opened": false,
+        "itemType": {},
+        "tagIndex": 13
+      },
+      "name_": "CSS"
     },
     {
-      "nest-tag": "",
-      "remove-hash": "",
-      "remove-tag-name": "",
-      "radius": "",
-      "prefix": "☕",
-      "suffix": "",
-      "background-color": "#f7df1e",
-      "text-color": "white",
-      "text-size": "",
-      "border": "",
-      "font-weight": "",
-      "tag": "JavaScript",
-      "enable": true
+      "attributes": {
+        "nest-tag": "",
+        "remove-hash": "",
+        "remove-tag-name": "",
+        "radius": "",
+        "prefix": "☕",
+        "suffix": "",
+        "background-color": "#f7df1e",
+        "text-color": "white",
+        "text-size": "",
+        "border": "",
+        "font-weight": ""
+      },
+      "opened": false,
+      "enable": true,
+      "tagDetail": {
+        "attributes": {},
+        "opened": false,
+        "itemType": {},
+        "tagIndex": 14
+      },
+      "name_": "JavaScript"
     }
   ],
-  "useTagDetail": true,
-  "tagDetail": {
-    "People/Obsidian-plug-and-play/主题和snippests 测试用例.md": {
-      "file_size": 19208,
-      "tag_num": 5
+  "GlobalTagSetting": {
+    "attributes": {
+      "font-weight": "900",
+      "border": "2"
+    },
+    "opened": true,
+    "enableList_": {
+      "border": true,
+      "font-weight": true,
+      "prefix": true,
+      "background-color": false,
+      "remove-hash": false,
+      "remove-tag-name": false
     }
   },
-  "tagItem": {
-    "#Email": {},
-    "#shopping": {},
-    "#working": {
-      "#74b89c": "time",
-      "default-#74b89c": "{{DATETIME}}"
-    },
-    "#bug": {
-      "#9e3cb7": "time",
-      "default-#9e3cb7": "{{DATETIME}}"
-    },
-    "#todo": {
-      "#3e8bf4": "time",
-      "default-#3e8bf4": "{{DATETIME}}"
-    }
+  "UseTagDetail": false,
+  "StoreTagDetailInYaml": "plugin",
+  "TagDetailData": {
+    "People/Obsidian-plug-and-play/主题和snippests 测试用例.md": []
+  },
+  "MetaFileTagDetails": {
+    "Works/58-房产-租房/01、保障性租赁住房/保障性租赁住房 To-Do.md": [
+      "#Email-155-43-4920",
+      "#todo-449-29-13315",
+      "#todo-654-24-21214",
+      "#todo-656-32-21343"
+    ],
+    "Works/58-房产-租房/融合变革项目/成都融合项目周会会议纪要&To-Do.md": [
+      "#Email-54-34-1661",
+      "#todo-100-23-2926",
+      "#comunicate-100-29-2932"
+    ],
+    "People/Obsidian-plug-and-play/主题和snippests 测试用例.md": [
+      "#important-27-43-310",
+      "#bug-27-54-321",
+      "#archive-27-59-326",
+      "#URL-27-68-335",
+      "#readlater-27-73-340",
+      "#shopping-27-84-351",
+      "#Email-27-94-361",
+      "#archive-27-101-368",
+      "#CSS-27-110-377",
+      "#JavaScript-27-115-382"
+    ]
   }
 }
