@@ -7,6 +7,9 @@
 				</a>
 		</div>
 
+![image](https://github.com/PKM-er/Obsidian-Plug-and-Play/assets/241007/804a3f30-888b-4a1b-9480-b6f9f8db338a)
+
+
 ## 1. 0.2.x版本计划（TBA）
 - [ ] 计划：所有对插件的样式（CSS）调整，和插件间的兼容问题，都合并入主题（theme）文件中。这样大家可以按照自己喜好对插件进行升级。
 - [ ] 计划：尽可能将一些样式设置，放入 style settings 中自定义能力更加图形化；
