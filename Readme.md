@@ -225,8 +225,7 @@
 
 辛苦不易，打赏随缘。也可以下次一定，或者一件三连
 
-![image|500](https://user-images.githubusercontent.com/241007/195344661-06526475-b6ae-4831-814e-1959ba27ddaa.png)
-
+关注 pkmer.cn
 
 
 
